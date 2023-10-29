@@ -1,0 +1,14 @@
+package svera.untiered.game.signals
+{
+   import org.osflash.signals.Signal;
+   
+   public class SetWorldInteractionSignal extends Signal
+   {
+       
+      
+      public function SetWorldInteractionSignal()
+      {
+         super(Boolean);
+      }
+   }
+}

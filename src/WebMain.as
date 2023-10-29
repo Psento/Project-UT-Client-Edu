@@ -1,0 +1,157 @@
+package
+{
+import com.company.assembleegameclient.parameters.Parameters;
+import com.company.assembleegameclient.sound.SoundEffectLibrary;
+import com.company.assembleegameclient.util.AssetLoader;
+import com.company.assembleegameclient.util.StageProxy;
+
+import flash.display.LoaderInfo;
+   import flash.display.Sprite;
+import flash.display.Stage;
+import flash.display.StageScaleMode;
+   import flash.events.Event;
+import flash.events.MouseEvent;
+import flash.system.Capabilities;
+import flash.system.Security;
+
+import svera.lib.net.NetConfig;
+   import svera.untiered.account.AccountConfig;
+   import svera.untiered.appengine.AppEngineConfig;
+   import svera.untiered.assets.AssetsConfig;
+   import svera.untiered.characters.CharactersConfig;
+   import svera.untiered.classes.ClassesConfig;
+   import svera.untiered.core.CoreConfig;
+   import svera.untiered.core.StaticInjectorContext;
+   import svera.untiered.death.DeathConfig;
+   import svera.untiered.dialogs.DialogsConfig;
+   import svera.untiered.fame.FameConfig;
+   import svera.untiered.game.GameConfig;
+   import svera.untiered.hud.HUDConfig;
+   import svera.untiered.legends.LegendsConfig;
+   import svera.untiered.minimap.MiniMapConfig;
+import svera.untiered.stage3D.Stage3DConfig;
+import svera.untiered.startup.StartupConfig;
+   import svera.untiered.startup.control.StartupSignal;
+   import svera.untiered.tooltips.TooltipsConfig;
+import svera.untiered.ui.UIConfig;
+import svera.untiered.ui.UIUtils;
+
+import robotlegs.bender.bundles.mvcs.MVCSBundle;
+   import robotlegs.bender.extensions.signalCommandMap.SignalCommandMapExtension;
+   import robotlegs.bender.framework.api.IContext;
+   import robotlegs.bender.framework.api.LogLevel;
+   
+   [SWF(frameRate="60",backgroundColor="#000000",width="800",height="600")]
+   public class WebMain extends Sprite
+   {
+      public static var STAGE:Stage;
+
+      protected var context:IContext;
+      public static var StageWidth:int;
+      public static var StageHeight:int;
+      private var resized_:Boolean;
+      
+      public function WebMain()
+      {
+         super();
+         if(stage)
+         {
+            this.setup();
+         }
+         else
+         {
+            addEventListener(Event.ADDED_TO_STAGE,this.onAddedToStage);
+         }
+      }
+      
+      private function onAddedToStage(event:Event) : void
+      {
+         removeEventListener(Event.ADDED_TO_STAGE,this.onAddedToStage);
+         this.setup();
+      }
+
+      
+      private function setup() : void
+      {
+         this.hackParameters();
+         this.createContext();
+         new AssetLoader().load();
+         stage.scaleMode = StageScaleMode.EXACT_FIT;
+         var startup:StartupSignal = this.context.injector.getInstance(StartupSignal);
+         startup.dispatch();
+         STAGE = stage;
+         STAGE.addEventListener(MouseEvent.RIGHT_CLICK, onRightClick);
+         STAGE.addEventListener(Event.RESIZE, updateStageSize);
+         setStageSize();
+         STAGE.addEventListener(Event.ENTER_FRAME, onEnterFrame);
+         UIUtils.toggleQuality(Parameters.data_.quality);
+      }
+
+      private function onEnterFrame(event:Event) : void
+      {
+         SoundEffectLibrary.clear();
+         if (!resized_){
+            setStageSize();
+         }
+         resized_ = false;
+      }
+
+      private function updateStageSize(event:Event) : void
+      {
+         setStageSize();
+         resized_ = true;
+      }
+
+      private function setStageSize() : void
+      {
+         StageWidth = stage.stageWidth / Parameters.data_.mScale;
+         StageHeight = stage.stageHeight / Parameters.data_.mScale;
+      }
+
+      private static function onRightClick(event:MouseEvent) : void
+      {
+         //suppress context menu
+      }
+
+      private static function onEnterFrame(event:Event) : void
+      {
+         SoundEffectLibrary.clear();
+      }
+
+      private function hackParameters() : void
+      {
+         Parameters.root = stage.root;
+      }
+      
+      private function createContext() : void
+      {
+         var stageProxy:StageProxy = new StageProxy(this);
+         this.context = new StaticInjectorContext();
+         this.context.injector.map(LoaderInfo).toValue(root.stage.root.loaderInfo);
+         this.context.injector.map(StageProxy).toValue(stageProxy);
+         this.context
+                 .extend(MVCSBundle)
+                 .extend(SignalCommandMapExtension)
+                 .configure(StartupConfig)
+                 .configure(NetConfig)
+                 .configure(AssetsConfig)
+                 .configure(DialogsConfig)
+                 .configure(AppEngineConfig)
+                 .configure(AccountConfig)
+                 .configure(CoreConfig)
+                 .configure(DeathConfig)
+                 .configure(CharactersConfig)
+                 .configure(GameConfig)
+                 .configure(UIConfig)
+                 .configure(MiniMapConfig)
+                 .configure(LegendsConfig)
+                 .configure(FameConfig)
+                 .configure(TooltipsConfig)
+                 .configure(ClassesConfig)
+                 .configure(Stage3DConfig)
+                 .configure(HUDConfig)
+                 .configure(this);
+         this.context.logLevel = LogLevel.DEBUG;
+      }
+   }
+}

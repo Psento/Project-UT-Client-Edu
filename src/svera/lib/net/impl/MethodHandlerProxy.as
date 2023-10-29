@@ -1,0 +1,27 @@
+package svera.lib.net.impl
+{
+   import svera.lib.net.api.MessageHandlerProxy;
+   
+   public class MethodHandlerProxy implements MessageHandlerProxy
+   {
+       
+      
+      private var method:Function;
+      
+      public function MethodHandlerProxy()
+      {
+         super();
+      }
+      
+      public function setMethod(method:Function) : MethodHandlerProxy
+      {
+         this.method = method;
+         return this;
+      }
+      
+      public function getMethod() : Function
+      {
+         return this.method;
+      }
+   }
+}

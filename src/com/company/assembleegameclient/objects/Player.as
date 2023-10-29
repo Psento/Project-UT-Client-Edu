@@ -711,7 +711,7 @@ import org.swiftsuspenders.Injector;
          var moveSpeed:Number = MIN_MOVE_SPEED + this.speed_ / 75 * (MAX_MOVE_SPEED - MIN_MOVE_SPEED);
          if(isSpeedy())
          {
-            moveSpeed = moveSpeed * 1.5;
+            moveSpeed *= 1.5;
          }
          moveSpeed = moveSpeed * this.moveMultiplier_;
          return moveSpeed;

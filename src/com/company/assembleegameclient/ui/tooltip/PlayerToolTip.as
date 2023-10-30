@@ -56,7 +56,7 @@ package com.company.assembleegameclient.ui.tooltip
          this.hpBar_.x = 6;
          this.hpBar_.y = yOffset;
          addChild(this.hpBar_);
-         this.spBar_ = new StatusBar(176,16,16777215,5526612,"SP");
+         this.spBar_ = new StatusBar(176,16,16777215,14693428,"");
          this.spBar_.x = 6;
          this.spBar_.y = yOffset;
          addChild(this.spBar_);
@@ -78,10 +78,15 @@ package com.company.assembleegameclient.ui.tooltip
          this.clickMessage_.x = width / 2 - this.clickMessage_.width / 2;
          this.clickMessage_.y = yOffset;
          addChild(this.clickMessage_);
+         this.spBar_.visible = false;
       }
       
       override public function draw() : void
       {
+         if(this.player_.sp_ > 0)
+         {
+            this.spBar_.visible = true;
+         }
          this.spBar_.draw(this.player_.sp_,this.player_.maxSP_,this.player_.maxSPBoost_,this.player_.maxSPMax_);
          this.hpBar_.draw(this.player_.hp_,this.player_.maxHP_,this.player_.maxHPBoost_,this.player_.maxHPMax_);
          this.rpBar_.draw(this.player_.rp_,this.player_.maxRP_,this.player_.maxRPBoost_,this.player_.maxRPMax_);

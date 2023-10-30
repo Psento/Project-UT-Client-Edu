@@ -56,6 +56,12 @@ package com.company.assembleegameclient.ui
          this.defaultForegroundColor = this.color_ = color;
          this.defaultBackgroundColor = this.backColor_ = backColor;
          this.textColor_ = 16777215;
+         var valueColor:uint = 16777215;
+         if(labelColor != this.textColor_ || labelColor != valueColor)
+         {
+            this.textColor_ = labelColor;
+            valueColor = labelColor;
+         }
          if(label != null && label.length != 0)
          {
             this.labelText_ = new SimpleText(14,labelColor != this.textColor_ ? labelColor : this.textColor_,false,0,0);
@@ -63,18 +69,18 @@ package com.company.assembleegameclient.ui
             this.labelText_.text = label;
             this.labelText_.updateMetrics();
             this.labelText_.y = -3;
-            this.labelText_.filters = [new DropShadowFilter(0,0,0)];
+            this.labelText_.filters = [new DropShadowFilter(0,0,0,1.0,1.5,1.5,255)];
             addChild(this.labelText_);
          }
-         this.valueText_ = new SimpleText(14,16777215,false,0,0);
+         this.valueText_ = new SimpleText(14,valueColor,false,0,0);
          this.valueText_.setBold(true);
-         this.valueText_.filters = [new DropShadowFilter(0,0,0)];
+         this.valueText_.filters = [new DropShadowFilter(0,0,0,1.0,1.5,1.5,255)];
          this.valueText_.y = -3;
          this.boostText_ = new SimpleText(14,this.textColor_,false,0,0);
          this.boostText_.setBold(true);
          this.boostText_.alpha = 0.6;
          this.boostText_.y = -3;
-         this.boostText_.filters = [new DropShadowFilter(0,0,0)];
+         this.boostText_.filters = [new DropShadowFilter(0,0,0,1.0,1.5,1.5,255)];
       }
       
       public function draw(val:int, max:int, boost:int, maxMax:int = -1) : void
@@ -117,13 +123,19 @@ package com.company.assembleegameclient.ui
          {
             textColor = 6206769;
          }
+         if(color_ == 16777215)
+         {
+            textColor = 16777215;
+         }
          if(this.textColor_ != textColor)
          {
             this.setTextColor(textColor);
          }
-         graphics.beginFill(this.backColor_);
-         graphics.drawRect(0,0,this.w_,this.h_);
-         graphics.endFill();
+         if(color_ != 16777215) {
+            graphics.beginFill(this.backColor_);
+            graphics.drawRect(0, 0, this.w_, this.h_);
+            graphics.endFill();
+         }
          this.colorSprite.graphics.beginFill(this.color_);
          if(this.max_ > 0)
          {

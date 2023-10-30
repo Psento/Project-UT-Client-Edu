@@ -1305,6 +1305,7 @@
         <SlotType>2</SlotType>
         <Tier>0</Tier>
         <Description>A sharp dagger made of steel.</Description>
+        <ActivateOnEquip stat="1" amount="100">IncrementStat</ActivateOnEquip>
         <RateOfFire>1</RateOfFire>
         <Sound>weapon/blunt_dagger</Sound>
         <Projectile>

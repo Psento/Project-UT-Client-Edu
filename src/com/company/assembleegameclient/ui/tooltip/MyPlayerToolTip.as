@@ -63,10 +63,6 @@ package com.company.assembleegameclient.ui.tooltip
          this.hpBar_.x = 6;
          this.hpBar_.y = 40;
          addChild(this.hpBar_);
-         this.spBar_ = new StatusBar(176,16,16777215,14693428,"");
-         this.spBar_.x = 6;
-         this.spBar_.y = 40;
-         addChild(this.spBar_);
          this.rpBar_ = new StatusBar(176,16,6325472,5526612,"RP");
          this.rpBar_.x = 6;
          this.rpBar_.y = 64;
@@ -104,14 +100,10 @@ package com.company.assembleegameclient.ui.tooltip
             this.nextClassQuest_.y = height - 2;
             addChild(this.nextClassQuest_);
          }
-         this.spBar_.visible = false;
       }
       
       override public function draw() : void
       {
-         if(this.player_.sp_ > 0)
-            this.spBar_.visible = true;
-         this.spBar_.draw(this.player_.sp_,this.player_.maxSP_,this.player_.maxSPBoost_,this.player_.maxSPMax_);
          this.hpBar_.draw(this.player_.hp_,this.player_.maxHP_,this.player_.maxHPBoost_,this.player_.maxHPMax_);
          this.rpBar_.draw(this.player_.rp_,this.player_.maxRP_,this.player_.maxRPBoost_,this.player_.maxRPMax_);
          this.lineBreak_.setWidthColor(width - 10,1842204);

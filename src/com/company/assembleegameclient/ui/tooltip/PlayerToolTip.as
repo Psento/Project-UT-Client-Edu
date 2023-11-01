@@ -56,7 +56,7 @@ package com.company.assembleegameclient.ui.tooltip
          this.hpBar_.x = 6;
          this.hpBar_.y = yOffset;
          addChild(this.hpBar_);
-         this.spBar_ = new StatusBar(176,16,16777215,14693428,"");
+         this.spBar_ = new StatusBar(176,16,16777215,14693428,"SP");
          this.spBar_.x = 6;
          this.spBar_.y = yOffset;
          addChild(this.spBar_);
@@ -83,13 +83,16 @@ package com.company.assembleegameclient.ui.tooltip
       
       override public function draw() : void
       {
-         if(this.player_.sp_ > 0)
-         {
-            this.spBar_.visible = true;
-         }
-         this.spBar_.draw(this.player_.sp_,this.player_.maxSP_,this.player_.maxSPBoost_,this.player_.maxSPMax_);
-         this.hpBar_.draw(this.player_.hp_,this.player_.maxHP_,this.player_.maxHPBoost_,this.player_.maxHPMax_);
-         this.rpBar_.draw(this.player_.rp_,this.player_.maxRP_,this.player_.maxRPBoost_,this.player_.maxRPMax_);
+         this.spBar_.valueText_.textColor = 16777215;
+         this.spBar_.boostText_.textColor = 16777215;
+         this.spBar_.visible = this.player_.sp_ > 0;
+         this.hpBar_.labelText_.visible = !(this.player_.sp_ > 0);
+         this.hpBar_.valueText_.visible = !(this.player_.sp_ > 0);
+         this.hpBar_.boostText_.visible = !(this.player_.sp_ > 0);
+
+         this.spBar_.draw(this.player_.sp_,this.player_.maxSP_,this.player_.maxSPBoost_);
+         this.hpBar_.draw(this.player_.hp_,this.player_.maxHP_,this.player_.maxHPBoost_);
+         this.rpBar_.draw(this.player_.rp_,this.player_.maxRP_,this.player_.maxRPBoost_);
          this.eGrid.setItems(this.player_.equipment_, this.player_.itemDatas_);
          this.rankText_.draw(this.player_.numStars_);
          super.draw();

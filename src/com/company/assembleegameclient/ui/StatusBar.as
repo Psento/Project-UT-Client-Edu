@@ -1,6 +1,7 @@
 package com.company.assembleegameclient.ui
 {
-   import com.company.ui.SimpleText;
+import com.company.assembleegameclient.objects.Player;
+import com.company.ui.SimpleText;
    import flash.display.Sprite;
    import flash.events.Event;
    import flash.events.MouseEvent;
@@ -27,6 +28,8 @@ package com.company.assembleegameclient.ui
       public var boost_:int = -1;
       
       public var maxMax_:int = -1;
+
+      public var stat:int = -1;
       
       public var labelText_:SimpleText;
       
@@ -45,6 +48,8 @@ package com.company.assembleegameclient.ui
       private var direction:int = -1;
       
       private var speed:Number = 0.1;
+
+      private var player:Player;
       
       public function StatusBar(w:int, h:int, color:uint, backColor:uint, label:String = null, labelColor:uint = 16777215)
       {
@@ -97,6 +102,9 @@ package com.company.assembleegameclient.ui
          this.max_ = max;
          this.boost_ = boost;
          this.maxMax_ = maxMax;
+         this.stat = stat;
+         if(player != null)
+            this.player = player;
          this.internalDraw();
       }
       
@@ -123,10 +131,6 @@ package com.company.assembleegameclient.ui
          {
             textColor = 6206769;
          }
-         if(color_ == 16777215)
-         {
-            textColor = 16777215;
-         }
          if(this.textColor_ != textColor)
          {
             this.setTextColor(textColor);
@@ -146,7 +150,6 @@ package com.company.assembleegameclient.ui
             this.colorSprite.graphics.drawRect(0,0,this.w_,this.h_);
          }
          this.colorSprite.graphics.endFill();
-
          if(this.max_ > 0)
          {
             this.valueText_.text = "" + this.val_ + "/" + this.max_;

@@ -345,14 +345,14 @@ import com.company.util.AssetLibrary;
                   return p.background_ >= val;
                case StatData.ATTACK_STAT:
                   return p.attack_ >= val;
-               case StatData.DEFENSE_STAT:
-                  return p.defense_ >= val;
+               case StatData.ARMOR_STAT:
+                  return p.armor_ >= val;
                case StatData.SPEED_STAT:
                   return p.speed_ >= val;
-               case StatData.VITALITY_STAT:
-                  return p.vitality_ >= val;
+               case StatData.VIGOR_STAT:
+                  return p.vigor_ >= val;
                case StatData.WISDOM_STAT:
-                  return p.wisdom_ >= val;
+                  return p.intelligence_ >= val;
                case StatData.DEXTERITY_STAT:
                   return p.dexterity_ >= val;
             }

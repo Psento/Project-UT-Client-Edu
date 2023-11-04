@@ -43,9 +43,9 @@ package com.company.assembleegameclient.mapeditor
             {
                desc = desc + ("MaxHitPoints: " + objectXML.MaxHitPoints + "\n");
             }
-            if(objectXML.hasOwnProperty("Defense"))
+            if(objectXML.hasOwnProperty("Armor"))
             {
-               desc = desc + ("Defense: " + objectXML.Defense + "\n");
+               desc = desc + ("Armor: " + objectXML.Armor + "\n");
             }
          }
          if(objectXML.hasOwnProperty("God"))

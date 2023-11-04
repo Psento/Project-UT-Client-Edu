@@ -57,7 +57,7 @@ package svera.untiered.classes.control
          character.sp = this.parseCharacterStat(object,"MaxShieldPoints");
          character.rp = this.parseCharacterStat(object,"MaxResourcePoints");
          character.attack = this.parseCharacterStat(object,"Attack");
-         character.defense = this.parseCharacterStat(object,"Defense");
+         character.armor = this.parseCharacterStat(object,"Armor");
          character.speed = this.parseCharacterStat(object,"Speed");
          character.dexterity = this.parseCharacterStat(object,"Dexterity");
          character.hpRegeneration = this.parseCharacterStat(object,"HpRegen");

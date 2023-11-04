@@ -28,7 +28,7 @@
         <Size>150</Size>
         <ShadowSize>50</ShadowSize>
         <MaxHitPoints>55000</MaxHitPoints>
-        <Defense>25</Defense>
+        <Armor>25</Armor>
         <XpMult>0.7</XpMult>
         <StasisImmune/>
 
@@ -215,7 +215,7 @@
         <Size>100</Size>
         <ShadowSize>75</ShadowSize>
         <MaxHitPoints>1000</MaxHitPoints>
-        <Defense>10</Defense>
+        <Armor>10</Armor>
         <XpMult>0.0</XpMult>
 
         <Projectile id="0">
@@ -240,7 +240,7 @@
         <Size>100</Size>
         <ShadowSize>50</ShadowSize>
         <MaxHitPoints>2000</MaxHitPoints>
-        <Defense>10</Defense>
+        <Armor>10</Armor>
         <StasisImmune/>
         <XpMult>0.1</XpMult>
 
@@ -270,7 +270,7 @@
     <Size>100</Size>
     <ShadowSize>50</ShadowSize>
     <MaxHitPoints>1500</MaxHitPoints>
-    <Defense>15</Defense>
+    <Armor>15</Armor>
 
     <Projectile id="0">
         <ObjectId>Purple Energy Shot</ObjectId>
@@ -298,7 +298,7 @@
         <Size>100</Size>
         <ShadowSize>50</ShadowSize>
         <MaxHitPoints>1500</MaxHitPoints>
-        <Defense>15</Defense>
+        <Armor>15</Armor>
         <XpMult>0.1</XpMult>
 
         <Projectile id="0">
@@ -328,7 +328,7 @@
         <Size>100</Size>
         <ShadowSize>50</ShadowSize>
         <MaxHitPoints>2000</MaxHitPoints>
-        <Defense>20</Defense>
+        <Armor>20</Armor>
 
         <Projectile id="0">
             <ObjectId>Yellow Energy Shot</ObjectId>
@@ -374,7 +374,7 @@
         <Size>100</Size>
         <ShadowSize>50</ShadowSize>
         <MaxHitPoints>2000</MaxHitPoints>
-        <Defense>20</Defense>
+        <Armor>20</Armor>
         <XpMult>0.1</XpMult>
 
         <Projectile id="0">
@@ -422,7 +422,7 @@
         <Size>100</Size>
         <ShadowSize>50</ShadowSize>
         <MaxHitPoints>2750</MaxHitPoints>
-        <Defense>25</Defense>
+        <Armor>25</Armor>
 
         <Projectile id="0">
             <ObjectId>Robot Attack</ObjectId>
@@ -448,7 +448,7 @@
         <Size>100</Size>
         <ShadowSize>50</ShadowSize>
         <MaxHitPoints>2750</MaxHitPoints>
-        <Defense>25</Defense>
+        <Armor>25</Armor>
         <XpMult>0.1</XpMult>
 
         <Projectile id="0">
@@ -475,7 +475,7 @@
         <Size>150</Size>
         <ShadowSize>50</ShadowSize>
         <MaxHitPoints>3500</MaxHitPoints>
-        <Defense>30</Defense>
+        <Armor>30</Armor>
 
         <Projectile id="0">
             <ObjectId>Lightning Spiral</ObjectId>
@@ -511,7 +511,7 @@
         <Size>150</Size>
         <ShadowSize>50</ShadowSize>
         <MaxHitPoints>4000</MaxHitPoints>
-        <Defense>40</Defense>
+        <Armor>40</Armor>
 
         <Projectile id="0">
             <ObjectId>Shockwave Blast</ObjectId>
@@ -659,7 +659,7 @@
         <Size>200</Size>
         <ShadowSize>50</ShadowSize>
         <MaxHitPoints>60000</MaxHitPoints>
-        <Defense>30</Defense>
+        <Armor>30</Armor>
         <XpMult>0.8</XpMult>
         <StasisImmune/>
 
@@ -783,7 +783,7 @@
         <Size>150</Size>
         <ShadowSize>0</ShadowSize>
         <MaxHitPoints>8000</MaxHitPoints>
-        <Defense>30</Defense>
+        <Armor>30</Armor>
         <Flying/>
         <Z>1</Z>
 

@@ -36,7 +36,7 @@
 		</Projectile>
 		
 		<Size>100</Size>
-		<Defense>52</Defense>
+		<Armor>52</Armor>
 	        
 		
 	        
@@ -60,7 +60,7 @@
 		<MaxHitPoints>8000</MaxHitPoints>
 		<XpMult>0.0</XpMult>
 		<Size>110</Size>
-		<Defense>50</Defense>
+		<Armor>50</Armor>
 		
 	
 		
@@ -78,7 +78,7 @@
 		<MaxHitPoints>1000</MaxHitPoints>
 		<XpMult>0.0</XpMult>
 		<Size>120</Size>
-		<Defense>200</Defense>
+		<Armor>200</Armor>
 	        
 		<Projectile id="0">
 			<ObjectId>Coral Spike</ObjectId>
@@ -103,7 +103,7 @@
 		<MaxHitPoints>1000</MaxHitPoints>
 		<XpMult>0.0</XpMult>
 		<Size>60</Size>
-		<Defense>200</Defense>
+		<Armor>200</Armor>
 	        
 		<Projectile id="0">
 			<ObjectId>Coral Spike</ObjectId>
@@ -139,7 +139,7 @@
 		<Level>20</Level>
 		<XpMult>0.0</XpMult>
 		<Size>140</Size>
-		<Defense>60</Defense>
+		<Armor>60</Armor>
 		<NoArticle/>
 	        
 		<Projectile id="0">
@@ -191,7 +191,7 @@
 		<MaxHitPoints>1200</MaxHitPoints>
 		<XpMult>0.0</XpMult>
 		<Size>90</Size>
-		<Defense>5</Defense>
+		<Armor>5</Armor>
 		
 		<Texture><File>lofiEnvironment3</File><Index>0x22</Index></Texture>
 		<AltTexture id="1">
@@ -226,7 +226,7 @@
 		<Level>20</Level>
 		<XpMult>0.22</XpMult>
 		<Size>140</Size>
-		<Defense>60</Defense>
+		<Armor>60</Armor>
 		<NoArticle/>
 	        
 		<Projectile id="0">
@@ -289,7 +289,7 @@
 		<PerRealmMax>1</PerRealmMax>
 		<XpMult>0.3</XpMult>
 		<Size>60</Size>
-		<Defense>60</Defense>
+		<Armor>60</Armor>
 	        
 		<Projectile id="0">
 			<ObjectId>Deep Sea Blast</ObjectId>
@@ -357,7 +357,7 @@
 		</Projectile>
 
 		<Size>100</Size>
-		<Defense>40</Defense>
+		<Armor>40</Armor>
 
 
 
@@ -390,7 +390,7 @@
 		</Projectile>
 
 		<Size>60</Size>
-		<Defense>20</Defense>
+		<Armor>20</Armor>
 
 
 
@@ -427,7 +427,7 @@
 		</Projectile>
 
 		<Size>100</Size>
-		<Defense>60</Defense>
+		<Armor>60</Armor>
 
 
 
@@ -459,7 +459,7 @@
         </Projectile>
 
         <Size>120</Size>
-        <Defense>40</Defense>
+        <Armor>40</Armor>
         <XpMult>0</XpMult>
 
 
@@ -494,7 +494,7 @@
         </Projectile>
         
         <Size>120</Size>
-        <Defense>40</Defense>
+        <Armor>40</Armor>
         
         
 		
@@ -534,7 +534,7 @@
         </Projectile>
         
         <Size>120</Size>
-        <Defense>40</Defense>
+        <Armor>40</Armor>
         
         
         
@@ -571,7 +571,7 @@
         </Projectile>
         
         <Size>100</Size>
-        <Defense>20</Defense>
+        <Armor>20</Armor>
         <XpMult>0.05</XpMult>
         
         

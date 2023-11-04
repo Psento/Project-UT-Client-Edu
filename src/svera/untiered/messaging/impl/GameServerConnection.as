@@ -1149,8 +1149,8 @@ import svera.untiered.ui.view.NotEnoughTsavoriteDialog;
                case StatData.ATTACK_STAT:
                   player.attack_ = value;
                   continue;
-               case StatData.DEFENSE_STAT:
-                  go.defense_ = value;
+               case StatData.ARMOR_STAT:
+                  go.armor_ = value;
                   continue;
                case StatData.SPEED_STAT:
                   player.speed_ = value;
@@ -1158,11 +1158,11 @@ import svera.untiered.ui.view.NotEnoughTsavoriteDialog;
                case StatData.DEXTERITY_STAT:
                   player.dexterity_ = value;
                   continue;
-               case StatData.VITALITY_STAT:
-                  player.vitality_ = value;
+               case StatData.VIGOR_STAT:
+                  player.vigor_ = value;
                   continue;
                case StatData.WISDOM_STAT:
-                  player.wisdom_ = value;
+                  player.intelligence_ = value;
                   continue;
                case StatData.CONDITION_STAT:
                   go.condition_ = value;
@@ -1254,17 +1254,17 @@ import svera.untiered.ui.view.NotEnoughTsavoriteDialog;
                case StatData.ATTACK_BOOST_STAT:
                   player.attackBoost_ = value;
                   continue;
-               case StatData.DEFENSE_BOOST_STAT:
-                  player.defenseBoost_ = value;
+               case StatData.ARMOR_BOOST_STAT:
+                  player.armorBoost_ = value;
                   continue;
                case StatData.SPEED_BOOST_STAT:
                   player.speedBoost_ = value;
                   continue;
-               case StatData.VITALITY_BOOST_STAT:
-                  player.vitalityBoost_ = value;
+               case StatData.VIGOR_BOOST_STAT:
+                  player.vigorBoost_ = value;
                   continue;
-               case StatData.WISDOM_BOOST_STAT:
-                  player.wisdomBoost_ = value;
+               case StatData.INTELLIGENCE_BOOST_STAT:
+                  player.intelligenceBoost_ = value;
                   continue;
                case StatData.DEXTERITY_BOOST_STAT:
                   player.dexterityBoost_ = value;
@@ -1573,7 +1573,7 @@ import svera.untiered.ui.view.NotEnoughTsavoriteDialog;
          var hit:Boolean = this.player.distTo(aoe.pos_) < aoe.radius_;
          if(hit)
          {
-            d = GameObject.damageWithDefense(aoe.damage_,this.player.defense_,false,this.player.condition_);
+            d = GameObject.damageWithDefense(aoe.damage_,this.player.armor_,false,this.player.condition_);
             effects = null;
             if(aoe.effect_ != 0)
             {

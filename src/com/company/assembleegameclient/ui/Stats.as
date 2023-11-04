@@ -11,15 +11,15 @@ package com.company.assembleegameclient.ui
       
       public static const ATTACK:int = 0;
       
-      public static const DEFENSE:int = 1;
+      public static const ARMOR:int = 1;
       
       public static const SPEED:int = 2;
       
       public static const DEXTERITY:int = 3;
       
-      public static const VITALITY:int = 4;
+      public static const VIGOR:int = 4;
       
-      public static const WISDOM:int = 5;
+      public static const INTELLIGENCE:int = 5;
       
       public static const NUM_STAT:int = 6;
       
@@ -31,8 +31,8 @@ package com.company.assembleegameclient.ui
                     <RedOnZero/>
                 </Stat>
                 <Stat>
-                    <Abbr>DEF</Abbr>
-                    <Name>Defense</Name>
+                    <Abbr>ARM</Abbr>
+                    <Name>Armor</Name>
                     <Description>This stat decreases the amount of damage taken.</Description>
                 </Stat>
                 <Stat>
@@ -48,15 +48,15 @@ package com.company.assembleegameclient.ui
                     <RedOnZero/>
                 </Stat>
                 <Stat>
-                    <Abbr>VIT</Abbr>
-                    <Name>Vitality</Name>
+                    <Abbr>VIG</Abbr>
+                    <Name>Vigor</Name>
                     <Description>This stat increases the speed at which hit points are recovered.</Description>
                     <RedOnZero/>
                 </Stat>
                 <Stat>
-                    <Abbr>WIS</Abbr>
-                    <Name>Wisdom</Name>
-                    <Description>This stat increases the speed at which magic points are recovered.</Description>
+                    <Abbr>INT</Abbr>
+                    <Name>Intelligence</Name>
+                    <Description>This stat increases the speed at which Resource points are recovered.</Description>
                     <RedOnZero/>
                 </Stat>
             </Stats>;
@@ -94,11 +94,11 @@ package com.company.assembleegameclient.ui
       public function draw(go:Player) : void
       {
          this.stats_[ATTACK].draw(go.attack_,go.attackBoost_,go.attackMax_);
-         this.stats_[DEFENSE].draw(go.defense_,go.defenseBoost_,go.defenseMax_);
+         this.stats_[ARMOR].draw(go.armor_,go.armorBoost_,go.armorMax_);
          this.stats_[SPEED].draw(go.speed_,go.speedBoost_,go.speedMax_);
          this.stats_[DEXTERITY].draw(go.dexterity_,go.dexterityBoost_,go.dexterityMax_);
-         this.stats_[VITALITY].draw(go.vitality_,go.vitalityBoost_,go.vitalityMax_);
-         this.stats_[WISDOM].draw(go.wisdom_,go.wisdomBoost_,go.wisdomMax_);
+         this.stats_[VIGOR].draw(go.vigor_,go.vigorBoost_,go.vigorMax_);
+         this.stats_[INTELLIGENCE].draw(go.intelligence_,go.intelligenceBoost_,go.intelligenceMax_);
       }
       
       private function onAddedToStage(event:Event) : void

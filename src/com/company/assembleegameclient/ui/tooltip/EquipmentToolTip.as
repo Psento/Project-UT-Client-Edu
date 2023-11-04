@@ -456,7 +456,7 @@ import svera.untiered.constants.ActivationType;
                stats[3] = (stats[3] || 0) + k;
                datas[3] = (datas[3] || 0) + k;
             }
-            if ((k = ItemData.getStat(this.itemData_, ItemData.DEFENSE_BIT, 1)) != 0) {
+            if ((k = ItemData.getStat(this.itemData_, ItemData.ARMOR_BIT, 1)) != 0) {
                stats[4] = (stats[4] || 0) + k;
                datas[4] = (datas[4] || 0) + k;
             }
@@ -468,11 +468,11 @@ import svera.untiered.constants.ActivationType;
                stats[6] = (stats[6] || 0) + k;
                datas[6] = (datas[6] || 0) + k;
             }
-            if ((k = ItemData.getStat(this.itemData_, ItemData.VITALITY_BIT, 1)) != 0) {
+            if ((k = ItemData.getStat(this.itemData_, ItemData.VIGOR_BIT, 1)) != 0) {
                stats[7] = (stats[7] || 0) + k;
                datas[7] = (datas[7] || 0) + k;
             }
-            if ((k = ItemData.getStat(this.itemData_, ItemData.WISDOM_BIT, 1)) != 0) {
+            if ((k = ItemData.getStat(this.itemData_, ItemData.INTELLIGENCE_BIT, 1)) != 0) {
                stats[8] = (stats[8] || 0) + k;
                datas[8] = (datas[8] || 0) + k;
             }

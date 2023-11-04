@@ -33,9 +33,9 @@ package svera.untiered.messaging.impl.data
       public static const INVENTORY_10_STAT:int = 25;
       public static const INVENTORY_11_STAT:int = 26;
       public static const ATTACK_STAT:int = 27;
-      public static const DEFENSE_STAT:int = 28;
+      public static const ARMOR_STAT:int = 28;
       public static const SPEED_STAT:int = 29;
-      public static const VITALITY_STAT:int = 30;
+      public static const VIGOR_STAT:int = 30;
       public static const WISDOM_STAT:int = 31;
       public static const DEXTERITY_STAT:int = 32;
       public static const CONDITION_STAT:int = 33;
@@ -61,10 +61,10 @@ package svera.untiered.messaging.impl.data
       public static const MAX_SP_BOOST_STAT:int = 53;
       public static const MAX_RP_BOOST_STAT:int = 54;
       public static const ATTACK_BOOST_STAT:int = 55;
-      public static const DEFENSE_BOOST_STAT:int = 56;
+      public static const ARMOR_BOOST_STAT:int = 56;
       public static const SPEED_BOOST_STAT:int = 57;
-      public static const VITALITY_BOOST_STAT:int = 58;
-      public static const WISDOM_BOOST_STAT:int = 59;
+      public static const VIGOR_BOOST_STAT:int = 58;
+      public static const INTELLIGENCE_BOOST_STAT:int = 59;
       public static const DEXTERITY_BOOST_STAT:int = 60;
       public static const CHAR_FAME_STAT:int = 61;
       public static const NEXT_CLASS_QUEST_FAME_STAT:int = 62;
@@ -135,15 +135,15 @@ package svera.untiered.messaging.impl.data
             case 3:
                return "Attack";
             case 4:
-               return "Defense";
+               return "Armor";
             case 5:
                return "Speed";
             case 6:
                return "Dexterity";
             case 7:
-               return "Vitality";
+               return "Vigor";
             case 8:
-               return "Wisdom";
+               return "Intelligence";
             default:
                return "Unknown Stat";
          }

@@ -33,7 +33,7 @@ package svera.untiered.classes.model
       
       public var attack:CharacterClassStat;
       
-      public var defense:CharacterClassStat;
+      public var armor:CharacterClassStat;
       
       public var speed:CharacterClassStat;
       

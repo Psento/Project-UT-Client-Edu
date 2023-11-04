@@ -16,11 +16,11 @@ public class ItemData
     public static const MAX_SP_BIT:uint = 1 << 9;
     public static const MAX_RP_BIT:uint = 1 << 10;
     public static const ATTACK_BIT:uint = 1 << 11;
-    public static const DEFENSE_BIT:uint = 1 << 12;
+    public static const ARMOR_BIT:uint = 1 << 12;
     public static const SPEED_BIT:uint = 1 << 13;
     public static const DEXTERITY_BIT:uint = 1 << 14;
-    public static const VITALITY_BIT:uint = 1 << 15;
-    public static const WISDOM_BIT:uint = 1 << 16;
+    public static const VIGOR_BIT:uint = 1 << 15;
+    public static const INTELLIGENCE_BIT:uint = 1 << 16;
     public static const RATE_OF_FIRE_BIT:uint = 1 << 17;
     public static const DAMAGE_BIT:uint = 1 << 18;
     public static const COOLDOWN_BIT:uint = 1 << 19;

@@ -32,10 +32,13 @@ package com.company.assembleegameclient.screens.charrects
          makeContainer();
          var playerXML:XML = ObjectLibrary.playerChars_[int(ObjectLibrary.playerChars_.length * Math.random())];
          var bd:BitmapData = SavedCharacter.getImage(null,playerXML,AnimatedChar.RIGHT,AnimatedChar.STAND,0,false, true);
-         bd = BitmapUtil.cropToBitmapData(bd,6,6,bd.width - 12,bd.height - 6);
+         bd = BitmapUtil.cropToBitmapData(bd,0,0,bd.width,bd.height);
          this.bitmap_ = new Bitmap();
          this.bitmap_.bitmapData = bd;
+         this.bitmap_.scaleX = this.bitmap_.scaleX * 0.5;
+         this.bitmap_.scaleY = this.bitmap_.scaleY * 0.5;
          this.bitmap_.x = 0;
+         this.bitmap_.y = this.bitmap_.y + 3;
          selectContainer.addChild(this.bitmap_);
          this.classNameText_ = new SimpleText(18,16777215,false,0,0);
          this.classNameText_.setBold(true);

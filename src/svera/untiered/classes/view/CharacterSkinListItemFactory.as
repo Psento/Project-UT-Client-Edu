@@ -53,7 +53,7 @@ package svera.untiered.classes.view
       
       private function makeIcon(model:CharacterSkin) : Bitmap
       {
-         var data:BitmapData = this.characters.makeIcon(model.template);
+         var data:BitmapData = this.characters.makeIcon(model.template, 50);
          return new Bitmap(data);
       }
    }

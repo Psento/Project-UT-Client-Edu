@@ -43,8 +43,8 @@ package svera.untiered.assets
       public static var chars16x16dEncountersEmbed_:Class = EmbeddedAssets_chars16x16dEncountersEmbed_;
       public static var chars16x16dEncounters2Embed_:Class = EmbeddedAssets_chars16x16dEncounters2Embed_;
       public static var chars16x16rEncountersEmbed_:Class = EmbeddedAssets_chars16x16rEncountersEmbed_;
-      public static var playersEmbed_:Class = EmbeddedAssets_playersEmbed_;
-      public static var playersMaskEmbed_:Class = EmbeddedAssets_playersMaskEmbed_;
+      public static var players:Class = Assets_Players;
+      public static var playersMask:Class = Assets_PlayersMask;
       public static var playersSkinsEmbed_:Class = EmbeddedAssets_playersSkinsEmbed_;
       public static var playersSkinsMaskEmbed_:Class = EmbeddedAssets_playersSkinsMaskEmbed_;
       public static var chars8x8rPets1Embed_:Class = EmbeddedAssets_chars8x8rPets1Embed_;

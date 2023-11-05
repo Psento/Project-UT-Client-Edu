@@ -77,7 +77,7 @@ import flash.display.Bitmap;
       {
          var type:CharacterClass = this.classes.getCharacterClass(savedChar.objectType());
          var skin:CharacterSkin = type.skins.getSkin(savedChar.skinType()) || type.skins.getDefaultSkin();
-         var data:BitmapData = this.assetFactory.makeIcon(skin.template,100,savedChar.tex1(),savedChar.tex2());
+         var data:BitmapData = this.assetFactory.makeIcon(skin.template,50,savedChar.tex1(),savedChar.tex2());
          return new Bitmap(data);
       }
       

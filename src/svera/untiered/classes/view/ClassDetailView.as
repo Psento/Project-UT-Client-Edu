@@ -53,7 +53,6 @@ package svera.untiered.classes.view
          super();
          dropShadowFilter = new DropShadowFilter(0,0,0,1,8,8);
          this.animContainer = new Sprite();
-         this.animContainer.x = (WIDTH - 104) * 0.5;
          addChild(this.animContainer);
          this.classNameText = new SimpleText(20,16777215,false,0,0);
          this.classNameText.setBold(true);
@@ -161,6 +160,8 @@ package svera.untiered.classes.view
       
       private function layout() : void
       {
+         this.animContainer.x = WIDTH / 2 - this.animContainer.width / 2;
+         this.animContainer.y = 110 - this.animContainer.height;
          this.classNameText.x = WIDTH / 2 - this.classNameText.width / 2;
          this.classNameText.y = 110;
          this.classDescriptionText.y = this.classNameText.y + this.classNameText.textHeight + 5;

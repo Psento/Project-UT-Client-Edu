@@ -2,7 +2,7 @@ package svera.untiered.assets
 {
    public class EmbeddedData
    {
-      public static const PlayersCXML:Class = EmbeddedData_PlayersCXML;
+      public static const PlayersCXML:Class = XML_Players;
       private static const GroundCXML:Class = EmbeddedData_GroundCXML;
       public static const groundFiles:Array = [new GroundCXML()];
       private static const ProjectilesCXML:Class = EmbeddedData_ProjectilesCXML;

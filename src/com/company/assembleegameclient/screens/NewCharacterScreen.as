@@ -57,6 +57,7 @@ package com.company.assembleegameclient.screens
             objectType = int(playerXML.@type);
             characterType = playerXML.@id;
 
+            trace(objectType.toString(), characterType.toString())
             charBox = new CharacterBox(playerXML,model.getCharStats()[objectType],model);
             charBox.x = 50 + 140 * int(i % 5) + 70 - charBox.width / 2;
             charBox.y = 88 + 140 * int(i / 5);

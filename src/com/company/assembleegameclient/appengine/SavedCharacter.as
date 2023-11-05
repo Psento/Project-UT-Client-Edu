@@ -33,7 +33,8 @@ import com.company.util.CachingColorTransformer;
          var image:MaskedImage = animatedChar.imageFromDir(dir,action,p);
          var tex1:int = savedChar != null?int(savedChar.tex1()):int(null);
          var tex2:int = savedChar != null?int(savedChar.tex2()):int(null);
-         var bd:BitmapData = TextureRedrawer.resize(image.image_,image.mask_,100,false,tex1,tex2);
+         var size:int = 100
+         var bd:BitmapData = TextureRedrawer.resize(image.image_,image.mask_,size,false,tex1,tex2);
          bd = GlowRedrawer.outlineGlow(bd,0);
          if (dimmed)
          {

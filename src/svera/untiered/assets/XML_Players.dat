@@ -1,0 +1,367 @@
+<Objects>
+	<Object type="0x0300" id="Beast">
+		<Class>Player</Class>
+		<Description>The beast relies on their claws to deal damage at small range.</Description>
+		<AnimatedTexture><File>players</File><Index>0</Index></AnimatedTexture>
+		<HitSound>player/rogue_hit</HitSound>
+		<DeathSound>player/rogue_death</DeathSound>
+		<Player/>
+		<BloodProb>1.0</BloodProb>
+		<SlotTypes>2, 13, 6, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
+		<Equipment>0xa14, 0xa56, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1</Equipment>
+		<MaxHitPoints max="720">150</MaxHitPoints>
+		<MaxShieldPoints max="0">0</MaxShieldPoints>
+		<MaxResourcePoints max="252">100</MaxResourcePoints>
+		<Attack max="50">10</Attack>
+		<Armor max="25">0</Armor>
+		<Speed max="75">15</Speed>
+		<Dexterity max="75">15</Dexterity>
+		<HpRegen max="40">15</HpRegen>
+		<MpRegen max="50">10</MpRegen>
+	</Object>
+  <Object type="0x0301" id="Striker">
+    <Class>Player</Class>
+    <Description>The striker relies on their gauntlets to deal damage at small range.</Description>
+    <AnimatedTexture>
+      <File>players</File>
+      <Index>1</Index>
+    </AnimatedTexture>
+    <HitSound>player/rogue_hit</HitSound>
+    <DeathSound>player/rogue_death</DeathSound>
+    <Player/>
+    <BloodProb>1.0</BloodProb>
+    <SlotTypes>2, 13, 6, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
+    <Equipment>0xa14, 0xa56, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1</Equipment>
+    <MaxHitPoints max="720">150</MaxHitPoints>
+    <MaxShieldPoints max="0">0</MaxShieldPoints>
+    <MaxResourcePoints max="252">100</MaxResourcePoints>
+    <Attack max="50">10</Attack>
+    <Armor max="25">0</Armor>
+    <Speed max="75">15</Speed>
+    <Dexterity max="75">15</Dexterity>
+    <HpRegen max="40">15</HpRegen>
+    <MpRegen max="50">10</MpRegen>
+  </Object>
+  <Object type="0x0302" id="Reaver">
+    <Class>Player</Class>
+    <Description>The reaver relies on their dual weapon mastery to deal damage at small range.</Description>
+    <AnimatedTexture>
+      <File>players</File>
+      <Index>2</Index>
+    </AnimatedTexture>
+    <HitSound>player/rogue_hit</HitSound>
+    <DeathSound>player/rogue_death</DeathSound>
+    <Player/>
+    <BloodProb>1.0</BloodProb>
+    <SlotTypes>2, 13, 6, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
+    <Equipment>0xa14, 0xa56, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1</Equipment>
+    <MaxHitPoints max="720">150</MaxHitPoints>
+    <MaxShieldPoints max="0">0</MaxShieldPoints>
+    <MaxResourcePoints max="252">100</MaxResourcePoints>
+    <Attack max="50">10</Attack>
+    <Armor max="25">0</Armor>
+    <Speed max="75">15</Speed>
+    <Dexterity max="75">15</Dexterity>
+    <HpRegen max="40">15</HpRegen>
+    <MpRegen max="50">10</MpRegen>
+  </Object>
+  <Object type="0x0303" id="Scout">
+    <Class>Player</Class>
+    <Description>The scout relies on their dagger to deal damage at small range.</Description>
+    <AnimatedTexture>
+      <File>players</File>
+      <Index>3</Index>
+    </AnimatedTexture>
+    <HitSound>player/rogue_hit</HitSound>
+    <DeathSound>player/rogue_death</DeathSound>
+    <Player/>
+    <BloodProb>1.0</BloodProb>
+    <SlotTypes>2, 13, 6, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
+    <Equipment>0xa14, 0xa56, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1</Equipment>
+    <MaxHitPoints max="720">150</MaxHitPoints>
+    <MaxShieldPoints max="0">0</MaxShieldPoints>
+    <MaxResourcePoints max="252">100</MaxResourcePoints>
+    <Attack max="50">10</Attack>
+    <Armor max="25">0</Armor>
+    <Speed max="75">15</Speed>
+    <Dexterity max="75">15</Dexterity>
+    <HpRegen max="40">15</HpRegen>
+    <MpRegen max="50">10</MpRegen>
+  </Object>
+  <Object type="0x0304" id="Nomad">
+    <Class>Player</Class>
+    <Description>The nomad relies on their axe to deal damage at short range.</Description>
+    <AnimatedTexture>
+      <File>players</File>
+      <Index>4</Index>
+    </AnimatedTexture>
+    <HitSound>player/rogue_hit</HitSound>
+    <DeathSound>player/rogue_death</DeathSound>
+    <Player/>
+    <BloodProb>1.0</BloodProb>
+    <SlotTypes>2, 13, 6, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
+    <Equipment>0xa14, 0xa56, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1</Equipment>
+    <MaxHitPoints max="720">150</MaxHitPoints>
+    <MaxShieldPoints max="0">0</MaxShieldPoints>
+    <MaxResourcePoints max="252">100</MaxResourcePoints>
+    <Attack max="50">10</Attack>
+    <Armor max="25">0</Armor>
+    <Speed max="75">15</Speed>
+    <Dexterity max="75">15</Dexterity>
+    <HpRegen max="40">15</HpRegen>
+    <MpRegen max="50">10</MpRegen>
+  </Object>
+  <Object type="0x0305" id="Warlock">
+    <Class>Player</Class>
+    <Description>The warlock relies on their mace to deal damage at short range.</Description>
+    <AnimatedTexture>
+      <File>players</File>
+      <Index>5</Index>
+    </AnimatedTexture>
+    <HitSound>player/rogue_hit</HitSound>
+    <DeathSound>player/rogue_death</DeathSound>
+    <Player/>
+    <BloodProb>1.0</BloodProb>
+    <SlotTypes>2, 13, 6, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
+    <Equipment>0xa14, 0xa56, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1</Equipment>
+    <MaxHitPoints max="720">150</MaxHitPoints>
+    <MaxShieldPoints max="0">0</MaxShieldPoints>
+    <MaxResourcePoints max="252">100</MaxResourcePoints>
+    <Attack max="50">10</Attack>
+    <Armor max="25">0</Armor>
+    <Speed max="75">15</Speed>
+    <Dexterity max="75">15</Dexterity>
+    <HpRegen max="40">15</HpRegen>
+    <MpRegen max="50">10</MpRegen>
+  </Object>
+  <Object type="0x0306" id="Swashbuckler">
+    <Class>Player</Class>
+    <Description>The swashbuckler relies on their sword to deal damage at short range.</Description>
+    <AnimatedTexture>
+      <File>players</File>
+      <Index>6</Index>
+    </AnimatedTexture>
+    <HitSound>player/rogue_hit</HitSound>
+    <DeathSound>player/rogue_death</DeathSound>
+    <Player/>
+    <BloodProb>1.0</BloodProb>
+    <SlotTypes>2, 13, 6, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
+    <Equipment>0xa14, 0xa56, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1</Equipment>
+    <MaxHitPoints max="720">150</MaxHitPoints>
+    <MaxShieldPoints max="0">0</MaxShieldPoints>
+    <MaxResourcePoints max="252">100</MaxResourcePoints>
+    <Attack max="50">10</Attack>
+    <Armor max="25">0</Armor>
+    <Speed max="75">15</Speed>
+    <Dexterity max="75">15</Dexterity>
+    <HpRegen max="40">15</HpRegen>
+    <MpRegen max="50">10</MpRegen>
+  </Object>
+  <Object type="0x0307" id="Lancer">
+    <Class>Player</Class>
+    <Description>The lancer relies on their lance to deal damage at short range.</Description>
+    <AnimatedTexture>
+      <File>players</File>
+      <Index>7</Index>
+    </AnimatedTexture>
+    <HitSound>player/rogue_hit</HitSound>
+    <DeathSound>player/rogue_death</DeathSound>
+    <Player/>
+    <BloodProb>1.0</BloodProb>
+    <SlotTypes>2, 13, 6, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
+    <Equipment>0xa14, 0xa56, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1</Equipment>
+    <MaxHitPoints max="720">150</MaxHitPoints>
+    <MaxShieldPoints max="0">0</MaxShieldPoints>
+    <MaxResourcePoints max="252">100</MaxResourcePoints>
+    <Attack max="50">10</Attack>
+    <Armor max="25">0</Armor>
+    <Speed max="75">15</Speed>
+    <Dexterity max="75">15</Dexterity>
+    <HpRegen max="40">15</HpRegen>
+    <MpRegen max="50">10</MpRegen>
+  </Object>
+  <Object type="0x0308" id="Ronin">
+    <Class>Player</Class>
+    <Description>The ronin relies on their katana to deal damage at short range.</Description>
+    <AnimatedTexture>
+      <File>players</File>
+      <Index>8</Index>
+    </AnimatedTexture>
+    <HitSound>player/rogue_hit</HitSound>
+    <DeathSound>player/rogue_death</DeathSound>
+    <Player/>
+    <BloodProb>1.0</BloodProb>
+    <SlotTypes>2, 13, 6, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
+    <Equipment>0xa14, 0xa56, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1</Equipment>
+    <MaxHitPoints max="720">150</MaxHitPoints>
+    <MaxShieldPoints max="0">0</MaxShieldPoints>
+    <MaxResourcePoints max="252">100</MaxResourcePoints>
+    <Attack max="50">10</Attack>
+    <Armor max="25">0</Armor>
+    <Speed max="75">15</Speed>
+    <Dexterity max="75">15</Dexterity>
+    <HpRegen max="40">15</HpRegen>
+    <MpRegen max="50">10</MpRegen>
+  </Object>
+  <Object type="0x0309" id="Harvester">
+    <Class>Player</Class>
+    <Description>The harvester relies on their scythe to deal damage at short range.</Description>
+    <AnimatedTexture>
+      <File>players</File>
+      <Index>9</Index>
+    </AnimatedTexture>
+    <HitSound>player/rogue_hit</HitSound>
+    <DeathSound>player/rogue_death</DeathSound>
+    <Player/>
+    <BloodProb>1.0</BloodProb>
+    <SlotTypes>2, 13, 6, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
+    <Equipment>0xa14, 0xa56, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1</Equipment>
+    <MaxHitPoints max="720">150</MaxHitPoints>
+    <MaxShieldPoints max="0">0</MaxShieldPoints>
+    <MaxResourcePoints max="252">100</MaxResourcePoints>
+    <Attack max="50">10</Attack>
+    <Armor max="25">0</Armor>
+    <Speed max="75">15</Speed>
+    <Dexterity max="75">15</Dexterity>
+    <HpRegen max="40">15</HpRegen>
+    <MpRegen max="50">10</MpRegen>
+  </Object>
+  <Object type="0x030A" id="Chakram-Dancer">
+    <Class>Player</Class>
+    <Description>The chakram-dancer relies on their chakram to deal damage at medium range.</Description>
+    <AnimatedTexture>
+      <File>players</File>
+      <Index>10</Index>
+    </AnimatedTexture>
+    <HitSound>player/rogue_hit</HitSound>
+    <DeathSound>player/rogue_death</DeathSound>
+    <Player/>
+    <BloodProb>1.0</BloodProb>
+    <SlotTypes>2, 13, 6, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
+    <Equipment>0xa14, 0xa56, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1</Equipment>
+    <MaxHitPoints max="720">150</MaxHitPoints>
+    <MaxShieldPoints max="0">0</MaxShieldPoints>
+    <MaxResourcePoints max="252">100</MaxResourcePoints>
+    <Attack max="50">10</Attack>
+    <Armor max="25">0</Armor>
+    <Speed max="75">15</Speed>
+    <Dexterity max="75">15</Dexterity>
+    <HpRegen max="40">15</HpRegen>
+    <MpRegen max="50">10</MpRegen>
+  </Object>
+  <Object type="0x030B" id="Mage">
+    <Class>Player</Class>
+    <Description>The mage relies on their staff to deal damage at medium range.</Description>
+    <AnimatedTexture>
+      <File>players</File>
+      <Index>11</Index>
+    </AnimatedTexture>
+    <HitSound>player/rogue_hit</HitSound>
+    <DeathSound>player/rogue_death</DeathSound>
+    <Player/>
+    <BloodProb>1.0</BloodProb>
+    <SlotTypes>2, 13, 6, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
+    <Equipment>0xa14, 0xa56, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1</Equipment>
+    <MaxHitPoints max="720">150</MaxHitPoints>
+    <MaxShieldPoints max="0">0</MaxShieldPoints>
+    <MaxResourcePoints max="252">100</MaxResourcePoints>
+    <Attack max="50">10</Attack>
+    <Armor max="25">0</Armor>
+    <Speed max="75">15</Speed>
+    <Dexterity max="75">15</Dexterity>
+    <HpRegen max="40">15</HpRegen>
+    <MpRegen max="50">10</MpRegen>
+  </Object>
+  <Object type="0x030C" id="Gunslinger">
+    <Class>Player</Class>
+    <Description>The gunslinger relies on their gun to deal damage at long range.</Description>
+    <AnimatedTexture>
+      <File>players</File>
+      <Index>12</Index>
+    </AnimatedTexture>
+    <HitSound>player/rogue_hit</HitSound>
+    <DeathSound>player/rogue_death</DeathSound>
+    <Player/>
+    <BloodProb>1.0</BloodProb>
+    <SlotTypes>2, 13, 6, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
+    <Equipment>0xa14, 0xa56, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1</Equipment>
+    <MaxHitPoints max="720">150</MaxHitPoints>
+    <MaxShieldPoints max="0">0</MaxShieldPoints>
+    <MaxResourcePoints max="252">100</MaxResourcePoints>
+    <Attack max="50">10</Attack>
+    <Armor max="25">0</Armor>
+    <Speed max="75">15</Speed>
+    <Dexterity max="75">15</Dexterity>
+    <HpRegen max="40">15</HpRegen>
+    <MpRegen max="50">10</MpRegen>
+  </Object>
+  <Object type="0x030D" id="Bolt-Caster">
+    <Class>Player</Class>
+    <Description>The bolt-caster relies on their crossbow to deal damage at long range.</Description>
+    <AnimatedTexture>
+      <File>players</File>
+      <Index>13</Index>
+    </AnimatedTexture>
+    <HitSound>player/rogue_hit</HitSound>
+    <DeathSound>player/rogue_death</DeathSound>
+    <Player/>
+    <BloodProb>1.0</BloodProb>
+    <SlotTypes>2, 13, 6, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
+    <Equipment>0xa14, 0xa56, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1</Equipment>
+    <MaxHitPoints max="720">150</MaxHitPoints>
+    <MaxShieldPoints max="0">0</MaxShieldPoints>
+    <MaxResourcePoints max="252">100</MaxResourcePoints>
+    <Attack max="50">10</Attack>
+    <Armor max="25">0</Armor>
+    <Speed max="75">15</Speed>
+    <Dexterity max="75">15</Dexterity>
+    <HpRegen max="40">15</HpRegen>
+    <MpRegen max="50">10</MpRegen>
+  </Object>
+  <Object type="0x030E" id="Enchanter">
+    <Class>Player</Class>
+    <Description>The enchanter relies on their wand to deal damage at long range.</Description>
+    <AnimatedTexture>
+      <File>players</File>
+      <Index>14</Index>
+    </AnimatedTexture>
+    <HitSound>player/rogue_hit</HitSound>
+    <DeathSound>player/rogue_death</DeathSound>
+    <Player/>
+    <BloodProb>1.0</BloodProb>
+    <SlotTypes>2, 13, 6, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
+    <Equipment>0xa14, 0xa56, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1</Equipment>
+    <MaxHitPoints max="720">150</MaxHitPoints>
+    <MaxShieldPoints max="0">0</MaxShieldPoints>
+    <MaxResourcePoints max="252">100</MaxResourcePoints>
+    <Attack max="50">10</Attack>
+    <Armor max="25">0</Armor>
+    <Speed max="75">15</Speed>
+    <Dexterity max="75">15</Dexterity>
+    <HpRegen max="40">15</HpRegen>
+    <MpRegen max="50">10</MpRegen>
+  </Object>
+  <Object type="0x030F" id="Sharpshooter">
+    <Class>Player</Class>
+    <Description>The sharpshooter relies on their bow to deal damage at long range.</Description>
+    <AnimatedTexture>
+      <File>players</File>
+      <Index>15</Index>
+    </AnimatedTexture>
+    <HitSound>player/rogue_hit</HitSound>
+    <DeathSound>player/rogue_death</DeathSound>
+    <Player/>
+    <BloodProb>1.0</BloodProb>
+    <SlotTypes>2, 13, 6, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
+    <Equipment>0xa14, 0xa56, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1</Equipment>
+    <MaxHitPoints max="720">150</MaxHitPoints>
+    <MaxShieldPoints max="0">0</MaxShieldPoints>
+    <MaxResourcePoints max="252">100</MaxResourcePoints>
+    <Attack max="50">10</Attack>
+    <Armor max="25">0</Armor>
+    <Speed max="75">15</Speed>
+    <Dexterity max="75">15</Dexterity>
+    <HpRegen max="40">15</HpRegen>
+    <MpRegen max="50">10</MpRegen>
+  </Object>
+</Objects>

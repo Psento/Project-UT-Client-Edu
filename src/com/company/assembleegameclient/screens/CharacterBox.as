@@ -73,11 +73,11 @@ package com.company.assembleegameclient.screens
          this.classNameText_.filters = [new DropShadowFilter(0,0,0,1,4,4)];
          this.graphic_.addChild(this.classNameText_);
          stars = this.getStars(FameUtil.numStars(model.getBestFame(this.objectType())),FameUtil.STARS.length);
-         stars.y = 60;
+         stars.y = 10;
          stars.x = this.graphic_.width / 2 - stars.width / 2;
          stars.filters = [new DropShadowFilter(0,0,0,1,4,4)];
          this.graphicContainer_.addChild(stars);
-         this.classNameText_.y = 74;
+         this.classNameText_.y = 76;
       }
       
       public function objectType() : int

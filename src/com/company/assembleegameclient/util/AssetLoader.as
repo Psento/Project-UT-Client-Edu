@@ -102,7 +102,7 @@ import com.company.util.AssetLibrary;
          AnimatedChars.add("chars16x16dEncounters",new EmbeddedAssets.chars16x16dEncountersEmbed_().bitmapData,null,16,16,112,16,AnimatedChar.DOWN);
          AnimatedChars.add("chars16x16dEncounters2",new EmbeddedAssets.chars16x16dEncounters2Embed_().bitmapData,null,16,16,112,16,AnimatedChar.DOWN);
          AnimatedChars.add("chars16x16rEncounters",new EmbeddedAssets.chars16x16rEncountersEmbed_().bitmapData,null,16,16,112,16,AnimatedChar.RIGHT);
-         AnimatedChars.add("players",new EmbeddedAssets.playersEmbed_().bitmapData,new EmbeddedAssets.playersMaskEmbed_().bitmapData,8,8,56,24,AnimatedChar.RIGHT);
+         AnimatedChars.add("players",new EmbeddedAssets.players().bitmapData,new EmbeddedAssets.playersMask().bitmapData,16,16,112,48,AnimatedChar.RIGHT);
          AnimatedChars.add("playerskins",new EmbeddedAssets.playersSkinsEmbed_().bitmapData,new EmbeddedAssets.playersSkinsMaskEmbed_().bitmapData,8,8,56,24,AnimatedChar.RIGHT);
          AnimatedChars.add("chars8x8rPets1",new EmbeddedAssets.chars8x8rPets1Embed_().bitmapData,new EmbeddedAssets.chars8x8rPets1MaskEmbed_().bitmapData,8,8,56,8,AnimatedChar.RIGHT);
       }

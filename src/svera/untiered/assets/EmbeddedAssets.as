@@ -2,7 +2,11 @@ package svera.untiered.assets
 {
    public class EmbeddedAssets
    {
-      
+      // Svera System
+      public static var Overworld_FearedShallows_Environment8x8:Class = Assets_Overworld_FearedShallows_Environment8x8;
+      public static var Overworld_FearedShallows_Environment16x16:Class = Assets_Overworld_FearedShallows_Environment16x16;
+      public static var Overworld_FearedShallows_Environment32x32:Class = Assets_Overworld_FearedShallows_Environment32x32;
+      // Old System
       public static var particlesEmbed:Class = EmbeddedAssets_particlesEmbed;
       public static var lofiCharEmbed_:Class = EmbeddedAssets_lofiCharEmbed_;
       public static var lofiChar2Embed_:Class = EmbeddedAssets_lofiChar2Embed_;

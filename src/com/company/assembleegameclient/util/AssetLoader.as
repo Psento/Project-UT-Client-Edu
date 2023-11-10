@@ -42,6 +42,11 @@ import com.company.util.AssetLibrary;
       
       private function addImages() : void
       {
+         // Svera System
+         AssetLibrary.addImageSet("Assets_Overworld_FearedShallows_Environment8x8",new EmbeddedAssets.Overworld_FearedShallows_Environment8x8().bitmapData,8,8);
+         AssetLibrary.addImageSet("Assets_Overworld_FearedShallows_Environment16x16",new EmbeddedAssets.Overworld_FearedShallows_Environment16x16().bitmapData,16,16);
+         AssetLibrary.addImageSet("Assets_Overworld_FearedShallows_Environment32x32",new EmbeddedAssets.Overworld_FearedShallows_Environment16x16().bitmapData,32,32);
+         // Old System
          AssetLibrary.addImageSet("lofiChar8x8",new EmbeddedAssets.lofiCharEmbed_().bitmapData,8,8);
          AssetLibrary.addImageSet("lofiChar16x8",new EmbeddedAssets.lofiCharEmbed_().bitmapData,16,8);
          AssetLibrary.addImageSet("lofiChar16x16",new EmbeddedAssets.lofiCharEmbed_().bitmapData,16,16);

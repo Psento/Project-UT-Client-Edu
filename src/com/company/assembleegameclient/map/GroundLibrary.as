@@ -61,7 +61,7 @@ package com.company.assembleegameclient.map
          var groundXML:XML = null;
          var color:uint = 0;
          var bd:BitmapData = null;
-         if(!tileTypeColorDict_.hasOwnProperty(groundType))
+         if(!tileTypeColorDict_.hasOwnProperty(groundType.toString()))
          {
             groundXML = xmlLibrary_[groundType];
             if(groundXML.hasOwnProperty("Color"))

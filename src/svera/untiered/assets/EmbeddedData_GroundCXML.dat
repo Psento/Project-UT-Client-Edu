@@ -169,7 +169,7 @@
 		<Edge><Texture><File>lofiEnvironment2</File><Index>0x23</Index></Texture></Edge>
 		<Corner><Texture><File>lofiEnvironment2</File><Index>0x25</Index></Texture></Corner>
 	</Ground>
-	
+
 	<Ground type="0x49" id="Gothic Rug">
 		<SameTypeEdgeMode/>
 		<Texture><File>lofiEnvironment2</File><Index>0x48</Index></Texture>

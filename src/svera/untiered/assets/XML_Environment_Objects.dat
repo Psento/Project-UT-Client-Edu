@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Objects>
   <!-- #region --> // Ocean
-  <Object type="0xa101" id="Overworld Feared Shallows Water Ripple">
+  <Object type="0xe11" id="Overworld Feared Shallows Water Ripple">
     <Class>GameObject</Class>
-    <Texture><File>Assets_Overworld_FearedShallows_Environment8x8</File><Index>0x08</Index></Texture>
-    <Animation prob="1" period="1.2">
-      <Frame time="0.4"><Texture><File>Assets_Overworld_FearedShallows_Environment8x8</File><Index>0x09</Index></Texture></Frame>
-      <Frame time="0.4"><Texture><File>Assets_Overworld_FearedShallows_Environment8x8</File><Index>0x0a</Index></Texture></Frame>
-      <Frame time="0.2"><Texture><File>Assets_Overworld_FearedShallows_Environment8x8</File><Index>0x0b</Index></Texture></Frame>
-      <Frame time="0.2"><Texture><File>Assets_Overworld_FearedShallows_Environment8x8</File><Index>0x08</Index></Texture></Frame>
+    <Texture><File>invisible</File><Index>0x00</Index></Texture>
+    <Animation prob="1" period="4">
+      <Frame time="0.1"><Texture><File>Assets_Overworld_FearedShallows_Environment8x8</File><Index>0x08</Index></Texture></Frame>
+      <Frame time="0.1"><Texture><File>Assets_Overworld_FearedShallows_Environment8x8</File><Index>0x09</Index></Texture></Frame>
+      <Frame time="0.2"><Texture><File>Assets_Overworld_FearedShallows_Environment8x8</File><Index>0x0a</Index></Texture></Frame>
+      <Frame time="0.3"><Texture><File>Assets_Overworld_FearedShallows_Environment8x8</File><Index>0x0b</Index></Texture></Frame>
     </Animation>
     <DrawOnGround/>
     <Static/>
   </Object>
-  <Object type="0xa102" id="Overworld Feared Shallows Water Decor">
+  <Object type="0xe12" id="Overworld Feared Shallows Water Decor">
     <Class>GameObject</Class>
     <RandomTexture>
     <Texture><File>Assets_Overworld_FearedShallows_Environment8x8</File><Index>0x0c</Index></Texture>
@@ -27,8 +27,9 @@
   </Object>
   <!-- #endregion -->
   <!-- #region --> // Feared Shallows
-  <Object type="0xa107" id="Overworld Feared Shallows Rock Decor">
+  <Object type="0xe17" id="Overworld Feared Shallows Rock Decor">
     <Class>GameObject</Class>
+    <Texture><File>Assets_Overworld_FearedShallows_Environment8x8</File><Index>0x19</Index></Texture>
     <RandomTexture>
       <Texture><File>Assets_Overworld_FearedShallows_Environment8x8</File><Index>0x19</Index></Texture>
       <Texture><File>Assets_Overworld_FearedShallows_Environment8x8</File><Index>0x1a</Index></Texture>

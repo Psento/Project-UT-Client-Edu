@@ -1,6 +1,6 @@
 <GroundTypes>
   <!-- #region --> // Ocean
-  <Ground type="0xa100" id="Overworld Feared Shallows Ocean Water">
+  <Ground type="0x8" id="Overworld Feared Shallows Ocean Water">
 		<SameTypeEdgeMode/>
 		<Texture><File>Assets_Overworld_FearedShallows_Environment8x8</File><Index>0x00</Index></Texture>
 		<Edge><Texture><File>Assets_Overworld_FearedShallows_Environment8x8</File><Index>0x01</Index></Texture></Edge>
@@ -9,18 +9,7 @@
   </Ground>
   <!-- #endregion -->
   <!-- #region --> // Feared Shallows
-  <Ground type="0xa103" id="Overworld Feared Shallows Grass">
-    <Texture><File>Assets_Overworld_FearedShallows_Environment8x8</File><Index>0x04</Index></Texture>
-    <RandomTexture>
-      <Texture><File>Assets_Overworld_FearedShallows_Environment8x8</File><Index>0x04</Index></Texture>
-      <Texture><File>Assets_Overworld_FearedShallows_Environment8x8</File><Index>0x10</Index></Texture>
-      <Texture><File>Assets_Overworld_FearedShallows_Environment8x8</File><Index>0x11</Index></Texture>
-      <Texture><File>Assets_Overworld_FearedShallows_Environment8x8</File><Index>0x12</Index></Texture>
-      <Texture><File>Assets_Overworld_FearedShallows_Environment8x8</File><Index>0x13</Index></Texture>
-      <Texture><File>Assets_Overworld_FearedShallows_Environment8x8</File><Index>0x14</Index></Texture>
-    </RandomTexture>
-  </Ground>
-  <Ground type="0xa104" id="Overworld Feared Shallows Grass Edge">
+  <Ground type="0x9" id="Overworld Feared Shallows Grass Edge">
     <SameTypeEdgeMode/>
     <RandomTexture>
       <Texture><File>Assets_Overworld_FearedShallows_Environment8x8</File><Index>0x04</Index></Texture>
@@ -34,15 +23,7 @@
     <InnerCorner><Texture><File>Assets_Overworld_FearedShallows_Environment8x8</File><Index>0x06</Index></Texture></InnerCorner>
     <Corner><Texture><File>Assets_Overworld_FearedShallows_Environment8x8</File><Index>0x07</Index></Texture></Corner>
   </Ground>
-  <Ground type="0xa105" id="Overworld Feared Shallows Dirt">
-    <RandomTexture>
-      <Texture><File>Assets_Overworld_FearedShallows_Environment8x8</File><Index>0x15</Index></Texture>
-      <Texture><File>Assets_Overworld_FearedShallows_Environment8x8</File><Index>0x21</Index></Texture>
-      <Texture><File>Assets_Overworld_FearedShallows_Environment8x8</File><Index>0x22</Index></Texture>
-      <Texture><File>Assets_Overworld_FearedShallows_Environment8x8</File><Index>0x23</Index></Texture>
-    </RandomTexture>
-  </Ground>
-  <Ground type="0xa106" id="Overworld Feared Shallows Dirt Edge">
+  <Ground type="0xa" id="Overworld Feared Shallows Dirt Edge">
     <SameTypeEdgeMode/>
     <RandomTexture>
       <Texture><File>Assets_Overworld_FearedShallows_Environment8x8</File><Index>0x15</Index></Texture>

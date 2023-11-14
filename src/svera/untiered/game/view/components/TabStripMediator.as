@@ -6,7 +6,7 @@ package svera.untiered.game.view.components
    import flash.display.Sprite;
    import svera.untiered.assets.services.IconFactory;
    import svera.untiered.constants.GeneralConstants;
-   import svera.untiered.ui.model.HUDModel;
+import svera.untiered.ui.model.HUDModel;
    import svera.untiered.ui.model.TabStripModel;
 import svera.untiered.ui.signals.StatsTabHotKeyInputSignal;
 import svera.untiered.ui.signals.UpdateBackpackTabSignal;

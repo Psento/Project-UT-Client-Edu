@@ -2,7 +2,7 @@ package com.company.assembleegameclient.ui.guild
 {
    import com.company.assembleegameclient.ui.dialogs.Dialog;
    import com.company.assembleegameclient.util.GuildUtil;
-   import com.company.rotmg.graphics.DeleteXGraphic;
+   import com.company.untiered.graphics.DeleteXGraphic;
    import com.company.ui.SimpleText;
    import com.company.util.MoreColorUtil;
    import flash.display.Bitmap;

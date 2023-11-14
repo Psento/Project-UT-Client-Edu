@@ -5,7 +5,7 @@ package com.company.assembleegameclient.ui.options
    import com.company.assembleegameclient.screens.TitleMenuOption;
 import com.company.assembleegameclient.sound.Music;
 import com.company.assembleegameclient.sound.SFX;
-   import com.company.rotmg.graphics.ScreenGraphic;
+   import com.company.untiered.graphics.ScreenGraphic;
 import com.company.ui.SimpleText;
 import com.company.ui.SimpleText;
 import com.company.util.AssetLibrary;

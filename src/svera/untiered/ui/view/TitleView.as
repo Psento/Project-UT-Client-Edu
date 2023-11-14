@@ -5,7 +5,7 @@ import com.company.assembleegameclient.parameters.Parameters;
 import com.company.assembleegameclient.screens.AccountScreen;
    import com.company.assembleegameclient.screens.TitleMenuOption;
    import com.company.assembleegameclient.ui.SoundIcon;
-   import com.company.rotmg.graphics.ScreenGraphic;
+   import com.company.untiered.graphics.ScreenGraphic;
    import com.company.ui.SimpleText;
    import flash.display.Sprite;
    import flash.filters.DropShadowFilter;

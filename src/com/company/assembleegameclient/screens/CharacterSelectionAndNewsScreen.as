@@ -2,7 +2,7 @@ package com.company.assembleegameclient.screens
 {
    import com.company.assembleegameclient.ui.ClickableText;
    import com.company.assembleegameclient.ui.Scrollbar;
-   import com.company.rotmg.graphics.ScreenGraphic;
+   import com.company.untiered.graphics.ScreenGraphic;
    import com.company.ui.SimpleText;
 import com.hurlant.util.asn1.parser.nulll;
 

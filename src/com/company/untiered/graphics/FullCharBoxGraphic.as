@@ -1,5 +1,5 @@
 ﻿//Created by Action Script Viewer - http://www.buraks.com/asv
-package com.company.rotmg.graphics {
+package com.company.untiered.graphics {
 import flash.display.MovieClip;
 
 [Embed(source="FullCharBoxGraphic.swf", symbol="com.company.rotmg.graphics.FullCharBoxGraphic")]

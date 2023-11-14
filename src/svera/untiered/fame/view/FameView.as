@@ -6,8 +6,8 @@ package svera.untiered.fame.view
    import com.company.assembleegameclient.screens.TitleMenuOption;
    import com.company.assembleegameclient.sound.SoundEffectLibrary;
    import com.company.assembleegameclient.util.FameUtil;
-   import com.company.rotmg.graphics.FameIconBackgroundDesign;
-   import com.company.rotmg.graphics.ScreenGraphic;
+   import com.company.untiered.graphics.FameIconBackgroundDesign;
+   import com.company.untiered.graphics.ScreenGraphic;
    import com.company.ui.SimpleText;
    import com.company.util.BitmapUtil;
    import com.gskinner.motion.GTween;

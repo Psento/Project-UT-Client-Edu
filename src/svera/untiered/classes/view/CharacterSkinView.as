@@ -2,7 +2,7 @@ package svera.untiered.classes.view
 {
    import com.company.assembleegameclient.screens.AccountScreen;
    import com.company.assembleegameclient.screens.TitleMenuOption;
-   import com.company.rotmg.graphics.ScreenGraphic;
+   import com.company.untiered.graphics.ScreenGraphic;
    import flash.display.Shape;
    import flash.display.Sprite;
    import flash.events.MouseEvent;

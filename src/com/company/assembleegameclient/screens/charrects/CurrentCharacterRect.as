@@ -6,8 +6,8 @@ package com.company.assembleegameclient.screens.charrects
    import com.company.assembleegameclient.ui.tooltip.MyPlayerToolTip;
    import com.company.assembleegameclient.ui.tooltip.ToolTip;
    import com.company.assembleegameclient.util.FameUtil;
-   import com.company.rotmg.graphics.DeleteXGraphic;
-   import com.company.rotmg.graphics.StarGraphic;
+   import com.company.untiered.graphics.DeleteXGraphic;
+   import com.company.untiered.graphics.StarGraphic;
    import com.company.ui.SimpleText;
    import flash.display.DisplayObject;
    import flash.display.Sprite;

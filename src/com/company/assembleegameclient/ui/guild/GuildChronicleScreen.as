@@ -5,7 +5,7 @@ package com.company.assembleegameclient.ui.guild
    import com.company.assembleegameclient.objects.Player;
    import com.company.assembleegameclient.screens.TitleMenuOption;
    import com.company.assembleegameclient.ui.dialogs.Dialog;
-   import com.company.rotmg.graphics.ScreenGraphic;
+   import com.company.untiered.graphics.ScreenGraphic;
    import flash.display.Sprite;
    import flash.events.Event;
    import flash.events.KeyboardEvent;

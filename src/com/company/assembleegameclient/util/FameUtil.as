@@ -1,7 +1,7 @@
 package com.company.assembleegameclient.util
 {
    import com.company.assembleegameclient.objects.ObjectLibrary;
-   import com.company.rotmg.graphics.StarGraphic;
+   import com.company.untiered.graphics.StarGraphic;
    import com.company.util.AssetLibrary;
    import flash.display.BitmapData;
    import flash.display.Sprite;

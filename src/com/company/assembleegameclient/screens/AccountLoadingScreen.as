@@ -1,6 +1,6 @@
 package com.company.assembleegameclient.screens
 {
-   import com.company.rotmg.graphics.ScreenGraphic;
+   import com.company.untiered.graphics.ScreenGraphic;
    import com.company.ui.SimpleText;
    import flash.display.Sprite;
    import flash.events.Event;

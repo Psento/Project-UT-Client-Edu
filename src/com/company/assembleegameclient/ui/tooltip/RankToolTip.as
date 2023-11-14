@@ -3,7 +3,7 @@ package com.company.assembleegameclient.ui.tooltip
    import com.company.assembleegameclient.objects.ObjectLibrary;
    import com.company.assembleegameclient.ui.LineBreakDesign;
    import com.company.assembleegameclient.util.FameUtil;
-   import com.company.rotmg.graphics.StarGraphic;
+   import com.company.untiered.graphics.StarGraphic;
    import com.company.ui.SimpleText;
    import flash.filters.DropShadowFilter;
    import flash.geom.ColorTransform;
@@ -76,7 +76,7 @@ package com.company.assembleegameclient.ui.tooltip
    }
 }
 
-import com.company.rotmg.graphics.StarGraphic;
+import com.company.untiered.graphics.StarGraphic;
 import com.company.ui.SimpleText;
 import flash.display.Sprite;
 import flash.filters.DropShadowFilter;

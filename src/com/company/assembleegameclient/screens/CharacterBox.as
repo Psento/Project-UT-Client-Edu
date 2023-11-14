@@ -7,9 +7,9 @@ package com.company.assembleegameclient.screens
    import com.company.assembleegameclient.util.AnimatedChar;
    import com.company.assembleegameclient.util.Currency;
    import com.company.assembleegameclient.util.FameUtil;
-   import com.company.rotmg.graphics.FullCharBoxGraphic;
-   import com.company.rotmg.graphics.LockedCharBoxGraphic;
-   import com.company.rotmg.graphics.StarGraphic;
+   import com.company.untiered.graphics.FullCharBoxGraphic;
+   import com.company.untiered.graphics.LockedCharBoxGraphic;
+   import com.company.untiered.graphics.StarGraphic;
    import com.company.ui.SimpleText;
    import com.company.util.AssetLibrary;
    import com.gskinner.motion.GTween;

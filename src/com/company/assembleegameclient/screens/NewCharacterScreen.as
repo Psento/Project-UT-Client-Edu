@@ -2,7 +2,7 @@ package com.company.assembleegameclient.screens
 {
    import com.company.assembleegameclient.appengine.SavedCharactersList;
    import com.company.assembleegameclient.objects.ObjectLibrary;
-   import com.company.rotmg.graphics.ScreenGraphic;
+   import com.company.untiered.graphics.ScreenGraphic;
    import flash.display.Sprite;
    import flash.events.Event;
    import flash.events.MouseEvent;

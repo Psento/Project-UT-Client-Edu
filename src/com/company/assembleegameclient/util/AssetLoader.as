@@ -43,9 +43,57 @@ import com.company.util.AssetLibrary;
       private function addImages() : void
       {
          // Svera System
-         AssetLibrary.addImageSet("Assets_Overworld_FearedShallows_Environment8x8",new EmbeddedAssets.Overworld_FearedShallows_Environment8x8().bitmapData,8,8);
-         AssetLibrary.addImageSet("Assets_Overworld_FearedShallows_Environment16x16",new EmbeddedAssets.Overworld_FearedShallows_Environment16x16().bitmapData,16,16);
-         AssetLibrary.addImageSet("Assets_Overworld_FearedShallows_Environment32x32",new EmbeddedAssets.Overworld_FearedShallows_Environment16x16().bitmapData,32,32);
+         // Icons
+         AssetLibrary.addImageSet("Assets_Currency_Icons8x8", new EmbeddedAssets.Assets_Currency_Icons8x8Embed_().bitmapData, 8, 8);
+         AssetLibrary.addImageSet("Assets_Currency_Icons16x16", new EmbeddedAssets.Assets_Currency_Icons16x16Embed_().bitmapData, 16, 16);
+         AssetLibrary.addImageSet("Assets_StatusIcons16x16", new EmbeddedAssets.Assets_StatusIcons16x16Embed_().bitmapData, 16, 16);
+         AssetLibrary.addImageSet("Assets_StatusIcons18x18", new EmbeddedAssets.Assets_StatusIcons18x18Embed_().bitmapData, 16, 16);
+         // Environment
+         AssetLibrary.addImageSet("Assets_Foundry_Environment8x8", new EmbeddedAssets.Assets_Foundry_Environment8x8Embed_().bitmapData, 8, 8);
+         AssetLibrary.addImageSet("Assets_Foundry_Environment16x16", new EmbeddedAssets.Assets_Foundry_Environment16x16Embed_().bitmapData, 16, 16);
+         AssetLibrary.addImageSet("Assets_Foundry_Environment32x32", new EmbeddedAssets.Assets_Foundry_Environment32x32Embed_().bitmapData, 32, 32);
+         AssetLibrary.addImageSet("Assets_Tavern_Environment8x8", new EmbeddedAssets.Assets_Tavern_Environment8x8Embed_().bitmapData, 8, 8);
+         AssetLibrary.addImageSet("Assets_Vault_Environment8x8", new EmbeddedAssets.Assets_Vault_Environment8x8Embed_().bitmapData, 8, 8);
+         AssetLibrary.addImageSet("Assets_Overworld_FearedShallows_Environment8x8",new EmbeddedAssets.Assets_Overworld_FearedShallows_Environment8x8Embed_().bitmapData,8,8);
+         AssetLibrary.addImageSet("Assets_Overworld_FearedShallows_Environment16x16",new EmbeddedAssets.Assets_Overworld_FearedShallows_Environment16x16Embed_().bitmapData,16,16);
+         AssetLibrary.addImageSet("Assets_Overworld_FearedShallows_Environment32x32",new EmbeddedAssets.Assets_Overworld_FearedShallows_Environment16x16Embed_().bitmapData,32,32);
+         // Equipment
+         AssetLibrary.addImageSet("Assets_StarterGear", new EmbeddedAssets.Assets_StarterGearEmbed_().bitmapData, 8, 8);
+
+         AssetLibrary.addImageSet("Assets_ArtifactAbilities", new EmbeddedAssets.Assets_ArtifactAbilitiesEmbed_().bitmapData, 8, 8);
+         AssetLibrary.addImageSet("Assets_ArtifactAbilityEntities", new EmbeddedAssets.Assets_ArtifactAbilityEntitiesEmbed_().bitmapData, 16, 16);
+         AssetLibrary.addImageSet("Assets_ArtifactAbilityEntities16x16", new EmbeddedAssets.Assets_ArtifactAbilityEntities16x16Embed_().bitmapData, 16, 16);
+         AssetLibrary.addImageSet("Assets_ArtifactAbilityProjectiles", new EmbeddedAssets.Assets_ArtifactAbilityProjectilesEmbed_().bitmapData, 8, 8);
+         AssetLibrary.addImageSet("Assets_ArtifactAccessories", new EmbeddedAssets.Assets_ArtifactAccessoriesEmbed_().bitmapData, 8, 8);
+         AssetLibrary.addImageSet("Assets_ArtifactArmor", new EmbeddedAssets.Assets_ArtifactArmorEmbed_().bitmapData, 8, 8);
+         AssetLibrary.addImageSet("Assets_ArtifactWeapons", new EmbeddedAssets.Assets_ArtifactWeaponsEmbed_().bitmapData, 8, 8);
+         AssetLibrary.addImageSet("Assets_ArtifactWeaponsProjectiles", new EmbeddedAssets.Assets_ArtifactWeaponsProjectilesEmbed_().bitmapData, 8, 8);
+
+         AssetLibrary.addImageSet("Assets_ValiantAbilities", new EmbeddedAssets.Assets_ValiantAbilitiesEmbed_().bitmapData, 8, 8);
+         AssetLibrary.addImageSet("Assets_ValiantAbilityEntities16x16", new EmbeddedAssets.Assets_ValiantAbilityEntities16x16Embed_().bitmapData, 16, 16);
+         AssetLibrary.addImageSet("Assets_ValiantAbilityProjectiles", new EmbeddedAssets.Assets_ValiantAbilityProjectilesEmbed_().bitmapData, 8, 8);
+         AssetLibrary.addImageSet("Assets_ValiantAccessories", new EmbeddedAssets.Assets_ValiantAccessoriesEmbed_().bitmapData, 8, 8);
+         AssetLibrary.addImageSet("Assets_ValiantArmor", new EmbeddedAssets.Assets_ValiantArmorEmbed_().bitmapData, 8, 8);
+         AssetLibrary.addImageSet("Assets_ValiantWeapons", new EmbeddedAssets.Assets_ValiantWeaponsEmbed_().bitmapData, 8, 8);
+         AssetLibrary.addImageSet("Assets_ValiantWeaponsProjectiles", new EmbeddedAssets.Assets_ValiantWeaponsProjectilesEmbed_().bitmapData, 8, 8);
+         // Crafting, Consumables, Ingredients
+         AssetLibrary.addImageSet("Assets_Consumables_Maxing8x8", new EmbeddedAssets.Assets_Consumables_Maxing8x8Embed_().bitmapData, 8, 8);
+         AssetLibrary.addImageSet("Assets_Consumables_Tokens8x8", new EmbeddedAssets.Assets_Consumables_Tokens8x8Embed_().bitmapData, 8, 8);
+         AssetLibrary.addImageSet("Assets_Consumables_Upgrades8x8", new EmbeddedAssets.Assets_Consumables_Upgrades8x8Embed_().bitmapData, 8, 8);
+         AssetLibrary.addImageSet("Assets_Utilities_Artifact8x8", new EmbeddedAssets.Assets_Utilities_Artifact8x8Embed_().bitmapData, 8, 8);
+         AssetLibrary.addImageSet("Assets_Utilities_PetStones8x8", new EmbeddedAssets.Assets_Utilities_PetStones8x8Embed_().bitmapData, 8, 8);
+         AssetLibrary.addImageSet("Assets_Utilities_Valiant8x8", new EmbeddedAssets.Assets_Utilities_Valiant8x8Embed_().bitmapData, 8, 8);
+         AssetLibrary.addImageSet("Assets_Crafting_Capsules8x8", new EmbeddedAssets.Assets_Crafting_Capsules8x8Embed_().bitmapData, 8, 8);
+         AssetLibrary.addImageSet("Assets_Crafting_Ingredients8x8", new EmbeddedAssets.Assets_Crafting_Ingredients8x8Embed_().bitmapData, 8, 8);
+         AssetLibrary.addImageSet("Assets_Crafting_LuckyDips", new EmbeddedAssets.Assets_Crafting_LuckyDipsEmbed_().bitmapData, 8, 8);
+         // Interactables
+         AssetLibrary.addImageSet("Assets_DroppedContainers8x8", new EmbeddedAssets.Assets_DroppedContainers8x8Embed_().bitmapData, 8, 8);
+         AssetLibrary.addImageSet("Assets_Foundry_Containers16x16", new EmbeddedAssets.Assets_Foundry_Containers16x16Embed_().bitmapData, 16, 16);
+         AssetLibrary.addImageSet("Assets_Foundry_Portals16x16", new EmbeddedAssets.Assets_Foundry_Portals16x16Embed_().bitmapData, 16, 16);
+         AssetLibrary.addImageSet("Assets_Foundry_Portals32x32", new EmbeddedAssets.Assets_Foundry_Portals32x32Embed_().bitmapData, 32, 32);
+         AssetLibrary.addImageSet("Assets_Foundry_Stations16x16", new EmbeddedAssets.Assets_Foundry_Stations16x16Embed_().bitmapData, 16, 16);
+         AssetLibrary.addImageSet("Assets_Foundry_Stations32x32", new EmbeddedAssets.Assets_Foundry_Stations32x32Embed_().bitmapData, 32, 32);
+         AssetLibrary.addImageSet("Assets_Marketplace_Stations16x16", new EmbeddedAssets.Assets_Marketplace_Stations16x16Embed_().bitmapData, 16, 16);
          // Old System
          AssetLibrary.addImageSet("lofiChar8x8",new EmbeddedAssets.lofiCharEmbed_().bitmapData,8,8);
          AssetLibrary.addImageSet("lofiChar16x8",new EmbeddedAssets.lofiCharEmbed_().bitmapData,16,8);

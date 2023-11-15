@@ -3,9 +3,62 @@ package svera.untiered.assets
    public class EmbeddedAssets
    {
       // Svera System
-      public static var Overworld_FearedShallows_Environment8x8:Class = Assets_Overworld_FearedShallows_Environment8x8;
-      public static var Overworld_FearedShallows_Environment16x16:Class = Assets_Overworld_FearedShallows_Environment16x16;
-      public static var Overworld_FearedShallows_Environment32x32:Class = Assets_Overworld_FearedShallows_Environment32x32;
+      // Icons
+      public static var Assets_Currency_Icons8x8Embed_:Class = Assets_Currency_Icons8x8;
+      public static var Assets_Currency_Icons16x16Embed_:Class = Assets_Currency_Icons16x16;
+      public static var Assets_StatusIcons16x16Embed_:Class = Assets_StatusIcons16x16;
+      public static var Assets_StatusIcons18x18Embed_:Class = Assets_StatusIcons18x18;
+      // Characters
+      public static var Assets_Pets16x16Embed_:Class = Assets_Pets16x16;
+      // Environment
+      public static var Assets_Foundry_Environment8x8Embed_:Class = Assets_Foundry_Environment8x8;
+      public static var Assets_Foundry_Environment16x16Embed_:Class = Assets_Foundry_Environment16x16;
+      public static var Assets_Foundry_Environment32x32Embed_:Class = Assets_Foundry_Environment32x32;
+      public static var Assets_Tavern_Environment8x8Embed_:Class = Assets_Tavern_Environment8x8;
+      public static var Assets_Vault_Environment8x8Embed_:Class = Assets_Vault_Environment8x8;
+      public static var Assets_Overworld_FearedShallows_Environment8x8Embed_:Class = Assets_Overworld_FearedShallows_Environment8x8;
+      public static var Assets_Overworld_FearedShallows_Environment16x16Embed_:Class = Assets_Overworld_FearedShallows_Environment16x16;
+      public static var Assets_Overworld_FearedShallows_Environment32x32Embed_:Class = Assets_Overworld_FearedShallows_Environment32x32;
+      // Equipment
+      public static var Assets_StarterGearEmbed_:Class = Assets_StarterGear;
+
+      public static var Assets_ArtifactAbilitiesEmbed_:Class = Assets_ArtifactAbilities;
+      public static var Assets_ArtifactAbilityCharacters8x8Embed_:Class = Assets_ArtifactAbilityCharacters8x8;
+      public static var Assets_ArtifactAbilityCharacters16x16Embed_:Class = Assets_ArtifactAbilityCharacters16x16;
+      public static var Assets_ArtifactAbilityEntitiesEmbed_:Class = Assets_ArtifactAbilityEntities;
+      public static var Assets_ArtifactAbilityEntities16x16Embed_:Class = Assets_ArtifactAbilityEntities16x16;
+      public static var Assets_ArtifactAbilityProjectilesEmbed_:Class = Assets_ArtifactAbilityProjectiles;
+      public static var Assets_ArtifactAccessoriesEmbed_:Class = Assets_ArtifactAccessories;
+      public static var Assets_ArtifactArmorEmbed_:Class = Assets_ArtifactArmor;
+      public static var Assets_ArtifactWeaponsEmbed_:Class = Assets_ArtifactWeapons;
+      public static var Assets_ArtifactWeaponsProjectilesEmbed_:Class = Assets_ArtifactWeaponsProjectiles;
+
+      public static var Assets_ValiantAbilitiesEmbed_:Class = Assets_ValiantAbilities;
+      public static var Assets_ValiantAbilityCharactersEmbed_:Class = Assets_ValiantAbilityCharacters;
+      public static var Assets_ValiantAbilityEntities16x16Embed_:Class = Assets_ValiantAbilityEntities16x16;
+      public static var Assets_ValiantAbilityProjectilesEmbed_:Class = Assets_ValiantAbilityProjectiles;
+      public static var Assets_ValiantAccessoriesEmbed_:Class = Assets_ValiantAccessories;
+      public static var Assets_ValiantArmorEmbed_:Class = Assets_ValiantArmor;
+      public static var Assets_ValiantWeaponsEmbed_:Class = Assets_ValiantWeapons;
+      public static var Assets_ValiantWeaponsProjectilesEmbed_:Class = Assets_ValiantWeaponsProjectiles;
+      // Crafting, Consumables, Ingredients
+      public static var Assets_Consumables_Maxing8x8Embed_:Class = Assets_Consumables_Maxing8x8;
+      public static var Assets_Consumables_Tokens8x8Embed_:Class = Assets_Consumables_Tokens8x8;
+      public static var Assets_Consumables_Upgrades8x8Embed_:Class = Assets_Consumables_Upgrades8x8;
+      public static var Assets_Utilities_Artifact8x8Embed_:Class = Assets_Utilities_Artifact8x8;
+      public static var Assets_Utilities_PetStones8x8Embed_:Class = Assets_Utilities_PetStones8x8;
+      public static var Assets_Utilities_Valiant8x8Embed_:Class = Assets_Utilities_Valiant8x8;
+      public static var Assets_Crafting_Capsules8x8Embed_:Class = Assets_Crafting_Capsules8x8;
+      public static var Assets_Crafting_Ingredients8x8Embed_:Class = Assets_Crafting_Ingredients8x8;
+      public static var Assets_Crafting_LuckyDipsEmbed_:Class = Assets_Crafting_LuckyDips;
+      // Interactables
+      public static var Assets_DroppedContainers8x8Embed_:Class = Assets_DroppedContainers8x8;
+      public static var Assets_Foundry_Containers16x16Embed_:Class = Assets_Foundry_Containers16x16;
+      public static var Assets_Foundry_Portals16x16Embed_:Class = Assets_Foundry_Portals16x16;
+      public static var Assets_Foundry_Portals32x32Embed_:Class = Assets_Foundry_Portals32x32;
+      public static var Assets_Foundry_Stations16x16Embed_:Class = Assets_Foundry_Stations16x16;
+      public static var Assets_Foundry_Stations32x32Embed_:Class = Assets_Foundry_Stations32x32;
+      public static var Assets_Marketplace_Stations16x16Embed_:Class = Assets_Marketplace_Stations16x16;
       // Old System
       public static var particlesEmbed:Class = EmbeddedAssets_particlesEmbed;
       public static var lofiCharEmbed_:Class = EmbeddedAssets_lofiCharEmbed_;

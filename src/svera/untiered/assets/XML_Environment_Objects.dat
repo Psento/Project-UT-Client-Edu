@@ -28,7 +28,7 @@
   <!-- #endregion -->
   <!-- #region --> // Feared Shallows
   <Object type="0xe17" id="Overworld Feared Shallows Rock Decor">
-    <Class>GameObject</Class>
+    <Class>Traits</Class>
     <Texture><File>Assets_Overworld_FearedShallows_Environment8x8</File><Index>0x19</Index></Texture>
     <RandomTexture>
       <Texture><File>Assets_Overworld_FearedShallows_Environment8x8</File><Index>0x19</Index></Texture>

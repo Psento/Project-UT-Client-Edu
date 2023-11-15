@@ -54,14 +54,14 @@ public class TraitsGUI extends Sprite {
         graphics.drawRect(0,0,800,600);
         graphics.endFill();
 
+        /* a BitmapAsset for the background, the .png has the runes circles, the details on the corners of the screen, the header and the description overlay. */
+        addChild(new background());
+
         /* creates a line near the top of the screen above the background. */
         graphics.lineStyle(2,6184542);
         graphics.moveTo(0,100);
         graphics.lineTo(800,100);
         graphics.lineStyle();
-
-        /* a BitmapAsset for the background, the .png has the runes circles, the details on the corners of the screen, the header and the description overlay. */
-        addChild(new background());
 
         /* adds the containers for the assets on screen */
         addChild(this.container);
@@ -72,15 +72,14 @@ public class TraitsGUI extends Sprite {
         var txt:TextField = new TextField();
         txt.autoSize = TextFieldAutoSize.CENTER;
         txt.textColor = 11776947;
-        txt.wordWrap = true;
         var newFormat:TextFormat = new TextFormat();
-        newFormat.align = TextFormatAlign.CENTER;
         newFormat.size = 28;
         newFormat.bold = true;
+        newFormat.align = TextFormatAlign.CENTER;
         txt.defaultTextFormat = newFormat;
         this.titleText_ = txt;
         this.titleText_.text = "Traits";
-        this.titleText_.x = 400;
+        this.titleText_.x = 400 - this.titleText_.width / 2;
         this.titleText_.y = 32;
         addChild(this.titleText_);
         this.selectButton_ = new TextButton(18, "Select", 120);
@@ -111,10 +110,13 @@ public class TraitsGUI extends Sprite {
         this.backgroundText = new SimpleText(14, 0xffffff, false, 570, 50);
 
         /* sets the position of the text. */
+        this.awakeningText.multiline = true;
         this.awakeningText.x = 115;
         this.awakeningText.y = 423;
+        this.relicText.multiline = true;
         this.relicText.x = 115;
         this.relicText.y = 445;
+        this.backgroundText.multiline = true;
         this.backgroundText.x = 115;
         this.backgroundText.y = 467;
 
@@ -132,26 +134,26 @@ public class TraitsGUI extends Sprite {
     public function addIcons(): void
     {
         /* the []'s set each value on the icon's list, this is initializing each one being used */
-        var SwiftStride:BitmapData = AssetLibrary.getImageFromSet("lofiObj3",225);
-        SwiftStride = TextureRedrawer.redraw(SwiftStride,40,true,0);
-        var ElementalWard:BitmapData = AssetLibrary.getImageFromSet("lofiObj3",225);
-        ElementalWard = TextureRedrawer.redraw(ElementalWard,40,true,0);
-        var Brave:BitmapData = AssetLibrary.getImageFromSet("lofiObj3",225);
-        Brave = TextureRedrawer.redraw(Brave,40,true,0);
-        var LethalElegance:BitmapData = AssetLibrary.getImageFromSet("lofiObj3",225);
-        LethalElegance = TextureRedrawer.redraw(LethalElegance,40,true,0);
-        var AgileDuelist:BitmapData = AssetLibrary.getImageFromSet("lofiObj3",225);
-        AgileDuelist = TextureRedrawer.redraw(AgileDuelist,40,true,0);
-        var HalfBreed:BitmapData = AssetLibrary.getImageFromSet("lofiObj3",225);
-        HalfBreed = TextureRedrawer.redraw(HalfBreed,40,true,0);
-        var Seer:BitmapData = AssetLibrary.getImageFromSet("lofiObj3",225);
-        Seer = TextureRedrawer.redraw(Seer,40,true,0);
-        var VoidTouched:BitmapData = AssetLibrary.getImageFromSet("lofiObj3",225);
-        VoidTouched = TextureRedrawer.redraw(VoidTouched,40,true,0);
-        var Thaumaturge:BitmapData = AssetLibrary.getImageFromSet("lofiObj3",225);
-        Thaumaturge = TextureRedrawer.redraw(Thaumaturge,40,true,0);
-        var ResilientAvenger:BitmapData = AssetLibrary.getImageFromSet("lofiObj3",225);
-        ResilientAvenger = TextureRedrawer.redraw(ResilientAvenger,40,true,0);
+        var SwiftStride:BitmapData = AssetLibrary.getImageFromSet("Assets_StarterGear",0);
+        SwiftStride = TextureRedrawer.redraw(SwiftStride,320,true,0);
+        var ElementalWard:BitmapData = AssetLibrary.getImageFromSet("Assets_StarterGear",43);
+        ElementalWard = TextureRedrawer.redraw(ElementalWard,320,true,0);
+        var Brave:BitmapData = AssetLibrary.getImageFromSet("Assets_StarterGear",24);
+        Brave = TextureRedrawer.redraw(Brave,320,true,0);
+        var LethalElegance:BitmapData = AssetLibrary.getImageFromSet("Assets_StarterGear",97);
+        LethalElegance = TextureRedrawer.redraw(LethalElegance,320,true,0);
+        var AgileDuelist:BitmapData = AssetLibrary.getImageFromSet("Assets_StarterGear",2);
+        AgileDuelist = TextureRedrawer.redraw(AgileDuelist,320,true,0);
+        var HalfBreed:BitmapData = AssetLibrary.getImageFromSet("Assets_StarterGear",42);
+        HalfBreed = TextureRedrawer.redraw(HalfBreed,320,true,0);
+        var Seer:BitmapData = AssetLibrary.getImageFromSet("Assets_StarterGear",59);
+        Seer = TextureRedrawer.redraw(Seer,320,true,0);
+        var VoidTouched:BitmapData = AssetLibrary.getImageFromSet("Assets_StarterGear",1);
+        VoidTouched = TextureRedrawer.redraw(VoidTouched,320,true,0);
+        var Thaumaturge:BitmapData = AssetLibrary.getImageFromSet("Assets_StarterGear",40);
+        Thaumaturge = TextureRedrawer.redraw(Thaumaturge,320,true,0);
+        var ResilientAvenger:BitmapData = AssetLibrary.getImageFromSet("Assets_StarterGear",27);
+        ResilientAvenger = TextureRedrawer.redraw(ResilientAvenger,320,true,0);
         this.awakeningIcons[0] = new Bitmap(SwiftStride);
         this.awakeningIcons[1] = new Bitmap(ElementalWard);
         this.awakeningIcons[2] = new Bitmap(Brave);
@@ -164,23 +166,23 @@ public class TraitsGUI extends Sprite {
         this.awakeningIcons[9] = new Bitmap(ResilientAvenger);
 
         var Defenseless:BitmapData = AssetLibrary.getImageFromSet("lofiObj3",225);
-        Defenseless = TextureRedrawer.redraw(Defenseless,40,true,0);
+        Defenseless = TextureRedrawer.redraw(Defenseless,320,true,0);
         var Mithridatism:BitmapData = AssetLibrary.getImageFromSet("lofiObj3",225);
-        Mithridatism = TextureRedrawer.redraw(Mithridatism,40,true,0);
+        Mithridatism = TextureRedrawer.redraw(Mithridatism,320,true,0);
         var Healthy:BitmapData = AssetLibrary.getImageFromSet("lofiObj3",225);
-        Healthy = TextureRedrawer.redraw(Healthy,40,true,0);
+        Healthy = TextureRedrawer.redraw(Healthy,320,true,0);
         var Absorption:BitmapData = AssetLibrary.getImageFromSet("lofiObj3",225);
-        Absorption = TextureRedrawer.redraw(Absorption,40,true,0);
+        Absorption = TextureRedrawer.redraw(Absorption,320,true,0);
         var Scope:BitmapData = AssetLibrary.getImageFromSet("lofiObj3",225);
-        Scope = TextureRedrawer.redraw(Scope,40,true,0);
+        Scope = TextureRedrawer.redraw(Scope,320,true,0);
         var Dexterous:BitmapData = AssetLibrary.getImageFromSet("lofiObj3",225);
-        Dexterous = TextureRedrawer.redraw(Dexterous,40,true,0);
+        Dexterous = TextureRedrawer.redraw(Dexterous,320,true,0);
         var Holy:BitmapData = AssetLibrary.getImageFromSet("lofiObj3",225);
-        Holy = TextureRedrawer.redraw(Holy,40,true,0);
+        Holy = TextureRedrawer.redraw(Holy,320,true,0);
         var Incombustible:BitmapData = AssetLibrary.getImageFromSet("lofiObj3",225);
-        Incombustible = TextureRedrawer.redraw(Incombustible,40,true,0);
+        Incombustible = TextureRedrawer.redraw(Incombustible,320,true,0);
         var RazorSharp:BitmapData = AssetLibrary.getImageFromSet("lofiObj3",225);
-        RazorSharp = TextureRedrawer.redraw(RazorSharp,40,true,0);
+        RazorSharp = TextureRedrawer.redraw(RazorSharp,320,true,0);
         this.relicIcons[0] = new Bitmap(Defenseless);
         this.relicIcons[1] = new Bitmap(Mithridatism);
         this.relicIcons[2] = new Bitmap(Healthy);
@@ -192,27 +194,27 @@ public class TraitsGUI extends Sprite {
         this.relicIcons[8] = new Bitmap(RazorSharp);
 
         var Acolyte:BitmapData = AssetLibrary.getImageFromSet("lofiObj3",225);
-        Acolyte = TextureRedrawer.redraw(Acolyte,40,true,0);
+        Acolyte = TextureRedrawer.redraw(Acolyte,320,true,0);
         var Charlatan:BitmapData = AssetLibrary.getImageFromSet("lofiObj3",225);
-        Charlatan = TextureRedrawer.redraw(Charlatan,40,true,0);
+        Charlatan = TextureRedrawer.redraw(Charlatan,320,true,0);
         var Criminal:BitmapData = AssetLibrary.getImageFromSet("lofiObj3",225);
-        Criminal = TextureRedrawer.redraw(Criminal,40,true,0);
+        Criminal = TextureRedrawer.redraw(Criminal,320,true,0);
         var Entertainer:BitmapData = AssetLibrary.getImageFromSet("lofiObj3",225);
-        Entertainer = TextureRedrawer.redraw(Entertainer,40,true,0);
+        Entertainer = TextureRedrawer.redraw(Entertainer,320,true,0);
         var Hero:BitmapData = AssetLibrary.getImageFromSet("lofiObj3",225);
-        Hero = TextureRedrawer.redraw(Hero,40,true,0);
+        Hero = TextureRedrawer.redraw(Hero,320,true,0);
         var Artisan:BitmapData = AssetLibrary.getImageFromSet("lofiObj3",225);
-        Artisan = TextureRedrawer.redraw(Artisan,40,true,0);
+        Artisan = TextureRedrawer.redraw(Artisan,320,true,0);
         var Noble:BitmapData = AssetLibrary.getImageFromSet("lofiObj3",225);
-        Noble = TextureRedrawer.redraw(Noble,40,true,0);
+        Noble = TextureRedrawer.redraw(Noble,320,true,0);
         var Outlander:BitmapData = AssetLibrary.getImageFromSet("lofiObj3",225);
-        Outlander = TextureRedrawer.redraw(Outlander,40,true,0);
+        Outlander = TextureRedrawer.redraw(Outlander,320,true,0);
         var Sage:BitmapData = AssetLibrary.getImageFromSet("lofiObj3",225);
-        Sage = TextureRedrawer.redraw(Sage,40,true,0);
+        Sage = TextureRedrawer.redraw(Sage,320,true,0);
         var Soldier:BitmapData = AssetLibrary.getImageFromSet("lofiObj3",225);
-        Soldier = TextureRedrawer.redraw(Soldier,40,true,0);
+        Soldier = TextureRedrawer.redraw(Soldier,320,true,0);
         var Urchin:BitmapData = AssetLibrary.getImageFromSet("lofiObj3",225);
-        Urchin = TextureRedrawer.redraw(Urchin,40,true,0);
+        Urchin = TextureRedrawer.redraw(Urchin,320,true,0);
         this.backgroundIcons[0] = new Bitmap(Acolyte);
         this.backgroundIcons[1] = new Bitmap(Charlatan);
         this.backgroundIcons[2] = new Bitmap(Criminal);
@@ -243,18 +245,18 @@ public class TraitsGUI extends Sprite {
         /* same as the last function, but this time it will make sure each rune icon is in these set positions */
         for (var b:int = 0; b < 10; b++)
         {
-            this.awakeningIcons[b].x = 240;
-            this.awakeningIcons[b].y = 260;
+            this.awakeningIcons[b].x = 145 - this.awakeningIcons[b].width / 2;
+            this.awakeningIcons[b].y = 300 - this.awakeningIcons[b].height / 2;
         }
         for (var b:int = 0; b < 9; b++)
         {
-            this.relicIcons[b].x = 475;
-            this.relicIcons[b].y = 260;
+            this.relicIcons[b].x = 400 - this.awakeningIcons[b].width / 2;
+            this.relicIcons[b].y = 300 - this.awakeningIcons[b].height / 2;
         }
         for (var b:int = 0; b < 11; b++)
         {
-            this.backgroundIcons[b].x = 710;
-            this.backgroundIcons[b].y = 260;
+            this.backgroundIcons[b].x = 655 - this.awakeningIcons[b].width / 2;
+            this.backgroundIcons[b].y = 300 - this.awakeningIcons[b].height / 2;
         }
 
         /* this makes it so if the container holding the assets is clicked, it will call a function.

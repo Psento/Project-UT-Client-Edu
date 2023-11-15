@@ -11,8 +11,9 @@ import com.company.util.AssetLibrary;
    import svera.untiered.constants.GeneralConstants;
    import svera.untiered.constants.ItemConstants;
    import svera.untiered.messaging.impl.data.StatData;
-   
-   public class ObjectLibrary
+import svera.untiered.traits.TraitsGUI;
+
+public class ObjectLibrary
    {
       public static var playerChars_:Vector.<XML> = new Vector.<XML>();
       public static var hexTransforms_:Vector.<XML> = new Vector.<XML>();
@@ -49,7 +50,8 @@ import com.company.util.AssetLibrary;
          "Sign":Sign,
          "SpiderWeb":SpiderWeb,
          "Stalagmite":Stalagmite,
-         "Wall":Wall
+         "Wall":Wall,
+         "Traits":Traits
       };
        
       

@@ -6,20 +6,19 @@ package svera.untiered.classes.view
    import svera.untiered.game.model.GameInitData;
    import svera.untiered.game.signals.PlayGameSignal;
    import robotlegs.bender.bundles.mvcs.Mediator;
-   
-   public class CharacterSkinMediator extends Mediator
+
+import svera.untiered.traits.TraitsGUI;
+
+public class CharacterSkinMediator extends Mediator
    {
       [Inject]
       public var view:CharacterSkinView;
-      
+
       [Inject]
       public var model:PlayerModel;
       
       [Inject]
       public var setScreen:SetScreenSignal;
-      
-      [Inject]
-      public var play:PlayGameSignal;
       
       public function CharacterSkinMediator()
       {
@@ -49,11 +48,7 @@ package svera.untiered.classes.view
       
       private function onPlay() : void
       {
-         var game:GameInitData = new GameInitData();
-         game.createCharacter = true;
-         game.charId = this.model.getNextCharId();
-         game.isNewGame = true;
-         this.play.dispatch(game);
+         this.setScreen.dispatch(new TraitsGUI());
       }
    }
 }

@@ -63,14 +63,14 @@ import svera.untiered.ui.UIUtils;
       private var isGameStarted:Boolean;
       private var displaysPosY:uint = 4;
       
-      public function GameSprite(gameId:int, createCharacter:Boolean, charId:int, model:PlayerModel, mapJSON:String)
+      public function GameSprite(gameId:int, createCharacter:Boolean, charId:int, model:PlayerModel, mapJSON:String, traits:Array)
       {
          this.camera_ = new Camera();
          super();
          this.model = model;
          this.map = new Map(this);
          addChild(this.map);
-         this.gsc_ = new GameServerConnection(this,gameId,createCharacter,charId,mapJSON);
+         this.gsc_ = new GameServerConnection(this,gameId,createCharacter,charId,mapJSON,traits);
          this.mui_ = new MapUserInput(this);
          this.textBox_ = new TextBox(this,600,600);
          addChild(this.textBox_);

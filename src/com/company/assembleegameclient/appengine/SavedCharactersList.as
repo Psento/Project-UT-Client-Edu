@@ -22,6 +22,9 @@ package com.company.assembleegameclient.appengine
       public var savedChars_:Vector.<SavedCharacter>;
       public var charStats_:Object;
       public var totalFame_:int = 0;
+      public var traitOne_:int = -1;
+      public var traitTwo_:int = -1;
+      public var traitThree_:int = -1;
       public var fame_:int = 0;
       public var tsavorite_:int = 0;
       public var medallions_:int = 0;

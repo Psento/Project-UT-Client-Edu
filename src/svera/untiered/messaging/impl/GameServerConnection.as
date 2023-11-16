@@ -230,6 +230,7 @@ import svera.untiered.ui.view.NotEnoughTsavoriteDialog;
       public var createCharacter_:Boolean;
       public var charId_:int;
       public var mapJSON_:String;
+      public var traits_:Array;
       public var jitterWatcher_:JitterWatcher = null;
       public var serverConnection:SocketServer;
       private var messages:MessageProvider;
@@ -252,7 +253,7 @@ import svera.untiered.ui.view.NotEnoughTsavoriteDialog;
       private var model:GameModel;
 
       
-      public function GameServerConnection(gs:GameSprite, gameId:int, createCharacter:Boolean, charId:int, mapJSON:String)
+      public function GameServerConnection(gs:GameSprite, gameId:int, createCharacter:Boolean, charId:int, mapJSON:String, traits:Array)
       {
          super();
          this.injector = StaticInjectorContext.getInjector();
@@ -275,6 +276,7 @@ import svera.untiered.ui.view.NotEnoughTsavoriteDialog;
          this.createCharacter_ = createCharacter;
          this.charId_ = charId;
          this.mapJSON_ = mapJSON;
+         this.traits_ = traits;
       }
       
       public function disconnect() : void
@@ -458,6 +460,9 @@ import svera.untiered.ui.view.NotEnoughTsavoriteDialog;
          var create:Create = this.messages.require(CREATE) as Create;
          create.classType = charClass.id;
          create.skinType = charClass.skins.getSelectedSkin().id;
+         create.traitOne = this.traits_[0];
+         create.traitTwo = this.traits_[1];
+         create.traitThree = this.traits_[2];
          this.serverConnection.sendMessage(create);
       }
       
@@ -1368,9 +1373,6 @@ import svera.untiered.ui.view.NotEnoughTsavoriteDialog;
       {
          var pLevel:int = -1;
          var pExp:int = -1;
-         var pAwakening:int = -1;
-         var pRelic:int = -1;
-         var pBackground:int = -1;
          var pFame:int = -1;
          var type:CharacterClass = null;
          var map:Map = this.gs_.map;

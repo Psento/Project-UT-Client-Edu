@@ -35,6 +35,11 @@ package svera.untiered.core.model
       {
          this.charList.maxNumChars_ = value;
       }
+
+      public function getTraits() : Array
+      {
+         return [this.charList.traitOne_, this.charList.traitTwo_, this.charList.traitThree_];
+      }
       
       public function getTsavorite() : int
       {

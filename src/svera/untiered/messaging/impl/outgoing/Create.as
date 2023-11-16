@@ -9,6 +9,10 @@ package svera.untiered.messaging.impl.outgoing
       public var classType:int;
       
       public var skinType:int;
+
+      public var traitOne:int;
+      public var traitTwo:int;
+      public var traitThree:int;
       
       public function Create(id:uint, callback:Function)
       {
@@ -19,6 +23,10 @@ package svera.untiered.messaging.impl.outgoing
       {
          data.writeShort(this.classType);
          data.writeShort(this.skinType);
+
+         data.writeInt(this.traitOne);
+         data.writeInt(this.traitTwo);
+         data.writeInt(this.traitThree);
       }
       
       override public function toString() : String

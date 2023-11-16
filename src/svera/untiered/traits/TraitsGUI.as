@@ -18,7 +18,21 @@ import flash.text.TextFormatAlign;
 
 import mx.core.BitmapAsset;
 
+import org.swiftsuspenders.Injector;
+
+import svera.untiered.classes.view.CharacterSkinView;
+import svera.untiered.core.StaticInjectorContext;
+import svera.untiered.core.model.PlayerModel;
+import svera.untiered.game.model.GameInitData;
+import svera.untiered.game.signals.PlayGameSignal;
+
 public class TraitsGUI extends Sprite {
+
+    [Inject]
+    public var model:PlayerModel;
+    [Inject]
+    public var play:PlayGameSignal;
+
     /* initializing the list of assets we're using, there are three buttons to choose from so there's three vars. */
     public var awakeningIcons = new Vector.<Bitmap>;
     public var relicIcons = new Vector.<Bitmap>;
@@ -43,7 +57,7 @@ public class TraitsGUI extends Sprite {
     private var relicText:SimpleText;
     private var backgroundText:SimpleText;
     public function TraitsGUI() {
-        /* sets the default value of the rune type to zero. */
+        /* sets the default value of the trait type to zero. */
         this.typeOne = 0;
         this.typeTwo = 0;
         this.typeThree = 0;
@@ -98,8 +112,17 @@ public class TraitsGUI extends Sprite {
     public function onClose(param1:MouseEvent)
     {
         /* efficient way to remove the GUI from the screen. */
+        var game:GameInitData = new GameInitData();
+        var injector:Injector = StaticInjectorContext.getInjector();
+        this.model = injector.getInstance(PlayerModel);
+        this.play = injector.getInstance(PlayGameSignal);
+        game.createCharacter = true;
+        game.charId = this.model.getNextCharId();
+        game.traits = [typeOne, typeTwo, typeThree];
+        game.isNewGame = true;
         stage.focus = null;
         parent.removeChild(this);
+        this.play.dispatch(game);
     }
 
     public function addDesc(): void
@@ -250,13 +273,13 @@ public class TraitsGUI extends Sprite {
         }
         for (var b:int = 0; b < 9; b++)
         {
-            this.relicIcons[b].x = 400 - this.awakeningIcons[b].width / 2;
-            this.relicIcons[b].y = 300 - this.awakeningIcons[b].height / 2;
+            this.relicIcons[b].x = 400 - this.relicIcons[b].width / 2;
+            this.relicIcons[b].y = 300 - this.relicIcons[b].height / 2;
         }
         for (var b:int = 0; b < 11; b++)
         {
-            this.backgroundIcons[b].x = 655 - this.awakeningIcons[b].width / 2;
-            this.backgroundIcons[b].y = 300 - this.awakeningIcons[b].height / 2;
+            this.backgroundIcons[b].x = 655 - this.backgroundIcons[b].width / 2;
+            this.backgroundIcons[b].y = 300 - this.backgroundIcons[b].height / 2;
         }
 
         /* this makes it so if the container holding the assets is clicked, it will call a function.

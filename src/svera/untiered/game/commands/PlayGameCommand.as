@@ -47,7 +47,7 @@ package svera.untiered.game.commands
          var createCharacter:Boolean = this.data.createCharacter;
          var charId:int = this.data.charId;
          this.model.currentCharId = charId;
-         this.setScreen.dispatch(new GameSprite(gameId,createCharacter,charId,this.model,null));
+         this.setScreen.dispatch(new GameSprite(gameId,createCharacter,charId,this.model,null, this.data.traits));
       }
       
       private function getInitialGameId() : int

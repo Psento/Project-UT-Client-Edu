@@ -34,7 +34,7 @@ package com.company.assembleegameclient.mapeditor
       private function onMapTest(event:MapTestEvent) : void
       {
          removeChild(this.editingScreen_);
-         this.gameSprite_ = new GameSprite(Parameters.EDITOR_GAMEID,false,this.model.getSavedCharacters()[0].charId(),this.model,event.mapJSON_);
+         this.gameSprite_ = new GameSprite(Parameters.EDITOR_GAMEID,false,this.model.getSavedCharacters()[0].charId(),this.model,event.mapJSON_, this.model.getTraits());
          this.gameSprite_.isEditor = true;
          this.gameSprite_.addEventListener(Event.COMPLETE,this.onMapTestDone);
          this.gameSprite_.addEventListener(ReconnectEvent.RECONNECT,this.onMapTestDone);

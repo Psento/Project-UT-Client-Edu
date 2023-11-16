@@ -12,7 +12,6 @@ package svera.untiered.ui.view
       
       private static const BUTTON_SPACE:int = 4;
        
-      
       private const cuts:Array = [LEFT_BUTTON_CUTS,RIGHT_BUTTON_CUTS];
       
       public function PotionInventoryView()

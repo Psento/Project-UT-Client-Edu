@@ -37,8 +37,6 @@ public class HUDView extends Sprite
 
    private const INTERACT_PANEL_POSITION:Point = new Point(0,500);
 
-   private var background:CharacterWindowBackground;
-
    private var miniMap:MiniMap;
 
    private var equippedGrid:EquippedGrid;
@@ -65,7 +63,6 @@ public class HUDView extends Sprite
 
    private function createAssets() : void
    {
-      this.background = new CharacterWindowBackground();
       this.miniMap = new MiniMap(192,192);
       this.tabStrip = new TabStripView(186,153);
       this.characterDetails = new CharacterDetailsView();
@@ -74,7 +71,6 @@ public class HUDView extends Sprite
 
    private function addAssets() : void
    {
-      addChild(this.background);
       addChild(this.miniMap);
       addChild(this.tabStrip);
       addChild(this.characterDetails);
@@ -83,8 +79,6 @@ public class HUDView extends Sprite
 
    private function positionAssets() : void
    {
-      this.background.x = this.BG_POSITION.x;
-      this.background.y = this.BG_POSITION.y;
       this.miniMap.x = this.MAP_POSITION.x;
       this.miniMap.y = this.MAP_POSITION.y;
       this.tabStrip.x = this.TAB_STRIP_POSITION.x;

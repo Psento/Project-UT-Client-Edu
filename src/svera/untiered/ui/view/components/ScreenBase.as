@@ -8,6 +8,7 @@ public class ScreenBase extends Sprite
       public function ScreenBase()
       {
          addChild(new Background());
+         addChild(new DarkLayer());
          addChild(new SoundIcon());
       }
    }

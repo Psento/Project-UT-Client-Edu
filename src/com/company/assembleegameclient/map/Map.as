@@ -51,7 +51,6 @@ public class Map extends Sprite
       public var background_:Background = null;
       public var map_:Sprite;
       public var hurtOverlay_:HurtOverlay = null;
-      public var gradientOverlay_:GradientOverlay = null;
       public var mapOverlay_:MapOverlay = null;
       public var partyOverlay_:PartyOverlay = null;
       public var squareList_:Vector.<Square>;
@@ -103,7 +102,6 @@ public class Map extends Sprite
          super();
          this.gs_ = gs;
          this.hurtOverlay_ = new HurtOverlay();
-         this.gradientOverlay_ = new GradientOverlay();
          this.mapOverlay_ = new MapOverlay();
          this.partyOverlay_ = new PartyOverlay(this);
          this.party_ = new Party(this);
@@ -134,7 +132,6 @@ public class Map extends Sprite
          }
          addChild(this.map_);
          addChild(this.hurtOverlay_);
-         addChild(this.gradientOverlay_);
          addChild(this.mapOverlay_);
          addChild(this.partyOverlay_);
       }
@@ -148,7 +145,6 @@ public class Map extends Sprite
          this.background_ = null;
          this.map_ = null;
          this.hurtOverlay_ = null;
-         this.gradientOverlay_ = null;
          this.mapOverlay_ = null;
          this.partyOverlay_ = null;
          for each(square in this.squareList_)
@@ -549,19 +545,6 @@ public class Map extends Sprite
          else
          {
             this.hurtOverlay_.visible = false;
-         }
-
-         // draw side bar gradient
-         if(this.player_ != null)
-         {
-            this.gradientOverlay_.visible = true;
-            this.gradientOverlay_.x = screenRect.right - 10;
-            this.gradientOverlay_.y = screenRect.top;
-            this.gradientOverlay_.height = 600 * (600 / scaleY);
-         }
-         else
-         {
-            this.gradientOverlay_.visible = false;
          }
 
          // draw hw capable screen filters

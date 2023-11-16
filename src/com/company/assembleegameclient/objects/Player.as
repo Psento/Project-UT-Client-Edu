@@ -713,6 +713,18 @@ import org.swiftsuspenders.Injector;
          {
             moveSpeed *= 1.5;
          }
+         switch(awakening_)
+         {
+            case 0:
+            case 6:
+                 moveSpeed *= 1.15;
+                 break;
+            case 5:
+            case 7:
+            case 8:
+                 moveSpeed *= 0.75;
+                 break;
+         }
          moveSpeed = moveSpeed * this.moveMultiplier_;
          return moveSpeed;
       }

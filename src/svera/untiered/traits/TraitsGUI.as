@@ -49,7 +49,9 @@ public class TraitsGUI extends Sprite {
     private var typeThree:int;
 
     /* initializing header text and a select button for when you're done. */
-    private var titleText_:TextField;
+    private var awakeningTitleText_:TextField;
+    private var relicTitleText_:TextField;
+    private var backgroundTitleText_:TextField;
     private var selectButton_:TextButton;
 
     /* adding desc. text, these will change depending on which trait is selected. */
@@ -83,22 +85,40 @@ public class TraitsGUI extends Sprite {
         addChild(this.containerThree);
 
         /* adds header text and a select button to close out of the GUI */
-        var txt:TextField = new TextField();
-        txt.autoSize = TextFieldAutoSize.CENTER;
-        txt.textColor = 11776947;
+        var txt0:TextField = new TextField();
+        txt0.autoSize = TextFieldAutoSize.CENTER;
+        txt0.textColor = 11776947;
+        var txt1:TextField = new TextField();
+        txt1.autoSize = TextFieldAutoSize.CENTER;
+        txt1.textColor = 11776947;
+        var txt2:TextField = new TextField();
+        txt2.autoSize = TextFieldAutoSize.CENTER;
+        txt2.textColor = 11776947;
         var newFormat:TextFormat = new TextFormat();
         newFormat.size = 28;
         newFormat.bold = true;
         newFormat.align = TextFormatAlign.CENTER;
-        txt.defaultTextFormat = newFormat;
-        this.titleText_ = txt;
-        this.titleText_.text = "Traits";
-        this.titleText_.x = 400 - this.titleText_.width / 2;
-        this.titleText_.y = 32;
-        addChild(this.titleText_);
+        txt0.defaultTextFormat = newFormat;
+        txt1.defaultTextFormat = newFormat;
+        txt2.defaultTextFormat = newFormat;
+        this.awakeningTitleText_ = txt0;
+        this.awakeningTitleText_.text = "Awakening";
+        this.awakeningTitleText_.x = 147 - this.awakeningTitleText_.width / 2;
+        this.awakeningTitleText_.y = 16;
+        addChild(this.awakeningTitleText_);
+        this.relicTitleText_ = txt1;
+        this.relicTitleText_.text = "Relic";
+        this.relicTitleText_.x = 400 - this.relicTitleText_.width / 2;
+        this.relicTitleText_.y = 16;
+        addChild(this.relicTitleText_);
+        this.backgroundTitleText_ = txt2;
+        this.backgroundTitleText_.text = "Background";
+        this.backgroundTitleText_.x = 654 - this.backgroundTitleText_.width / 2;
+        this.backgroundTitleText_.y = 16;
+        addChild(this.backgroundTitleText_);
         this.selectButton_ = new TextButton(18, "Select", 120);
         this.selectButton_.x = 340;
-        this.selectButton_.y = 525;
+        this.selectButton_.y = 561;
         addChild(this.selectButton_);
 
         /* when the select button is selected, it will call a function that removes the GUI */
@@ -128,25 +148,28 @@ public class TraitsGUI extends Sprite {
     public function addDesc(): void
     {
         /* initializes the text on screen. I am using BaseSimpleText because you can utilize html tags to make segments bold and unbold. */
-        this.awakeningText = new SimpleText(14, 0xffffff, false, 570, 50);
-        this.relicText = new SimpleText(14, 0xffffff, false, 570, 50);
-        this.backgroundText = new SimpleText(14, 0xffffff, false, 570, 50);
+        this.awakeningText = new SimpleText(14, 0xffffff, false, 213, 201);
+        this.relicText = new SimpleText(14, 0xffffff, false, 213, 201);
+        this.backgroundText = new SimpleText(14, 0xffffff, false, 213, 201);
 
         /* sets the position of the text. */
         this.awakeningText.multiline = true;
-        this.awakeningText.x = 115;
-        this.awakeningText.y = 423;
+        this.awakeningText.wordWrap = true;
+        this.awakeningText.x = 40;
+        this.awakeningText.y = 309;
         this.relicText.multiline = true;
-        this.relicText.x = 115;
-        this.relicText.y = 445;
+        this.relicText.wordWrap = true;
+        this.relicText.x = 294;
+        this.relicText.y = 309;
         this.backgroundText.multiline = true;
-        this.backgroundText.x = 115;
-        this.backgroundText.y = 467;
+        this.backgroundText.wordWrap = true;
+        this.backgroundText.x = 548;
+        this.backgroundText.y = 309;
 
         /* uses <b> tags to make text bold. set the default values to the first runes description text on screen. */
-        this.awakeningText.htmlText = "<b>Swift Stride:</b> - Movement Speed Multiplier x1.15 - Proficient with short range weapons - Reduced effectiveness to paralyzing effects";
-        this.relicText.htmlText = "<b>Defenseless:</b> Gain physical resistance based on your hp when not wearing armor.";
-        this.backgroundText.htmlText = "<b>Acolyte:</b> Primary stat [INT] Secondary stat [HP]";
+        this.awakeningText.htmlText = "<b>Swift Stride:</b> \n - Movement Speed Multiplier x1.15 \n - Proficient with short range weapons \n - Reduced effectiveness to paralyzing effects";
+        this.relicText.htmlText = "<b>Defenseless:</b> \n - Gain physical resistance based on your hp when not wearing armor.";
+        this.backgroundText.htmlText = "<b>Acolyte:</b> \n - Primary stat [INT] \n - Secondary stat [HP]";
 
         /* adds the text on screen. */
         addChild(this.awakeningText);
@@ -269,17 +292,17 @@ public class TraitsGUI extends Sprite {
         for (var b:int = 0; b < 10; b++)
         {
             this.awakeningIcons[b].x = 145 - this.awakeningIcons[b].width / 2;
-            this.awakeningIcons[b].y = 300 - this.awakeningIcons[b].height / 2;
+            this.awakeningIcons[b].y = 170.5 - this.awakeningIcons[b].height / 2;
         }
         for (var b:int = 0; b < 9; b++)
         {
             this.relicIcons[b].x = 400 - this.relicIcons[b].width / 2;
-            this.relicIcons[b].y = 300 - this.relicIcons[b].height / 2;
+            this.relicIcons[b].y = 170.5 - this.relicIcons[b].height / 2;
         }
         for (var b:int = 0; b < 11; b++)
         {
             this.backgroundIcons[b].x = 655 - this.backgroundIcons[b].width / 2;
-            this.backgroundIcons[b].y = 300 - this.backgroundIcons[b].height / 2;
+            this.backgroundIcons[b].y = 170.5 - this.backgroundIcons[b].height / 2;
         }
 
         /* this makes it so if the container holding the assets is clicked, it will call a function.
@@ -287,9 +310,12 @@ public class TraitsGUI extends Sprite {
 
         this.container.addEventListener(MouseEvent.CLICK, function(e:MouseEvent) : void { upd(); });
         this.containerTwo.addEventListener(MouseEvent.CLICK, function(e:MouseEvent) : void { upd2(); }); */
-        this.container.addEventListener(MouseEvent.CLICK, upd);
-        this.containerTwo.addEventListener(MouseEvent.CLICK, upd2);
-        this.containerThree.addEventListener(MouseEvent.CLICK, upd3);
+        this.container.addEventListener(MouseEvent.CLICK, f1);
+        this.containerTwo.addEventListener(MouseEvent.CLICK, f2);
+        this.containerThree.addEventListener(MouseEvent.CLICK, f3);
+        this.container.addEventListener(MouseEvent.RIGHT_CLICK, b1);
+        this.containerTwo.addEventListener(MouseEvent.RIGHT_CLICK, b2);
+        this.containerThree.addEventListener(MouseEvent.RIGHT_CLICK, b3);
 
         /* this will add the sprite container to add the first asset of each type to itself */
         this.container.addChild(this.awakeningIcons[0]);
@@ -297,7 +323,7 @@ public class TraitsGUI extends Sprite {
         this.containerThree.addChild(this.backgroundIcons[0]);
     }
 
-    private function upd(event:Event)
+    private function f1(event:Event)
     {
         /* increases the trait type by one */
         this.typeOne++;
@@ -309,21 +335,50 @@ public class TraitsGUI extends Sprite {
         /* calls a function to update the text */
         this.updateText();
     }
+    private function b1(event:Event)
+    {
+        /* decrease the trait type by one */
+        this.typeOne--;
+
+        /* removes and replaces the asset, for example: if you were on the first trait (0), it would increase to the second trait (9), and remove the one behind it (0), hence the this.typeOne - 1. */
+        this.container.removeChild(this.awakeningIcons[this.typeOne + 1]);
+        if(this.typeOne < 0) this.typeOne = 9;
+        this.container.addChild(this.awakeningIcons[this.typeOne]);
+
+        /* calls a function to update the text */
+        this.updateText();
+    }
 
     /* this function does the exact same thing, but for the second trait slot. */
-    private function upd2(event:Event)
+    private function f2(event:Event)
     {
         this.typeTwo++;
         this.containerTwo.removeChild(this.relicIcons[this.typeTwo - 1]);
         this.containerTwo.addChild(this.relicIcons[this.typeTwo]);
         this.updateText();
     }
+    private function b2(event:Event)
+    {
+        this.typeTwo--;
+        this.containerTwo.removeChild(this.relicIcons[this.typeTwo + 1]);
+        if(this.typeTwo < 0) this.typeTwo = 8;
+        this.containerTwo.addChild(this.relicIcons[this.typeTwo]);
+        this.updateText();
+    }
 
     /* this function does the exact same thing, but for the second trait slot. */
-    private function upd3(event:Event)
+    private function f3(event:Event)
     {
         this.typeThree++;
         this.containerThree.removeChild(this.backgroundIcons[this.typeThree - 1]);
+        this.containerThree.addChild(this.backgroundIcons[this.typeThree]);
+        this.updateText();
+    }
+    private function b3(event:Event)
+    {
+        this.typeThree--;
+        this.containerThree.removeChild(this.backgroundIcons[this.typeThree + 1]);
+        if(this.typeThree < 0) this.typeThree = 10;
         this.containerThree.addChild(this.backgroundIcons[this.typeThree]);
         this.updateText();
     }
@@ -333,39 +388,44 @@ public class TraitsGUI extends Sprite {
         /* is the equivalent to saying if (this.typeOne == value), change the text to this. switches are the most efficient way of going about repeatable things with multiple values (like this). */
         switch (this.typeOne)
         {
+            case -1:
+                /* there should only be 9 awakenings to choose from, so if it goes below the 1st awakening, it will set it's text to the last awakening and change it's type back to the highest value */
+                this.awakeningText.htmlText = "<b>Resilient Avenger:</b> \n - If you reach 0 hp, you regain 1 hp instead of becoming downed \n - When you land a critical hit with a small or short ranged weapon, deal additional damage based on your attack";
+                this.typeOne = 9;
+                break;
             case 0:
-                this.awakeningText.htmlText = "<b>Swift Stride:</b> - Movement Speed Multiplier x1.15 - Proficient with Short range weapons - Reduced effectiveness to paralyzing effects";
+                this.awakeningText.htmlText = "<b>Swift Stride:</b> \n - Movement Speed Multiplier x1.15 \n - Proficient with Short range weapons \n - Reduced effectiveness to paralyzing effects";
                 break;
             case 1:
-                this.awakeningText.htmlText = "<b>Elemental Ward:</b> - Gained resistance to all elemental damage";
+                this.awakeningText.htmlText = "<b>Elemental Ward:</b> \n - Gained resistance to all elemental damage";
                 break;
             case 2:
-                this.awakeningText.htmlText = "<b>Brave:</b> - Proficient with Small range weapons - Reduced effectiveness to paralyzing effects";
+                this.awakeningText.htmlText = "<b>Brave:</b> \n - Proficient with Small range weapons \n - Reduced effectiveness to paralyzing effects";
                 break;
             case 3:
-                this.awakeningText.htmlText = "<b>Lethal Elegance:</b> - Proficient with Medium range weapons - Improved Light armor effectiveness";
+                this.awakeningText.htmlText = "<b>Lethal Elegance:</b> \n - Proficient with Medium range weapons \n - Improved Light armor effectiveness";
                 break;
             case 4:
-                this.awakeningText.htmlText = "<b>Agile Duelist:</b> - Proficient with Long range weapons - Improved Light and Medium armor effectiveness";
+                this.awakeningText.htmlText = "<b>Agile Duelist:</b> \n - Proficient with Long range weapons \n - Improved Light and Medium armor effectiveness";
                 break;
             case 5:
-                this.awakeningText.htmlText = "<b>Half Breed:</b> - Movement Speed Multiplier x0.75 - Proficient with Short range weapons - Gain a chance to not be affected by paralyzing effects - Reduced effectiveness to Light damage";
+                this.awakeningText.htmlText = "<b>Half Breed:</b> \n - Movement Speed Multiplier x0.75 \n - Proficient with Short range weapons \n - Gain a chance to not be affected by paralyzing effects \n - Reduced effectiveness to Light damage";
                 break;
             case 6:
-                this.awakeningText.htmlText = "<b>Seer:</b> - Movement Speed Multiplier x1.15 - Proficient with Long range weapons - Improved Light armor effectiveness - Reduced effectiveness to paralyzing effects";
+                this.awakeningText.htmlText = "<b>Seer:</b> \n - Movement Speed Multiplier x1.15 \n - Proficient with Long range weapons \n - Improved Light armor effectiveness \n - Reduced effectiveness to paralyzing effects";
                 break;
             case 7:
-                this.awakeningText.htmlText = "<b>Void Touched:</b> - Movement Speed Multiplier x0.75 - Gain a chance to not be affected by terrify - Attacks with minmax damage gain an effect, the damage will roll twice, if the initial damage was lower than 50% of the maximum damage - Reduced effectiveness to void damage";
+                this.awakeningText.htmlText = "<b>Void Touched:</b> \n - Movement Speed Multiplier x0.75 \n - Gain a chance to not be affected by terrify - Attacks with minmax damage gain an effect, the damage will roll twice, if the initial damage was lower than 50% of the maximum damage \n - Reduced effectiveness to void damage";
                 break;
             case 8:
-                this.awakeningText.htmlText = "<b>Thaumaturge:</b> - Movement Speed Multiplier x0.75 - Gain additional INT and RP - Reduced effectiveness to electric damage";
+                this.awakeningText.htmlText = "<b>Thaumaturge:</b> \n - Movement Speed Multiplier x0.75 \n - Gain additional INT and RP \n - Reduced effectiveness to electric damage";
                 break;
             case 9:
-                this.awakeningText.htmlText = "<b>Resilient Avenger:</b> - If you reach 0 hp, you regain 1 hp instead of becoming downed - When you land a critical hit with a small or short ranged weapon, deal additional damage based on your attack";
+                this.awakeningText.htmlText = "<b>Resilient Avenger:</b> \n - If you reach 0 hp, you regain 1 hp instead of becoming downed \n - When you land a critical hit with a small or short ranged weapon, deal additional damage based on your attack";
                 break;
             case 10:
-                /* there should only be 10 awakenings to choose from, so if it goes past the 10th awakening, it will set it's text to the first awakening and change it's type back to it's default value */
-                this.awakeningText.htmlText = "<b>Swift Stride:</b> - Movement Speed Multiplier x1.15 - Proficient with short range weapons - Reduced effectiveness to paralyzing effects";
+                /* there should only be 9 awakenings to choose from, so if it goes past the 9th awakening, it will set it's text to the first awakening and change it's type back to it's default value */
+                this.awakeningText.htmlText = "<b>Swift Stride:</b> \n - Movement Speed Multiplier x1.15 \n - Proficient with short range weapons \n - Reduced effectiveness to paralyzing effects";
                 this.typeOne = 0;
                 break;
         }
@@ -373,35 +433,39 @@ public class TraitsGUI extends Sprite {
         /* same function for the second trait slot. */
         switch (this.typeTwo)
         {
+            case -1:
+                this.relicText.htmlText = "<b>Razor Sharp:</b> \n - Return a portion of the damage taken back at the attacker.";
+                this.typeTwo = 8;
+                break;
             case 0:
-                this.relicText.htmlText = "<b>Defenseless:</b> Gain physical resistance based on your hp when not wearing armor.";
+                this.relicText.htmlText = "<b>Defenseless:</b> \n - Gain physical resistance based on your hp when not wearing armor.";
                 break;
             case 1:
-                this.relicText.htmlText = "<b>Mithridatism:</b> Take only half the damage from poisons.";
+                this.relicText.htmlText = "<b>Mithridatism:</b> \n - Take only half the damage from poisons.";
                 break;
             case 2:
-                this.relicText.htmlText = "<b>Healthy:</b> Healing effect multiplier x1.3.";
+                this.relicText.htmlText = "<b>Healthy:</b> \n - Healing effect multiplier x1.3.";
                 break;
             case 3:
-                this.relicText.htmlText = "<b>Absorption:</b> Gained magic resistance.";
+                this.relicText.htmlText = "<b>Absorption:</b> \n - Gained magic resistance.";
                 break;
             case 4:
-                this.relicText.htmlText = "<b>Scope:</b> Gain ranged weapon bonus damage.";
+                this.relicText.htmlText = "<b>Scope:</b> \n - Gain ranged weapon bonus damage.";
                 break;
             case 5:
-                this.relicText.htmlText = "<b>Dexterous:</b> Weapon damage scales with dexterity instead of magic damage or physical damage.";
+                this.relicText.htmlText = "<b>Dexterous:</b> \n - Weapon damage scales with dexterity instead of magic damage or physical damage.";
                 break;
             case 6:
-                this.relicText.htmlText = "<b>Holy:</b> Gain additional Light damage.";
+                this.relicText.htmlText = "<b>Holy:</b> \n - Gain additional Light damage.";
                 break;
             case 7:
-                this.relicText.htmlText = "<b>Incombustible:</b> Take only half the damage from fire.";
+                this.relicText.htmlText = "<b>Incombustible:</b> \n - Take only half the damage from fire.";
                 break;
             case 8:
-                this.relicText.htmlText = "<b>Razor Sharp:</b> Return a portion of the damage taken back at the attacker.";
+                this.relicText.htmlText = "<b>Razor Sharp:</b> \n - Return a portion of the damage taken back at the attacker.";
                 break;
             case 9:
-                this.relicText.htmlText = "<b>Defenseless:</b> Gain physical resistance based on your hp when not wearing armor.";
+                this.relicText.htmlText = "<b>Defenseless:</b> \n - Gain physical resistance based on your hp when not wearing armor.";
                 this.typeTwo = 0;
                 break;
         }
@@ -409,41 +473,45 @@ public class TraitsGUI extends Sprite {
         /* same function for the second trait slot. */
         switch (this.typeThree)
         {
+            case -1:
+                this.backgroundText.htmlText = "<b>Urchin:</b> \n - Primary stat [DEX] \n - Secondary stat [SPD]";
+                this.typeThree = 10;
+                break;
             case 0:
-                this.backgroundText.htmlText = "<b>Acolyte:</b> Primary stat [INT] Secondary stat [HP]";
+                this.backgroundText.htmlText = "<b>Acolyte:</b> \n - Primary stat [INT] \n - Secondary stat [HP]";
                 break;
             case 1:
-                this.backgroundText.htmlText = "<b>Charlatan:</b> Primary stat [DEX] Secondary stat [DEX]";
+                this.backgroundText.htmlText = "<b>Charlatan:</b> \n - Primary stat [DEX] \n - Secondary stat [DEX]";
                 break;
             case 2:
-                this.backgroundText.htmlText = "<b>Criminal:</b> Primary stat [INT] Secondary stat [SPD]";
+                this.backgroundText.htmlText = "<b>Criminal:</b> \n - Primary stat [INT] \n - Secondary stat [SPD]";
                 break;
             case 3:
-                this.backgroundText.htmlText = "<b>Entertainer:</b> Primary stat [SPD] Secondary stat [RP]";
+                this.backgroundText.htmlText = "<b>Entertainer:</b> \n - Primary stat [SPD] \n - Secondary stat [RP]";
                 break;
             case 4:
-                this.backgroundText.htmlText = "<b>Hero:</b> Primary stat [VIG] Secondary stat [HP]";
+                this.backgroundText.htmlText = "<b>Hero:</b> \n - Primary stat [VIG] \n - Secondary stat [HP]";
                 break;
             case 5:
-                this.backgroundText.htmlText = "<b>Artisan:</b> Primary stat [INT] Secondary stat [INT]";
+                this.backgroundText.htmlText = "<b>Artisan:</b> \n - Primary stat [INT] \n - Secondary stat [INT]";
                 break;
             case 6:
-                this.backgroundText.htmlText = "<b>Noble:</b> Primary stat [RP] Secondary stat [INT]";
+                this.backgroundText.htmlText = "<b>Noble:</b> \n - Primary stat [RP] \n - Secondary stat [INT]";
                 break;
             case 7:
-                this.backgroundText.htmlText = "<b>Outlander:</b> Primary stat [DEX] Secondary stat [HP]";
+                this.backgroundText.htmlText = "<b>Outlander:</b> \n - Primary stat [DEX] \n - Secondary stat [HP]";
                 break;
             case 8:
-                this.backgroundText.htmlText = "<b>Sage:</b> Primary stat [MP] Secondary stat [MP]";
+                this.backgroundText.htmlText = "<b>Sage:</b> \n - Primary stat [RP] \n - Secondary stat [RP]";
                 break;
             case 9:
-                this.backgroundText.htmlText = "<b>Soldier:</b> Primary stat [DEX] Secondary stat [PHYS OR MAG](HIGHEST STAT)";
+                this.backgroundText.htmlText = "<b>Soldier:</b> \n - Primary stat [DEX] \n - Secondary stat [PHYS OR MAG](HIGHEST STAT)";
                 break;
             case 10:
-                this.backgroundText.htmlText = "<b>Urchin:</b> Primary stat [DEX] Secondary stat [SPD]";
+                this.backgroundText.htmlText = "<b>Urchin:</b> \n - Primary stat [DEX] \n - Secondary stat [SPD]";
                 break;
             case 11:
-                this.backgroundText.htmlText = "<b>Acolyte:</b> Primary stat [INT] Secondary stat [HP]";
+                this.backgroundText.htmlText = "<b>Acolyte:</b> \n - Primary stat [INT] \n - Secondary stat [HP]";
                 this.typeThree = 0;
                 break;
         }

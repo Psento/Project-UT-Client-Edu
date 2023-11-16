@@ -398,7 +398,7 @@ public class Map extends Sprite
          var t:Number = NaN;
          var d:Number = NaN;
          var screenRect:Rectangle = camera.clipRect_;
-         x = 300;
+         x = 400;
          y = Boolean(Parameters.data_.centerOnPlayer)?-Camera.CENTER_SCREEN_RECT.y:-Camera.OFFSET_SCREEN_RECT.y;
          stage.scaleMode = StageScaleMode.NO_SCALE;
          scaleX = 800 / WebMain.StageWidth;

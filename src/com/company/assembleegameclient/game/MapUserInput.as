@@ -15,6 +15,9 @@ import flash.events.TimerEvent;
 import flash.geom.Point;
 import flash.system.Capabilities;
 import flash.utils.Timer;
+
+import svera.lib.util.GIF;
+import svera.untiered.Particles.Recallingbase;
 import svera.untiered.constants.GeneralConstants;
 import svera.untiered.core.StaticInjectorContext;
 import svera.untiered.core.view.Layers;
@@ -54,6 +57,7 @@ public class MapUserInput
    private var potionInventoryModel:PotionInventoryModel;
    private var tabStripModel:TabStripModel;
    private var layers:Layers;
+   private var nexusHeld = -1;
 
    public function MapUserInput(gs:GameSprite)
    {
@@ -416,8 +420,35 @@ public class MapUserInput
             this.togglePerformanceStats();
             break;
          case Parameters.data_.escapeToNexus:
-         case Parameters.data_.escapeToNexus2:
-            this.gs_.gsc_.escape();
+         case Parameters.data_.escapeToNexus2: // Make this serverside communicated
+            nexusHeld++;
+            trace("Nexus being held: ", nexusHeld);
+            var gif:GIF = new Recallingbase();
+            var animationReplaying:Boolean = false;
+            if(gs_.contains(gif))
+               gs_.removeChild(gif);
+            gif.x = player.x_;
+            gif.y = player.y_;
+            gif.scaleX = 2;
+            gif.scaleY = 2;
+            gs_.addChild(gif);
+            switch(nexusHeld)
+            {
+               case 0:
+               case 15:
+               case 30:
+               case 45:
+                  gif.stop();
+                  gif.play();
+                  break;
+            }
+            if(nexusHeld >= 60)
+            {
+               this.gs_.gsc_.escape();
+               gif.stop();
+               nexusHeld = -1;
+               animationReplaying = false;
+            }
             break;
          case Parameters.data_.options:
             this.clearInput();

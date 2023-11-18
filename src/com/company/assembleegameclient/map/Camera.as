@@ -71,7 +71,7 @@ package com.company.assembleegameclient.map
 
       private function correctCameraView() : Rectangle
       {
-         var width:int = WebMain.StageWidth - 200 * (WebMain.StageWidth / 800);
+         var width:int = WebMain.StageWidth + 100 * (WebMain.StageWidth / 800);
          var height:int = WebMain.StageHeight;
          var y:int = Boolean(Parameters.data_.centerOnPlayer)?height*(CENTER_SCREEN_RECT.y/600):height*(OFFSET_SCREEN_RECT.y/600);
          var x:int = width / 2;

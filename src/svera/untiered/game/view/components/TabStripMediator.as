@@ -97,7 +97,7 @@ import svera.untiered.ui.signals.UpdateBackpackTabSignal;
          var storageContent:Sprite = new Sprite();
          storageContent.name = TabStripModel.MAIN_INVENTORY;
          storageContent.x = storageContent.y = 7;
-         var storage:InventoryGrid = new InventoryGrid(player,player,4);
+         var storage:InventoryGrid = new InventoryGrid(player,player,5);
          storageContent.addChild(storage);
          var potionsInventory:PotionInventoryView = new PotionInventoryView();
          potionsInventory.y = storage.height + 4;

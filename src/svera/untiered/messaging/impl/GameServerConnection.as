@@ -1184,6 +1184,23 @@ import svera.untiered.ui.view.NotEnoughTsavoriteDialog;
                case StatData.INVENTORY_9_STAT:
                case StatData.INVENTORY_10_STAT:
                case StatData.INVENTORY_11_STAT:
+               case StatData.INVENTORY_12_STAT:
+               case StatData.INVENTORY_13_STAT:
+               case StatData.INVENTORY_14_STAT:
+               case StatData.INVENTORY_15_STAT:
+               case StatData.INVENTORY_16_STAT:
+               case StatData.INVENTORY_17_STAT:
+               case StatData.INVENTORY_18_STAT:
+               case StatData.INVENTORY_19_STAT:
+               case StatData.INVENTORY_20_STAT:
+               case StatData.INVENTORY_21_STAT:
+               case StatData.INVENTORY_22_STAT:
+               case StatData.INVENTORY_23_STAT:
+               case StatData.INVENTORY_24_STAT:
+               case StatData.INVENTORY_25_STAT:
+               case StatData.INVENTORY_26_STAT:
+               case StatData.INVENTORY_27_STAT:
+               case StatData.INVENTORY_28_STAT:
                   go.equipment_[stat.statType_ - StatData.INVENTORY_0_STAT] = value;
                   continue;
                case StatData.NUM_STARS_STAT:

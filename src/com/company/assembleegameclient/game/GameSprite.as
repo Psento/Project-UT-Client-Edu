@@ -90,7 +90,7 @@ import svera.untiered.ui.UIUtils;
       public function hudModelInitialized() : void
       {
          this.hudView = new HUDView();
-         this.hudView.x = 600;
+         this.hudView.x = 400;
          addChild(this.hudView);
       }
       

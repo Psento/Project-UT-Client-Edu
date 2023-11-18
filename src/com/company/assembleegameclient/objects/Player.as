@@ -902,6 +902,20 @@ import org.swiftsuspenders.Injector;
          }
          return portrait_;
       }
+
+      public function getPortraitHUD() : BitmapData
+      {
+         var image:MaskedImage = null;
+         var size:int = 0;
+         if(portrait_ == null)
+         {
+            image = animatedChar_.imageFromDir(AnimatedChar.RIGHT,AnimatedChar.STAND,0);
+            size = image.image_.width * 5;
+            portrait_ = TextureRedrawer.resize(image.image_,image.mask_,size,true,tex1Id_,tex2Id_);
+            portrait_ = GlowRedrawer.outlineGlow(portrait_,0);
+         }
+         return portrait_;
+      }
       
       public function useAltWeapon(x:Number, y:Number) : Boolean
       {
@@ -1070,7 +1084,7 @@ import org.swiftsuspenders.Injector;
       public function isInventoryFull() : Boolean
       {
          var len:int = equipment_.length;
-         for(var i:uint = 4; i < len; i++)
+         for(var i:uint = 5; i < len; i++)
          {
             if(equipment_[i] <= 0)
             {
@@ -1083,7 +1097,7 @@ import org.swiftsuspenders.Injector;
       public function nextAvailableInventorySlot() : int
       {
          var len:int = this.hasBackpack_ ? int(equipment_.length) : int(equipment_.length - GeneralConstants.NUM_INVENTORY_SLOTS);
-         for(var i:uint = 4; i < len; i++)
+         for(var i:uint = 5; i < len; i++)
          {
             if(equipment_[i] <= 0)
             {

@@ -8,7 +8,7 @@ public class InventoryGrid extends ItemGrid
 {
 
 
-   private const NUM_SLOTS:uint = 8;
+   private const NUM_SLOTS:uint = 24;
 
    private var tiles:Vector.<InventoryTile>;
 
@@ -24,7 +24,7 @@ public class InventoryGrid extends ItemGrid
       {
          tile = new InventoryTile(i + indexOffset,this,interactive);
          tile.addTileNumber(i + 1);
-         addToGrid(tile,2,i);
+         addToGrid(tile,6,i);
          this.tiles[i] = tile;
       }
    }

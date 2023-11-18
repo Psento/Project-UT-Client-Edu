@@ -43,6 +43,8 @@ import com.company.util.AssetLibrary;
       private function addImages() : void
       {
          // Svera System
+         // Particles
+         AssetLibrary.addImageSet("Assets_Player_Particles", new EmbeddedAssets.Assets_Player_ParticlesEmbed_().bitmapData, 16, 16);
          // Icons
          AssetLibrary.addImageSet("Assets_Currency_Icons8x8", new EmbeddedAssets.Assets_Currency_Icons8x8Embed_().bitmapData, 8, 8);
          AssetLibrary.addImageSet("Assets_Currency_Icons16x16", new EmbeddedAssets.Assets_Currency_Icons16x16Embed_().bitmapData, 16, 16);

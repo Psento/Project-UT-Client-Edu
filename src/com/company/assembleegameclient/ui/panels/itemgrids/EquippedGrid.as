@@ -11,7 +11,7 @@ package com.company.assembleegameclient.ui.panels.itemgrids
    {
        
       
-      private const NUM_SLOTS:uint = 4;
+      private const NUM_SLOTS:uint = 5;
       
       private var tiles:Vector.<EquipmentTile>;
       

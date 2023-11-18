@@ -39,16 +39,12 @@ package svera.untiered.ui.view
          this.updateHUD.addOnce(this.onUpdateHUD);
          this.updateHUD.add(this.onDraw);
          this.nameChanged.add(this.onNameChange);
-         this.view.gotoNexus.add(this.onGotoNexus);
-         this.view.gotoOptions.add(this.onGotoOptions);
       }
       
       override public function destroy() : void
       {
          this.updateHUD.remove(this.onDraw);
          this.nameChanged.remove(this.onNameChange);
-         this.view.gotoNexus.remove(this.onGotoNexus);
-         this.view.gotoOptions.remove(this.onGotoOptions);
       }
       
       private function onGotoNexus() : void

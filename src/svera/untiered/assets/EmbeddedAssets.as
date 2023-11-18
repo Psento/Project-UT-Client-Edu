@@ -3,6 +3,8 @@ package svera.untiered.assets
    public class EmbeddedAssets
    {
       // Svera System
+      // Particles
+      public static var Assets_Player_ParticlesEmbed_:Class = Assets_Player_Particles;
       // Icons
       public static var Assets_Currency_Icons8x8Embed_:Class = Assets_Currency_Icons8x8;
       public static var Assets_Currency_Icons16x16Embed_:Class = Assets_Currency_Icons16x16;

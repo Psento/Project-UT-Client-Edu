@@ -20,10 +20,11 @@ public class ItemGrid extends Panel
       
       private static const NO_CUT:Array = [0,0,0,0];
       
-      private static const CutsByNum:Object = {
-         1:[[1,0,0,1],NO_CUT,NO_CUT,[0,1,1,0]],
-         2:[[1,0,0,0],NO_CUT,NO_CUT,[0,1,0,0],[0,0,0,1],NO_CUT,NO_CUT,[0,0,1,0]],
-         3:[[1,0,0,1],NO_CUT,NO_CUT,[0,1,1,0],[1,0,0,0],NO_CUT,NO_CUT,[0,1,0,0],[0,0,0,1],NO_CUT,NO_CUT,[0,0,1,0]]
+      public static const CutsByNum:Object = {
+         1:[[1,0,0,1],NO_CUT,NO_CUT,NO_CUT,[0,1,1,0]],
+         2:[[1, 0, 0, 1], NO_CUT, NO_CUT, NO_CUT,NO_CUT, NO_CUT, NO_CUT, NO_CUT, NO_CUT, NO_CUT, NO_CUT, NO_CUT, NO_CUT, NO_CUT, NO_CUT, NO_CUT, NO_CUT, NO_CUT, NO_CUT, NO_CUT, [0, 0, 0, 1], NO_CUT, NO_CUT, [0, 0, 1, 0]],
+         3:[[1,0,0,0],NO_CUT,NO_CUT,[0,1,0,0],[0,0,0,1],NO_CUT,NO_CUT,[0,0,1,0]],
+         6:[[1, 0, 0, 1], NO_CUT, NO_CUT, NO_CUT,NO_CUT, NO_CUT, NO_CUT, NO_CUT, NO_CUT, NO_CUT, NO_CUT, NO_CUT, NO_CUT, NO_CUT, NO_CUT, NO_CUT, NO_CUT, NO_CUT, NO_CUT, NO_CUT, [0, 0, 0, 1], NO_CUT, NO_CUT, [0, 0, 1, 0]]
       };
        
       
@@ -76,7 +77,7 @@ public class ItemGrid extends Panel
          }
       }
       
-      private function onTileHover(e:MouseEvent) : void
+      public function onTileHover(e:MouseEvent) : void
       {
          if(!stage) {
             return;
@@ -122,7 +123,7 @@ public class ItemGrid extends Panel
          return InventoryOwnerTypes.NPC;
       }
       
-      protected function addToGrid(tile:ItemTile, numRows:uint, tileIndex:uint) : void
+      public function addToGrid(tile:ItemTile, numRows:uint, tileIndex:uint) : void
       {
          tile.drawBackground(CutsByNum[numRows][tileIndex]);
          tile.addEventListener(MouseEvent.ROLL_OVER,this.onTileHover);

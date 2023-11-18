@@ -3,9 +3,13 @@ package com.company.assembleegameclient.ui.panels.itemgrids
    import com.company.assembleegameclient.objects.GameObject;
    import com.company.assembleegameclient.objects.Player;
    import com.company.assembleegameclient.ui.panels.itemgrids.itemtiles.EquipmentTile;
-   import com.company.util.ArrayIterator;
+import com.company.assembleegameclient.ui.panels.itemgrids.itemtiles.ItemTile;
+import com.company.util.ArrayIterator;
    import com.company.util.IIterator;
-   import svera.lib.util.VectorAS3Util;
+
+import flash.events.MouseEvent;
+
+import svera.lib.util.VectorAS3Util;
    
    public class EquippedGrid extends ItemGrid
    {
@@ -27,6 +31,14 @@ package com.company.assembleegameclient.ui.panels.itemgrids
             tile.setType(invTypes[i]);
             this.tiles[i] = tile;
          }
+      }
+      public override function addToGrid(tile:ItemTile, numRows:uint, tileIndex:uint) : void
+      {
+         tile.drawBackground(ItemGrid.CutsByNum[numRows][tileIndex]);
+         tile.addEventListener(MouseEvent.ROLL_OVER,this.onTileHover);
+         tile.x = int(tileIndex / 5) * (ItemTile.HEIGHT + 4);
+         tile.y = int(tileIndex % 5) * (ItemTile.WIDTH + 4);
+         addChild(tile);
       }
       
       public function createInteractiveItemTileIterator() : IIterator

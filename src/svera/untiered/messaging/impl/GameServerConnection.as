@@ -150,7 +150,6 @@ import svera.untiered.messaging.impl.outgoing.Reskin;
    import svera.untiered.minimap.model.UpdateGroundTileVO;
 import svera.untiered.stage3D.Renderer;
 import svera.untiered.ui.model.UpdateGameObjectTileVO;
-import svera.untiered.ui.signals.UpdateBackpackTabSignal;
 import svera.untiered.ui.view.MessageCloseDialog;
 import svera.untiered.ui.view.NotEnoughTsavoriteDialog;
    import org.swiftsuspenders.Injector;
@@ -246,7 +245,6 @@ import svera.untiered.ui.view.NotEnoughTsavoriteDialog;
       private var logger:ILogger;
       private var handleDeath:HandleDeathSignal;
       private var setGameFocus:SetGameFocusSignal;
-      private var updateBackpackTab:UpdateBackpackTabSignal;
       private var classesModel:ClassesModel;
       private var playerModel:PlayerModel;
       private var injector:Injector;
@@ -261,7 +259,6 @@ import svera.untiered.ui.view.NotEnoughTsavoriteDialog;
          this.addSpeechBalloon = this.injector.getInstance(AddSpeechBalloonSignal);
          this.updateGroundTileSignal = this.injector.getInstance(UpdateGroundTileSignal);
          this.updateGameObjectTileSignal = this.injector.getInstance(UpdateGameObjectTileSignal);
-         this.updateBackpackTab = StaticInjectorContext.getInjector().getInstance(UpdateBackpackTabSignal);
          this.logger = this.injector.getInstance(ILogger);
          this.handleDeath = this.injector.getInstance(HandleDeathSignal);
          this.setGameFocus = this.injector.getInstance(SetGameFocusSignal);
@@ -1330,24 +1327,6 @@ import svera.untiered.ui.view.NotEnoughTsavoriteDialog;
                   continue;
                case StatData.TEXTURE_STAT:
                   player.skinId != value && this.setPlayerSkinTemplate(player,value);
-                  continue;
-               case StatData.HASBACKPACK_STAT:
-                  (go as Player).hasBackpack_ = Boolean(value);
-                  if(isMyObject)
-                  {
-                     this.updateBackpackTab.dispatch(Boolean(value));
-                  }
-                  continue;
-               case StatData.BACKPACK_0_STAT:
-               case StatData.BACKPACK_1_STAT:
-               case StatData.BACKPACK_2_STAT:
-               case StatData.BACKPACK_3_STAT:
-               case StatData.BACKPACK_4_STAT:
-               case StatData.BACKPACK_5_STAT:
-               case StatData.BACKPACK_6_STAT:
-               case StatData.BACKPACK_7_STAT:
-                  index = stat.statType_ - StatData.BACKPACK_0_STAT + GeneralConstants.NUM_EQUIPMENT_SLOTS + GeneralConstants.NUM_INVENTORY_SLOTS;
-                  (go as Player).equipment_[index] = value;
                   continue;
                case StatData.ITEMDATA_0_STAT:
                case StatData.ITEMDATA_1_STAT:

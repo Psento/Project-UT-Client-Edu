@@ -9,7 +9,6 @@ package svera.untiered.game.view.components
 import svera.untiered.ui.model.HUDModel;
    import svera.untiered.ui.model.TabStripModel;
 import svera.untiered.ui.signals.StatsTabHotKeyInputSignal;
-import svera.untiered.ui.signals.UpdateBackpackTabSignal;
    import svera.untiered.ui.signals.UpdateHUDSignal;
    import svera.untiered.ui.view.PotionInventoryView;
    import robotlegs.bender.bundles.mvcs.Mediator;
@@ -29,9 +28,6 @@ import svera.untiered.ui.signals.UpdateBackpackTabSignal;
       
       [Inject]
       public var updateHUD:UpdateHUDSignal;
-      
-      [Inject]
-      public var updateBackpack:UpdateBackpackTabSignal;
       
       [Inject]
       public var iconFactory:IconFactory;
@@ -54,35 +50,17 @@ import svera.untiered.ui.signals.UpdateBackpackTabSignal;
       override public function destroy() : void
       {
          this.view.tabSelected.remove(this.onTabSelected);
-         this.updateBackpack.remove(this.onUpdateBackPack);
       }
       
       private function addTabs(player:Player) : void
       {
          this.addInventoryTab(player);
          this.addStatsTab();
-         if(player.hasBackpack_)
-         {
-            this.addBackPackTab(player);
-         }
-         else
-         {
-            this.updateBackpack.add(this.onUpdateBackPack);
-         }
       }
       
       private function onTabSelected(name:String) : void
       {
          this.tabStripModel.currentSelection = name;
-      }
-      
-      private function onUpdateBackPack(hasBackpack:Boolean) : void
-      {
-         if(hasBackpack)
-         {
-            this.addBackPackTab(this.hudModel.gameSprite.map.player_);
-            this.updateBackpack.remove(this.onUpdateBackPack);
-         }
       }
 
       private function onTabHotkey():void
@@ -114,21 +92,6 @@ import svera.untiered.ui.signals.UpdateBackpackTabSignal;
          stats.y = (this.view.h - TabStripView.TAB_TOP_OFFSET) / 2 - stats.height / 2;
          var icon:Bitmap = this.iconFactory.makeIconBitmap(25);
          this.view.addTab(icon,stats);
-      }
-      
-      private function addBackPackTab(player:Player) : void
-      {
-         var backpackPotionsInventory:PotionInventoryView = null;
-         var backpackContent:Sprite = new Sprite();
-         backpackContent.name = TabStripModel.BACKPACK;
-         backpackContent.x = backpackContent.y = 7;
-         var backpack:InventoryGrid = new InventoryGrid(player,player,GeneralConstants.NUM_EQUIPMENT_SLOTS + GeneralConstants.NUM_INVENTORY_SLOTS,true);
-         backpackContent.addChild(backpack);
-         backpackPotionsInventory = new PotionInventoryView();
-         backpackPotionsInventory.y = backpack.height + 4;
-         backpackContent.addChild(backpackPotionsInventory);
-         var icon:Bitmap = this.iconFactory.makeIconBitmap(26);
-         this.view.addTab(icon,backpackContent);
       }
    }
 }

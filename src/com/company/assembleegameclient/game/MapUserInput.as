@@ -421,7 +421,7 @@ public class MapUserInput
             break;
          case Parameters.data_.escapeToNexus:
          case Parameters.data_.escapeToNexus2: // Make this serverside communicated
-            nexusHeld++;
+            /*nexusHeld++;
             trace("Nexus being held: ", nexusHeld);
             var gif:GIF = new Recallingbase();
             var animationReplaying:Boolean = false;
@@ -441,13 +441,13 @@ public class MapUserInput
                   gif.stop();
                   gif.play();
                   break;
-            }
+            }*/
             if(nexusHeld >= 60)
             {
                this.gs_.gsc_.escape();
-               gif.stop();
+               /*gif.stop();
                nexusHeld = -1;
-               animationReplaying = false;
+               animationReplaying = false;*/
             }
             break;
          case Parameters.data_.options:
@@ -517,10 +517,6 @@ public class MapUserInput
 
    private function useEquipItem(slotId:int) : void
    {
-      if(this.tabStripModel.currentSelection == TabStripModel.BACKPACK)
-      {
-         slotId = slotId + GeneralConstants.NUM_INVENTORY_SLOTS;
-      }
 
       var slotIndex:int = ObjectLibrary.getMatchingSlotIndex(this.gs_.map.player_.equipment_[slotId], this.gs_.map.player_);
       if (slotIndex != -1) {

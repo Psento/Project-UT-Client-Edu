@@ -90,7 +90,7 @@ package svera.untiered.game.view.components
          var contentFill:GraphicsSolidFill = new GraphicsSolidFill(BACKGROUND_COLOR,1);
          var contentPath:GraphicsPath = new GraphicsPath(new Vector.<int>(),new Vector.<Number>());
          var contentGraphicsData:Vector.<IGraphicsData> = new <IGraphicsData>[contentFill,contentPath,GraphicsUtil.END_FILL];
-         GraphicsUtil.drawCutEdgeRect(0,0,this.w,this.h - TAB_TOP_OFFSET,6,[1,1,1,1],contentPath);
+         GraphicsUtil.drawCutEdgeRect(0,0,this.w,this.h - TAB_TOP_OFFSET,4,[1,1,1,1],contentPath);
          g.drawGraphicsData(contentGraphicsData);
          this.containerSprite.addChild(this.bgSprite);
       }

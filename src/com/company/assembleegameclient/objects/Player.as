@@ -121,7 +121,6 @@ import org.swiftsuspenders.Injector;
       public var maxHPMax_:int = 0;
       public var maxSPMax_:int = 0;
       public var maxRPMax_:int = 0;
-      public var hasBackpack_:Boolean = false;
       public var starred_:Boolean = false;
       public var ignored_:Boolean = false;
       public var distSqFromThisPlayer_:Number = 0;
@@ -1096,7 +1095,7 @@ import org.swiftsuspenders.Injector;
 
       public function nextAvailableInventorySlot() : int
       {
-         var len:int = this.hasBackpack_ ? int(equipment_.length) : int(equipment_.length - GeneralConstants.NUM_INVENTORY_SLOTS);
+         var len:int = int(equipment_.length - GeneralConstants.NUM_INVENTORY_SLOTS);
          for(var i:uint = 5; i < len; i++)
          {
             if(equipment_[i] <= 0)
@@ -1111,20 +1110,8 @@ import org.swiftsuspenders.Injector;
       {
          var start:int = 0;
          var end:int = 0;
-         if(!this.hasBackpack_)
-         {
-            return -1;
-         }
-         if(current == TabStripModel.BACKPACK)
-         {
-            start = GeneralConstants.NUM_EQUIPMENT_SLOTS;
-            end = GeneralConstants.NUM_EQUIPMENT_SLOTS + GeneralConstants.NUM_INVENTORY_SLOTS;
-         }
-         else
-         {
-            start = GeneralConstants.NUM_EQUIPMENT_SLOTS + GeneralConstants.NUM_INVENTORY_SLOTS;
-            end = equipment_.length;
-         }
+         start = GeneralConstants.NUM_EQUIPMENT_SLOTS + GeneralConstants.NUM_INVENTORY_SLOTS;
+         end = equipment_.length;
          for(var i:uint = start; i < end; i++)
          {
             if(equipment_[i] <= 0)

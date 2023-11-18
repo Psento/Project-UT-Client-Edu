@@ -7041,20 +7041,6 @@
         <MpCost>80</MpCost>
         <Activate radius="9" totalDamage="500" duration="15" color="8fa547">PoisonGrenade</Activate>
     </Object>
-    <Object type="0xc6c" id="Backpack">
-		<Class>Equipment</Class>
-		<Item/>
-        <Texture><File>lofiObj3</File><Index>0x315</Index></Texture>
-		<SlotType>10</SlotType>
-		<Description>A backpack that'll double your inventory space!</Description>
-		<Sound>spell/light_heal</Sound>
-		<Consumable/>
-        <Backpack/>
-
-		<BagType>1</BagType>
-		<OldSound>use_potion</OldSound>
-    <Activate>Backpack</Activate>
-	</Object>
     <Object type="0xc6e" id="Resurrected Warrior's Armor">
 		<Class>Equipment</Class>
 		<Item/>

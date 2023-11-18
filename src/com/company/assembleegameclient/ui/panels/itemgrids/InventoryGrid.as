@@ -12,14 +12,11 @@ public class InventoryGrid extends ItemGrid
 
    private var tiles:Vector.<InventoryTile>;
 
-   private var isBackpack:Boolean;
-
-   public function InventoryGrid(gridOwner:GameObject, currentPlayer:Player, itemIndexOffset:int = 0, isBackpack:Boolean = false)
+   public function InventoryGrid(gridOwner:GameObject, currentPlayer:Player, itemIndexOffset:int = 0)
    {
       var tile:InventoryTile = null;
       super(gridOwner,currentPlayer,itemIndexOffset);
       this.tiles = new Vector.<InventoryTile>(this.NUM_SLOTS);
-      this.isBackpack = isBackpack;
       for(var i:int = 0; i < this.NUM_SLOTS; i++)
       {
          tile = new InventoryTile(i + indexOffset,this,interactive);

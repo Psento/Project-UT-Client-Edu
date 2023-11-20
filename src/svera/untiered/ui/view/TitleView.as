@@ -36,7 +36,7 @@ import org.osflash.signals.Signal;
       public function TitleView()
       {
          super();
-         addChild(new ScreenBase());
+         addChild(new ScreenBase(1));
          addChild(new AccountScreen());
          addChild(new ScreenGraphic());
          this.makeChildren();

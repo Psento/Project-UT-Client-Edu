@@ -6,8 +6,10 @@ import com.company.ui.SimpleText;
    import flash.events.Event;
    import flash.events.MouseEvent;
    import flash.filters.DropShadowFilter;
-   
-   public class StatusBar extends Sprite
+import flash.text.TextFormat;
+import flash.text.TextFormatAlign;
+
+public class StatusBar extends Sprite
    {
       public var w_:int;
       
@@ -72,9 +74,9 @@ import com.company.ui.SimpleText;
             this.labelText_ = new SimpleText(14,labelColor != this.textColor_ ? labelColor : this.textColor_,false,0,0);
             this.labelText_.setBold(true);
             this.labelText_.text = label;
-            this.labelText_.updateMetrics();
             this.labelText_.y = -3;
             this.labelText_.filters = [new DropShadowFilter(0,0,0,1.0,1.5,1.5,255)];
+            this.labelText_.updateMetrics();
             addChild(this.labelText_);
          }
          this.valueText_ = new SimpleText(14,valueColor,false,0,0);

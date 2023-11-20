@@ -30,7 +30,7 @@ package com.company.assembleegameclient.ui.panels.itemgrids.itemtiles
          tempText.text = String(this.hotKey);
          tempText.setBold(true);
          tempText.updateMetrics();
-         var bmpData:BitmapData = new BitmapData(26,30,true,0);
+         var bmpData:BitmapData = new BitmapData(30,30,true,0);
          bmpData.draw(tempText);
          this.hotKeyBMP = new Bitmap(bmpData);
          this.hotKeyBMP.x = WIDTH / 2 - tempText.width / 2;

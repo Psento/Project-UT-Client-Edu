@@ -1348,6 +1348,23 @@ import svera.untiered.ui.view.NotEnoughTsavoriteDialog;
                case StatData.ITEMDATA_17_STAT:
                case StatData.ITEMDATA_18_STAT:
                case StatData.ITEMDATA_19_STAT:
+               case StatData.ITEMDATA_20_STAT:
+               case StatData.ITEMDATA_21_STAT:
+               case StatData.ITEMDATA_22_STAT:
+               case StatData.ITEMDATA_23_STAT:
+               case StatData.ITEMDATA_24_STAT:
+               case StatData.ITEMDATA_25_STAT:
+               case StatData.ITEMDATA_26_STAT:
+               case StatData.ITEMDATA_27_STAT:
+               case StatData.ITEMDATA_28_STAT:
+               case StatData.ITEMDATA_29_STAT:
+               case StatData.ITEMDATA_30_STAT:
+               case StatData.ITEMDATA_31_STAT:
+               case StatData.ITEMDATA_32_STAT:
+               case StatData.ITEMDATA_33_STAT:
+               case StatData.ITEMDATA_34_STAT:
+               case StatData.ITEMDATA_35_STAT:
+               case StatData.ITEMDATA_36_STAT:
                     go.itemDatas_[stat.statType_ - StatData.ITEMDATA_0_STAT] = value;
                     continue;
                default:

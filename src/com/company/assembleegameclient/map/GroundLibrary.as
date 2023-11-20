@@ -53,6 +53,7 @@ package com.company.assembleegameclient.map
       
       public static function getBitmapData(type:int, id:int = 0) : BitmapData
       {
+         if(typeToTextureData_[type] == null) trace("Unknown Obj: ", type, id);
          return typeToTextureData_[type].getTexture(id);
       }
       

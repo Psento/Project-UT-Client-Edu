@@ -45,7 +45,7 @@ package com.company.assembleegameclient.ui.panels.itemgrids.itemtiles
                bd = AssetLibrary.getImageFromSet("lofiObj5",48);
                break;
             case ItemConstants.DAGGER_TYPE:
-               bd = AssetLibrary.getImageFromSet("lofiObj5",96);
+               bd = AssetLibrary.getImageFromSet("Assets_StarterGear",0x03);
                break;
             case ItemConstants.BOW_TYPE:
                bd = AssetLibrary.getImageFromSet("lofiObj5",80);
@@ -57,7 +57,7 @@ package com.company.assembleegameclient.ui.panels.itemgrids.itemtiles
                bd = AssetLibrary.getImageFromSet("lofiObj6",112);
                break;
             case ItemConstants.LEATHER_TYPE:
-               bd = AssetLibrary.getImageFromSet("lofiObj5",0);
+               bd = AssetLibrary.getImageFromSet("Assets_StarterGear",0xae);
                break;
             case ItemConstants.PLATE_TYPE:
                bd = AssetLibrary.getImageFromSet("lofiObj5",32);
@@ -66,7 +66,7 @@ package com.company.assembleegameclient.ui.panels.itemgrids.itemtiles
                bd = AssetLibrary.getImageFromSet("lofiObj5",64);
                break;
             case ItemConstants.RING_TYPE:
-               bd = AssetLibrary.getImageFromSet("lofiObj",44);
+               bd = AssetLibrary.getImageFromSet("Assets_StarterGear",0x9f);
                break;
             case ItemConstants.SPELL_TYPE:
                bd = AssetLibrary.getImageFromSet("lofiObj6",64);
@@ -75,7 +75,7 @@ package com.company.assembleegameclient.ui.panels.itemgrids.itemtiles
                bd = AssetLibrary.getImageFromSet("lofiObj6",160);
                break;
             case ItemConstants.CLOAK_TYPE:
-               bd = AssetLibrary.getImageFromSet("lofiObj6",32);
+               bd = AssetLibrary.getImageFromSet("Assets_StarterGear",0x0a);
                break;
             case ItemConstants.ROBE_TYPE:
                bd = AssetLibrary.getImageFromSet("lofiObj5",16);

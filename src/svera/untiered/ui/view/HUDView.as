@@ -5,6 +5,7 @@ import com.company.assembleegameclient.objects.Player;
 import com.company.assembleegameclient.ui.TradePanel;
 import com.company.assembleegameclient.ui.panels.InteractPanel;
 import com.company.assembleegameclient.ui.panels.itemgrids.EquippedGrid;
+import com.company.assembleegameclient.ui.panels.itemgrids.InventoryGrid;
 import com.company.util.GraphicsUtil;
 import com.company.util.SpriteUtil;
 import flash.display.GraphicsPath;
@@ -14,7 +15,8 @@ import flash.display.Sprite;
 import flash.events.Event;
 import flash.events.MouseEvent;
 import flash.geom.Point;
-import svera.untiered.game.view.components.TabStripView;
+
+import svera.untiered.game.view.components.StatsView;
 import svera.untiered.hud.HUD_Overlay;
 import svera.untiered.messaging.impl.incoming.TradeAccepted;
 import svera.untiered.messaging.impl.incoming.TradeChanged;
@@ -26,25 +28,19 @@ public class HUDView extends Sprite
 
    private const MAP_POSITION:Point = new Point(204,4);
 
-   private const CHARACTER_DETAIL_PANEL_POSITION:Point = new Point(200,198);
-
-   //private const EQUIPMENT_INVENTORY_POSITION:Point = new Point(0,154);
-
-   //private const STAT_METERS_POSITION:Point = new Point(-88,548);
-
-   private const TAB_STRIP_POSITION:Point = new Point(7,154);
-
    private const INTERACT_PANEL_POSITION:Point = new Point(0,500);
 
    private var hudOverlay:HUD_Overlay;
 
    private var miniMap:MiniMap;
 
-   private var equippedGrid:EquippedGrid;
+   public var equippedGrid:EquippedGrid;
 
-   private var tabStrip:TabStripView;
+   public var inventoryGrid:InventoryGrid;
 
    private var statMeters:StatMetersView;
+
+   public var statsView:StatsView;
 
    private var characterDetails:CharacterDetailsView;
 
@@ -52,11 +48,12 @@ public class HUDView extends Sprite
 
    public var tradePanel:TradePanel;
 
-   private var equippedGridBG:Sprite;
+   public static var instance:HUDView;
 
    public function HUDView()
    {
       super();
+      instance = this;
       this.createAssets();
       this.addAssets();
       this.positionAssets();
@@ -66,7 +63,6 @@ public class HUDView extends Sprite
    {
       this.hudOverlay = new HUD_Overlay();
       this.miniMap = new MiniMap(192,192);
-      this.tabStrip = new TabStripView(186,153);
       this.characterDetails = new CharacterDetailsView();
       this.statMeters = new StatMetersView();
    }
@@ -75,7 +71,6 @@ public class HUDView extends Sprite
    {
       addChild(this.hudOverlay);
       addChild(this.miniMap);
-      addChild(this.tabStrip);
       addChild(this.characterDetails);
       addChild(this.statMeters);
    }
@@ -86,7 +81,6 @@ public class HUDView extends Sprite
       this.hudOverlay.x -= 400;
       this.miniMap.x = this.MAP_POSITION.x;
       this.miniMap.y = this.MAP_POSITION.y;
-      this.tabStrip.y = 154;
       this.characterDetails.x -= 211;
       this.characterDetails.y = 504;
       this.statMeters.x -= 176 / 2;
@@ -96,19 +90,21 @@ public class HUDView extends Sprite
    public function setPlayerDependentAssets(gs:GameSprite) : void
    {
       var player:Player = gs.map.player_;
+      this.inventoryGrid = new InventoryGrid(player,player,4);
+      this.inventoryGrid.x = -this.inventoryGrid.width/2 - 20;
+      this.inventoryGrid.y = stage.stageHeight / 2 - this.inventoryGrid.height / 2;
+      this.inventoryGrid.visible = false;
+      addChild(this.inventoryGrid);
       this.equippedGrid = new EquippedGrid(player,player.slotTypes_,player);
-      this.equippedGrid.x -= this.equippedGrid.width + 3;
-      this.equippedGrid.y = 154;
-      this.equippedGridBG = new Sprite();
-      this.equippedGridBG.x = this.equippedGrid.x - 3;
-      this.equippedGridBG.y = this.equippedGrid.y - 3;
-      var fill_:GraphicsSolidFill = new GraphicsSolidFill(6776679,1);
-      var path_:GraphicsPath = new GraphicsPath(new Vector.<int>(),new Vector.<Number>());
-      var graphicsData_:Vector.<IGraphicsData> = new <IGraphicsData>[fill_,path_,GraphicsUtil.END_FILL];
-      GraphicsUtil.drawCutEdgeRect(0,0,178,46,6,[1,1,1,1],path_);
-      this.equippedGridBG.graphics.drawGraphicsData(graphicsData_);
-      addChild(this.equippedGridBG);
+      this.equippedGrid.x = this.inventoryGrid.x + this.inventoryGrid.width + 2;
+      this.equippedGrid.y = this.inventoryGrid.y;
+      this.equippedGrid.visible = false;
       addChild(this.equippedGrid);
+      this.statsView = new StatsView(191,45);
+      this.statsView.x = this.inventoryGrid.x - 191 - 2;
+      this.statsView.y = this.inventoryGrid.y;
+      this.statsView.visible = false;
+      addChild(this.statsView)
       this.interactPanel = new InteractPanel(gs,player,200,100);
       this.interactPanel.x = this.INTERACT_PANEL_POSITION.x;
       this.interactPanel.y = this.INTERACT_PANEL_POSITION.y;
@@ -139,9 +135,6 @@ public class HUDView extends Sprite
       addChild(this.tradePanel);
       this.characterDetails.visible = false;
       this.statMeters.visible = false;
-      this.tabStrip.visible = false;
-      this.equippedGrid.visible = false;
-      this.equippedGridBG.visible = false;
       this.interactPanel.visible = false;
    }
 
@@ -182,11 +175,28 @@ public class HUDView extends Sprite
          this.tradePanel = null;
          this.characterDetails.visible = true;
          this.statMeters.visible = true;
-         this.tabStrip.visible = true;
-         this.equippedGrid.visible = true;
-         this.equippedGridBG.visible = true;
          this.interactPanel.visible = true;
       }
+   }
+
+   private function OpenInventory():void
+   {
+      this.statsView.visible = true;
+      this.inventoryGrid.visible = true;
+      this.equippedGrid.visible = true;
+   }
+   private function CloseInventory():void
+   {
+      this.statsView.visible = false;
+      this.inventoryGrid.visible = false;
+      this.equippedGrid.visible = false;
+   }
+   public function ToggleInventory():void
+   {
+      if(this.inventoryGrid.visible)
+      {
+         this.CloseInventory();
+      } else this.OpenInventory();
    }
 }
 }

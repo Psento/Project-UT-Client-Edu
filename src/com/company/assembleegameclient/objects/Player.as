@@ -42,7 +42,6 @@ import svera.untiered.game.model.PotionInventoryModel;
 import svera.untiered.game.signals.AddTextLineSignal;
 import svera.untiered.messaging.impl.GameServerConnection;
 import svera.untiered.stage3D.GraphicsFillExtra;
-import svera.untiered.ui.model.TabStripModel;
 
 import org.hamcrest.core.isA;
 

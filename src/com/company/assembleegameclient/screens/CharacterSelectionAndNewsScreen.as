@@ -73,7 +73,7 @@ import svera.untiered.core.model.PlayerModel;
          this.newCharacter = new Signal();
          this.playGame = new Signal();
          super();
-         addChild(new ScreenBase());
+         addChild(new ScreenBase(2));
          addChild(new AccountScreen());
          this.close = new NativeMappedSignal(this.backButton,MouseEvent.CLICK);
          this.showClasses = new NativeMappedSignal(this.classesButton,MouseEvent.CLICK);

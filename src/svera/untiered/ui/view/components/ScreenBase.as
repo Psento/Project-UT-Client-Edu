@@ -5,11 +5,29 @@ package svera.untiered.ui.view.components
 
 public class ScreenBase extends Sprite
    {
-      public function ScreenBase()
+      private var currBackground = new DefaultBackground();
+      public function ScreenBase(newBackground:int = 0)
       {
-         addChild(new Background());
-         //addChild(new DarkLayer());
+         ChangeBackground(newBackground);
          addChild(new SoundIcon());
+      }
+
+      private function ChangeBackground(newBackground:int = 0):void
+      {
+         if(contains(currBackground))
+            removeChild(currBackground);
+         switch (newBackground) {
+            case 0:
+               currBackground = new DefaultBackground();
+               break;
+            case 1:
+               currBackground = new HomescreenBackground();
+               break;
+            case 2:
+               currBackground = new CharSelectionBackground();
+               break;
+         }
+         addChild(currBackground);
       }
    }
 }

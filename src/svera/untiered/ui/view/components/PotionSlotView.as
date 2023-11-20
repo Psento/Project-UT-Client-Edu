@@ -25,11 +25,7 @@ package svera.untiered.ui.view.components
    
    public class PotionSlotView extends Sprite
    {
-      public static var BUTTON_WIDTH:int = 84;
       private static var BUTTON_HEIGHT:int = 24;
-      private static var SMALL_SIZE:int = 4;
-      private static var CENTER_ICON_X:int = 13;
-      private static var LEFT_ICON_X:int = -6;
       private static const DOUBLE_CLICK_PAUSE:uint = 250;
       //private static const DRAG_DIST:int = 3;
       
@@ -41,15 +37,9 @@ package svera.untiered.ui.view.components
       private var lightGrayFill:GraphicsSolidFill;
       private var midGrayFill:GraphicsSolidFill;
       private var darkGrayFill:GraphicsSolidFill;
-      private var outerPath:GraphicsPath;
-      private var innerPath:GraphicsPath;
-      private var useGraphicsData:Vector.<IGraphicsData>;
-      private var buyOuterGraphicsData:Vector.<IGraphicsData>;
-      private var buyInnerGraphicsData:Vector.<IGraphicsData>;
       private var text:SimpleText;
       //private var potionIconDraggableSprite:Sprite;
       private var potionIcon:Bitmap;
-      private var bg:Sprite;
       private var grayscaleMatrix:ColorMatrixFilter;
       private var available:Boolean = false;
       private var doubleClickTimer:Timer;
@@ -58,30 +48,18 @@ package svera.untiered.ui.view.components
       //private var isDragging:Boolean;
       private var showPots:Boolean;
       
-      public function PotionSlotView(cuts:Array, position:int)
+      public function PotionSlotView(position:int)
       {
          this.lightGrayFill = new GraphicsSolidFill(5526612,1);
          this.midGrayFill = new GraphicsSolidFill(4078909,1);
          this.darkGrayFill = new GraphicsSolidFill(2368034,1);
-         this.outerPath = new GraphicsPath(new Vector.<int>(),new Vector.<Number>());
-         this.innerPath = new GraphicsPath(new Vector.<int>(),new Vector.<Number>());
-         this.useGraphicsData = new <IGraphicsData>[this.lightGrayFill,this.outerPath,GraphicsUtil.END_FILL];
-         this.buyOuterGraphicsData = new <IGraphicsData>[this.midGrayFill,this.outerPath,GraphicsUtil.END_FILL];
-         this.buyInnerGraphicsData = new <IGraphicsData>[this.darkGrayFill,this.innerPath,GraphicsUtil.END_FILL];
          super();
          mouseChildren = false;
          this.position = position;
          this.grayscaleMatrix = new ColorMatrixFilter(MoreColorUtil.greyscaleFilterMatrix);
-         this.text = new SimpleText(13,16777215,false,BUTTON_HEIGHT,BUTTON_WIDTH);
+         this.text = new SimpleText(8,16777215,false,BUTTON_HEIGHT,BUTTON_HEIGHT);
          this.text.filters = [new DropShadowFilter(0,0,0,1,4,4,2)];
-         this.text.y = 2;
-         this.bg = new Sprite();
-         GraphicsUtil.clearPath(this.outerPath);
-         GraphicsUtil.drawCutEdgeRect(0,0,BUTTON_WIDTH,BUTTON_HEIGHT,4,cuts,this.outerPath);
-         GraphicsUtil.drawCutEdgeRect(2,2,BUTTON_WIDTH - SMALL_SIZE,BUTTON_HEIGHT - SMALL_SIZE,4,cuts,this.innerPath);
-         this.bg.graphics.drawGraphicsData(this.buyOuterGraphicsData);
-         this.bg.graphics.drawGraphicsData(this.buyInnerGraphicsData);
-         addChild(this.bg);
+         this.text.y = 4;
          addChild(this.text);
          //this.potionIconDraggableSprite = new Sprite();
          this.doubleClickTimer = new Timer(DOUBLE_CLICK_PAUSE,1);
@@ -97,25 +75,9 @@ package svera.untiered.ui.view.components
       
       public function setData(potions:int, available:Boolean, objectType:int = -1) : void
       {
-         var iconX:int = 0;
-         var iconBD:BitmapData = null;
-         var potionIconBig:Bitmap = null;
          if(objectType != -1)
          {
             this.objectType = objectType;
-            if(this.potionIcon != null)
-            {
-               removeChild(this.potionIcon);
-            }
-            iconBD = ObjectLibrary.getRedrawnTextureFromType(objectType,55,false);
-            this.potionIcon = new Bitmap(iconBD);
-            this.potionIcon.y = -11;
-            addChild(this.potionIcon);
-            iconBD = ObjectLibrary.getRedrawnTextureFromType(objectType,80,true);
-            potionIconBig = new Bitmap(iconBD);
-            potionIconBig.x = potionIconBig.x - 30;
-            potionIconBig.y = potionIconBig.y - 30;
-            //this.potionIconDraggableSprite.addChild(potionIconBig);
          }
          this.available = available;
          filters = available?[]:[this.grayscaleMatrix];
@@ -124,24 +86,13 @@ package svera.untiered.ui.view.components
          {
             this.text.text = String(potions);
             this.text.textColor = 16777215;
-            iconX = CENTER_ICON_X;
-            this.bg.graphics.clear();
-            this.bg.graphics.drawGraphicsData(this.useGraphicsData);
-            this.text.x = BUTTON_WIDTH / 2 + 5;
+            this.text.x = 5;
          }
          else
          {
             this.text.text = "0";
             this.text.textColor = 11184810;
-            iconX = CENTER_ICON_X;
-            this.bg.graphics.clear();
-            this.bg.graphics.drawGraphicsData(this.buyOuterGraphicsData);
-            this.bg.graphics.drawGraphicsData(this.buyInnerGraphicsData);
-            this.text.x = BUTTON_WIDTH / 2 + 5;
-         }
-         if(this.potionIcon)
-         {
-            this.potionIcon.x = iconX;
+            this.text.x = 5;
          }
       }
       

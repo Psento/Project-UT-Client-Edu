@@ -68,7 +68,7 @@ package com.company.assembleegameclient.util
       
       public static function guildFameIcon(size:int) : BitmapData
       {
-         var icon:BitmapData = AssetLibrary.getImageFromSet("lofiObj3",226);
+         var icon:BitmapData = AssetLibrary.getImageFromSet("Assets_Currency_Icons16x16",0);
          return TextureRedrawer.redraw(icon,size,true,0,true);
       }
       

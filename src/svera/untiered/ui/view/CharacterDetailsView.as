@@ -16,12 +16,15 @@ import flash.display.Sprite;
    import flash.filters.DropShadowFilter;
    import org.osflash.signals.Signal;
    import org.osflash.signals.natives.NativeSignal;
-   
-   public class CharacterDetailsView extends Sprite
+
+import svera.untiered.ui.view.components.PotionSlotView;
+
+public class CharacterDetailsView extends Sprite
    {
       
       public static const NEXUS_BUTTON:String = "NEXUS_BUTTON";
-       
+
+      private var potionsView:PotionSlotView;
       
       private var portrait_:Bitmap;
       
@@ -81,6 +84,14 @@ import flash.display.Sprite;
          this.consumableTwoText_.text = KeyCodes.CharCodeStrings[keyCodeBox.keyCode_];
          this.consumableTwoText_.updateMetrics();
          addChild(this.consumableTwoText_);
+         potionsView = new PotionSlotView(0);
+         potionsView.x = consumableOneText_.x;
+         potionsView.y = consumableOneText_.y;
+         addChild(potionsView);
+         potionsView = new PotionSlotView(1);
+         potionsView.x = consumableTwoText_.x;
+         potionsView.y = consumableTwoText_.y;
+         addChild(potionsView);
       }
       
       public function update(player:Player) : void

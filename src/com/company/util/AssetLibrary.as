@@ -81,6 +81,7 @@ package com.company.util
       public static function getImageFromSet(name:String, id:int) : BitmapData
       {
          var imageSet:ImageSet = imageSets_[name];
+         if(name == null || isNaN(id)) trace("Unknown File: ", name, id);
          return imageSet.images_[id];
       }
       

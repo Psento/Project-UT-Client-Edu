@@ -28,11 +28,11 @@ import svera.untiered.game.signals.SetTextBoxVisibilitySignal;
 import svera.untiered.game.signals.UsePotionSignal;
 import svera.untiered.messaging.impl.GameServerConnection;
 import svera.untiered.minimap.control.MiniMapZoomSignal;
-import svera.untiered.ui.model.TabStripModel;
-import svera.untiered.ui.signals.StatsTabHotKeyInputSignal;
 
 import net.hires.debug.Stats;
 import org.swiftsuspenders.Injector;
+
+import svera.untiered.ui.view.HUDView;
 
 public class MapUserInput
 {
@@ -51,11 +51,10 @@ public class MapUserInput
    private var enablePlayerInput_:Boolean = true;
    private var addTextLine:AddTextLineSignal;
    private var setTextBoxVisibility:SetTextBoxVisibilitySignal;
-   private var statsTabHotKeyInputSignal:StatsTabHotKeyInputSignal;
    private var miniMapZoom:MiniMapZoomSignal;
    private var usePotionSignal:UsePotionSignal;
    private var potionInventoryModel:PotionInventoryModel;
-   private var tabStripModel:TabStripModel;
+   private var hudView:HUDView;
    private var layers:Layers;
    private var nexusHeld = -1;
 
@@ -70,11 +69,9 @@ public class MapUserInput
       var injector:Injector = StaticInjectorContext.getInjector();
       this.addTextLine = injector.getInstance(AddTextLineSignal);
       this.setTextBoxVisibility = injector.getInstance(SetTextBoxVisibilitySignal);
-      this.statsTabHotKeyInputSignal = injector.getInstance(StatsTabHotKeyInputSignal);
       this.miniMapZoom = injector.getInstance(MiniMapZoomSignal);
       this.usePotionSignal = injector.getInstance(UsePotionSignal);
       this.potionInventoryModel = injector.getInstance(PotionInventoryModel);
-      this.tabStripModel = injector.getInstance(TabStripModel);
       this.layers = injector.getInstance(Layers);
       this.gs_.map.signalRenderSwitch.add(this.onRenderSwitch);
    }
@@ -374,6 +371,9 @@ public class MapUserInput
          case Parameters.data_.autofireToggle:
             this.autofire_ = !this.autofire_;
             break;
+         case Parameters.data_.inventoryToggle:
+               HUDView.instance.ToggleInventory();
+            break;
          case Parameters.data_.useEquipInvSlot1:
             this.useEquipItem(4);
             break;
@@ -421,8 +421,8 @@ public class MapUserInput
             break;
          case Parameters.data_.escapeToNexus:
          case Parameters.data_.escapeToNexus2: // Make this serverside communicated
-            /*nexusHeld++;
-            trace("Nexus being held: ", nexusHeld);
+            nexusHeld++;
+            /*trace("Nexus being held: ", nexusHeld);
             var gif:GIF = new Recallingbase();
             var animationReplaying:Boolean = false;
             if(gs_.contains(gif))
@@ -457,9 +457,6 @@ public class MapUserInput
          case Parameters.data_.toggleCentering:
             Parameters.data_.centerOnPlayer = !Parameters.data_.centerOnPlayer;
             Parameters.save();
-            break;
-         case Parameters.data_.switchTabs:
-            this.statsTabHotKeyInputSignal.dispatch();
             break;
          case Parameters.data_.toggleFullscreenMode:
             //doing it like this is better because then there's no additional memory allocated to the variable, and it works if say you go fullscreen, then press ESC, and go fullscreen again.

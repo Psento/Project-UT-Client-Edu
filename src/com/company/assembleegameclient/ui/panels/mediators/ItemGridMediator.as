@@ -20,10 +20,8 @@ import svera.untiered.core.model.MapModel;
 import svera.untiered.core.model.PlayerModel;
 import svera.untiered.core.signals.ShowTooltipSignal;
 import svera.untiered.game.model.PotionInventoryModel;
-import svera.untiered.game.view.components.TabStripView;
 import svera.untiered.messaging.impl.GameServerConnection;
 import svera.untiered.ui.model.HUDModel;
-import svera.untiered.ui.model.TabStripModel;
 import robotlegs.bender.bundles.mvcs.Mediator;
 
 public class ItemGridMediator extends Mediator
@@ -48,9 +46,6 @@ public class ItemGridMediator extends Mediator
    [Inject]
    public var showToolTip:ShowTooltipSignal
 
-   [Inject]
-   public var tabStripModel:TabStripModel;
-
    public function ItemGridMediator()
    {
       super();
@@ -61,7 +56,6 @@ public class ItemGridMediator extends Mediator
       this.view.addEventListener(ItemTileEvent.ITEM_MOVE,this.onTileMove);
       this.view.addEventListener(ItemTileEvent.ITEM_SHIFT_CLICK,this.onShiftClick);
       this.view.addEventListener(ItemTileEvent.ITEM_DOUBLE_CLICK,this.onDoubleClick);
-      this.view.addEventListener(ItemTileEvent.ITEM_CTRL_CLICK,this.onCtrlClick);
       this.view.addToolTip.add(this.onAddToolTip);
    }
 
@@ -77,10 +71,10 @@ public class ItemGridMediator extends Mediator
    private function onTileMove(e:ItemTileEvent) : void
    {
       var targetTile:InteractiveItemTile = null;
-      var tsv:TabStripView = null;
+      var inventoryGrid:InventoryGrid = null;
       var slot:int = 0;
       var sourceTile:InteractiveItemTile = e.tile;
-      var target:* = DisplayHierarchy.getParentWithTypeArray(sourceTile.getDropTarget(),TabStripView,InteractiveItemTile,Map);
+      var target:* = DisplayHierarchy.getParentWithTypeArray(sourceTile.getDropTarget(),inventoryGrid,InteractiveItemTile,Map);
       if(target is InteractiveItemTile)
       {
          targetTile = target as InteractiveItemTile;
@@ -93,9 +87,9 @@ public class ItemGridMediator extends Mediator
       {
          this.dropItem(sourceTile);
       }
-      else if(target is TabStripView)
+      else if(target is InventoryGrid)
       {
-         tsv = target as TabStripView;
+         inventoryGrid = target as InventoryGrid;
          slot = sourceTile.ownerGrid.curPlayer.nextAvailableInventorySlot();
          if(slot != -1)
          {
@@ -221,22 +215,6 @@ public class ItemGridMediator extends Mediator
       if(tile.ownerGrid is InventoryGrid || tile.ownerGrid is ContainerGrid)
       {
          GameServerConnection.instance.useItem_new(tile.ownerGrid.owner,tile.tileId);
-      }
-   }
-
-   private function onCtrlClick(e:ItemTileEvent) : void
-   {
-      var tile:InteractiveItemTile = e.tile;
-      var slot:int = 0;
-      if(tile.ownerGrid is InventoryGrid)
-      {
-         slot = tile.ownerGrid.curPlayer.swapInventoryIndex(this.tabStripModel.currentSelection);
-         if(slot != -1)
-         {
-            GameServerConnection.instance.invSwap(this.view.curPlayer,tile.ownerGrid.owner,tile.tileId,this.view.curPlayer,slot);
-            tile.setItem(-1, -1);
-            tile.updateUseability(this.view.curPlayer);
-         }
       }
    }
 

@@ -169,7 +169,7 @@ public class ObjectLibrary
          var texture:BitmapData = Boolean(textureData)?textureData.getTexture():null;
          if(texture == null)
          {
-            texture = AssetLibrary.getImageFromSet("lofiObj3",255);
+            texture = AssetLibrary.getImageFromSet("Assets_Overworld_NotSpecific_Environment8x8",1);
          }
          var mask:BitmapData = Boolean(textureData)?textureData.mask_:null;
          if(mask == null)

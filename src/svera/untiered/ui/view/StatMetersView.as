@@ -4,10 +4,10 @@ package svera.untiered.ui.view
    import com.company.assembleegameclient.ui.StatusBar;
    import flash.display.Sprite;
    import flash.events.Event;
-   
-   public class StatMetersView extends Sprite
+import flash.text.TextFormatAlign;
+
+public class StatMetersView extends Sprite
    {
-       
       
       private var expBar_:StatusBar;
       

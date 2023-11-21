@@ -86,7 +86,7 @@ public class StatusBar extends Sprite
          this.boostText_ = new SimpleText(14,this.textColor_,false,0,0);
          this.boostText_.setBold(true);
          this.boostText_.alpha = 0.6;
-         this.boostText_.y = -3;
+         this.boostText_.y = this.valueText_.y;
          this.boostText_.filters = [new DropShadowFilter(0,0,0,1.0,1.5,1.5,255)];
       }
       
@@ -154,11 +154,11 @@ public class StatusBar extends Sprite
          this.colorSprite.graphics.endFill();
          if(this.max_ > 0)
          {
-            this.valueText_.text = "" + this.val_ + "/" + this.max_;
+            this.valueText_.text = "" + NumberFormat(this.val_) + "/" + NumberFormat(this.max_);
          }
          else
          {
-            this.valueText_.text = "" + this.val_;
+            this.valueText_.text = "" + NumberFormat(this.val_);
          }
          this.valueText_.updateMetrics();
          if(!contains(this.valueText_))
@@ -167,7 +167,7 @@ public class StatusBar extends Sprite
          }
          if(this.boost_ != 0)
          {
-            this.boostText_.text = " (" + (this.boost_ > 0?"+":"") + this.boost_.toString() + ")";
+            this.boostText_.text = " (" + (this.boost_ > 0?"+":"") + NumberFormat(this.boost_) + ")";
             this.boostText_.updateMetrics();
             this.valueText_.x = this.w_ / 2 - (this.valueText_.width + this.boostText_.width) / 2;
             this.boostText_.x = this.valueText_.x + this.valueText_.width;
@@ -184,6 +184,20 @@ public class StatusBar extends Sprite
                removeChild(this.boostText_);
             }
          }
+      }
+      private static function NumberFormat(number:int):String {
+         var suffix:Array = ["K", "M", "B", "T"];
+         var size:int = (number != 0) ? logx(number) : 0;
+         if(size >= 3) {
+            while (size % 3 != 0)
+               size = size - 1;
+         }
+         var notation:Number = Math.pow(10, size);
+         var result:* = (size >= 3) ? +(Math.round((number / notation) * 100) / 100.0) + suffix[(size / 3) - 1] : +number + "";
+         return result;
+      }
+      private static function logx(val:Number, base:Number = 10):Number {
+         return Math.log(val) / Math.log(base);
       }
    }
 }

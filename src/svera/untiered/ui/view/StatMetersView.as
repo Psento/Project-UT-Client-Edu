@@ -73,23 +73,27 @@ public class StatMetersView extends Sprite
          }
          this.expBar_.labelText_.x = -19;
          this.expBar_.labelText_.y = -2;
-         this.expBar_.valueText_.y = 0;
-         this.expBar_.boostText_.y = 0;
+         this.expBar_.valueText_.x = 7;
+         this.expBar_.valueText_.y = 2;
+         this.expBar_.valueText_.setSize(10);
+         this.expBar_.boostText_.y = this.expBar_.valueText_.y;
+         this.expBar_.boostText_.x = 7;
+         this.expBar_.boostText_.setSize(10);
          this.spBar_.labelText_.y = 0;
          this.spBar_.valueText_.y = 0;
-         this.spBar_.boostText_.y = 0;
+         this.spBar_.boostText_.y = this.spBar_.valueText_.y;
          this.spBar_.valueText_.textColor = 16777215;
          this.spBar_.boostText_.textColor = 16777215;
          this.spBar_.visible = player.sp_ > 0;
          this.hpBar_.labelText_.y = 0;
          this.hpBar_.valueText_.y = 0;
-         this.hpBar_.boostText_.y = 0;
+         this.hpBar_.boostText_.y = this.hpBar_.valueText_.y;
          this.hpBar_.labelText_.visible = !(player.sp_ > 0);
          this.hpBar_.valueText_.visible = !(player.sp_ > 0);
          this.hpBar_.boostText_.visible = !(player.sp_ > 0);
          this.rpBar_.labelText_.y = 0;
          this.rpBar_.valueText_.y = 0;
-         this.rpBar_.boostText_.y = 0;
+         this.rpBar_.boostText_.y = this.rpBar_.valueText_.y;
 
          this.spBar_.draw(player.sp_,player.maxSP_,player.maxSPBoost_,player.maxSPMax_);
          this.hpBar_.draw(player.hp_,player.maxHP_,player.maxHPBoost_,player.maxHPMax_);

@@ -15,6 +15,18 @@
       </Texture>
       <Texture>
         <File>Assets_Overworld_FearedShallows_Environment8x8</File>
+        <Index>0x40</Index>
+      </Texture>
+      <Texture>
+        <File>Assets_Overworld_FearedShallows_Environment8x8</File>
+        <Index>0x40</Index>
+      </Texture>
+      <Texture>
+        <File>Assets_Overworld_FearedShallows_Environment8x8</File>
+        <Index>0x40</Index>
+      </Texture>
+      <Texture>
+        <File>Assets_Overworld_FearedShallows_Environment8x8</File>
         <Index>0x41</Index>
       </Texture>
       <Texture>
@@ -84,8 +96,19 @@
   <!-- #endregion -->
   <!-- #region --> // Feared Shallows
   <Ground type="0x104" id="[Overworld:FearedShallows] Dirt">
-    <SameTypeEdgeMode/>
     <RandomTexture>
+      <Texture>
+        <File>Assets_Overworld_FearedShallows_Environment8x8</File>
+        <Index>0x15</Index>
+      </Texture>
+      <Texture>
+        <File>Assets_Overworld_FearedShallows_Environment8x8</File>
+        <Index>0x15</Index>
+      </Texture>
+      <Texture>
+        <File>Assets_Overworld_FearedShallows_Environment8x8</File>
+        <Index>0x15</Index>
+      </Texture>
       <Texture>
         <File>Assets_Overworld_FearedShallows_Environment8x8</File>
         <Index>0x15</Index>

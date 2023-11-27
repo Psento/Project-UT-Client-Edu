@@ -50,6 +50,7 @@ public class HUDView extends Sprite
 
    public static var instance:HUDView;
 
+
    public function HUDView()
    {
       super();

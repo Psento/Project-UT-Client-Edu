@@ -41,12 +41,12 @@ package com.company.assembleegameclient.ui.tooltip
          super(3552822,1,16777215,1);
          var animatedChar:AnimatedChar = AnimatedChars.getAnimatedChar(String(playerXML.AnimatedTexture.File),int(playerXML.AnimatedTexture.Index));
          var image:MaskedImage = animatedChar.imageFromDir(AnimatedChar.RIGHT,AnimatedChar.STAND,0);
-         var size:int = 4 / image.width() * 100;
+         var size:int = 16 * 3;
          var bd:BitmapData = TextureRedrawer.redraw(image.image_,size,true,0);
          this.portrait_ = new Bitmap();
          this.portrait_.bitmapData = bd;
-         this.portrait_.x = -4;
-         this.portrait_.y = -4;
+         this.portrait_.x = -16;
+         this.portrait_.y = -16;
          addChild(this.portrait_);
          this.nameText_ = new SimpleText(13,11776947,false,0,0);
          this.nameText_.setBold(true);

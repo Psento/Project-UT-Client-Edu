@@ -35,7 +35,7 @@ package svera.untiered.ui.view
       
       override public function initialize() : void
       {
-         this.view.init(this.hudModel.getPlayerName(),this.hudModel.getButtonType());
+         this.view.init();
          this.updateHUD.addOnce(this.onUpdateHUD);
          this.updateHUD.add(this.onDraw);
          this.nameChanged.add(this.onNameChange);
@@ -45,17 +45,6 @@ package svera.untiered.ui.view
       {
          this.updateHUD.remove(this.onDraw);
          this.nameChanged.remove(this.onNameChange);
-      }
-      
-      private function onGotoNexus() : void
-      {
-         this.hudModel.gameSprite.gsc_.escape();
-      }
-      
-      private function onGotoOptions() : void
-      {
-         this.hudModel.gameSprite.mui_.clearInput();
-         this.hudModel.gameSprite.addChild(new Options(this.hudModel.gameSprite));
       }
       
       private function onUpdateHUD(player:Player) : void

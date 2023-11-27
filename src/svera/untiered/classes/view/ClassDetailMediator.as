@@ -78,7 +78,7 @@ package svera.untiered.classes.view
       
       private function delayedFocusSet(e:TimerEvent) : void
       {
-         var animation:Animation = this.skins[this.nextSkin.id] = this.skins[this.nextSkin.id] || this.factory.makeWalkingIcon(this.nextSkin.template,100);
+         var animation:Animation = this.skins[this.nextSkin.id] = this.skins[this.nextSkin.id] || this.factory.makeWalkingIcon(this.nextSkin.template,200);
          this.view.setWalkingAnimation(animation);
       }
       

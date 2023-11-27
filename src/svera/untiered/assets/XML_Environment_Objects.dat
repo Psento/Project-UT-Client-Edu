@@ -62,7 +62,7 @@
   <Object type="0x01c9" id="Sign">
     <Class>Sign</Class>
     <Texture>
-      <File>Assets_Overworld_NotSpecific_Environment8x8</File>
+      <File>Assets_Overworld_Environment_NotSpecific8x8</File>
       <Index>0x06</Index>
     </Texture>
     <Size>20</Size>
@@ -191,31 +191,31 @@
   <Object type="0xe11" id="[Overworld:FearedShallows] Water Ripple">
     <Class>GameObject</Class>
     <Texture>
-      <File>Assets_Overworld_FearedShallows_Environment8x8</File>
+      <File>Assets_Overworld_Environment_FearedShallows8x8</File>
       <Index>0x08</Index>
     </Texture>
     <Animation prob="1" period="1.2">
       <Frame time="0.4">
         <Texture>
-          <File>Assets_Overworld_FearedShallows_Environment8x8</File>
+          <File>Assets_Overworld_Environment_FearedShallows8x8</File>
           <Index>0x09</Index>
         </Texture>
       </Frame>
       <Frame time="0.4">
         <Texture>
-          <File>Assets_Overworld_FearedShallows_Environment8x8</File>
+          <File>Assets_Overworld_Environment_FearedShallows8x8</File>
           <Index>0x0a</Index>
         </Texture>
       </Frame>
       <Frame time="0.2">
         <Texture>
-          <File>Assets_Overworld_FearedShallows_Environment8x8</File>
+          <File>Assets_Overworld_Environment_FearedShallows8x8</File>
           <Index>0x0b</Index>
         </Texture>
       </Frame>
       <Frame time="0.2">
         <Texture>
-          <File>Assets_Overworld_FearedShallows_Environment8x8</File>
+          <File>Assets_Overworld_Environment_FearedShallows8x8</File>
           <Index>0x08</Index>
         </Texture>
       </Frame>
@@ -227,23 +227,23 @@
     <Class>GameObject</Class>
     <RandomTexture>
       <Texture>
-        <File>Assets_Overworld_FearedShallows_Environment8x8</File>
+        <File>Assets_Overworld_Environment_FearedShallows8x8</File>
         <Index>0x0c</Index>
       </Texture>
       <Texture>
-        <File>Assets_Overworld_FearedShallows_Environment8x8</File>
+        <File>Assets_Overworld_Environment_FearedShallows8x8</File>
         <Index>0x0d</Index>
       </Texture>
       <Texture>
-        <File>Assets_Overworld_FearedShallows_Environment8x8</File>
+        <File>Assets_Overworld_Environment_FearedShallows8x8</File>
         <Index>0x0e</Index>
       </Texture>
       <Texture>
-        <File>Assets_Overworld_FearedShallows_Environment8x8</File>
+        <File>Assets_Overworld_Environment_FearedShallows8x8</File>
         <Index>0x0f</Index>
       </Texture>
       <Texture>
-        <File>Assets_Overworld_FearedShallows_Environment8x8</File>
+        <File>Assets_Overworld_Environment_FearedShallows8x8</File>
         <Index>0x18</Index>
       </Texture>
     </RandomTexture>
@@ -256,35 +256,35 @@
     <Class>GameObject</Class>
     <RandomTexture>
       <Texture>
-        <File>Assets_Overworld_FearedShallows_Environment8x8</File>
+        <File>Assets_Overworld_Environment_FearedShallows8x8</File>
         <Index>0x19</Index>
       </Texture>
       <Texture>
-        <File>Assets_Overworld_FearedShallows_Environment8x8</File>
+        <File>Assets_Overworld_Environment_FearedShallows8x8</File>
         <Index>0x1a</Index>
       </Texture>
       <Texture>
-        <File>Assets_Overworld_FearedShallows_Environment8x8</File>
+        <File>Assets_Overworld_Environment_FearedShallows8x8</File>
         <Index>0x1b</Index>
       </Texture>
       <Texture>
-        <File>Assets_Overworld_FearedShallows_Environment8x8</File>
+        <File>Assets_Overworld_Environment_FearedShallows8x8</File>
         <Index>0x1c</Index>
       </Texture>
       <Texture>
-        <File>Assets_Overworld_FearedShallows_Environment16x16</File>
+        <File>Assets_Overworld_Environment_FearedShallows8x8</File>
         <Index>0x00</Index>
       </Texture>
       <Texture>
-        <File>Assets_Overworld_FearedShallows_Environment16x16</File>
+        <File>Assets_Overworld_Environment_FearedShallows8x8</File>
         <Index>0x01</Index>
       </Texture>
       <Texture>
-        <File>Assets_Overworld_FearedShallows_Environment16x16</File>
+        <File>Assets_Overworld_Environment_FearedShallows8x8</File>
         <Index>0x02</Index>
       </Texture>
       <Texture>
-        <File>Assets_Overworld_FearedShallows_Environment16x16</File>
+        <File>Assets_Overworld_Environment_FearedShallows8x8</File>
         <Index>0x03</Index>
       </Texture>
       <Texture>

@@ -886,7 +886,7 @@ public class GameObject extends BasicObject
          if(this.portrait_ == null)
          {
             portraitTexture = this.props_.portrait_ != null?this.props_.portrait_.getTexture():this.texture_;
-            size = 4 / portraitTexture.width * 100;
+            size = portraitTexture.width * 3;
             this.portrait_ = TextureRedrawer.resize(portraitTexture,this.mask_,size,true,this.tex1Id_,this.tex2Id_);
             this.portrait_ = GlowRedrawer.outlineGlow(this.portrait_,0,0);
          }

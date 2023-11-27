@@ -18,8 +18,12 @@ import com.company.util.AssetLibrary;
 import svera.untiered.assets.Assets_Pets16x16;
 import svera.untiered.assets.EmbeddedAssets;
    import svera.untiered.assets.EmbeddedData;
-   
-   public class AssetLoader
+import svera.untiered.assets.Environment.Overworld.Assets_Overworld_Environment_DroughtsPath16x16;
+import svera.untiered.assets.Environment.Overworld.Assets_Overworld_Environment_DroughtsPath8x8;
+import svera.untiered.assets.Environment.Overworld.Assets_Overworld_Environment_Nidavellir16x16;
+import svera.untiered.assets.Environment.Overworld.Assets_Overworld_Environment_Nidavellir8x8;
+
+public class AssetLoader
    {
        
       
@@ -58,10 +62,28 @@ import svera.untiered.assets.EmbeddedAssets;
          AssetLibrary.addImageSet("Assets_Foundry_Environment32x32", new EmbeddedAssets.Assets_Foundry_Environment32x32Embed_().bitmapData, 32, 32);
          AssetLibrary.addImageSet("Assets_Tavern_Environment8x8", new EmbeddedAssets.Assets_Tavern_Environment8x8Embed_().bitmapData, 8, 8);
          AssetLibrary.addImageSet("Assets_Vault_Environment8x8", new EmbeddedAssets.Assets_Vault_Environment8x8Embed_().bitmapData, 8, 8);
-         AssetLibrary.addImageSet("Assets_Overworld_NotSpecific_Environment8x8",new EmbeddedAssets.Assets_Overworld_NotSpecific_Environment8x8Embed_().bitmapData,8,8);
-         AssetLibrary.addImageSet("Assets_Overworld_FearedShallows_Environment8x8",new EmbeddedAssets.Assets_Overworld_FearedShallows_Environment8x8Embed_().bitmapData,8,8);
-         AssetLibrary.addImageSet("Assets_Overworld_FearedShallows_Environment16x16",new EmbeddedAssets.Assets_Overworld_FearedShallows_Environment16x16Embed_().bitmapData,16,16);
-         AssetLibrary.addImageSet("Assets_Overworld_FearedShallows_Environment32x32",new EmbeddedAssets.Assets_Overworld_FearedShallows_Environment16x16Embed_().bitmapData,32,32);
+         AssetLibrary.addImageSet("Assets_Overworld_NotSpecific_Environment8x8",new EmbeddedAssets.Assets_Overworld_Environment_NotSpecific8x8Embed_().bitmapData,8,8);
+         AssetLibrary.addImageSet("Assets_Overworld_Environment_FearedShallows8x8",new EmbeddedAssets.Assets_Overworld_Environment_FearedShallows8x8Embed_().bitmapData,8,8);
+         AssetLibrary.addImageSet("Assets_Overworld_Environment_FearedShallows16x16",new EmbeddedAssets.Assets_Overworld_Environment_FearedShallows16x16Embed_().bitmapData,16,16);
+         AssetLibrary.addImageSet("Assets_Overworld_Environment_FearedShallows32x32",new EmbeddedAssets.Assets_Overworld_Environment_FearedShallows16x16Embed_().bitmapData,32,32);
+         AssetLibrary.addImageSet("Assets_Overworld_Environment_GarnetWoods8x8",new EmbeddedAssets.Assets_Overworld_Environment_GarnetWoods8x8Embed_().bitmapData,8,8);
+         AssetLibrary.addImageSet("Assets_Overworld_Environment_GarnetWoods8x16",new EmbeddedAssets.Assets_Overworld_Environment_GarnetWoods8x16Embed_().bitmapData,8,16);
+         AssetLibrary.addImageSet("Assets_Overworld_Environment_GarnetWoods16x16",new EmbeddedAssets.Assets_Overworld_Environment_GarnetWoods16x16Embed_().bitmapData,16,16);
+         AssetLibrary.addImageSet("Assets_Overworld_Environment_GarnetWoods32x32",new EmbeddedAssets.Assets_Overworld_Environment_GarnetWoods32x32Embed_().bitmapData,32,32);
+         AssetLibrary.addImageSet("Assets_Overworld_Environment_SandstoneValley8x8",new EmbeddedAssets.Assets_Overworld_Environment_SandstoneValley8x8Embed_().bitmapData,8,8);
+         AssetLibrary.addImageSet("Assets_Overworld_Environment_SandstoneValley16x8",new EmbeddedAssets.Assets_Overworld_Environment_SandstoneValley16x8Embed_().bitmapData,16,8);
+         AssetLibrary.addImageSet("Assets_Overworld_Environment_SandstoneValley16x16",new EmbeddedAssets.Assets_Overworld_Environment_SandstoneValley16x16Embed_().bitmapData,16,16);
+         AssetLibrary.addImageSet("Assets_Overworld_Environment_SandstoneValley32x32",new EmbeddedAssets.Assets_Overworld_Environment_SandstoneValley32x32Embed_().bitmapData,32,32);
+         AssetLibrary.addImageSet("Assets_Overworld_Environment_Feltare8x8",new EmbeddedAssets.Assets_Overworld_Environment_Feltare8x8Embed_().bitmapData,8,8);
+         AssetLibrary.addImageSet("Assets_Overworld_Environment_Feltare16x16",new EmbeddedAssets.Assets_Overworld_Environment_Feltare16x16Embed_().bitmapData,16,16);
+         AssetLibrary.addImageSet("Assets_Overworld_Environment_Feltare32x32",new EmbeddedAssets.Assets_Overworld_Environment_Feltare32x32Embed_().bitmapData,32,32);
+         AssetLibrary.addImageSet("Assets_Overworld_Environment_AshenValley8x8",new EmbeddedAssets.Assets_Overworld_Environment_AshenValley8x8Embed_().bitmapData,8,8);
+         AssetLibrary.addImageSet("Assets_Overworld_Environment_AshenValley16x16",new EmbeddedAssets.Assets_Overworld_Environment_AshenValley16x16Embed_().bitmapData,16,16);
+         AssetLibrary.addImageSet("Assets_Overworld_Environment_DroughtsPath8x8",new EmbeddedAssets.Assets_Overworld_Environment_DroughtsPath8x8Embed_().bitmapData,8,8);
+         AssetLibrary.addImageSet("Assets_Overworld_Environment_DroughtsPath16x16",new EmbeddedAssets.Assets_Overworld_Environment_DroughtsPath16x16Embed_().bitmapData,16,16);
+         AssetLibrary.addImageSet("Assets_Overworld_Environment_Nidavellir8x8",new EmbeddedAssets.Assets_Overworld_Environment_Nidavellir8x8Embed_().bitmapData,8,8);
+         AssetLibrary.addImageSet("Assets_Overworld_Environment_Nidavellir16x8",new EmbeddedAssets.Assets_Overworld_Environment_Nidavellir16x8Embed_().bitmapData,8,16);
+         AssetLibrary.addImageSet("Assets_Overworld_Environment_Nidavellir16x16",new EmbeddedAssets.Assets_Overworld_Environment_Nidavellir16x16Embed_().bitmapData,16,16);
          // Equipment
          AssetLibrary.addImageSet("Assets_StarterGear", new EmbeddedAssets.Assets_StarterGearEmbed_().bitmapData, 8, 8);
 

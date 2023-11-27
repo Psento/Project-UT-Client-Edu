@@ -894,7 +894,7 @@ import org.swiftsuspenders.Injector;
          if(portrait_ == null)
          {
             image = animatedChar_.imageFromDir(AnimatedChar.RIGHT,AnimatedChar.STAND,0);
-            size = 4 / image.image_.width * 100;
+            size = image.image_.width * 3;
             portrait_ = TextureRedrawer.resize(image.image_,image.mask_,size,true,tex1Id_,tex2Id_);
             portrait_ = GlowRedrawer.outlineGlow(portrait_,0);
          }

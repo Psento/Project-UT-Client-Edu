@@ -1,16 +1,23 @@
 package svera.untiered.ui.view
 {
-   import com.company.assembleegameclient.objects.Player;
+import com.company.assembleegameclient.game.GameSprite;
+import com.company.assembleegameclient.objects.ObjectLibrary;
+import com.company.assembleegameclient.objects.Player;
 import com.company.assembleegameclient.parameters.Parameters;
 import com.company.assembleegameclient.ui.IconButton;
 import com.company.assembleegameclient.ui.options.KeyCodeBox;
+import com.company.assembleegameclient.util.AnimatedChar;
+import com.company.assembleegameclient.util.MaskedImage;
 import com.company.assembleegameclient.util.TextureRedrawer;
 import com.company.ui.SimpleText;
    import com.company.util.AssetLibrary;
+import com.company.util.GraphicsUtil;
 import com.company.util.KeyCodes;
 
 import flash.display.Bitmap;
 import flash.display.BitmapData;
+import flash.display.GraphicsPath;
+import flash.display.Shape;
 import flash.display.Sprite;
    import flash.events.MouseEvent;
    import flash.filters.DropShadowFilter;
@@ -34,10 +41,27 @@ public class CharacterDetailsView extends Sprite
       private var recallText_:SimpleText;
       private var consumableOneText_:SimpleText;
       private var consumableTwoText_:SimpleText;
-      
-      public function CharacterDetailsView()
-      {
-         this.portrait_ = new Bitmap(null);
+
+      private var portraitMask:Shape;
+      private var content:Sprite;
+      public function CharacterDetailsView() {
+
+         this.content = new Sprite();
+         this.portraitMask = new Shape();
+
+         this.content.graphics.clear();
+         this.content.graphics.beginFill(0,1);
+         this.content.graphics.drawRect(0,0,72,64);
+         this.content.graphics.endFill();
+         this.portraitMask.graphics.clear();
+         this.portraitMask.graphics.beginFill(0,1);
+         this.portraitMask.graphics.drawRect(0,0,72,64);
+         this.portraitMask.graphics.endFill();
+
+         this.content.mask = this.portraitMask;
+         this.content.addChild(this.portraitMask);
+
+         addChild(this.content);
          this.nameText_ = new SimpleText(20,11776947,false,0,0);
          this.recallText_ = new SimpleText(20,11776947,false,0,0);
          this.consumableOneText_ = new SimpleText(10,11776947,false,0,0);
@@ -45,17 +69,9 @@ public class CharacterDetailsView extends Sprite
          super();
       }
       
-      public function init(playerName:String, buttonType:String) : void
+      public function init() : void
       {
-         this.createPortrait();
          this.createHotkeysText();
-      }
-      
-      private function createPortrait() : void
-      {
-         this.portrait_.x = -5;
-         this.portrait_.y = -9;
-         addChild(this.portrait_);
       }
 
       private function createHotkeysText() : void
@@ -96,11 +112,20 @@ public class CharacterDetailsView extends Sprite
       
       public function update(player:Player) : void
       {
-         this.portrait_.bitmapData = player.getPortraitHUD();
       }
 
       public function draw(player:Player) : void
       {
+         if(portrait_ == null)
+         {
+            var bmd:BitmapData = ObjectLibrary.getRedrawnTextureFromType(player.objectType_, 64 * 3,false)
+            this.portrait_ = new Bitmap(bmd);
+            this.portrait_.x = (64 - this.portrait_.width) / 2 + 8;
+            this.portrait_.y = (64 - this.portrait_.height) / 2 - 64/2;
+            this.content.addChild(this.portrait_);
+            this.content.x = 2;
+            this.content.y = 4;
+         }
       }
       
       public function setName(name:String) : void

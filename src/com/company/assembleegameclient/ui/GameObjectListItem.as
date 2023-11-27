@@ -41,8 +41,8 @@ package com.company.assembleegameclient.ui
          this.longVersion_ = longVersion;
          this.color_ = color;
          this.portrait_ = new Bitmap();
-         this.portrait_.x = -4;
-         this.portrait_.y = -4;
+         this.portrait_.x = -16;
+         this.portrait_.y = -16;
          addChild(this.portrait_);
          if(this.longVersion_)
          {

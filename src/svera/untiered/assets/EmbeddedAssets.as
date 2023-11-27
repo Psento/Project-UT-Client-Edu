@@ -1,6 +1,75 @@
 package svera.untiered.assets
 {
-   public class EmbeddedAssets
+import svera.untiered.assets.Entities.Containers.Assets_DroppedContainers8x8;
+import svera.untiered.assets.Entities.Containers.Assets_Foundry_Containers16x16;
+import svera.untiered.assets.Entities.Player.Assets_Pets16x16;
+import svera.untiered.assets.Entities.Player.Assets_Player_Particles;
+import svera.untiered.assets.Entities.Stations.Assets_Foundry_Stations16x16;
+import svera.untiered.assets.Entities.Stations.Assets_Foundry_Stations32x32;
+import svera.untiered.assets.Entities.Stations.Assets_Marketplace_Stations16x16;
+import svera.untiered.assets.Environment.Foundry.Assets_Foundry_Environment16x16;
+import svera.untiered.assets.Environment.Foundry.Assets_Foundry_Environment32x32;
+import svera.untiered.assets.Environment.Foundry.Assets_Foundry_Environment8x8;
+import svera.untiered.assets.Environment.Overworld.Assets_Overworld_Environment_AshenValley16x16;
+import svera.untiered.assets.Environment.Overworld.Assets_Overworld_Environment_AshenValley8x8;
+import svera.untiered.assets.Environment.Overworld.Assets_Overworld_Environment_DroughtsPath16x16;
+import svera.untiered.assets.Environment.Overworld.Assets_Overworld_Environment_DroughtsPath8x8;
+import svera.untiered.assets.Environment.Overworld.Assets_Overworld_Environment_FearedShallows8x8;
+import svera.untiered.assets.Environment.Overworld.Assets_Overworld_Environment_FearedShallows16x16;
+import svera.untiered.assets.Environment.Overworld.Assets_Overworld_Environment_FearedShallows32x32;
+import svera.untiered.assets.Environment.Overworld.Assets_Overworld_Environment_Feltare16x16;
+import svera.untiered.assets.Environment.Overworld.Assets_Overworld_Environment_Feltare32x32;
+import svera.untiered.assets.Environment.Overworld.Assets_Overworld_Environment_Feltare8x8;
+import svera.untiered.assets.Environment.Overworld.Assets_Overworld_Environment_GarnetWoods16x16;
+import svera.untiered.assets.Environment.Overworld.Assets_Overworld_Environment_GarnetWoods32x32;
+import svera.untiered.assets.Environment.Overworld.Assets_Overworld_Environment_GarnetWoods8x16;
+import svera.untiered.assets.Environment.Overworld.Assets_Overworld_Environment_GarnetWoods8x8;
+import svera.untiered.assets.Environment.Overworld.Assets_Overworld_Environment_Nidavellir16x16;
+import svera.untiered.assets.Environment.Overworld.Assets_Overworld_Environment_Nidavellir16x8;
+import svera.untiered.assets.Environment.Overworld.Assets_Overworld_Environment_Nidavellir8x8;
+import svera.untiered.assets.Environment.Overworld.Assets_Overworld_Environment_NotSpecific8x8;
+import svera.untiered.assets.Environment.Overworld.Assets_Overworld_Environment_SandstoneValley16x16;
+import svera.untiered.assets.Environment.Overworld.Assets_Overworld_Environment_SandstoneValley16x8;
+import svera.untiered.assets.Environment.Overworld.Assets_Overworld_Environment_SandstoneValley32x32;
+import svera.untiered.assets.Environment.Overworld.Assets_Overworld_Environment_SandstoneValley8x8;
+import svera.untiered.assets.Environment.Tavern.Assets_Tavern_Environment8x8;
+import svera.untiered.assets.Environment.Vault.Assets_Vault_Environment8x8;
+import svera.untiered.assets.Interface.Currency.Assets_Currency_Icons16x16;
+import svera.untiered.assets.Interface.Currency.Assets_Currency_Icons8x8;
+import svera.untiered.assets.Interface.StatusIcons.Assets_StatusIcons16x16;
+import svera.untiered.assets.Interface.StatusIcons.Assets_StatusIcons18x18;
+import svera.untiered.assets.Items.Artifact.Assets_ArtifactAbilities;
+import svera.untiered.assets.Items.Artifact.Assets_ArtifactAbilityCharacters16x16;
+import svera.untiered.assets.Items.Artifact.Assets_ArtifactAbilityCharacters8x8;
+import svera.untiered.assets.Items.Artifact.Assets_ArtifactAbilityEntities;
+import svera.untiered.assets.Items.Artifact.Assets_ArtifactAbilityEntities16x16;
+import svera.untiered.assets.Items.Artifact.Assets_ArtifactAbilityProjectiles;
+import svera.untiered.assets.Items.Artifact.Assets_ArtifactAccessories;
+import svera.untiered.assets.Items.Artifact.Assets_ArtifactArmor;
+import svera.untiered.assets.Items.Artifact.Assets_ArtifactWeapons;
+import svera.untiered.assets.Items.Artifact.Assets_ArtifactWeaponsProjectiles;
+import svera.untiered.assets.Items.Assets_StarterGear;
+import svera.untiered.assets.Items.Consumables.Assets_Consumables_Maxing8x8;
+import svera.untiered.assets.Items.Consumables.Assets_Consumables_Tokens8x8;
+import svera.untiered.assets.Items.Consumables.Assets_Consumables_Upgrades8x8;
+import svera.untiered.assets.Items.Crafting.Assets_Crafting_Capsules8x8;
+import svera.untiered.assets.Items.Crafting.Assets_Crafting_Ingredients8x8;
+import svera.untiered.assets.Items.Crafting.Assets_Crafting_LuckyDips;
+import svera.untiered.assets.Items.Utilities.Assets_Utilities_Artifact8x8;
+import svera.untiered.assets.Items.Utilities.Assets_Utilities_PetStones8x8;
+import svera.untiered.assets.Items.Utilities.Assets_Utilities_Valiant8x8;
+import svera.untiered.assets.Items.Valiant.Assets_ValiantAbilities;
+import svera.untiered.assets.Items.Valiant.Assets_ValiantAbilityCharacters;
+import svera.untiered.assets.Items.Valiant.Assets_ValiantAbilityEntities16x16;
+import svera.untiered.assets.Items.Valiant.Assets_ValiantAbilityProjectiles;
+import svera.untiered.assets.Items.Valiant.Assets_ValiantAccessories;
+import svera.untiered.assets.Items.Valiant.Assets_ValiantArmor;
+import svera.untiered.assets.Items.Valiant.Assets_ValiantWeapons;
+import svera.untiered.assets.Items.Valiant.Assets_ValiantWeaponsProjectiles;
+import svera.untiered.assets.Portals.Assets_Foundry_Portals16x16;
+import svera.untiered.assets.Portals.Assets_Foundry_Portals32x32;
+
+public class EmbeddedAssets
    {
       // Svera System
       // Particles
@@ -18,10 +87,28 @@ package svera.untiered.assets
       public static var Assets_Foundry_Environment32x32Embed_:Class = Assets_Foundry_Environment32x32;
       public static var Assets_Tavern_Environment8x8Embed_:Class = Assets_Tavern_Environment8x8;
       public static var Assets_Vault_Environment8x8Embed_:Class = Assets_Vault_Environment8x8;
-      public static var Assets_Overworld_NotSpecific_Environment8x8Embed_:Class = Assets_Overworld_NotSpecific_Environment8x8;
-      public static var Assets_Overworld_FearedShallows_Environment8x8Embed_:Class = Assets_Overworld_FearedShallows_Environment8x8;
-      public static var Assets_Overworld_FearedShallows_Environment16x16Embed_:Class = Assets_Overworld_FearedShallows_Environment16x16;
-      public static var Assets_Overworld_FearedShallows_Environment32x32Embed_:Class = Assets_Overworld_FearedShallows_Environment32x32;
+      public static var Assets_Overworld_Environment_NotSpecific8x8Embed_:Class = Assets_Overworld_Environment_NotSpecific8x8;
+      public static var Assets_Overworld_Environment_FearedShallows8x8Embed_:Class = Assets_Overworld_Environment_FearedShallows8x8;
+      public static var Assets_Overworld_Environment_FearedShallows16x16Embed_:Class = Assets_Overworld_Environment_FearedShallows16x16;
+      public static var Assets_Overworld_Environment_FearedShallows32x32Embed_:Class = Assets_Overworld_Environment_FearedShallows32x32;
+      public static var Assets_Overworld_Environment_GarnetWoods8x8Embed_:Class = Assets_Overworld_Environment_GarnetWoods8x8;
+      public static var Assets_Overworld_Environment_GarnetWoods8x16Embed_:Class = Assets_Overworld_Environment_GarnetWoods8x16;
+      public static var Assets_Overworld_Environment_GarnetWoods16x16Embed_:Class = Assets_Overworld_Environment_GarnetWoods16x16;
+      public static var Assets_Overworld_Environment_GarnetWoods32x32Embed_:Class = Assets_Overworld_Environment_GarnetWoods32x32;
+      public static var Assets_Overworld_Environment_SandstoneValley8x8Embed_:Class = Assets_Overworld_Environment_SandstoneValley8x8;
+      public static var Assets_Overworld_Environment_SandstoneValley16x8Embed_:Class = Assets_Overworld_Environment_SandstoneValley16x8;
+      public static var Assets_Overworld_Environment_SandstoneValley16x16Embed_:Class = Assets_Overworld_Environment_SandstoneValley16x16;
+      public static var Assets_Overworld_Environment_SandstoneValley32x32Embed_:Class = Assets_Overworld_Environment_SandstoneValley32x32;
+      public static var Assets_Overworld_Environment_Feltare8x8Embed_:Class = Assets_Overworld_Environment_Feltare8x8;
+      public static var Assets_Overworld_Environment_Feltare16x16Embed_:Class = Assets_Overworld_Environment_Feltare16x16;
+      public static var Assets_Overworld_Environment_Feltare32x32Embed_:Class = Assets_Overworld_Environment_Feltare32x32;
+      public static var Assets_Overworld_Environment_AshenValley8x8Embed_:Class = Assets_Overworld_Environment_AshenValley8x8;
+      public static var Assets_Overworld_Environment_AshenValley16x16Embed_:Class = Assets_Overworld_Environment_AshenValley16x16;
+      public static var Assets_Overworld_Environment_DroughtsPath8x8Embed_:Class = Assets_Overworld_Environment_DroughtsPath8x8;
+      public static var Assets_Overworld_Environment_DroughtsPath16x16Embed_:Class = Assets_Overworld_Environment_DroughtsPath16x16;
+      public static var Assets_Overworld_Environment_Nidavellir8x8Embed_:Class = Assets_Overworld_Environment_Nidavellir8x8;
+      public static var Assets_Overworld_Environment_Nidavellir16x8Embed_:Class = Assets_Overworld_Environment_Nidavellir16x8;
+      public static var Assets_Overworld_Environment_Nidavellir16x16Embed_:Class = Assets_Overworld_Environment_Nidavellir16x16;
       // Equipment
       public static var Assets_StarterGearEmbed_:Class = Assets_StarterGear;
 

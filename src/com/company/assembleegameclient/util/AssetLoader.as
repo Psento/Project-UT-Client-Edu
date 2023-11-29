@@ -15,7 +15,6 @@ import com.company.util.AssetLibrary;
    import flash.display.BitmapData;
    import flash.utils.ByteArray;
 
-import svera.untiered.assets.Assets_Pets16x16;
 import svera.untiered.assets.EmbeddedAssets;
    import svera.untiered.assets.EmbeddedData;
 import svera.untiered.assets.Environment.Overworld.Assets_Overworld_Environment_DroughtsPath16x16;

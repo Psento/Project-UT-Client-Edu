@@ -288,7 +288,7 @@
         <Index>0x03</Index>
       </Texture>
       <Texture>
-        <File>Assets_Overworld_FearedShallows_Environment32x32</File>
+        <File>Assets_Overworld_Environment_FearedShallows32x32</File>
         <Index>0x00</Index>
       </Texture>
     </RandomTexture>

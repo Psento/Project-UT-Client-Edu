@@ -45,7 +45,6 @@ package com.company.assembleegameclient.ui.tooltip
          var bd:BitmapData = TextureRedrawer.redraw(image.image_,size,true,0);
          this.portrait_ = new Bitmap();
          this.portrait_.bitmapData = bd;
-         this.portrait_.x = -16;
          this.portrait_.y = -16;
          addChild(this.portrait_);
          this.nameText_ = new SimpleText(13,11776947,false,0,0);
@@ -53,7 +52,7 @@ package com.company.assembleegameclient.ui.tooltip
          this.nameText_.text = playerXML.@id;
          this.nameText_.updateMetrics();
          this.nameText_.filters = [new DropShadowFilter(0,0,0)];
-         this.nameText_.x = 32;
+         this.nameText_.x = this.portrait_.x + this.portrait_.width/2 + this.portrait_.width/2;
          this.nameText_.y = 6;
          addChild(this.nameText_);
          this.descriptionText_ = new SimpleText(13,11776947,false,174,0);

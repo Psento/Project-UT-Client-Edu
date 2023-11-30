@@ -2,7 +2,9 @@ package svera.untiered.ui.view
 {
    import com.company.assembleegameclient.objects.Player;
    import com.company.assembleegameclient.ui.StatusBar;
-   import flash.display.Sprite;
+
+import flash.display.Shape;
+import flash.display.Sprite;
    import flash.events.Event;
 import flash.text.TextFormatAlign;
 
@@ -18,23 +20,40 @@ public class StatMetersView extends Sprite
       private var spBar_:StatusBar;
       
       private var rpBar_:StatusBar;
+
+      private var levelMask:Shape;
+      private var content:Sprite;
       
       public function StatMetersView()
       {
+         this.levelMask = new Shape();
+         this.content = new Sprite();
+         this.content.graphics.clear();
+         this.content.graphics.beginFill(0,0);
+         this.content.graphics.drawRect(0,0,22,22);
+         this.content.graphics.endFill();
+         this.levelMask.graphics.clear();
+         this.levelMask.graphics.beginFill(0,0);
+         this.levelMask.graphics.drawRect(0,0,22,22);
+         this.levelMask.graphics.endFill();
+
+         this.content.mask = this.levelMask;
+         this.content.addChild((this.levelMask));
+
          super();
          this.expBar_ = new StatusBar(72,20,5931045,5526612,"Lvl X");
          this.fameBar_ = new StatusBar(72,20,14835456,5526612,"Fame");
          this.hpBar_ = new StatusBar(202,20,14693428,5526612,"HP");
          this.spBar_ = new StatusBar(202,20,16777215,14693428,"SP");
          this.rpBar_ = new StatusBar(202,20,6325472,5526612,"RP");
-         this.expBar_.x -= 55 + this.expBar_.width * 2;
-         this.expBar_.y = 21;
          this.hpBar_.x -= 48;
          this.hpBar_.y = 0;
          this.spBar_.x = this.hpBar_.x;
          this.spBar_.y = this.hpBar_.y;
          this.rpBar_.x = this.spBar_.x;
-         this.rpBar_.y = this.expBar_.y;
+         this.rpBar_.y = 21;
+         this.expBar_.x -= 55 + (this.expBar_.width * 2);
+         this.expBar_.y = this.rpBar_.y;
          this.spBar_.visible = false;
          this.expBar_.visible = true;
          this.fameBar_.visible = false;
@@ -43,6 +62,7 @@ public class StatMetersView extends Sprite
          addChild(this.hpBar_);
          addChild(this.spBar_);
          addChild(this.rpBar_);
+         addChild(this.content);
       }
       
       public function update(player:Player) : void
@@ -52,6 +72,9 @@ public class StatMetersView extends Sprite
          {
             this.expBar_.labelText_.text = lvlText;
             this.expBar_.labelText_.updateMetrics();
+            this.expBar_.labelText_.x = this.content.width/2 - this.expBar_.labelText_.width/2;
+            this.expBar_.labelText_.y = this.content.height/2 - this.expBar_.labelText_.height/2;
+            content.addChild(this.expBar_.labelText_);
          }
          if(player.level_ != 100)
          {
@@ -60,6 +83,12 @@ public class StatMetersView extends Sprite
                this.expBar_.visible = true;
                this.fameBar_.visible = false;
             }
+            this.content.y = this.expBar_.y - 3;
+            this.content.x = this.expBar_.x - 24;
+            this.expBar_.valueText_.setSize(10);
+            this.expBar_.valueText_.y = this.expBar_.height/2 - this.expBar_.valueText_.height/2;
+            this.expBar_.boostText_.setSize(10);
+            this.expBar_.boostText_.y = this.expBar_.valueText_.y;
             this.expBar_.draw(player.exp_,player.nextLevelExp_,0);
          }
          else
@@ -71,29 +100,23 @@ public class StatMetersView extends Sprite
             }
             this.fameBar_.draw(player.charFame_,player.nextClassQuestFame_,0);
          }
-         this.expBar_.labelText_.x = -19;
-         this.expBar_.labelText_.y = -2;
-         this.expBar_.valueText_.x = 7;
-         this.expBar_.valueText_.y = 2;
-         this.expBar_.valueText_.setSize(10);
-         this.expBar_.boostText_.y = this.expBar_.valueText_.y;
-         this.expBar_.boostText_.x = 7;
-         this.expBar_.boostText_.setSize(10);
-         this.spBar_.labelText_.y = 0;
-         this.spBar_.valueText_.y = 0;
-         this.spBar_.boostText_.y = this.spBar_.valueText_.y;
          this.spBar_.valueText_.textColor = 16777215;
          this.spBar_.boostText_.textColor = 16777215;
          this.spBar_.visible = player.sp_ > 0;
-         this.hpBar_.labelText_.y = 0;
-         this.hpBar_.valueText_.y = 0;
-         this.hpBar_.boostText_.y = this.hpBar_.valueText_.y;
+         this.spBar_.labelText_.y = this.spBar_.height/2 - this.spBar_.labelText_.height/2;
+         this.spBar_.valueText_.y = this.spBar_.height/2 - this.spBar_.valueText_.height/2;
+         this.spBar_.boostText_.y = this.spBar_.height/2 - this.spBar_.valueText_.height/2;
+
          this.hpBar_.labelText_.visible = !(player.sp_ > 0);
          this.hpBar_.valueText_.visible = !(player.sp_ > 0);
          this.hpBar_.boostText_.visible = !(player.sp_ > 0);
-         this.rpBar_.labelText_.y = 0;
-         this.rpBar_.valueText_.y = 0;
-         this.rpBar_.boostText_.y = this.rpBar_.valueText_.y;
+         this.hpBar_.labelText_.y = this.hpBar_.height/2 - this.hpBar_.labelText_.height/2;
+         this.hpBar_.valueText_.y = this.hpBar_.height/2 - this.hpBar_.valueText_.height/2;
+         this.hpBar_.boostText_.y = this.hpBar_.height/2 - this.hpBar_.boostText_.height/2;
+
+         this.rpBar_.labelText_.y = this.rpBar_.height/2 - this.rpBar_.labelText_.height/2;
+         this.rpBar_.valueText_.y = this.rpBar_.height/2 - this.rpBar_.valueText_.height/2;
+         this.rpBar_.boostText_.y = this.rpBar_.height/2 - this.rpBar_.boostText_.height/2;
 
          this.spBar_.draw(player.sp_,player.maxSP_,player.maxSPBoost_,player.maxSPMax_);
          this.hpBar_.draw(player.hp_,player.maxHP_,player.maxHPBoost_,player.maxHPMax_);

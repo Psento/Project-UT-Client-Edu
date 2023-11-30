@@ -82,6 +82,13 @@ package com.company.util
       {
          var imageSet:ImageSet = imageSets_[name];
          if(name == null || isNaN(id)) trace("Unknown File: ", name, id);
+         try{
+            if(imageSet.images_ == null || imageSet.images_[id] == null)
+               trace("Unknown File: ", name, id);
+         }
+         catch (e:Error) {
+            trace("Unknown File: ", name, id);
+         }
          return imageSet.images_[id];
       }
       

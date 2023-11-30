@@ -61,7 +61,7 @@ public class AssetLoader
          AssetLibrary.addImageSet("Assets_Foundry_Environment32x32", new EmbeddedAssets.Assets_Foundry_Environment32x32Embed_().bitmapData, 32, 32);
          AssetLibrary.addImageSet("Assets_Tavern_Environment8x8", new EmbeddedAssets.Assets_Tavern_Environment8x8Embed_().bitmapData, 8, 8);
          AssetLibrary.addImageSet("Assets_Vault_Environment8x8", new EmbeddedAssets.Assets_Vault_Environment8x8Embed_().bitmapData, 8, 8);
-         AssetLibrary.addImageSet("Assets_Overworld_NotSpecific_Environment8x8",new EmbeddedAssets.Assets_Overworld_Environment_NotSpecific8x8Embed_().bitmapData,8,8);
+         AssetLibrary.addImageSet("Assets_Overworld_Environment_NotSpecific8x8",new EmbeddedAssets.Assets_Overworld_Environment_NotSpecific8x8Embed_().bitmapData,8,8);
          AssetLibrary.addImageSet("Assets_Overworld_Environment_FearedShallows8x8",new EmbeddedAssets.Assets_Overworld_Environment_FearedShallows8x8Embed_().bitmapData,8,8);
          AssetLibrary.addImageSet("Assets_Overworld_Environment_FearedShallows16x16",new EmbeddedAssets.Assets_Overworld_Environment_FearedShallows16x16Embed_().bitmapData,16,16);
          AssetLibrary.addImageSet("Assets_Overworld_Environment_FearedShallows32x32",new EmbeddedAssets.Assets_Overworld_Environment_FearedShallows16x16Embed_().bitmapData,32,32);

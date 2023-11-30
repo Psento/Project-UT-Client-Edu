@@ -1,7 +1,7 @@
 package svera.untiered.assets.Entities.Player  {
 import mx.core.*;
 
-[Embed(source="../Player/Assets_PlayersMask.png")]
+[Embed(source="Assets_PlayersMask.png")]
 public class Assets_PlayersMask extends BitmapAsset {
    public function Assets_PlayersMask() {
       super();

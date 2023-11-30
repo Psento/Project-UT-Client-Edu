@@ -50,11 +50,11 @@ public class CharacterDetailsView extends Sprite
          this.portraitMask = new Shape();
 
          this.content.graphics.clear();
-         this.content.graphics.beginFill(0,1);
+         this.content.graphics.beginFill(0,0);
          this.content.graphics.drawRect(0,0,72,64);
          this.content.graphics.endFill();
          this.portraitMask.graphics.clear();
-         this.portraitMask.graphics.beginFill(0,1);
+         this.portraitMask.graphics.beginFill(0,0);
          this.portraitMask.graphics.drawRect(0,0,72,64);
          this.portraitMask.graphics.endFill();
 
@@ -120,7 +120,7 @@ public class CharacterDetailsView extends Sprite
          {
             var bmd:BitmapData = ObjectLibrary.getRedrawnTextureFromType(player.objectType_, 64 * 3,false)
             this.portrait_ = new Bitmap(bmd);
-            this.portrait_.x = (64 - this.portrait_.width) / 2 + 8;
+            this.portrait_.x = this.content.width/2 - this.portrait_.width/2+5;
             this.portrait_.y = (64 - this.portrait_.height) / 2 - 64/2;
             this.content.addChild(this.portrait_);
             this.content.x = 2;

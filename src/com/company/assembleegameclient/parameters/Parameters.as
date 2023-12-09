@@ -14,7 +14,7 @@ import flash.net.SharedObject;
       public static const BUILD_VERSION:String = "0.0.1";
       public static const SERVER_ADDRESS:String = "127.0.0.1";
       public static const GAME_PORT:int = 2050;
-      public static const APP_PORT:int = 7777;
+      public static const APP_PORT:int = 8080;
 
       public static const SERVER_CHAT_NAME:String = "";
       public static const CLIENT_CHAT_NAME:String = "*Client*";

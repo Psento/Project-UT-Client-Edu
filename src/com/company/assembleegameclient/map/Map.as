@@ -371,7 +371,7 @@ public class Map extends Sprite
          var isGpuRender:Boolean = Parameters.isGpuRender(); // cache result for faster access
          Parameters.GPURenderFrame = isGpuRender;
          if (wasLastFrameGpu != isGpuRender) {
-            var context:Context3D = WebMain.STAGE.stage3Ds[0].context3D;
+            var context:Context3D = GameClient.STAGE.stage3Ds[0].context3D;
             if (wasLastFrameGpu && context != null &&
                     context.driverInfo.toLowerCase().indexOf("disposed") == -1) {
                context.clear();
@@ -401,8 +401,8 @@ public class Map extends Sprite
          x = 400;
          y = Boolean(Parameters.data_.centerOnPlayer)?-Camera.CENTER_SCREEN_RECT.y:-Camera.OFFSET_SCREEN_RECT.y;
          stage.scaleMode = StageScaleMode.NO_SCALE;
-         scaleX = 800 / WebMain.StageWidth;
-         scaleY = 600 / WebMain.StageHeight;
+         scaleX = 800 / GameClient.StageWidth;
+         scaleY = 600 / GameClient.StageHeight;
          var distW:Number = (-screenRect.y - screenRect.height / 2) / 50;
          var screenCenterW:Point = new Point(camera.x_ + distW * Math.cos(camera.angleRad_ - Math.PI / 2),camera.y_ + distW * Math.sin(camera.angleRad_ - Math.PI / 2));
          if(this.background_ != null)

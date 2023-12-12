@@ -33,8 +33,8 @@ public class UIUtils
 
       public static function toggleQuality(hq:Boolean) : void
       {
-         if (WebMain.STAGE != null) {
-            WebMain.STAGE.quality = hq ? StageQuality.HIGH : StageQuality.LOW;
+         if (GameClient.STAGE != null) {
+            GameClient.STAGE.quality = hq ? StageQuality.HIGH : StageQuality.LOW;
          }
       }
    }

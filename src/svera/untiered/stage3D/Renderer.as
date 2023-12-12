@@ -206,8 +206,8 @@ package svera.untiered.stage3D
       
       private function onRender(graphicsDatas:Vector.<IGraphicsData>, grahpicsData3d:Vector.<Object3DStage3D>, mapWidth:Number, mapHeight:Number, camera:Camera, filterIndex:uint) : void
       {
-         WebMain.STAGE.scaleMode = StageScaleMode.NO_SCALE;
-         if(WebMain.STAGE.stageWidth * 3 / 4 != this.stageWidth || WebMain.STAGE.stageHeight != this.stageHeight)
+         GameClient.STAGE.scaleMode = StageScaleMode.NO_SCALE;
+         if(GameClient.STAGE.stageWidth * 3 / 4 != this.stageWidth || GameClient.STAGE.stageHeight != this.stageHeight)
          {
             this.resizeStage3DBackBuffer();
          }
@@ -228,19 +228,19 @@ package svera.untiered.stage3D
             this.renderScene(graphicsDatas,grahpicsData3d,mapWidth,mapHeight,camera);
          }
          this.context3D.present();
-         WebMain.STAGE.scaleMode = StageScaleMode.EXACT_FIT;
+         GameClient.STAGE.scaleMode = StageScaleMode.EXACT_FIT;
       }
       
       private function resizeStage3DBackBuffer() : void
       {
-         if(WebMain.STAGE.stageWidth * 3 / 4 < 1 || WebMain.STAGE.stageHeight < 1)
+         if(GameClient.STAGE.stageWidth * 3 / 4 < 1 || GameClient.STAGE.stageHeight < 1)
          {
             return;
          }
-         var stage3d:Stage3D = WebMain.STAGE.stage3Ds[0];
-         stage3d.context3D.configureBackBuffer(WebMain.STAGE.stageWidth * 3 / 4,WebMain.STAGE.stageHeight,2,false);
-         this.stageWidth = WebMain.STAGE.stageWidth * 3 / 4;
-         this.stageHeight = WebMain.STAGE.stageHeight;
+         var stage3d:Stage3D = GameClient.STAGE.stage3Ds[0];
+         stage3d.context3D.configureBackBuffer(GameClient.STAGE.stageWidth * 3 / 4,GameClient.STAGE.stageHeight,2,false);
+         this.stageWidth = GameClient.STAGE.stageWidth * 3 / 4;
+         this.stageHeight = GameClient.STAGE.stageHeight;
       }
       
       private function renderWithPostEffect(graphicsDatas:Vector.<IGraphicsData>, grahpicsData3d:Vector.<Object3DStage3D>, mapWidth:Number, mapHeight:Number, camera:Camera, filterIndex:uint) : void
@@ -317,7 +317,7 @@ package svera.untiered.stage3D
                finalTransform.identity();
                finalTransform.append(this.graphic3D_.getMatrix3D());
                finalTransform.appendScale(1 / Stage3DConfig.HALF_WIDTH,1 / Stage3DConfig.HALF_HEIGHT,1);
-               finalTransform.appendScale(800 / WebMain.StageWidth, 600 / WebMain.StageHeight, 1);
+               finalTransform.appendScale(800 / GameClient.StageWidth, 600 / GameClient.StageHeight, 1);
                finalTransform.appendTranslation(this.tX / Stage3DConfig.WIDTH,this.tY / Stage3DConfig.HEIGHT,0);
                this.context3D.setProgramConstantsFromMatrix(Context3DProgramType.VERTEX,0,finalTransform,true);
                this.graphic3D_.render(this.context3D);
@@ -328,7 +328,7 @@ package svera.untiered.stage3D
                this.graphic3D_.setGradientFill(GraphicsGradientFill(graphicsData),this.context3D,Stage3DConfig.HALF_WIDTH,Stage3DConfig.HALF_HEIGHT);
                finalTransform.identity();
                finalTransform.append(this.graphic3D_.getMatrix3D());
-               finalTransform.appendScale(800 / WebMain.StageWidth, 600 / WebMain.StageHeight, 1);
+               finalTransform.appendScale(800 / GameClient.StageWidth, 600 / GameClient.StageHeight, 1);
                finalTransform.appendTranslation(this.tX / Stage3DConfig.WIDTH,this.tY / Stage3DConfig.HEIGHT,0);
                this.context3D.setProgramConstantsFromMatrix(Context3DProgramType.VERTEX,0,finalTransform,true);
                this.context3D.setProgramConstantsFromVector(Context3DProgramType.FRAGMENT,4,Vector.<Number>([0.5,0.25,0,0]));
@@ -345,7 +345,7 @@ package svera.untiered.stage3D
                   finalTransform.append(grahpicsData3d[index3d].GetModelMatrix());
                   finalTransform.append(this.cameraMatrix_);
                   finalTransform.append(this._projection);
-                  finalTransform.appendScale(800 / WebMain.StageWidth, 600 / WebMain.StageHeight, 1);
+                  finalTransform.appendScale(800 / GameClient.StageWidth, 600 / GameClient.StageHeight, 1);
                   finalTransform.appendTranslation(this.tX / Stage3DConfig.WIDTH,this.tY / Stage3DConfig.HEIGHT * 11.5,0);
                   this.context3D.setProgramConstantsFromMatrix(Context3DProgramType.VERTEX,0,finalTransform,true);
                   this.context3D.setProgramConstantsFromMatrix(Context3DProgramType.VERTEX,8,grahpicsData3d[index3d].GetModelMatrix(),true);

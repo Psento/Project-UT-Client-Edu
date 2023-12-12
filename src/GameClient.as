@@ -42,7 +42,7 @@ import robotlegs.bender.bundles.mvcs.MVCSBundle;
    import robotlegs.bender.framework.api.LogLevel;
    
    [SWF(frameRate="60",backgroundColor="#000000",width="800",height="600")]
-   public class WebMain extends Sprite
+   public class GameClient extends Sprite
    {
       public static var STAGE:Stage;
 
@@ -51,7 +51,7 @@ import robotlegs.bender.bundles.mvcs.MVCSBundle;
       public static var StageHeight:int;
       private var resized_:Boolean;
       
-      public function WebMain()
+      public function GameClient()
       {
          super();
          if(stage)

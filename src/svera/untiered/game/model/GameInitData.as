@@ -1,7 +1,5 @@
 package svera.untiered.game.model
 {
-   import flash.utils.ByteArray;
-   
    public class GameInitData
    {
       public var gameId:int;

@@ -46,7 +46,9 @@ package com.company.assembleegameclient.appengine
          super(SAVED_CHARS_LIST);
          this.origData_ = data;
          this.charsXML_ = new XML(this.origData_);
+
          var accountXML:XML = XML(this.charsXML_.Account);
+
          this.parseUserData(accountXML);
          this.parseGuildData(accountXML);
          this.parseCharacterData();

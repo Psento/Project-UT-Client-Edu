@@ -49,8 +49,8 @@ import com.company.util.CachingColorTransformer;
       
       public static function compare(char1:SavedCharacter, char2:SavedCharacter) : Number
       {
-         var char1Use:Number = Boolean(Parameters.data_.charIdUseMap.hasOwnProperty(char1.charId().toString()))?Number(Parameters.data_.charIdUseMap[char1.charId()]):Number(0);
-         var char2Use:Number = Boolean(Parameters.data_.charIdUseMap.hasOwnProperty(char2.charId().toString()))?Number(Parameters.data_.charIdUseMap[char2.charId()]):Number(0);
+         var char1Use:Number = Parameters.data_.charIdUseMap.hasOwnProperty(char1.charId().toString()) ? Number(Parameters.data_.charIdUseMap[char1.charId()]) : Number(0);
+         var char2Use:Number = Parameters.data_.charIdUseMap.hasOwnProperty(char2.charId().toString()) ? Number(Parameters.data_.charIdUseMap[char2.charId()]) : Number(0);
          if(char1Use != char2Use)
          {
             return char2Use - char1Use;

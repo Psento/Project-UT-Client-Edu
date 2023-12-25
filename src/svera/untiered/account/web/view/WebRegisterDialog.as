@@ -100,7 +100,7 @@ import com.company.ui.SimpleText;
 
       private function isUsernameValid() : Boolean
       {
-         var isValid:Boolean = Boolean(usernameInput.text().match(/^[a-zA-Z0-9]+$/i)) && this.usernameInput.text().length > 0 && this.usernameInput.text().length <= 12;
+         var isValid:Boolean = Boolean(usernameInput.text().match(/[a-zA-Z]/)) && this.usernameInput.text().length > 2 && this.usernameInput.text().length <= 12;
          this.passwordInput.setErrorHighlight(!isValid);
          if(!isValid)
          {
@@ -111,7 +111,7 @@ import com.company.ui.SimpleText;
 
       private function isPasswordValid() : Boolean
       {
-         var isValid:Boolean = this.passwordInput.text().length >= 9;
+         var isValid:Boolean = this.passwordInput.text().length >= 8;
          this.passwordInput.setErrorHighlight(!isValid);
          if(!isValid)
          {

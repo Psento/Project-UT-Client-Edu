@@ -64,7 +64,7 @@ import flash.net.SharedObject;
          catch(error:Error)
          {
             trace("WARNING: unable to save settings");
-            data_ = new Object();
+            data_ = {};
          }
          setDefaults();
          save();
@@ -164,6 +164,7 @@ import flash.net.SharedObject;
          setDefaultKey("useMagicPotion",KeyCodes.V);
          setDefaultKey("toggleFullscreenMode", KeyCodes.UNSET);
          setDefault("playerObjectType",782);
+         setDefault("charIdUseMap",{});
          setDefault("playMusic",true);
          setDefault("playSFX",true);
          setDefault("playPewPew",true);
@@ -173,7 +174,6 @@ import flash.net.SharedObject;
          setDefault("defaultCameraAngle",0);
          setDefault("showQuestPortraits",true);
          setDefault("allowRotation",true);
-         setDefault("charIdUseMap",{});
          setDefault("drawShadows",true);
          setDefault("textBubbles",true);
          setDefault("showTradePopup",true);

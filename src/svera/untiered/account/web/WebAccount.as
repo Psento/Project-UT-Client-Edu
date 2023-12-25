@@ -19,7 +19,7 @@ package svera.untiered.account.web
       {
          return this.username;
       }
-      
+
       public function getUsername() : String
       {
          return this.username = this.username || null;
@@ -33,8 +33,8 @@ package svera.untiered.account.web
       public function getCredentials() : Object
       {
          return {
-            "username":this.getUsername(),
-            "password":this.getPassword()
+            "username" : this.getUsername(),
+            "password" : this.getPassword()
          };
       }
       

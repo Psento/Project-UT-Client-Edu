@@ -73,9 +73,11 @@ import robotlegs.bender.bundles.mvcs.MVCSBundle;
       
       private function setup() : void
       {
+         new AssetLoader().load();
+
          this.hackParameters();
          this.createContext();
-         new AssetLoader().load();
+
          stage.scaleMode = StageScaleMode.EXACT_FIT;
          var startup:StartupSignal = this.context.injector.getInstance(StartupSignal);
          startup.dispatch();

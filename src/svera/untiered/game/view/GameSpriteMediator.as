@@ -113,8 +113,7 @@ package svera.untiered.game.view
       
       private function onReconnect(event:ReconnectEvent) : void
       {
-         if(this.view.isEditor)
-         {
+         if(this.view.isEditor) {
             return;
          }
          var data:GameInitData = new GameInitData();

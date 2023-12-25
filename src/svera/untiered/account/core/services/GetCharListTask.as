@@ -1,7 +1,5 @@
 package svera.untiered.account.core.services
 {
-   import com.company.assembleegameclient.parameters.Parameters;
-   import com.company.util.MoreObjectUtil;
    import flash.events.TimerEvent;
    import flash.utils.Timer;
    import svera.lib.tasks.BaseTask;

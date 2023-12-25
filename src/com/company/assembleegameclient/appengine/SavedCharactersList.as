@@ -36,7 +36,7 @@ package com.company.assembleegameclient.appengine
       public var news_:Vector.<SavedNewsItem>;
       private var account:Account;
       
-      public function SavedCharactersList(data:String)
+      public function SavedCharactersList(data:XML)
       {
          var value:* = undefined;
          var account:Account = null;
@@ -189,7 +189,7 @@ package com.company.assembleegameclient.appengine
       
       override public function clone() : Event
       {
-         return new SavedCharactersList(this.origData_);
+         return new SavedCharactersList(this.charsXML_);
       }
       
       override public function toString() : String

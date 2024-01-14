@@ -32,10 +32,11 @@ import svera.lib.util.VectorAS3Util;
             this.tiles[i] = tile;
          }
       }
+
       public override function addToGrid(tile:ItemTile, numRows:uint, tileIndex:uint) : void
       {
          tile.drawBackground(ItemGrid.CutsByNum[numRows][tileIndex]);
-         tile.addEventListener(MouseEvent.ROLL_OVER,this.onTileHover);0
+         tile.addEventListener(MouseEvent.ROLL_OVER,this.onTileHover);
          tile.x = int(tileIndex / 5) * (ItemTile.HEIGHT + 4);
          tile.y = int(tileIndex % 5) * (ItemTile.WIDTH + 4);
          addChild(tile);

@@ -10,7 +10,9 @@ package com.company.assembleegameclient.ui.panels.itemgrids
    import com.company.assembleegameclient.ui.tooltip.EquipmentToolTip;
    import com.company.assembleegameclient.ui.tooltip.TextToolTip;
    import com.company.assembleegameclient.ui.tooltip.ToolTip;
-   import flash.events.MouseEvent;
+import com.company.util.SpriteUtil;
+
+import flash.events.MouseEvent;
    import svera.untiered.constants.ItemConstants;
 
 import org.osflash.signals.Signal;
@@ -18,7 +20,7 @@ import org.osflash.signals.Signal;
 public class ItemGrid extends Panel
    {
       
-      private static const NO_CUT:Array = [0,0,0,0];
+      public static const NO_CUT:Array = [0,0,0,0];
       
       public static const CutsByNum:Object = {
          1:[[0,1,0,0],NO_CUT,NO_CUT,NO_CUT,[0,1,1,0]],
@@ -29,7 +31,6 @@ public class ItemGrid extends Panel
        
       
       private const padding:uint = 4;
-      private const rowLength:uint = 4;
       public const addToolTip:Signal = new Signal(ToolTip);
       
       public var owner:GameObject;
@@ -42,10 +43,15 @@ public class ItemGrid extends Panel
       protected var indexOffset:int;
       
       public var interactive:Boolean;
+
+      private var overrideCut_:Array;
+      private var rowLength:uint;
       
-      public function ItemGrid(gridOwner:GameObject, currentPlayer:Player, itemIndexOffset:int)
+      public function ItemGrid(gridOwner:GameObject, currentPlayer:Player, itemIndexOffset:int, overrideCut:Array = null, rowLength:int = 4)
       {
          super(null);
+         this.overrideCut_ = overrideCut;
+         this.rowLength = rowLength;
          this.owner = gridOwner;
          this.curPlayer = currentPlayer;
          this.indexOffset = itemIndexOffset;
@@ -123,13 +129,16 @@ public class ItemGrid extends Panel
          return InventoryOwnerTypes.NPC;
       }
       
-      public function addToGrid(tile:ItemTile, numRows:uint, tileIndex:uint) : void
-      {
-         tile.drawBackground(CutsByNum[numRows][tileIndex]);
+      public function addToGrid(tile:ItemTile, numRows:uint, tileIndex:uint) : void {
+         tile.drawBackground(this.overrideCut_ == null ? CutsByNum[numRows][tileIndex] : this.overrideCut_);
          tile.addEventListener(MouseEvent.ROLL_OVER,this.onTileHover);
          tile.x = int(tileIndex % this.rowLength) * (ItemTile.WIDTH + this.padding);
          tile.y = int(tileIndex / this.rowLength) * (ItemTile.HEIGHT + this.padding);
          addChild(tile);
+      }
+
+      public function removeFromGrid(tile:ItemTile) : void {
+         SpriteUtil.safeRemoveChild(this, tile);
       }
       
       public function setItems(items:Vector.<int>, datas:Vector.<int>, itemIndexOffset:int = 0) : void

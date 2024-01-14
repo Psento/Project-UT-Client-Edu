@@ -51,7 +51,8 @@ public class ObjectLibrary
          "SpiderWeb":SpiderWeb,
          "Stalagmite":Stalagmite,
          "Wall":Wall,
-         "Traits":Traits
+         "Traits":Traits,
+         "Vault":VaultChest
       };
        
       

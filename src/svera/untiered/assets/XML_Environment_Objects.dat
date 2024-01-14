@@ -72,7 +72,7 @@
   <!-- #endregion -->
   <!-- #region --> // Vault
   <Object type="0x0504" id="Vault Chest">
-    <Class>Container</Class>
+    <Class>Vault</Class>
     <Container/>
     <Texture>
       <File>Assets_Foundry_Stations16x16</File>

@@ -21,6 +21,7 @@ package svera.untiered.ui
    import svera.untiered.account.core.view.RegisterPromptDialog;
    import svera.untiered.account.core.view.RegisterPromptDialogMediator;
 import svera.untiered.game.model.PotionInventoryModel;
+import svera.untiered.messaging.impl.incoming.VaultSlotUpdate;
 import svera.untiered.startup.control.StartupSequence;
    import svera.untiered.ui.commands.EnterGameCommand;
    import svera.untiered.ui.commands.HUDInitCommand;
@@ -69,8 +70,14 @@ import org.swiftsuspenders.Injector;
    import robotlegs.bender.extensions.mediatorMap.api.IMediatorMap;
    import robotlegs.bender.extensions.signalCommandMap.api.ISignalCommandMap;
    import robotlegs.bender.framework.api.IConfig;
-   
-   public class UIConfig implements IConfig
+
+import svera.untiered.vault.VaultWindow;
+import svera.untiered.vault.mediator.VaultWindowMediator;
+import svera.untiered.vault.signals.VaultSlotUpdateSignal;
+
+import svera.untiered.vault.signals.VaultUpdateSignal;
+
+public class UIConfig implements IConfig
    {
        
       
@@ -96,6 +103,8 @@ import org.swiftsuspenders.Injector;
          this.injector.map(NameChangedSignal).asSingleton();
          this.injector.map(PotionInventoryModel).asSingleton();
          this.injector.map(UpdatePotionInventorySignal).asSingleton();
+         this.injector.map(VaultUpdateSignal).asSingleton();
+         this.injector.map(VaultSlotUpdateSignal).asSingleton();
          this.commandMap.map(ShowLoadingUISignal).toCommand(ShowLoadingUICommand);
          this.commandMap.map(ShowTitleUISignal).toCommand(ShowTitleUICommand);
          this.commandMap.map(EnterGameSignal).toCommand(EnterGameCommand);
@@ -122,6 +131,7 @@ import org.swiftsuspenders.Injector;
          this.mediatorMap.map(StatMetersView).toMediator(StatMetersMediator);
          this.mediatorMap.map(HUDView).toMediator(HUDMediator);
          this.mediatorMap.map(PotionSlotView).toMediator(PotionSlotMediator);
+         this.mediatorMap.map(VaultWindow).toMediator(VaultWindowMediator);
          this.setupCharacterWindow();
          this.startup.addSignal(ShowLoadingUISignal,-1);
          this.startup.addTask(LoadAccountTask);

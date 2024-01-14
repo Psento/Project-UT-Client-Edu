@@ -6,23 +6,42 @@ package com.company.assembleegameclient.ui.panels.itemgrids
    
    public class ContainerGrid extends ItemGrid
    {
-       
-      
-      private const NUM_SLOTS:uint = 8;
-      
       private var tiles:Vector.<InteractiveItemTile>;
+
+      private var numSlots_:int;
+      private var noCuts_:Boolean;
       
-      public function ContainerGrid(gridOwner:GameObject, currentPlayer:Player)
+      public function ContainerGrid(gridOwner:GameObject, currentPlayer:Player, numSlots:int = 8, rowLength:int = 2, noCuts:Boolean = false)
       {
+         super(gridOwner,currentPlayer, 0, ItemGrid.NO_CUT, rowLength);
+
+         this.noCuts_ = noCuts;
+
+         this.resizeContainer(numSlots);
+      }
+
+      public function resizeContainer(numSlots:int) : void {
+         var curSize:int = this.numSlots_;
+         this.numSlots_ = numSlots;
+
+         var newTiles:Vector.<InteractiveItemTile> = new Vector.<InteractiveItemTile>(this.numSlots_);
+
          var tile:InteractiveItemTile = null;
-         super(gridOwner,currentPlayer,0);
-         this.tiles = new Vector.<InteractiveItemTile>(this.NUM_SLOTS);
-         for(var i:int = 0; i < this.NUM_SLOTS; i++)
-         {
-            tile = new InteractiveItemTile(i + indexOffset,this,interactive);
-            addToGrid(tile,2,i);
-            this.tiles[i] = tile;
+
+         for (var i :int = 0; i < this.numSlots_; i++) {
+
+            if (i < curSize) {
+               this.removeFromGrid(this.tiles[i]);
+               tile = this.tiles[i];
+            } else {
+               tile = new InteractiveItemTile(i + this.indexOffset, this, this.interactive);
+            }
+
+            addToGrid(tile, 2, i);
+            newTiles[i] = tile;
          }
+
+         this.tiles = newTiles;
       }
       
       override public function setItems(items:Vector.<int>, datas:Vector.<int>, itemIndexOffset:int = 0) : void
@@ -33,7 +52,7 @@ package com.company.assembleegameclient.ui.panels.itemgrids
          if(items)
          {
             numItems = items.length;
-            for(i = 0; i < this.NUM_SLOTS; i++)
+            for(i = 0; i < this.numSlots_; i++)
             {
                if(i + indexOffset < numItems)
                {
@@ -52,6 +71,13 @@ package com.company.assembleegameclient.ui.panels.itemgrids
                refreshTooltip();
             }
          }
+      }
+
+      public function setItem(slot:int, itemId:int, itemData:int) : void {
+         if (slot >= this.tiles.length || slot < 0) {
+            return;
+         }
+         this.tiles[slot].setItem(itemId, itemData);
       }
    }
 }

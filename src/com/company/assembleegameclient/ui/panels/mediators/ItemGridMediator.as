@@ -44,7 +44,7 @@ public class ItemGridMediator extends Mediator
    public var hudModel:HUDModel;
 
    [Inject]
-   public var showToolTip:ShowTooltipSignal
+   public var showToolTip:ShowTooltipSignal;
 
    public function ItemGridMediator()
    {

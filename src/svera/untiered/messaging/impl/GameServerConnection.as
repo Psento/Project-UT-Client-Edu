@@ -59,7 +59,10 @@ import com.hurlant.crypto.Crypto;
    import flash.utils.ByteArray;
    import flash.utils.Timer;
    import flash.utils.getTimer;
-   import svera.lib.net.api.MessageMap;
+
+import org.hamcrest.text.re;
+
+import svera.lib.net.api.MessageMap;
    import svera.lib.net.api.MessageProvider;
    import svera.lib.net.impl.Message;
    import svera.lib.net.impl.SocketServer;
@@ -115,6 +118,8 @@ import svera.untiered.messaging.impl.incoming.TradeDone;
 import svera.untiered.messaging.impl.incoming.TradeRequested;
 import svera.untiered.messaging.impl.incoming.TradeStart;
 import svera.untiered.messaging.impl.incoming.Update;
+import svera.untiered.messaging.impl.incoming.VaultSlotUpdate;
+import svera.untiered.messaging.impl.incoming.VaultUpdate;
 import svera.untiered.messaging.impl.outgoing.AcceptTrade;
 import svera.untiered.messaging.impl.outgoing.AoeAck;
    import svera.untiered.messaging.impl.outgoing.Buy;
@@ -145,7 +150,8 @@ import svera.untiered.messaging.impl.outgoing.Reskin;
    import svera.untiered.messaging.impl.outgoing.Teleport;
    import svera.untiered.messaging.impl.outgoing.UseItem;
    import svera.untiered.messaging.impl.outgoing.UsePortal;
-   import svera.untiered.minimap.control.UpdateGameObjectTileSignal;
+import svera.untiered.messaging.impl.outgoing.VaultRequest;
+import svera.untiered.minimap.control.UpdateGameObjectTileSignal;
    import svera.untiered.minimap.control.UpdateGroundTileSignal;
    import svera.untiered.minimap.model.UpdateGroundTileVO;
 import svera.untiered.stage3D.Renderer;
@@ -154,8 +160,12 @@ import svera.untiered.ui.view.MessageCloseDialog;
 import svera.untiered.ui.view.NotEnoughTsavoriteDialog;
    import org.swiftsuspenders.Injector;
    import robotlegs.bender.framework.api.ILogger;
-   
-   public class GameServerConnection
+
+import svera.untiered.vault.signals.VaultSlotUpdateSignal;
+
+import svera.untiered.vault.signals.VaultUpdateSignal;
+
+public class GameServerConnection
    {
       public static const FAILURE:int = 0;
       public static const CREATE_SUCCESS:int = 1;
@@ -216,6 +226,9 @@ import svera.untiered.ui.view.NotEnoughTsavoriteDialog;
       public static const ACCEPTTRADE:int = 56;
       public static const TRADEACCEPTED:int = 57;
       public static const SWITCHMUSIC:int = 58;
+      public static const VAULTUPDATE:int = 59;
+      public static const VAULTSLOTUPDATE:int = 60;
+      public static const VAULTREQUEST:int = 61;
 
       public static var instance:GameServerConnection;
 
@@ -366,6 +379,9 @@ import svera.untiered.ui.view.NotEnoughTsavoriteDialog;
          messages.map(TRADEDONE).toMessage(TradeDone).toMethod(this.onTradeDone);
          messages.map(TRADEACCEPTED).toMessage(TradeAccepted).toMethod(this.onTradeAccepted);
          messages.map(SWITCHMUSIC).toMessage(SwitchMusic).toMethod(this.onSwitchMusic);
+         messages.map(VAULTUPDATE).toMessage(VaultUpdate).toMethod(this.vaultUpdate);
+         messages.map(VAULTSLOTUPDATE).toMessage(VaultSlotUpdate).toMethod(this.vaultSlotUpdate);
+         messages.map(VAULTREQUEST).toMessage(VaultRequest);
       }
       
       private function unmapMessages() : void
@@ -428,6 +444,9 @@ import svera.untiered.ui.view.NotEnoughTsavoriteDialog;
          messages.unmap(TRADEDONE);
          messages.unmap(TRADEACCEPTED);
          messages.unmap(SWITCHMUSIC);
+         messages.unmap(VAULTUPDATE);
+         messages.unmap(VAULTSLOTUPDATE);
+         messages.unmap(VAULTREQUEST);
       }
       
       public function getNextDamage(minDamage:uint, maxDamage:uint) : uint
@@ -468,6 +487,25 @@ import svera.untiered.ui.view.NotEnoughTsavoriteDialog;
          var load:Load = this.messages.require(LOAD) as Load;
          load.charId_ = this.charId_;
          this.serverConnection.sendMessage(load);
+      }
+
+      public function vaultRequest(objectId:int) : void {
+         var request:VaultRequest = this.messages.require(VAULTREQUEST) as VaultRequest;
+         request.objectId_ = objectId;
+         this.serverConnection.sendMessage(request);
+      }
+
+      private function vaultUpdate(update:VaultUpdate) : void {
+
+         trace("Vault Update");
+
+         var updateSignal:VaultUpdateSignal = this.injector.getInstance(VaultUpdateSignal);
+         updateSignal.dispatch(update.vaultSize_, update.items_);
+      }
+
+      private function vaultSlotUpdate(update:VaultSlotUpdate) : void {
+         var updateSignal:VaultSlotUpdateSignal = this.injector.getInstance(VaultSlotUpdateSignal);
+         updateSignal.dispatch(update.slotIndex_, update.inventory_, update.itemData_);
       }
       
       public function playerShoot(time:int, startX:Number, startY:Number, angle:Number, ability:Boolean, numShots:int) : void
@@ -1289,7 +1327,9 @@ import svera.untiered.ui.view.NotEnoughTsavoriteDialog;
                   player.dexterityBoost_ = value;
                   continue;
                case StatData.OWNER_ACCOUNT_ID_STAT:
-                  (go as Container).setOwnerId(value);
+                  if (go is Container) {
+                     (go as Container).setOwnerId(value);
+                  }
                   continue;
                case StatData.CHAR_FAME_STAT:
                   player.charFame_ = value;

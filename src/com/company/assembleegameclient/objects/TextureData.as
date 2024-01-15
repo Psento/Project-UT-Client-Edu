@@ -28,7 +28,12 @@ package com.company.assembleegameclient.objects
          super();
          if(objectXML.hasOwnProperty("Texture"))
          {
-            this.parse(XML(objectXML.Texture));
+            try {
+               this.parse(XML(objectXML.Texture))
+            }
+            catch (e:Error) {
+               trace(String(objectXML.@id));
+            }
          }
          else if(objectXML.hasOwnProperty("AnimatedTexture"))
          {

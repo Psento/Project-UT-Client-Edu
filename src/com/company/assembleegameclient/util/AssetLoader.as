@@ -120,6 +120,8 @@ public class AssetLoader
          AssetLibrary.addImageSet("Assets_Foundry_Stations16x16", new EmbeddedAssets.Assets_Foundry_Stations16x16Embed_().bitmapData, 16, 16);
          AssetLibrary.addImageSet("Assets_Foundry_Stations32x32", new EmbeddedAssets.Assets_Foundry_Stations32x32Embed_().bitmapData, 32, 32);
          AssetLibrary.addImageSet("Assets_Marketplace_Stations16x16", new EmbeddedAssets.Assets_Marketplace_Stations16x16Embed_().bitmapData, 16, 16);
+         // Textiles
+         AssetLibrary.addImageSet("Assets_Textiles8x8",new EmbeddedAssets.Assets_Textiles8x8Embed_().bitmapData,8,8);
          // Old System
          AssetLibrary.addImageSet("lofiInterface",new EmbeddedAssets.lofiInterfaceEmbed_().bitmapData,8,8);
          AssetLibrary.addImageSet("lofiInterfaceBig",new EmbeddedAssets.lofiInterfaceBigEmbed_().bitmapData,16,16);
@@ -128,7 +130,6 @@ public class AssetLoader
          AssetLibrary.addImageSet("stars",new EmbeddedAssets.starsEmbed_().bitmapData,5,5);
          AssetLibrary.addImageSet("textile4x4",new EmbeddedAssets.textile4x4Embed_().bitmapData,4,4);
          AssetLibrary.addImageSet("textile5x5",new EmbeddedAssets.textile5x5Embed_().bitmapData,5,5);
-         AssetLibrary.addImageSet("textile8x8",new EmbeddedAssets.textile8x8Embed_().bitmapData,8,9);
          AssetLibrary.addImageSet("textile9x9",new EmbeddedAssets.textile9x9Embed_().bitmapData,9,9);
          AssetLibrary.addImageSet("textile10x10",new EmbeddedAssets.textile10x10Embed_().bitmapData,10,10);
          AssetLibrary.addImageSet("inner_mask",new EmbeddedAssets.innerMaskEmbed_().bitmapData,4,4);

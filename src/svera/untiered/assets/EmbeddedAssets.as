@@ -165,7 +165,7 @@ public class EmbeddedAssets
       public static var starsEmbed_:Class = EmbeddedAssets_starsEmbed_;
       public static var textile4x4Embed_:Class = EmbeddedAssets_textile4x4Embed_;
       public static var textile5x5Embed_:Class = EmbeddedAssets_textile5x5Embed_;
-      public static var textile8x8Embed_:Class = Assets_Textiles8x8;
+      public static var Assets_Textiles8x8Embed_:Class = Assets_Textiles8x8;
       public static var textile9x9Embed_:Class = EmbeddedAssets_textile9x9Embed_;
       public static var textile10x10Embed_:Class = EmbeddedAssets_textile10x10Embed_;
       public static var innerMaskEmbed_:Class = EmbeddedAssets_innerMaskEmbed_;

@@ -333,7 +333,7 @@ import svera.untiered.constants.ActivationType;
             switch(activationType)
             {
                case ActivationType.DYE:
-                  this.effects.push("", "Changes texture of your character");
+                  this.effects.push(new Effect("", "Changes texture of your character"));
                   continue;
                case ActivationType.COND_EFFECT_AURA:
                   this.effects.push(new Effect("Party Effect","Within " + activateXML.@range + " sqrs"));

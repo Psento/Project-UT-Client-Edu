@@ -151,6 +151,7 @@ import svera.untiered.messaging.impl.outgoing.Reskin;
    import svera.untiered.messaging.impl.outgoing.UseItem;
    import svera.untiered.messaging.impl.outgoing.UsePortal;
 import svera.untiered.messaging.impl.outgoing.VaultRequest;
+import svera.untiered.messaging.impl.outgoing.VaultUpgrade;
 import svera.untiered.minimap.control.UpdateGameObjectTileSignal;
    import svera.untiered.minimap.control.UpdateGroundTileSignal;
    import svera.untiered.minimap.model.UpdateGroundTileVO;
@@ -229,6 +230,7 @@ public class GameServerConnection
       public static const VAULTUPDATE:int = 59;
       public static const VAULTSLOTUPDATE:int = 60;
       public static const VAULTREQUEST:int = 61;
+      public static const VAULTUPGRADE:int = 62;
 
       public static var instance:GameServerConnection;
 
@@ -382,6 +384,7 @@ public class GameServerConnection
          messages.map(VAULTUPDATE).toMessage(VaultUpdate).toMethod(this.vaultUpdate);
          messages.map(VAULTSLOTUPDATE).toMessage(VaultSlotUpdate).toMethod(this.vaultSlotUpdate);
          messages.map(VAULTREQUEST).toMessage(VaultRequest);
+         messages.map(VAULTUPGRADE).toMessage(VaultUpgrade);
       }
       
       private function unmapMessages() : void
@@ -447,6 +450,7 @@ public class GameServerConnection
          messages.unmap(VAULTUPDATE);
          messages.unmap(VAULTSLOTUPDATE);
          messages.unmap(VAULTREQUEST);
+         messages.unmap(VAULTUPGRADE);
       }
       
       public function getNextDamage(minDamage:uint, maxDamage:uint) : uint
@@ -495,10 +499,13 @@ public class GameServerConnection
          this.serverConnection.sendMessage(request);
       }
 
+      public function vaultUpgrade(objectId:int) : void {
+         var upgrade:VaultUpgrade = this.messages.require(VAULTUPGRADE) as VaultUpgrade;
+         upgrade.objectId_ = objectId;
+         this.serverConnection.sendMessage(upgrade);
+      }
+
       private function vaultUpdate(update:VaultUpdate) : void {
-
-         trace("Vault Update");
-
          var updateSignal:VaultUpdateSignal = this.injector.getInstance(VaultUpdateSignal);
          updateSignal.dispatch(update.vaultSize_, update.items_);
       }

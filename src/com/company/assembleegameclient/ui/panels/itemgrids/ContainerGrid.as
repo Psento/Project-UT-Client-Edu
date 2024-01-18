@@ -79,5 +79,9 @@ package com.company.assembleegameclient.ui.panels.itemgrids
          }
          this.tiles[slot].setItem(itemId, itemData);
       }
+
+      public function get items() : Vector.<InteractiveItemTile> {
+         return this.tiles;
+      }
    }
 }

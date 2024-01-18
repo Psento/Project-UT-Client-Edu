@@ -86,7 +86,7 @@ package svera.untiered.util.components
          {
             case Currency.TSAVORITE:
                this.icon.bitmapData = tsavorite;
-               break
+               break;
             case Currency.MEDALLIONS:
                this.icon.bitmapData = medallions;
                break;

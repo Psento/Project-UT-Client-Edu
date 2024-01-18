@@ -30,11 +30,11 @@ public class VaultWindowMediator extends Mediator {
     }
 
     private function onVaultUpdate(size:int, slots:Vector.<VaultUpdateSlot>) : void {
-        this.view_.getContent().initialize(size, slots);
+        this.view_.setContent(size, slots);
     }
 
     private function onVaultSlotUpdate(slot:int, inventory:int, itemData:int) : void {
-        this.view_.getContent().updateSlot(slot, inventory, itemData);
+        this.view_.content.updateSlot(slot, inventory, itemData);
     }
 }
 }

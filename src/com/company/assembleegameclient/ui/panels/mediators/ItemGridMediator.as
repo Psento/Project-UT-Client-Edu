@@ -74,7 +74,7 @@ public class ItemGridMediator extends Mediator
       var inventoryGrid:InventoryGrid = null;
       var slot:int = 0;
       var sourceTile:InteractiveItemTile = e.tile;
-      var target:* = DisplayHierarchy.getParentWithTypeArray(sourceTile.getDropTarget(),inventoryGrid,InteractiveItemTile,Map);
+      var target:* = DisplayHierarchy.getParentWithTypeArray(sourceTile.getDropTarget(),InventoryGrid, InteractiveItemTile, Map);
       if(target is InteractiveItemTile)
       {
          targetTile = target as InteractiveItemTile;

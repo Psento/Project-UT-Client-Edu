@@ -4,7 +4,8 @@ package com.company.assembleegameclient.ui.panels.itemgrids
    import com.company.assembleegameclient.objects.Container;
    import com.company.assembleegameclient.objects.GameObject;
    import com.company.assembleegameclient.objects.Player;
-   import com.company.assembleegameclient.ui.panels.Panel;
+import com.company.assembleegameclient.objects.VaultChest;
+import com.company.assembleegameclient.ui.panels.Panel;
    import com.company.assembleegameclient.ui.panels.itemgrids.itemtiles.EquipmentTile;
    import com.company.assembleegameclient.ui.panels.itemgrids.itemtiles.ItemTile;
    import com.company.assembleegameclient.ui.tooltip.EquipmentToolTip;
@@ -55,8 +56,8 @@ public class ItemGrid extends Panel
          this.owner = gridOwner;
          this.curPlayer = currentPlayer;
          this.indexOffset = itemIndexOffset;
-         var container:Container = gridOwner as Container;
-         if(gridOwner == currentPlayer || container)
+         var isContainer:Boolean = gridOwner is Container || gridOwner is VaultChest;
+         if(gridOwner == currentPlayer || isContainer)
          {
             this.interactive = true;
          }

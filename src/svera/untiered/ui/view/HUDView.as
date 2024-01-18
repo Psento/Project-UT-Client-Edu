@@ -92,20 +92,20 @@ public class HUDView extends Sprite
    {
       var player:Player = gs.map.player_;
       this.inventoryGrid = new InventoryGrid(player,player,4);
-      this.inventoryGrid.x = -this.inventoryGrid.width/2 - 20;
+      this.inventoryGrid.x = 400 - this.inventoryGrid.width;
       this.inventoryGrid.y = stage.stageHeight / 2 - this.inventoryGrid.height / 2;
       this.inventoryGrid.visible = false;
       addChild(this.inventoryGrid);
       this.equippedGrid = new EquippedGrid(player,player.slotTypes_,player);
-      this.equippedGrid.x = this.inventoryGrid.x + this.inventoryGrid.width + 2;
-      this.equippedGrid.y = this.inventoryGrid.y;
+      this.equippedGrid.x = this.inventoryGrid.x;
+      this.equippedGrid.y = this.inventoryGrid.y - 100;
       this.equippedGrid.visible = false;
       addChild(this.equippedGrid);
       this.statsView = new StatsView(191,45);
       this.statsView.x = this.inventoryGrid.x - 191 - 2;
       this.statsView.y = this.inventoryGrid.y;
       this.statsView.visible = false;
-      addChild(this.statsView)
+      addChild(this.statsView);
       this.interactPanel = new InteractPanel(gs,player,200,100);
       this.interactPanel.x = this.INTERACT_PANEL_POSITION.x;
       this.interactPanel.y = this.INTERACT_PANEL_POSITION.y;

@@ -28,6 +28,7 @@ import flash.net.SharedObject;
       public static const GUILD_CREATION_PRICE:int = 1000;
       public static const CHARACTER_SLOT_PRICE:int = 2000;
       public static const CHARACTER_SKIN_PRICE:int = 1000;
+      public static const VAULT_SLOT_PRICE:int = 1000;
 
       public static const MAX_SINK_LEVEL:Number = 18;
       public static const PLAYER_ROTATE_SPEED:Number = 0.003;

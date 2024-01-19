@@ -79,7 +79,8 @@ public class HUDView extends Sprite
    private function positionAssets() : void
    {
       hudOverlay.parent.mouseEnabled = false;
-      this.hudOverlay.x -= 400;
+      this.hudOverlay.x = 0 - (this.hudOverlay.width / 2);
+      this.hudOverlay.y = 0;
       this.miniMap.x = this.MAP_POSITION.x;
       this.miniMap.y = this.MAP_POSITION.y;
       this.characterDetails.x -= 211;
@@ -92,23 +93,28 @@ public class HUDView extends Sprite
    {
       var player:Player = gs.map.player_;
       this.inventoryGrid = new InventoryGrid(player,player,4);
-      this.inventoryGrid.x = 400 - this.inventoryGrid.width;
+      this.equippedGrid = new EquippedGrid(player,player.slotTypes_,player);
+      this.statsView = new StatsView(191,45);
+      this.interactPanel = new InteractPanel(gs,player,200,100);
+
+      this.inventoryGrid.x = 0 + this.equippedGrid.width * 3;
       this.inventoryGrid.y = stage.stageHeight / 2 - this.inventoryGrid.height / 2;
       this.inventoryGrid.visible = false;
-      addChild(this.inventoryGrid);
-      this.equippedGrid = new EquippedGrid(player,player.slotTypes_,player);
-      this.equippedGrid.x = this.inventoryGrid.x;
-      this.equippedGrid.y = this.inventoryGrid.y - 100;
+
+      this.equippedGrid.x = 0 - this.equippedGrid.width * 4;
+      this.equippedGrid.y = this.inventoryGrid.y;
       this.equippedGrid.visible = false;
-      addChild(this.equippedGrid);
-      this.statsView = new StatsView(191,45);
-      this.statsView.x = this.inventoryGrid.x - 191 - 2;
+
+      this.statsView.x = this.equippedGrid.x - this.equippedGrid.width - (this.statsView.width);
       this.statsView.y = this.inventoryGrid.y;
       this.statsView.visible = false;
-      addChild(this.statsView);
-      this.interactPanel = new InteractPanel(gs,player,200,100);
+
       this.interactPanel.x = this.INTERACT_PANEL_POSITION.x;
       this.interactPanel.y = this.INTERACT_PANEL_POSITION.y;
+
+      addChild(this.inventoryGrid);
+      addChild(this.equippedGrid);
+      addChild(this.statsView);
       addChild(this.interactPanel);
    }
 

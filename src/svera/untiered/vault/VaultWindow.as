@@ -65,7 +65,7 @@ public class VaultWindow extends Sprite {
 
     private function onUpgradeClick(e:MouseEvent) : void {
         // do some verification
-        GameServerConnection.instance.vaultUpgrade();
+        GameServerConnection.instance.vaultUpgrade(0xfff);
     }
 
     public function setContent(size:int, slots:Vector.<VaultUpdateSlot>) : void {

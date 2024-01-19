@@ -24,10 +24,10 @@ public class ItemGrid extends Panel
       public static const NO_CUT:Array = [0,0,0,0];
       
       public static const CutsByNum:Object = {
-         1:[[0,1,0,0],NO_CUT,NO_CUT,NO_CUT,[0,1,1,0]],
+         1:[[1,1,0,0],NO_CUT,NO_CUT,NO_CUT,[0,0,1,1]],
          2:[[1,0,0,1], NO_CUT, NO_CUT, NO_CUT,NO_CUT, NO_CUT, NO_CUT, NO_CUT, NO_CUT, NO_CUT, NO_CUT, NO_CUT, NO_CUT, NO_CUT, NO_CUT, NO_CUT, NO_CUT, NO_CUT, NO_CUT, NO_CUT, [0, 0, 0, 1], NO_CUT, NO_CUT, [0, 0, 1, 0]],
          3:[[1,0,0,0],NO_CUT,NO_CUT,[0,1,0,0],[0,0,0,1],NO_CUT,NO_CUT,[0,0,1,0]],
-         6:[[1, 0, 0, 0], NO_CUT, NO_CUT, NO_CUT,NO_CUT, NO_CUT, NO_CUT, NO_CUT, NO_CUT, NO_CUT, NO_CUT, NO_CUT, NO_CUT, NO_CUT, NO_CUT, NO_CUT, NO_CUT, NO_CUT, NO_CUT, NO_CUT, [0, 0, 0, 1], NO_CUT, NO_CUT, [0, 0, 1, 0]]
+         6:[[1, 0, 0, 0], NO_CUT, NO_CUT, [0, 1, 0, 0],NO_CUT, NO_CUT, NO_CUT, NO_CUT, NO_CUT, NO_CUT, NO_CUT, NO_CUT, NO_CUT, NO_CUT, NO_CUT, NO_CUT, NO_CUT, NO_CUT, NO_CUT, NO_CUT, [0, 0, 0, 1], NO_CUT, NO_CUT, [0, 0, 1, 0]]
       };
        
       

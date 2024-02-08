@@ -8,44 +8,52 @@ import com.company.ui.SimpleText;
    import flash.display.Shape;
    import flash.filters.DropShadowFilter;
 
+import svera.untiered.account.core.Account;
+
 import svera.untiered.assets.services.IconFactory;
 import svera.untiered.assets.services.IconFactory;
    import svera.untiered.core.model.PlayerModel;
    
    public class BuyCharacterRect extends CharacterRect
    {
+      [Inject]
+      public var model:PlayerModel;
+
       private var classNameText_:SimpleText;
       private var priceText_:SimpleText;
-      private var currency_:Bitmap;
+      private var currencyIcon_:Bitmap;
       
       public function BuyCharacterRect(model:PlayerModel)
       {
          super(2039583,4342338);
          var icon:Shape = this.buildIcon();
-         icon.x = 7;
-         icon.y = 7;
+         icon.x = this.width / 2 - icon.width / 2;
+         icon.y = this.height / 2 - icon.height / 2;
          addChild(icon);
          makeContainer();
-         this.classNameText_ = new SimpleText(18,16777215,false,0,0);
+         this.classNameText_ = new SimpleText(12,16777215,false,0,0);
          this.classNameText_.setBold(true);
-         this.classNameText_.text = "Buy " + this.getOrdinalString(model.getMaxCharacters() + 1) + " Character Slot";
+         this.classNameText_.text = this.getOrdinalString(model.getMaxCharacters() + 1) + " Slot";
          this.classNameText_.updateMetrics();
          this.classNameText_.filters = [new DropShadowFilter(0,0,0,1,8,8)];
-         this.classNameText_.x = 58;
-         this.classNameText_.y = 2;
+         this.classNameText_.x = this.x + this.width / 2 - this.classNameText_.width / 2;
+         this.classNameText_.y = this.y + this.height + this.classNameText_.height;
          selectContainer.addChild(this.classNameText_);
-         this.priceText_ = new SimpleText(18,16777215,false,0,0);
+         var currencyBD_:BitmapData = IconFactory.makeFame();
+         this.currencyIcon_ = new Bitmap(currencyBD_);
+         this.currencyIcon_.scaleX = this.currencyIcon_.scaleX * 0.5;
+         this.currencyIcon_.scaleY = this.currencyIcon_.scaleY * 0.5;
+         this.currencyIcon_.x = this.x;
+         this.currencyIcon_.y = this.y;
+         selectContainer.addChild(this.currencyIcon_);
+         var hasFunds:Boolean = model.getHonor() >= Parameters.CHARACTER_SLOT_PRICE;
+         this.priceText_ = new SimpleText(14,!hasFunds?15607334:0x5ed44c,false,0,0);
          this.priceText_.text = Parameters.CHARACTER_SLOT_PRICE.toString();
          this.priceText_.updateMetrics();
          this.priceText_.filters = [new DropShadowFilter(0,0,0,1,8,8)];
-         this.priceText_.x = WIDTH - 43 - this.priceText_.width;
-         this.priceText_.y = 15;
+         this.priceText_.x = this.width / 2 - this.priceText_.width / 2;
+         this.priceText_.y = this.currencyIcon_.y - 2;
          selectContainer.addChild(this.priceText_);
-         var bd:BitmapData = IconFactory.makeFame();
-         this.currency_ = new Bitmap(bd);
-         this.currency_.x = WIDTH - 43;
-         this.currency_.y = 18;
-         selectContainer.addChild(this.currency_);
       }
       
       private function buildIcon() : Shape

@@ -77,7 +77,7 @@ package com.company.assembleegameclient.screens
          stars.x = this.graphic_.width / 2 - stars.width / 2;
          stars.filters = [new DropShadowFilter(0,0,0,1,4,4)];
          this.graphicContainer_.addChild(stars);
-         this.classNameText_.y = 76;
+         this.classNameText_.y = 0 - this.classNameText_.actualHeight_;
       }
       
       public function objectType() : int

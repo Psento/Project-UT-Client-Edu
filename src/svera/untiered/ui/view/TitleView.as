@@ -15,20 +15,20 @@ import org.osflash.signals.Signal;
    
    public class TitleView extends Sprite
    {
-      private static const COPYRIGHT:String = "© 2010, 2011 by Wild Shadow Studios, Inc.";
+      private static const COPYRIGHT:String = "© Svera, Inc.";
        
       
       public var playClicked:Signal;
-      public var accountClicked:Signal;
       public var legendsClicked:Signal;
       public var editorClicked:Signal;
-
-      private var container:Sprite;
+      public var accountClicked:Signal;
+      public var quitClicked:Signal;
 
       private var playButton:TitleMenuOption;
-      private var accountButton:TitleMenuOption;
       private var legendsButton:TitleMenuOption;
       private var editorButton:TitleMenuOption;
+      private var accountButton:TitleMenuOption;
+      private var quitButton:TitleMenuOption;
 
       private var versionText:SimpleText;
       private var copyrightText:SimpleText;
@@ -38,66 +38,64 @@ import org.osflash.signals.Signal;
          super();
          addChild(new ScreenBase(1));
          addChild(new AccountScreen());
-         addChild(new ScreenGraphic());
          this.makeChildren();
       }
       
       private function makeChildren() : void
       {
-         this.container = new Sprite();
-         this.playButton = new TitleMenuOption(ScreenTypes.PLAY,36,true);
+         this.playButton = new TitleMenuOption(ScreenTypes.PLAY,18,false, false);
          this.playClicked = this.playButton.clicked;
-         this.container.addChild(this.playButton);
-         this.accountButton = new TitleMenuOption(ScreenTypes.ACCOUNT,22,false);
-         this.accountClicked = this.accountButton.clicked;
-         this.container.addChild(this.accountButton);
-         this.legendsButton = new TitleMenuOption(ScreenTypes.LEGENDS,22,false);
+         this.addChild(this.playButton);
+         this.legendsButton = new TitleMenuOption(ScreenTypes.LEGENDS,18,false, false);
          this.legendsClicked = this.legendsButton.clicked;
-         this.container.addChild(this.legendsButton);
-         this.editorButton = new TitleMenuOption(ScreenTypes.EDITOR,22,false);
+         this.addChild(this.legendsButton);
+         this.editorButton = new TitleMenuOption(ScreenTypes.EDITOR,18,false, false);
          this.editorClicked = this.editorButton.clicked;
-         this.container.addChild(editorButton);
+         this.addChild(editorButton);
+         this.accountButton = new TitleMenuOption(ScreenTypes.ACCOUNT,18,false, false);
+         this.accountClicked = this.accountButton.clicked;
+         this.addChild(this.accountButton);
+         this.quitButton = new TitleMenuOption("Quit Game",18,false, false);
+         this.quitClicked = this.quitButton.clicked;
+         this.addChild(this.quitButton);
          this.versionText = new SimpleText(12,8355711,false,0,0);
          this.versionText.filters = [new DropShadowFilter(0,0,0)];
-         this.container.addChild(this.versionText);
+         this.addChild(this.versionText);
          this.copyrightText = new SimpleText(12,8355711,false,0,0);
          this.copyrightText.text = COPYRIGHT;
          this.copyrightText.updateMetrics();
          this.copyrightText.filters = [new DropShadowFilter(0,0,0)];
-         this.container.addChild(this.copyrightText);
+         this.addChild(this.copyrightText);
       }
       
       public function initialize() : void
       {
          this.updateVersionText();
          this.positionButtons();
-         this.addChildren();
       }
       
       private function updateVersionText() : void
       {
-         this.versionText.htmlText = "RotMG " + Parameters.BUILD_VERSION;
+         this.versionText.htmlText = "V" + Parameters.BUILD_VERSION;
          this.versionText.updateMetrics();
-      }
-      
-      private function addChildren() : void
-      {
-         addChild(this.container);
       }
       
       private function positionButtons() : void
       {
-         this.playButton.x = stage.stageWidth / 2 - this.playButton.width / 2;
-         this.playButton.y = 520;
-         this.accountButton.x = stage.stageWidth / 2 - this.accountButton.width / 2 - 94;
-         this.accountButton.y = 532;
-         this.legendsButton.x = stage.stageWidth / 2 - this.legendsButton.width / 2 + 96;
-         this.legendsButton.y = 532;
-         this.editorButton.x = 8;
-         this.editorButton.y = 532;
-         this.versionText.y = stage.stageHeight - this.versionText.height;
-         this.copyrightText.x = stage.stageWidth - this.copyrightText.width;
-         this.copyrightText.y = stage.stageHeight - this.copyrightText.height;
+         this.playButton.x = stage.width / 2 - this.playButton.width / 2;
+         this.playButton.y = stage.height / 2 + (this.playButton.height * 2);
+         this.legendsButton.x = stage.width / 2 - this.legendsButton.width / 2;
+         this.legendsButton.y = this.playButton.y + this.legendsButton.height + 18;
+         this.editorButton.x = stage.width / 2 - this.editorButton.width / 2;
+         this.editorButton.y = this.legendsButton.y + this.editorButton.height + 18;
+         this.accountButton.x = stage.width / 2 - this.accountButton.width / 2;
+         this.accountButton.y = this.editorButton.y + this.accountButton.height + 18;
+         this.quitButton.x = stage.width / 2 - this.quitButton.width / 2;
+         this.quitButton.y = this.accountButton.y + this.quitButton.height + 18;
+         this.versionText.x = stage.width - this.versionText.width - this.versionText.height / 2;
+         this.versionText.y = stage.height - this.versionText.height - this.versionText.height / 2;
+         this.copyrightText.x = stage.width - this.copyrightText.width - this.copyrightText.height / 2;
+         this.copyrightText.y = stage.height - this.versionText.height - this.copyrightText.height - this.copyrightText.height / 2;
       }
    }
 }

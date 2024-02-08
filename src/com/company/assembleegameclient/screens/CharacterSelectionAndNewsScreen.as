@@ -95,9 +95,9 @@ import svera.untiered.core.model.PlayerModel;
          this.createNameText();
          this.createCurrencyDisplay();
          this.createCharactersText();
-         this.createNewsText();
-         this.createNewsList();
-         this.createBoundaryLines();
+         //this.createNewsText();
+         //this.createNewsList();
+         //this.createBoundaryLines();
          this.createCharacterList();
 
          this.createButtons();
@@ -110,7 +110,6 @@ import svera.untiered.core.model.PlayerModel;
       
       private function createButtons() : void
       {
-         addChild(new ScreenGraphic());
          addChild(this.playButton);
          addChild(this.classesButton);
          addChild(this.backButton);
@@ -119,11 +118,11 @@ import svera.untiered.core.model.PlayerModel;
       
       private function positionButtons() : void
       {
-         this.playButton.x = (this.getReferenceRectangle().width - this.playButton.width) / 2;
+         this.playButton.x = (this.stage.width - this.playButton.width) / 2;
          this.playButton.y = 520;
-         this.backButton.x = (this.getReferenceRectangle().width - this.backButton.width) / 2 - 94;
+         this.backButton.x = (this.stage.width - this.backButton.width) / 2 - 94;
          this.backButton.y = 532;
-         this.classesButton.x = (this.getReferenceRectangle().width - this.classesButton.width) / 2 + 96;
+         this.classesButton.x = (this.stage.width - this.classesButton.width) / 2 + 96;
          this.classesButton.y = 532;
       }
       
@@ -140,30 +139,10 @@ import svera.untiered.core.model.PlayerModel;
       private function createCharacterList() : void
       {
          this.characterList = new CharacterList(this.model);
-         this.characterList.x = 10;
-         this.characterList.y = 112;
+         this.characterList.x = 115;
+         this.characterList.y = 153;
          this.characterListHeight = this.characterList.height;
          addChild(this.characterList);
-      }
-
-      private function createNewsList() : void{
-         this.newsList = new NewsList(this.model);
-         this.newsList.x = 400;
-         this.newsList.y = 112;
-         addChild(this.newsList);
-      }
-      
-      private function createNewsText() : void
-      {
-         this.newsText = new SimpleText(18,11776947,false,0,0);
-         this.newsText.setBold(true);
-         this.newsText.text = "News";
-         this.newsText.updateMetrics();
-         this.newsText.filters = [this.DROP_SHADOW];
-         this.newsText.setAlignment(TextFormatAlign.LEFT);
-         this.newsText.x = 410;
-         this.newsText.y = 79;
-         addChild(this.newsText);
       }
       
       private function createCharactersText() : void
@@ -182,8 +161,8 @@ import svera.untiered.core.model.PlayerModel;
       private function createCurrencyDisplay() : void
       {
          this.currencyDisplay = new CurrencyDisplay();
-         this.currencyDisplay.draw(this.model.getTsavorite(),this.model.getMedallions(),this.model.getHonor(),this.model.getFame());
-         this.currencyDisplay.x = this.getReferenceRectangle().width;
+         this.currencyDisplay.draw(this.model.getTsavorite(),this.model.getMedallions(),this.model.getHonor(),this.model.getFame(), true);
+         this.currencyDisplay.x = this.stage.width;
          this.currencyDisplay.y = 20;
          addChild(this.currencyDisplay);
       }
@@ -195,8 +174,8 @@ import svera.untiered.core.model.PlayerModel;
          this.nameText.text = this.model.getName() || "Undefined";
          this.nameText.updateMetrics();
          this.nameText.filters = [this.DROP_SHADOW];
-         this.nameText.y = 24;
-         this.nameText.x = (this.getReferenceRectangle().width - this.nameText.width) / 2;
+         this.nameText.y = 24 + this.nameText.height;
+         this.nameText.x = (this.stage.width - this.nameText.width) / 2;
          addChild(this.nameText);
       }
       
@@ -216,7 +195,7 @@ import svera.untiered.core.model.PlayerModel;
          this.lines.graphics.clear();
          this.lines.graphics.lineStyle(2,5526612);
          this.lines.graphics.moveTo(0,105);
-         this.lines.graphics.lineTo(this.getReferenceRectangle().width,105);
+         this.lines.graphics.lineTo(this.stage.width,105);
          this.lines.graphics.moveTo(400,107);
          this.lines.graphics.lineTo(400,526);
          this.lines.graphics.lineStyle();
@@ -252,7 +231,7 @@ import svera.untiered.core.model.PlayerModel;
       {
          this.nameText.text = name;
          this.nameText.updateMetrics();
-         this.nameText.x = (this.getReferenceRectangle().width - this.nameText.width) * 0.5;
+         this.nameText.x = (this.stage.width - this.nameText.width) * 0.5;
       }
    }
 }

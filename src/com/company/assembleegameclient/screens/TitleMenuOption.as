@@ -20,16 +20,18 @@ package com.company.assembleegameclient.screens
       private var size:int;
       private var textField:SimpleText;
       private var isPulse:Boolean;
+      private var isBold:Boolean;
       private var active:Boolean;
       private var originalWidth:Number;
       private var originalHeight:Number;
       
-      public function TitleMenuOption(text:String, size:int, pulse:Boolean)
+      public function TitleMenuOption(text:String, size:int, pulse:Boolean, bold:Boolean = true)
       {
          super();
          this.size = size;
          this.setText(text);
          this.isPulse = pulse;
+         this.isBold = bold;
          this.originalWidth = width;
          this.originalHeight = height;
          activate();
@@ -43,8 +45,8 @@ package com.company.assembleegameclient.screens
             removeChild(this.textField);
          }
          this.textField = new SimpleText(this.size,16777215,false,0,0);
-         this.textField.setBold(true);
-         this.textField.text = text.toLowerCase();
+         this.textField.setBold(this.isBold);
+         this.textField.text = isBold ? text.toLowerCase() : text;
          this.textField.updateMetrics();
          this.textField.filters = [new DropShadowFilter(0,0,0,0.5,12,12)];
          addChild(this.textField);

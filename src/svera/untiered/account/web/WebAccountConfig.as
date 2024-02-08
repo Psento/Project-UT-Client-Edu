@@ -10,13 +10,15 @@ package svera.untiered.account.web
    import svera.untiered.account.core.signals.LoginSignal;
    import svera.untiered.account.core.signals.LogoutSignal;
    import svera.untiered.account.core.signals.OpenAccountInfoSignal;
-   import svera.untiered.account.core.signals.RegisterSignal;
+import svera.untiered.account.core.signals.OpenQuitDialogSignal;
+import svera.untiered.account.core.signals.RegisterSignal;
    import svera.untiered.account.core.signals.SendPasswordReminderSignal;
    import svera.untiered.account.web.commands.WebChangePasswordCommand;
    import svera.untiered.account.web.commands.WebLoginCommand;
    import svera.untiered.account.web.commands.WebLogoutCommand;
    import svera.untiered.account.web.commands.WebOpenAccountInfoCommand;
-   import svera.untiered.account.web.commands.WebRegisterAccountCommand;
+import svera.untiered.account.web.commands.WebOpenQuitDialogCommand;
+import svera.untiered.account.web.commands.WebRegisterAccountCommand;
    import svera.untiered.account.web.commands.WebSendPasswordReminderCommand;
    import svera.untiered.account.web.services.WebChangePasswordTask;
    import svera.untiered.account.web.services.WebLoadAccountTask;
@@ -32,7 +34,9 @@ package svera.untiered.account.web
    import svera.untiered.account.web.view.WebChangePasswordMediator;
    import svera.untiered.account.web.view.WebLoginDialog;
    import svera.untiered.account.web.view.WebLoginMediator;
-   import svera.untiered.account.web.view.WebRegisterDialog;
+import svera.untiered.account.web.view.WebQuitDialog;
+import svera.untiered.account.web.view.WebQuitMediator;
+import svera.untiered.account.web.view.WebRegisterDialog;
    import svera.untiered.account.web.view.WebRegisterMediator;
    import org.swiftsuspenders.Injector;
    import robotlegs.bender.extensions.mediatorMap.api.IMediatorMap;
@@ -73,6 +77,7 @@ package svera.untiered.account.web
       
       protected function mapCommands() : void
       {
+         this.commandMap.map(OpenQuitDialogSignal).toCommand(WebOpenQuitDialogCommand);
          this.commandMap.map(OpenAccountInfoSignal).toCommand(WebOpenAccountInfoCommand);
          this.commandMap.map(LoginSignal).toCommand(WebLoginCommand);
          this.commandMap.map(LogoutSignal).toCommand(WebLogoutCommand);
@@ -84,6 +89,7 @@ package svera.untiered.account.web
       
       protected function mapMediators() : void
       {
+         this.mediatorMap.map(WebQuitDialog).toMediator(WebQuitMediator);
          this.mediatorMap.map(WebAccountInfoView).toMediator(WebAccountInfoMediator);
          this.mediatorMap.map(WebChangePasswordDialog).toMediator(WebChangePasswordMediator);
          this.mediatorMap.map(WebAccountDetailDialog).toMediator(WebAccountDetailMediator);

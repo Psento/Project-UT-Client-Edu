@@ -73,14 +73,16 @@ package svera.untiered.game.view
          this.fameText_ = new SimpleText(FONT_SIZE,16777215,false,0,0);
          this.fameText_.filters = [new DropShadowFilter(0,0,0,1,4,4,2)];
          addChild(this.fameText_);
-         this.fameIcon_ = new Bitmap(FameUtil.getFameIcon());
+         var fameBD:BitmapData = AssetLibrary.getImageFromSet("Assets_Currency_Icons16x16",3);
+         fameBD = TextureRedrawer.redraw(fameBD,40,true,0);
+         this.fameIcon_ = new Bitmap(fameBD);
          addChild(this.fameIcon_);
          this.draw(0,0,0,0);
          mouseEnabled = false;
          doubleClickEnabled = false;
       }
 
-      public function draw(tsavorite:int, medallions:int, honor:int, fame:int) : void
+      public function draw(tsavorite:int, medallions:int, honor:int, fame:int, compact:Boolean = false) : void
       {
          if(tsavorite == this.tsavorite_ && medallions == this.medallions_ && honor == this.honor_ && fame == this.fame_)
          {
@@ -98,18 +100,38 @@ package svera.untiered.game.view
          this.medallionsText_.updateMetrics();
          this.medallionsText_.x = this.medallionsIcon_.x - this.medallionsText_.width + 8;
          this.medallionsText_.y = this.medallionsIcon_.height / 2 - this.medallionsText_.height / 2;
-         this.honor_ = honor;
-         this.honorIcon_.x = this.medallionsText_.x - honorIcon_.width;
-         this.honorText_.text = this.honor_.toString();
-         this.honorText_.updateMetrics();
-         this.honorText_.x = this.honorIcon_.x - this.honorText_.width + 8;
-         this.honorText_.y = this.honorIcon_.height / 2 - this.honorText_.height / 2;
-         this.fame_ = fame;
-         this.fameIcon_.x = this.honorText_.x - this.fameIcon_.width;
-         this.fameText_.text = this.fame_.toString();
-         this.fameText_.updateMetrics();
-         this.fameText_.x = this.fameIcon_.x - this.fameText_.width + 8;
-         this.fameText_.y = this.fameIcon_.height / 2 - this.fameText_.height / 2;
+         if(compact)
+         {
+            this.honor_ = honor;
+            this.honorText_.text = this.honor_.toString();
+            this.honorText_.updateMetrics();
+            this.honorIcon_.x = this.tsavoriteText_.x - honorIcon_.width;
+            this.honorText_.x = this.tsavoriteText_.x;
+            this.honorText_.y = this.honorIcon_.height / 2 - this.honorText_.height / 2 + this.honorIcon_.height;
+
+            this.fame_ = fame;
+            this.fameText_.text = this.fame_.toString();
+            this.fameText_.updateMetrics();
+            this.fameIcon_.x = this.medallionsText_.x - this.fameIcon_.width;
+            this.fameText_.x = this.fameIcon_.x - this.fameText_.width + 8;
+            this.fameText_.y = this.fameIcon_.height / 2 - this.fameText_.height / 2 + this.fameIcon_.height;
+         }
+         else
+         {
+            this.honor_ = honor;
+            this.honorText_.text = this.honor_.toString();
+            this.honorText_.updateMetrics();
+            this.honorIcon_.x = this.medallionsText_.x - honorIcon_.width;
+            this.honorText_.x = this.honorIcon_.x - this.honorText_.width + 8;
+            this.honorText_.y = this.honorIcon_.height / 2 - this.honorText_.height / 2;
+
+            this.fame_ = fame;
+            this.fameText_.text = this.fame_.toString();
+            this.fameText_.updateMetrics();
+            this.fameIcon_.x = this.honorText_.x - this.fameIcon_.width;
+            this.fameText_.x = this.fameIcon_.x - this.fameText_.width + 8;
+            this.fameText_.y = this.fameIcon_.height / 2 - this.fameText_.height / 2;
+         }
       }
    }
 }

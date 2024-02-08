@@ -37,17 +37,18 @@ package com.company.assembleegameclient.screens.charrects
          this.bitmap_.bitmapData = bd;
          this.bitmap_.scaleX = this.bitmap_.scaleX * 0.5;
          this.bitmap_.scaleY = this.bitmap_.scaleY * 0.5;
-         this.bitmap_.x = 0;
-         this.bitmap_.y = this.bitmap_.y + 3;
+         this.bitmap_.x = this.width / 2 - this.bitmap_.width / 2;
+         this.bitmap_.y = this.height / 2 - this.bitmap_.height / 2 + 3;
          selectContainer.addChild(this.bitmap_);
-         this.classNameText_ = new SimpleText(18,16777215,false,0,0);
+         this.classNameText_ = new SimpleText(12,16777215,false,0,0);
          this.classNameText_.setBold(true);
          this.classNameText_.text = "New Character";
          this.classNameText_.updateMetrics();
          this.classNameText_.filters = [new DropShadowFilter(0,0,0,1,8,8)];
-         this.classNameText_.x = 58;
+         this.classNameText_.x = this.x + this.width / 2 - this.classNameText_.width / 2;
+         this.classNameText_.y = this.y + this.height + this.classNameText_.height;
          selectContainer.addChild(this.classNameText_);
-         if(model.getNumStars() != FameUtil.maxStars())
+         /*if(model.getNumStars() != FameUtil.maxStars())
          {
             this.taglineIcon_ = new StarGraphic();
             this.taglineIcon_.transform.colorTransform = new ColorTransform(179 / 255,179 / 255,179 / 255);
@@ -64,7 +65,7 @@ package com.company.assembleegameclient.screens.charrects
             this.taglineText_.x = 58 + this.taglineIcon_.width + 2;
             this.taglineText_.y = 24;
             selectContainer.addChild(this.taglineText_);
-         }
+         }*/
       }
    }
 }

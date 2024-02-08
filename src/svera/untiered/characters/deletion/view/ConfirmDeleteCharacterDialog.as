@@ -30,6 +30,8 @@ package svera.untiered.characters.deletion.view
       {
          var text:String = this.TEXT_TEMPLATE.replace("${NAME}",name).replace("${DISPLAYID}",displayId);
          var dialog:Dialog = new Dialog(text,"Verify Deletion","Cancel","Delete");
+         dialog.box_.x = this.stage.width / 2 - dialog.box_.width / 2;
+         dialog.box_.y = this.stage.height / 2 - dialog.box_.height / 2;
          dialog.addEventListener(this.CANCEL_EVENT,this.onCancel);
          dialog.addEventListener(this.DELETE_EVENT,this.onDelete);
          addChild(dialog);

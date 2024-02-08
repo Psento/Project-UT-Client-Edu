@@ -64,13 +64,13 @@ public class BuyCharacterSlotCommand
       
       private function isSlotUnaffordable() : Boolean
       {
-         return this.model.getFame() < Parameters.CHARACTER_SLOT_PRICE;
+         return this.model.getHonor() < Parameters.CHARACTER_SLOT_PRICE;
       }
       
       private function nonSufficientFunds() : void
       {
          this.openDialog.dispatch(
-                 new MessageCloseDialog("Not Enough Fame",
+                 new MessageCloseDialog("Not Enough Honor",
                          "Insufficient funds when trying to buy a slot.", "Close"));
       }
       

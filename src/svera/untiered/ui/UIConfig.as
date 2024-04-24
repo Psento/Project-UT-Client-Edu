@@ -21,7 +21,7 @@ package svera.untiered.ui
    import svera.untiered.account.core.view.RegisterPromptDialog;
    import svera.untiered.account.core.view.RegisterPromptDialogMediator;
 import svera.untiered.game.model.PotionInventoryModel;
-import svera.untiered.messaging.impl.incoming.VaultSlotUpdate;
+import svera.untiered.messaging.impl.incoming.StorageSlotUpdate;
 import svera.untiered.startup.control.StartupSequence;
    import svera.untiered.ui.commands.EnterGameCommand;
    import svera.untiered.ui.commands.HUDInitCommand;
@@ -71,11 +71,11 @@ import org.swiftsuspenders.Injector;
    import robotlegs.bender.extensions.signalCommandMap.api.ISignalCommandMap;
    import robotlegs.bender.framework.api.IConfig;
 
-import svera.untiered.vault.VaultWindow;
-import svera.untiered.vault.mediator.VaultWindowMediator;
-import svera.untiered.vault.signals.VaultSlotUpdateSignal;
+import svera.untiered.storage.VaultWindow;
+import svera.untiered.storage.mediator.VaultWindowMediator;
+import svera.untiered.storage.signals.VaultSlotUpdateSignal;
 
-import svera.untiered.vault.signals.VaultUpdateSignal;
+import svera.untiered.storage.signals.VaultUpdateSignal;
 
 public class UIConfig implements IConfig
    {

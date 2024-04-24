@@ -1,11 +1,10 @@
 package svera.untiered.messaging.impl.outgoing {
 import flash.utils.IDataOutput;
 
-public class VaultUpgrade extends OutgoingMessage {
-
+public class StorageRequest extends OutgoingMessage {
     public var objectId_:int;
 
-    public function VaultUpgrade(id:uint, callback:Function) {
+    public function StorageRequest(id:uint, callback:Function) {
         super(id,callback);
     }
 

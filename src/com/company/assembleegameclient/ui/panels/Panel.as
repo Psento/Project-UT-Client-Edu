@@ -19,8 +19,7 @@ package com.company.assembleegameclient.ui.panels
          this.gs_ = gs;
       }
       
-      public function draw() : void
-      {
-      }
+      public function draw() : void {}
+      public function onRemoved() : void {}
    }
 }

@@ -18,7 +18,8 @@ import com.company.assembleegameclient.objects.Container;
    import com.company.assembleegameclient.objects.Portal;
    import com.company.assembleegameclient.objects.Projectile;
    import com.company.assembleegameclient.objects.SellableObject;
-   import com.company.assembleegameclient.objects.particles.AOEEffect;
+import com.company.assembleegameclient.objects.Sign;
+import com.company.assembleegameclient.objects.particles.AOEEffect;
    import com.company.assembleegameclient.objects.particles.BurstEffect;
    import com.company.assembleegameclient.objects.particles.CollapseEffect;
    import com.company.assembleegameclient.objects.particles.ConeBlastEffect;
@@ -61,6 +62,7 @@ import com.hurlant.crypto.Crypto;
    import flash.utils.getTimer;
 
 import org.hamcrest.text.re;
+import org.osflash.signals.Signal;
 
 import svera.lib.net.api.MessageMap;
    import svera.lib.net.api.MessageProvider;
@@ -118,8 +120,8 @@ import svera.untiered.messaging.impl.incoming.TradeDone;
 import svera.untiered.messaging.impl.incoming.TradeRequested;
 import svera.untiered.messaging.impl.incoming.TradeStart;
 import svera.untiered.messaging.impl.incoming.Update;
-import svera.untiered.messaging.impl.incoming.VaultSlotUpdate;
-import svera.untiered.messaging.impl.incoming.VaultUpdate;
+import svera.untiered.messaging.impl.incoming.StorageSlotUpdate;
+import svera.untiered.messaging.impl.incoming.StorageUpdate;
 import svera.untiered.messaging.impl.outgoing.AcceptTrade;
 import svera.untiered.messaging.impl.outgoing.AoeAck;
    import svera.untiered.messaging.impl.outgoing.Buy;
@@ -150,21 +152,24 @@ import svera.untiered.messaging.impl.outgoing.Reskin;
    import svera.untiered.messaging.impl.outgoing.Teleport;
    import svera.untiered.messaging.impl.outgoing.UseItem;
    import svera.untiered.messaging.impl.outgoing.UsePortal;
-import svera.untiered.messaging.impl.outgoing.VaultRequest;
-import svera.untiered.messaging.impl.outgoing.VaultUpgrade;
+import svera.untiered.messaging.impl.outgoing.StorageRequest;
+import svera.untiered.messaging.impl.outgoing.StorageUpgrade;
 import svera.untiered.minimap.control.UpdateGameObjectTileSignal;
    import svera.untiered.minimap.control.UpdateGroundTileSignal;
    import svera.untiered.minimap.model.UpdateGroundTileVO;
 import svera.untiered.stage3D.Renderer;
+import svera.untiered.storage.StorageUtil;
+import svera.untiered.storage.signals.GiftSlotUpdateSignal;
+import svera.untiered.storage.signals.GiftUpdateSignal;
 import svera.untiered.ui.model.UpdateGameObjectTileVO;
 import svera.untiered.ui.view.MessageCloseDialog;
 import svera.untiered.ui.view.NotEnoughTsavoriteDialog;
    import org.swiftsuspenders.Injector;
    import robotlegs.bender.framework.api.ILogger;
 
-import svera.untiered.vault.signals.VaultSlotUpdateSignal;
+import svera.untiered.storage.signals.VaultSlotUpdateSignal;
 
-import svera.untiered.vault.signals.VaultUpdateSignal;
+import svera.untiered.storage.signals.VaultUpdateSignal;
 
 public class GameServerConnection
    {
@@ -381,10 +386,10 @@ public class GameServerConnection
          messages.map(TRADEDONE).toMessage(TradeDone).toMethod(this.onTradeDone);
          messages.map(TRADEACCEPTED).toMessage(TradeAccepted).toMethod(this.onTradeAccepted);
          messages.map(SWITCHMUSIC).toMessage(SwitchMusic).toMethod(this.onSwitchMusic);
-         messages.map(VAULTUPDATE).toMessage(VaultUpdate).toMethod(this.vaultUpdate);
-         messages.map(VAULTSLOTUPDATE).toMessage(VaultSlotUpdate).toMethod(this.vaultSlotUpdate);
-         messages.map(VAULTREQUEST).toMessage(VaultRequest);
-         messages.map(VAULTUPGRADE).toMessage(VaultUpgrade);
+         messages.map(VAULTUPDATE).toMessage(StorageUpdate).toMethod(this.storageUpdate);
+         messages.map(VAULTSLOTUPDATE).toMessage(StorageSlotUpdate).toMethod(this.storageSlotUpdate);
+         messages.map(VAULTREQUEST).toMessage(StorageRequest);
+         messages.map(VAULTUPGRADE).toMessage(StorageUpgrade);
       }
       
       private function unmapMessages() : void
@@ -493,26 +498,26 @@ public class GameServerConnection
          this.serverConnection.sendMessage(load);
       }
 
-      public function vaultRequest(objectId:int) : void {
-         var request:VaultRequest = this.messages.require(VAULTREQUEST) as VaultRequest;
-         request.objectId_ = objectId;
-         this.serverConnection.sendMessage(request);
-      }
-
       public function vaultUpgrade(objectId:int) : void {
-         var upgrade:VaultUpgrade = this.messages.require(VAULTUPGRADE) as VaultUpgrade;
+         var upgrade:StorageUpgrade = this.messages.require(VAULTUPGRADE) as StorageUpgrade;
          upgrade.objectId_ = objectId;
          this.serverConnection.sendMessage(upgrade);
       }
 
-      private function vaultUpdate(update:VaultUpdate) : void {
-         var updateSignal:VaultUpdateSignal = this.injector.getInstance(VaultUpdateSignal);
-         updateSignal.dispatch(update.vaultSize_, update.items_);
+      public function storageRequest(objectId:int) : void {
+         var request:StorageRequest = this.messages.require(VAULTREQUEST) as StorageRequest;
+         request.objectId_ = objectId;
+         this.serverConnection.sendMessage(request);
       }
 
-      private function vaultSlotUpdate(update:VaultSlotUpdate) : void {
-         var updateSignal:VaultSlotUpdateSignal = this.injector.getInstance(VaultSlotUpdateSignal);
-         updateSignal.dispatch(update.slotIndex_, update.inventory_, update.itemData_);
+      private function storageUpdate(update:StorageUpdate) : void {
+         var updateSignal:Signal = this.injector.getInstance(update.type_ == StorageUtil.VAULT  ? VaultUpdateSignal : GiftUpdateSignal);
+         updateSignal.dispatch(update.size_, update.items_);
+      }
+
+      private function storageSlotUpdate(update:StorageSlotUpdate) : void {
+         var updateSignal:Signal = this.injector.getInstance(update.type_ == StorageUtil.VAULT  ? VaultSlotUpdateSignal : GiftSlotUpdateSignal);
+         updateSignal.dispatch(update.slot_, update.inventory_, update.itemData_);
       }
       
       public function playerShoot(time:int, startX:Number, startY:Number, angle:Number, ability:Boolean, numShots:int) : void

@@ -52,7 +52,8 @@ public class ObjectLibrary
          "Stalagmite":Stalagmite,
          "Wall":Wall,
          "Traits":Traits,
-         "Vault":VaultChest
+         "Vault":VaultChest,
+         "Gift":GiftChest
       };
        
       
@@ -198,8 +199,7 @@ public class ObjectLibrary
       public static function getSlotTypeFromType(objectType:int) : int
       {
          var objectXML:XML = xmlLibrary_[objectType];
-         if(!objectXML.hasOwnProperty("SlotType"))
-         {
+         if(objectXML == null || !objectXML.hasOwnProperty("SlotType")) {
             return -1;
          }
          return int(objectXML.SlotType);

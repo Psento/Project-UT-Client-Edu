@@ -3,7 +3,7 @@ package svera.untiered.account.web.view
    import svera.untiered.account.core.Account;
    import svera.untiered.dialogs.control.CloseDialogsSignal;
    import svera.untiered.dialogs.control.OpenDialogSignal;
-   import flash.desktop.NativeApplication;
+   //import flash.desktop.NativeApplication;
    import robotlegs.bender.bundles.mvcs.Mediator;
    
    public class WebQuitMediator extends Mediator
@@ -47,7 +47,7 @@ package svera.untiered.account.web.view
       private function onQuit() : void
       {
          this.closeDialog.dispatch();
-         NativeApplication.nativeApplication.exit();
+         //NativeApplication.nativeApplication.exit();
       }
    }
 }

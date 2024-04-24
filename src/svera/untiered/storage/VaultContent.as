@@ -1,4 +1,4 @@
-package svera.untiered.vault {
+package svera.untiered.storage {
 import com.company.assembleegameclient.objects.ObjectLibrary;
 import com.company.assembleegameclient.objects.Player;
 import com.company.assembleegameclient.objects.VaultChest;
@@ -9,18 +9,12 @@ import com.company.util.SpriteUtil;
 
 import flash.display.Sprite;
 
-import svera.untiered.constants.ItemConstants;
-
 import svera.untiered.messaging.impl.GameServerConnection;
 
-import svera.untiered.messaging.impl.data.VaultUpdateSlot;
-import svera.untiered.vault.components.VaultSortTab;
+import svera.untiered.messaging.impl.data.StorageSlotUpdateData;
+import svera.untiered.storage.components.StorageSortTab;
 
 public class VaultContent extends Sprite {
-
-    public static const WIDTH:int = 380;
-    public static const HEIGHT:int = 400;
-
     private var vaultGrid_:ContainerGrid;
 
     private var scrollBar_:Scrollbar;
@@ -34,17 +28,17 @@ public class VaultContent extends Sprite {
         this.owner_ = owner;
         this.player_ = player;
 
-        GameServerConnection.instance.vaultRequest(owner.objectId_);
+        GameServerConnection.instance.storageRequest(owner.objectId_);
 
-        this.scrollBar_ = new Scrollbar(15, HEIGHT);
+        this.scrollBar_ = new Scrollbar(15, StorageUtil.CONTENT_HEIGHT);
 
         graphics.beginFill(0);
-        graphics.drawRect(0, 0, WIDTH, HEIGHT);
+        graphics.drawRect(0, 0, StorageUtil.CONTENT_WIDTH, StorageUtil.CONTENT_HEIGHT);
         graphics.endFill();
     }
 
-    private var content_:Vector.<VaultUpdateSlot>;
-    public function initialize(size:int, content:Vector.<VaultUpdateSlot>) : void {
+    private var content_:Vector.<StorageSlotUpdateData>;
+    public function initialize(size:int, content:Vector.<StorageSlotUpdateData>) : void {
         if (this.vaultGrid_ != null) {
             SpriteUtil.safeRemoveChild(this, this.vaultGrid_);
         }
@@ -78,7 +72,7 @@ public class VaultContent extends Sprite {
         }
 
         this.curSort_ = sort;
-        this.filterSlotsBySlotType(VaultSortTab.getSortArray(this.curSort_));
+        this.filterSlotsBySlotType(StorageSortTab.getSortArray(this.curSort_));
     }
 
     public function filterSlotsBySlotType(types:Array):void {
@@ -88,10 +82,6 @@ public class VaultContent extends Sprite {
 
         var slotCount:int = 0;
         for each(var tile:InteractiveItemTile in this.vaultGrid_.items) {
-            if (tile.getItemId() == ItemConstants.NO_ITEM) {
-                continue;
-            }
-
             var slotType:int = ObjectLibrary.getSlotTypeFromType(tile.getItemId());
 
             if (types.indexOf(slotType) > -1 || types.length == 0) {
@@ -101,6 +91,9 @@ public class VaultContent extends Sprite {
         }
     }
 
-
+    public function dispose() : void {
+        removeChild(this.vaultGrid_);
+        this.vaultGrid_ = null;
+    }
 }
 }

@@ -10,8 +10,6 @@ package com.company.assembleegameclient.ui
    
    public class TextButton extends Sprite
    {
-       
-      
       public var text_:SimpleText;
       
       public var w_:int;

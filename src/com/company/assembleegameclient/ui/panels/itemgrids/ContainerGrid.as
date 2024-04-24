@@ -44,24 +44,19 @@ package com.company.assembleegameclient.ui.panels.itemgrids
          this.tiles = newTiles;
       }
       
-      override public function setItems(items:Vector.<int>, datas:Vector.<int>, itemIndexOffset:int = 0) : void
-      {
+      override public function setItems(items:Vector.<int>, datas:Vector.<int>, itemIndexOffset:int = 0) : void {
          var numItems:int = 0;
          var i:int = 0;
          var refresh:Boolean = false;
-         if(items)
-         {
+         if(items) {
             numItems = items.length;
-            for(i = 0; i < this.numSlots_; i++)
-            {
-               if(i + indexOffset < numItems)
-               {
+            for(i = 0; i < this.numSlots_; i++) {
+               if(i + indexOffset < numItems) {
                   if (this.tiles[i].setItem(items[i + indexOffset], datas[i + indexOffset])) {
                      refresh = true;
                   }
                }
-               else
-               {
+               else {
                   if (this.tiles[i].setItem(-1, -1)) {
                      refresh = true;
                   }

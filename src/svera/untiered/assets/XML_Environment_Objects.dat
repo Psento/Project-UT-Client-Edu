@@ -78,7 +78,6 @@
 			<File>Assets_Foundry_Stations16x16</File>
 			<Index>0x01</Index>
 		</Texture>
-		<SlotTypes>0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
 	</Object>
 	<Object type="0x09" id="Closed Vault Chest">
 		<Class>ClosedVaultChest</Class>
@@ -96,14 +95,13 @@
 		<Size>120</Size>
 	</Object>
 	<Object type="0x0b" id="Gift Chest">
-		<Class>OneWayContainer</Class>
+		<Class>Gift</Class>
 		<Container/>
 		<Texture>
 			<File>Assets_Foundry_Containers16x16</File>
 			<Index>0x03</Index>
 		</Texture>
 		<Size>120</Size>
-		<SlotTypes>0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
 	</Object>
 	<!-- #endregion -->
 	<!-- #region --> // Guild Hall

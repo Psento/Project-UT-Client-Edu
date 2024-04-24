@@ -1,11 +1,11 @@
-package svera.untiered.vault.components {
+package svera.untiered.storage.components {
 import com.company.assembleegameclient.ui.tooltip.TextToolTip;
 import com.company.util.MoreColorUtil;
 
 import flash.display.Sprite;
 import flash.events.MouseEvent;
 
-public class VaultSortTab extends Sprite {
+public class StorageSortTab extends Sprite {
 
     public static const WEAPON:String = "WEAPON";
     public static const ABILITY:String = "ABILITY";
@@ -19,6 +19,8 @@ public class VaultSortTab extends Sprite {
     private static const ARMOR_CATEGORY:Array =   [6, 7, 14];
     private static const RING_CATEGORY:Array =    [9];
     private static const OTHER_CATEGORY:Array =   [10];
+
+    public static const SIZE:int = 50;
 
     public static function getSortArray(sort:String) : Array {
         switch(sort) {
@@ -37,14 +39,14 @@ public class VaultSortTab extends Sprite {
 
     private var toolTip_:TextToolTip;
 
-    public function VaultSortTab(filter:String) {
+    public function StorageSortTab(filter:String) {
         this.filter_ = filter;
 
         this.toolTip_ = new TextToolTip(0x363636, 0xFFFFFF, filter, "", 100);
 
         graphics.clear();
         graphics.beginFill(0x161616);
-        graphics.drawRect(0, 0, 50, 50);
+        graphics.drawRect(0, 0, SIZE, SIZE);
         graphics.endFill();
 
         this.addEventListener(MouseEvent.ROLL_OVER, this.rollOver);

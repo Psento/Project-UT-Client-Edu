@@ -1,17 +1,17 @@
 package com.company.assembleegameclient.objects {
-
 import com.company.assembleegameclient.game.GameSprite;
+import com.company.assembleegameclient.ui.panels.GiftChestPanel;
 import com.company.assembleegameclient.ui.panels.Panel;
-import com.company.assembleegameclient.ui.panels.VaultChestPanel;
 
 import svera.untiered.messaging.impl.data.StorageSlotUpdateData;
 
-public class VaultChest extends GameObject implements IInteractiveObject {
+public class GiftChest extends GameObject implements IInteractiveObject {
 
-    public function VaultChest(objectXML:XML) {
+    public function GiftChest(objectXML:XML) {
         super(objectXML);
         isInteractive_ = true;
     }
+
 
     public function setContainer(size:int, slots:Vector.<StorageSlotUpdateData>) : void {
         this.equipment_ = new Vector.<int>(size);
@@ -24,7 +24,7 @@ public class VaultChest extends GameObject implements IInteractiveObject {
     }
 
     public function getPanel(gs:GameSprite) : Panel {
-        return new VaultChestPanel(this, gs);
+        return new GiftChestPanel(this, gs);
     }
 }
 }

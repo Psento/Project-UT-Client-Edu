@@ -1,4 +1,4 @@
-package svera.untiered.vault.components {
+package svera.untiered.storage.components {
 import com.company.assembleegameclient.parameters.Parameters;
 import com.company.ui.SimpleText;
 import com.company.util.MoreColorUtil;
@@ -45,7 +45,7 @@ public class VaultUpgradeButton extends Sprite {
     }
 
     public function setPurchaseInfo(curCapacity:int) : void {
-        this.statusText_.setText(curCapacity + "  > " + (curCapacity + CAPACITY_INCREMENT));
+        this.statusText_.setText(curCapacity + " > " + (curCapacity + CAPACITY_INCREMENT));
         this.purchaseText_.setText("Upgrade " + Parameters.VAULT_SLOT_PRICE);
 
         this.statusText_.updateMetrics();
@@ -53,7 +53,7 @@ public class VaultUpgradeButton extends Sprite {
 
         this.statusText_.x = (WIDTH - this.statusText_.actualWidth_) / 2;
         this.statusText_.y = 0;
-        this.purchaseText_.x = (WIDTH - this.purchaseText_.actualWidth_) / 2 - 20;
+        this.purchaseText_.x = (WIDTH - this.purchaseText_.actualWidth_) / 2 - 15;
         this.purchaseText_.y = 28;
 
         this.currencyIcon_.x = this.purchaseText_.actualWidth_ + this.purchaseText_.x;

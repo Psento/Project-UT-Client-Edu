@@ -98,6 +98,7 @@ package com.company.assembleegameclient.ui.panels
          if(panel != this.currentPanel)
          {
             this.currentPanel && removeChild(this.currentPanel);
+            this.currentPanel && this.currentPanel.onRemoved();
             this.currentPanel = panel;
             this.currentPanel && this.positionPanelAndAdd();
          }

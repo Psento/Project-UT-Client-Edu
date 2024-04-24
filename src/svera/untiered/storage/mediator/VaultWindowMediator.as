@@ -1,11 +1,11 @@
-package svera.untiered.vault.mediator {
+package svera.untiered.storage.mediator {
 import robotlegs.bender.bundles.mvcs.Mediator;
 
-import svera.untiered.messaging.impl.data.VaultUpdateSlot;
+import svera.untiered.messaging.impl.data.StorageSlotUpdateData;
 
-import svera.untiered.vault.VaultWindow;
-import svera.untiered.vault.signals.VaultSlotUpdateSignal;
-import svera.untiered.vault.signals.VaultUpdateSignal;
+import svera.untiered.storage.VaultWindow;
+import svera.untiered.storage.signals.VaultSlotUpdateSignal;
+import svera.untiered.storage.signals.VaultUpdateSignal;
 
 public class VaultWindowMediator extends Mediator {
     public function VaultWindowMediator() {
@@ -29,12 +29,12 @@ public class VaultWindowMediator extends Mediator {
         this.vaultSlotUpdateSignal_.remove(this.onVaultSlotUpdate);
     }
 
-    private function onVaultUpdate(size:int, slots:Vector.<VaultUpdateSlot>) : void {
+    private function onVaultUpdate(size:int, slots:Vector.<StorageSlotUpdateData>) : void {
         this.view_.setContent(size, slots);
     }
 
     private function onVaultSlotUpdate(slot:int, inventory:int, itemData:int) : void {
-        this.view_.content.updateSlot(slot, inventory, itemData);
+        this.view_.updateSlot(slot, inventory, itemData);
     }
 }
 }

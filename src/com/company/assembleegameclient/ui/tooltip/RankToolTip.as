@@ -1,14 +1,15 @@
 package com.company.assembleegameclient.ui.tooltip
 {
-   import com.company.assembleegameclient.objects.ObjectLibrary;
-   import com.company.assembleegameclient.ui.LineBreakDesign;
-   import com.company.assembleegameclient.util.FameUtil;
-   import com.company.untiered.graphics.StarGraphic;
-   import com.company.ui.SimpleText;
-   import flash.filters.DropShadowFilter;
-   import flash.geom.ColorTransform;
-   
-   public class RankToolTip extends ToolTip
+import com.company.assembleegameclient.objects.ObjectLibrary;
+import com.company.assembleegameclient.ui.LineBreakDesign;
+import com.company.assembleegameclient.util.FameUtil;
+import com.company.ui.SimpleText;
+import com.company.untiered.graphics.StarGraphic;
+
+import flash.filters.DropShadowFilter;
+import flash.geom.ColorTransform;
+
+public class RankToolTip extends ToolTip
    {
        
       
@@ -76,8 +77,9 @@ package com.company.assembleegameclient.ui.tooltip
    }
 }
 
-import com.company.untiered.graphics.StarGraphic;
 import com.company.ui.SimpleText;
+import com.company.untiered.graphics.StarGraphic;
+
 import flash.display.Sprite;
 import flash.filters.DropShadowFilter;
 import flash.geom.ColorTransform;

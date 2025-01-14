@@ -1,12 +1,13 @@
 package com.company.assembleegameclient.ui
 {
-   import com.company.assembleegameclient.account.ui.Frame;
-   import flash.display.Graphics;
-   import flash.display.Shape;
-   import flash.display.Sprite;
-   import flash.events.Event;
-   
-   public class FrameOverlay extends Sprite
+import com.company.assembleegameclient.account.ui.Frame;
+
+import flash.display.Graphics;
+import flash.display.Shape;
+import flash.display.Sprite;
+import flash.events.Event;
+
+public class FrameOverlay extends Sprite
    {
        
       

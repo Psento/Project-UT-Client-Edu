@@ -1,9 +1,10 @@
 package svera.untiered.messaging.impl.incoming
 {
-   import flash.utils.IDataInput;
-   import svera.untiered.messaging.impl.data.WorldPosData;
-   
-   public class ShowEffect extends IncomingMessage
+import flash.utils.IDataInput;
+
+import svera.untiered.messaging.impl.data.WorldPosData;
+
+public class ShowEffect extends IncomingMessage
    {
       
       public static const UNKNOWN_EFFECT_TYPE:int = 0;

@@ -1,11 +1,8 @@
 package svera.untiered.ui.model
 {
-   import flash.events.TimerEvent;
-   import flash.utils.Timer;
-   import org.osflash.signals.Signal;
-   import org.osflash.signals.natives.NativeSignal;
-   
-   public class PotionModel
+import org.osflash.signals.Signal;
+
+public class PotionModel
    {
        
       

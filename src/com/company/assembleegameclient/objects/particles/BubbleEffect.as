@@ -1,9 +1,9 @@
 package com.company.assembleegameclient.objects.particles
 {
-   import com.company.assembleegameclient.objects.GameObject;
-   import com.company.assembleegameclient.util.FreeList;
-   
-   public class BubbleEffect extends ParticleEffect
+import com.company.assembleegameclient.objects.GameObject;
+import com.company.assembleegameclient.util.FreeList;
+
+public class BubbleEffect extends ParticleEffect
    {
       
       private static const PERIOD_MAX:Number = 400;

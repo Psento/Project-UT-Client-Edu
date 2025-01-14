@@ -1,20 +1,21 @@
 package com.company.assembleegameclient.ui
 {
-   import com.company.ui.SimpleText;
-   import com.company.util.AssetLibrary;
-   import com.company.util.GraphicsUtil;
-   import com.company.util.MoreColorUtil;
-   import flash.display.Bitmap;
-   import flash.display.BitmapData;
-   import flash.display.GraphicsPath;
-   import flash.display.GraphicsSolidFill;
-   import flash.display.IGraphicsData;
-   import flash.display.Sprite;
-   import flash.filters.ColorMatrixFilter;
-   import flash.geom.Matrix;
-   import flash.geom.Point;
-   
-   public class Slot extends Sprite
+import com.company.ui.SimpleText;
+import com.company.util.AssetLibrary;
+import com.company.util.GraphicsUtil;
+import com.company.util.MoreColorUtil;
+
+import flash.display.Bitmap;
+import flash.display.BitmapData;
+import flash.display.GraphicsPath;
+import flash.display.GraphicsSolidFill;
+import flash.display.IGraphicsData;
+import flash.display.Sprite;
+import flash.filters.ColorMatrixFilter;
+import flash.geom.Matrix;
+import flash.geom.Point;
+
+public class Slot extends Sprite
    {
       
       public static const ALL_TYPE:int = 0;

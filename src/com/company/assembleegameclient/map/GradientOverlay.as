@@ -1,13 +1,14 @@
 package com.company.assembleegameclient.map
 {
-   import com.company.util.GraphicsUtil;
-   import flash.display.GradientType;
-   import flash.display.GraphicsGradientFill;
-   import flash.display.GraphicsPath;
-   import flash.display.IGraphicsData;
-   import flash.display.Shape;
-   
-   public class GradientOverlay extends Shape
+import com.company.util.GraphicsUtil;
+
+import flash.display.GradientType;
+import flash.display.GraphicsGradientFill;
+import flash.display.GraphicsPath;
+import flash.display.IGraphicsData;
+import flash.display.Shape;
+
+public class GradientOverlay extends Shape
    {
        
       

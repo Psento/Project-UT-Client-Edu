@@ -1,8 +1,8 @@
 package com.company.assembleegameclient.mapeditor
 {
-   import com.company.assembleegameclient.editor.Command;
-   
-   public class MEClearCommand extends Command
+import com.company.assembleegameclient.editor.Command;
+
+public class MEClearCommand extends Command
    {
        
       

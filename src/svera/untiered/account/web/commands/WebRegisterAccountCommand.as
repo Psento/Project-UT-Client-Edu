@@ -6,20 +6,20 @@ import com.company.assembleegameclient.screens.CharacterSelectionAndNewsScreen;
 import flash.display.Sprite;
 
 import svera.lib.tasks.BranchingTask;
-   import svera.lib.tasks.DispatchSignalTask;
-   import svera.lib.tasks.Task;
-   import svera.lib.tasks.TaskMonitor;
-   import svera.lib.tasks.TaskSequence;
-   import svera.untiered.account.core.services.RegisterAccountTask;
-   import svera.untiered.account.core.signals.UpdateAccountInfoSignal;
-   import svera.untiered.account.web.view.WebAccountDetailDialog;
+import svera.lib.tasks.DispatchSignalTask;
+import svera.lib.tasks.Task;
+import svera.lib.tasks.TaskMonitor;
+import svera.lib.tasks.TaskSequence;
+import svera.untiered.account.core.services.RegisterAccountTask;
+import svera.untiered.account.core.signals.UpdateAccountInfoSignal;
+import svera.untiered.account.web.view.WebAccountDetailDialog;
 import svera.untiered.core.model.ScreenModel;
 import svera.untiered.core.signals.InvalidateDataSignal;
 import svera.untiered.core.signals.SetScreenWithValidDataSignal;
 import svera.untiered.core.signals.TaskErrorSignal;
-   import svera.untiered.dialogs.control.OpenDialogSignal;
-   
-   public class WebRegisterAccountCommand
+import svera.untiered.dialogs.control.OpenDialogSignal;
+
+public class WebRegisterAccountCommand
    {
        
       

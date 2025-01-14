@@ -1,8 +1,8 @@
 package svera.untiered.messaging.impl.incoming
 {
-   import flash.utils.IDataInput;
-   
-   public class Failure extends IncomingMessage
+import flash.utils.IDataInput;
+
+public class Failure extends IncomingMessage
    {
       public static const INCORRECT_VERSION:int = 1;
       public static const FORCE_CLOSE_GAME:int = 2;

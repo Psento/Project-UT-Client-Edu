@@ -1,11 +1,12 @@
 package svera.untiered.hud
 {
-   import org.swiftsuspenders.Injector;
-   import robotlegs.bender.extensions.mediatorMap.api.IMediatorMap;
-   import robotlegs.bender.extensions.signalCommandMap.api.ISignalCommandMap;
-   import robotlegs.bender.framework.api.IConfig;
-   
-   public class HUDConfig implements IConfig
+import org.swiftsuspenders.Injector;
+
+import robotlegs.bender.extensions.mediatorMap.api.IMediatorMap;
+import robotlegs.bender.extensions.signalCommandMap.api.ISignalCommandMap;
+import robotlegs.bender.framework.api.IConfig;
+
+public class HUDConfig implements IConfig
    {
        
       

@@ -1,13 +1,14 @@
 package svera.untiered.assets.services
 {
-   import com.company.assembleegameclient.util.TextureRedrawer;
+import com.company.assembleegameclient.util.TextureRedrawer;
 import com.company.assembleegameclient.util.redrawers.GlowRedrawer;
 import com.company.util.AssetLibrary;
-   import com.company.util.BitmapUtil;
-   import flash.display.Bitmap;
-   import flash.display.BitmapData;
-   
-   public class IconFactory
+import com.company.util.BitmapUtil;
+
+import flash.display.Bitmap;
+import flash.display.BitmapData;
+
+public class IconFactory
    {
        
       

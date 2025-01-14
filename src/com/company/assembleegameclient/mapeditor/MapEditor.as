@@ -1,14 +1,16 @@
 package com.company.assembleegameclient.mapeditor
 {
-   import com.company.assembleegameclient.game.GameSprite;
-   import com.company.assembleegameclient.game.events.DeathEvent;
-   import com.company.assembleegameclient.game.events.ReconnectEvent;
-   import com.company.assembleegameclient.parameters.Parameters;
-   import flash.display.Sprite;
-   import flash.events.Event;
-   import svera.untiered.core.model.PlayerModel;
-   
-   public class MapEditor extends Sprite
+import com.company.assembleegameclient.game.GameSprite;
+import com.company.assembleegameclient.game.events.DeathEvent;
+import com.company.assembleegameclient.game.events.ReconnectEvent;
+import com.company.assembleegameclient.parameters.Parameters;
+
+import flash.display.Sprite;
+import flash.events.Event;
+
+import svera.untiered.core.model.PlayerModel;
+
+public class MapEditor extends Sprite
    {
        
       

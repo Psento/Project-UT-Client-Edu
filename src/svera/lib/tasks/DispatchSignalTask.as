@@ -1,8 +1,8 @@
 package svera.lib.tasks
 {
-   import org.osflash.signals.Signal;
-   
-   public class DispatchSignalTask extends BaseTask
+import org.osflash.signals.Signal;
+
+public class DispatchSignalTask extends BaseTask
    {
        
       

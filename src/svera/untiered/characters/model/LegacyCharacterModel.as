@@ -1,9 +1,10 @@
 package svera.untiered.characters.model
 {
-   import com.company.assembleegameclient.appengine.SavedCharacter;
-   import svera.untiered.core.model.PlayerModel;
-   
-   public class LegacyCharacterModel implements CharacterModel
+import com.company.assembleegameclient.appengine.SavedCharacter;
+
+import svera.untiered.core.model.PlayerModel;
+
+public class LegacyCharacterModel implements CharacterModel
    {
        
       

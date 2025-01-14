@@ -2,10 +2,11 @@ package svera.untiered.classes.model
 {
 import com.company.assembleegameclient.parameters.Parameters;
 
+import org.osflash.signals.Signal;
+
 import svera.untiered.assets.model.CharacterTemplate;
-   import org.osflash.signals.Signal;
-   
-   public class CharacterSkin
+
+public class CharacterSkin
    {
       public const changed:Signal = new Signal(CharacterSkin);
       

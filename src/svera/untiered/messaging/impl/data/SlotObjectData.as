@@ -1,9 +1,9 @@
 package svera.untiered.messaging.impl.data
 {
-   import flash.utils.IDataInput;
-   import flash.utils.IDataOutput;
-   
-   public class SlotObjectData
+import flash.utils.IDataInput;
+import flash.utils.IDataOutput;
+
+public class SlotObjectData
    {
       public var objectId_:int;
       

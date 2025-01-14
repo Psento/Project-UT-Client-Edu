@@ -1,11 +1,13 @@
 package com.company.assembleegameclient.objects
 {
-   import com.company.assembleegameclient.map.Map;
-   import com.company.util.PointUtil;
-   import flash.utils.Dictionary;
-   import svera.untiered.messaging.impl.incoming.AccountList;
-   
-   public class Party
+import com.company.assembleegameclient.map.Map;
+import com.company.util.PointUtil;
+
+import flash.utils.Dictionary;
+
+import svera.untiered.messaging.impl.incoming.AccountList;
+
+public class Party
    {
       
       public static const NUM_MEMBERS:int = 6;

@@ -1,17 +1,19 @@
 package svera.untiered.ui.view
 {
-   import com.company.assembleegameclient.appengine.SavedCharacter;
-   import com.company.assembleegameclient.screens.charrects.CurrentCharacterRect;
-   import svera.untiered.characters.deletion.view.ConfirmDeleteCharacterDialog;
-   import svera.untiered.characters.model.CharacterModel;
-   import svera.untiered.classes.model.CharacterClass;
-   import svera.untiered.classes.model.ClassesModel;
-   import svera.untiered.dialogs.control.OpenDialogSignal;
-   import svera.untiered.game.model.GameInitData;
-   import svera.untiered.game.signals.PlayGameSignal;
-   import robotlegs.bender.bundles.mvcs.Mediator;
-   
-   public class CurrentCharacterRectMediator extends Mediator
+import com.company.assembleegameclient.appengine.SavedCharacter;
+import com.company.assembleegameclient.screens.charrects.CurrentCharacterRect;
+
+import robotlegs.bender.bundles.mvcs.Mediator;
+
+import svera.untiered.characters.deletion.view.ConfirmDeleteCharacterDialog;
+import svera.untiered.characters.model.CharacterModel;
+import svera.untiered.classes.model.CharacterClass;
+import svera.untiered.classes.model.ClassesModel;
+import svera.untiered.dialogs.control.OpenDialogSignal;
+import svera.untiered.game.model.GameInitData;
+import svera.untiered.game.signals.PlayGameSignal;
+
+public class CurrentCharacterRectMediator extends Mediator
    {
        
       

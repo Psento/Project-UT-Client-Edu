@@ -1,18 +1,21 @@
 package svera.untiered.classes.view
 {
-   import com.company.assembleegameclient.util.FameUtil;
-   import flash.events.TimerEvent;
-   import flash.utils.Timer;
-   import svera.untiered.assets.model.Animation;
-   import svera.untiered.assets.services.CharacterFactory;
-   import svera.untiered.classes.control.FocusCharacterSkinSignal;
-   import svera.untiered.classes.model.CharacterClass;
-   import svera.untiered.classes.model.CharacterSkin;
-   import svera.untiered.classes.model.ClassesModel;
-   import svera.untiered.core.model.PlayerModel;
-   import robotlegs.bender.bundles.mvcs.Mediator;
-   
-   public class ClassDetailMediator extends Mediator
+import com.company.assembleegameclient.util.FameUtil;
+
+import flash.events.TimerEvent;
+import flash.utils.Timer;
+
+import robotlegs.bender.bundles.mvcs.Mediator;
+
+import svera.untiered.assets.model.Animation;
+import svera.untiered.assets.services.CharacterFactory;
+import svera.untiered.classes.control.FocusCharacterSkinSignal;
+import svera.untiered.classes.model.CharacterClass;
+import svera.untiered.classes.model.CharacterSkin;
+import svera.untiered.classes.model.ClassesModel;
+import svera.untiered.core.model.PlayerModel;
+
+public class ClassDetailMediator extends Mediator
    {
        
       

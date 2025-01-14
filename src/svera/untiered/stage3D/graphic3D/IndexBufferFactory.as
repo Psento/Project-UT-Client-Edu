@@ -1,12 +1,14 @@
 package svera.untiered.stage3D.graphic3D
 {
-   import flash.utils.Dictionary;
-   import svera.untiered.stage3D.proxies.Context3DProxy;
-   import svera.untiered.stage3D.proxies.IndexBuffer3DProxy;
-   import org.swiftsuspenders.Injector;
-   import org.swiftsuspenders.dependencyproviders.DependencyProvider;
-   
-   public class IndexBufferFactory implements DependencyProvider
+import flash.utils.Dictionary;
+
+import org.swiftsuspenders.Injector;
+import org.swiftsuspenders.dependencyproviders.DependencyProvider;
+
+import svera.untiered.stage3D.proxies.Context3DProxy;
+import svera.untiered.stage3D.proxies.IndexBuffer3DProxy;
+
+public class IndexBufferFactory implements DependencyProvider
    {
       
       private static const numVertices:int = 6;

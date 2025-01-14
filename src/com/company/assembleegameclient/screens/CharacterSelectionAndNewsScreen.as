@@ -1,27 +1,25 @@
 package com.company.assembleegameclient.screens
 {
-   import com.company.assembleegameclient.ui.ClickableText;
-   import com.company.assembleegameclient.ui.Scrollbar;
-   import com.company.untiered.graphics.ScreenGraphic;
-   import com.company.ui.SimpleText;
-import com.hurlant.util.asn1.parser.nulll;
+import com.company.assembleegameclient.ui.Scrollbar;
+import com.company.ui.SimpleText;
 
 import flash.display.DisplayObject;
-   import flash.display.Shape;
-   import flash.display.Sprite;
-   import flash.events.Event;
-   import flash.events.MouseEvent;
-   import flash.filters.DropShadowFilter;
-   import flash.geom.Rectangle;
+import flash.display.Shape;
+import flash.display.Sprite;
+import flash.events.Event;
+import flash.events.MouseEvent;
+import flash.filters.DropShadowFilter;
+import flash.geom.Rectangle;
 import flash.text.TextFormatAlign;
 
+import org.osflash.signals.Signal;
+import org.osflash.signals.natives.NativeMappedSignal;
+
 import svera.untiered.core.model.PlayerModel;
-   import svera.untiered.game.view.CurrencyDisplay;
-   import svera.untiered.ui.view.components.ScreenBase;
-   import org.osflash.signals.Signal;
-   import org.osflash.signals.natives.NativeMappedSignal;
-   
-   public class CharacterSelectionAndNewsScreen extends Sprite
+import svera.untiered.game.view.CurrencyDisplay;
+import svera.untiered.ui.view.components.ScreenBase;
+
+public class CharacterSelectionAndNewsScreen extends Sprite
    {
        
       

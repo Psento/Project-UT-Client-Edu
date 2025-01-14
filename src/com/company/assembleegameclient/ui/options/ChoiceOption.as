@@ -1,9 +1,10 @@
 package com.company.assembleegameclient.ui.options
 {
-   import com.company.assembleegameclient.parameters.Parameters;
-   import flash.events.Event;
-   
-   public class ChoiceOption extends Option
+import com.company.assembleegameclient.parameters.Parameters;
+
+import flash.events.Event;
+
+public class ChoiceOption extends Option
    {
        
       

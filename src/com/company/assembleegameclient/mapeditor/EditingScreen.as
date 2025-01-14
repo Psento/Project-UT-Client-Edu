@@ -2,37 +2,36 @@ package com.company.assembleegameclient.mapeditor
 {
 import com.company.assembleegameclient.account.ui.TextInputField;
 import com.company.assembleegameclient.editor.CommandEvent;
-   import com.company.assembleegameclient.editor.CommandList;
-   import com.company.assembleegameclient.editor.CommandQueue;
-   import com.company.assembleegameclient.map.GroundLibrary;
-   import com.company.assembleegameclient.map.RegionLibrary;
-   import com.company.assembleegameclient.objects.ObjectLibrary;
-   import com.company.assembleegameclient.screens.AccountScreen;
+import com.company.assembleegameclient.editor.CommandList;
+import com.company.assembleegameclient.editor.CommandQueue;
+import com.company.assembleegameclient.map.GroundLibrary;
+import com.company.assembleegameclient.map.RegionLibrary;
+import com.company.assembleegameclient.objects.ObjectLibrary;
+import com.company.assembleegameclient.screens.AccountScreen;
 import com.company.assembleegameclient.ui.dialogs.Dialog;
 import com.company.assembleegameclient.ui.dropdown.DropDown;
-import com.company.ui.SimpleText;
 import com.company.util.IntPoint;
-   import com.company.util.SpriteUtil;
-   import com.hurlant.util.Base64;
-   import flash.display.Sprite;
-   import flash.events.Event;
-   import flash.events.IOErrorEvent;
-   import flash.geom.Rectangle;
-   import flash.net.FileFilter;
-   import flash.net.FileReference;
-import flash.text.TextFormatAlign;
+import com.company.util.SpriteUtil;
+import com.hurlant.util.Base64;
+
+import flash.display.Sprite;
+import flash.events.Event;
+import flash.events.IOErrorEvent;
+import flash.geom.Rectangle;
+import flash.net.FileFilter;
+import flash.net.FileReference;
 import flash.utils.ByteArray;
-   import svera.lib.json.JsonParser;
-import svera.untiered.characters.deletion.view.ConfirmDeleteCharacterDialog;
+
+import net.hires.debug.Stats;
+
+import svera.lib.json.JsonParser;
 import svera.untiered.core.StaticInjectorContext;
-import svera.untiered.dialogs.control.CloseDialogsSignal;
 import svera.untiered.dialogs.control.CloseDialogsSignal;
 import svera.untiered.dialogs.control.OpenDialogSignal;
 import svera.untiered.game.signals.GameClosedSignal;
 import svera.untiered.ui.view.components.ScreenBase;
-   import net.hires.debug.Stats;
-   
-   public class EditingScreen extends Sprite
+
+public class EditingScreen extends Sprite
    {
       
       private static const MAP_Y:int = 600 - MEMap.SIZE - 10;

@@ -1,9 +1,10 @@
 package svera.untiered.game.signals
 {
-   import svera.untiered.game.model.GameInitData;
-   import org.osflash.signals.Signal;
-   
-   public class PlayGameSignal extends Signal
+import org.osflash.signals.Signal;
+
+import svera.untiered.game.model.GameInitData;
+
+public class PlayGameSignal extends Signal
    {
        
       

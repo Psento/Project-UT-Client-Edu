@@ -1,11 +1,11 @@
 package com.company.assembleegameclient.screens.charrects
 {
-   import flash.display.Graphics;
-   import flash.display.Shape;
-   import flash.display.Sprite;
-   import flash.events.MouseEvent;
-   
-   public class CharacterRect extends Sprite
+import flash.display.Graphics;
+import flash.display.Shape;
+import flash.display.Sprite;
+import flash.events.MouseEvent;
+
+public class CharacterRect extends Sprite
    {
       public static const WIDTH:int = 78;
       public static const HEIGHT:int = 78;

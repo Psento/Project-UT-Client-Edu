@@ -1,16 +1,17 @@
 package svera.untiered.legends.view
 {
-   import svera.untiered.death.model.DeathModel;
-   import svera.untiered.fame.control.ShowFameViewSignal;
-   import svera.untiered.legends.control.ExitLegendsSignal;
-   import svera.untiered.legends.control.FameListUpdateSignal;
-   import svera.untiered.legends.control.RequestFameListSignal;
-   import svera.untiered.legends.model.Legend;
-   import svera.untiered.legends.model.LegendsModel;
-   import svera.untiered.legends.model.Timespan;
-   import robotlegs.bender.bundles.mvcs.Mediator;
-   
-   public class LegendsMediator extends Mediator
+import robotlegs.bender.bundles.mvcs.Mediator;
+
+import svera.untiered.death.model.DeathModel;
+import svera.untiered.fame.control.ShowFameViewSignal;
+import svera.untiered.legends.control.ExitLegendsSignal;
+import svera.untiered.legends.control.FameListUpdateSignal;
+import svera.untiered.legends.control.RequestFameListSignal;
+import svera.untiered.legends.model.Legend;
+import svera.untiered.legends.model.LegendsModel;
+import svera.untiered.legends.model.Timespan;
+
+public class LegendsMediator extends Mediator
    {
        
       

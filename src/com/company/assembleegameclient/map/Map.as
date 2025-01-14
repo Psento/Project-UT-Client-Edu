@@ -1,17 +1,17 @@
 package com.company.assembleegameclient.map
 {
-   import com.company.assembleegameclient.background.Background;
-   import com.company.assembleegameclient.game.GameSprite;
+import com.company.assembleegameclient.background.Background;
+import com.company.assembleegameclient.game.GameSprite;
 import com.company.assembleegameclient.game.events.ReconnectEvent;
 import com.company.assembleegameclient.map.mapoverlay.MapOverlay;
-   import com.company.assembleegameclient.map.partyoverlay.PartyOverlay;
-   import com.company.assembleegameclient.objects.BasicObject;
-   import com.company.assembleegameclient.objects.GameObject;
-   import com.company.assembleegameclient.objects.Party;
-   import com.company.assembleegameclient.objects.Player;
-   import com.company.assembleegameclient.parameters.Parameters;
-   import com.company.assembleegameclient.util.ConditionEffect;
-   import flash.display.Graphics;
+import com.company.assembleegameclient.map.partyoverlay.PartyOverlay;
+import com.company.assembleegameclient.objects.BasicObject;
+import com.company.assembleegameclient.objects.GameObject;
+import com.company.assembleegameclient.objects.Party;
+import com.company.assembleegameclient.objects.Player;
+import com.company.assembleegameclient.parameters.Parameters;
+import com.company.assembleegameclient.util.ConditionEffect;
+
 import flash.display.GraphicsBitmapFill;
 import flash.display.GraphicsSolidFill;
 import flash.display.IGraphicsData;
@@ -24,6 +24,9 @@ import flash.geom.ColorTransform;
 import flash.geom.Point;
 import flash.geom.Rectangle;
 import flash.utils.Dictionary;
+
+import org.osflash.signals.Signal;
+
 import svera.untiered.core.StaticInjectorContext;
 import svera.untiered.stage3D.GraphicsFillExtra;
 import svera.untiered.stage3D.Object3D.Object3DStage3D;
@@ -31,8 +34,6 @@ import svera.untiered.stage3D.Render3D;
 import svera.untiered.stage3D.Renderer;
 import svera.untiered.stage3D.graphic3D.Program3DFactory;
 import svera.untiered.stage3D.graphic3D.TextureFactory;
-
-import org.osflash.signals.Signal;
 
 public class Map extends Sprite
    {

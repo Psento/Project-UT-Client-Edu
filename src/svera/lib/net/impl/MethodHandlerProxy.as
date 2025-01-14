@@ -1,8 +1,8 @@
 package svera.lib.net.impl
 {
-   import svera.lib.net.api.MessageHandlerProxy;
-   
-   public class MethodHandlerProxy implements MessageHandlerProxy
+import svera.lib.net.api.MessageHandlerProxy;
+
+public class MethodHandlerProxy implements MessageHandlerProxy
    {
        
       

@@ -1,9 +1,10 @@
 package svera.untiered.classes.control
 {
-   import svera.untiered.classes.model.CharacterSkin;
-   import org.osflash.signals.Signal;
-   
-   public class FocusCharacterSkinSignal extends Signal
+import org.osflash.signals.Signal;
+
+import svera.untiered.classes.model.CharacterSkin;
+
+public class FocusCharacterSkinSignal extends Signal
    {
        
       

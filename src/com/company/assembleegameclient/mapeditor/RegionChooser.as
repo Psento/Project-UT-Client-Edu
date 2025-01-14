@@ -1,8 +1,8 @@
 package com.company.assembleegameclient.mapeditor
 {
-   import com.company.assembleegameclient.map.RegionLibrary;
-   
-   public class RegionChooser extends Chooser
+import com.company.assembleegameclient.map.RegionLibrary;
+
+public class RegionChooser extends Chooser
    {
        
       

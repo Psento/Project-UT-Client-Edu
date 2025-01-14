@@ -1,9 +1,10 @@
 package svera.untiered.game.view
 {
-   import svera.untiered.core.model.PlayerModel;
-   import robotlegs.bender.bundles.mvcs.Mediator;
-   
-   public class CurrencyDisplayMediator extends Mediator
+import robotlegs.bender.bundles.mvcs.Mediator;
+
+import svera.untiered.core.model.PlayerModel;
+
+public class CurrencyDisplayMediator extends Mediator
    {
        
       

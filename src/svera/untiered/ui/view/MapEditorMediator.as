@@ -1,10 +1,12 @@
 package svera.untiered.ui.view
 {
-   import com.company.assembleegameclient.mapeditor.MapEditor;
-   import svera.untiered.core.model.PlayerModel;
-   import robotlegs.bender.bundles.mvcs.Mediator;
-   
-   public class MapEditorMediator extends Mediator
+import com.company.assembleegameclient.mapeditor.MapEditor;
+
+import robotlegs.bender.bundles.mvcs.Mediator;
+
+import svera.untiered.core.model.PlayerModel;
+
+public class MapEditorMediator extends Mediator
    {
        
       

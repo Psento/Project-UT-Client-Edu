@@ -1,24 +1,21 @@
 package com.company.assembleegameclient.ui.tooltip
 {
-   import com.company.assembleegameclient.appengine.CharacterStats;
-   import com.company.assembleegameclient.appengine.SavedCharactersList;
-   import com.company.assembleegameclient.objects.ObjectLibrary;
-   import com.company.assembleegameclient.ui.LineBreakDesign;
-   import com.company.assembleegameclient.util.AnimatedChar;
-   import com.company.assembleegameclient.util.AnimatedChars;
-   import com.company.assembleegameclient.util.FameUtil;
-   import com.company.assembleegameclient.util.MaskedImage;
-   import com.company.assembleegameclient.util.TextureRedrawer;
-   import com.company.ui.SimpleText;
-   import com.company.util.AssetLibrary;
-   import com.company.util.CachingColorTransformer;
-   import flash.display.Bitmap;
-   import flash.display.BitmapData;
-   import flash.filters.DropShadowFilter;
-   import flash.geom.ColorTransform;
-   import svera.untiered.core.model.PlayerModel;
-   
-   public class ClassToolTip extends ToolTip
+import com.company.assembleegameclient.appengine.CharacterStats;
+import com.company.assembleegameclient.ui.LineBreakDesign;
+import com.company.assembleegameclient.util.AnimatedChar;
+import com.company.assembleegameclient.util.AnimatedChars;
+import com.company.assembleegameclient.util.FameUtil;
+import com.company.assembleegameclient.util.MaskedImage;
+import com.company.assembleegameclient.util.TextureRedrawer;
+import com.company.ui.SimpleText;
+
+import flash.display.Bitmap;
+import flash.display.BitmapData;
+import flash.filters.DropShadowFilter;
+
+import svera.untiered.core.model.PlayerModel;
+
+public class ClassToolTip extends ToolTip
    {
        
       

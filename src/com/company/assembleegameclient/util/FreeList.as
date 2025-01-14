@@ -1,8 +1,8 @@
 package com.company.assembleegameclient.util
 {
-   import flash.utils.Dictionary;
-   
-   public class FreeList
+import flash.utils.Dictionary;
+
+public class FreeList
    {
       
       private static var dict_:Dictionary = new Dictionary();

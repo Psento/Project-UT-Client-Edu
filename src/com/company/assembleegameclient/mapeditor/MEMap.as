@@ -1,26 +1,27 @@
 package com.company.assembleegameclient.mapeditor
 {
-   import com.company.assembleegameclient.map.GroundLibrary;
-   import com.company.assembleegameclient.map.RegionLibrary;
-   import com.company.assembleegameclient.objects.ObjectLibrary;
-   import com.company.util.AssetLibrary;
-   import com.company.util.IntPoint;
-   import com.company.util.KeyCodes;
-   import com.company.util.PointUtil;
-   import flash.display.Bitmap;
-   import flash.display.BitmapData;
-   import flash.display.Graphics;
-   import flash.display.Shape;
-   import flash.display.Sprite;
-   import flash.events.Event;
-   import flash.events.KeyboardEvent;
-   import flash.events.MouseEvent;
-   import flash.geom.Matrix;
-   import flash.geom.Rectangle;
-   import flash.ui.Keyboard;
-   import flash.utils.Dictionary;
+import com.company.assembleegameclient.map.GroundLibrary;
+import com.company.assembleegameclient.map.RegionLibrary;
+import com.company.assembleegameclient.objects.ObjectLibrary;
+import com.company.util.AssetLibrary;
+import com.company.util.IntPoint;
+import com.company.util.KeyCodes;
+import com.company.util.PointUtil;
 
-   public class MEMap extends Sprite
+import flash.display.Bitmap;
+import flash.display.BitmapData;
+import flash.display.Graphics;
+import flash.display.Shape;
+import flash.display.Sprite;
+import flash.events.Event;
+import flash.events.KeyboardEvent;
+import flash.events.MouseEvent;
+import flash.geom.Matrix;
+import flash.geom.Rectangle;
+import flash.ui.Keyboard;
+import flash.utils.Dictionary;
+
+public class MEMap extends Sprite
    {
       
       private static var transbackgroundEmbed_:Class = MEMap_transbackgroundEmbed_;

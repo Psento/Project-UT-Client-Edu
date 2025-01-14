@@ -1,11 +1,12 @@
 package svera.lib.net.impl
 {
-   import svera.lib.net.api.MessageMap;
-   import svera.lib.net.api.MessageMapping;
-   import svera.lib.net.api.MessageProvider;
-   import org.swiftsuspenders.Injector;
-   
-   public class MessageCenter implements MessageMap, MessageProvider
+import org.swiftsuspenders.Injector;
+
+import svera.lib.net.api.MessageMap;
+import svera.lib.net.api.MessageMapping;
+import svera.lib.net.api.MessageProvider;
+
+public class MessageCenter implements MessageMap, MessageProvider
    {
       
       private static const MAX_ID:int = 256;

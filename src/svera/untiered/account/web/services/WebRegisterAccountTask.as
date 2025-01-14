@@ -1,13 +1,13 @@
 package svera.untiered.account.web.services
 {
-   import svera.lib.tasks.BaseTask;
-   import svera.untiered.account.core.Account;
-   import svera.untiered.account.core.services.RegisterAccountTask;
-   import svera.untiered.account.web.model.AccountData;
-   import svera.untiered.appengine.api.AppEngineClient;
-   import svera.untiered.core.model.PlayerModel;
-   
-   public class WebRegisterAccountTask extends BaseTask implements RegisterAccountTask
+import svera.lib.tasks.BaseTask;
+import svera.untiered.account.core.Account;
+import svera.untiered.account.core.services.RegisterAccountTask;
+import svera.untiered.account.web.model.AccountData;
+import svera.untiered.appengine.api.AppEngineClient;
+import svera.untiered.core.model.PlayerModel;
+
+public class WebRegisterAccountTask extends BaseTask implements RegisterAccountTask
    {
        
       

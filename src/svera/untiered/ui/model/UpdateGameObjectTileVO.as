@@ -1,8 +1,8 @@
 package svera.untiered.ui.model
 {
-   import com.company.assembleegameclient.objects.GameObject;
-   
-   public class UpdateGameObjectTileVO
+import com.company.assembleegameclient.objects.GameObject;
+
+public class UpdateGameObjectTileVO
    {
        
       

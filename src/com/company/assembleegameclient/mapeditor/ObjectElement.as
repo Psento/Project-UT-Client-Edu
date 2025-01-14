@@ -1,11 +1,12 @@
 package com.company.assembleegameclient.mapeditor
 {
-   import com.company.assembleegameclient.objects.ObjectLibrary;
-   import com.company.assembleegameclient.ui.tooltip.ToolTip;
-   import flash.display.Bitmap;
-   import flash.display.BitmapData;
+import com.company.assembleegameclient.objects.ObjectLibrary;
+import com.company.assembleegameclient.ui.tooltip.ToolTip;
 
-   public class ObjectElement extends Element
+import flash.display.Bitmap;
+import flash.display.BitmapData;
+
+public class ObjectElement extends Element
    {
        
       

@@ -1,18 +1,20 @@
 package svera.untiered.util.components
 {
-   import com.company.assembleegameclient.util.Currency;
-   import com.company.ui.SimpleText;
-   import com.company.util.GraphicsUtil;
-   import flash.display.Bitmap;
-   import flash.display.BitmapData;
-   import flash.display.GraphicsPath;
-   import flash.display.GraphicsSolidFill;
-   import flash.display.IGraphicsData;
-   import flash.events.MouseEvent;
-   import svera.untiered.assets.services.IconFactory;
-   import svera.untiered.util.components.api.BuyButton;
-   
-   public class LegacyBuyButton extends BuyButton
+import com.company.assembleegameclient.util.Currency;
+import com.company.ui.SimpleText;
+import com.company.util.GraphicsUtil;
+
+import flash.display.Bitmap;
+import flash.display.BitmapData;
+import flash.display.GraphicsPath;
+import flash.display.GraphicsSolidFill;
+import flash.display.IGraphicsData;
+import flash.events.MouseEvent;
+
+import svera.untiered.assets.services.IconFactory;
+import svera.untiered.util.components.api.BuyButton;
+
+public class LegacyBuyButton extends BuyButton
    {
       private static const BEVEL:int = 4;
       private static const PADDING:int = 5;

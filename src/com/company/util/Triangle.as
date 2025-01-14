@@ -1,9 +1,9 @@
 package com.company.util
 {
-   import flash.geom.Point;
-   import flash.geom.Rectangle;
-   
-   public class Triangle
+import flash.geom.Point;
+import flash.geom.Rectangle;
+
+public class Triangle
    {
        
       

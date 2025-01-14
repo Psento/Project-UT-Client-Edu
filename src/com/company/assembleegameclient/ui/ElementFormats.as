@@ -1,14 +1,14 @@
 package com.company.assembleegameclient.ui
 {
-   import flash.text.engine.CFFHinting;
-   import flash.text.engine.ElementFormat;
-   import flash.text.engine.FontDescription;
-   import flash.text.engine.FontLookup;
-   import flash.text.engine.FontPosture;
-   import flash.text.engine.FontWeight;
-   import flash.text.engine.RenderingMode;
-   
-   public class ElementFormats
+import flash.text.engine.CFFHinting;
+import flash.text.engine.ElementFormat;
+import flash.text.engine.FontDescription;
+import flash.text.engine.FontLookup;
+import flash.text.engine.FontPosture;
+import flash.text.engine.FontWeight;
+import flash.text.engine.RenderingMode;
+
+public class ElementFormats
    {
       private static var FONT_DESCRIPTION:String = "MyriadProBoldCFF,_sans";
       

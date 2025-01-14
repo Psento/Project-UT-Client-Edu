@@ -1,15 +1,17 @@
 package svera.untiered.core.commands
 {
-   import com.company.assembleegameclient.screens.LoadingScreen;
-   import flash.display.Sprite;
-   import svera.lib.tasks.DispatchSignalTask;
-   import svera.lib.tasks.TaskMonitor;
-   import svera.lib.tasks.TaskSequence;
-   import svera.untiered.account.core.services.GetCharListTask;
-   import svera.untiered.core.model.PlayerModel;
-   import svera.untiered.core.signals.SetScreenSignal;
-   
-   public class SetScreenWithValidDataCommand
+import com.company.assembleegameclient.screens.LoadingScreen;
+
+import flash.display.Sprite;
+
+import svera.lib.tasks.DispatchSignalTask;
+import svera.lib.tasks.TaskMonitor;
+import svera.lib.tasks.TaskSequence;
+import svera.untiered.account.core.services.GetCharListTask;
+import svera.untiered.core.model.PlayerModel;
+import svera.untiered.core.signals.SetScreenSignal;
+
+public class SetScreenWithValidDataCommand
    {
        
       

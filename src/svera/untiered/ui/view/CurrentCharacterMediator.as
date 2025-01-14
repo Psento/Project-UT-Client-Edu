@@ -1,21 +1,20 @@
 package svera.untiered.ui.view
 {
-   import com.company.assembleegameclient.appengine.SavedCharacter;
-   import com.company.assembleegameclient.parameters.Parameters;
-   import com.company.assembleegameclient.screens.CharacterSelectionAndNewsScreen;
-   import com.company.assembleegameclient.screens.NewCharacterScreen;
-   import com.company.util.MoreDateUtil;
+import com.company.assembleegameclient.appengine.SavedCharacter;
+import com.company.assembleegameclient.screens.CharacterSelectionAndNewsScreen;
+import com.company.assembleegameclient.screens.NewCharacterScreen;
+
+import robotlegs.bender.bundles.mvcs.Mediator;
 
 import svera.untiered.classes.model.CharacterClass;
 import svera.untiered.classes.model.ClassesModel;
 import svera.untiered.core.model.PlayerModel;
-   import svera.untiered.core.signals.SetScreenSignal;
-   import svera.untiered.game.model.GameInitData;
-   import svera.untiered.game.signals.PlayGameSignal;
-   import svera.untiered.ui.signals.NameChangedSignal;
-   import robotlegs.bender.bundles.mvcs.Mediator;
-   
-   public class CurrentCharacterMediator extends Mediator
+import svera.untiered.core.signals.SetScreenSignal;
+import svera.untiered.game.model.GameInitData;
+import svera.untiered.game.signals.PlayGameSignal;
+import svera.untiered.ui.signals.NameChangedSignal;
+
+public class CurrentCharacterMediator extends Mediator
    {
        
       

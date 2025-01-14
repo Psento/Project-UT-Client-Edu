@@ -1,8 +1,8 @@
 package com.company.assembleegameclient.appengine
 {
-   import com.company.assembleegameclient.util.FameUtil;
-   
-   public class CharacterStats
+import com.company.assembleegameclient.util.FameUtil;
+
+public class CharacterStats
    {
        
       

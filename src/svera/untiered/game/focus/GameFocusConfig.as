@@ -1,16 +1,18 @@
 package svera.untiered.game.focus
 {
-   import com.company.assembleegameclient.game.GameSprite;
-   import svera.untiered.game.focus.control.SetGameFocusSignal;
-   import svera.untiered.game.focus.view.GameFocusMediator;
-   import org.osflash.signals.Signal;
-   import org.swiftsuspenders.Injector;
-   import robotlegs.bender.extensions.mediatorMap.api.IMediatorMap;
-   import robotlegs.bender.extensions.signalCommandMap.api.ISignalCommandMap;
-   import robotlegs.bender.framework.api.IConfig;
-   import robotlegs.bender.framework.api.IContext;
-   
-   public class GameFocusConfig implements IConfig
+import com.company.assembleegameclient.game.GameSprite;
+
+import org.swiftsuspenders.Injector;
+
+import robotlegs.bender.extensions.mediatorMap.api.IMediatorMap;
+import robotlegs.bender.extensions.signalCommandMap.api.ISignalCommandMap;
+import robotlegs.bender.framework.api.IConfig;
+import robotlegs.bender.framework.api.IContext;
+
+import svera.untiered.game.focus.control.SetGameFocusSignal;
+import svera.untiered.game.focus.view.GameFocusMediator;
+
+public class GameFocusConfig implements IConfig
    {
        
       

@@ -1,14 +1,17 @@
 package svera.lib.net
 {
-   import flash.net.Socket;
-   import svera.lib.net.api.MessageMap;
-   import svera.lib.net.api.MessageProvider;
-   import svera.lib.net.impl.MessageCenter;
-   import svera.lib.net.impl.SocketServer;
-   import org.swiftsuspenders.Injector;
-   import robotlegs.bender.framework.api.IConfig;
-   
-   public class NetConfig implements IConfig
+import flash.net.Socket;
+
+import org.swiftsuspenders.Injector;
+
+import robotlegs.bender.framework.api.IConfig;
+
+import svera.lib.net.api.MessageMap;
+import svera.lib.net.api.MessageProvider;
+import svera.lib.net.impl.MessageCenter;
+import svera.lib.net.impl.SocketServer;
+
+public class NetConfig implements IConfig
    {
        
       

@@ -1,12 +1,15 @@
 package svera.untiered.legends.view
 {
-   import com.company.ui.SimpleText;
-   import flash.display.Sprite;
-   import flash.events.MouseEvent;
-   import svera.untiered.legends.model.Timespan;
-   import org.osflash.signals.Signal;
-   
-   public class LegendsTab extends Sprite
+import com.company.ui.SimpleText;
+
+import flash.display.Sprite;
+import flash.events.MouseEvent;
+
+import org.osflash.signals.Signal;
+
+import svera.untiered.legends.model.Timespan;
+
+public class LegendsTab extends Sprite
    {
       
       private static const OVER_COLOR:int = 16567065;

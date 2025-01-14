@@ -1,10 +1,10 @@
 package svera.display.LoaderInfo
 {
-   import flash.display.LoaderInfo;
-   import flash.events.Event;
-   import flash.events.EventDispatcher;
-   
-   public class LoaderInfoProxyConcrete extends EventDispatcher implements LoaderInfoProxy
+import flash.display.LoaderInfo;
+import flash.events.Event;
+import flash.events.EventDispatcher;
+
+public class LoaderInfoProxyConcrete extends EventDispatcher implements LoaderInfoProxy
    {
        
       

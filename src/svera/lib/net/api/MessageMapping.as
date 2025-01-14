@@ -1,8 +1,8 @@
 package svera.lib.net.api
 {
-   import svera.lib.net.impl.MessagePool;
-   
-   public interface MessageMapping
+import svera.lib.net.impl.MessagePool;
+
+public interface MessageMapping
    {
        
       

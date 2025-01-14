@@ -1,15 +1,16 @@
 package com.company.assembleegameclient.screens
 {
-   import com.company.assembleegameclient.ui.tooltip.TextToolTip;
-   import com.company.ui.SimpleText;
-   import flash.display.DisplayObject;
-   import flash.display.Sprite;
-   import flash.events.Event;
-   import flash.events.MouseEvent;
-   import flash.filters.DropShadowFilter;
-   import flash.utils.getTimer;
-   
-   public class ScoreTextLine extends Sprite
+import com.company.assembleegameclient.ui.tooltip.TextToolTip;
+import com.company.ui.SimpleText;
+
+import flash.display.DisplayObject;
+import flash.display.Sprite;
+import flash.events.Event;
+import flash.events.MouseEvent;
+import flash.filters.DropShadowFilter;
+import flash.utils.getTimer;
+
+public class ScoreTextLine extends Sprite
    {
       
       public static var textTooltip_:TextToolTip = new TextToolTip(3552822,10197915,null,"",150);

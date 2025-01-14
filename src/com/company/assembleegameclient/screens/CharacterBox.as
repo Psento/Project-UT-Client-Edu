@@ -1,33 +1,31 @@
 package com.company.assembleegameclient.screens
 {
-   import com.company.assembleegameclient.appengine.CharacterStats;
-   import com.company.assembleegameclient.appengine.SavedCharacter;
-   import com.company.assembleegameclient.ui.tooltip.ClassToolTip;
-   import com.company.assembleegameclient.ui.tooltip.ToolTip;
-   import com.company.assembleegameclient.util.AnimatedChar;
-   import com.company.assembleegameclient.util.Currency;
-   import com.company.assembleegameclient.util.FameUtil;
-   import com.company.untiered.graphics.FullCharBoxGraphic;
-   import com.company.untiered.graphics.LockedCharBoxGraphic;
-   import com.company.untiered.graphics.StarGraphic;
-   import com.company.ui.SimpleText;
-   import com.company.util.AssetLibrary;
-   import com.gskinner.motion.GTween;
-   import flash.display.Bitmap;
-   import flash.display.Sprite;
-   import flash.events.Event;
-   import flash.events.KeyboardEvent;
-   import flash.events.MouseEvent;
-   import flash.filters.DropShadowFilter;
-   import flash.geom.ColorTransform;
-   import flash.text.TextFieldAutoSize;
-   import flash.ui.Keyboard;
-   import flash.utils.getTimer;
-   import svera.untiered.core.model.PlayerModel;
-   import svera.untiered.util.components.LegacyBuyButton;
-   import org.osflash.signals.natives.NativeSignal;
-   
-   public class CharacterBox extends Sprite
+import com.company.assembleegameclient.appengine.CharacterStats;
+import com.company.assembleegameclient.appengine.SavedCharacter;
+import com.company.assembleegameclient.ui.tooltip.ClassToolTip;
+import com.company.assembleegameclient.ui.tooltip.ToolTip;
+import com.company.assembleegameclient.util.AnimatedChar;
+import com.company.assembleegameclient.util.FameUtil;
+import com.company.ui.SimpleText;
+import com.company.untiered.graphics.FullCharBoxGraphic;
+import com.company.untiered.graphics.StarGraphic;
+
+import flash.display.Bitmap;
+import flash.display.Sprite;
+import flash.events.Event;
+import flash.events.KeyboardEvent;
+import flash.events.MouseEvent;
+import flash.filters.DropShadowFilter;
+import flash.geom.ColorTransform;
+import flash.text.TextFieldAutoSize;
+import flash.ui.Keyboard;
+import flash.utils.getTimer;
+
+import org.osflash.signals.natives.NativeSignal;
+
+import svera.untiered.core.model.PlayerModel;
+
+public class CharacterBox extends Sprite
    {
       public static const DELETE_CHAR:String = "DELETE_CHAR";
       public static const ENTER_NAME:String = "ENTER_NAME";

@@ -1,14 +1,15 @@
 package com.company.assembleegameclient.ui
 {
-   import com.company.ui.SimpleText;
-   import com.company.util.GraphicsUtil;
-   import flash.display.GraphicsPath;
-   import flash.display.GraphicsSolidFill;
-   import flash.display.IGraphicsData;
-   import flash.display.Sprite;
-   import flash.events.MouseEvent;
-   
-   public class TextButton extends Sprite
+import com.company.ui.SimpleText;
+import com.company.util.GraphicsUtil;
+
+import flash.display.GraphicsPath;
+import flash.display.GraphicsSolidFill;
+import flash.display.IGraphicsData;
+import flash.display.Sprite;
+import flash.events.MouseEvent;
+
+public class TextButton extends Sprite
    {
       public var text_:SimpleText;
       

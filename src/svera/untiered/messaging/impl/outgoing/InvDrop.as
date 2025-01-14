@@ -1,9 +1,8 @@
 package svera.untiered.messaging.impl.outgoing
 {
-   import flash.utils.IDataOutput;
-   import svera.untiered.messaging.impl.data.SlotObjectData;
-   
-   public class InvDrop extends OutgoingMessage
+import flash.utils.IDataOutput;
+
+public class InvDrop extends OutgoingMessage
    {
        
       

@@ -1,8 +1,6 @@
 package svera.untiered.messaging.impl.outgoing
 {
-   import flash.utils.IDataOutput;
-
-import svera.untiered.messaging.impl.data.WorldPosData;
+import flash.utils.IDataOutput;
 
 public class SquareHit extends OutgoingMessage
    {

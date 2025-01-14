@@ -1,53 +1,52 @@
 package com.company.assembleegameclient.objects
 {
-   import com.company.assembleegameclient.map.Camera;
-   import com.company.assembleegameclient.map.Square;
-   import com.company.assembleegameclient.map.mapoverlay.CharacterStatusText;
-   import com.company.assembleegameclient.objects.particles.HealingEffect;
-   import com.company.assembleegameclient.objects.particles.LevelUpEffect;
-   import com.company.assembleegameclient.parameters.Parameters;
-   import com.company.assembleegameclient.sound.SoundEffectLibrary;
-   import com.company.assembleegameclient.util.AnimatedChar;
-   import com.company.assembleegameclient.util.ConditionEffect;
-   import com.company.assembleegameclient.util.FameUtil;
-   import com.company.assembleegameclient.util.FreeList;
+import com.company.assembleegameclient.map.Camera;
+import com.company.assembleegameclient.map.Square;
+import com.company.assembleegameclient.map.mapoverlay.CharacterStatusText;
+import com.company.assembleegameclient.objects.particles.HealingEffect;
+import com.company.assembleegameclient.objects.particles.LevelUpEffect;
+import com.company.assembleegameclient.parameters.Parameters;
+import com.company.assembleegameclient.sound.SoundEffectLibrary;
+import com.company.assembleegameclient.util.AnimatedChar;
+import com.company.assembleegameclient.util.ConditionEffect;
+import com.company.assembleegameclient.util.FameUtil;
+import com.company.assembleegameclient.util.FreeList;
 import com.company.assembleegameclient.util.ItemData;
 import com.company.assembleegameclient.util.MaskedImage;
-   import com.company.assembleegameclient.util.TextureRedrawer;
+import com.company.assembleegameclient.util.TextureRedrawer;
 import com.company.assembleegameclient.util.redrawers.GlowRedrawer;
 import com.company.ui.SimpleText;
-   import com.company.util.CachingColorTransformer;
-   import com.company.util.ConversionUtil;
-   import com.company.util.GraphicsUtil;
-   import com.company.util.IntPoint;
-   import com.company.util.MoreColorUtil;
-   import com.company.util.PointUtil;
-   import com.company.util.Trig;
-   import flash.display.BitmapData;
-   import flash.display.GraphicsPath;
-   import flash.display.GraphicsSolidFill;
-   import flash.display.IGraphicsData;
-   import flash.display.Sprite;
-   import flash.filters.GlowFilter;
-   import flash.geom.ColorTransform;
-   import flash.geom.Matrix;
-   import flash.geom.Point;
-   import flash.utils.Dictionary;
-   import svera.untiered.assets.services.CharacterFactory;
-   import svera.untiered.constants.ActivationType;
-   import svera.untiered.constants.GeneralConstants;
-   import svera.untiered.core.StaticInjectorContext;
-   import svera.untiered.game.model.AddTextLineVO;
-import svera.untiered.game.model.PotionInventoryModel;
-import svera.untiered.game.signals.AddTextLineSignal;
-import svera.untiered.messaging.impl.GameServerConnection;
-import svera.untiered.stage3D.GraphicsFillExtra;
+import com.company.util.CachingColorTransformer;
+import com.company.util.ConversionUtil;
+import com.company.util.GraphicsUtil;
+import com.company.util.IntPoint;
+import com.company.util.MoreColorUtil;
+import com.company.util.PointUtil;
+import com.company.util.Trig;
 
-import org.hamcrest.core.isA;
+import flash.display.BitmapData;
+import flash.display.GraphicsPath;
+import flash.display.GraphicsSolidFill;
+import flash.display.IGraphicsData;
+import flash.display.Sprite;
+import flash.filters.GlowFilter;
+import flash.geom.ColorTransform;
+import flash.geom.Matrix;
+import flash.geom.Point;
+import flash.utils.Dictionary;
 
 import org.swiftsuspenders.Injector;
-   
-   public class Player extends Character
+
+import svera.untiered.assets.services.CharacterFactory;
+import svera.untiered.constants.ActivationType;
+import svera.untiered.constants.GeneralConstants;
+import svera.untiered.core.StaticInjectorContext;
+import svera.untiered.game.model.AddTextLineVO;
+import svera.untiered.game.model.PotionInventoryModel;
+import svera.untiered.game.signals.AddTextLineSignal;
+import svera.untiered.stage3D.GraphicsFillExtra;
+
+public class Player extends Character
    {
       
       public static const MS_BETWEEN_TELEPORT:int = 10000;

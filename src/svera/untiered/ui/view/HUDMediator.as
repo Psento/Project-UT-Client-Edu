@@ -1,11 +1,13 @@
 package svera.untiered.ui.view
 {
-   import com.company.assembleegameclient.objects.Player;
-   import svera.untiered.ui.model.HUDModel;
-   import svera.untiered.ui.signals.UpdateHUDSignal;
-   import robotlegs.bender.bundles.mvcs.Mediator;
-   
-   public class HUDMediator extends Mediator
+import com.company.assembleegameclient.objects.Player;
+
+import robotlegs.bender.bundles.mvcs.Mediator;
+
+import svera.untiered.ui.model.HUDModel;
+import svera.untiered.ui.signals.UpdateHUDSignal;
+
+public class HUDMediator extends Mediator
    {
        
       

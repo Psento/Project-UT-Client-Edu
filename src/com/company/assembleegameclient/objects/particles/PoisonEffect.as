@@ -1,9 +1,9 @@
 package com.company.assembleegameclient.objects.particles
 {
-   import com.company.assembleegameclient.objects.GameObject;
-   import com.company.assembleegameclient.util.RandomUtil;
-   
-   public class PoisonEffect extends ParticleEffect
+import com.company.assembleegameclient.objects.GameObject;
+import com.company.assembleegameclient.util.RandomUtil;
+
+public class PoisonEffect extends ParticleEffect
    {
        
       

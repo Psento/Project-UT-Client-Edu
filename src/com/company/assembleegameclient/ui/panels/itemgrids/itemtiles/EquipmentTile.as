@@ -1,16 +1,18 @@
 package com.company.assembleegameclient.ui.panels.itemgrids.itemtiles
 {
-   import com.company.assembleegameclient.objects.ObjectLibrary;
-   import com.company.assembleegameclient.objects.Player;
-   import com.company.assembleegameclient.ui.panels.itemgrids.ItemGrid;
-   import com.company.util.AssetLibrary;
-   import com.company.util.MoreColorUtil;
-   import flash.display.Bitmap;
-   import flash.display.BitmapData;
-   import flash.filters.ColorMatrixFilter;
-   import svera.untiered.constants.ItemConstants;
-   
-   public class EquipmentTile extends InteractiveItemTile
+import com.company.assembleegameclient.objects.ObjectLibrary;
+import com.company.assembleegameclient.objects.Player;
+import com.company.assembleegameclient.ui.panels.itemgrids.ItemGrid;
+import com.company.util.AssetLibrary;
+import com.company.util.MoreColorUtil;
+
+import flash.display.Bitmap;
+import flash.display.BitmapData;
+import flash.filters.ColorMatrixFilter;
+
+import svera.untiered.constants.ItemConstants;
+
+public class EquipmentTile extends InteractiveItemTile
    {
       
       private static const greyColorFilter:ColorMatrixFilter = new ColorMatrixFilter(MoreColorUtil.singleColorFilterMatrix(3552822));

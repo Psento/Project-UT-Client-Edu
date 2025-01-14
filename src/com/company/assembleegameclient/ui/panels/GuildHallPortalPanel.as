@@ -1,19 +1,20 @@
 package com.company.assembleegameclient.ui.panels
 {
-   import com.company.assembleegameclient.game.GameSprite;
-   import com.company.assembleegameclient.objects.GuildHallPortal;
-   import com.company.assembleegameclient.objects.Player;
-   import com.company.assembleegameclient.parameters.Parameters;
-   import com.company.assembleegameclient.ui.TextBox;
-   import com.company.assembleegameclient.ui.TextButton;
-   import com.company.ui.SimpleText;
-   import flash.events.Event;
-   import flash.events.KeyboardEvent;
-   import flash.events.MouseEvent;
-   import flash.filters.DropShadowFilter;
-   import flash.text.TextFieldAutoSize;
-   
-   public class GuildHallPortalPanel extends Panel
+import com.company.assembleegameclient.game.GameSprite;
+import com.company.assembleegameclient.objects.GuildHallPortal;
+import com.company.assembleegameclient.objects.Player;
+import com.company.assembleegameclient.parameters.Parameters;
+import com.company.assembleegameclient.ui.TextBox;
+import com.company.assembleegameclient.ui.TextButton;
+import com.company.ui.SimpleText;
+
+import flash.events.Event;
+import flash.events.KeyboardEvent;
+import flash.events.MouseEvent;
+import flash.filters.DropShadowFilter;
+import flash.text.TextFieldAutoSize;
+
+public class GuildHallPortalPanel extends Panel
    {
       private var owner_:GuildHallPortal;
       private var nameText_:SimpleText;

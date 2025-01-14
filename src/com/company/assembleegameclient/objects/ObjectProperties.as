@@ -1,9 +1,10 @@
 package com.company.assembleegameclient.objects
 {
-   import com.company.assembleegameclient.sound.SoundEffectLibrary;
-   import flash.utils.Dictionary;
-   
-   public class ObjectProperties
+import com.company.assembleegameclient.sound.SoundEffectLibrary;
+
+import flash.utils.Dictionary;
+
+public class ObjectProperties
    {
        
       

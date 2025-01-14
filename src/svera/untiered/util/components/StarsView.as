@@ -1,11 +1,12 @@
 package svera.untiered.util.components
 {
-   import com.company.untiered.graphics.StarGraphic;
-   import flash.display.Graphics;
-   import flash.display.Sprite;
-   import flash.geom.ColorTransform;
-   
-   public class StarsView extends Sprite
+import com.company.untiered.graphics.StarGraphic;
+
+import flash.display.Graphics;
+import flash.display.Sprite;
+import flash.geom.ColorTransform;
+
+public class StarsView extends Sprite
    {
       
       private static const TOTAL:int = 5;

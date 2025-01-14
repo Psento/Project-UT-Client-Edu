@@ -1,33 +1,36 @@
 package svera.untiered.stage3D
 {
-   import com.adobe.utils.AGALMiniAssembler;
-   import com.company.assembleegameclient.map.Camera;
-   import com.company.assembleegameclient.parameters.Parameters;
-   import flash.display.GraphicsBitmapFill;
-   import flash.display.GraphicsGradientFill;
-   import flash.display.IGraphicsData;
-   import flash.display.Stage3D;
-   import flash.display.StageScaleMode;
-   import flash.display3D.Context3D;
-   import flash.display3D.Context3DProgramType;
-   import flash.display3D.Context3DTextureFormat;
-   import flash.display3D.Context3DTriangleFace;
-   import flash.display3D.Context3DVertexBufferFormat;
-   import flash.display3D.IndexBuffer3D;
-   import flash.display3D.Program3D;
-   import flash.display3D.VertexBuffer3D;
-   import flash.display3D.textures.Texture;
-   import flash.geom.Matrix3D;
-   import flash.geom.Vector3D;
-   import flash.utils.ByteArray;
-   import svera.untiered.stage3D.Object3D.Object3DStage3D;
-   import svera.untiered.stage3D.Object3D.Util;
-   import svera.untiered.stage3D.graphic3D.Graphic3D;
-   import svera.untiered.stage3D.graphic3D.TextureFactory;
-   import svera.untiered.stage3D.proxies.Context3DProxy;
-   import org.swiftsuspenders.Injector;
-   
-   public class Renderer
+import com.adobe.utils.AGALMiniAssembler;
+import com.company.assembleegameclient.map.Camera;
+import com.company.assembleegameclient.parameters.Parameters;
+
+import flash.display.GraphicsBitmapFill;
+import flash.display.GraphicsGradientFill;
+import flash.display.IGraphicsData;
+import flash.display.Stage3D;
+import flash.display.StageScaleMode;
+import flash.display3D.Context3D;
+import flash.display3D.Context3DProgramType;
+import flash.display3D.Context3DTextureFormat;
+import flash.display3D.Context3DTriangleFace;
+import flash.display3D.Context3DVertexBufferFormat;
+import flash.display3D.IndexBuffer3D;
+import flash.display3D.Program3D;
+import flash.display3D.VertexBuffer3D;
+import flash.display3D.textures.Texture;
+import flash.geom.Matrix3D;
+import flash.geom.Vector3D;
+import flash.utils.ByteArray;
+
+import org.swiftsuspenders.Injector;
+
+import svera.untiered.stage3D.Object3D.Object3DStage3D;
+import svera.untiered.stage3D.Object3D.Util;
+import svera.untiered.stage3D.graphic3D.Graphic3D;
+import svera.untiered.stage3D.graphic3D.TextureFactory;
+import svera.untiered.stage3D.proxies.Context3DProxy;
+
+public class Renderer
    {
       
       public static const STAGE3D_FILTER_PAUSE:uint = 1;

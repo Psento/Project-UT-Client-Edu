@@ -1,12 +1,13 @@
 package com.company.assembleegameclient.appengine
 {
-   import com.company.assembleegameclient.objects.ObjectLibrary;
-   import flash.events.Event;
-   import svera.untiered.account.core.Account;
-   import svera.untiered.core.StaticInjectorContext;
-   import org.swiftsuspenders.Injector;
-   
-   public class SavedCharactersList extends Event
+import flash.events.Event;
+
+import org.swiftsuspenders.Injector;
+
+import svera.untiered.account.core.Account;
+import svera.untiered.core.StaticInjectorContext;
+
+public class SavedCharactersList extends Event
    {
       public static const SAVED_CHARS_LIST:String = "SAVED_CHARS_LIST";
       public static const AVAILABLE:String = "available";

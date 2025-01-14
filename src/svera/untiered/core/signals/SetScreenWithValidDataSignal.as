@@ -1,9 +1,10 @@
 package svera.untiered.core.signals
 {
-   import flash.display.Sprite;
-   import org.osflash.signals.Signal;
-   
-   public class SetScreenWithValidDataSignal extends Signal
+import flash.display.Sprite;
+
+import org.osflash.signals.Signal;
+
+public class SetScreenWithValidDataSignal extends Signal
    {
        
       

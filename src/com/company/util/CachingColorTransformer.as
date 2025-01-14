@@ -1,12 +1,12 @@
 package com.company.util
 {
-   import flash.display.BitmapData;
-   import flash.filters.BitmapFilter;
-   import flash.geom.ColorTransform;
-   import flash.geom.Point;
-   import flash.utils.Dictionary;
-   
-   public class CachingColorTransformer
+import flash.display.BitmapData;
+import flash.filters.BitmapFilter;
+import flash.geom.ColorTransform;
+import flash.geom.Point;
+import flash.utils.Dictionary;
+
+public class CachingColorTransformer
    {
       
       private static var bds_:Dictionary = new Dictionary();

@@ -1,22 +1,24 @@
 package com.company.assembleegameclient.account.ui
 {
-   import com.company.assembleegameclient.ui.ClickableText;
-   import com.company.ui.SimpleText;
-   import com.company.util.GraphicsUtil;
-   import flash.display.CapsStyle;
-   import flash.display.DisplayObject;
-   import flash.display.GraphicsPath;
-   import flash.display.GraphicsSolidFill;
-   import flash.display.GraphicsStroke;
-   import flash.display.IGraphicsData;
-   import flash.display.JointStyle;
-   import flash.display.LineScaleMode;
-   import flash.display.Sprite;
-   import flash.events.Event;
-   import flash.filters.DropShadowFilter;
-   import svera.untiered.account.web.view.LabeledField;
-   
-   public class Frame extends Sprite
+import com.company.assembleegameclient.ui.ClickableText;
+import com.company.ui.SimpleText;
+import com.company.util.GraphicsUtil;
+
+import flash.display.CapsStyle;
+import flash.display.DisplayObject;
+import flash.display.GraphicsPath;
+import flash.display.GraphicsSolidFill;
+import flash.display.GraphicsStroke;
+import flash.display.IGraphicsData;
+import flash.display.JointStyle;
+import flash.display.LineScaleMode;
+import flash.display.Sprite;
+import flash.events.Event;
+import flash.filters.DropShadowFilter;
+
+import svera.untiered.account.web.view.LabeledField;
+
+public class Frame extends Sprite
    {
        
       

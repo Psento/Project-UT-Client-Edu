@@ -1,27 +1,25 @@
 package com.company.assembleegameclient.ui.tooltip
 {
-import com.adobe.protocols.dict.Dict;
 import com.company.assembleegameclient.constants.InventoryOwnerTypes;
-   import com.company.assembleegameclient.objects.ObjectLibrary;
-   import com.company.assembleegameclient.objects.Player;
-   import com.company.assembleegameclient.parameters.Parameters;
-   import com.company.assembleegameclient.ui.LineBreakDesign;
-import com.company.assembleegameclient.ui.panels.mediators.ItemGridMediator;
-import com.company.assembleegameclient.ui.tooltip.TooltipHelper;
+import com.company.assembleegameclient.objects.ObjectLibrary;
+import com.company.assembleegameclient.objects.Player;
+import com.company.assembleegameclient.parameters.Parameters;
+import com.company.assembleegameclient.ui.LineBreakDesign;
 import com.company.assembleegameclient.util.ItemData;
 import com.company.ui.SimpleText;
-   import com.company.util.BitmapUtil;
-   import com.company.util.KeyCodes;
-   import flash.display.Bitmap;
-   import flash.display.BitmapData;
-   import flash.filters.DropShadowFilter;
-   import flash.text.StyleSheet;
+import com.company.util.BitmapUtil;
+import com.company.util.KeyCodes;
+
+import flash.display.Bitmap;
+import flash.display.BitmapData;
+import flash.filters.DropShadowFilter;
+import flash.text.StyleSheet;
 import flash.utils.Dictionary;
 
 import svera.untiered.constants.ActivationType;
-   import svera.untiered.messaging.impl.data.StatData;
-   
-   public class EquipmentToolTip extends ToolTip
+import svera.untiered.messaging.impl.data.StatData;
+
+public class EquipmentToolTip extends ToolTip
    {
       private static const MAX_WIDTH:int = 230;
       private static const CSS_TEXT:String = ".in { margin-left:10px; text-indent: -10px; }";

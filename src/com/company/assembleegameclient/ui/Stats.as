@@ -1,12 +1,13 @@
 package com.company.assembleegameclient.ui
 {
-   import com.company.assembleegameclient.objects.Player;
-   import com.company.assembleegameclient.ui.tooltip.TextToolTip;
-   import flash.display.Sprite;
-   import flash.events.Event;
-   import flash.events.MouseEvent;
-   
-   public class Stats extends Sprite
+import com.company.assembleegameclient.objects.Player;
+import com.company.assembleegameclient.ui.tooltip.TextToolTip;
+
+import flash.display.Sprite;
+import flash.events.Event;
+import flash.events.MouseEvent;
+
+public class Stats extends Sprite
    {
       
       public static const ATTACK:int = 0;
@@ -148,6 +149,7 @@ package com.company.assembleegameclient.ui
 }
 
 import com.company.ui.SimpleText;
+
 import flash.display.Sprite;
 import flash.filters.DropShadowFilter;
 import flash.text.TextFormat;

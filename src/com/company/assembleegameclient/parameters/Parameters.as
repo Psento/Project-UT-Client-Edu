@@ -1,13 +1,13 @@
 package com.company.assembleegameclient.parameters
 {
-   import com.company.util.KeyCodes;
-   import com.company.util.MoreDateUtil;
-   import flash.display.DisplayObject;
+import com.company.util.KeyCodes;
+
+import flash.display.DisplayObject;
 import flash.events.Event;
 import flash.net.SharedObject;
-   import flash.utils.Dictionary;
-   
-   public class Parameters
+import flash.utils.Dictionary;
+
+public class Parameters
    {
       public static var root:DisplayObject;
 

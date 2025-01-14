@@ -1,17 +1,19 @@
 package svera.untiered.classes.view
 {
-   import com.company.assembleegameclient.util.FameUtil;
-   import com.company.ui.SimpleText;
-   import flash.display.Bitmap;
-   import flash.display.Sprite;
-   import flash.filters.DropShadowFilter;
-   import flash.text.TextFieldAutoSize;
-   import flash.text.TextFormat;
-   import flash.text.TextFormatAlign;
-   import svera.untiered.assets.model.Animation;
-   import svera.untiered.util.components.StarsView;
-   
-   public class ClassDetailView extends Sprite
+import com.company.assembleegameclient.util.FameUtil;
+import com.company.ui.SimpleText;
+
+import flash.display.Bitmap;
+import flash.display.Sprite;
+import flash.filters.DropShadowFilter;
+import flash.text.TextFieldAutoSize;
+import flash.text.TextFormat;
+import flash.text.TextFormatAlign;
+
+import svera.untiered.assets.model.Animation;
+import svera.untiered.util.components.StarsView;
+
+public class ClassDetailView extends Sprite
    {
       
       private static const RIGHT_JUSTIFICATION_STATS:int = 205;

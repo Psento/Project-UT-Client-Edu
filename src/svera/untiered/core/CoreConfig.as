@@ -1,36 +1,39 @@
 package svera.untiered.core
 {
-   import flash.display.DisplayObjectContainer;
-   import svera.lib.json.JsonParser;
-   import svera.lib.json.SoftwareJsonParser;
-   import svera.lib.tasks.TaskMonitor;
-   import svera.untiered.account.core.signals.CharListDataSignal;
-   import svera.untiered.core.commands.InvalidateDataCommand;
-   import svera.untiered.core.commands.SetScreenWithValidDataCommand;
-   import svera.untiered.core.commands.UpdatePlayerModelCommand;
-   import svera.untiered.core.model.MapModel;
-   import svera.untiered.core.model.PlayerModel;
-   import svera.untiered.core.model.ScreenModel;
-   import svera.untiered.core.signals.GotoPreviousScreenSignal;
-   import svera.untiered.core.signals.HideTooltipsSignal;
-   import svera.untiered.core.signals.InvalidateDataSignal;
-   import svera.untiered.core.signals.LaunchGameSignal;
-   import svera.untiered.core.signals.SetLoadingMessageSignal;
-   import svera.untiered.core.signals.SetScreenSignal;
-   import svera.untiered.core.signals.SetScreenWithValidDataSignal;
-   import svera.untiered.core.signals.ShowTooltipSignal;
-   import svera.untiered.core.signals.UpdateNewCharacterScreenSignal;
-   import svera.untiered.core.view.Layers;
-   import svera.untiered.core.view.ScreensMediator;
-   import svera.untiered.core.view.ScreensView;
-   import svera.untiered.startup.control.StartupSequence;
-   import org.swiftsuspenders.Injector;
-   import robotlegs.bender.extensions.mediatorMap.api.IMediatorMap;
-   import robotlegs.bender.extensions.signalCommandMap.api.ISignalCommandMap;
-   import robotlegs.bender.framework.api.IConfig;
-   import robotlegs.bender.framework.api.IContext;
-   
-   public class CoreConfig implements IConfig
+import flash.display.DisplayObjectContainer;
+
+import org.swiftsuspenders.Injector;
+
+import robotlegs.bender.extensions.mediatorMap.api.IMediatorMap;
+import robotlegs.bender.extensions.signalCommandMap.api.ISignalCommandMap;
+import robotlegs.bender.framework.api.IConfig;
+import robotlegs.bender.framework.api.IContext;
+
+import svera.lib.json.JsonParser;
+import svera.lib.json.SoftwareJsonParser;
+import svera.lib.tasks.TaskMonitor;
+import svera.untiered.account.core.signals.CharListDataSignal;
+import svera.untiered.core.commands.InvalidateDataCommand;
+import svera.untiered.core.commands.SetScreenWithValidDataCommand;
+import svera.untiered.core.commands.UpdatePlayerModelCommand;
+import svera.untiered.core.model.MapModel;
+import svera.untiered.core.model.PlayerModel;
+import svera.untiered.core.model.ScreenModel;
+import svera.untiered.core.signals.GotoPreviousScreenSignal;
+import svera.untiered.core.signals.HideTooltipsSignal;
+import svera.untiered.core.signals.InvalidateDataSignal;
+import svera.untiered.core.signals.LaunchGameSignal;
+import svera.untiered.core.signals.SetLoadingMessageSignal;
+import svera.untiered.core.signals.SetScreenSignal;
+import svera.untiered.core.signals.SetScreenWithValidDataSignal;
+import svera.untiered.core.signals.ShowTooltipSignal;
+import svera.untiered.core.signals.UpdateNewCharacterScreenSignal;
+import svera.untiered.core.view.Layers;
+import svera.untiered.core.view.ScreensMediator;
+import svera.untiered.core.view.ScreensView;
+import svera.untiered.startup.control.StartupSequence;
+
+public class CoreConfig implements IConfig
    {
        
       

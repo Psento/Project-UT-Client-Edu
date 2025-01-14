@@ -1,17 +1,19 @@
 package svera.untiered.fame
 {
-   import svera.untiered.fame.control.ShowFameViewCommand;
-   import svera.untiered.fame.control.ShowFameViewSignal;
-   import svera.untiered.fame.model.FameModel;
-   import svera.untiered.fame.service.RequestCharacterFameTask;
-   import svera.untiered.fame.view.FameMediator;
-   import svera.untiered.fame.view.FameView;
-   import org.swiftsuspenders.Injector;
-   import robotlegs.bender.extensions.mediatorMap.api.IMediatorMap;
-   import robotlegs.bender.extensions.signalCommandMap.api.ISignalCommandMap;
-   import robotlegs.bender.framework.api.IConfig;
-   
-   public class FameConfig implements IConfig
+import org.swiftsuspenders.Injector;
+
+import robotlegs.bender.extensions.mediatorMap.api.IMediatorMap;
+import robotlegs.bender.extensions.signalCommandMap.api.ISignalCommandMap;
+import robotlegs.bender.framework.api.IConfig;
+
+import svera.untiered.fame.control.ShowFameViewCommand;
+import svera.untiered.fame.control.ShowFameViewSignal;
+import svera.untiered.fame.model.FameModel;
+import svera.untiered.fame.service.RequestCharacterFameTask;
+import svera.untiered.fame.view.FameMediator;
+import svera.untiered.fame.view.FameView;
+
+public class FameConfig implements IConfig
    {
        
       

@@ -1,14 +1,15 @@
 package com.company.assembleegameclient.ui.options
 {
-   import com.company.assembleegameclient.ui.tooltip.TextToolTip;
-   import com.company.assembleegameclient.ui.tooltip.ToolTip;
-   import com.company.ui.SimpleText;
-   import flash.display.Sprite;
-   import flash.events.Event;
-   import flash.events.MouseEvent;
-   import flash.filters.DropShadowFilter;
-   
-   public class Option extends Sprite
+import com.company.assembleegameclient.ui.tooltip.TextToolTip;
+import com.company.assembleegameclient.ui.tooltip.ToolTip;
+import com.company.ui.SimpleText;
+
+import flash.display.Sprite;
+import flash.events.Event;
+import flash.events.MouseEvent;
+import flash.filters.DropShadowFilter;
+
+public class Option extends Sprite
    {
       
       private static var tooltip_:ToolTip;

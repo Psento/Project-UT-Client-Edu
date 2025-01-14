@@ -1,13 +1,14 @@
 package com.company.assembleegameclient.ui
 {
-   import com.company.assembleegameclient.util.GuildUtil;
-   import com.company.ui.SimpleText;
-   import com.company.util.SpriteUtil;
-   import flash.display.Bitmap;
-   import flash.display.Sprite;
-   import flash.filters.DropShadowFilter;
-   
-   public class GuildText extends Sprite
+import com.company.assembleegameclient.util.GuildUtil;
+import com.company.ui.SimpleText;
+import com.company.util.SpriteUtil;
+
+import flash.display.Bitmap;
+import flash.display.Sprite;
+import flash.filters.DropShadowFilter;
+
+public class GuildText extends Sprite
    {
        
       

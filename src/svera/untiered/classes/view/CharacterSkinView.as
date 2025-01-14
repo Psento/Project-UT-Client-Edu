@@ -1,17 +1,20 @@
 package svera.untiered.classes.view
 {
-   import com.company.assembleegameclient.screens.AccountScreen;
-   import com.company.assembleegameclient.screens.TitleMenuOption;
-   import com.company.untiered.graphics.ScreenGraphic;
-   import flash.display.Shape;
-   import flash.display.Sprite;
-   import flash.events.MouseEvent;
-   import svera.untiered.game.view.CurrencyDisplay;
-   import svera.untiered.ui.view.components.ScreenBase;
-   import org.osflash.signals.Signal;
-   import org.osflash.signals.natives.NativeMappedSignal;
-   
-   public class CharacterSkinView extends Sprite
+import com.company.assembleegameclient.screens.AccountScreen;
+import com.company.assembleegameclient.screens.TitleMenuOption;
+import com.company.untiered.graphics.ScreenGraphic;
+
+import flash.display.Shape;
+import flash.display.Sprite;
+import flash.events.MouseEvent;
+
+import org.osflash.signals.Signal;
+import org.osflash.signals.natives.NativeMappedSignal;
+
+import svera.untiered.game.view.CurrencyDisplay;
+import svera.untiered.ui.view.components.ScreenBase;
+
+public class CharacterSkinView extends Sprite
    {
       private const base:ScreenBase = makeScreenBase();
       private const account:AccountScreen = makeAccountScreen();

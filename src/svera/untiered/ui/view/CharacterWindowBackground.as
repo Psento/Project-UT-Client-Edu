@@ -1,8 +1,8 @@
 package svera.untiered.ui.view
 {
-   import flash.display.Sprite;
-   
-   public class CharacterWindowBackground extends Sprite
+import flash.display.Sprite;
+
+public class CharacterWindowBackground extends Sprite
    {
        
       

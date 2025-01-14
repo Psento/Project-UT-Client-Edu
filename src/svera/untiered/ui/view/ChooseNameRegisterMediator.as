@@ -1,9 +1,10 @@
 package svera.untiered.ui.view
 {
-   import svera.untiered.account.core.signals.OpenAccountInfoSignal;
-   import robotlegs.bender.bundles.mvcs.Mediator;
-   
-   public class ChooseNameRegisterMediator extends Mediator
+import robotlegs.bender.bundles.mvcs.Mediator;
+
+import svera.untiered.account.core.signals.OpenAccountInfoSignal;
+
+public class ChooseNameRegisterMediator extends Mediator
    {
        
       

@@ -1,49 +1,50 @@
 package svera.untiered.account.web
 {
-   import svera.untiered.account.core.Account;
-   import svera.untiered.account.core.services.ChangePasswordTask;
-   import svera.untiered.account.core.services.LoadAccountTask;
-   import svera.untiered.account.core.services.LoginTask;
-   import svera.untiered.account.core.services.RegisterAccountTask;
-   import svera.untiered.account.core.services.SendPasswordReminderTask;
-   import svera.untiered.account.core.signals.CharListDataSignal;
-   import svera.untiered.account.core.signals.LoginSignal;
-   import svera.untiered.account.core.signals.LogoutSignal;
-   import svera.untiered.account.core.signals.OpenAccountInfoSignal;
+import org.swiftsuspenders.Injector;
+
+import robotlegs.bender.extensions.mediatorMap.api.IMediatorMap;
+import robotlegs.bender.extensions.signalCommandMap.api.ISignalCommandMap;
+import robotlegs.bender.framework.api.IConfig;
+
+import svera.untiered.account.core.Account;
+import svera.untiered.account.core.services.ChangePasswordTask;
+import svera.untiered.account.core.services.LoadAccountTask;
+import svera.untiered.account.core.services.LoginTask;
+import svera.untiered.account.core.services.RegisterAccountTask;
+import svera.untiered.account.core.services.SendPasswordReminderTask;
+import svera.untiered.account.core.signals.LoginSignal;
+import svera.untiered.account.core.signals.LogoutSignal;
+import svera.untiered.account.core.signals.OpenAccountInfoSignal;
 import svera.untiered.account.core.signals.OpenQuitDialogSignal;
 import svera.untiered.account.core.signals.RegisterSignal;
-   import svera.untiered.account.core.signals.SendPasswordReminderSignal;
-   import svera.untiered.account.web.commands.WebChangePasswordCommand;
-   import svera.untiered.account.web.commands.WebLoginCommand;
-   import svera.untiered.account.web.commands.WebLogoutCommand;
-   import svera.untiered.account.web.commands.WebOpenAccountInfoCommand;
+import svera.untiered.account.core.signals.SendPasswordReminderSignal;
+import svera.untiered.account.web.commands.WebChangePasswordCommand;
+import svera.untiered.account.web.commands.WebLoginCommand;
+import svera.untiered.account.web.commands.WebLogoutCommand;
+import svera.untiered.account.web.commands.WebOpenAccountInfoCommand;
 import svera.untiered.account.web.commands.WebOpenQuitDialogCommand;
 import svera.untiered.account.web.commands.WebRegisterAccountCommand;
-   import svera.untiered.account.web.commands.WebSendPasswordReminderCommand;
-   import svera.untiered.account.web.services.WebChangePasswordTask;
-   import svera.untiered.account.web.services.WebLoadAccountTask;
-   import svera.untiered.account.web.services.WebLoginTask;
-   import svera.untiered.account.web.services.WebRegisterAccountTask;
-   import svera.untiered.account.web.services.WebSendPasswordReminderTask;
-   import svera.untiered.account.web.signals.WebChangePasswordSignal;
-   import svera.untiered.account.web.view.WebAccountDetailDialog;
-   import svera.untiered.account.web.view.WebAccountDetailMediator;
-   import svera.untiered.account.web.view.WebAccountInfoMediator;
-   import svera.untiered.account.web.view.WebAccountInfoView;
-   import svera.untiered.account.web.view.WebChangePasswordDialog;
-   import svera.untiered.account.web.view.WebChangePasswordMediator;
-   import svera.untiered.account.web.view.WebLoginDialog;
-   import svera.untiered.account.web.view.WebLoginMediator;
+import svera.untiered.account.web.commands.WebSendPasswordReminderCommand;
+import svera.untiered.account.web.services.WebChangePasswordTask;
+import svera.untiered.account.web.services.WebLoadAccountTask;
+import svera.untiered.account.web.services.WebLoginTask;
+import svera.untiered.account.web.services.WebRegisterAccountTask;
+import svera.untiered.account.web.services.WebSendPasswordReminderTask;
+import svera.untiered.account.web.signals.WebChangePasswordSignal;
+import svera.untiered.account.web.view.WebAccountDetailDialog;
+import svera.untiered.account.web.view.WebAccountDetailMediator;
+import svera.untiered.account.web.view.WebAccountInfoMediator;
+import svera.untiered.account.web.view.WebAccountInfoView;
+import svera.untiered.account.web.view.WebChangePasswordDialog;
+import svera.untiered.account.web.view.WebChangePasswordMediator;
+import svera.untiered.account.web.view.WebLoginDialog;
+import svera.untiered.account.web.view.WebLoginMediator;
 import svera.untiered.account.web.view.WebQuitDialog;
 import svera.untiered.account.web.view.WebQuitMediator;
 import svera.untiered.account.web.view.WebRegisterDialog;
-   import svera.untiered.account.web.view.WebRegisterMediator;
-   import org.swiftsuspenders.Injector;
-   import robotlegs.bender.extensions.mediatorMap.api.IMediatorMap;
-   import robotlegs.bender.extensions.signalCommandMap.api.ISignalCommandMap;
-   import robotlegs.bender.framework.api.IConfig;
-   
-   public class WebAccountConfig implements IConfig
+import svera.untiered.account.web.view.WebRegisterMediator;
+
+public class WebAccountConfig implements IConfig
    {
        
       

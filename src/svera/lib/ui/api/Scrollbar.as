@@ -1,8 +1,8 @@
 package svera.lib.ui.api
 {
-   import org.osflash.signals.Signal;
-   
-   public interface Scrollbar
+import org.osflash.signals.Signal;
+
+public interface Scrollbar
    {
        
       

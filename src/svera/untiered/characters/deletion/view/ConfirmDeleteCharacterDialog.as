@@ -1,11 +1,13 @@
 package svera.untiered.characters.deletion.view
 {
-   import com.company.assembleegameclient.ui.dialogs.Dialog;
-   import flash.display.Sprite;
-   import flash.events.Event;
-   import org.osflash.signals.Signal;
-   
-   public class ConfirmDeleteCharacterDialog extends Sprite
+import com.company.assembleegameclient.ui.dialogs.Dialog;
+
+import flash.display.Sprite;
+import flash.events.Event;
+
+import org.osflash.signals.Signal;
+
+public class ConfirmDeleteCharacterDialog extends Sprite
    {
        
       

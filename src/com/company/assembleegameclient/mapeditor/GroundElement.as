@@ -1,16 +1,17 @@
 package com.company.assembleegameclient.mapeditor
 {
-   import com.company.assembleegameclient.map.AnimateProperties;
-   import com.company.assembleegameclient.map.Camera;
-   import com.company.assembleegameclient.map.GroundLibrary;
-   import com.company.assembleegameclient.map.SquareFace;
-   import com.company.assembleegameclient.ui.tooltip.ToolTip;
-   import flash.display.BitmapData;
-   import flash.display.IGraphicsData;
-   import flash.display.Shape;
-   import flash.geom.Rectangle;
+import com.company.assembleegameclient.map.AnimateProperties;
+import com.company.assembleegameclient.map.Camera;
+import com.company.assembleegameclient.map.GroundLibrary;
+import com.company.assembleegameclient.map.SquareFace;
+import com.company.assembleegameclient.ui.tooltip.ToolTip;
 
-   public class GroundElement extends Element
+import flash.display.BitmapData;
+import flash.display.IGraphicsData;
+import flash.display.Shape;
+import flash.geom.Rectangle;
+
+public class GroundElement extends Element
    {
       
       private static const VIN:Vector.<Number> = new <Number>[0,0,0,1,0,0,1,1,0,0,1,0];

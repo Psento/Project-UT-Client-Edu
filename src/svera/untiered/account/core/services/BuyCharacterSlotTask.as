@@ -1,12 +1,12 @@
 package svera.untiered.account.core.services
 {
-   import svera.lib.tasks.BaseTask;
-   import svera.untiered.account.core.Account;
-   import svera.untiered.appengine.api.AppEngineClient;
-   import svera.untiered.core.model.PlayerModel;
-   import svera.untiered.dialogs.control.OpenDialogSignal;
-   
-   public class BuyCharacterSlotTask extends BaseTask
+import svera.lib.tasks.BaseTask;
+import svera.untiered.account.core.Account;
+import svera.untiered.appengine.api.AppEngineClient;
+import svera.untiered.core.model.PlayerModel;
+import svera.untiered.dialogs.control.OpenDialogSignal;
+
+public class BuyCharacterSlotTask extends BaseTask
    {
        
       

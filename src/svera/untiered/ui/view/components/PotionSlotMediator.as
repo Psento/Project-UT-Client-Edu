@@ -1,22 +1,17 @@
 package svera.untiered.ui.view.components
 {
-   import com.company.assembleegameclient.map.Map;
-   import com.company.assembleegameclient.objects.Player;
-import com.company.assembleegameclient.parameters.Parameters;
-import com.company.assembleegameclient.ui.panels.itemgrids.itemtiles.InteractiveItemTile;
-   import com.company.assembleegameclient.util.DisplayHierarchy;
-   import flash.display.DisplayObject;
-   import svera.untiered.constants.ItemConstants;
-   import svera.untiered.game.model.PotionInventoryModel;
-   import svera.untiered.game.model.UsePotionVO;
-   import svera.untiered.game.signals.UsePotionSignal;
-   import svera.untiered.messaging.impl.GameServerConnection;
-   import svera.untiered.ui.model.HUDModel;
-   import svera.untiered.ui.model.PotionModel;
-   import svera.untiered.ui.signals.UpdateHUDSignal;
-   import robotlegs.bender.bundles.mvcs.Mediator;
-   
-   public class PotionSlotMediator extends Mediator
+import com.company.assembleegameclient.objects.Player;
+
+import robotlegs.bender.bundles.mvcs.Mediator;
+
+import svera.untiered.game.model.PotionInventoryModel;
+import svera.untiered.game.model.UsePotionVO;
+import svera.untiered.game.signals.UsePotionSignal;
+import svera.untiered.ui.model.HUDModel;
+import svera.untiered.ui.model.PotionModel;
+import svera.untiered.ui.signals.UpdateHUDSignal;
+
+public class PotionSlotMediator extends Mediator
    {
        
       

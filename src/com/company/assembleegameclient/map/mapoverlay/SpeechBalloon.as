@@ -1,26 +1,27 @@
 package com.company.assembleegameclient.map.mapoverlay
 {
-   import com.company.assembleegameclient.map.Camera;
-   import com.company.assembleegameclient.objects.GameObject;
-   import com.company.assembleegameclient.parameters.Parameters;
+import com.company.assembleegameclient.map.Camera;
+import com.company.assembleegameclient.objects.GameObject;
+import com.company.assembleegameclient.parameters.Parameters;
 import com.company.ui.SimpleText;
 import com.company.util.GraphicsUtil;
-   import flash.display.CapsStyle;
-   import flash.display.GraphicsPath;
-   import flash.display.GraphicsPathCommand;
-   import flash.display.GraphicsSolidFill;
-   import flash.display.GraphicsStroke;
-   import flash.display.IGraphicsData;
-   import flash.display.JointStyle;
-   import flash.display.LineScaleMode;
-   import flash.display.Sprite;
-   import flash.filters.DropShadowFilter;
-   import flash.geom.Point;
-   import flash.text.TextField;
-   import flash.text.TextFieldAutoSize;
-   import flash.text.TextFormat;
-   
-   public class SpeechBalloon extends Sprite implements IMapOverlayElement
+
+import flash.display.CapsStyle;
+import flash.display.GraphicsPath;
+import flash.display.GraphicsPathCommand;
+import flash.display.GraphicsSolidFill;
+import flash.display.GraphicsStroke;
+import flash.display.IGraphicsData;
+import flash.display.JointStyle;
+import flash.display.LineScaleMode;
+import flash.display.Sprite;
+import flash.filters.DropShadowFilter;
+import flash.geom.Point;
+import flash.text.TextField;
+import flash.text.TextFieldAutoSize;
+import flash.text.TextFormat;
+
+public class SpeechBalloon extends Sprite implements IMapOverlayElement
    {
        
       

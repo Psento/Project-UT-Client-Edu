@@ -1,14 +1,16 @@
 package com.company.assembleegameclient.ui.menu
 {
-   import com.company.assembleegameclient.map.Map;
-   import com.company.assembleegameclient.objects.Player;
-   import com.company.assembleegameclient.ui.GameObjectListItem;
-   import com.company.assembleegameclient.ui.LineBreakDesign;
-   import flash.events.Event;
-   import flash.events.MouseEvent;
-   import org.osflash.signals.Signal;
-   
-   public class PlayerGroupMenu extends Menu
+import com.company.assembleegameclient.map.Map;
+import com.company.assembleegameclient.objects.Player;
+import com.company.assembleegameclient.ui.GameObjectListItem;
+import com.company.assembleegameclient.ui.LineBreakDesign;
+
+import flash.events.Event;
+import flash.events.MouseEvent;
+
+import org.osflash.signals.Signal;
+
+public class PlayerGroupMenu extends Menu
    {
        
       

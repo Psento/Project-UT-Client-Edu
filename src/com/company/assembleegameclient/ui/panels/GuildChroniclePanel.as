@@ -1,10 +1,11 @@
 package com.company.assembleegameclient.ui.panels
 {
-   import com.company.assembleegameclient.game.GameSprite;
-   import com.company.assembleegameclient.ui.guild.GuildChronicleScreen;
-   import flash.events.MouseEvent;
-   
-   public class GuildChroniclePanel extends ButtonPanel
+import com.company.assembleegameclient.game.GameSprite;
+import com.company.assembleegameclient.ui.guild.GuildChronicleScreen;
+
+import flash.events.MouseEvent;
+
+public class GuildChroniclePanel extends ButtonPanel
    {
        
       

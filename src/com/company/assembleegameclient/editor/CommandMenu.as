@@ -1,11 +1,11 @@
 package com.company.assembleegameclient.editor
 {
-   import flash.display.Sprite;
-   import flash.events.Event;
-   import flash.events.KeyboardEvent;
-   import flash.utils.Dictionary;
-   
-   public class CommandMenu extends Sprite
+import flash.display.Sprite;
+import flash.events.Event;
+import flash.events.KeyboardEvent;
+import flash.utils.Dictionary;
+
+public class CommandMenu extends Sprite
    {
        
       

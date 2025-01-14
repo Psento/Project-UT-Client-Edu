@@ -1,8 +1,8 @@
 package svera.untiered.messaging.impl.outgoing
 {
-   import flash.utils.IDataOutput;
-   
-   public class PlayerHit extends OutgoingMessage
+import flash.utils.IDataOutput;
+
+public class PlayerHit extends OutgoingMessage
    {
       public var bulletId_:int;
       

@@ -1,8 +1,8 @@
 package svera.untiered.game.model
 {
-   import com.company.assembleegameclient.objects.GameObject;
-   
-   public class AddSpeechBalloonVO
+import com.company.assembleegameclient.objects.GameObject;
+
+public class AddSpeechBalloonVO
    {
        
       

@@ -1,8 +1,5 @@
 package com.company.util
 {
-import svera.untiered.messaging.impl.GameServerConnection;
-import svera.untiered.messaging.impl.GameServerConnection;
-
 public class Random
    {
        

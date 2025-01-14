@@ -2,12 +2,9 @@ package com.company.assembleegameclient.ui
 {
 import com.company.assembleegameclient.objects.Player;
 import com.company.ui.SimpleText;
-   import flash.display.Sprite;
-   import flash.events.Event;
-   import flash.events.MouseEvent;
-   import flash.filters.DropShadowFilter;
-import flash.text.TextFormat;
-import flash.text.TextFormatAlign;
+
+import flash.display.Sprite;
+import flash.filters.DropShadowFilter;
 
 public class StatusBar extends Sprite
    {

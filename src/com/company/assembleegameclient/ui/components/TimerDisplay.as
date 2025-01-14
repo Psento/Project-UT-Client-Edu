@@ -1,10 +1,12 @@
 package com.company.assembleegameclient.ui.components
 {
-   import com.company.ui.SimpleText;
-   import flash.display.Sprite;
-   import svera.lib.util.TimeWriter;
-   
-   public class TimerDisplay extends Sprite
+import com.company.ui.SimpleText;
+
+import flash.display.Sprite;
+
+import svera.lib.util.TimeWriter;
+
+public class TimerDisplay extends Sprite
    {
        
       

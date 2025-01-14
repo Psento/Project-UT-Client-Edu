@@ -1,8 +1,8 @@
 package svera.untiered.characters.model
 {
-   import com.company.assembleegameclient.appengine.SavedCharacter;
-   
-   public interface CharacterModel
+import com.company.assembleegameclient.appengine.SavedCharacter;
+
+public interface CharacterModel
    {
        
       

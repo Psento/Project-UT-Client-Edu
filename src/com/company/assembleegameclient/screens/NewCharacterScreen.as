@@ -1,17 +1,19 @@
 package com.company.assembleegameclient.screens
 {
-   import com.company.assembleegameclient.appengine.SavedCharactersList;
-   import com.company.assembleegameclient.objects.ObjectLibrary;
-   import com.company.untiered.graphics.ScreenGraphic;
-   import flash.display.Sprite;
-   import flash.events.Event;
-   import flash.events.MouseEvent;
-   import svera.untiered.core.model.PlayerModel;
-   import svera.untiered.game.view.CurrencyDisplay;
-   import svera.untiered.ui.view.components.ScreenBase;
-   import org.osflash.signals.Signal;
-   
-   public class NewCharacterScreen extends Sprite
+import com.company.assembleegameclient.objects.ObjectLibrary;
+import com.company.untiered.graphics.ScreenGraphic;
+
+import flash.display.Sprite;
+import flash.events.Event;
+import flash.events.MouseEvent;
+
+import org.osflash.signals.Signal;
+
+import svera.untiered.core.model.PlayerModel;
+import svera.untiered.game.view.CurrencyDisplay;
+import svera.untiered.ui.view.components.ScreenBase;
+
+public class NewCharacterScreen extends Sprite
    {
       private var backButton_:TitleMenuOption;
       private var currencyDisplay_:CurrencyDisplay;

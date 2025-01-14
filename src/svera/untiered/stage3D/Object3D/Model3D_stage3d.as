@@ -1,11 +1,11 @@
 package svera.untiered.stage3D.Object3D
 {
-   import flash.display3D.Context3D;
-   import flash.display3D.VertexBuffer3D;
-   import flash.utils.ByteArray;
-   import flash.utils.Dictionary;
-   
-   public class Model3D_stage3d
+import flash.display3D.Context3D;
+import flash.display3D.VertexBuffer3D;
+import flash.utils.ByteArray;
+import flash.utils.Dictionary;
+
+public class Model3D_stage3d
    {
        
       

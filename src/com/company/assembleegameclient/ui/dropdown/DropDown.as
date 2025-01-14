@@ -1,12 +1,13 @@
 package com.company.assembleegameclient.ui.dropdown
 {
-   import com.company.ui.SimpleText;
-   import flash.display.Sprite;
-   import flash.events.Event;
-   import flash.events.MouseEvent;
-   import flash.geom.Point;
-   
-   public class DropDown extends Sprite
+import com.company.ui.SimpleText;
+
+import flash.display.Sprite;
+import flash.events.Event;
+import flash.events.MouseEvent;
+import flash.geom.Point;
+
+public class DropDown extends Sprite
    {
        
       

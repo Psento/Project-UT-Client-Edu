@@ -1,11 +1,13 @@
 package com.company.assembleegameclient.ui.panels.mediators
 {
-   import com.company.assembleegameclient.objects.Player;
-   import com.company.assembleegameclient.ui.panels.itemgrids.InventoryGrid;
-   import svera.untiered.ui.signals.UpdateHUDSignal;
-   import robotlegs.bender.bundles.mvcs.Mediator;
-   
-   public class InventoryGridMediator extends Mediator
+import com.company.assembleegameclient.objects.Player;
+import com.company.assembleegameclient.ui.panels.itemgrids.InventoryGrid;
+
+import robotlegs.bender.bundles.mvcs.Mediator;
+
+import svera.untiered.ui.signals.UpdateHUDSignal;
+
+public class InventoryGridMediator extends Mediator
    {
        
       

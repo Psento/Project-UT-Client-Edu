@@ -1,8 +1,8 @@
 package svera.lib.tasks
 {
-   import org.osflash.signals.Signal;
-   
-   public interface Task
+import org.osflash.signals.Signal;
+
+public interface Task
    {
        
       

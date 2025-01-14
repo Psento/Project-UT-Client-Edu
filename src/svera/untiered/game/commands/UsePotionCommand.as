@@ -1,16 +1,17 @@
 package svera.untiered.game.commands
 {
-   import com.company.assembleegameclient.objects.Player;
+import com.company.assembleegameclient.objects.Player;
 import com.company.assembleegameclient.sound.SoundEffectLibrary;
 
+import robotlegs.bender.framework.api.ILogger;
+
 import svera.untiered.game.model.PotionInventoryModel;
-   import svera.untiered.game.model.UsePotionVO;
-   import svera.untiered.messaging.impl.GameServerConnection;
-   import svera.untiered.ui.model.HUDModel;
-   import svera.untiered.ui.model.PotionModel;
-   import robotlegs.bender.framework.api.ILogger;
-   
-   public class UsePotionCommand
+import svera.untiered.game.model.UsePotionVO;
+import svera.untiered.messaging.impl.GameServerConnection;
+import svera.untiered.ui.model.HUDModel;
+import svera.untiered.ui.model.PotionModel;
+
+public class UsePotionCommand
    {
        
       

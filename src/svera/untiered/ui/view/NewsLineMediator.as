@@ -1,11 +1,13 @@
 package svera.untiered.ui.view
 {
-   import com.company.assembleegameclient.screens.NewsLine;
-   import svera.untiered.fame.control.ShowFameViewSignal;
-   import svera.untiered.fame.model.SimpleFameVO;
-   import robotlegs.bender.bundles.mvcs.Mediator;
-   
-   public class NewsLineMediator extends Mediator
+import com.company.assembleegameclient.screens.NewsLine;
+
+import robotlegs.bender.bundles.mvcs.Mediator;
+
+import svera.untiered.fame.control.ShowFameViewSignal;
+import svera.untiered.fame.model.SimpleFameVO;
+
+public class NewsLineMediator extends Mediator
    {
        
       

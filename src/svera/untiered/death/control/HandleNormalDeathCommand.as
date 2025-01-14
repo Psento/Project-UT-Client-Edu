@@ -1,20 +1,19 @@
 package svera.untiered.death.control
 {
-   import com.company.assembleegameclient.appengine.SavedCharacter;
-   import com.company.assembleegameclient.parameters.Parameters;
-   import svera.lib.tasks.DispatchSignalTask;
-   import svera.lib.tasks.TaskMonitor;
-   import svera.lib.tasks.TaskSequence;
-   import svera.untiered.account.core.services.GetCharListTask;
-   import svera.untiered.core.model.PlayerModel;
-   import svera.untiered.fame.control.ShowFameViewSignal;
-   import svera.untiered.fame.model.FameVO;
-   import svera.untiered.fame.model.SimpleFameVO;
-   import svera.untiered.game.signals.DisconnectGameSignal;
-   import svera.untiered.messaging.impl.incoming.Death;
-   import robotlegs.bender.framework.api.ILogger;
-   
-   public class HandleNormalDeathCommand
+import robotlegs.bender.framework.api.ILogger;
+
+import svera.lib.tasks.DispatchSignalTask;
+import svera.lib.tasks.TaskMonitor;
+import svera.lib.tasks.TaskSequence;
+import svera.untiered.account.core.services.GetCharListTask;
+import svera.untiered.core.model.PlayerModel;
+import svera.untiered.fame.control.ShowFameViewSignal;
+import svera.untiered.fame.model.FameVO;
+import svera.untiered.fame.model.SimpleFameVO;
+import svera.untiered.game.signals.DisconnectGameSignal;
+import svera.untiered.messaging.impl.incoming.Death;
+
+public class HandleNormalDeathCommand
    {
        
       

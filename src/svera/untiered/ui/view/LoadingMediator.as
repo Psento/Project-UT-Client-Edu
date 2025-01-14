@@ -1,10 +1,12 @@
 package svera.untiered.ui.view
 {
-   import com.company.assembleegameclient.screens.LoadingScreen;
-   import svera.untiered.core.signals.SetLoadingMessageSignal;
-   import robotlegs.bender.bundles.mvcs.Mediator;
-   
-   public class LoadingMediator extends Mediator
+import com.company.assembleegameclient.screens.LoadingScreen;
+
+import robotlegs.bender.bundles.mvcs.Mediator;
+
+import svera.untiered.core.signals.SetLoadingMessageSignal;
+
+public class LoadingMediator extends Mediator
    {
        
       

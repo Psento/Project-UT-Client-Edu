@@ -1,16 +1,19 @@
 package com.company.assembleegameclient.screens
 {
-   import com.company.assembleegameclient.ui.GuildText;
-   import com.company.assembleegameclient.ui.RankText;
-   import com.company.assembleegameclient.ui.tooltip.RankToolTip;
-   import flash.display.DisplayObject;
-   import flash.display.Shape;
-   import flash.display.Sprite;
-   import flash.events.MouseEvent;
-   import svera.untiered.account.core.view.AccountInfoView;
-   import org.osflash.signals.Signal;
-   
-   public class AccountScreen extends Sprite
+import com.company.assembleegameclient.ui.GuildText;
+import com.company.assembleegameclient.ui.RankText;
+import com.company.assembleegameclient.ui.tooltip.RankToolTip;
+
+import flash.display.DisplayObject;
+import flash.display.Shape;
+import flash.display.Sprite;
+import flash.events.MouseEvent;
+
+import org.osflash.signals.Signal;
+
+import svera.untiered.account.core.view.AccountInfoView;
+
+public class AccountScreen extends Sprite
    {
        
       

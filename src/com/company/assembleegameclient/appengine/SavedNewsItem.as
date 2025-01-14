@@ -1,10 +1,11 @@
 package com.company.assembleegameclient.appengine
 {
-   import com.company.assembleegameclient.util.TextureRedrawer;
-   import com.company.util.AssetLibrary;
-   import flash.display.BitmapData;
-   
-   public class SavedNewsItem
+import com.company.assembleegameclient.util.TextureRedrawer;
+import com.company.util.AssetLibrary;
+
+import flash.display.BitmapData;
+
+public class SavedNewsItem
    {
       
       private static const FAME:String = "fame";

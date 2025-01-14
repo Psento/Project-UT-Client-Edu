@@ -1,9 +1,10 @@
 package svera.lib.ui.impl
 {
-   import flash.display.DisplayObject;
-   import svera.lib.ui.api.Layout;
-   
-   public class NullLayout implements Layout
+import flash.display.DisplayObject;
+
+import svera.lib.ui.api.Layout;
+
+public class NullLayout implements Layout
    {
        
       

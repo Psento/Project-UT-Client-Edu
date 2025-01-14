@@ -1,8 +1,8 @@
 package svera.untiered.account.core.signals
 {
-   import org.osflash.signals.Signal;
-   
-   public class UpdateAccountInfoSignal extends Signal
+import org.osflash.signals.Signal;
+
+public class UpdateAccountInfoSignal extends Signal
    {
        
       

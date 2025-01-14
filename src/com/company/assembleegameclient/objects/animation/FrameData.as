@@ -1,8 +1,8 @@
 package com.company.assembleegameclient.objects.animation
 {
-   import com.company.assembleegameclient.objects.TextureData;
-   
-   public class FrameData
+import com.company.assembleegameclient.objects.TextureData;
+
+public class FrameData
    {
        
       

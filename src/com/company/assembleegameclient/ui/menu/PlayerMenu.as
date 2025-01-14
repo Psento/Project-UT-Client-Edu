@@ -1,12 +1,13 @@
 package com.company.assembleegameclient.ui.menu
 {
-   import com.company.assembleegameclient.game.GameSprite;
-   import com.company.assembleegameclient.objects.Player;
-   import com.company.assembleegameclient.ui.GameObjectListItem;
-   import com.company.assembleegameclient.util.GuildUtil;
-   import com.company.util.AssetLibrary;
-   import flash.events.Event;
-   import flash.events.MouseEvent;
+import com.company.assembleegameclient.game.GameSprite;
+import com.company.assembleegameclient.objects.Player;
+import com.company.assembleegameclient.ui.GameObjectListItem;
+import com.company.assembleegameclient.util.GuildUtil;
+import com.company.util.AssetLibrary;
+
+import flash.events.Event;
+import flash.events.MouseEvent;
 
 import svera.untiered.core.StaticInjectorContext;
 import svera.untiered.game.signals.ShowChatInputSignal;

@@ -1,14 +1,15 @@
 package com.company.assembleegameclient.objects
 {
-   import com.company.assembleegameclient.map.Camera;
-   import com.company.assembleegameclient.util.TextureRedrawer;
-   import flash.display.BitmapData;
-   import flash.text.TextField;
-   import flash.text.TextFieldAutoSize;
-   import flash.text.TextFormat;
-   import flash.text.TextFormatAlign;
-   
-   public class Sign extends GameObject
+import com.company.assembleegameclient.map.Camera;
+import com.company.assembleegameclient.util.TextureRedrawer;
+
+import flash.display.BitmapData;
+import flash.text.TextField;
+import flash.text.TextFieldAutoSize;
+import flash.text.TextFormat;
+import flash.text.TextFormatAlign;
+
+public class Sign extends GameObject
    {
        
       

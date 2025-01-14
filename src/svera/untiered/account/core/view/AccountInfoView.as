@@ -1,8 +1,8 @@
 package svera.untiered.account.core.view
 {
-   import flash.events.IEventDispatcher;
-   
-   public interface AccountInfoView extends IEventDispatcher
+import flash.events.IEventDispatcher;
+
+public interface AccountInfoView extends IEventDispatcher
    {
        
       

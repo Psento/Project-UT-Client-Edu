@@ -5,6 +5,7 @@ import com.company.ui.SimpleText;
 import com.company.util.GraphicsUtil;
 import com.company.util.MoreColorUtil;
 import com.company.util.SpriteUtil;
+
 import flash.display.Bitmap;
 import flash.display.BitmapData;
 import flash.display.CapsStyle;

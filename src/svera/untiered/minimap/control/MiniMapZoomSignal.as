@@ -1,8 +1,8 @@
 package svera.untiered.minimap.control
 {
-   import org.osflash.signals.Signal;
-   
-   public class MiniMapZoomSignal extends Signal
+import org.osflash.signals.Signal;
+
+public class MiniMapZoomSignal extends Signal
    {
       
       public static const OUT:String = "OUT";

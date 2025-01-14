@@ -1,10 +1,10 @@
 package com.company.util
 {
-   import flash.geom.Point;
-   import flash.geom.Rectangle;
-   import flash.geom.Vector3D;
-   
-   public class ConversionUtil
+import flash.geom.Point;
+import flash.geom.Rectangle;
+import flash.geom.Vector3D;
+
+public class ConversionUtil
    {
        
       

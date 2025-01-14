@@ -1,23 +1,25 @@
 package com.company.assembleegameclient.ui.panels
 {
-   import com.company.assembleegameclient.account.ui.CreateGuildFrame;
-   import com.company.assembleegameclient.game.GameSprite;
-   import com.company.assembleegameclient.objects.Player;
-   import com.company.assembleegameclient.parameters.Parameters;
-   import com.company.assembleegameclient.ui.FrameOverlay;
-   import com.company.assembleegameclient.ui.TextButton;
-   import com.company.assembleegameclient.ui.dialogs.Dialog;
-   import com.company.assembleegameclient.util.Currency;
-   import com.company.assembleegameclient.util.GuildUtil;
-   import com.company.ui.SimpleText;
-   import flash.display.Sprite;
-   import flash.events.Event;
-   import flash.events.MouseEvent;
-   import flash.filters.DropShadowFilter;
-   import flash.text.TextFieldAutoSize;
-   import svera.untiered.util.components.LegacyBuyButton;
-   
-   public class GuildRegisterPanel extends Panel
+import com.company.assembleegameclient.account.ui.CreateGuildFrame;
+import com.company.assembleegameclient.game.GameSprite;
+import com.company.assembleegameclient.objects.Player;
+import com.company.assembleegameclient.parameters.Parameters;
+import com.company.assembleegameclient.ui.FrameOverlay;
+import com.company.assembleegameclient.ui.TextButton;
+import com.company.assembleegameclient.ui.dialogs.Dialog;
+import com.company.assembleegameclient.util.Currency;
+import com.company.assembleegameclient.util.GuildUtil;
+import com.company.ui.SimpleText;
+
+import flash.display.Sprite;
+import flash.events.Event;
+import flash.events.MouseEvent;
+import flash.filters.DropShadowFilter;
+import flash.text.TextFieldAutoSize;
+
+import svera.untiered.util.components.LegacyBuyButton;
+
+public class GuildRegisterPanel extends Panel
    {
        
       

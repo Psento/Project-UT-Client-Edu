@@ -1,14 +1,12 @@
 package svera.untiered.game.view.components
 {
-   import com.company.assembleegameclient.ui.tooltip.TextToolTip;
-   import com.company.ui.SimpleText;
-   import flash.display.Sprite;
-   import flash.events.MouseEvent;
-   import flash.filters.DropShadowFilter;
-   import flash.text.TextFormat;
-   import org.osflash.signals.natives.NativeSignal;
-   
-   public class StatView extends Sprite
+import com.company.ui.SimpleText;
+
+import flash.display.Sprite;
+import flash.filters.DropShadowFilter;
+import flash.text.TextFormat;
+
+public class StatView extends Sprite
    {
       public var fullName_:String;
       

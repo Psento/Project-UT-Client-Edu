@@ -1,12 +1,13 @@
 package com.company.assembleegameclient.background
 {
-   import com.company.assembleegameclient.map.Camera;
-   import com.company.util.AssetLibrary;
-   import com.company.util.ImageSet;
-   import com.company.util.PointUtil;
-   import flash.display.IGraphicsData;
-   
-   public class StarBackground extends Background
+import com.company.assembleegameclient.map.Camera;
+import com.company.util.AssetLibrary;
+import com.company.util.ImageSet;
+import com.company.util.PointUtil;
+
+import flash.display.IGraphicsData;
+
+public class StarBackground extends Background
    {
        
       
@@ -55,6 +56,7 @@ package com.company.assembleegameclient.background
 }
 
 import com.company.assembleegameclient.map.Camera;
+
 import flash.display.BitmapData;
 import flash.display.GraphicsBitmapFill;
 import flash.display.GraphicsEndFill;

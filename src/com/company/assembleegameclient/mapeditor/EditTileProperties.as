@@ -1,12 +1,13 @@
 package com.company.assembleegameclient.mapeditor
 {
-   import com.company.util.IntPoint;
-   import flash.display.Graphics;
-   import flash.display.Shape;
-   import flash.display.Sprite;
-   import flash.events.Event;
-   
-   public class EditTileProperties extends Sprite
+import com.company.util.IntPoint;
+
+import flash.display.Graphics;
+import flash.display.Shape;
+import flash.display.Sprite;
+import flash.events.Event;
+
+public class EditTileProperties extends Sprite
    {
        
       

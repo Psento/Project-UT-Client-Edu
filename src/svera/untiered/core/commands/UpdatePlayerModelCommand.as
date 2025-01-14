@@ -1,13 +1,12 @@
 package svera.untiered.core.commands
 {
-   import com.company.assembleegameclient.appengine.SavedCharactersList;
-   import com.company.assembleegameclient.editor.Command;
-import com.company.assembleegameclient.parameters.Parameters;
+import com.company.assembleegameclient.appengine.SavedCharactersList;
+import com.company.assembleegameclient.editor.Command;
 import com.company.assembleegameclient.sound.Music;
 
 import svera.untiered.core.model.PlayerModel;
-   
-   public class UpdatePlayerModelCommand extends Command
+
+public class UpdatePlayerModelCommand extends Command
    {
        
       

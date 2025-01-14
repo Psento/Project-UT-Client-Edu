@@ -1,13 +1,14 @@
 package svera.untiered.core.model
 {
-   import com.company.assembleegameclient.appengine.SavedCharacter;
-   import com.company.assembleegameclient.appengine.SavedCharactersList;
-   import com.company.assembleegameclient.appengine.SavedNewsItem;
-   import com.company.assembleegameclient.parameters.Parameters;
-   import svera.untiered.account.core.Account;
-   import org.osflash.signals.Signal;
-   
-   public class PlayerModel
+import com.company.assembleegameclient.appengine.SavedCharacter;
+import com.company.assembleegameclient.appengine.SavedCharactersList;
+import com.company.assembleegameclient.appengine.SavedNewsItem;
+
+import org.osflash.signals.Signal;
+
+import svera.untiered.account.core.Account;
+
+public class PlayerModel
    {
       public const tsavoriteChanged:Signal = new Signal(int);
       public const medallionsChanged:Signal = new Signal(int);

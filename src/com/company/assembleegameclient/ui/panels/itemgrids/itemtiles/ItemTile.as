@@ -1,17 +1,19 @@
 package com.company.assembleegameclient.ui.panels.itemgrids.itemtiles
 {
-   import com.company.assembleegameclient.objects.ObjectLibrary;
-   import com.company.assembleegameclient.objects.Player;
-   import com.company.assembleegameclient.ui.panels.itemgrids.ItemGrid;
-   import com.company.util.GraphicsUtil;
-   import flash.display.GraphicsPath;
-   import flash.display.GraphicsSolidFill;
-   import flash.display.IGraphicsData;
-   import flash.display.Shape;
-   import flash.display.Sprite;
-   import svera.untiered.constants.ItemConstants;
-   
-   public class ItemTile extends Sprite
+import com.company.assembleegameclient.objects.ObjectLibrary;
+import com.company.assembleegameclient.objects.Player;
+import com.company.assembleegameclient.ui.panels.itemgrids.ItemGrid;
+import com.company.util.GraphicsUtil;
+
+import flash.display.GraphicsPath;
+import flash.display.GraphicsSolidFill;
+import flash.display.IGraphicsData;
+import flash.display.Shape;
+import flash.display.Sprite;
+
+import svera.untiered.constants.ItemConstants;
+
+public class ItemTile extends Sprite
    {
       
       public static const TILE_DOUBLE_CLICK:String = "TILE_DOUBLE_CLICK";

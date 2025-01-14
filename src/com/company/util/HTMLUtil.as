@@ -1,10 +1,10 @@
 package com.company.util
 {
-   import flash.xml.XMLDocument;
-   import flash.xml.XMLNode;
-   import flash.xml.XMLNodeType;
-   
-   public class HTMLUtil
+import flash.xml.XMLDocument;
+import flash.xml.XMLNode;
+import flash.xml.XMLNodeType;
+
+public class HTMLUtil
    {
        
       

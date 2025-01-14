@@ -1,12 +1,13 @@
 package com.company.assembleegameclient.objects
 {
-   import com.company.assembleegameclient.game.GameSprite;
-   import com.company.assembleegameclient.map.Camera;
-   import com.company.assembleegameclient.ui.panels.Panel;
-   import com.company.assembleegameclient.ui.panels.PortalPanel;
-   import flash.display.IGraphicsData;
-   
-   public class Portal extends GameObject implements IInteractiveObject
+import com.company.assembleegameclient.game.GameSprite;
+import com.company.assembleegameclient.map.Camera;
+import com.company.assembleegameclient.ui.panels.Panel;
+import com.company.assembleegameclient.ui.panels.PortalPanel;
+
+import flash.display.IGraphicsData;
+
+public class Portal extends GameObject implements IInteractiveObject
    {
        
       

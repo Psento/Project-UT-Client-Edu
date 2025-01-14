@@ -1,28 +1,18 @@
 package svera.untiered.ui.view
 {
-import com.company.assembleegameclient.game.GameSprite;
 import com.company.assembleegameclient.objects.ObjectLibrary;
 import com.company.assembleegameclient.objects.Player;
 import com.company.assembleegameclient.parameters.Parameters;
 import com.company.assembleegameclient.ui.IconButton;
 import com.company.assembleegameclient.ui.options.KeyCodeBox;
-import com.company.assembleegameclient.util.AnimatedChar;
-import com.company.assembleegameclient.util.MaskedImage;
-import com.company.assembleegameclient.util.TextureRedrawer;
 import com.company.ui.SimpleText;
-   import com.company.util.AssetLibrary;
-import com.company.util.GraphicsUtil;
 import com.company.util.KeyCodes;
 
 import flash.display.Bitmap;
 import flash.display.BitmapData;
-import flash.display.GraphicsPath;
 import flash.display.Shape;
 import flash.display.Sprite;
-   import flash.events.MouseEvent;
-   import flash.filters.DropShadowFilter;
-   import org.osflash.signals.Signal;
-   import org.osflash.signals.natives.NativeSignal;
+import flash.filters.DropShadowFilter;
 
 import svera.untiered.ui.view.components.PotionSlotView;
 

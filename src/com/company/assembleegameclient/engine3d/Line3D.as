@@ -1,8 +1,8 @@
 package com.company.assembleegameclient.engine3d
 {
-   import flash.geom.Vector3D;
-   
-   public class Line3D
+import flash.geom.Vector3D;
+
+public class Line3D
    {
        
       
@@ -67,6 +67,7 @@ package com.company.assembleegameclient.engine3d
 
 import com.company.assembleegameclient.engine3d.Line3D;
 import com.company.assembleegameclient.engine3d.Order;
+
 import flash.geom.Vector3D;
 
 class UnitTest

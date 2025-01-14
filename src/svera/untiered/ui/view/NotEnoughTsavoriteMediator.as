@@ -1,10 +1,11 @@
 package svera.untiered.ui.view
 {
-   import svera.untiered.account.core.Account;
-   import svera.untiered.dialogs.control.CloseDialogsSignal;
-   import robotlegs.bender.bundles.mvcs.Mediator;
-   
-   public class NotEnoughTsavoriteMediator extends Mediator
+import robotlegs.bender.bundles.mvcs.Mediator;
+
+import svera.untiered.account.core.Account;
+import svera.untiered.dialogs.control.CloseDialogsSignal;
+
+public class NotEnoughTsavoriteMediator extends Mediator
    {
       [Inject]
       public var account:Account;

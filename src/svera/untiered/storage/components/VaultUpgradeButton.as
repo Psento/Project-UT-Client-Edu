@@ -5,7 +5,6 @@ import com.company.util.MoreColorUtil;
 import com.company.util.SpriteUtil;
 
 import flash.display.Bitmap;
-
 import flash.display.Sprite;
 import flash.events.MouseEvent;
 

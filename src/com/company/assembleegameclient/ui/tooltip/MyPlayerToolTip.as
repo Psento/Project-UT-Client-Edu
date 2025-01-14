@@ -1,24 +1,26 @@
 package com.company.assembleegameclient.ui.tooltip
 {
-   import com.company.assembleegameclient.appengine.CharacterStats;
-   import com.company.assembleegameclient.objects.ObjectLibrary;
-   import com.company.assembleegameclient.objects.Player;
-   import com.company.assembleegameclient.ui.GameObjectListItem;
-   import com.company.assembleegameclient.ui.LineBreakDesign;
-   import com.company.assembleegameclient.ui.StatusBar;
-   import com.company.assembleegameclient.ui.panels.itemgrids.EquippedGrid;
-   import com.company.assembleegameclient.ui.panels.itemgrids.InventoryGrid;
-   import com.company.assembleegameclient.util.FameUtil;
-   import com.company.ui.SimpleText;
-   import flash.filters.DropShadowFilter;
-   import svera.untiered.assets.services.CharacterFactory;
-   import svera.untiered.classes.model.CharacterClass;
-   import svera.untiered.classes.model.CharacterSkin;
-   import svera.untiered.classes.model.ClassesModel;
-   import svera.untiered.constants.GeneralConstants;
-   import svera.untiered.core.StaticInjectorContext;
-   
-   public class MyPlayerToolTip extends ToolTip
+import com.company.assembleegameclient.appengine.CharacterStats;
+import com.company.assembleegameclient.objects.ObjectLibrary;
+import com.company.assembleegameclient.objects.Player;
+import com.company.assembleegameclient.ui.GameObjectListItem;
+import com.company.assembleegameclient.ui.LineBreakDesign;
+import com.company.assembleegameclient.ui.StatusBar;
+import com.company.assembleegameclient.ui.panels.itemgrids.EquippedGrid;
+import com.company.assembleegameclient.ui.panels.itemgrids.InventoryGrid;
+import com.company.assembleegameclient.util.FameUtil;
+import com.company.ui.SimpleText;
+
+import flash.filters.DropShadowFilter;
+
+import svera.untiered.assets.services.CharacterFactory;
+import svera.untiered.classes.model.CharacterClass;
+import svera.untiered.classes.model.CharacterSkin;
+import svera.untiered.classes.model.ClassesModel;
+import svera.untiered.constants.GeneralConstants;
+import svera.untiered.core.StaticInjectorContext;
+
+public class MyPlayerToolTip extends ToolTip
    {
        
       

@@ -1,16 +1,18 @@
 package svera.untiered.characters.reskin.view
 {
-   import com.company.assembleegameclient.game.GameSprite;
-   import com.company.assembleegameclient.ui.TextButton;
-   import com.company.assembleegameclient.ui.panels.Panel;
-   import com.company.ui.SimpleText;
-   import flash.events.MouseEvent;
-   import flash.filters.DropShadowFilter;
-   import flash.text.TextFieldAutoSize;
-   import org.osflash.signals.Signal;
-   import org.osflash.signals.natives.NativeMappedSignal;
-   
-   public class ReskinPanel extends Panel
+import com.company.assembleegameclient.game.GameSprite;
+import com.company.assembleegameclient.ui.TextButton;
+import com.company.assembleegameclient.ui.panels.Panel;
+import com.company.ui.SimpleText;
+
+import flash.events.MouseEvent;
+import flash.filters.DropShadowFilter;
+import flash.text.TextFieldAutoSize;
+
+import org.osflash.signals.Signal;
+import org.osflash.signals.natives.NativeMappedSignal;
+
+public class ReskinPanel extends Panel
    {
       
       private static const TITLE:String = "Change Skin";

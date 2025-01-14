@@ -1,22 +1,25 @@
 package svera.untiered.account
 {
-   import flash.display.DisplayObjectContainer;
-   import flash.display.LoaderInfo;
-   import svera.untiered.account.core.BuyCharacterSlotCommand;
+import flash.display.DisplayObjectContainer;
+import flash.display.LoaderInfo;
+
+import org.swiftsuspenders.Injector;
+
+import robotlegs.bender.extensions.mediatorMap.api.IMediatorMap;
+import robotlegs.bender.extensions.signalCommandMap.api.ISignalCommandMap;
+import robotlegs.bender.framework.api.IConfig;
+import robotlegs.bender.framework.api.IContext;
+import robotlegs.bender.framework.api.ILogger;
+
+import svera.untiered.account.core.BuyCharacterSlotCommand;
 import svera.untiered.account.core.control.IsAccountRegisteredGuard;
 import svera.untiered.account.core.services.GetCharListTask;
 import svera.untiered.account.core.signals.UpdateAccountInfoSignal;
 import svera.untiered.account.web.WebAccountConfig;
-   import svera.untiered.core.signals.TaskErrorSignal;
-   import svera.untiered.ui.signals.BuyCharacterSlotSignal;
-   import org.swiftsuspenders.Injector;
-   import robotlegs.bender.extensions.mediatorMap.api.IMediatorMap;
-   import robotlegs.bender.extensions.signalCommandMap.api.ISignalCommandMap;
-   import robotlegs.bender.framework.api.IConfig;
-   import robotlegs.bender.framework.api.IContext;
-   import robotlegs.bender.framework.api.ILogger;
-   
-   public class AccountConfig implements IConfig
+import svera.untiered.core.signals.TaskErrorSignal;
+import svera.untiered.ui.signals.BuyCharacterSlotSignal;
+
+public class AccountConfig implements IConfig
    {
        
       

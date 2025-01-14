@@ -1,11 +1,12 @@
 package svera.lib.ui
 {
-   import flash.events.Event;
-   import flash.events.IEventDispatcher;
-   import flash.utils.Dictionary;
-   import org.osflash.signals.Signal;
-   
-   public class GroupMappedSignal extends Signal
+import flash.events.Event;
+import flash.events.IEventDispatcher;
+import flash.utils.Dictionary;
+
+import org.osflash.signals.Signal;
+
+public class GroupMappedSignal extends Signal
    {
        
       

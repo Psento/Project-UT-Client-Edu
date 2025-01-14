@@ -1,11 +1,10 @@
 package svera.untiered.account.web.commands
 {
-   import svera.untiered.account.core.Account;
-   import svera.untiered.account.web.view.WebQuitDialog;
-   import svera.untiered.account.web.view.WebRegisterDialog;
-   import svera.untiered.dialogs.control.OpenDialogSignal;
-   
-   public class WebOpenQuitDialogCommand
+import svera.untiered.account.core.Account;
+import svera.untiered.account.web.view.WebQuitDialog;
+import svera.untiered.dialogs.control.OpenDialogSignal;
+
+public class WebOpenQuitDialogCommand
    {
        
       

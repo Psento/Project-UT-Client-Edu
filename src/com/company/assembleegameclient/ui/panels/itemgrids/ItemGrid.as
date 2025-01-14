@@ -1,22 +1,23 @@
 package com.company.assembleegameclient.ui.panels.itemgrids
 {
-   import com.company.assembleegameclient.constants.InventoryOwnerTypes;
-   import com.company.assembleegameclient.objects.Container;
-   import com.company.assembleegameclient.objects.GameObject;
-   import com.company.assembleegameclient.objects.Player;
+import com.company.assembleegameclient.constants.InventoryOwnerTypes;
+import com.company.assembleegameclient.objects.Container;
+import com.company.assembleegameclient.objects.GameObject;
+import com.company.assembleegameclient.objects.Player;
 import com.company.assembleegameclient.objects.VaultChest;
 import com.company.assembleegameclient.ui.panels.Panel;
-   import com.company.assembleegameclient.ui.panels.itemgrids.itemtiles.EquipmentTile;
-   import com.company.assembleegameclient.ui.panels.itemgrids.itemtiles.ItemTile;
-   import com.company.assembleegameclient.ui.tooltip.EquipmentToolTip;
-   import com.company.assembleegameclient.ui.tooltip.TextToolTip;
-   import com.company.assembleegameclient.ui.tooltip.ToolTip;
+import com.company.assembleegameclient.ui.panels.itemgrids.itemtiles.EquipmentTile;
+import com.company.assembleegameclient.ui.panels.itemgrids.itemtiles.ItemTile;
+import com.company.assembleegameclient.ui.tooltip.EquipmentToolTip;
+import com.company.assembleegameclient.ui.tooltip.TextToolTip;
+import com.company.assembleegameclient.ui.tooltip.ToolTip;
 import com.company.util.SpriteUtil;
 
 import flash.events.MouseEvent;
-   import svera.untiered.constants.ItemConstants;
 
 import org.osflash.signals.Signal;
+
+import svera.untiered.constants.ItemConstants;
 
 public class ItemGrid extends Panel
    {

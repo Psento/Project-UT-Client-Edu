@@ -1,10 +1,10 @@
 package svera.untiered.stage3D.proxies
 {
-   import flash.display.BitmapData;
-   import flash.display3D.textures.Texture;
-   import flash.display3D.textures.TextureBase;
-   
-   public class TextureProxy
+import flash.display.BitmapData;
+import flash.display3D.textures.Texture;
+import flash.display3D.textures.TextureBase;
+
+public class TextureProxy
    {
        
       

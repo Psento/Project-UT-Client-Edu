@@ -3,12 +3,11 @@ package svera.untiered.death.control
 import com.company.assembleegameclient.sound.Music;
 
 import svera.untiered.core.model.PlayerModel;
-   import svera.untiered.death.model.DeathModel;
-   import svera.untiered.dialogs.control.CloseDialogsSignal;
-   import svera.untiered.messaging.impl.incoming.Death;
-   import robotlegs.bender.framework.api.ILogger;
-   
-   public class HandleDeathCommand
+import svera.untiered.death.model.DeathModel;
+import svera.untiered.dialogs.control.CloseDialogsSignal;
+import svera.untiered.messaging.impl.incoming.Death;
+
+public class HandleDeathCommand
    {
        
       

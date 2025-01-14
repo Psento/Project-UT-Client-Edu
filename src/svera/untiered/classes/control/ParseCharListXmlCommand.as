@@ -1,12 +1,12 @@
 package svera.untiered.classes.control
 {
-   import svera.untiered.classes.model.CharacterClass;
-   import svera.untiered.classes.model.CharacterSkin;
-   import svera.untiered.classes.model.CharacterSkinState;
-   import svera.untiered.classes.model.ClassesModel;
-   import robotlegs.bender.framework.api.ILogger;
-   
-   public class ParseCharListXmlCommand
+import robotlegs.bender.framework.api.ILogger;
+
+import svera.untiered.classes.model.CharacterSkin;
+import svera.untiered.classes.model.CharacterSkinState;
+import svera.untiered.classes.model.ClassesModel;
+
+public class ParseCharListXmlCommand
    {
       [Inject]
       public var data:XML;

@@ -1,6 +1,7 @@
 package com.company.assembleegameclient.ui.panels {
 import com.company.assembleegameclient.game.GameSprite;
 import com.company.assembleegameclient.objects.GiftChest;
+
 import svera.untiered.storage.GiftWindow;
 
 public class GiftChestPanel extends Panel {

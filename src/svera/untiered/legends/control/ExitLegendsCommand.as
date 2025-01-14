@@ -1,12 +1,13 @@
 package svera.untiered.legends.control
 {
-   import com.company.assembleegameclient.screens.CharacterSelectionAndNewsScreen;
-   import svera.untiered.core.signals.InvalidateDataSignal;
-   import svera.untiered.core.signals.SetScreenWithValidDataSignal;
-   import svera.untiered.death.model.DeathModel;
-   import svera.untiered.ui.view.TitleView;
-   
-   public class ExitLegendsCommand
+import com.company.assembleegameclient.screens.CharacterSelectionAndNewsScreen;
+
+import svera.untiered.core.signals.InvalidateDataSignal;
+import svera.untiered.core.signals.SetScreenWithValidDataSignal;
+import svera.untiered.death.model.DeathModel;
+import svera.untiered.ui.view.TitleView;
+
+public class ExitLegendsCommand
    {
        
       

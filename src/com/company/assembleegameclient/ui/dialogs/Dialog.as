@@ -1,24 +1,25 @@
 package com.company.assembleegameclient.ui.dialogs
 {
-   import com.company.assembleegameclient.ui.TextButton;
-   import com.company.ui.SimpleText;
-   import com.company.util.GraphicsUtil;
-   import flash.display.CapsStyle;
-   import flash.display.Graphics;
-   import flash.display.GraphicsPath;
-   import flash.display.GraphicsSolidFill;
-   import flash.display.GraphicsStroke;
-   import flash.display.IGraphicsData;
-   import flash.display.JointStyle;
-   import flash.display.LineScaleMode;
-   import flash.display.Shape;
-   import flash.display.Sprite;
-   import flash.events.Event;
-   import flash.events.MouseEvent;
-   import flash.filters.DropShadowFilter;
-   import flash.text.TextFieldAutoSize;
-   
-   public class Dialog extends Sprite
+import com.company.assembleegameclient.ui.TextButton;
+import com.company.ui.SimpleText;
+import com.company.util.GraphicsUtil;
+
+import flash.display.CapsStyle;
+import flash.display.Graphics;
+import flash.display.GraphicsPath;
+import flash.display.GraphicsSolidFill;
+import flash.display.GraphicsStroke;
+import flash.display.IGraphicsData;
+import flash.display.JointStyle;
+import flash.display.LineScaleMode;
+import flash.display.Shape;
+import flash.display.Sprite;
+import flash.events.Event;
+import flash.events.MouseEvent;
+import flash.filters.DropShadowFilter;
+import flash.text.TextFieldAutoSize;
+
+public class Dialog extends Sprite
    {
       
       public static const BUTTON1_EVENT:String = "DIALOG_BUTTON1";

@@ -1,16 +1,18 @@
 package svera.untiered.classes.view
 {
-   import com.company.assembleegameclient.util.Currency;
-   import com.company.util.AssetLibrary;
-   import flash.display.Bitmap;
-   import flash.display.BitmapData;
-   import flash.display.DisplayObject;
-   import svera.untiered.assets.services.CharacterFactory;
-   import svera.untiered.classes.model.CharacterSkin;
-   import svera.untiered.classes.model.CharacterSkins;
-   import svera.untiered.util.components.LegacyBuyButton;
-   
-   public class CharacterSkinListItemFactory
+import com.company.assembleegameclient.util.Currency;
+import com.company.util.AssetLibrary;
+
+import flash.display.Bitmap;
+import flash.display.BitmapData;
+import flash.display.DisplayObject;
+
+import svera.untiered.assets.services.CharacterFactory;
+import svera.untiered.classes.model.CharacterSkin;
+import svera.untiered.classes.model.CharacterSkins;
+import svera.untiered.util.components.LegacyBuyButton;
+
+public class CharacterSkinListItemFactory
    {
        
       

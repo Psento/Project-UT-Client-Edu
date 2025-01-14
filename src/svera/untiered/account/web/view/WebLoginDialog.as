@@ -1,14 +1,17 @@
 package svera.untiered.account.web.view
 {
-   import com.company.assembleegameclient.account.ui.Frame;
-   import com.company.assembleegameclient.account.ui.TextInputField;
-   import com.company.assembleegameclient.ui.ClickableText;
-   import flash.events.MouseEvent;
-   import svera.untiered.account.web.model.AccountData;
-   import org.osflash.signals.Signal;
-   import org.osflash.signals.natives.NativeMappedSignal;
-   
-   public class WebLoginDialog extends Frame
+import com.company.assembleegameclient.account.ui.Frame;
+import com.company.assembleegameclient.account.ui.TextInputField;
+import com.company.assembleegameclient.ui.ClickableText;
+
+import flash.events.MouseEvent;
+
+import org.osflash.signals.Signal;
+import org.osflash.signals.natives.NativeMappedSignal;
+
+import svera.untiered.account.web.model.AccountData;
+
+public class WebLoginDialog extends Frame
    {
        
       

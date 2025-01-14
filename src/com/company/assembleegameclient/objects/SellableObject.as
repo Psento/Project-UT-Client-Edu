@@ -1,12 +1,14 @@
 package com.company.assembleegameclient.objects
 {
-   import com.company.assembleegameclient.game.GameSprite;
-   import com.company.assembleegameclient.ui.panels.Panel;
-   import com.company.assembleegameclient.ui.tooltip.ToolTip;
-   import flash.display.BitmapData;
-   import svera.untiered.game.view.SellableObjectPanel;
-   
-   public class SellableObject extends GameObject implements IInteractiveObject
+import com.company.assembleegameclient.game.GameSprite;
+import com.company.assembleegameclient.ui.panels.Panel;
+import com.company.assembleegameclient.ui.tooltip.ToolTip;
+
+import flash.display.BitmapData;
+
+import svera.untiered.game.view.SellableObjectPanel;
+
+public class SellableObject extends GameObject implements IInteractiveObject
    {
        
       

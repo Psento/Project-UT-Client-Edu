@@ -1,11 +1,12 @@
 package svera.untiered.classes.view
 {
-   import flash.display.DisplayObject;
-   import flash.display.Sprite;
-   import svera.lib.ui.api.Size;
-   import svera.untiered.util.components.VerticalScrollingList;
-   
-   public class CharacterSkinListView extends Sprite
+import flash.display.DisplayObject;
+import flash.display.Sprite;
+
+import svera.lib.ui.api.Size;
+import svera.untiered.util.components.VerticalScrollingList;
+
+public class CharacterSkinListView extends Sprite
    {
       public static const PADDING:int = 5;
       public static const WIDTH:int = 442;

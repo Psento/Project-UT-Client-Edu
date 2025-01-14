@@ -1,8 +1,8 @@
 package svera.untiered.game.model
 {
-   import com.company.assembleegameclient.parameters.Parameters;
-   
-   public class ChatFilter
+import com.company.assembleegameclient.parameters.Parameters;
+
+public class ChatFilter
    {
        
       

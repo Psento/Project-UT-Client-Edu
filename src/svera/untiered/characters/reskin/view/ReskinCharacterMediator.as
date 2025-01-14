@@ -1,13 +1,14 @@
 package svera.untiered.characters.reskin.view
 {
-   import svera.untiered.characters.reskin.control.ReskinCharacterSignal;
-   import svera.untiered.classes.model.CharacterSkins;
-   import svera.untiered.classes.model.ClassesModel;
-   import svera.untiered.core.model.PlayerModel;
-   import svera.untiered.dialogs.control.CloseDialogsSignal;
-   import robotlegs.bender.bundles.mvcs.Mediator;
-   
-   public class ReskinCharacterMediator extends Mediator
+import robotlegs.bender.bundles.mvcs.Mediator;
+
+import svera.untiered.characters.reskin.control.ReskinCharacterSignal;
+import svera.untiered.classes.model.CharacterSkins;
+import svera.untiered.classes.model.ClassesModel;
+import svera.untiered.core.model.PlayerModel;
+import svera.untiered.dialogs.control.CloseDialogsSignal;
+
+public class ReskinCharacterMediator extends Mediator
    {
        
       

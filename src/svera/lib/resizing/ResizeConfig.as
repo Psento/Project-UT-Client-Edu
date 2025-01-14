@@ -1,12 +1,14 @@
 package svera.lib.resizing
 {
-   import svera.lib.resizing.signals.Resize;
-   import svera.lib.resizing.view.Resizable;
-   import svera.lib.resizing.view.ResizableMediator;
-   import org.swiftsuspenders.Injector;
-   import robotlegs.bender.extensions.mediatorMap.api.IMediatorMap;
-   
-   public class ResizeConfig
+import org.swiftsuspenders.Injector;
+
+import robotlegs.bender.extensions.mediatorMap.api.IMediatorMap;
+
+import svera.lib.resizing.signals.Resize;
+import svera.lib.resizing.view.Resizable;
+import svera.lib.resizing.view.ResizableMediator;
+
+public class ResizeConfig
    {
        
       

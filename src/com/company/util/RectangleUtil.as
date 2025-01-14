@@ -1,10 +1,10 @@
 package com.company.util
 {
-   import flash.geom.Matrix;
-   import flash.geom.Point;
-   import flash.geom.Rectangle;
-   
-   public class RectangleUtil
+import flash.geom.Matrix;
+import flash.geom.Point;
+import flash.geom.Rectangle;
+
+public class RectangleUtil
    {
        
       

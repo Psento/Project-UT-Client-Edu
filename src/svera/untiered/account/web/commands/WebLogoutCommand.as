@@ -1,13 +1,15 @@
 package svera.untiered.account.web.commands
 {
-   import com.company.assembleegameclient.screens.CharacterSelectionAndNewsScreen;
-   import flash.display.Sprite;
-   import svera.untiered.account.core.Account;
-   import svera.untiered.core.model.ScreenModel;
-   import svera.untiered.core.signals.InvalidateDataSignal;
-   import svera.untiered.core.signals.SetScreenWithValidDataSignal;
-   
-   public class WebLogoutCommand
+import com.company.assembleegameclient.screens.CharacterSelectionAndNewsScreen;
+
+import flash.display.Sprite;
+
+import svera.untiered.account.core.Account;
+import svera.untiered.core.model.ScreenModel;
+import svera.untiered.core.signals.InvalidateDataSignal;
+import svera.untiered.core.signals.SetScreenWithValidDataSignal;
+
+public class WebLogoutCommand
    {
        
       

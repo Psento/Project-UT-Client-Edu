@@ -1,8 +1,8 @@
 package svera.untiered.characters.deletion.view
 {
-   import com.company.assembleegameclient.ui.dialogs.Dialog;
-   
-   public class DeletingCharacterView extends Dialog
+import com.company.assembleegameclient.ui.dialogs.Dialog;
+
+public class DeletingCharacterView extends Dialog
    {
        
       

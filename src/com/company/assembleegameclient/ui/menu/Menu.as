@@ -1,21 +1,22 @@
 package com.company.assembleegameclient.ui.menu
 {
-   import com.company.util.GraphicsUtil;
-   import com.company.util.RectangleUtil;
-   import flash.display.CapsStyle;
-   import flash.display.GraphicsPath;
-   import flash.display.GraphicsSolidFill;
-   import flash.display.GraphicsStroke;
-   import flash.display.IGraphicsData;
-   import flash.display.JointStyle;
-   import flash.display.LineScaleMode;
-   import flash.display.Sprite;
-   import flash.events.Event;
-   import flash.events.MouseEvent;
-   import flash.filters.DropShadowFilter;
-   import flash.geom.Rectangle;
-   
-   public class Menu extends Sprite
+import com.company.util.GraphicsUtil;
+import com.company.util.RectangleUtil;
+
+import flash.display.CapsStyle;
+import flash.display.GraphicsPath;
+import flash.display.GraphicsSolidFill;
+import flash.display.GraphicsStroke;
+import flash.display.IGraphicsData;
+import flash.display.JointStyle;
+import flash.display.LineScaleMode;
+import flash.display.Sprite;
+import flash.events.Event;
+import flash.events.MouseEvent;
+import flash.filters.DropShadowFilter;
+import flash.geom.Rectangle;
+
+public class Menu extends Sprite
    {
        
       

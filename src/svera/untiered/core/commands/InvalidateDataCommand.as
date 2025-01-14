@@ -1,9 +1,9 @@
 package svera.untiered.core.commands
 {
-   import svera.untiered.account.core.model.JSInitializedModel;
-   import svera.untiered.core.model.PlayerModel;
-   
-   public class InvalidateDataCommand
+import svera.untiered.account.core.model.JSInitializedModel;
+import svera.untiered.core.model.PlayerModel;
+
+public class InvalidateDataCommand
    {
        
       

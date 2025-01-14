@@ -1,8 +1,8 @@
 package com.company.assembleegameclient.mapeditor
 {
-   import com.company.assembleegameclient.editor.Command;
-   
-   public class MEObjectNameCommand extends Command
+import com.company.assembleegameclient.editor.Command;
+
+public class MEObjectNameCommand extends Command
    {
        
       

@@ -1,9 +1,10 @@
 package com.company.assembleegameclient.ui.panels
 {
-   import com.company.assembleegameclient.game.GameSprite;
-   import flash.events.MouseEvent;
-   
-   public class CharacterChangerPanel extends ButtonPanel
+import com.company.assembleegameclient.game.GameSprite;
+
+import flash.events.MouseEvent;
+
+public class CharacterChangerPanel extends ButtonPanel
    {
        
       

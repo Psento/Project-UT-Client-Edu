@@ -1,10 +1,11 @@
 package svera.untiered.stage3D.shaders
 {
-   import com.adobe.utils.AGALMiniAssembler;
-   import flash.display3D.Context3DProgramType;
-   import flash.utils.ByteArray;
-   
-   public class FragmentShaderRepeat
+import com.adobe.utils.AGALMiniAssembler;
+
+import flash.display3D.Context3DProgramType;
+import flash.utils.ByteArray;
+
+public class FragmentShaderRepeat
    {
        
       

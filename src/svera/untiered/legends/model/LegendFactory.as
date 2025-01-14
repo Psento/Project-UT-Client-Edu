@@ -1,13 +1,14 @@
 package svera.untiered.legends.model
 {
-   import com.company.util.ConversionUtil;
-   import svera.untiered.assets.services.CharacterFactory;
-   import svera.untiered.classes.model.CharacterClass;
-   import svera.untiered.classes.model.CharacterSkin;
-   import svera.untiered.classes.model.ClassesModel;
-   import svera.untiered.core.model.PlayerModel;
-   
-   public class LegendFactory
+import com.company.util.ConversionUtil;
+
+import svera.untiered.assets.services.CharacterFactory;
+import svera.untiered.classes.model.CharacterClass;
+import svera.untiered.classes.model.CharacterSkin;
+import svera.untiered.classes.model.ClassesModel;
+import svera.untiered.core.model.PlayerModel;
+
+public class LegendFactory
    {
        
       

@@ -1,12 +1,14 @@
 package svera.untiered.characters.deletion.view
 {
-   import com.company.assembleegameclient.appengine.SavedCharacter;
-   import svera.untiered.characters.deletion.control.DeleteCharacterSignal;
-   import svera.untiered.characters.model.CharacterModel;
-   import svera.untiered.dialogs.control.CloseDialogsSignal;
-   import robotlegs.bender.bundles.mvcs.Mediator;
-   
-   public class ConfirmDeleteCharacterMediator extends Mediator
+import com.company.assembleegameclient.appengine.SavedCharacter;
+
+import robotlegs.bender.bundles.mvcs.Mediator;
+
+import svera.untiered.characters.deletion.control.DeleteCharacterSignal;
+import svera.untiered.characters.model.CharacterModel;
+import svera.untiered.dialogs.control.CloseDialogsSignal;
+
+public class ConfirmDeleteCharacterMediator extends Mediator
    {
        
       

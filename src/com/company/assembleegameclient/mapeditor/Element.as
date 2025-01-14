@@ -1,11 +1,12 @@
 package com.company.assembleegameclient.mapeditor
 {
-   import com.company.assembleegameclient.ui.tooltip.ToolTip;
-   import flash.display.Sprite;
-   import flash.events.Event;
-   import flash.events.MouseEvent;
-   
-   public class Element extends Sprite
+import com.company.assembleegameclient.ui.tooltip.ToolTip;
+
+import flash.display.Sprite;
+import flash.events.Event;
+import flash.events.MouseEvent;
+
+public class Element extends Sprite
    {
       
       public static const WIDTH:int = 50;

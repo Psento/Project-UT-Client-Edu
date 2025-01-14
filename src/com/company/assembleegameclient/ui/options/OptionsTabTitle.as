@@ -1,11 +1,12 @@
 package com.company.assembleegameclient.ui.options
 {
-   import com.company.ui.SimpleText;
-   import flash.display.Sprite;
-   import flash.events.MouseEvent;
-   import flash.filters.DropShadowFilter;
-   
-   public class OptionsTabTitle extends Sprite
+import com.company.ui.SimpleText;
+
+import flash.display.Sprite;
+import flash.events.MouseEvent;
+import flash.filters.DropShadowFilter;
+
+public class OptionsTabTitle extends Sprite
    {
       
       private static const TEXT_SIZE:int = 16;

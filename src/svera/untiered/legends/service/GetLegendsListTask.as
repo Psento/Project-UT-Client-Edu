@@ -1,14 +1,14 @@
 package svera.untiered.legends.service
 {
-   import svera.lib.tasks.BaseTask;
-   import svera.untiered.appengine.api.AppEngineClient;
-   import svera.untiered.core.model.PlayerModel;
-   import svera.untiered.legends.model.Legend;
-   import svera.untiered.legends.model.LegendFactory;
-   import svera.untiered.legends.model.LegendsModel;
-   import svera.untiered.legends.model.Timespan;
-   
-   public class GetLegendsListTask extends BaseTask
+import svera.lib.tasks.BaseTask;
+import svera.untiered.appengine.api.AppEngineClient;
+import svera.untiered.core.model.PlayerModel;
+import svera.untiered.legends.model.Legend;
+import svera.untiered.legends.model.LegendFactory;
+import svera.untiered.legends.model.LegendsModel;
+import svera.untiered.legends.model.Timespan;
+
+public class GetLegendsListTask extends BaseTask
    {
        
       

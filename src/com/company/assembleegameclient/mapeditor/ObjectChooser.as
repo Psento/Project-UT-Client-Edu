@@ -1,9 +1,9 @@
 package com.company.assembleegameclient.mapeditor
 {
-   import com.company.assembleegameclient.objects.ObjectLibrary;
-   import com.company.util.MoreStringUtil;
+import com.company.assembleegameclient.objects.ObjectLibrary;
+import com.company.util.MoreStringUtil;
 
-   public class ObjectChooser extends Chooser
+public class ObjectChooser extends Chooser
    {
        
       

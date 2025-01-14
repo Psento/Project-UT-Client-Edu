@@ -6,14 +6,10 @@ import com.company.assembleegameclient.ui.TradePanel;
 import com.company.assembleegameclient.ui.panels.InteractPanel;
 import com.company.assembleegameclient.ui.panels.itemgrids.EquippedGrid;
 import com.company.assembleegameclient.ui.panels.itemgrids.InventoryGrid;
-import com.company.util.GraphicsUtil;
 import com.company.util.SpriteUtil;
-import flash.display.GraphicsPath;
-import flash.display.GraphicsSolidFill;
-import flash.display.IGraphicsData;
+
 import flash.display.Sprite;
 import flash.events.Event;
-import flash.events.MouseEvent;
 import flash.geom.Point;
 
 import svera.untiered.game.view.components.StatsView;

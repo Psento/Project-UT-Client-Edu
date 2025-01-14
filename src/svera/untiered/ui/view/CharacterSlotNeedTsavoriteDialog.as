@@ -1,11 +1,13 @@
 package svera.untiered.ui.view
 {
-   import com.company.assembleegameclient.ui.dialogs.Dialog;
-   import flash.display.Sprite;
-   import flash.events.Event;
-   import org.osflash.signals.Signal;
-   
-   public class CharacterSlotNeedTsavoriteDialog extends Sprite
+import com.company.assembleegameclient.ui.dialogs.Dialog;
+
+import flash.display.Sprite;
+import flash.events.Event;
+
+import org.osflash.signals.Signal;
+
+public class CharacterSlotNeedTsavoriteDialog extends Sprite
    {
       
       private static const TEXT:String = "Another character slot costs ${price} Tsavorite. ";

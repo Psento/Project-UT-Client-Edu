@@ -1,24 +1,26 @@
 package svera.untiered.game.view
 {
-   import com.company.assembleegameclient.game.GameSprite;
-   import com.company.assembleegameclient.objects.Player;
-   import com.company.assembleegameclient.objects.SellableObject;
-   import com.company.assembleegameclient.ui.RankText;
-   import com.company.assembleegameclient.ui.panels.Panel;
-   import com.company.assembleegameclient.ui.tooltip.ToolTip;
-   import com.company.assembleegameclient.util.Currency;
-   import com.company.assembleegameclient.util.GuildUtil;
-   import com.company.ui.SimpleText;
-   import flash.display.Bitmap;
-   import flash.display.Sprite;
-   import flash.events.Event;
-   import flash.events.MouseEvent;
-   import flash.filters.DropShadowFilter;
-   import flash.text.TextFieldAutoSize;
-   import svera.untiered.util.components.LegacyBuyButton;
-   import org.osflash.signals.Signal;
-   
-   public class SellableObjectPanel extends Panel
+import com.company.assembleegameclient.game.GameSprite;
+import com.company.assembleegameclient.objects.Player;
+import com.company.assembleegameclient.objects.SellableObject;
+import com.company.assembleegameclient.ui.RankText;
+import com.company.assembleegameclient.ui.panels.Panel;
+import com.company.assembleegameclient.ui.tooltip.ToolTip;
+import com.company.assembleegameclient.util.GuildUtil;
+import com.company.ui.SimpleText;
+
+import flash.display.Bitmap;
+import flash.display.Sprite;
+import flash.events.Event;
+import flash.events.MouseEvent;
+import flash.filters.DropShadowFilter;
+import flash.text.TextFieldAutoSize;
+
+import org.osflash.signals.Signal;
+
+import svera.untiered.util.components.LegacyBuyButton;
+
+public class SellableObjectPanel extends Panel
    {
        
       

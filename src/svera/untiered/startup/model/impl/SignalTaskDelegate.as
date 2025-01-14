@@ -1,12 +1,13 @@
 package svera.untiered.startup.model.impl
 {
-   import svera.lib.tasks.DispatchSignalTask;
-   import svera.lib.tasks.Task;
-   import svera.untiered.startup.model.api.StartupDelegate;
-   import org.osflash.signals.Signal;
-   import org.swiftsuspenders.Injector;
-   
-   public class SignalTaskDelegate implements StartupDelegate
+import org.osflash.signals.Signal;
+import org.swiftsuspenders.Injector;
+
+import svera.lib.tasks.DispatchSignalTask;
+import svera.lib.tasks.Task;
+import svera.untiered.startup.model.api.StartupDelegate;
+
+public class SignalTaskDelegate implements StartupDelegate
    {
        
       

@@ -1,6 +1,4 @@
 package com.company.assembleegameclient.util {
-import starling.utils.Color;
-
 public class ItemData
 {
     public static const T0_BIT:uint = 1 << 0;

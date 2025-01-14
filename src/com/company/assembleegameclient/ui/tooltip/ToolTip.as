@@ -1,20 +1,21 @@
 package com.company.assembleegameclient.ui.tooltip
 {
-   import com.company.util.GraphicsUtil;
-   import flash.display.CapsStyle;
-   import flash.display.DisplayObject;
-   import flash.display.GraphicsPath;
-   import flash.display.GraphicsSolidFill;
-   import flash.display.GraphicsStroke;
-   import flash.display.IGraphicsData;
-   import flash.display.JointStyle;
-   import flash.display.LineScaleMode;
-   import flash.display.Sprite;
-   import flash.events.Event;
-   import flash.events.MouseEvent;
-   import flash.filters.DropShadowFilter;
-   
-   public class ToolTip extends Sprite
+import com.company.util.GraphicsUtil;
+
+import flash.display.CapsStyle;
+import flash.display.DisplayObject;
+import flash.display.GraphicsPath;
+import flash.display.GraphicsSolidFill;
+import flash.display.GraphicsStroke;
+import flash.display.IGraphicsData;
+import flash.display.JointStyle;
+import flash.display.LineScaleMode;
+import flash.display.Sprite;
+import flash.events.Event;
+import flash.events.MouseEvent;
+import flash.filters.DropShadowFilter;
+
+public class ToolTip extends Sprite
    {
        
       

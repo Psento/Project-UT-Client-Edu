@@ -1,9 +1,8 @@
 package com.company.assembleegameclient.game.events
 {
-   import flash.events.Event;
-   import svera.untiered.messaging.impl.incoming.NameResult;
-   
-   public class NameResultEvent extends Event
+import flash.events.Event;
+
+public class NameResultEvent extends Event
    {
       
       public static const NAMERESULTEVENT:String = "NAMERESULTEVENT";

@@ -1,17 +1,19 @@
 package com.company.assembleegameclient.map.serialization
 {
-   import com.company.assembleegameclient.map.GroundLibrary;
-   import com.company.assembleegameclient.map.Map;
-   import com.company.assembleegameclient.objects.BasicObject;
-   import com.company.assembleegameclient.objects.GameObject;
-   import com.company.assembleegameclient.objects.ObjectLibrary;
-   import com.company.util.IntPoint;
-   import com.hurlant.util.Base64;
-   import flash.utils.ByteArray;
-   import svera.lib.json.JsonParser;
-   import svera.untiered.core.StaticInjectorContext;
-   
-   public class MapDecoder
+import com.company.assembleegameclient.map.GroundLibrary;
+import com.company.assembleegameclient.map.Map;
+import com.company.assembleegameclient.objects.BasicObject;
+import com.company.assembleegameclient.objects.GameObject;
+import com.company.assembleegameclient.objects.ObjectLibrary;
+import com.company.util.IntPoint;
+import com.hurlant.util.Base64;
+
+import flash.utils.ByteArray;
+
+import svera.lib.json.JsonParser;
+import svera.untiered.core.StaticInjectorContext;
+
+public class MapDecoder
    {
        
       

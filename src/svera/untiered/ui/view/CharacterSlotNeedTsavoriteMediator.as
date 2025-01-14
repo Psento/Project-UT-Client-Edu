@@ -2,11 +2,12 @@ package svera.untiered.ui.view
 {
 import com.company.assembleegameclient.parameters.Parameters;
 
+import robotlegs.bender.bundles.mvcs.Mediator;
+
 import svera.untiered.core.model.PlayerModel;
-   import svera.untiered.dialogs.control.CloseDialogsSignal;
-   import robotlegs.bender.bundles.mvcs.Mediator;
-   
-   public class CharacterSlotNeedTsavoriteMediator extends Mediator
+import svera.untiered.dialogs.control.CloseDialogsSignal;
+
+public class CharacterSlotNeedTsavoriteMediator extends Mediator
    {
        
       

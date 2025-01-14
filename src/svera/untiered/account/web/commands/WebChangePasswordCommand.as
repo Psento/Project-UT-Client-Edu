@@ -1,17 +1,17 @@
 package svera.untiered.account.web.commands
 {
-   import svera.lib.tasks.BranchingTask;
-   import svera.lib.tasks.DispatchSignalTask;
-   import svera.lib.tasks.Task;
-   import svera.lib.tasks.TaskMonitor;
-   import svera.lib.tasks.TaskSequence;
-   import svera.untiered.account.core.services.ChangePasswordTask;
-   import svera.untiered.account.web.view.WebAccountDetailDialog;
-   import svera.untiered.core.signals.TaskErrorSignal;
-   import svera.untiered.dialogs.control.CloseDialogsSignal;
-   import svera.untiered.dialogs.control.OpenDialogSignal;
-   
-   public class WebChangePasswordCommand
+import svera.lib.tasks.BranchingTask;
+import svera.lib.tasks.DispatchSignalTask;
+import svera.lib.tasks.Task;
+import svera.lib.tasks.TaskMonitor;
+import svera.lib.tasks.TaskSequence;
+import svera.untiered.account.core.services.ChangePasswordTask;
+import svera.untiered.account.web.view.WebAccountDetailDialog;
+import svera.untiered.core.signals.TaskErrorSignal;
+import svera.untiered.dialogs.control.CloseDialogsSignal;
+import svera.untiered.dialogs.control.OpenDialogSignal;
+
+public class WebChangePasswordCommand
    {
        
       

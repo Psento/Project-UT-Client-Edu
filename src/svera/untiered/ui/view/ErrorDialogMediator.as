@@ -1,14 +1,17 @@
 package svera.untiered.ui.view
 {
-   import com.company.assembleegameclient.screens.CharacterSelectionAndNewsScreen;
-   import com.company.assembleegameclient.ui.dialogs.ErrorDialog;
-   import flash.events.Event;
-   import svera.untiered.core.signals.InvalidateDataSignal;
-   import svera.untiered.core.signals.SetScreenWithValidDataSignal;
-   import svera.untiered.dialogs.control.CloseDialogsSignal;
-   import robotlegs.bender.bundles.mvcs.Mediator;
-   
-   public class ErrorDialogMediator extends Mediator
+import com.company.assembleegameclient.screens.CharacterSelectionAndNewsScreen;
+import com.company.assembleegameclient.ui.dialogs.ErrorDialog;
+
+import flash.events.Event;
+
+import robotlegs.bender.bundles.mvcs.Mediator;
+
+import svera.untiered.core.signals.InvalidateDataSignal;
+import svera.untiered.core.signals.SetScreenWithValidDataSignal;
+import svera.untiered.dialogs.control.CloseDialogsSignal;
+
+public class ErrorDialogMediator extends Mediator
    {
        
       

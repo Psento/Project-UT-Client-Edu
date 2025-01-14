@@ -1,9 +1,9 @@
 package com.company.util
 {
-   import flash.geom.Matrix;
-   import flash.geom.Point;
-   
-   public class IntPoint
+import flash.geom.Matrix;
+import flash.geom.Point;
+
+public class IntPoint
    {
        
       

@@ -1,17 +1,18 @@
 package com.company.assembleegameclient.appengine
 {
-   import com.company.assembleegameclient.objects.ObjectLibrary;
-   import com.company.assembleegameclient.parameters.Parameters;
-   import com.company.assembleegameclient.util.AnimatedChar;
-   import com.company.assembleegameclient.util.AnimatedChars;
-   import com.company.assembleegameclient.util.MaskedImage;
-   import com.company.assembleegameclient.util.TextureRedrawer;
+import com.company.assembleegameclient.objects.ObjectLibrary;
+import com.company.assembleegameclient.parameters.Parameters;
+import com.company.assembleegameclient.util.AnimatedChar;
+import com.company.assembleegameclient.util.AnimatedChars;
+import com.company.assembleegameclient.util.MaskedImage;
+import com.company.assembleegameclient.util.TextureRedrawer;
 import com.company.assembleegameclient.util.redrawers.GlowRedrawer;
 import com.company.util.CachingColorTransformer;
-   import flash.display.BitmapData;
-   import flash.geom.ColorTransform;
-   
-   public class SavedCharacter
+
+import flash.display.BitmapData;
+import flash.geom.ColorTransform;
+
+public class SavedCharacter
    {
       private static const dimmedCT:ColorTransform = new ColorTransform(0, 0, 0, 0.5, 0, 0, 0, 0);
       private static const selectedCT:ColorTransform = new ColorTransform(0.75, 0.75, 0.75, 1, 0, 0, 0, 0);

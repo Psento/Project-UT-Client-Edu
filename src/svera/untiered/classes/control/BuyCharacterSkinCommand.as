@@ -1,14 +1,14 @@
 package svera.untiered.classes.control
 {
-   import svera.lib.tasks.TaskMonitor;
-   import svera.untiered.classes.model.CharacterSkin;
-   import svera.untiered.classes.model.CharacterSkinState;
-   import svera.untiered.classes.services.BuySkinTask;
-   import svera.untiered.core.model.PlayerModel;
-   import svera.untiered.dialogs.control.OpenDialogSignal;
-   import svera.untiered.ui.view.NotEnoughTsavoriteDialog;
-   
-   public class BuyCharacterSkinCommand
+import svera.lib.tasks.TaskMonitor;
+import svera.untiered.classes.model.CharacterSkin;
+import svera.untiered.classes.model.CharacterSkinState;
+import svera.untiered.classes.services.BuySkinTask;
+import svera.untiered.core.model.PlayerModel;
+import svera.untiered.dialogs.control.OpenDialogSignal;
+import svera.untiered.ui.view.NotEnoughTsavoriteDialog;
+
+public class BuyCharacterSkinCommand
    {
        
       

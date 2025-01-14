@@ -1,9 +1,9 @@
 package svera.lib.loopedprocs
 {
-   import flash.utils.Dictionary;
-   import flash.utils.getTimer;
-   
-   public class LoopedProcess
+import flash.utils.Dictionary;
+import flash.utils.getTimer;
+
+public class LoopedProcess
    {
       
       private static var maxId:uint;

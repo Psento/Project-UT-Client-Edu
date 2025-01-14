@@ -1,10 +1,11 @@
 package com.company.assembleegameclient.objects
 {
-   import com.company.assembleegameclient.map.Camera;
-   import com.company.assembleegameclient.map.Square;
-   import flash.display.IGraphicsData;
-   
-   public class SpiderWeb extends GameObject
+import com.company.assembleegameclient.map.Camera;
+import com.company.assembleegameclient.map.Square;
+
+import flash.display.IGraphicsData;
+
+public class SpiderWeb extends GameObject
    {
        
       

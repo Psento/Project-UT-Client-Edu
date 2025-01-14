@@ -1,11 +1,12 @@
 package com.company.assembleegameclient.objects.particles
 {
-   import com.company.assembleegameclient.objects.GameObject;
-   import com.company.assembleegameclient.util.TextureRedrawer;
-   import com.company.util.AssetLibrary;
-   import flash.display.BitmapData;
-   
-   public class ParticleGenerator extends ParticleEffect
+import com.company.assembleegameclient.objects.GameObject;
+import com.company.assembleegameclient.util.TextureRedrawer;
+import com.company.util.AssetLibrary;
+
+import flash.display.BitmapData;
+
+public class ParticleGenerator extends ParticleEffect
    {
        
       

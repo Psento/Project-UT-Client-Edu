@@ -1,9 +1,10 @@
 package svera.untiered.game.signals
 {
-   import svera.untiered.game.model.UsePotionVO;
-   import org.osflash.signals.Signal;
-   
-   public class UsePotionSignal extends Signal
+import org.osflash.signals.Signal;
+
+import svera.untiered.game.model.UsePotionVO;
+
+public class UsePotionSignal extends Signal
    {
        
       

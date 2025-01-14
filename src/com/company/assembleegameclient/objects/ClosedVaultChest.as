@@ -1,10 +1,11 @@
 package com.company.assembleegameclient.objects
 {
-   import com.company.assembleegameclient.ui.tooltip.TextToolTip;
-   import com.company.assembleegameclient.ui.tooltip.ToolTip;
-   import flash.display.BitmapData;
-   
-   public class ClosedVaultChest extends SellableObject
+import com.company.assembleegameclient.ui.tooltip.TextToolTip;
+import com.company.assembleegameclient.ui.tooltip.ToolTip;
+
+import flash.display.BitmapData;
+
+public class ClosedVaultChest extends SellableObject
    {
        
       

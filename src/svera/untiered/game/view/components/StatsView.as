@@ -1,13 +1,12 @@
 package svera.untiered.game.view.components
 {
-   import com.company.assembleegameclient.objects.Player;
-   import flash.display.Graphics;
-   import flash.display.Sprite;
-   import flash.events.MouseEvent;
-   import svera.untiered.game.model.StatModel;
-   import org.osflash.signals.natives.NativeSignal;
-   
-   public class StatsView extends Sprite
+import com.company.assembleegameclient.objects.Player;
+
+import flash.display.Sprite;
+
+import svera.untiered.game.model.StatModel;
+
+public class StatsView extends Sprite
    {
       
       public static const ATTACK:int = 0;

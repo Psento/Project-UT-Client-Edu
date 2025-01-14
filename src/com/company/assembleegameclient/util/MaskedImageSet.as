@@ -1,9 +1,10 @@
 package com.company.assembleegameclient.util
 {
-   import com.company.util.ImageSet;
-   import flash.display.BitmapData;
-   
-   public class MaskedImageSet
+import com.company.util.ImageSet;
+
+import flash.display.BitmapData;
+
+public class MaskedImageSet
    {
        
       

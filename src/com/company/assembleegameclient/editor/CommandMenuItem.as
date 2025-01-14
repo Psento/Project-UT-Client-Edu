@@ -1,10 +1,11 @@
 package com.company.assembleegameclient.editor
 {
-   import com.company.ui.SimpleText;
-   import flash.display.Sprite;
-   import flash.events.MouseEvent;
-   
-   public class CommandMenuItem extends Sprite
+import com.company.ui.SimpleText;
+
+import flash.display.Sprite;
+import flash.events.MouseEvent;
+
+public class CommandMenuItem extends Sprite
    {
       
       private static const WIDTH:int = 80;

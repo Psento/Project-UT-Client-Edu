@@ -1,9 +1,10 @@
 package svera.untiered.core.signals
 {
-   import com.company.assembleegameclient.ui.tooltip.ToolTip;
-   import org.osflash.signals.Signal;
-   
-   public class ShowTooltipSignal extends Signal
+import com.company.assembleegameclient.ui.tooltip.ToolTip;
+
+import org.osflash.signals.Signal;
+
+public class ShowTooltipSignal extends Signal
    {
        
       

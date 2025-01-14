@@ -3,6 +3,7 @@ package com.company.assembleegameclient.util.redrawers
 import com.company.assembleegameclient.parameters.Parameters;
 import com.company.assembleegameclient.util.TextureRedrawer;
 import com.company.util.PointUtil;
+
 import flash.display.Bitmap;
 import flash.display.BitmapData;
 import flash.display.BlendMode;

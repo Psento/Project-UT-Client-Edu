@@ -1,23 +1,24 @@
 package svera.untiered.stage3D.graphic3D
 {
-   import flash.display.BitmapData;
-   import flash.display.GraphicsBitmapFill;
-   import flash.display.GraphicsGradientFill;
+import flash.display.BitmapData;
+import flash.display.GraphicsBitmapFill;
+import flash.display.GraphicsGradientFill;
 import flash.display3D.Context3D;
 import flash.display3D.Context3DProgramType;
-   import flash.display3D.Context3DVertexBufferFormat;
-   import flash.display3D.IndexBuffer3D;
-   import flash.display3D.VertexBuffer3D;
-   import flash.geom.ColorTransform;
-   import flash.geom.Matrix;
-   import flash.geom.Matrix3D;
-   import svera.untiered.stage3D.GraphicsFillExtra;
-   import svera.untiered.stage3D.proxies.Context3DProxy;
-   import svera.untiered.stage3D.proxies.IndexBuffer3DProxy;
-   import svera.untiered.stage3D.proxies.TextureProxy;
-   import svera.untiered.stage3D.proxies.VertexBuffer3DProxy;
-   
-   public class Graphic3D
+import flash.display3D.Context3DVertexBufferFormat;
+import flash.display3D.IndexBuffer3D;
+import flash.display3D.VertexBuffer3D;
+import flash.geom.ColorTransform;
+import flash.geom.Matrix;
+import flash.geom.Matrix3D;
+
+import svera.untiered.stage3D.GraphicsFillExtra;
+import svera.untiered.stage3D.proxies.Context3DProxy;
+import svera.untiered.stage3D.proxies.IndexBuffer3DProxy;
+import svera.untiered.stage3D.proxies.TextureProxy;
+import svera.untiered.stage3D.proxies.VertexBuffer3DProxy;
+
+public class Graphic3D
    {
       private static const gradientVertex:Vector.<Number> = Vector.<Number>(
               [-0.5, 0.5, 0, 0, 0, 0, 0.01, 0, 1, 0.5, 0.5, 0, 0, 0, 0, 0.3, 1, 1,

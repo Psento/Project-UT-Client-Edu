@@ -1,9 +1,10 @@
 package com.company.assembleegameclient.objects
 {
-   import com.company.assembleegameclient.map.Camera;
-   import com.company.assembleegameclient.map.Map;
-   import com.company.assembleegameclient.map.Square;
-   import flash.display.IGraphicsData;
+import com.company.assembleegameclient.map.Camera;
+import com.company.assembleegameclient.map.Map;
+import com.company.assembleegameclient.map.Square;
+
+import flash.display.IGraphicsData;
 
 import svera.untiered.stage3D.Object3D.Object3DStage3D;
 

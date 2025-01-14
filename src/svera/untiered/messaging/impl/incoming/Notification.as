@@ -1,8 +1,8 @@
 package svera.untiered.messaging.impl.incoming
 {
-   import flash.utils.IDataInput;
-   
-   public class Notification extends IncomingMessage
+import flash.utils.IDataInput;
+
+public class Notification extends IncomingMessage
    {
       public var objectId_:int;
       public var text_:String;

@@ -1,9 +1,9 @@
 package svera.untiered.stage3D.Object3D
 {
-   import flash.geom.Matrix3D;
-   import flash.utils.ByteArray;
-   
-   public class Util
+import flash.geom.Matrix3D;
+import flash.utils.ByteArray;
+
+public class Util
    {
        
       

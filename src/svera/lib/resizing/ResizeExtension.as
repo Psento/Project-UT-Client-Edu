@@ -1,10 +1,10 @@
 package svera.lib.resizing
 {
-   import robotlegs.bender.extensions.mediatorMap.MediatorMapExtension;
-   import robotlegs.bender.framework.api.IContext;
-   import robotlegs.bender.framework.api.IExtension;
-   
-   public class ResizeExtension implements IExtension
+import robotlegs.bender.extensions.mediatorMap.MediatorMapExtension;
+import robotlegs.bender.framework.api.IContext;
+import robotlegs.bender.framework.api.IExtension;
+
+public class ResizeExtension implements IExtension
    {
        
       

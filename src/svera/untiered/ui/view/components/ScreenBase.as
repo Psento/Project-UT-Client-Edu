@@ -1,11 +1,14 @@
 package svera.untiered.ui.view.components
 {
-   import com.company.assembleegameclient.ui.SoundIcon;
-   import flash.display.Sprite;
+import com.company.assembleegameclient.ui.SoundIcon;
+
+import flash.display.Sprite;
+
+import mx.core.BitmapAsset;
 
 public class ScreenBase extends Sprite
    {
-      private var currBackground = new DefaultBackground();
+      private var currBackground:BitmapAsset = new DefaultBackground();
       public function ScreenBase(newBackground:int = 0)
       {
          ChangeBackground(newBackground);

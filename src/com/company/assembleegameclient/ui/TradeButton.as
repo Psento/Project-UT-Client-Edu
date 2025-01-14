@@ -2,6 +2,7 @@ package com.company.assembleegameclient.ui
 {
 import com.company.ui.SimpleText;
 import com.company.util.GraphicsUtil;
+
 import flash.display.CapsStyle;
 import flash.display.GraphicsPath;
 import flash.display.GraphicsSolidFill;

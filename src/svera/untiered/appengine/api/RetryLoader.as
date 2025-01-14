@@ -1,8 +1,8 @@
 package svera.untiered.appengine.api
 {
-   import org.osflash.signals.OnceSignal;
-   
-   public interface RetryLoader
+import org.osflash.signals.OnceSignal;
+
+public interface RetryLoader
    {
        
       

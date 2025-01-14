@@ -1,10 +1,11 @@
 package svera.untiered.ui.view
 {
-   import com.company.assembleegameclient.ui.dialogs.Dialog;
-   import org.osflash.signals.Signal;
-   import org.osflash.signals.natives.NativeMappedSignal;
-   
-   public class ChooseNameRegisterDialog extends Dialog
+import com.company.assembleegameclient.ui.dialogs.Dialog;
+
+import org.osflash.signals.Signal;
+import org.osflash.signals.natives.NativeMappedSignal;
+
+public class ChooseNameRegisterDialog extends Dialog
    {
       
       private static const TEXT:String = "In order to select a unique name you must be a registered user.";

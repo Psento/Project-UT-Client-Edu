@@ -1,8 +1,8 @@
 package svera.untiered.messaging.impl.incoming
 {
-   import flash.utils.IDataInput;
-   
-   public class Damage extends IncomingMessage
+import flash.utils.IDataInput;
+
+public class Damage extends IncomingMessage
    {
       public var targetId_:int;
       public var effects_:Vector.<uint>;

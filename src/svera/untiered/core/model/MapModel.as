@@ -1,8 +1,8 @@
 package svera.untiered.core.model
 {
-   import com.company.assembleegameclient.objects.IInteractiveObject;
-   
-   public class MapModel
+import com.company.assembleegameclient.objects.IInteractiveObject;
+
+public class MapModel
    {
        
       

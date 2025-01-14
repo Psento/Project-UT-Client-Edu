@@ -1,9 +1,10 @@
 package svera.untiered.messaging.impl.outgoing
 {
-   import com.company.assembleegameclient.objects.Player;
-   import flash.utils.IDataOutput;
-   
-   public class Reskin extends OutgoingMessage
+import com.company.assembleegameclient.objects.Player;
+
+import flash.utils.IDataOutput;
+
+public class Reskin extends OutgoingMessage
    {
        
       

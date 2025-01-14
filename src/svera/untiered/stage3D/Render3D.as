@@ -1,11 +1,14 @@
 package svera.untiered.stage3D
 {
-   import com.company.assembleegameclient.map.Camera;
-   import flash.display.IGraphicsData;
-   import svera.untiered.stage3D.Object3D.Object3DStage3D;
-   import org.osflash.signals.Signal;
-   
-   public class Render3D extends Signal
+import com.company.assembleegameclient.map.Camera;
+
+import flash.display.IGraphicsData;
+
+import org.osflash.signals.Signal;
+
+import svera.untiered.stage3D.Object3D.Object3DStage3D;
+
+public class Render3D extends Signal
    {
        
       

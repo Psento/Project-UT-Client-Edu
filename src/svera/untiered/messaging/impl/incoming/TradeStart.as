@@ -1,7 +1,9 @@
 package svera.untiered.messaging.impl.incoming
 {
 import com.company.assembleegameclient.util.FreeList;
+
 import flash.utils.IDataInput;
+
 import svera.untiered.messaging.impl.data.TradeItemData;
 
 public class TradeStart extends IncomingMessage

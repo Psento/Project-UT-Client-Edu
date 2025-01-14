@@ -1,8 +1,8 @@
 package com.company.assembleegameclient.engine3d
 {
-   import flash.geom.Vector3D;
-   
-   public class Lighting3D
+import flash.geom.Vector3D;
+
+public class Lighting3D
    {
       
       public static const LIGHT_VECTOR:Vector3D = createLightVector();

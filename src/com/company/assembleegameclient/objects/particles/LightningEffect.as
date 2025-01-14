@@ -1,11 +1,13 @@
 package com.company.assembleegameclient.objects.particles
 {
-   import com.company.assembleegameclient.objects.GameObject;
-   import com.company.assembleegameclient.util.RandomUtil;
-   import flash.geom.Point;
-   import svera.untiered.messaging.impl.data.WorldPosData;
-   
-   public class LightningEffect extends ParticleEffect
+import com.company.assembleegameclient.objects.GameObject;
+import com.company.assembleegameclient.util.RandomUtil;
+
+import flash.geom.Point;
+
+import svera.untiered.messaging.impl.data.WorldPosData;
+
+public class LightningEffect extends ParticleEffect
    {
        
       

@@ -1,9 +1,9 @@
 package com.company.assembleegameclient.util
 {
-   import flash.display.BitmapData;
-   import flash.utils.Dictionary;
-   
-   public class BloodComposition
+import flash.display.BitmapData;
+import flash.utils.Dictionary;
+
+public class BloodComposition
    {
       
       private static var idDict_:Dictionary = new Dictionary();

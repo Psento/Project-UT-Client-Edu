@@ -1,9 +1,9 @@
 package svera.untiered.stage3D.proxies
 {
-   import flash.display3D.Context3D;
-   import flash.geom.Matrix3D;
-   
-   public class Context3DProxy
+import flash.display3D.Context3D;
+import flash.geom.Matrix3D;
+
+public class Context3DProxy
    {
        
       

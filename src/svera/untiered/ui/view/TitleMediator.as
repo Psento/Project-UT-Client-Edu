@@ -1,21 +1,20 @@
 package svera.untiered.ui.view
 {
-   import com.company.assembleegameclient.mapeditor.MapEditor;
-import com.company.assembleegameclient.parameters.Parameters;
+import com.company.assembleegameclient.mapeditor.MapEditor;
+
+import robotlegs.bender.bundles.mvcs.Mediator;
 
 import svera.untiered.account.core.Account;
-
 import svera.untiered.account.core.signals.OpenAccountInfoSignal;
 import svera.untiered.account.core.signals.OpenQuitDialogSignal;
 import svera.untiered.core.model.PlayerModel;
-   import svera.untiered.core.signals.SetScreenSignal;
-   import svera.untiered.core.signals.SetScreenWithValidDataSignal;
-   import svera.untiered.dialogs.control.OpenDialogSignal;
-   import svera.untiered.legends.view.LegendsView;
-   import svera.untiered.ui.signals.EnterGameSignal;
-   import robotlegs.bender.bundles.mvcs.Mediator;
-   
-   public class TitleMediator extends Mediator
+import svera.untiered.core.signals.SetScreenSignal;
+import svera.untiered.core.signals.SetScreenWithValidDataSignal;
+import svera.untiered.dialogs.control.OpenDialogSignal;
+import svera.untiered.legends.view.LegendsView;
+import svera.untiered.ui.signals.EnterGameSignal;
+
+public class TitleMediator extends Mediator
    {
       [Inject]
       public var view:TitleView;

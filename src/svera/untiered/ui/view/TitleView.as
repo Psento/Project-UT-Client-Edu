@@ -1,19 +1,19 @@
 package svera.untiered.ui.view
 {
-   import com.company.assembleegameclient.constants.ScreenTypes;
+import com.company.assembleegameclient.constants.ScreenTypes;
 import com.company.assembleegameclient.parameters.Parameters;
 import com.company.assembleegameclient.screens.AccountScreen;
-   import com.company.assembleegameclient.screens.TitleMenuOption;
-   import com.company.assembleegameclient.ui.SoundIcon;
-   import com.company.untiered.graphics.ScreenGraphic;
-   import com.company.ui.SimpleText;
-   import flash.display.Sprite;
-   import flash.filters.DropShadowFilter;
-import svera.untiered.ui.view.components.ScreenBase;
+import com.company.assembleegameclient.screens.TitleMenuOption;
+import com.company.ui.SimpleText;
+
+import flash.display.Sprite;
+import flash.filters.DropShadowFilter;
 
 import org.osflash.signals.Signal;
-   
-   public class TitleView extends Sprite
+
+import svera.untiered.ui.view.components.ScreenBase;
+
+public class TitleView extends Sprite
    {
       private static const COPYRIGHT:String = "© Svera, Inc.";
        

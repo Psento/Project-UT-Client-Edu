@@ -1,13 +1,15 @@
 package com.company.assembleegameclient.screens
 {
-   import com.company.untiered.graphics.ScreenGraphic;
-   import com.company.ui.SimpleText;
-   import flash.display.Sprite;
-   import flash.filters.DropShadowFilter;
-   import flash.text.TextFieldAutoSize;
-   import svera.untiered.ui.view.components.ScreenBase;
-   
-   public class LoadingScreen extends Sprite
+import com.company.ui.SimpleText;
+import com.company.untiered.graphics.ScreenGraphic;
+
+import flash.display.Sprite;
+import flash.filters.DropShadowFilter;
+import flash.text.TextFieldAutoSize;
+
+import svera.untiered.ui.view.components.ScreenBase;
+
+public class LoadingScreen extends Sprite
    {
        
       

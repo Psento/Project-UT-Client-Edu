@@ -1,11 +1,11 @@
 package com.company.assembleegameclient.ui.options
 {
-   import com.company.assembleegameclient.parameters.Parameters;
-   import com.company.util.MoreColorUtil;
-   import flash.events.Event;
-   import flash.geom.ColorTransform;
-   
-   public class KeyMapper extends Option
+import com.company.assembleegameclient.parameters.Parameters;
+import com.company.util.MoreColorUtil;
+
+import flash.events.Event;
+
+public class KeyMapper extends Option
    {
        
       

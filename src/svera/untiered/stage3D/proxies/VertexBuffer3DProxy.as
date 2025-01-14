@@ -1,8 +1,8 @@
 package svera.untiered.stage3D.proxies
 {
-   import flash.display3D.VertexBuffer3D;
-   
-   public class VertexBuffer3DProxy
+import flash.display3D.VertexBuffer3D;
+
+public class VertexBuffer3DProxy
    {
        
       

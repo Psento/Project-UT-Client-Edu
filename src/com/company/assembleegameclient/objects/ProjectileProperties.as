@@ -1,8 +1,8 @@
 package com.company.assembleegameclient.objects
 {
-   import com.company.assembleegameclient.util.ConditionEffect;
-   
-   public class ProjectileProperties
+import com.company.assembleegameclient.util.ConditionEffect;
+
+public class ProjectileProperties
    {
        
       

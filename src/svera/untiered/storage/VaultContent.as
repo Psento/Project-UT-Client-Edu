@@ -10,7 +10,6 @@ import com.company.util.SpriteUtil;
 import flash.display.Sprite;
 
 import svera.untiered.messaging.impl.GameServerConnection;
-
 import svera.untiered.messaging.impl.data.StorageSlotUpdateData;
 import svera.untiered.storage.components.StorageSortTab;
 

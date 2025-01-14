@@ -1,8 +1,8 @@
 package svera.lib.net.api
 {
-   import svera.lib.net.impl.Message;
-   
-   public interface MessageProvider
+import svera.lib.net.impl.Message;
+
+public interface MessageProvider
    {
        
       

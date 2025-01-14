@@ -1,12 +1,15 @@
 package svera.untiered.game.focus.view
 {
-   import com.company.assembleegameclient.game.GameSprite;
-   import com.company.assembleegameclient.objects.GameObject;
-   import flash.utils.Dictionary;
-   import svera.untiered.game.focus.control.SetGameFocusSignal;
-   import robotlegs.bender.bundles.mvcs.Mediator;
-   
-   public class GameFocusMediator extends Mediator
+import com.company.assembleegameclient.game.GameSprite;
+import com.company.assembleegameclient.objects.GameObject;
+
+import flash.utils.Dictionary;
+
+import robotlegs.bender.bundles.mvcs.Mediator;
+
+import svera.untiered.game.focus.control.SetGameFocusSignal;
+
+public class GameFocusMediator extends Mediator
    {
        
       

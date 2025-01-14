@@ -1,8 +1,8 @@
 package com.company.assembleegameclient.objects.animation
 {
-   import flash.display.BitmapData;
-   
-   public class Animations
+import flash.display.BitmapData;
+
+public class Animations
    {
        
       
@@ -61,6 +61,7 @@ package com.company.assembleegameclient.objects.animation
 
 import com.company.assembleegameclient.objects.animation.AnimationData;
 import com.company.assembleegameclient.objects.animation.FrameData;
+
 import flash.display.BitmapData;
 
 class RunningAnimation

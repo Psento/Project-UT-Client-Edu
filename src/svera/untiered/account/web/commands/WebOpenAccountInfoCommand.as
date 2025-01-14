@@ -1,11 +1,11 @@
 package svera.untiered.account.web.commands
 {
-   import svera.untiered.account.core.Account;
-   import svera.untiered.account.web.view.WebAccountDetailDialog;
-   import svera.untiered.account.web.view.WebRegisterDialog;
-   import svera.untiered.dialogs.control.OpenDialogSignal;
-   
-   public class WebOpenAccountInfoCommand
+import svera.untiered.account.core.Account;
+import svera.untiered.account.web.view.WebAccountDetailDialog;
+import svera.untiered.account.web.view.WebRegisterDialog;
+import svera.untiered.dialogs.control.OpenDialogSignal;
+
+public class WebOpenAccountInfoCommand
    {
        
       

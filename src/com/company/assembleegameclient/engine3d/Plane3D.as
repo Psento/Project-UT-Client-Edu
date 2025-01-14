@@ -1,8 +1,8 @@
 package com.company.assembleegameclient.engine3d
 {
-   import flash.geom.Vector3D;
-   
-   public class Plane3D
+import flash.geom.Vector3D;
+
+public class Plane3D
    {
       
       public static const NONE:int = 0;

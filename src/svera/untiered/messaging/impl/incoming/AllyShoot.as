@@ -1,8 +1,8 @@
 package svera.untiered.messaging.impl.incoming
 {
-   import flash.utils.IDataInput;
-   
-   public class AllyShoot extends IncomingMessage
+import flash.utils.IDataInput;
+
+public class AllyShoot extends IncomingMessage
    {
       public var ownerId_:int;
       public var containerType_:int;

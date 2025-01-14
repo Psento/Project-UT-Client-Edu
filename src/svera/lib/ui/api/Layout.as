@@ -1,8 +1,8 @@
 package svera.lib.ui.api
 {
-   import flash.display.DisplayObject;
-   
-   public interface Layout
+import flash.display.DisplayObject;
+
+public interface Layout
    {
        
       

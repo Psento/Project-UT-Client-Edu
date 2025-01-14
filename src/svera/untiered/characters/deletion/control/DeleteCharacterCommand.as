@@ -1,18 +1,19 @@
 package svera.untiered.characters.deletion.control
 {
-   import com.company.assembleegameclient.screens.CharacterSelectionAndNewsScreen;
-   import svera.lib.tasks.BranchingTask;
-   import svera.lib.tasks.DispatchSignalTask;
-   import svera.lib.tasks.Task;
-   import svera.lib.tasks.TaskMonitor;
-   import svera.lib.tasks.TaskSequence;
-   import svera.untiered.characters.deletion.service.DeleteCharacterTask;
-   import svera.untiered.characters.deletion.view.DeletingCharacterView;
-   import svera.untiered.core.signals.SetScreenSignal;
-   import svera.untiered.dialogs.control.CloseDialogsSignal;
-   import svera.untiered.dialogs.control.OpenDialogSignal;
-   
-   public class DeleteCharacterCommand
+import com.company.assembleegameclient.screens.CharacterSelectionAndNewsScreen;
+
+import svera.lib.tasks.BranchingTask;
+import svera.lib.tasks.DispatchSignalTask;
+import svera.lib.tasks.Task;
+import svera.lib.tasks.TaskMonitor;
+import svera.lib.tasks.TaskSequence;
+import svera.untiered.characters.deletion.service.DeleteCharacterTask;
+import svera.untiered.characters.deletion.view.DeletingCharacterView;
+import svera.untiered.core.signals.SetScreenSignal;
+import svera.untiered.dialogs.control.CloseDialogsSignal;
+import svera.untiered.dialogs.control.OpenDialogSignal;
+
+public class DeleteCharacterCommand
    {
        
       

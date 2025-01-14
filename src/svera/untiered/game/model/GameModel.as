@@ -1,8 +1,8 @@
 package svera.untiered.game.model
 {
-   import com.company.assembleegameclient.objects.Player;
-   
-   public class GameModel
+import com.company.assembleegameclient.objects.Player;
+
+public class GameModel
    {
        
       

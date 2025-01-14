@@ -1,14 +1,12 @@
 package com.company.assembleegameclient.objects
 {
-   import com.company.assembleegameclient.engine3d.Face3D;
-   import com.company.assembleegameclient.map.Camera;
-   import com.company.assembleegameclient.map.Square;
-import com.company.util.AssetLibrary;
+import com.company.assembleegameclient.engine3d.Face3D;
+import com.company.assembleegameclient.map.Camera;
+import com.company.assembleegameclient.map.Square;
 import com.company.util.BitmapUtil;
-   import flash.display.BitmapData;
-   import flash.display.IGraphicsData;
 
-import starling.textures.Texture;
+import flash.display.BitmapData;
+import flash.display.IGraphicsData;
 
 public class Wall extends GameObject
    {

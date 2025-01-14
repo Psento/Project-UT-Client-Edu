@@ -1,9 +1,10 @@
 package svera.untiered.fame.control
 {
-   import svera.untiered.fame.model.FameVO;
-   import org.osflash.signals.Signal;
-   
-   public class ShowFameViewSignal extends Signal
+import org.osflash.signals.Signal;
+
+import svera.untiered.fame.model.FameVO;
+
+public class ShowFameViewSignal extends Signal
    {
        
       

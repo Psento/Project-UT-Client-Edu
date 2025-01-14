@@ -1,9 +1,10 @@
 package svera.untiered.game.signals
 {
-   import svera.untiered.game.model.AddSpeechBalloonVO;
-   import org.osflash.signals.Signal;
-   
-   public class AddSpeechBalloonSignal extends Signal
+import org.osflash.signals.Signal;
+
+import svera.untiered.game.model.AddSpeechBalloonVO;
+
+public class AddSpeechBalloonSignal extends Signal
    {
        
       

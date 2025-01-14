@@ -1,8 +1,8 @@
 package svera.untiered.classes.model
 {
-   import org.osflash.signals.Signal;
-   
-   public class ClassesModel
+import org.osflash.signals.Signal;
+
+public class ClassesModel
    {
       public static const WIZARD_ID:int = 782;
 

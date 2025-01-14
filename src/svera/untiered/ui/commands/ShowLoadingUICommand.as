@@ -1,10 +1,12 @@
 package svera.untiered.ui.commands
 {
-   import com.company.assembleegameclient.screens.AccountLoadingScreen;
-   import svera.untiered.core.signals.SetScreenSignal;
-   import robotlegs.bender.framework.api.ILogger;
-   
-   public class ShowLoadingUICommand
+import com.company.assembleegameclient.screens.AccountLoadingScreen;
+
+import robotlegs.bender.framework.api.ILogger;
+
+import svera.untiered.core.signals.SetScreenSignal;
+
+public class ShowLoadingUICommand
    {
       [Inject]
       public var setScreen:SetScreenSignal;

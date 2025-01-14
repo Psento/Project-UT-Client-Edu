@@ -1,11 +1,11 @@
 package com.company.assembleegameclient.ui
 {
 import com.company.assembleegameclient.game.GameSprite;
-import com.company.assembleegameclient.ui.TextButton;
 
 import flash.display.Sprite;
 import flash.events.Event;
 import flash.events.MouseEvent;
+
 import svera.untiered.messaging.impl.incoming.TradeStart;
 
 public class TradePanel extends Sprite

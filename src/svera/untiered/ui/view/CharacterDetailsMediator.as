@@ -1,15 +1,15 @@
 package svera.untiered.ui.view
 {
-   import com.company.assembleegameclient.objects.Player;
-   import com.company.assembleegameclient.parameters.Parameters;
-   import com.company.assembleegameclient.ui.options.Options;
-   import svera.untiered.ui.model.HUDModel;
-   import svera.untiered.ui.signals.HUDModelInitialized;
-   import svera.untiered.ui.signals.NameChangedSignal;
-   import svera.untiered.ui.signals.UpdateHUDSignal;
-   import robotlegs.bender.bundles.mvcs.Mediator;
-   
-   public class CharacterDetailsMediator extends Mediator
+import com.company.assembleegameclient.objects.Player;
+
+import robotlegs.bender.bundles.mvcs.Mediator;
+
+import svera.untiered.ui.model.HUDModel;
+import svera.untiered.ui.signals.HUDModelInitialized;
+import svera.untiered.ui.signals.NameChangedSignal;
+import svera.untiered.ui.signals.UpdateHUDSignal;
+
+public class CharacterDetailsMediator extends Mediator
    {
        
       

@@ -1,16 +1,19 @@
 package svera.untiered.account.web.view
 {
-   import com.company.assembleegameclient.screens.TitleMenuOption;
-   import com.company.ui.SimpleText;
-   import flash.display.DisplayObject;
-   import flash.display.Sprite;
-   import flash.events.MouseEvent;
-   import flash.filters.DropShadowFilter;
-   import svera.untiered.account.core.view.AccountInfoView;
-   import org.osflash.signals.Signal;
-   import org.osflash.signals.natives.NativeMappedSignal;
-   
-   public class WebAccountInfoView extends Sprite implements AccountInfoView
+import com.company.assembleegameclient.screens.TitleMenuOption;
+import com.company.ui.SimpleText;
+
+import flash.display.DisplayObject;
+import flash.display.Sprite;
+import flash.events.MouseEvent;
+import flash.filters.DropShadowFilter;
+
+import org.osflash.signals.Signal;
+import org.osflash.signals.natives.NativeMappedSignal;
+
+import svera.untiered.account.core.view.AccountInfoView;
+
+public class WebAccountInfoView extends Sprite implements AccountInfoView
    {
       
       private static const LOG_IN:String = "log in";

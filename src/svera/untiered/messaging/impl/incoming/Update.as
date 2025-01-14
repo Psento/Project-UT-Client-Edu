@@ -1,9 +1,11 @@
 package svera.untiered.messaging.impl.incoming
 {
-   import com.company.assembleegameclient.util.FreeList;
-   import flash.utils.IDataInput;
-   import svera.untiered.messaging.impl.data.GroundTileData;
-   import svera.untiered.messaging.impl.data.ObjectData;
+import com.company.assembleegameclient.util.FreeList;
+
+import flash.utils.IDataInput;
+
+import svera.untiered.messaging.impl.data.GroundTileData;
+import svera.untiered.messaging.impl.data.ObjectData;
 import svera.untiered.messaging.impl.data.ObjectDropData;
 
 public class Update extends IncomingMessage

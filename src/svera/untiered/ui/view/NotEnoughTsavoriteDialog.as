@@ -1,10 +1,11 @@
 package svera.untiered.ui.view
 {
-   import com.company.assembleegameclient.ui.dialogs.Dialog;
-   import org.osflash.signals.Signal;
-   import org.osflash.signals.natives.NativeMappedSignal;
-   
-   public class NotEnoughTsavoriteDialog extends Dialog
+import com.company.assembleegameclient.ui.dialogs.Dialog;
+
+import org.osflash.signals.Signal;
+import org.osflash.signals.natives.NativeMappedSignal;
+
+public class NotEnoughTsavoriteDialog extends Dialog
    {
       
       private static const TEXT:String = "You do not have enough Tsavorite for this item.";

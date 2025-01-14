@@ -1,11 +1,11 @@
 package svera.untiered.ui.view
 {
-import com.company.assembleegameclient.objects.particles.StreamEffect;
 import com.company.assembleegameclient.ui.dialogs.Dialog;
-   import org.osflash.signals.Signal;
-   import org.osflash.signals.natives.NativeMappedSignal;
-   
-   public class MessageCloseDialog extends Dialog
+
+import org.osflash.signals.Signal;
+import org.osflash.signals.natives.NativeMappedSignal;
+
+public class MessageCloseDialog extends Dialog
    {
       private static const CLOSE:String = "Close";
       

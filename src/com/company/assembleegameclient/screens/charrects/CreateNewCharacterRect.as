@@ -1,20 +1,19 @@
 package com.company.assembleegameclient.screens.charrects
 {
-   import com.company.assembleegameclient.appengine.SavedCharacter;
-   import com.company.assembleegameclient.objects.ObjectLibrary;
-   import com.company.assembleegameclient.util.AnimatedChar;
-   import com.company.assembleegameclient.util.FameUtil;
-   import com.company.untiered.graphics.StarGraphic;
-   import com.company.ui.SimpleText;
-   import com.company.util.BitmapUtil;
-   import flash.display.Bitmap;
-   import flash.display.BitmapData;
-   import flash.display.Sprite;
-   import flash.filters.DropShadowFilter;
-   import flash.geom.ColorTransform;
-   import svera.untiered.core.model.PlayerModel;
-   
-   public class CreateNewCharacterRect extends CharacterRect
+import com.company.assembleegameclient.appengine.SavedCharacter;
+import com.company.assembleegameclient.objects.ObjectLibrary;
+import com.company.assembleegameclient.util.AnimatedChar;
+import com.company.ui.SimpleText;
+import com.company.util.BitmapUtil;
+
+import flash.display.Bitmap;
+import flash.display.BitmapData;
+import flash.display.Sprite;
+import flash.filters.DropShadowFilter;
+
+import svera.untiered.core.model.PlayerModel;
+
+public class CreateNewCharacterRect extends CharacterRect
    {
        
       

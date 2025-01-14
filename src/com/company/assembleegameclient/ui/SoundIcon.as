@@ -1,16 +1,16 @@
 package com.company.assembleegameclient.ui
 {
-   import com.company.assembleegameclient.parameters.Parameters;
+import com.company.assembleegameclient.parameters.Parameters;
 import com.company.assembleegameclient.sound.Music;
 import com.company.assembleegameclient.sound.SFX;
-   import com.company.util.AssetLibrary;
-   import flash.display.Bitmap;
-   import flash.display.BitmapData;
-   import flash.display.Sprite;
-   import flash.events.MouseEvent;
-   import flash.filters.GlowFilter;
-   
-   public class SoundIcon extends Sprite
+import com.company.util.AssetLibrary;
+
+import flash.display.Bitmap;
+import flash.display.Sprite;
+import flash.events.MouseEvent;
+import flash.filters.GlowFilter;
+
+public class SoundIcon extends Sprite
    {
        
       

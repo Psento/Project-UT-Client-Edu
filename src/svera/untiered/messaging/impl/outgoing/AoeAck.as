@@ -1,9 +1,10 @@
 package svera.untiered.messaging.impl.outgoing
 {
-   import flash.utils.IDataOutput;
-   import svera.untiered.messaging.impl.data.WorldPosData;
-   
-   public class AoeAck extends OutgoingMessage
+import flash.utils.IDataOutput;
+
+import svera.untiered.messaging.impl.data.WorldPosData;
+
+public class AoeAck extends OutgoingMessage
    {
        
       

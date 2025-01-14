@@ -1,8 +1,8 @@
 package svera.untiered.death.model
 {
-   import svera.untiered.messaging.impl.incoming.Death;
-   
-   public class DeathModel
+import svera.untiered.messaging.impl.incoming.Death;
+
+public class DeathModel
    {
        
       

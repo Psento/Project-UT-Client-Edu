@@ -6,19 +6,17 @@ import com.company.assembleegameclient.objects.Player;
 import com.company.assembleegameclient.parameters.Parameters;
 import com.company.assembleegameclient.ui.options.Options;
 import com.company.util.KeyCodes;
+
 import flash.display.Stage;
 import flash.display.StageDisplayState;
 import flash.events.Event;
 import flash.events.KeyboardEvent;
 import flash.events.MouseEvent;
-import flash.events.TimerEvent;
-import flash.geom.Point;
-import flash.system.Capabilities;
-import flash.utils.Timer;
 
-import svera.lib.util.GIF;
-import svera.untiered.Particles.Recallingbase;
-import svera.untiered.constants.GeneralConstants;
+import net.hires.debug.Stats;
+
+import org.swiftsuspenders.Injector;
+
 import svera.untiered.core.StaticInjectorContext;
 import svera.untiered.core.view.Layers;
 import svera.untiered.game.model.PotionInventoryModel;
@@ -28,10 +26,6 @@ import svera.untiered.game.signals.SetTextBoxVisibilitySignal;
 import svera.untiered.game.signals.UsePotionSignal;
 import svera.untiered.messaging.impl.GameServerConnection;
 import svera.untiered.minimap.control.MiniMapZoomSignal;
-
-import net.hires.debug.Stats;
-import org.swiftsuspenders.Injector;
-
 import svera.untiered.ui.view.HUDView;
 
 public class MapUserInput

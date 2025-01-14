@@ -1,25 +1,28 @@
 package svera.untiered.classes.view
 {
-   import com.company.assembleegameclient.util.Currency;
-   import com.company.ui.SimpleText;
-   import com.company.util.MoreColorUtil;
-   import flash.display.Bitmap;
-   import flash.display.BitmapData;
-   import flash.display.Graphics;
-   import flash.display.Shape;
-   import flash.display.Sprite;
-   import flash.events.MouseEvent;
-   import flash.filters.ColorMatrixFilter;
-   import flash.filters.DropShadowFilter;
-   import flash.geom.ColorTransform;
-   import svera.untiered.classes.model.CharacterSkin;
-   import svera.untiered.classes.model.CharacterSkinState;
-   import svera.untiered.util.components.RadioButton;
-   import svera.untiered.util.components.api.BuyButton;
-   import org.osflash.signals.Signal;
-   import org.osflash.signals.natives.NativeMappedSignal;
-   
-   public class CharacterSkinListItem extends Sprite
+import com.company.assembleegameclient.util.Currency;
+import com.company.ui.SimpleText;
+import com.company.util.MoreColorUtil;
+
+import flash.display.Bitmap;
+import flash.display.BitmapData;
+import flash.display.Graphics;
+import flash.display.Shape;
+import flash.display.Sprite;
+import flash.events.MouseEvent;
+import flash.filters.ColorMatrixFilter;
+import flash.filters.DropShadowFilter;
+import flash.geom.ColorTransform;
+
+import org.osflash.signals.Signal;
+import org.osflash.signals.natives.NativeMappedSignal;
+
+import svera.untiered.classes.model.CharacterSkin;
+import svera.untiered.classes.model.CharacterSkinState;
+import svera.untiered.util.components.RadioButton;
+import svera.untiered.util.components.api.BuyButton;
+
+public class CharacterSkinListItem extends Sprite
    {
       public static const WIDTH:int = 420;
       public static const PADDING:int = 16;

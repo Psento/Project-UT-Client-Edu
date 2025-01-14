@@ -1,16 +1,18 @@
 package svera.untiered.account.core.services
 {
-   import flash.events.TimerEvent;
-   import flash.utils.Timer;
-   import svera.lib.tasks.BaseTask;
-   import svera.untiered.account.core.Account;
-   import svera.untiered.account.core.signals.CharListDataSignal;
-   import svera.untiered.appengine.api.AppEngineClient;
-   import svera.untiered.core.model.PlayerModel;
-   import svera.untiered.core.signals.SetLoadingMessageSignal;
-   import robotlegs.bender.framework.api.ILogger;
-   
-   public class GetCharListTask extends BaseTask
+import flash.events.TimerEvent;
+import flash.utils.Timer;
+
+import robotlegs.bender.framework.api.ILogger;
+
+import svera.lib.tasks.BaseTask;
+import svera.untiered.account.core.Account;
+import svera.untiered.account.core.signals.CharListDataSignal;
+import svera.untiered.appengine.api.AppEngineClient;
+import svera.untiered.core.model.PlayerModel;
+import svera.untiered.core.signals.SetLoadingMessageSignal;
+
+public class GetCharListTask extends BaseTask
    {
       
       private static const ONE_SECOND_IN_MS:int = 1000;

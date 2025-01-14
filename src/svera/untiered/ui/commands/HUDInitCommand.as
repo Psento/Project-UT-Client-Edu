@@ -1,11 +1,12 @@
 package svera.untiered.ui.commands
 {
-   import com.company.assembleegameclient.editor.Command;
-   import com.company.assembleegameclient.game.GameSprite;
-   import svera.untiered.ui.model.HUDModel;
-   import svera.untiered.ui.signals.HUDModelInitialized;
-   
-   public class HUDInitCommand extends Command
+import com.company.assembleegameclient.editor.Command;
+import com.company.assembleegameclient.game.GameSprite;
+
+import svera.untiered.ui.model.HUDModel;
+import svera.untiered.ui.signals.HUDModelInitialized;
+
+public class HUDInitCommand extends Command
    {
        
       

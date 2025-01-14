@@ -1,8 +1,8 @@
 package com.company.assembleegameclient.util
 {
-   import flash.display.DisplayObject;
-   
-   public class DisplayHierarchy
+import flash.display.DisplayObject;
+
+public class DisplayHierarchy
    {
        
       

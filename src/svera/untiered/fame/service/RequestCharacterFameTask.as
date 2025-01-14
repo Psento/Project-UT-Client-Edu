@@ -1,17 +1,17 @@
 package svera.untiered.fame.service
 {
-   import com.company.assembleegameclient.ui.dialogs.ErrorDialog;
+import com.company.assembleegameclient.ui.dialogs.ErrorDialog;
 import com.company.util.DateFormatterReplacement;
 
 import svera.lib.tasks.BaseTask;
-   import svera.untiered.appengine.api.AppEngineClient;
-   import svera.untiered.assets.model.CharacterTemplate;
-   import svera.untiered.classes.model.CharacterClass;
-   import svera.untiered.classes.model.CharacterSkin;
-   import svera.untiered.classes.model.ClassesModel;
-   import svera.untiered.dialogs.control.OpenDialogSignal;
-   
-   public class RequestCharacterFameTask extends BaseTask
+import svera.untiered.appengine.api.AppEngineClient;
+import svera.untiered.assets.model.CharacterTemplate;
+import svera.untiered.classes.model.CharacterClass;
+import svera.untiered.classes.model.CharacterSkin;
+import svera.untiered.classes.model.ClassesModel;
+import svera.untiered.dialogs.control.OpenDialogSignal;
+
+public class RequestCharacterFameTask extends BaseTask
    {
        
       

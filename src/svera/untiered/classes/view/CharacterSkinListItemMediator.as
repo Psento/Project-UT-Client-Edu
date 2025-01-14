@@ -1,12 +1,13 @@
 package svera.untiered.classes.view
 {
-   import svera.untiered.classes.control.BuyCharacterSkinSignal;
-   import svera.untiered.classes.control.FocusCharacterSkinSignal;
-   import svera.untiered.classes.model.CharacterSkin;
-   import svera.untiered.classes.model.ClassesModel;
-   import robotlegs.bender.bundles.mvcs.Mediator;
-   
-   public class CharacterSkinListItemMediator extends Mediator
+import robotlegs.bender.bundles.mvcs.Mediator;
+
+import svera.untiered.classes.control.BuyCharacterSkinSignal;
+import svera.untiered.classes.control.FocusCharacterSkinSignal;
+import svera.untiered.classes.model.CharacterSkin;
+import svera.untiered.classes.model.ClassesModel;
+
+public class CharacterSkinListItemMediator extends Mediator
    {
        
       

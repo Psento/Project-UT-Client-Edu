@@ -1,9 +1,9 @@
 package com.company.assembleegameclient.objects.particles
 {
-   import com.company.assembleegameclient.objects.GameObject;
-   import com.company.assembleegameclient.util.FreeList;
-   
-   public class FountainEffect extends ParticleEffect
+import com.company.assembleegameclient.objects.GameObject;
+import com.company.assembleegameclient.util.FreeList;
+
+public class FountainEffect extends ParticleEffect
    {
        
       
@@ -46,6 +46,7 @@ package com.company.assembleegameclient.objects.particles
 
 import com.company.assembleegameclient.objects.particles.Particle;
 import com.company.assembleegameclient.util.FreeList;
+
 import flash.geom.Vector3D;
 
 class FountainParticle extends Particle

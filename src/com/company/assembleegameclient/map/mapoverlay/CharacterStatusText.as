@@ -1,13 +1,14 @@
 package com.company.assembleegameclient.map.mapoverlay
 {
-   import com.company.assembleegameclient.map.Camera;
-   import com.company.assembleegameclient.objects.GameObject;
-   import com.company.ui.SimpleText;
-   import flash.display.Sprite;
-   import flash.filters.GlowFilter;
-   import flash.geom.Point;
-   
-   public class CharacterStatusText extends Sprite implements IMapOverlayElement
+import com.company.assembleegameclient.map.Camera;
+import com.company.assembleegameclient.objects.GameObject;
+import com.company.ui.SimpleText;
+
+import flash.display.Sprite;
+import flash.filters.GlowFilter;
+import flash.geom.Point;
+
+public class CharacterStatusText extends Sprite implements IMapOverlayElement
    {
        
       

@@ -3,11 +3,13 @@ package svera.untiered.appengine.impl
 import com.company.assembleegameclient.parameters.Parameters;
 
 import flash.net.URLLoaderDataFormat;
-   import svera.untiered.appengine.api.AppEngineClient;
-   import svera.untiered.appengine.api.RetryLoader;
-   import org.osflash.signals.OnceSignal;
-   
-   public class SimpleAppEngineClient implements AppEngineClient
+
+import org.osflash.signals.OnceSignal;
+
+import svera.untiered.appengine.api.AppEngineClient;
+import svera.untiered.appengine.api.RetryLoader;
+
+public class SimpleAppEngineClient implements AppEngineClient
    {
        
       

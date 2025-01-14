@@ -1,12 +1,14 @@
 package svera.untiered.dialogs.view
 {
-   import flash.display.Sprite;
-   import svera.untiered.dialogs.control.CloseDialogsSignal;
-   import svera.untiered.dialogs.control.OpenDialogSignal;
-   import svera.untiered.dialogs.control.ShowDialogBackgroundSignal;
-   import robotlegs.bender.bundles.mvcs.Mediator;
-   
-   public class DialogsMediator extends Mediator
+import flash.display.Sprite;
+
+import robotlegs.bender.bundles.mvcs.Mediator;
+
+import svera.untiered.dialogs.control.CloseDialogsSignal;
+import svera.untiered.dialogs.control.OpenDialogSignal;
+import svera.untiered.dialogs.control.ShowDialogBackgroundSignal;
+
+public class DialogsMediator extends Mediator
    {
        
       

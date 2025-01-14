@@ -1,10 +1,10 @@
 package svera.untiered.account.web.services
 {
-   import svera.lib.tasks.BaseTask;
-   import svera.untiered.account.core.services.SendPasswordReminderTask;
-   import svera.untiered.appengine.api.AppEngineClient;
-   
-   public class WebSendPasswordReminderTask extends BaseTask implements SendPasswordReminderTask
+import svera.lib.tasks.BaseTask;
+import svera.untiered.account.core.services.SendPasswordReminderTask;
+import svera.untiered.appengine.api.AppEngineClient;
+
+public class WebSendPasswordReminderTask extends BaseTask implements SendPasswordReminderTask
    {
        
       

@@ -1,9 +1,10 @@
 package svera.untiered.tooltips.view
 {
-   import com.company.assembleegameclient.ui.tooltip.ToolTip;
-   import flash.display.Sprite;
-   
-   public class TooltipsView extends Sprite
+import com.company.assembleegameclient.ui.tooltip.ToolTip;
+
+import flash.display.Sprite;
+
+public class TooltipsView extends Sprite
    {
        
       

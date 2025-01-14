@@ -1,14 +1,15 @@
 package svera.untiered.account.web.view
 {
-   import svera.lib.tasks.Task;
-   import svera.untiered.account.core.signals.LoginSignal;
-   import svera.untiered.account.web.model.AccountData;
-   import svera.untiered.core.signals.TaskErrorSignal;
-   import svera.untiered.dialogs.control.CloseDialogsSignal;
-   import svera.untiered.dialogs.control.OpenDialogSignal;
-   import robotlegs.bender.bundles.mvcs.Mediator;
-   
-   public class WebLoginMediator extends Mediator
+import robotlegs.bender.bundles.mvcs.Mediator;
+
+import svera.lib.tasks.Task;
+import svera.untiered.account.core.signals.LoginSignal;
+import svera.untiered.account.web.model.AccountData;
+import svera.untiered.core.signals.TaskErrorSignal;
+import svera.untiered.dialogs.control.CloseDialogsSignal;
+import svera.untiered.dialogs.control.OpenDialogSignal;
+
+public class WebLoginMediator extends Mediator
    {
        
       

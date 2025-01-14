@@ -1,11 +1,12 @@
 package com.company.assembleegameclient.ui
 {
-   import com.company.assembleegameclient.util.FameUtil;
-   import com.company.ui.SimpleText;
-   import flash.display.Sprite;
-   import flash.filters.DropShadowFilter;
-   
-   public class RankText extends Sprite
+import com.company.assembleegameclient.util.FameUtil;
+import com.company.ui.SimpleText;
+
+import flash.display.Sprite;
+import flash.filters.DropShadowFilter;
+
+public class RankText extends Sprite
    {
        
       

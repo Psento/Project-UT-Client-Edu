@@ -1,10 +1,11 @@
 package svera.lib.util
 {
-   import flash.display.DisplayObject;
-   import flash.events.Event;
-   import org.osflash.signals.Signal;
-   
-   public class StageLifecycleUtil
+import flash.display.DisplayObject;
+import flash.events.Event;
+
+import org.osflash.signals.Signal;
+
+public class StageLifecycleUtil
    {
        
       

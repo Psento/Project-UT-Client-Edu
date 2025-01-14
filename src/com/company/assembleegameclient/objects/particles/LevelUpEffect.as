@@ -1,8 +1,8 @@
 package com.company.assembleegameclient.objects.particles
 {
-   import com.company.assembleegameclient.objects.GameObject;
-   
-   public class LevelUpEffect extends ParticleEffect
+import com.company.assembleegameclient.objects.GameObject;
+
+public class LevelUpEffect extends ParticleEffect
    {
       
       private static const LIFETIME:int = 2000;

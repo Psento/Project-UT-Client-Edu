@@ -1,12 +1,13 @@
 package svera.untiered.messaging.impl
 {
-   import com.company.ui.SimpleText;
-   import flash.display.Sprite;
-   import flash.events.Event;
-   import flash.filters.DropShadowFilter;
-   import flash.utils.getTimer;
-   
-   public class JitterWatcher extends Sprite
+import com.company.ui.SimpleText;
+
+import flash.display.Sprite;
+import flash.events.Event;
+import flash.filters.DropShadowFilter;
+import flash.utils.getTimer;
+
+public class JitterWatcher extends Sprite
    {
        
       

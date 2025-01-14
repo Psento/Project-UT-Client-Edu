@@ -1,9 +1,9 @@
 package com.company.assembleegameclient.ui.dialogs
 {
-   import org.osflash.signals.Signal;
-   import org.osflash.signals.natives.NativeMappedSignal;
-   
-   public class ErrorDialog extends Dialog
+import org.osflash.signals.Signal;
+import org.osflash.signals.natives.NativeMappedSignal;
+
+public class ErrorDialog extends Dialog
    {
        
       

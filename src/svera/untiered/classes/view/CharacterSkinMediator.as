@@ -1,12 +1,11 @@
 package svera.untiered.classes.view
 {
-   import com.company.assembleegameclient.screens.NewCharacterScreen;
-   import svera.untiered.core.model.PlayerModel;
-   import svera.untiered.core.signals.SetScreenSignal;
-   import svera.untiered.game.model.GameInitData;
-   import svera.untiered.game.signals.PlayGameSignal;
-   import robotlegs.bender.bundles.mvcs.Mediator;
+import com.company.assembleegameclient.screens.NewCharacterScreen;
 
+import robotlegs.bender.bundles.mvcs.Mediator;
+
+import svera.untiered.core.model.PlayerModel;
+import svera.untiered.core.signals.SetScreenSignal;
 import svera.untiered.traits.TraitsGUI;
 
 public class CharacterSkinMediator extends Mediator

@@ -1,12 +1,13 @@
 package com.company.assembleegameclient.ui
 {
-   import com.company.assembleegameclient.sound.SoundEffectLibrary;
-   import com.company.ui.SimpleText;
-   import flash.display.Sprite;
-   import flash.events.MouseEvent;
-   import flash.filters.DropShadowFilter;
-   
-   public class ClickableText extends Sprite
+import com.company.assembleegameclient.sound.SoundEffectLibrary;
+import com.company.ui.SimpleText;
+
+import flash.display.Sprite;
+import flash.events.MouseEvent;
+import flash.filters.DropShadowFilter;
+
+public class ClickableText extends Sprite
    {
        
       

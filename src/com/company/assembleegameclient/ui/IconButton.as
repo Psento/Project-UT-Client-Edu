@@ -1,18 +1,19 @@
 package com.company.assembleegameclient.ui
 {
-   import com.company.assembleegameclient.parameters.Parameters;
-   import com.company.assembleegameclient.ui.tooltip.TextToolTip;
-   import com.company.assembleegameclient.util.TextureRedrawer;
-   import com.company.util.KeyCodes;
-   import com.company.util.MoreColorUtil;
-   import flash.display.Bitmap;
-   import flash.display.BitmapData;
-   import flash.display.Sprite;
-   import flash.events.Event;
-   import flash.events.MouseEvent;
-   import flash.geom.ColorTransform;
-   
-   public class IconButton extends Sprite
+import com.company.assembleegameclient.parameters.Parameters;
+import com.company.assembleegameclient.ui.tooltip.TextToolTip;
+import com.company.assembleegameclient.util.TextureRedrawer;
+import com.company.util.KeyCodes;
+import com.company.util.MoreColorUtil;
+
+import flash.display.Bitmap;
+import flash.display.BitmapData;
+import flash.display.Sprite;
+import flash.events.Event;
+import flash.events.MouseEvent;
+import flash.geom.ColorTransform;
+
+public class IconButton extends Sprite
    {
       
       protected static const mouseOverCT:ColorTransform = new ColorTransform(1,220 / 255,133 / 255);

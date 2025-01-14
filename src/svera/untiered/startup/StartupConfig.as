@@ -1,13 +1,15 @@
 package svera.untiered.startup
 {
-   import svera.untiered.startup.control.StartupCommand;
-   import svera.untiered.startup.control.StartupSequence;
-   import svera.untiered.startup.control.StartupSignal;
-   import org.swiftsuspenders.Injector;
-   import robotlegs.bender.extensions.signalCommandMap.api.ISignalCommandMap;
-   import robotlegs.bender.framework.api.IConfig;
-   
-   public class StartupConfig implements IConfig
+import org.swiftsuspenders.Injector;
+
+import robotlegs.bender.extensions.signalCommandMap.api.ISignalCommandMap;
+import robotlegs.bender.framework.api.IConfig;
+
+import svera.untiered.startup.control.StartupCommand;
+import svera.untiered.startup.control.StartupSequence;
+import svera.untiered.startup.control.StartupSignal;
+
+public class StartupConfig implements IConfig
    {
        
       

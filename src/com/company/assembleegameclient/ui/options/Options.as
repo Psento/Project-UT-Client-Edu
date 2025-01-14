@@ -1,27 +1,22 @@
 package com.company.assembleegameclient.ui.options
 {
-   import com.company.assembleegameclient.game.GameSprite;
-   import com.company.assembleegameclient.parameters.Parameters;
-   import com.company.assembleegameclient.screens.TitleMenuOption;
+import com.company.assembleegameclient.game.GameSprite;
+import com.company.assembleegameclient.parameters.Parameters;
+import com.company.assembleegameclient.screens.TitleMenuOption;
 import com.company.assembleegameclient.sound.Music;
 import com.company.assembleegameclient.sound.SFX;
-   import com.company.untiered.graphics.ScreenGraphic;
 import com.company.ui.SimpleText;
-import com.company.ui.SimpleText;
+import com.company.untiered.graphics.ScreenGraphic;
 import com.company.util.AssetLibrary;
-import com.company.util.KeyCodes;
 
 import flash.display.BitmapData;
 import flash.display.Sprite;
-   import flash.display.StageDisplayState;
-import flash.display.StageQuality;
 import flash.events.Event;
-   import flash.events.KeyboardEvent;
-   import flash.events.MouseEvent;
-   import flash.filters.DropShadowFilter;
+import flash.events.KeyboardEvent;
+import flash.events.MouseEvent;
+import flash.filters.DropShadowFilter;
 import flash.geom.Point;
-import flash.system.Capabilities;
-   import flash.text.TextFieldAutoSize;
+import flash.text.TextFieldAutoSize;
 import flash.ui.Mouse;
 import flash.ui.MouseCursor;
 import flash.ui.MouseCursorData;

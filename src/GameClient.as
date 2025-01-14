@@ -6,42 +6,40 @@ import com.company.assembleegameclient.util.AssetLoader;
 import com.company.assembleegameclient.util.StageProxy;
 
 import flash.display.LoaderInfo;
-   import flash.display.Sprite;
+import flash.display.Sprite;
 import flash.display.Stage;
 import flash.display.StageScaleMode;
-   import flash.events.Event;
+import flash.events.Event;
 import flash.events.MouseEvent;
-import flash.system.Capabilities;
-import flash.system.Security;
+
+import robotlegs.bender.bundles.mvcs.MVCSBundle;
+import robotlegs.bender.extensions.signalCommandMap.SignalCommandMapExtension;
+import robotlegs.bender.framework.api.IContext;
+import robotlegs.bender.framework.api.LogLevel;
 
 import svera.lib.net.NetConfig;
-   import svera.untiered.account.AccountConfig;
-   import svera.untiered.appengine.AppEngineConfig;
-   import svera.untiered.assets.AssetsConfig;
-   import svera.untiered.characters.CharactersConfig;
-   import svera.untiered.classes.ClassesConfig;
-   import svera.untiered.core.CoreConfig;
-   import svera.untiered.core.StaticInjectorContext;
-   import svera.untiered.death.DeathConfig;
-   import svera.untiered.dialogs.DialogsConfig;
-   import svera.untiered.fame.FameConfig;
-   import svera.untiered.game.GameConfig;
-   import svera.untiered.hud.HUDConfig;
-   import svera.untiered.legends.LegendsConfig;
-   import svera.untiered.minimap.MiniMapConfig;
+import svera.untiered.account.AccountConfig;
+import svera.untiered.appengine.AppEngineConfig;
+import svera.untiered.assets.AssetsConfig;
+import svera.untiered.characters.CharactersConfig;
+import svera.untiered.classes.ClassesConfig;
+import svera.untiered.core.CoreConfig;
+import svera.untiered.core.StaticInjectorContext;
+import svera.untiered.death.DeathConfig;
+import svera.untiered.dialogs.DialogsConfig;
+import svera.untiered.fame.FameConfig;
+import svera.untiered.game.GameConfig;
+import svera.untiered.hud.HUDConfig;
+import svera.untiered.legends.LegendsConfig;
+import svera.untiered.minimap.MiniMapConfig;
 import svera.untiered.stage3D.Stage3DConfig;
 import svera.untiered.startup.StartupConfig;
-   import svera.untiered.startup.control.StartupSignal;
-   import svera.untiered.tooltips.TooltipsConfig;
+import svera.untiered.startup.control.StartupSignal;
+import svera.untiered.tooltips.TooltipsConfig;
 import svera.untiered.ui.UIConfig;
 import svera.untiered.ui.UIUtils;
 
-import robotlegs.bender.bundles.mvcs.MVCSBundle;
-   import robotlegs.bender.extensions.signalCommandMap.SignalCommandMapExtension;
-   import robotlegs.bender.framework.api.IContext;
-   import robotlegs.bender.framework.api.LogLevel;
-   
-   [SWF(frameRate="60",backgroundColor="#000000",width="800",height="600")]
+[SWF(frameRate="60",backgroundColor="#000000",width="800",height="600")]
    public class GameClient extends Sprite
    {
       public static var STAGE:Stage;
@@ -83,8 +81,8 @@ import robotlegs.bender.bundles.mvcs.MVCSBundle;
          startup.dispatch();
          STAGE = stage;
          STAGE.addEventListener(MouseEvent.RIGHT_CLICK, onRightClick);
-         STAGE.addEventListener(Event.RESIZE, updateStageSize);
-         setStageSize();
+         STAGE.addEventListener(Event.RESIZE, onResize);
+         onResize(null);
          STAGE.addEventListener(Event.ENTER_FRAME, onEnterFrame);
          UIUtils.toggleQuality(Parameters.data_.quality);
       }
@@ -92,13 +90,9 @@ import robotlegs.bender.bundles.mvcs.MVCSBundle;
       private function onEnterFrame(event:Event) : void
       {
          SoundEffectLibrary.clear();
-         if (!resized_){
-            setStageSize();
-         }
-         resized_ = false;
       }
 
-      private function updateStageSize(event:Event) : void
+      private function onResize(event:Event) : void
       {
          setStageSize();
          resized_ = true;

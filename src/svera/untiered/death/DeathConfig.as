@@ -1,17 +1,18 @@
 package svera.untiered.death
 {
-   import com.company.assembleegameclient.game.GameSprite;
-   import svera.untiered.death.control.HandleDeathCommand;
-   import svera.untiered.death.control.HandleDeathSignal;
-   import svera.untiered.death.control.HandleNormalDeathCommand;
-   import svera.untiered.death.control.HandleNormalDeathSignal;
-   import svera.untiered.death.model.DeathModel;
-   import org.swiftsuspenders.Injector;
-   import robotlegs.bender.extensions.mediatorMap.api.IMediatorMap;
-   import robotlegs.bender.extensions.signalCommandMap.api.ISignalCommandMap;
-   import robotlegs.bender.framework.api.IConfig;
-   
-   public class DeathConfig implements IConfig
+import org.swiftsuspenders.Injector;
+
+import robotlegs.bender.extensions.mediatorMap.api.IMediatorMap;
+import robotlegs.bender.extensions.signalCommandMap.api.ISignalCommandMap;
+import robotlegs.bender.framework.api.IConfig;
+
+import svera.untiered.death.control.HandleDeathCommand;
+import svera.untiered.death.control.HandleDeathSignal;
+import svera.untiered.death.control.HandleNormalDeathCommand;
+import svera.untiered.death.control.HandleNormalDeathSignal;
+import svera.untiered.death.model.DeathModel;
+
+public class DeathConfig implements IConfig
    {
        
       

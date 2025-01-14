@@ -1,14 +1,13 @@
 package svera.untiered.classes.control
 {
-   import svera.untiered.assets.model.CharacterTemplate;
-   import svera.untiered.classes.model.CharacterClass;
-   import svera.untiered.classes.model.CharacterClassStat;
-   import svera.untiered.classes.model.CharacterClassUnlock;
-   import svera.untiered.classes.model.CharacterSkin;
-   import svera.untiered.classes.model.CharacterSkinState;
-   import svera.untiered.classes.model.ClassesModel;
-   
-   public class ParseClassesXmlCommand
+import svera.untiered.assets.model.CharacterTemplate;
+import svera.untiered.classes.model.CharacterClass;
+import svera.untiered.classes.model.CharacterClassStat;
+import svera.untiered.classes.model.CharacterSkin;
+import svera.untiered.classes.model.CharacterSkinState;
+import svera.untiered.classes.model.ClassesModel;
+
+public class ParseClassesXmlCommand
    {
       
       public static const CLASSIC_NAME:String = "Classic";

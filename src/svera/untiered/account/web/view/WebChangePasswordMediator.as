@@ -1,13 +1,14 @@
 package svera.untiered.account.web.view
 {
-   import svera.lib.tasks.Task;
-   import svera.untiered.account.web.model.ChangePasswordData;
-   import svera.untiered.account.web.signals.WebChangePasswordSignal;
-   import svera.untiered.core.signals.TaskErrorSignal;
-   import svera.untiered.dialogs.control.OpenDialogSignal;
-   import robotlegs.bender.bundles.mvcs.Mediator;
-   
-   public class WebChangePasswordMediator extends Mediator
+import robotlegs.bender.bundles.mvcs.Mediator;
+
+import svera.lib.tasks.Task;
+import svera.untiered.account.web.model.ChangePasswordData;
+import svera.untiered.account.web.signals.WebChangePasswordSignal;
+import svera.untiered.core.signals.TaskErrorSignal;
+import svera.untiered.dialogs.control.OpenDialogSignal;
+
+public class WebChangePasswordMediator extends Mediator
    {
        
       

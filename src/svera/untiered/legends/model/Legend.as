@@ -1,9 +1,10 @@
 package svera.untiered.legends.model
 {
-   import flash.display.BitmapData;
-   import svera.untiered.fame.model.FameVO;
-   
-   public class Legend implements FameVO
+import flash.display.BitmapData;
+
+import svera.untiered.fame.model.FameVO;
+
+public class Legend implements FameVO
    {
        
       

@@ -1,9 +1,9 @@
 package com.company.assembleegameclient.mapeditor
 {
-   import com.company.assembleegameclient.map.GroundLibrary;
-   import com.company.util.MoreStringUtil;
-   
-   public class GroundChooser extends Chooser
+import com.company.assembleegameclient.map.GroundLibrary;
+import com.company.util.MoreStringUtil;
+
+public class GroundChooser extends Chooser
    {
        
       

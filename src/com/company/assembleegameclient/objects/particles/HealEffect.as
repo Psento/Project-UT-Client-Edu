@@ -1,8 +1,8 @@
 package com.company.assembleegameclient.objects.particles
 {
-   import com.company.assembleegameclient.objects.GameObject;
-   
-   public class HealEffect extends ParticleEffect
+import com.company.assembleegameclient.objects.GameObject;
+
+public class HealEffect extends ParticleEffect
    {
        
       

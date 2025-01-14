@@ -1,10 +1,11 @@
 package svera.lib.net.impl
 {
-   import svera.lib.net.api.MessageHandlerProxy;
-   import svera.lib.net.api.MessageMapping;
-   import org.swiftsuspenders.Injector;
-   
-   public class MessageCenterMapping implements MessageMapping
+import org.swiftsuspenders.Injector;
+
+import svera.lib.net.api.MessageHandlerProxy;
+import svera.lib.net.api.MessageMapping;
+
+public class MessageCenterMapping implements MessageMapping
    {
        
       

@@ -1,17 +1,17 @@
 package com.company.assembleegameclient.ui.panels.itemgrids
 {
-   import com.company.assembleegameclient.objects.GameObject;
-   import com.company.assembleegameclient.objects.Player;
-   import com.company.assembleegameclient.ui.panels.itemgrids.itemtiles.EquipmentTile;
+import com.company.assembleegameclient.objects.GameObject;
+import com.company.assembleegameclient.objects.Player;
+import com.company.assembleegameclient.ui.panels.itemgrids.itemtiles.EquipmentTile;
 import com.company.assembleegameclient.ui.panels.itemgrids.itemtiles.ItemTile;
 import com.company.util.ArrayIterator;
-   import com.company.util.IIterator;
+import com.company.util.IIterator;
 
 import flash.events.MouseEvent;
 
 import svera.lib.util.VectorAS3Util;
-   
-   public class EquippedGrid extends ItemGrid
+
+public class EquippedGrid extends ItemGrid
    {
        
       

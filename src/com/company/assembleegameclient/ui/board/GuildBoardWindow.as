@@ -1,16 +1,18 @@
 package com.company.assembleegameclient.ui.board
 {
-   import com.company.assembleegameclient.ui.dialogs.Dialog;
-   import com.company.util.MoreObjectUtil;
-   import flash.display.Graphics;
-   import flash.display.Shape;
-   import flash.display.Sprite;
-   import flash.events.Event;
-   import svera.untiered.account.core.Account;
-   import svera.untiered.appengine.api.AppEngineClient;
-   import svera.untiered.core.StaticInjectorContext;
-   
-   public class GuildBoardWindow extends Sprite
+import com.company.assembleegameclient.ui.dialogs.Dialog;
+import com.company.util.MoreObjectUtil;
+
+import flash.display.Graphics;
+import flash.display.Shape;
+import flash.display.Sprite;
+import flash.events.Event;
+
+import svera.untiered.account.core.Account;
+import svera.untiered.appengine.api.AppEngineClient;
+import svera.untiered.core.StaticInjectorContext;
+
+public class GuildBoardWindow extends Sprite
    {
        
       

@@ -1,17 +1,19 @@
 package com.company.assembleegameclient.screens
 {
-   import com.company.assembleegameclient.sound.SoundEffectLibrary;
-   import com.company.ui.SimpleText;
-   import com.company.util.MoreColorUtil;
-   import flash.display.Sprite;
-   import flash.events.Event;
-   import flash.events.MouseEvent;
-   import flash.filters.DropShadowFilter;
-   import flash.geom.ColorTransform;
-   import flash.utils.getTimer;
-   import org.osflash.signals.Signal;
-   
-   public class TitleMenuOption extends Sprite
+import com.company.assembleegameclient.sound.SoundEffectLibrary;
+import com.company.ui.SimpleText;
+import com.company.util.MoreColorUtil;
+
+import flash.display.Sprite;
+import flash.events.Event;
+import flash.events.MouseEvent;
+import flash.filters.DropShadowFilter;
+import flash.geom.ColorTransform;
+import flash.utils.getTimer;
+
+import org.osflash.signals.Signal;
+
+public class TitleMenuOption extends Sprite
    {
       protected static const OVER_COLOR_TRANSFORM:ColorTransform = new ColorTransform(1,220 / 255,133 / 255);
 

@@ -1,15 +1,17 @@
 package svera.untiered.dialogs
 {
-   import svera.untiered.dialogs.control.CloseDialogsSignal;
-   import svera.untiered.dialogs.control.OpenDialogSignal;
-   import svera.untiered.dialogs.control.ShowDialogBackgroundSignal;
-   import svera.untiered.dialogs.view.DialogsMediator;
-   import svera.untiered.dialogs.view.DialogsView;
-   import org.swiftsuspenders.Injector;
-   import robotlegs.bender.extensions.mediatorMap.api.IMediatorMap;
-   import robotlegs.bender.framework.api.IConfig;
-   
-   public class DialogsConfig implements IConfig
+import org.swiftsuspenders.Injector;
+
+import robotlegs.bender.extensions.mediatorMap.api.IMediatorMap;
+import robotlegs.bender.framework.api.IConfig;
+
+import svera.untiered.dialogs.control.CloseDialogsSignal;
+import svera.untiered.dialogs.control.OpenDialogSignal;
+import svera.untiered.dialogs.control.ShowDialogBackgroundSignal;
+import svera.untiered.dialogs.view.DialogsMediator;
+import svera.untiered.dialogs.view.DialogsView;
+
+public class DialogsConfig implements IConfig
    {
        
       

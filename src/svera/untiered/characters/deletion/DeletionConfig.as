@@ -1,16 +1,18 @@
 package svera.untiered.characters.deletion
 {
-   import svera.untiered.characters.deletion.control.DeleteCharacterCommand;
-   import svera.untiered.characters.deletion.control.DeleteCharacterSignal;
-   import svera.untiered.characters.deletion.service.DeleteCharacterTask;
-   import svera.untiered.characters.deletion.view.ConfirmDeleteCharacterDialog;
-   import svera.untiered.characters.deletion.view.ConfirmDeleteCharacterMediator;
-   import org.swiftsuspenders.Injector;
-   import robotlegs.bender.extensions.mediatorMap.api.IMediatorMap;
-   import robotlegs.bender.extensions.signalCommandMap.api.ISignalCommandMap;
-   import robotlegs.bender.framework.api.IConfig;
-   
-   public class DeletionConfig implements IConfig
+import org.swiftsuspenders.Injector;
+
+import robotlegs.bender.extensions.mediatorMap.api.IMediatorMap;
+import robotlegs.bender.extensions.signalCommandMap.api.ISignalCommandMap;
+import robotlegs.bender.framework.api.IConfig;
+
+import svera.untiered.characters.deletion.control.DeleteCharacterCommand;
+import svera.untiered.characters.deletion.control.DeleteCharacterSignal;
+import svera.untiered.characters.deletion.service.DeleteCharacterTask;
+import svera.untiered.characters.deletion.view.ConfirmDeleteCharacterDialog;
+import svera.untiered.characters.deletion.view.ConfirmDeleteCharacterMediator;
+
+public class DeletionConfig implements IConfig
    {
        
       

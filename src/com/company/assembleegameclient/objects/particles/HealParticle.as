@@ -1,9 +1,10 @@
 package com.company.assembleegameclient.objects.particles
 {
-   import com.company.assembleegameclient.objects.GameObject;
-   import flash.geom.Vector3D;
-   
-   public class HealParticle extends Particle
+import com.company.assembleegameclient.objects.GameObject;
+
+import flash.geom.Vector3D;
+
+public class HealParticle extends Particle
    {
        
       

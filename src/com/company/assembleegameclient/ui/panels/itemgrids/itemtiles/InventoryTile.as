@@ -1,11 +1,12 @@
 package com.company.assembleegameclient.ui.panels.itemgrids.itemtiles
 {
-   import com.company.assembleegameclient.ui.panels.itemgrids.ItemGrid;
-   import com.company.ui.SimpleText;
-   import flash.display.Bitmap;
-   import flash.display.BitmapData;
-   
-   public class InventoryTile extends InteractiveItemTile
+import com.company.assembleegameclient.ui.panels.itemgrids.ItemGrid;
+import com.company.ui.SimpleText;
+
+import flash.display.Bitmap;
+import flash.display.BitmapData;
+
+public class InventoryTile extends InteractiveItemTile
    {
        
       

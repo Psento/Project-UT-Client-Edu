@@ -1,12 +1,13 @@
 package svera.untiered.account.web.view
 {
-   import svera.untiered.account.core.Account;
-   import svera.untiered.dialogs.control.CloseDialogsSignal;
-   import svera.untiered.dialogs.control.OpenDialogSignal;
-   //import flash.desktop.NativeApplication;
-   import robotlegs.bender.bundles.mvcs.Mediator;
-   
-   public class WebQuitMediator extends Mediator
+import robotlegs.bender.bundles.mvcs.Mediator;
+
+import svera.untiered.account.core.Account;
+import svera.untiered.dialogs.control.CloseDialogsSignal;
+import svera.untiered.dialogs.control.OpenDialogSignal;
+
+//import flash.desktop.NativeApplication;
+public class WebQuitMediator extends Mediator
    {
        
       

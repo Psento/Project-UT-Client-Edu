@@ -1,9 +1,8 @@
 package svera.untiered.messaging.impl.outgoing
 {
-   import flash.utils.ByteArray;
-   import flash.utils.IDataOutput;
-   
-   public class Hello extends OutgoingMessage
+import flash.utils.IDataOutput;
+
+public class Hello extends OutgoingMessage
    {
       public var buildVersion_:String;
       public var gameId_:int = 0;

@@ -1,10 +1,11 @@
 package svera.untiered.stage3D.graphic3D
 {
-   import svera.untiered.stage3D.proxies.IndexBuffer3DProxy;
-   import svera.untiered.stage3D.proxies.VertexBuffer3DProxy;
-   import org.swiftsuspenders.Injector;
-   
-   public class Graphic3DHelper
+import org.swiftsuspenders.Injector;
+
+import svera.untiered.stage3D.proxies.IndexBuffer3DProxy;
+import svera.untiered.stage3D.proxies.VertexBuffer3DProxy;
+
+public class Graphic3DHelper
    {
        
       

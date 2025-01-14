@@ -1,9 +1,10 @@
 package svera.untiered.account.core.signals
 {
-   import svera.untiered.account.web.model.AccountData;
-   import org.osflash.signals.Signal;
-   
-   public class LoginSignal extends Signal
+import org.osflash.signals.Signal;
+
+import svera.untiered.account.web.model.AccountData;
+
+public class LoginSignal extends Signal
    {
        
       

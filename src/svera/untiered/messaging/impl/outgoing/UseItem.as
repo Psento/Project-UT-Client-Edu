@@ -1,10 +1,11 @@
 package svera.untiered.messaging.impl.outgoing
 {
-   import flash.utils.IDataOutput;
-   import svera.untiered.messaging.impl.data.SlotObjectData;
-   import svera.untiered.messaging.impl.data.WorldPosData;
-   
-   public class UseItem extends OutgoingMessage
+import flash.utils.IDataOutput;
+
+import svera.untiered.messaging.impl.data.SlotObjectData;
+import svera.untiered.messaging.impl.data.WorldPosData;
+
+public class UseItem extends OutgoingMessage
    {
       public var time_:int;
       

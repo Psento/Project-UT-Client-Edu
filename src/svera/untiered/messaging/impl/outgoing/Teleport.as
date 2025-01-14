@@ -1,8 +1,8 @@
 package svera.untiered.messaging.impl.outgoing
 {
-   import flash.utils.IDataOutput;
-   
-   public class Teleport extends OutgoingMessage
+import flash.utils.IDataOutput;
+
+public class Teleport extends OutgoingMessage
    {
        
       public var time_:int;

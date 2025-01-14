@@ -1,13 +1,14 @@
 package com.company.assembleegameclient.ui.menu
 {
-   import com.company.assembleegameclient.objects.Player;
-   import com.company.ui.SimpleText;
-   import com.company.util.AssetLibrary;
-   import flash.events.Event;
-   import flash.events.MouseEvent;
-   import flash.geom.ColorTransform;
-   
-   public class TeleportMenuOption extends MenuOption
+import com.company.assembleegameclient.objects.Player;
+import com.company.ui.SimpleText;
+import com.company.util.AssetLibrary;
+
+import flash.events.Event;
+import flash.events.MouseEvent;
+import flash.geom.ColorTransform;
+
+public class TeleportMenuOption extends MenuOption
    {
       
       private static const inactiveCT:ColorTransform = new ColorTransform(84 / 255,84 / 255,84 / 255);

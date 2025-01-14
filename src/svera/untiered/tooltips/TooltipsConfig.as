@@ -1,12 +1,13 @@
 package svera.untiered.tooltips
 {
-   import svera.untiered.tooltips.view.TooltipsMediator;
-   import svera.untiered.tooltips.view.TooltipsView;
-   import robotlegs.bender.extensions.mediatorMap.api.IMediatorMap;
-   import robotlegs.bender.framework.api.IConfig;
-   import robotlegs.bender.framework.api.IContext;
-   
-   public class TooltipsConfig implements IConfig
+import robotlegs.bender.extensions.mediatorMap.api.IMediatorMap;
+import robotlegs.bender.framework.api.IConfig;
+import robotlegs.bender.framework.api.IContext;
+
+import svera.untiered.tooltips.view.TooltipsMediator;
+import svera.untiered.tooltips.view.TooltipsView;
+
+public class TooltipsConfig implements IConfig
    {
        
       

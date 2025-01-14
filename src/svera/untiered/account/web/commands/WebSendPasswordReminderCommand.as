@@ -1,15 +1,15 @@
 package svera.untiered.account.web.commands
 {
-   import svera.lib.tasks.BranchingTask;
-   import svera.lib.tasks.DispatchSignalTask;
-   import svera.lib.tasks.TaskGroup;
-   import svera.lib.tasks.TaskMonitor;
-   import svera.untiered.account.core.services.SendPasswordReminderTask;
-   import svera.untiered.account.web.view.WebLoginDialog;
-   import svera.untiered.core.signals.TaskErrorSignal;
-   import svera.untiered.dialogs.control.OpenDialogSignal;
-   
-   public class WebSendPasswordReminderCommand
+import svera.lib.tasks.BranchingTask;
+import svera.lib.tasks.DispatchSignalTask;
+import svera.lib.tasks.TaskGroup;
+import svera.lib.tasks.TaskMonitor;
+import svera.untiered.account.core.services.SendPasswordReminderTask;
+import svera.untiered.account.web.view.WebLoginDialog;
+import svera.untiered.core.signals.TaskErrorSignal;
+import svera.untiered.dialogs.control.OpenDialogSignal;
+
+public class WebSendPasswordReminderCommand
    {
        
       

@@ -1,13 +1,14 @@
 package com.company.assembleegameclient.ui
 {
-   import com.company.util.GraphicsUtil;
-   import flash.display.GraphicsPath;
-   import flash.display.GraphicsPathWinding;
-   import flash.display.GraphicsSolidFill;
-   import flash.display.IGraphicsData;
-   import flash.display.Shape;
-   
-   public class LineBreakDesign extends Shape
+import com.company.util.GraphicsUtil;
+
+import flash.display.GraphicsPath;
+import flash.display.GraphicsPathWinding;
+import flash.display.GraphicsSolidFill;
+import flash.display.IGraphicsData;
+import flash.display.Shape;
+
+public class LineBreakDesign extends Shape
    {
        
       

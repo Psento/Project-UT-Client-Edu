@@ -1,12 +1,12 @@
 package com.company.assembleegameclient.mapeditor
 {
-   import flash.display.Bitmap;
-   import flash.display.BitmapData;
-   import flash.display.Sprite;
-   import flash.geom.Matrix;
-   import flash.geom.Rectangle;
-   
-   public class BigBitmapData
+import flash.display.Bitmap;
+import flash.display.BitmapData;
+import flash.display.Sprite;
+import flash.geom.Matrix;
+import flash.geom.Rectangle;
+
+public class BigBitmapData
    {
       
       private static const CHUNK_SIZE:int = 256;

@@ -1,20 +1,23 @@
 package svera.untiered.minimap.view
 {
-   import com.company.assembleegameclient.objects.GameObject;
-   import com.company.assembleegameclient.objects.Player;
-   import flash.utils.Dictionary;
-   import svera.untiered.game.focus.control.SetGameFocusSignal;
-   import svera.untiered.game.signals.ExitGameSignal;
-   import svera.untiered.minimap.control.MiniMapZoomSignal;
-   import svera.untiered.minimap.control.UpdateGameObjectTileSignal;
-   import svera.untiered.minimap.control.UpdateGroundTileSignal;
-   import svera.untiered.minimap.model.UpdateGroundTileVO;
-   import svera.untiered.ui.model.HUDModel;
-   import svera.untiered.ui.model.UpdateGameObjectTileVO;
-   import svera.untiered.ui.signals.UpdateHUDSignal;
-   import robotlegs.bender.extensions.mediatorMap.api.IMediator;
-   
-   public class MiniMapMediator implements IMediator
+import com.company.assembleegameclient.objects.GameObject;
+import com.company.assembleegameclient.objects.Player;
+
+import flash.utils.Dictionary;
+
+import robotlegs.bender.extensions.mediatorMap.api.IMediator;
+
+import svera.untiered.game.focus.control.SetGameFocusSignal;
+import svera.untiered.game.signals.ExitGameSignal;
+import svera.untiered.minimap.control.MiniMapZoomSignal;
+import svera.untiered.minimap.control.UpdateGameObjectTileSignal;
+import svera.untiered.minimap.control.UpdateGroundTileSignal;
+import svera.untiered.minimap.model.UpdateGroundTileVO;
+import svera.untiered.ui.model.HUDModel;
+import svera.untiered.ui.model.UpdateGameObjectTileVO;
+import svera.untiered.ui.signals.UpdateHUDSignal;
+
+public class MiniMapMediator implements IMediator
    {
        
       

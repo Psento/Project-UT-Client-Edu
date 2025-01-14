@@ -1,10 +1,11 @@
 package svera.untiered.startup.model.impl
 {
-   import svera.lib.tasks.Task;
-   import svera.untiered.startup.model.api.StartupDelegate;
-   import org.swiftsuspenders.Injector;
-   
-   public class TaskDelegate implements StartupDelegate
+import org.swiftsuspenders.Injector;
+
+import svera.lib.tasks.Task;
+import svera.untiered.startup.model.api.StartupDelegate;
+
+public class TaskDelegate implements StartupDelegate
    {
        
       

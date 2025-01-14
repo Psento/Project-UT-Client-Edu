@@ -1,21 +1,21 @@
 package com.company.assembleegameclient.mapeditor
 {
-import com.company.assembleegameclient.objects.ObjectLibrary;
 import com.company.assembleegameclient.ui.Scrollbar;
-   import com.company.util.GraphicsUtil;
-   import flash.display.CapsStyle;
-   import flash.display.GraphicsPath;
-   import flash.display.GraphicsSolidFill;
-   import flash.display.GraphicsStroke;
-   import flash.display.IGraphicsData;
-   import flash.display.JointStyle;
-   import flash.display.LineScaleMode;
-   import flash.display.Shape;
-   import flash.display.Sprite;
-   import flash.events.Event;
-   import flash.events.MouseEvent;
-   
-   public class Chooser extends Sprite
+import com.company.util.GraphicsUtil;
+
+import flash.display.CapsStyle;
+import flash.display.GraphicsPath;
+import flash.display.GraphicsSolidFill;
+import flash.display.GraphicsStroke;
+import flash.display.IGraphicsData;
+import flash.display.JointStyle;
+import flash.display.LineScaleMode;
+import flash.display.Shape;
+import flash.display.Sprite;
+import flash.events.Event;
+import flash.events.MouseEvent;
+
+public class Chooser extends Sprite
    {
       
       public static const WIDTH:int = 136;

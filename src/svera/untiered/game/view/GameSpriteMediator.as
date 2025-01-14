@@ -1,25 +1,27 @@
 package svera.untiered.game.view
 {
-   import com.company.assembleegameclient.game.GameSprite;
-   import com.company.assembleegameclient.game.events.ReconnectEvent;
-   import com.company.assembleegameclient.objects.Player;
-   import svera.untiered.core.model.MapModel;
-   import svera.untiered.core.model.PlayerModel;
-   import svera.untiered.core.signals.InvalidateDataSignal;
-   import svera.untiered.core.signals.SetScreenSignal;
-   import svera.untiered.core.signals.SetScreenWithValidDataSignal;
-   import svera.untiered.dialogs.control.CloseDialogsSignal;
-   import svera.untiered.game.model.GameInitData;
-   import svera.untiered.game.signals.DisconnectGameSignal;
-   import svera.untiered.game.signals.GameClosedSignal;
-   import svera.untiered.game.signals.PlayGameSignal;
-   import svera.untiered.game.signals.SetWorldInteractionSignal;
-   import svera.untiered.ui.signals.HUDModelInitialized;
-   import svera.untiered.ui.signals.HUDSetupStarted;
-   import svera.untiered.ui.signals.UpdateHUDSignal;
-   import robotlegs.bender.bundles.mvcs.Mediator;
-   
-   public class GameSpriteMediator extends Mediator
+import com.company.assembleegameclient.game.GameSprite;
+import com.company.assembleegameclient.game.events.ReconnectEvent;
+import com.company.assembleegameclient.objects.Player;
+
+import robotlegs.bender.bundles.mvcs.Mediator;
+
+import svera.untiered.core.model.MapModel;
+import svera.untiered.core.model.PlayerModel;
+import svera.untiered.core.signals.InvalidateDataSignal;
+import svera.untiered.core.signals.SetScreenSignal;
+import svera.untiered.core.signals.SetScreenWithValidDataSignal;
+import svera.untiered.dialogs.control.CloseDialogsSignal;
+import svera.untiered.game.model.GameInitData;
+import svera.untiered.game.signals.DisconnectGameSignal;
+import svera.untiered.game.signals.GameClosedSignal;
+import svera.untiered.game.signals.PlayGameSignal;
+import svera.untiered.game.signals.SetWorldInteractionSignal;
+import svera.untiered.ui.signals.HUDModelInitialized;
+import svera.untiered.ui.signals.HUDSetupStarted;
+import svera.untiered.ui.signals.UpdateHUDSignal;
+
+public class GameSpriteMediator extends Mediator
    {
        
       

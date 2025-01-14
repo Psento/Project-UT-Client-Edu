@@ -1,22 +1,25 @@
 package svera.untiered.characters.reskin.view
 {
-   import com.company.assembleegameclient.ui.TextButton;
-   import com.company.ui.SimpleText;
-   import flash.display.CapsStyle;
-   import flash.display.DisplayObject;
-   import flash.display.JointStyle;
-   import flash.display.LineScaleMode;
-   import flash.display.Sprite;
-   import flash.events.MouseEvent;
-   import flash.text.TextFormat;
-   import flash.text.TextFormatAlign;
-   import svera.untiered.classes.view.CharacterSkinListView;
-   import svera.untiered.util.components.DialogBackground;
-   import svera.untiered.util.graphics.ButtonLayoutHelper;
-   import org.osflash.signals.Signal;
-   import org.osflash.signals.natives.NativeMappedSignal;
-   
-   public class ReskinCharacterView extends Sprite
+import com.company.assembleegameclient.ui.TextButton;
+import com.company.ui.SimpleText;
+
+import flash.display.CapsStyle;
+import flash.display.DisplayObject;
+import flash.display.JointStyle;
+import flash.display.LineScaleMode;
+import flash.display.Sprite;
+import flash.events.MouseEvent;
+import flash.text.TextFormat;
+import flash.text.TextFormatAlign;
+
+import org.osflash.signals.Signal;
+import org.osflash.signals.natives.NativeMappedSignal;
+
+import svera.untiered.classes.view.CharacterSkinListView;
+import svera.untiered.util.components.DialogBackground;
+import svera.untiered.util.graphics.ButtonLayoutHelper;
+
+public class ReskinCharacterView extends Sprite
    {
       private static const CANCEL:String = "Cancel";
       private static const SELECT:String = "Select";

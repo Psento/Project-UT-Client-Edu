@@ -1,9 +1,10 @@
 package com.company.assembleegameclient.map.mapoverlay
 {
-   import com.company.assembleegameclient.map.Camera;
-   import flash.display.Sprite;
-   
-   public class MapOverlay extends Sprite
+import com.company.assembleegameclient.map.Camera;
+
+import flash.display.Sprite;
+
+public class MapOverlay extends Sprite
    {
       private const speechBalloons:Object = {};
       

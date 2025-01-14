@@ -1,28 +1,30 @@
 package svera.untiered.fame.view
 {
-   import com.company.assembleegameclient.objects.ObjectLibrary;
-   import com.company.assembleegameclient.screens.ScoreTextLine;
-   import com.company.assembleegameclient.screens.ScoringBox;
-   import com.company.assembleegameclient.screens.TitleMenuOption;
-   import com.company.assembleegameclient.sound.SoundEffectLibrary;
-   import com.company.assembleegameclient.util.FameUtil;
-   import com.company.untiered.graphics.FameIconBackgroundDesign;
-   import com.company.untiered.graphics.ScreenGraphic;
-   import com.company.ui.SimpleText;
-   import com.company.util.BitmapUtil;
-   import com.gskinner.motion.GTween;
-   import flash.display.Bitmap;
-   import flash.display.BitmapData;
-   import flash.display.DisplayObjectContainer;
-   import flash.display.Sprite;
-   import flash.events.MouseEvent;
-   import flash.filters.DropShadowFilter;
-   import flash.geom.Rectangle;
-   import svera.untiered.ui.view.components.ScreenBase;
-   import org.osflash.signals.Signal;
-   import org.osflash.signals.natives.NativeMappedSignal;
-   
-   public class FameView extends Sprite
+import com.company.assembleegameclient.objects.ObjectLibrary;
+import com.company.assembleegameclient.screens.ScoreTextLine;
+import com.company.assembleegameclient.screens.ScoringBox;
+import com.company.assembleegameclient.screens.TitleMenuOption;
+import com.company.assembleegameclient.util.FameUtil;
+import com.company.ui.SimpleText;
+import com.company.untiered.graphics.FameIconBackgroundDesign;
+import com.company.untiered.graphics.ScreenGraphic;
+import com.company.util.BitmapUtil;
+import com.gskinner.motion.GTween;
+
+import flash.display.Bitmap;
+import flash.display.BitmapData;
+import flash.display.DisplayObjectContainer;
+import flash.display.Sprite;
+import flash.events.MouseEvent;
+import flash.filters.DropShadowFilter;
+import flash.geom.Rectangle;
+
+import org.osflash.signals.Signal;
+import org.osflash.signals.natives.NativeMappedSignal;
+
+import svera.untiered.ui.view.components.ScreenBase;
+
+public class FameView extends Sprite
    {
       private static const CHARACTER_INFO:String = "${NAME}, Level ${LEVEL} ${TYPE}";
       private static const DEATH_INFO_LONG:String = "killed on ${DATE} by ${KILLER}";

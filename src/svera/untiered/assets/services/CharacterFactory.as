@@ -1,16 +1,18 @@
 package svera.untiered.assets.services
 {
-   import com.company.assembleegameclient.util.AnimatedChar;
-   import com.company.assembleegameclient.util.AnimatedChars;
-   import com.company.assembleegameclient.util.MaskedImage;
-   import com.company.assembleegameclient.util.TextureRedrawer;
+import com.company.assembleegameclient.util.AnimatedChar;
+import com.company.assembleegameclient.util.AnimatedChars;
+import com.company.assembleegameclient.util.MaskedImage;
+import com.company.assembleegameclient.util.TextureRedrawer;
 import com.company.assembleegameclient.util.redrawers.GlowRedrawer;
 import com.company.util.BitmapUtil;
-   import flash.display.BitmapData;
-   import svera.untiered.assets.model.Animation;
-   import svera.untiered.assets.model.CharacterTemplate;
-   
-   public class CharacterFactory
+
+import flash.display.BitmapData;
+
+import svera.untiered.assets.model.Animation;
+import svera.untiered.assets.model.CharacterTemplate;
+
+public class CharacterFactory
    {
        
       

@@ -1,10 +1,10 @@
 package com.company.assembleegameclient.ui.panels.itemgrids
 {
-   import com.company.assembleegameclient.objects.GameObject;
-   import com.company.assembleegameclient.objects.Player;
-   import com.company.assembleegameclient.ui.panels.itemgrids.itemtiles.InteractiveItemTile;
-   
-   public class ContainerGrid extends ItemGrid
+import com.company.assembleegameclient.objects.GameObject;
+import com.company.assembleegameclient.objects.Player;
+import com.company.assembleegameclient.ui.panels.itemgrids.itemtiles.InteractiveItemTile;
+
+public class ContainerGrid extends ItemGrid
    {
       private var tiles:Vector.<InteractiveItemTile>;
 

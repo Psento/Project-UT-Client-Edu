@@ -1,9 +1,10 @@
 package svera.untiered.messaging.impl.incoming
 {
-   import flash.utils.IDataInput;
-   import svera.untiered.messaging.impl.data.WorldPosData;
-   
-   public class ServerPlayerShoot extends IncomingMessage
+import flash.utils.IDataInput;
+
+import svera.untiered.messaging.impl.data.WorldPosData;
+
+public class ServerPlayerShoot extends IncomingMessage
    {
        
       

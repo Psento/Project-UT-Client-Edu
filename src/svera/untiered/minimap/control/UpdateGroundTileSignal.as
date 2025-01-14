@@ -1,9 +1,10 @@
 package svera.untiered.minimap.control
 {
-   import svera.untiered.minimap.model.UpdateGroundTileVO;
-   import org.osflash.signals.Signal;
-   
-   public class UpdateGroundTileSignal extends Signal
+import org.osflash.signals.Signal;
+
+import svera.untiered.minimap.model.UpdateGroundTileVO;
+
+public class UpdateGroundTileSignal extends Signal
    {
        
       

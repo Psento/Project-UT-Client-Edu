@@ -1,8 +1,8 @@
 package svera.untiered.util.components.api
 {
-   import flash.display.Sprite;
-   
-   public class BuyButton extends Sprite
+import flash.display.Sprite;
+
+public class BuyButton extends Sprite
    {
        
       

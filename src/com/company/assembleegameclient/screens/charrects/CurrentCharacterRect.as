@@ -1,25 +1,23 @@
 package com.company.assembleegameclient.screens.charrects
 {
-   import com.company.assembleegameclient.appengine.CharacterStats;
-   import com.company.assembleegameclient.appengine.SavedCharacter;
-   import com.company.assembleegameclient.screens.events.DeleteCharacterEvent;
-   import com.company.assembleegameclient.ui.tooltip.MyPlayerToolTip;
-   import com.company.assembleegameclient.ui.tooltip.ToolTip;
-   import com.company.assembleegameclient.util.FameUtil;
-   import com.company.untiered.graphics.DeleteXGraphic;
-   import com.company.untiered.graphics.StarGraphic;
-   import com.company.ui.SimpleText;
-   import flash.display.DisplayObject;
-   import flash.display.Sprite;
-   import flash.events.Event;
-   import flash.events.MouseEvent;
-   import flash.filters.DropShadowFilter;
-   import flash.geom.ColorTransform;
-   import svera.untiered.classes.model.CharacterClass;
-   import org.osflash.signals.Signal;
-   import org.osflash.signals.natives.NativeMappedSignal;
-   
-   public class CurrentCharacterRect extends CharacterRect
+import com.company.assembleegameclient.appengine.CharacterStats;
+import com.company.assembleegameclient.appengine.SavedCharacter;
+import com.company.assembleegameclient.screens.events.DeleteCharacterEvent;
+import com.company.assembleegameclient.ui.tooltip.ToolTip;
+import com.company.ui.SimpleText;
+import com.company.untiered.graphics.DeleteXGraphic;
+
+import flash.display.DisplayObject;
+import flash.display.Sprite;
+import flash.events.MouseEvent;
+import flash.filters.DropShadowFilter;
+
+import org.osflash.signals.Signal;
+import org.osflash.signals.natives.NativeMappedSignal;
+
+import svera.untiered.classes.model.CharacterClass;
+
+public class CurrentCharacterRect extends CharacterRect
    {
       private static var toolTip_:ToolTip = null;
 

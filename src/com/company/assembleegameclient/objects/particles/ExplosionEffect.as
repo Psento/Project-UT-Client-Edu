@@ -36,6 +36,7 @@ package com.company.assembleegameclient.objects.particles
 }
 
 import com.company.assembleegameclient.objects.particles.Particle;
+
 import flash.geom.Vector3D;
 
 class ExplosionParticle extends Particle

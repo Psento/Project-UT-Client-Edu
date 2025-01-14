@@ -1,19 +1,17 @@
 package svera.lib.net.impl
 {
-   import com.hurlant.crypto.symmetric.ICipher;
-   import flash.events.Event;
-   import flash.events.IOErrorEvent;
-   import flash.events.ProgressEvent;
-   import flash.events.SecurityErrorEvent;
-   import flash.net.Socket;
-import flash.system.Security;
+import flash.events.Event;
+import flash.events.IOErrorEvent;
+import flash.events.ProgressEvent;
+import flash.events.SecurityErrorEvent;
+import flash.net.Socket;
 import flash.utils.ByteArray;
-   import svera.lib.net.api.MessageProvider;
-import svera.untiered.messaging.impl.GameServerConnection;
 
 import org.osflash.signals.Signal;
-   
-   public class SocketServer
+
+import svera.lib.net.api.MessageProvider;
+
+public class SocketServer
    {
       [Inject]
       public var messages:MessageProvider;

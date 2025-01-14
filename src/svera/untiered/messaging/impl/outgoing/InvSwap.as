@@ -1,10 +1,10 @@
 package svera.untiered.messaging.impl.outgoing
 {
-   import flash.utils.IDataOutput;
-   import svera.untiered.messaging.impl.data.SlotObjectData;
-   import svera.untiered.messaging.impl.data.WorldPosData;
-   
-   public class InvSwap extends OutgoingMessage
+import flash.utils.IDataOutput;
+
+import svera.untiered.messaging.impl.data.SlotObjectData;
+
+public class InvSwap extends OutgoingMessage
    {
       
       public var slotObject1_:SlotObjectData;

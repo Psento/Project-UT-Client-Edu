@@ -1,9 +1,8 @@
 package svera.untiered.messaging.impl.incoming
 {
-   import flash.utils.ByteArray;
-   import flash.utils.IDataInput;
-   
-   public class Reconnect extends IncomingMessage
+import flash.utils.IDataInput;
+
+public class Reconnect extends IncomingMessage
    {
       public var gameId_:int;
       

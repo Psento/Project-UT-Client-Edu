@@ -1,9 +1,10 @@
 package svera.untiered.characters.reskin.view
 {
-   import svera.untiered.characters.reskin.control.OpenReskinDialogSignal;
-   import robotlegs.bender.bundles.mvcs.Mediator;
-   
-   public class ReskinPanelMediator extends Mediator
+import robotlegs.bender.bundles.mvcs.Mediator;
+
+import svera.untiered.characters.reskin.control.OpenReskinDialogSignal;
+
+public class ReskinPanelMediator extends Mediator
    {
        
       

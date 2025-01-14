@@ -1,8 +1,8 @@
 package com.company.util
 {
-   import flash.display.BitmapData;
-   
-   public class ImageSet
+import flash.display.BitmapData;
+
+public class ImageSet
    {
        
       

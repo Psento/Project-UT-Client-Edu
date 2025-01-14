@@ -1,8 +1,8 @@
 package com.company.util
 {
-   import flash.system.Capabilities;
-   
-   public class CapabilitiesUtil
+import flash.system.Capabilities;
+
+public class CapabilitiesUtil
    {
        
       

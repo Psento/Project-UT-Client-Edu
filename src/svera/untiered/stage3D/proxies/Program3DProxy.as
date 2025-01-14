@@ -1,9 +1,9 @@
 package svera.untiered.stage3D.proxies
 {
-   import flash.display3D.Program3D;
-   import flash.utils.ByteArray;
-   
-   public class Program3DProxy
+import flash.display3D.Program3D;
+import flash.utils.ByteArray;
+
+public class Program3DProxy
    {
        
       

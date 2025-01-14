@@ -1,9 +1,9 @@
 package com.company.assembleegameclient.objects
 {
-   import com.company.assembleegameclient.game.GameSprite;
-   import com.company.assembleegameclient.ui.panels.Panel;
-   
-   public interface IInteractiveObject
+import com.company.assembleegameclient.game.GameSprite;
+import com.company.assembleegameclient.ui.panels.Panel;
+
+public interface IInteractiveObject
    {
        
       

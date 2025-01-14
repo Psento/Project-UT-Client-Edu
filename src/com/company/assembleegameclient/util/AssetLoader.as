@@ -1,26 +1,20 @@
 package com.company.assembleegameclient.util
 {
-   import com.company.assembleegameclient.engine3d.Model3D;
-   import com.company.assembleegameclient.map.GroundLibrary;
-   import com.company.assembleegameclient.map.RegionLibrary;
-   import com.company.assembleegameclient.objects.ObjectLibrary;
-import com.company.assembleegameclient.objects.Wall;
+import com.company.assembleegameclient.engine3d.Model3D;
+import com.company.assembleegameclient.map.GroundLibrary;
+import com.company.assembleegameclient.map.RegionLibrary;
+import com.company.assembleegameclient.objects.ObjectLibrary;
 import com.company.assembleegameclient.objects.particles.ParticleLibrary;
-   import com.company.assembleegameclient.parameters.Parameters;
-import com.company.assembleegameclient.sound.Music;
-import com.company.assembleegameclient.sound.SFX;
-   import com.company.assembleegameclient.sound.SoundEffectLibrary;
+import com.company.assembleegameclient.parameters.Parameters;
+import com.company.assembleegameclient.sound.SoundEffectLibrary;
 import com.company.assembleegameclient.ui.options.Options;
 import com.company.util.AssetLibrary;
-   import flash.display.BitmapData;
-   import flash.utils.ByteArray;
+
+import flash.display.BitmapData;
+import flash.utils.ByteArray;
 
 import svera.untiered.assets.EmbeddedAssets;
-   import svera.untiered.assets.EmbeddedData;
-import svera.untiered.assets.Environment.Overworld.Assets_Overworld_Environment_DroughtsPath16x16;
-import svera.untiered.assets.Environment.Overworld.Assets_Overworld_Environment_DroughtsPath8x8;
-import svera.untiered.assets.Environment.Overworld.Assets_Overworld_Environment_Nidavellir16x16;
-import svera.untiered.assets.Environment.Overworld.Assets_Overworld_Environment_Nidavellir8x8;
+import svera.untiered.assets.EmbeddedData;
 
 public class AssetLoader
    {

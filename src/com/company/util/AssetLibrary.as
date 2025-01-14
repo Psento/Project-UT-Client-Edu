@@ -1,11 +1,11 @@
 package com.company.util
 {
-   import flash.display.BitmapData;
-   import flash.media.Sound;
-   import flash.media.SoundTransform;
-   import flash.utils.Dictionary;
-   
-   public class AssetLibrary
+import flash.display.BitmapData;
+import flash.media.Sound;
+import flash.media.SoundTransform;
+import flash.utils.Dictionary;
+
+public class AssetLibrary
    {
       
       private static var images_:Dictionary = new Dictionary();

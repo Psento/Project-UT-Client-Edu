@@ -1,22 +1,24 @@
 package com.company.assembleegameclient.objects
 {
-   import com.company.assembleegameclient.constants.InventoryOwnerTypes;
-   import com.company.assembleegameclient.map.Camera;
-   import com.company.assembleegameclient.map.Map;
-   import com.company.assembleegameclient.ui.tooltip.EquipmentToolTip;
-   import com.company.assembleegameclient.ui.tooltip.ToolTip;
-   import com.company.ui.SimpleText;
-   import com.company.util.IntPoint;
-   import com.gskinner.motion.GTween;
-   import com.gskinner.motion.easing.Sine;
-   import flash.display.BitmapData;
-   import flash.geom.ColorTransform;
-   import flash.geom.Matrix;
-   import svera.untiered.core.StaticInjectorContext;
-   import svera.untiered.game.model.AddSpeechBalloonVO;
-   import svera.untiered.game.signals.AddSpeechBalloonSignal;
-   
-   public class Merchant extends SellableObject implements IInteractiveObject
+import com.company.assembleegameclient.constants.InventoryOwnerTypes;
+import com.company.assembleegameclient.map.Camera;
+import com.company.assembleegameclient.map.Map;
+import com.company.assembleegameclient.ui.tooltip.EquipmentToolTip;
+import com.company.assembleegameclient.ui.tooltip.ToolTip;
+import com.company.ui.SimpleText;
+import com.company.util.IntPoint;
+import com.gskinner.motion.GTween;
+import com.gskinner.motion.easing.Sine;
+
+import flash.display.BitmapData;
+import flash.geom.ColorTransform;
+import flash.geom.Matrix;
+
+import svera.untiered.core.StaticInjectorContext;
+import svera.untiered.game.model.AddSpeechBalloonVO;
+import svera.untiered.game.signals.AddSpeechBalloonSignal;
+
+public class Merchant extends SellableObject implements IInteractiveObject
    {
       
       private static const NONE_MESSAGE:int = 0;

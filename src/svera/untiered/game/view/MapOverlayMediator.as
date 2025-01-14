@@ -1,14 +1,16 @@
 package svera.untiered.game.view
 {
-   import com.company.assembleegameclient.map.mapoverlay.MapOverlay;
-   import com.company.assembleegameclient.map.mapoverlay.SpeechBalloon;
-   import svera.untiered.account.core.Account;
-   import svera.untiered.game.model.AddSpeechBalloonVO;
-   import svera.untiered.game.model.ChatFilter;
-   import svera.untiered.game.signals.AddSpeechBalloonSignal;
-   import robotlegs.bender.bundles.mvcs.Mediator;
-   
-   public class MapOverlayMediator extends Mediator
+import com.company.assembleegameclient.map.mapoverlay.MapOverlay;
+import com.company.assembleegameclient.map.mapoverlay.SpeechBalloon;
+
+import robotlegs.bender.bundles.mvcs.Mediator;
+
+import svera.untiered.account.core.Account;
+import svera.untiered.game.model.AddSpeechBalloonVO;
+import svera.untiered.game.model.ChatFilter;
+import svera.untiered.game.signals.AddSpeechBalloonSignal;
+
+public class MapOverlayMediator extends Mediator
    {
        
       

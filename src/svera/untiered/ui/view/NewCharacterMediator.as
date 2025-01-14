@@ -1,19 +1,22 @@
 package svera.untiered.ui.view
 {
-   import com.company.assembleegameclient.screens.CharacterSelectionAndNewsScreen;
-   import com.company.assembleegameclient.screens.NewCharacterScreen;
-   import flash.display.Sprite;
-   import svera.untiered.classes.model.ClassesModel;
-   import svera.untiered.classes.view.CharacterSkinView;
-   import svera.untiered.core.model.PlayerModel;
-   import svera.untiered.core.signals.HideTooltipsSignal;
-   import svera.untiered.core.signals.SetScreenSignal;
-   import svera.untiered.core.signals.ShowTooltipSignal;
-   import svera.untiered.core.signals.UpdateNewCharacterScreenSignal;
-   import svera.untiered.game.signals.PlayGameSignal;
-   import robotlegs.bender.bundles.mvcs.Mediator;
-   
-   public class NewCharacterMediator extends Mediator
+import com.company.assembleegameclient.screens.CharacterSelectionAndNewsScreen;
+import com.company.assembleegameclient.screens.NewCharacterScreen;
+
+import flash.display.Sprite;
+
+import robotlegs.bender.bundles.mvcs.Mediator;
+
+import svera.untiered.classes.model.ClassesModel;
+import svera.untiered.classes.view.CharacterSkinView;
+import svera.untiered.core.model.PlayerModel;
+import svera.untiered.core.signals.HideTooltipsSignal;
+import svera.untiered.core.signals.SetScreenSignal;
+import svera.untiered.core.signals.ShowTooltipSignal;
+import svera.untiered.core.signals.UpdateNewCharacterScreenSignal;
+import svera.untiered.game.signals.PlayGameSignal;
+
+public class NewCharacterMediator extends Mediator
    {
        
       

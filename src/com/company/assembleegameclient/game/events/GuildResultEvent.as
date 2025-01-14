@@ -1,8 +1,8 @@
 package com.company.assembleegameclient.game.events
 {
-   import flash.events.Event;
-   
-   public class GuildResultEvent extends Event
+import flash.events.Event;
+
+public class GuildResultEvent extends Event
    {
       
       public static const EVENT:String = "GUILDRESULTEVENT";

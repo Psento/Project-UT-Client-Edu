@@ -1,17 +1,18 @@
 package com.company.assembleegameclient.objects
 {
-   import com.company.assembleegameclient.objects.animation.AnimationsData;
-   import com.company.assembleegameclient.util.TextureRedrawer;
+import com.company.assembleegameclient.objects.animation.AnimationsData;
+import com.company.assembleegameclient.util.TextureRedrawer;
 import com.company.assembleegameclient.util.redrawers.GlowRedrawer;
 import com.company.util.AssetLibrary;
-   import com.company.util.ConversionUtil;
-   import flash.display.BitmapData;
-   import flash.utils.Dictionary;
-   import flash.utils.getDefinitionByName;
-   import svera.untiered.constants.GeneralConstants;
-   import svera.untiered.constants.ItemConstants;
-   import svera.untiered.messaging.impl.data.StatData;
-import svera.untiered.traits.TraitsGUI;
+import com.company.util.ConversionUtil;
+
+import flash.display.BitmapData;
+import flash.utils.Dictionary;
+import flash.utils.getDefinitionByName;
+
+import svera.untiered.constants.GeneralConstants;
+import svera.untiered.constants.ItemConstants;
+import svera.untiered.messaging.impl.data.StatData;
 
 public class ObjectLibrary
    {

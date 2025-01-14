@@ -1,16 +1,17 @@
 package com.company.assembleegameclient.ui
 {
-   import com.company.assembleegameclient.parameters.Parameters;
-   import com.company.assembleegameclient.util.FameUtil;
-   import flash.display.Sprite;
-   import flash.text.engine.ContentElement;
-   import flash.text.engine.ElementFormat;
-   import flash.text.engine.GraphicElement;
-   import flash.text.engine.GroupElement;
-   import flash.text.engine.TextBlock;
-   import flash.text.engine.TextElement;
-   
-   public class TextBoxLine
+import com.company.assembleegameclient.parameters.Parameters;
+import com.company.assembleegameclient.util.FameUtil;
+
+import flash.display.Sprite;
+import flash.text.engine.ContentElement;
+import flash.text.engine.ElementFormat;
+import flash.text.engine.GraphicElement;
+import flash.text.engine.GroupElement;
+import flash.text.engine.TextBlock;
+import flash.text.engine.TextElement;
+
+public class TextBoxLine
    {
       private static var ELEMENT_FORMATS:ElementFormats = new ElementFormats();
 

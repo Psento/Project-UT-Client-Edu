@@ -1,10 +1,10 @@
 package svera.untiered.messaging.impl.data
 {
-   import flash.geom.Point;
-   import flash.utils.IDataInput;
-   import flash.utils.IDataOutput;
-   
-   public class WorldPosData
+import flash.geom.Point;
+import flash.utils.IDataInput;
+import flash.utils.IDataOutput;
+
+public class WorldPosData
    {
        
       

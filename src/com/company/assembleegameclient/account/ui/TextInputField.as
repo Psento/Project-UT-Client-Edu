@@ -1,14 +1,15 @@
 package com.company.assembleegameclient.account.ui
 {
-   import com.company.ui.SimpleText;
-   import flash.display.CapsStyle;
-   import flash.display.JointStyle;
-   import flash.display.LineScaleMode;
-   import flash.display.Sprite;
-   import flash.events.Event;
-   import flash.filters.DropShadowFilter;
-   
-   public class TextInputField extends Sprite
+import com.company.ui.SimpleText;
+
+import flash.display.CapsStyle;
+import flash.display.JointStyle;
+import flash.display.LineScaleMode;
+import flash.display.Sprite;
+import flash.events.Event;
+import flash.filters.DropShadowFilter;
+
+public class TextInputField extends Sprite
    {
       
       public static const HEIGHT:int = 88;

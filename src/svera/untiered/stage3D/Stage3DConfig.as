@@ -1,22 +1,26 @@
 package svera.untiered.stage3D
 {
-   import com.company.assembleegameclient.engine3d.Model3D;
-   import com.company.assembleegameclient.parameters.Parameters;
-   import com.company.assembleegameclient.util.Stage3DProxy;
-   import com.company.assembleegameclient.util.StageProxy;
-   import flash.display3D.Context3DBlendFactor;
-   import flash.display3D.Context3DCompareMode;
-   import flash.events.ErrorEvent;
-   import flash.events.Event;
-   import svera.untiered.stage3D.graphic3D.Graphic3DHelper;
-   import svera.untiered.stage3D.graphic3D.IndexBufferFactory;
-   import svera.untiered.stage3D.graphic3D.TextureFactory;
-   import svera.untiered.stage3D.graphic3D.VertexBufferFactory;
-   import svera.untiered.stage3D.proxies.Context3DProxy;
-   import org.swiftsuspenders.Injector;
-   import robotlegs.bender.framework.api.IConfig;
-   
-   public class Stage3DConfig implements IConfig
+import com.company.assembleegameclient.engine3d.Model3D;
+import com.company.assembleegameclient.parameters.Parameters;
+import com.company.assembleegameclient.util.Stage3DProxy;
+import com.company.assembleegameclient.util.StageProxy;
+
+import flash.display3D.Context3DBlendFactor;
+import flash.display3D.Context3DCompareMode;
+import flash.events.ErrorEvent;
+import flash.events.Event;
+
+import org.swiftsuspenders.Injector;
+
+import robotlegs.bender.framework.api.IConfig;
+
+import svera.untiered.stage3D.graphic3D.Graphic3DHelper;
+import svera.untiered.stage3D.graphic3D.IndexBufferFactory;
+import svera.untiered.stage3D.graphic3D.TextureFactory;
+import svera.untiered.stage3D.graphic3D.VertexBufferFactory;
+import svera.untiered.stage3D.proxies.Context3DProxy;
+
+public class Stage3DConfig implements IConfig
    {
       
       public static const WIDTH:int = 600;

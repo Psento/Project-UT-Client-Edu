@@ -1,22 +1,22 @@
 package com.company.assembleegameclient.ui.options
 {
-   import com.company.ui.SimpleText;
-   import com.company.util.GraphicsUtil;
-   import flash.display.CapsStyle;
-   import flash.display.Graphics;
-   import flash.display.GraphicsPath;
-   import flash.display.GraphicsSolidFill;
-   import flash.display.GraphicsStroke;
-   import flash.display.IGraphicsData;
-   import flash.display.IGraphicsFill;
-   import flash.display.JointStyle;
-   import flash.display.LineScaleMode;
-   import flash.display.Sprite;
-   import flash.events.Event;
-   import flash.events.MouseEvent;
-   import flash.filters.DropShadowFilter;
-   
-   public class ChoiceBox extends Sprite
+import com.company.ui.SimpleText;
+import com.company.util.GraphicsUtil;
+
+import flash.display.CapsStyle;
+import flash.display.Graphics;
+import flash.display.GraphicsPath;
+import flash.display.GraphicsSolidFill;
+import flash.display.GraphicsStroke;
+import flash.display.IGraphicsData;
+import flash.display.JointStyle;
+import flash.display.LineScaleMode;
+import flash.display.Sprite;
+import flash.events.Event;
+import flash.events.MouseEvent;
+import flash.filters.DropShadowFilter;
+
+public class ChoiceBox extends Sprite
    {
       
       public static const WIDTH:int = 80;

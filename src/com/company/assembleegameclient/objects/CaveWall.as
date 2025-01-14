@@ -2,8 +2,10 @@ package com.company.assembleegameclient.objects
 {
 import com.company.assembleegameclient.engine3d.ObjectFace3D;
 import com.company.assembleegameclient.parameters.Parameters;
+
 import flash.display.BitmapData;
 import flash.geom.Vector3D;
+
 import svera.untiered.stage3D.GraphicsFillExtra;
 
 public class CaveWall extends ConnectedObject

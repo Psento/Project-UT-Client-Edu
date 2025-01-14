@@ -1,12 +1,12 @@
 package svera.untiered.stage3D.graphic3D
 {
-   import svera.untiered.stage3D.proxies.Context3DProxy;
-   import svera.untiered.stage3D.proxies.Program3DProxy;
-   import svera.untiered.stage3D.shaders.FragmentShader;
-   import svera.untiered.stage3D.shaders.FragmentShaderRepeat;
-   import svera.untiered.stage3D.shaders.VertextShader;
-   
-   public class Program3DFactory
+import svera.untiered.stage3D.proxies.Context3DProxy;
+import svera.untiered.stage3D.proxies.Program3DProxy;
+import svera.untiered.stage3D.shaders.FragmentShader;
+import svera.untiered.stage3D.shaders.FragmentShaderRepeat;
+import svera.untiered.stage3D.shaders.VertextShader;
+
+public class Program3DFactory
    {
       
       private static var instance:Program3DFactory;

@@ -1,10 +1,11 @@
 package com.company.assembleegameclient.game.events
 {
-   import com.company.assembleegameclient.objects.Player;
-   import flash.display.BitmapData;
-   import flash.events.Event;
-   
-   public class DeathEvent extends Event
+import com.company.assembleegameclient.objects.Player;
+
+import flash.display.BitmapData;
+import flash.events.Event;
+
+public class DeathEvent extends Event
    {
       
       public static const DEATH:String = "DEATH";

@@ -1,9 +1,10 @@
 package com.company.assembleegameclient.objects.particles
 {
-   import com.company.assembleegameclient.objects.GameObject;
-   import flash.geom.Point;
-   
-   public class RingEffect extends ParticleEffect
+import com.company.assembleegameclient.objects.GameObject;
+
+import flash.geom.Point;
+
+public class RingEffect extends ParticleEffect
    {
        
       

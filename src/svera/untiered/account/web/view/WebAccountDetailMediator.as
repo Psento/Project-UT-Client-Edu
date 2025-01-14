@@ -1,11 +1,12 @@
 package svera.untiered.account.web.view
 {
-   import svera.untiered.account.core.Account;
-   import svera.untiered.dialogs.control.CloseDialogsSignal;
-   import svera.untiered.dialogs.control.OpenDialogSignal;
-   import robotlegs.bender.bundles.mvcs.Mediator;
-   
-   public class WebAccountDetailMediator extends Mediator
+import robotlegs.bender.bundles.mvcs.Mediator;
+
+import svera.untiered.account.core.Account;
+import svera.untiered.dialogs.control.CloseDialogsSignal;
+import svera.untiered.dialogs.control.OpenDialogSignal;
+
+public class WebAccountDetailMediator extends Mediator
    {
        
       

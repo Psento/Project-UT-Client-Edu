@@ -1,13 +1,14 @@
 package com.company.assembleegameclient.sound
 {
-   import com.company.assembleegameclient.parameters.Parameters;
-   import flash.events.IOErrorEvent;
-   import flash.media.Sound;
-   import flash.media.SoundTransform;
-   import flash.net.URLRequest;
-   import flash.utils.Dictionary;
-   
-   public class SoundEffectLibrary
+import com.company.assembleegameclient.parameters.Parameters;
+
+import flash.events.IOErrorEvent;
+import flash.media.Sound;
+import flash.media.SoundTransform;
+import flash.net.URLRequest;
+import flash.utils.Dictionary;
+
+public class SoundEffectLibrary
    {
       private static const URL_PATTERN:String = "{URLBASE}/sfx/{NAME}.mp3";
       public static var nameMap_:Dictionary = new Dictionary();

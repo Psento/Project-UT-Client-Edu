@@ -1,9 +1,10 @@
 package com.company.assembleegameclient.objects.particles
 {
-   import flash.geom.Point;
-   import svera.untiered.messaging.impl.data.WorldPosData;
-   
-   public class StreamEffect extends ParticleEffect
+import flash.geom.Point;
+
+import svera.untiered.messaging.impl.data.WorldPosData;
+
+public class StreamEffect extends ParticleEffect
    {
        
       
@@ -40,6 +41,7 @@ package com.company.assembleegameclient.objects.particles
 }
 
 import com.company.assembleegameclient.objects.particles.Particle;
+
 import flash.geom.Point;
 import flash.geom.Vector3D;
 

@@ -1,8 +1,8 @@
 package svera.untiered.startup.control
 {
-   import svera.lib.tasks.TaskMonitor;
-   
-   public class StartupCommand
+import svera.lib.tasks.TaskMonitor;
+
+public class StartupCommand
    {
        
       

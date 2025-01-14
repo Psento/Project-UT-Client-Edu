@@ -1,11 +1,12 @@
 package svera.untiered.account.web
 {
-   import com.company.assembleegameclient.parameters.Parameters;
-   import flash.external.ExternalInterface;
-   import flash.net.SharedObject;
-   import svera.untiered.account.core.Account;
-   
-   public class WebAccount implements Account
+import com.company.assembleegameclient.parameters.Parameters;
+
+import flash.net.SharedObject;
+
+import svera.untiered.account.core.Account;
+
+public class WebAccount implements Account
    {
       private var username:String = "";
       private var password:String;

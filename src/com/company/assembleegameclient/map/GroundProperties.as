@@ -1,10 +1,11 @@
 package com.company.assembleegameclient.map
 {
-   import com.company.assembleegameclient.objects.TextureData;
-   import com.company.util.BitmapUtil;
-   import flash.display.BitmapData;
-   
-   public class GroundProperties
+import com.company.assembleegameclient.objects.TextureData;
+import com.company.util.BitmapUtil;
+
+import flash.display.BitmapData;
+
+public class GroundProperties
    {
        
       

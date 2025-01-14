@@ -1,9 +1,9 @@
 package svera.lib.signals
 {
-   import org.osflash.signals.ISlot;
-   import org.osflash.signals.Signal;
-   
-   public class DeferredQueueSignal extends Signal
+import org.osflash.signals.ISlot;
+import org.osflash.signals.Signal;
+
+public class DeferredQueueSignal extends Signal
    {
        
       

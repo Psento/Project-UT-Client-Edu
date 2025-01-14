@@ -1,21 +1,24 @@
 package svera.untiered.legends.view
 {
-   import com.company.assembleegameclient.screens.TitleMenuOption;
-   import com.company.assembleegameclient.ui.Scrollbar;
-   import com.company.untiered.graphics.ScreenGraphic;
-   import com.company.ui.SimpleText;
-   import flash.display.Graphics;
-   import flash.display.Shape;
-   import flash.display.Sprite;
-   import flash.events.Event;
-   import flash.events.MouseEvent;
-   import flash.filters.DropShadowFilter;
-   import svera.untiered.legends.model.Legend;
-   import svera.untiered.legends.model.Timespan;
-   import svera.untiered.ui.view.components.ScreenBase;
-   import org.osflash.signals.Signal;
-   
-   public class LegendsView extends Sprite
+import com.company.assembleegameclient.screens.TitleMenuOption;
+import com.company.assembleegameclient.ui.Scrollbar;
+import com.company.ui.SimpleText;
+import com.company.untiered.graphics.ScreenGraphic;
+
+import flash.display.Graphics;
+import flash.display.Shape;
+import flash.display.Sprite;
+import flash.events.Event;
+import flash.events.MouseEvent;
+import flash.filters.DropShadowFilter;
+
+import org.osflash.signals.Signal;
+
+import svera.untiered.legends.model.Legend;
+import svera.untiered.legends.model.Timespan;
+import svera.untiered.ui.view.components.ScreenBase;
+
+public class LegendsView extends Sprite
    {
        
       

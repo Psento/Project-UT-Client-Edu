@@ -1,12 +1,12 @@
 package svera.untiered.account.web.services
 {
-   import svera.lib.tasks.BaseTask;
-   import svera.untiered.account.core.Account;
-   import svera.untiered.account.core.services.ChangePasswordTask;
-   import svera.untiered.account.web.model.ChangePasswordData;
-   import svera.untiered.appengine.api.AppEngineClient;
-   
-   public class WebChangePasswordTask extends BaseTask implements ChangePasswordTask
+import svera.lib.tasks.BaseTask;
+import svera.untiered.account.core.Account;
+import svera.untiered.account.core.services.ChangePasswordTask;
+import svera.untiered.account.web.model.ChangePasswordData;
+import svera.untiered.appengine.api.AppEngineClient;
+
+public class WebChangePasswordTask extends BaseTask implements ChangePasswordTask
    {
        
       

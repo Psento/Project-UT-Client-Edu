@@ -1,13 +1,15 @@
 package com.company.assembleegameclient.screens
 {
-   import flash.display.Loader;
-   import flash.display.LoaderInfo;
-   import flash.display.MovieClip;
-   import flash.events.Event;
-   import mx.core.MovieClipAsset;
-   import org.osflash.signals.Signal;
-   
-   public class UnpackEmbed
+import flash.display.Loader;
+import flash.display.LoaderInfo;
+import flash.display.MovieClip;
+import flash.events.Event;
+
+import mx.core.MovieClipAsset;
+
+import org.osflash.signals.Signal;
+
+public class UnpackEmbed
    {
        
       

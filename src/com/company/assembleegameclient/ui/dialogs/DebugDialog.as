@@ -1,8 +1,8 @@
 package com.company.assembleegameclient.ui.dialogs
 {
-   import flash.events.Event;
-   
-   public class DebugDialog extends Dialog
+import flash.events.Event;
+
+public class DebugDialog extends Dialog
    {
        
       

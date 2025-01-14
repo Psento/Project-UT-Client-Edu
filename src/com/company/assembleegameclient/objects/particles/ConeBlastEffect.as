@@ -1,10 +1,12 @@
 package com.company.assembleegameclient.objects.particles
 {
-   import com.company.assembleegameclient.objects.GameObject;
-   import flash.geom.Point;
-   import svera.untiered.messaging.impl.data.WorldPosData;
-   
-   public class ConeBlastEffect extends ParticleEffect
+import com.company.assembleegameclient.objects.GameObject;
+
+import flash.geom.Point;
+
+import svera.untiered.messaging.impl.data.WorldPosData;
+
+public class ConeBlastEffect extends ParticleEffect
    {
        
       

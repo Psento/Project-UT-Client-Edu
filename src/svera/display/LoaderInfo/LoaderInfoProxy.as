@@ -1,9 +1,9 @@
 package svera.display.LoaderInfo
 {
-   import flash.display.LoaderInfo;
-   import flash.events.IEventDispatcher;
-   
-   public interface LoaderInfoProxy extends IEventDispatcher
+import flash.display.LoaderInfo;
+import flash.events.IEventDispatcher;
+
+public interface LoaderInfoProxy extends IEventDispatcher
    {
        
       

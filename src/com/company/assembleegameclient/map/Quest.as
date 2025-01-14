@@ -1,9 +1,10 @@
 package com.company.assembleegameclient.map
 {
-   import com.company.assembleegameclient.objects.GameObject;
-   import flash.utils.getTimer;
-   
-   public class Quest
+import com.company.assembleegameclient.objects.GameObject;
+
+import flash.utils.getTimer;
+
+public class Quest
    {
        
       

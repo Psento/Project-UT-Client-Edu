@@ -1,8 +1,8 @@
 package svera.untiered.core.signals
 {
-   import org.osflash.signals.Signal;
-   
-   public class LaunchGameSignal extends Signal
+import org.osflash.signals.Signal;
+
+public class LaunchGameSignal extends Signal
    {
        
       

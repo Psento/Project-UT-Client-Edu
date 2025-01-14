@@ -1,12 +1,10 @@
 package svera.untiered.ui.view
 {
-   import com.company.assembleegameclient.objects.Player;
-   import com.company.assembleegameclient.ui.StatusBar;
+import com.company.assembleegameclient.objects.Player;
+import com.company.assembleegameclient.ui.StatusBar;
 
 import flash.display.Shape;
 import flash.display.Sprite;
-   import flash.events.Event;
-import flash.text.TextFormatAlign;
 
 public class StatMetersView extends Sprite
    {

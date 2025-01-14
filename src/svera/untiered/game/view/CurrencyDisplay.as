@@ -1,19 +1,16 @@
 package svera.untiered.game.view
 {
-   import com.company.assembleegameclient.game.GameSprite;
-   import com.company.assembleegameclient.parameters.Parameters;
-   import com.company.assembleegameclient.util.FameUtil;
-   import com.company.assembleegameclient.util.TextureRedrawer;
-   import com.company.ui.SimpleText;
-   import com.company.util.AssetLibrary;
-   import flash.display.Bitmap;
-   import flash.display.BitmapData;
-   import flash.display.Sprite;
-   import flash.events.MouseEvent;
-   import flash.filters.DropShadowFilter;
-   import org.osflash.signals.Signal;
-   
-   public class CurrencyDisplay extends Sprite
+import com.company.assembleegameclient.game.GameSprite;
+import com.company.assembleegameclient.util.TextureRedrawer;
+import com.company.ui.SimpleText;
+import com.company.util.AssetLibrary;
+
+import flash.display.Bitmap;
+import flash.display.BitmapData;
+import flash.display.Sprite;
+import flash.filters.DropShadowFilter;
+
+public class CurrencyDisplay extends Sprite
    {
       
       private static const FONT_SIZE:int = 18;

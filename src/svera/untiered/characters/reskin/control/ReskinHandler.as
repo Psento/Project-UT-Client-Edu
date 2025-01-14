@@ -1,14 +1,15 @@
 package svera.untiered.characters.reskin.control
 {
-   import com.company.assembleegameclient.objects.Player;
-   import svera.untiered.assets.services.CharacterFactory;
-   import svera.untiered.classes.model.CharacterClass;
-   import svera.untiered.classes.model.CharacterSkin;
-   import svera.untiered.classes.model.ClassesModel;
-   import svera.untiered.game.model.GameModel;
-   import svera.untiered.messaging.impl.outgoing.Reskin;
-   
-   public class ReskinHandler
+import com.company.assembleegameclient.objects.Player;
+
+import svera.untiered.assets.services.CharacterFactory;
+import svera.untiered.classes.model.CharacterClass;
+import svera.untiered.classes.model.CharacterSkin;
+import svera.untiered.classes.model.ClassesModel;
+import svera.untiered.game.model.GameModel;
+import svera.untiered.messaging.impl.outgoing.Reskin;
+
+public class ReskinHandler
    {
        
       

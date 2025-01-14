@@ -1,14 +1,16 @@
 package svera.untiered.util.components
 {
-   import flash.display.DisplayObject;
-   import flash.display.Sprite;
-   import svera.lib.ui.api.List;
-   import svera.lib.ui.api.Size;
-   import svera.lib.ui.impl.LayoutList;
-   import svera.lib.ui.impl.VerticalLayout;
-   import org.osflash.signals.Signal;
-   
-   public class VerticalScrollingList extends Sprite implements List
+import flash.display.DisplayObject;
+import flash.display.Sprite;
+
+import org.osflash.signals.Signal;
+
+import svera.lib.ui.api.List;
+import svera.lib.ui.api.Size;
+import svera.lib.ui.impl.LayoutList;
+import svera.lib.ui.impl.VerticalLayout;
+
+public class VerticalScrollingList extends Sprite implements List
    {
       public static const SCROLLBAR_PADDING:int = 2;
       public static const SCROLLBAR_GUTTER:int = VerticalScrollbar.WIDTH + SCROLLBAR_PADDING;

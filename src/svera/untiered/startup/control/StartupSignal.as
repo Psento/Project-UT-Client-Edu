@@ -1,8 +1,8 @@
 package svera.untiered.startup.control
 {
-   import org.osflash.signals.Signal;
-   
-   public class StartupSignal extends Signal
+import org.osflash.signals.Signal;
+
+public class StartupSignal extends Signal
    {
        
       

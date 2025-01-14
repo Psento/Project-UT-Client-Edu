@@ -1,29 +1,29 @@
 package com.company.assembleegameclient.objects
 {
-   import com.company.assembleegameclient.engine3d.Point3D;
-   import com.company.assembleegameclient.map.Camera;
-   import com.company.assembleegameclient.map.Map;
-   import com.company.assembleegameclient.map.Square;
-   import com.company.assembleegameclient.objects.particles.HitEffect;
-   import com.company.assembleegameclient.objects.particles.SparkParticle;
-   import com.company.assembleegameclient.parameters.Parameters;
-   import com.company.assembleegameclient.util.BloodComposition;
-   import com.company.assembleegameclient.util.FreeList;
-   import com.company.assembleegameclient.util.RandomUtil;
-   import com.company.assembleegameclient.util.TextureRedrawer;
-   import com.company.util.GraphicsUtil;
-   import com.company.util.Trig;
-   import flash.display.BitmapData;
-   import flash.display.GradientType;
-   import flash.display.GraphicsGradientFill;
-   import flash.display.GraphicsPath;
-   import flash.display.IGraphicsData;
-   import flash.geom.Matrix;
-   import flash.geom.Point;
-   import flash.geom.Vector3D;
-   import flash.utils.Dictionary;
-   
-   public class Projectile extends BasicObject
+import com.company.assembleegameclient.engine3d.Point3D;
+import com.company.assembleegameclient.map.Camera;
+import com.company.assembleegameclient.map.Map;
+import com.company.assembleegameclient.map.Square;
+import com.company.assembleegameclient.objects.particles.HitEffect;
+import com.company.assembleegameclient.objects.particles.SparkParticle;
+import com.company.assembleegameclient.parameters.Parameters;
+import com.company.assembleegameclient.util.BloodComposition;
+import com.company.assembleegameclient.util.FreeList;
+import com.company.assembleegameclient.util.RandomUtil;
+import com.company.util.GraphicsUtil;
+import com.company.util.Trig;
+
+import flash.display.BitmapData;
+import flash.display.GradientType;
+import flash.display.GraphicsGradientFill;
+import flash.display.GraphicsPath;
+import flash.display.IGraphicsData;
+import flash.geom.Matrix;
+import flash.geom.Point;
+import flash.geom.Vector3D;
+import flash.utils.Dictionary;
+
+public class Projectile extends BasicObject
    {
       public static var nextFakeBulletId_:int = 0;
 

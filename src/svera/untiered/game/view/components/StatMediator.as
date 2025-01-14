@@ -1,9 +1,8 @@
 package svera.untiered.game.view.components
 {
-   import flash.events.MouseEvent;
-   import robotlegs.bender.bundles.mvcs.Mediator;
-   
-   public class StatMediator extends Mediator
+import robotlegs.bender.bundles.mvcs.Mediator;
+
+public class StatMediator extends Mediator
    {
        
       

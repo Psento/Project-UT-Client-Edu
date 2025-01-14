@@ -2,19 +2,17 @@ package com.company.assembleegameclient.screens.charrects
 {
 import com.company.assembleegameclient.parameters.Parameters;
 import com.company.ui.SimpleText;
-   import flash.display.Bitmap;
-   import flash.display.BitmapData;
-   import flash.display.Graphics;
-   import flash.display.Shape;
-   import flash.filters.DropShadowFilter;
 
-import svera.untiered.account.core.Account;
+import flash.display.Bitmap;
+import flash.display.BitmapData;
+import flash.display.Graphics;
+import flash.display.Shape;
+import flash.filters.DropShadowFilter;
 
 import svera.untiered.assets.services.IconFactory;
-import svera.untiered.assets.services.IconFactory;
-   import svera.untiered.core.model.PlayerModel;
-   
-   public class BuyCharacterRect extends CharacterRect
+import svera.untiered.core.model.PlayerModel;
+
+public class BuyCharacterRect extends CharacterRect
    {
       [Inject]
       public var model:PlayerModel;

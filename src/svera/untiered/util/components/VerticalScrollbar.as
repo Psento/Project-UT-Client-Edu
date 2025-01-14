@@ -1,10 +1,12 @@
 package svera.untiered.util.components
 {
-   import flash.display.Sprite;
-   import svera.lib.ui.api.Scrollbar;
-   import org.osflash.signals.Signal;
-   
-   public class VerticalScrollbar extends Sprite implements Scrollbar
+import flash.display.Sprite;
+
+import org.osflash.signals.Signal;
+
+import svera.lib.ui.api.Scrollbar;
+
+public class VerticalScrollbar extends Sprite implements Scrollbar
    {
       public static const WIDTH:int = 20;
       public static const BEVEL:int = 4;

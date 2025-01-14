@@ -1,22 +1,19 @@
 package svera.untiered.fame.view
 {
-   import com.company.assembleegameclient.objects.ObjectLibrary;
-   import com.company.assembleegameclient.objects.TextureData;
-   import com.company.assembleegameclient.util.AnimatedChar;
-   import com.company.assembleegameclient.util.MaskedImage;
-   import com.company.assembleegameclient.util.TextureRedrawer;
-   import flash.display.BitmapData;
-   import svera.untiered.assets.services.CharacterFactory;
-   import svera.untiered.core.signals.GotoPreviousScreenSignal;
-   import svera.untiered.core.signals.SetScreenSignal;
-   import svera.untiered.death.model.DeathModel;
-   import svera.untiered.fame.model.FameModel;
-   import svera.untiered.fame.service.RequestCharacterFameTask;
-   import svera.untiered.legends.view.LegendsView;
-   import svera.untiered.messaging.impl.incoming.Death;
-   import robotlegs.bender.bundles.mvcs.Mediator;
-   
-   public class FameMediator extends Mediator
+import flash.display.BitmapData;
+
+import robotlegs.bender.bundles.mvcs.Mediator;
+
+import svera.untiered.assets.services.CharacterFactory;
+import svera.untiered.core.signals.GotoPreviousScreenSignal;
+import svera.untiered.core.signals.SetScreenSignal;
+import svera.untiered.death.model.DeathModel;
+import svera.untiered.fame.model.FameModel;
+import svera.untiered.fame.service.RequestCharacterFameTask;
+import svera.untiered.legends.view.LegendsView;
+import svera.untiered.messaging.impl.incoming.Death;
+
+public class FameMediator extends Mediator
    {
        
       

@@ -1,13 +1,16 @@
 package svera.untiered.account.web.view
 {
-   import com.company.assembleegameclient.account.ui.Frame;
-   import com.company.assembleegameclient.account.ui.TextInputField;
-   import flash.events.MouseEvent;
-   import svera.untiered.account.web.model.ChangePasswordData;
-   import org.osflash.signals.Signal;
-   import org.osflash.signals.natives.NativeMappedSignal;
-   
-   public class WebChangePasswordDialog extends Frame
+import com.company.assembleegameclient.account.ui.Frame;
+import com.company.assembleegameclient.account.ui.TextInputField;
+
+import flash.events.MouseEvent;
+
+import org.osflash.signals.Signal;
+import org.osflash.signals.natives.NativeMappedSignal;
+
+import svera.untiered.account.web.model.ChangePasswordData;
+
+public class WebChangePasswordDialog extends Frame
    {
        
       

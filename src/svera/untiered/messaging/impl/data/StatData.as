@@ -1,9 +1,9 @@
 package svera.untiered.messaging.impl.data
 {
-   import flash.utils.IDataInput;
-   import flash.utils.IDataOutput;
-   
-   public class StatData
+import flash.utils.IDataInput;
+import flash.utils.IDataOutput;
+
+public class StatData
    {
       public static const SIZE_STAT:int = 0;
       public static const MAX_HP_STAT:int = 1;

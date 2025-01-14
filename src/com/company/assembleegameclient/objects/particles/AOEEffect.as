@@ -1,8 +1,8 @@
 package com.company.assembleegameclient.objects.particles
 {
-   import flash.geom.Point;
-   
-   public class AOEEffect extends ParticleEffect
+import flash.geom.Point;
+
+public class AOEEffect extends ParticleEffect
    {
        
       

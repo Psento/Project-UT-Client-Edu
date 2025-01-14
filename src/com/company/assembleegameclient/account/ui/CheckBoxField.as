@@ -1,15 +1,16 @@
 package com.company.assembleegameclient.account.ui
 {
-   import com.company.ui.SimpleText;
-   import flash.display.CapsStyle;
-   import flash.display.Graphics;
-   import flash.display.JointStyle;
-   import flash.display.LineScaleMode;
-   import flash.display.Sprite;
-   import flash.events.MouseEvent;
-   import flash.filters.DropShadowFilter;
-   
-   public class CheckBoxField extends Sprite
+import com.company.ui.SimpleText;
+
+import flash.display.CapsStyle;
+import flash.display.Graphics;
+import flash.display.JointStyle;
+import flash.display.LineScaleMode;
+import flash.display.Sprite;
+import flash.events.MouseEvent;
+import flash.filters.DropShadowFilter;
+
+public class CheckBoxField extends Sprite
    {
       
       private static const BOX_SIZE:int = 20;

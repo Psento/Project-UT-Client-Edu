@@ -1,8 +1,8 @@
 package svera.untiered.util.graphics
 {
-   import flash.display.Graphics;
-   
-   public class GraphicsHelper
+import flash.display.Graphics;
+
+public class GraphicsHelper
    {
        
       

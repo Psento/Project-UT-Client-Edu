@@ -1,16 +1,17 @@
 package com.company.assembleegameclient.ui.panels
 {
-   import com.company.assembleegameclient.game.GameSprite;
-   import com.company.assembleegameclient.ui.TextButton;
-   import com.company.ui.SimpleText;
-   import flash.events.Event;
-   import flash.events.MouseEvent;
-   import flash.events.TimerEvent;
-   import flash.filters.DropShadowFilter;
-   import flash.text.TextFieldAutoSize;
-   import flash.utils.Timer;
-   
-   public class GuildInvitePanel extends Panel
+import com.company.assembleegameclient.game.GameSprite;
+import com.company.assembleegameclient.ui.TextButton;
+import com.company.ui.SimpleText;
+
+import flash.events.Event;
+import flash.events.MouseEvent;
+import flash.events.TimerEvent;
+import flash.filters.DropShadowFilter;
+import flash.text.TextFieldAutoSize;
+import flash.utils.Timer;
+
+public class GuildInvitePanel extends Panel
    {
        
       

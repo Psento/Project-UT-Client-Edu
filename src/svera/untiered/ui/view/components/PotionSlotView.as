@@ -1,29 +1,22 @@
 package svera.untiered.ui.view.components
 {
-   import com.company.assembleegameclient.objects.ObjectLibrary;
-   import com.company.assembleegameclient.util.TextureRedrawer;
-   import com.company.ui.SimpleText;
-   import com.company.util.AssetLibrary;
-   import com.company.util.GraphicsUtil;
-   import com.company.util.MoreColorUtil;
-   import flash.display.Bitmap;
-   import flash.display.BitmapData;
-   import flash.display.DisplayObject;
-   import flash.display.GraphicsPath;
-   import flash.display.GraphicsSolidFill;
-   import flash.display.IGraphicsData;
-   import flash.display.Sprite;
-   import flash.events.Event;
-   import flash.events.MouseEvent;
-   import flash.events.TimerEvent;
-   import flash.filters.ColorMatrixFilter;
-   import flash.filters.DropShadowFilter;
-   import flash.geom.Point;
-   import flash.utils.Timer;
-   import org.osflash.signals.Signal;
-   import org.osflash.signals.natives.NativeSignal;
-   
-   public class PotionSlotView extends Sprite
+import com.company.ui.SimpleText;
+import com.company.util.MoreColorUtil;
+
+import flash.display.Bitmap;
+import flash.display.GraphicsSolidFill;
+import flash.display.Sprite;
+import flash.events.Event;
+import flash.events.MouseEvent;
+import flash.events.TimerEvent;
+import flash.filters.ColorMatrixFilter;
+import flash.filters.DropShadowFilter;
+import flash.utils.Timer;
+
+import org.osflash.signals.Signal;
+import org.osflash.signals.natives.NativeSignal;
+
+public class PotionSlotView extends Sprite
    {
       private static var BUTTON_HEIGHT:int = 24;
       private static const DOUBLE_CLICK_PAUSE:uint = 250;

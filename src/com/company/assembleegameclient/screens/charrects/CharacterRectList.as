@@ -1,25 +1,27 @@
 package com.company.assembleegameclient.screens.charrects
 {
-   import com.company.assembleegameclient.appengine.CharacterStats;
-   import com.company.assembleegameclient.appengine.SavedCharacter;
+import com.company.assembleegameclient.appengine.CharacterStats;
+import com.company.assembleegameclient.appengine.SavedCharacter;
 import com.company.assembleegameclient.parameters.Parameters;
 
 import flash.display.Bitmap;
-   import flash.display.BitmapData;
-   import flash.display.DisplayObject;
-   import flash.display.Sprite;
-   import flash.events.Event;
-   import flash.events.MouseEvent;
-   import svera.untiered.assets.services.CharacterFactory;
-   import svera.untiered.classes.model.CharacterClass;
-   import svera.untiered.classes.model.CharacterSkin;
-   import svera.untiered.classes.model.ClassesModel;
-   import svera.untiered.core.StaticInjectorContext;
-   import svera.untiered.core.model.PlayerModel;
-   import org.osflash.signals.Signal;
-   import org.swiftsuspenders.Injector;
-   
-   public class CharacterRectList extends Sprite
+import flash.display.BitmapData;
+import flash.display.DisplayObject;
+import flash.display.Sprite;
+import flash.events.Event;
+import flash.events.MouseEvent;
+
+import org.osflash.signals.Signal;
+import org.swiftsuspenders.Injector;
+
+import svera.untiered.assets.services.CharacterFactory;
+import svera.untiered.classes.model.CharacterClass;
+import svera.untiered.classes.model.CharacterSkin;
+import svera.untiered.classes.model.ClassesModel;
+import svera.untiered.core.StaticInjectorContext;
+import svera.untiered.core.model.PlayerModel;
+
+public class CharacterRectList extends Sprite
    {
       private var classes:ClassesModel;
       private var model:PlayerModel;

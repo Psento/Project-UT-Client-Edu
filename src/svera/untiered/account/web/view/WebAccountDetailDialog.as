@@ -1,14 +1,16 @@
 package svera.untiered.account.web.view
 {
-   import com.company.assembleegameclient.account.ui.Frame;
-   import com.company.assembleegameclient.ui.ClickableText;
-   import com.company.ui.SimpleText;
-   import flash.events.MouseEvent;
-   import flash.filters.DropShadowFilter;
-   import org.osflash.signals.Signal;
-   import org.osflash.signals.natives.NativeMappedSignal;
-   
-   public class WebAccountDetailDialog extends Frame
+import com.company.assembleegameclient.account.ui.Frame;
+import com.company.assembleegameclient.ui.ClickableText;
+import com.company.ui.SimpleText;
+
+import flash.events.MouseEvent;
+import flash.filters.DropShadowFilter;
+
+import org.osflash.signals.Signal;
+import org.osflash.signals.natives.NativeMappedSignal;
+
+public class WebAccountDetailDialog extends Frame
    {
       public var cancel:Signal;
       

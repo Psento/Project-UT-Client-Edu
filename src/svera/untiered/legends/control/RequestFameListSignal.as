@@ -1,9 +1,10 @@
 package svera.untiered.legends.control
 {
-   import svera.untiered.legends.model.Timespan;
-   import org.osflash.signals.Signal;
-   
-   public class RequestFameListSignal extends Signal
+import org.osflash.signals.Signal;
+
+import svera.untiered.legends.model.Timespan;
+
+public class RequestFameListSignal extends Signal
    {
        
       

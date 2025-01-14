@@ -1,8 +1,8 @@
 package svera.untiered.account.core.signals
 {
-   import org.osflash.signals.Signal;
-   
-   public class OpenQuitDialogSignal extends Signal
+import org.osflash.signals.Signal;
+
+public class OpenQuitDialogSignal extends Signal
    {
        
       

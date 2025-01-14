@@ -1,8 +1,8 @@
 package svera.lib.resizing.view
 {
-   import flash.geom.Rectangle;
-   
-   public interface Resizable
+import flash.geom.Rectangle;
+
+public interface Resizable
    {
        
       

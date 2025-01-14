@@ -1,15 +1,17 @@
 package svera.untiered.account.core.view
 {
-   import com.company.assembleegameclient.account.ui.CheckBoxField;
-   import com.company.assembleegameclient.account.ui.Frame;
-   import com.company.assembleegameclient.account.ui.TextInputField;
-   import com.company.assembleegameclient.parameters.Parameters;
-   import com.company.util.EmailValidator;
-   import flash.events.MouseEvent;
-   import svera.untiered.account.web.model.AccountData;
-   import org.osflash.signals.Signal;
-   
-   public class RegisterWebAccountDialog extends Frame
+import com.company.assembleegameclient.account.ui.CheckBoxField;
+import com.company.assembleegameclient.account.ui.Frame;
+import com.company.assembleegameclient.account.ui.TextInputField;
+import com.company.assembleegameclient.parameters.Parameters;
+
+import flash.events.MouseEvent;
+
+import org.osflash.signals.Signal;
+
+import svera.untiered.account.web.model.AccountData;
+
+public class RegisterWebAccountDialog extends Frame
    {
        
       

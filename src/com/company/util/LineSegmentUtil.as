@@ -1,8 +1,8 @@
 package com.company.util
 {
-   import flash.geom.Point;
-   
-   public class LineSegmentUtil
+import flash.geom.Point;
+
+public class LineSegmentUtil
    {
        
       

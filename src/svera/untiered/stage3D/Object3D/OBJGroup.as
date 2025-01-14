@@ -1,8 +1,8 @@
 package svera.untiered.stage3D.Object3D
 {
-   import flash.display3D.IndexBuffer3D;
-   
-   public class OBJGroup
+import flash.display3D.IndexBuffer3D;
+
+public class OBJGroup
    {
        
       

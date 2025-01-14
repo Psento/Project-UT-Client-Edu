@@ -1,12 +1,14 @@
 package svera.untiered.core.view
 {
-   import flash.display.Sprite;
-   import svera.untiered.core.model.ScreenModel;
-   import svera.untiered.core.signals.GotoPreviousScreenSignal;
-   import svera.untiered.core.signals.SetScreenSignal;
-   import robotlegs.bender.bundles.mvcs.Mediator;
-   
-   public class ScreensMediator extends Mediator
+import flash.display.Sprite;
+
+import robotlegs.bender.bundles.mvcs.Mediator;
+
+import svera.untiered.core.model.ScreenModel;
+import svera.untiered.core.signals.GotoPreviousScreenSignal;
+import svera.untiered.core.signals.SetScreenSignal;
+
+public class ScreensMediator extends Mediator
    {
        
       

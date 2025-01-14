@@ -1,16 +1,18 @@
 package svera.untiered.ui.view
 {
-   import com.company.assembleegameclient.screens.AccountScreen;
-   import com.company.assembleegameclient.ui.tooltip.ToolTip;
-   import svera.untiered.account.core.Account;
-   import svera.untiered.account.core.view.AccountInfoView;
-   import svera.untiered.account.web.view.WebAccountInfoView;
-   import svera.untiered.core.model.PlayerModel;
-   import svera.untiered.core.signals.HideTooltipsSignal;
-   import svera.untiered.core.signals.ShowTooltipSignal;
-   import robotlegs.bender.bundles.mvcs.Mediator;
-   
-   public class AccountScreenMediator extends Mediator
+import com.company.assembleegameclient.screens.AccountScreen;
+import com.company.assembleegameclient.ui.tooltip.ToolTip;
+
+import robotlegs.bender.bundles.mvcs.Mediator;
+
+import svera.untiered.account.core.Account;
+import svera.untiered.account.core.view.AccountInfoView;
+import svera.untiered.account.web.view.WebAccountInfoView;
+import svera.untiered.core.model.PlayerModel;
+import svera.untiered.core.signals.HideTooltipsSignal;
+import svera.untiered.core.signals.ShowTooltipSignal;
+
+public class AccountScreenMediator extends Mediator
    {
        
       

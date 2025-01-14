@@ -3,6 +3,7 @@ package com.company.assembleegameclient.util
 import flash.display.Stage3D;
 import flash.events.Event;
 import flash.events.IEventDispatcher;
+
 import svera.untiered.stage3D.proxies.Context3DProxy;
 
 public class Stage3DProxy implements IEventDispatcher

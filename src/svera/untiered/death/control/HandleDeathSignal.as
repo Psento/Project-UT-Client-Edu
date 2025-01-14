@@ -1,9 +1,10 @@
 package svera.untiered.death.control
 {
-   import svera.untiered.messaging.impl.incoming.Death;
-   import org.osflash.signals.Signal;
-   
-   public class HandleDeathSignal extends Signal
+import org.osflash.signals.Signal;
+
+import svera.untiered.messaging.impl.incoming.Death;
+
+public class HandleDeathSignal extends Signal
    {
        
       

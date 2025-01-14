@@ -1,13 +1,14 @@
 package com.company.assembleegameclient.engine3d
 {
-   import com.company.assembleegameclient.map.Camera;
-   import flash.display.BitmapData;
-   import flash.display.IGraphicsData;
-   import flash.geom.Matrix3D;
-   import flash.geom.Utils3D;
-   import flash.geom.Vector3D;
-   
-   public class Object3D
+import com.company.assembleegameclient.map.Camera;
+
+import flash.display.BitmapData;
+import flash.display.IGraphicsData;
+import flash.geom.Matrix3D;
+import flash.geom.Utils3D;
+import flash.geom.Vector3D;
+
+public class Object3D
    {
        
       

@@ -1,19 +1,20 @@
 package com.company.assembleegameclient.ui.guild
 {
-   import com.company.assembleegameclient.ui.dialogs.Dialog;
-   import com.company.assembleegameclient.util.GuildUtil;
-   import com.company.untiered.graphics.DeleteXGraphic;
-   import com.company.ui.SimpleText;
-   import com.company.util.MoreColorUtil;
-   import flash.display.Bitmap;
-   import flash.display.Graphics;
-   import flash.display.Sprite;
-   import flash.events.Event;
-   import flash.events.MouseEvent;
-   import flash.filters.DropShadowFilter;
-   import flash.geom.ColorTransform;
+import com.company.assembleegameclient.ui.dialogs.Dialog;
+import com.company.assembleegameclient.util.GuildUtil;
+import com.company.ui.SimpleText;
+import com.company.untiered.graphics.DeleteXGraphic;
+import com.company.util.MoreColorUtil;
 
-   public class MemberListLine extends Sprite
+import flash.display.Bitmap;
+import flash.display.Graphics;
+import flash.display.Sprite;
+import flash.events.Event;
+import flash.events.MouseEvent;
+import flash.filters.DropShadowFilter;
+import flash.geom.ColorTransform;
+
+public class MemberListLine extends Sprite
    {
       
       public static const WIDTH:int = 756;

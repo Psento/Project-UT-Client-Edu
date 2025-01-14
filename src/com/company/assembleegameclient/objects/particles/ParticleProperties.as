@@ -1,9 +1,9 @@
 package com.company.assembleegameclient.objects.particles
 {
-   import com.company.assembleegameclient.objects.TextureData;
-   import com.company.assembleegameclient.objects.animation.AnimationsData;
-   
-   public class ParticleProperties
+import com.company.assembleegameclient.objects.TextureData;
+import com.company.assembleegameclient.objects.animation.AnimationsData;
+
+public class ParticleProperties
    {
        
       

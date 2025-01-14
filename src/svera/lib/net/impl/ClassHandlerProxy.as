@@ -1,9 +1,10 @@
 package svera.lib.net.impl
 {
-   import svera.lib.net.api.MessageHandlerProxy;
-   import org.swiftsuspenders.Injector;
-   
-   public class ClassHandlerProxy implements MessageHandlerProxy
+import org.swiftsuspenders.Injector;
+
+import svera.lib.net.api.MessageHandlerProxy;
+
+public class ClassHandlerProxy implements MessageHandlerProxy
    {
        
       

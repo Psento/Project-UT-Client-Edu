@@ -1,15 +1,13 @@
 package svera.untiered.classes.view
 {
-import com.company.assembleegameclient.appengine.SavedCharacter;
-
 import flash.display.DisplayObject;
-   import svera.untiered.classes.model.CharacterClass;
-   import svera.untiered.classes.model.ClassesModel;
-import svera.untiered.core.model.PlayerModel;
 
 import robotlegs.bender.bundles.mvcs.Mediator;
-   
-   public class CharacterSkinListMediator extends Mediator
+
+import svera.untiered.classes.model.CharacterClass;
+import svera.untiered.classes.model.ClassesModel;
+
+public class CharacterSkinListMediator extends Mediator
    {
       [Inject]
       public var view:CharacterSkinListView;

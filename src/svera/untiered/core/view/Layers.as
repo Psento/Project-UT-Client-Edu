@@ -1,15 +1,13 @@
 package svera.untiered.core.view
 {
-   import flash.display.DisplayObject;
-   import flash.display.DisplayObjectContainer;
-   import flash.display.Sprite;
-   import svera.untiered.dialogs.view.DialogsView;
-   import svera.untiered.tooltips.view.TooltipsView;
-   
-   public class Layers extends Sprite
+import flash.display.DisplayObjectContainer;
+import flash.display.Sprite;
+
+import svera.untiered.dialogs.view.DialogsView;
+import svera.untiered.tooltips.view.TooltipsView;
+
+public class Layers extends Sprite
    {
-       
-      
       private var menu:ScreensView;
       
       public var overlay:DisplayObjectContainer;
@@ -22,8 +20,7 @@ package svera.untiered.core.view
       
       public var api:DisplayObjectContainer;
       
-      private var console:DisplayObject;
-      
+
       public function Layers()
       {
          super();

@@ -1,9 +1,7 @@
 package svera.untiered.Particles {
-import svera.lib.util.GIF;
-
-import mx.core.*;
-
 import mx.core.BitmapAsset;
+
+import svera.lib.util.GIF;
 
 public class Recallingbase extends GIF {
     [Embed(source="Recallingbase_0.png")]

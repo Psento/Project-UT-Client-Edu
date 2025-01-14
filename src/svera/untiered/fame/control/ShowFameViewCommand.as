@@ -1,11 +1,11 @@
 package svera.untiered.fame.control
 {
-   import svera.untiered.core.signals.SetScreenSignal;
-   import svera.untiered.fame.model.FameModel;
-   import svera.untiered.fame.model.FameVO;
-   import svera.untiered.fame.view.FameView;
-   
-   public class ShowFameViewCommand
+import svera.untiered.core.signals.SetScreenSignal;
+import svera.untiered.fame.model.FameModel;
+import svera.untiered.fame.model.FameVO;
+import svera.untiered.fame.view.FameView;
+
+public class ShowFameViewCommand
    {
        
       

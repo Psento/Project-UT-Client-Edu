@@ -1,9 +1,10 @@
 package svera.lib.tasks
 {
-   import flash.errors.IllegalOperationError;
-   import org.osflash.signals.Signal;
-   
-   public class BaseTask implements Task
+import flash.errors.IllegalOperationError;
+
+import org.osflash.signals.Signal;
+
+public class BaseTask implements Task
    {
        
       

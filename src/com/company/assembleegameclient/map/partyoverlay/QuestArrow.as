@@ -1,17 +1,18 @@
 package com.company.assembleegameclient.map.partyoverlay
 {
-   import com.company.assembleegameclient.map.Camera;
-   import com.company.assembleegameclient.map.Map;
-   import com.company.assembleegameclient.map.Quest;
-   import com.company.assembleegameclient.objects.GameObject;
-   import com.company.assembleegameclient.parameters.Parameters;
-   import com.company.assembleegameclient.ui.tooltip.PortraitToolTip;
-   import com.company.assembleegameclient.ui.tooltip.QuestToolTip;
-   import com.company.assembleegameclient.ui.tooltip.ToolTip;
-   import flash.events.MouseEvent;
-   import flash.utils.getTimer;
-   
-   public class QuestArrow extends GameObjectArrow
+import com.company.assembleegameclient.map.Camera;
+import com.company.assembleegameclient.map.Map;
+import com.company.assembleegameclient.map.Quest;
+import com.company.assembleegameclient.objects.GameObject;
+import com.company.assembleegameclient.parameters.Parameters;
+import com.company.assembleegameclient.ui.tooltip.PortraitToolTip;
+import com.company.assembleegameclient.ui.tooltip.QuestToolTip;
+import com.company.assembleegameclient.ui.tooltip.ToolTip;
+
+import flash.events.MouseEvent;
+import flash.utils.getTimer;
+
+public class QuestArrow extends GameObjectArrow
    {
        
       

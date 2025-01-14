@@ -1,9 +1,10 @@
 package svera.untiered.account.web.view
 {
-   import com.company.ui.SimpleText;
-   import flash.filters.DropShadowFilter;
-   
-   public class LabeledField extends FormField
+import com.company.ui.SimpleText;
+
+import flash.filters.DropShadowFilter;
+
+public class LabeledField extends FormField
    {
        
       

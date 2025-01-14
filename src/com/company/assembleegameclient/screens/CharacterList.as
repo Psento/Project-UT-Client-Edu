@@ -1,12 +1,14 @@
 package com.company.assembleegameclient.screens
 {
-   import com.company.assembleegameclient.screens.charrects.CharacterRectList;
-   import flash.display.Graphics;
-   import flash.display.Shape;
-   import flash.display.Sprite;
-   import svera.untiered.core.model.PlayerModel;
-   
-   public class CharacterList extends Sprite
+import com.company.assembleegameclient.screens.charrects.CharacterRectList;
+
+import flash.display.Graphics;
+import flash.display.Shape;
+import flash.display.Sprite;
+
+import svera.untiered.core.model.PlayerModel;
+
+public class CharacterList extends Sprite
    {
       
       public static const WIDTH:int = 760;

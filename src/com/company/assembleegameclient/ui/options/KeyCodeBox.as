@@ -1,16 +1,17 @@
 package com.company.assembleegameclient.ui.options
 {
-   import com.company.ui.SimpleText;
-   import com.company.util.KeyCodes;
-   import flash.display.Graphics;
-   import flash.display.Sprite;
-   import flash.events.Event;
-   import flash.events.KeyboardEvent;
-   import flash.events.MouseEvent;
-   import flash.filters.DropShadowFilter;
-   import flash.utils.getTimer;
-   
-   public class KeyCodeBox extends Sprite
+import com.company.ui.SimpleText;
+import com.company.util.KeyCodes;
+
+import flash.display.Graphics;
+import flash.display.Sprite;
+import flash.events.Event;
+import flash.events.KeyboardEvent;
+import flash.events.MouseEvent;
+import flash.filters.DropShadowFilter;
+import flash.utils.getTimer;
+
+public class KeyCodeBox extends Sprite
    {
       
       public static const WIDTH:int = 80;

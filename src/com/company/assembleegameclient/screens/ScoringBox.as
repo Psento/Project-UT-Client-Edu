@@ -1,18 +1,19 @@
 package com.company.assembleegameclient.screens
 {
-   import com.company.assembleegameclient.ui.Scrollbar;
-   import com.company.assembleegameclient.util.FameUtil;
-   import com.company.util.BitmapUtil;
-   import flash.display.Bitmap;
-   import flash.display.BitmapData;
-   import flash.display.DisplayObject;
-   import flash.display.Shape;
-   import flash.display.Sprite;
-   import flash.events.Event;
-   import flash.geom.Rectangle;
-   import flash.utils.getTimer;
-   
-   public class ScoringBox extends Sprite
+import com.company.assembleegameclient.ui.Scrollbar;
+import com.company.assembleegameclient.util.FameUtil;
+import com.company.util.BitmapUtil;
+
+import flash.display.Bitmap;
+import flash.display.BitmapData;
+import flash.display.DisplayObject;
+import flash.display.Shape;
+import flash.display.Sprite;
+import flash.events.Event;
+import flash.geom.Rectangle;
+import flash.utils.getTimer;
+
+public class ScoringBox extends Sprite
    {
        
       

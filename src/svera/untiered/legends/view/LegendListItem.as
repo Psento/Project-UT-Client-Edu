@@ -1,22 +1,26 @@
 package svera.untiered.legends.view
 {
-   import com.company.assembleegameclient.ui.Slot;
-   import com.company.assembleegameclient.ui.panels.itemgrids.EquippedGrid;
-   import com.company.assembleegameclient.ui.panels.itemgrids.itemtiles.InteractiveItemTile;
-   import com.company.assembleegameclient.util.TextureRedrawer;
-   import com.company.ui.SimpleText;
-   import com.company.util.AssetLibrary;
-   import com.company.util.IIterator;
-   import flash.display.Bitmap;
-   import flash.display.BitmapData;
-   import flash.display.Sprite;
-   import flash.events.MouseEvent;
-   import flash.filters.DropShadowFilter;
-   import svera.untiered.legends.model.Legend;
-   import org.osflash.signals.Signal;
-   import robotlegs.bender.framework.api.ILogger;
-   
-   public class LegendListItem extends Sprite
+import com.company.assembleegameclient.ui.Slot;
+import com.company.assembleegameclient.ui.panels.itemgrids.EquippedGrid;
+import com.company.assembleegameclient.ui.panels.itemgrids.itemtiles.InteractiveItemTile;
+import com.company.assembleegameclient.util.TextureRedrawer;
+import com.company.ui.SimpleText;
+import com.company.util.AssetLibrary;
+import com.company.util.IIterator;
+
+import flash.display.Bitmap;
+import flash.display.BitmapData;
+import flash.display.Sprite;
+import flash.events.MouseEvent;
+import flash.filters.DropShadowFilter;
+
+import org.osflash.signals.Signal;
+
+import robotlegs.bender.framework.api.ILogger;
+
+import svera.untiered.legends.model.Legend;
+
+public class LegendListItem extends Sprite
    {
       
       public static const WIDTH:int = 756;

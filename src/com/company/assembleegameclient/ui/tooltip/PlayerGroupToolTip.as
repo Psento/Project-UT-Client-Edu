@@ -1,11 +1,12 @@
 package com.company.assembleegameclient.ui.tooltip
 {
-   import com.company.assembleegameclient.objects.Player;
-   import com.company.assembleegameclient.ui.GameObjectListItem;
-   import com.company.ui.SimpleText;
-   import flash.filters.DropShadowFilter;
-   
-   public class PlayerGroupToolTip extends ToolTip
+import com.company.assembleegameclient.objects.Player;
+import com.company.assembleegameclient.ui.GameObjectListItem;
+import com.company.ui.SimpleText;
+
+import flash.filters.DropShadowFilter;
+
+public class PlayerGroupToolTip extends ToolTip
    {
        
       

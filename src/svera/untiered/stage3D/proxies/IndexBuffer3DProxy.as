@@ -1,8 +1,8 @@
 package svera.untiered.stage3D.proxies
 {
-   import flash.display3D.IndexBuffer3D;
-   
-   public class IndexBuffer3DProxy
+import flash.display3D.IndexBuffer3D;
+
+public class IndexBuffer3DProxy
    {
        
       

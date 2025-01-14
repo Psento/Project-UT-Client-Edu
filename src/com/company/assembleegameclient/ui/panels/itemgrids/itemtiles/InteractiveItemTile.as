@@ -1,14 +1,15 @@
 package com.company.assembleegameclient.ui.panels.itemgrids.itemtiles
 {
-   import com.company.assembleegameclient.ui.panels.itemgrids.ItemGrid;
-   import flash.display.DisplayObject;
-   import flash.events.Event;
-   import flash.events.MouseEvent;
-   import flash.events.TimerEvent;
-   import flash.geom.Point;
-   import flash.utils.Timer;
-   
-   public class InteractiveItemTile extends ItemTile
+import com.company.assembleegameclient.ui.panels.itemgrids.ItemGrid;
+
+import flash.display.DisplayObject;
+import flash.events.Event;
+import flash.events.MouseEvent;
+import flash.events.TimerEvent;
+import flash.geom.Point;
+import flash.utils.Timer;
+
+public class InteractiveItemTile extends ItemTile
    {
       private static const DOUBLE_CLICK_PAUSE:uint = 250;
       private static const DRAG_DIST:int = 3;

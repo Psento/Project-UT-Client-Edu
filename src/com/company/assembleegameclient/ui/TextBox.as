@@ -1,28 +1,30 @@
 package com.company.assembleegameclient.ui
 {
-   import com.company.assembleegameclient.game.GameSprite;
-   import com.company.assembleegameclient.parameters.Parameters;
-   import com.company.assembleegameclient.util.TextureRedrawer;
-   import com.company.util.AssetLibrary;
-   import flash.display.Bitmap;
-   import flash.display.BitmapData;
-   import flash.display.Sprite;
-   import flash.events.Event;
-   import flash.events.KeyboardEvent;
-   import flash.events.MouseEvent;
-   import flash.events.TimerEvent;
-   import flash.filters.GlowFilter;
-   import flash.text.TextField;
-   import flash.text.TextFieldType;
-   import flash.text.TextFormat;
-   import flash.text.engine.TextBlock;
-   import flash.text.engine.TextLine;
-   import flash.ui.Keyboard;
-   import flash.utils.Timer;
-   import flash.utils.getTimer;
-   import org.osflash.signals.natives.NativeSignal;
-   
-   public class TextBox extends Sprite
+import com.company.assembleegameclient.game.GameSprite;
+import com.company.assembleegameclient.parameters.Parameters;
+import com.company.assembleegameclient.util.TextureRedrawer;
+import com.company.util.AssetLibrary;
+
+import flash.display.Bitmap;
+import flash.display.BitmapData;
+import flash.display.Sprite;
+import flash.events.Event;
+import flash.events.KeyboardEvent;
+import flash.events.MouseEvent;
+import flash.events.TimerEvent;
+import flash.filters.GlowFilter;
+import flash.text.TextField;
+import flash.text.TextFieldType;
+import flash.text.TextFormat;
+import flash.text.engine.TextBlock;
+import flash.text.engine.TextLine;
+import flash.ui.Keyboard;
+import flash.utils.Timer;
+import flash.utils.getTimer;
+
+import org.osflash.signals.natives.NativeSignal;
+
+public class TextBox extends Sprite
    {
       
       private static const MAX_LINES:int = 10;

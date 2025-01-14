@@ -1,17 +1,18 @@
 package com.company.assembleegameclient.ui
 {
-   import com.company.assembleegameclient.objects.GameObject;
-   import com.company.assembleegameclient.objects.ObjectLibrary;
-   import com.company.assembleegameclient.objects.Player;
-   import com.company.assembleegameclient.parameters.Parameters;
-   import com.company.ui.SimpleText;
-   import com.company.util.MoreColorUtil;
-   import flash.display.Bitmap;
-   import flash.display.Sprite;
-   import flash.filters.DropShadowFilter;
-   import flash.geom.ColorTransform;
-   
-   public class GameObjectListItem extends Sprite
+import com.company.assembleegameclient.objects.GameObject;
+import com.company.assembleegameclient.objects.ObjectLibrary;
+import com.company.assembleegameclient.objects.Player;
+import com.company.assembleegameclient.parameters.Parameters;
+import com.company.ui.SimpleText;
+import com.company.util.MoreColorUtil;
+
+import flash.display.Bitmap;
+import flash.display.Sprite;
+import flash.filters.DropShadowFilter;
+import flash.geom.ColorTransform;
+
+public class GameObjectListItem extends Sprite
    {
        
       

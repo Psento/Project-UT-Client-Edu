@@ -2,6 +2,7 @@ package com.company.assembleegameclient.objects
 {
 import flash.display.BitmapData;
 import flash.geom.ColorTransform;
+
 import svera.untiered.stage3D.GraphicsFillExtra;
 
 public class FlashDescription

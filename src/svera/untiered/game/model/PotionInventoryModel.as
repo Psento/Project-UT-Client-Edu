@@ -1,10 +1,12 @@
 package svera.untiered.game.model
 {
-   import flash.utils.Dictionary;
-   import svera.untiered.ui.model.PotionModel;
-   import org.osflash.signals.Signal;
-   
-   public class PotionInventoryModel
+import flash.utils.Dictionary;
+
+import org.osflash.signals.Signal;
+
+import svera.untiered.ui.model.PotionModel;
+
+public class PotionInventoryModel
    {
       
       public static const HEALTH_POTION_ID:int = 2594;

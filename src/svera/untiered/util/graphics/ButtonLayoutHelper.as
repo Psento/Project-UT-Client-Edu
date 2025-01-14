@@ -1,9 +1,9 @@
 package svera.untiered.util.graphics
 {
-   import flash.display.DisplayObject;
-   import flash.errors.IllegalOperationError;
-   
-   public class ButtonLayoutHelper
+import flash.display.DisplayObject;
+import flash.errors.IllegalOperationError;
+
+public class ButtonLayoutHelper
    {
        
       

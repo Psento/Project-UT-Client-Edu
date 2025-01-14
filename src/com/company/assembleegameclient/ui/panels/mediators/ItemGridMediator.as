@@ -6,7 +6,6 @@ import com.company.assembleegameclient.objects.GameObject;
 import com.company.assembleegameclient.objects.ObjectLibrary;
 import com.company.assembleegameclient.objects.OneWayContainer;
 import com.company.assembleegameclient.objects.Player;
-import com.company.assembleegameclient.parameters.Parameters;
 import com.company.assembleegameclient.ui.panels.itemgrids.ContainerGrid;
 import com.company.assembleegameclient.ui.panels.itemgrids.InventoryGrid;
 import com.company.assembleegameclient.ui.panels.itemgrids.ItemGrid;
@@ -15,14 +14,15 @@ import com.company.assembleegameclient.ui.panels.itemgrids.itemtiles.ItemTile;
 import com.company.assembleegameclient.ui.panels.itemgrids.itemtiles.ItemTileEvent;
 import com.company.assembleegameclient.ui.tooltip.ToolTip;
 import com.company.assembleegameclient.util.DisplayHierarchy;
-import svera.untiered.constants.ItemConstants;
+
+import robotlegs.bender.bundles.mvcs.Mediator;
+
 import svera.untiered.core.model.MapModel;
 import svera.untiered.core.model.PlayerModel;
 import svera.untiered.core.signals.ShowTooltipSignal;
 import svera.untiered.game.model.PotionInventoryModel;
 import svera.untiered.messaging.impl.GameServerConnection;
 import svera.untiered.ui.model.HUDModel;
-import robotlegs.bender.bundles.mvcs.Mediator;
 
 public class ItemGridMediator extends Mediator
 {

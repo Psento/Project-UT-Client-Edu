@@ -1,9 +1,8 @@
 package svera.untiered.messaging.impl.incoming
 {
-import flash.utils.Dictionary;
 import flash.utils.IDataInput;
-   
-   public class BuyResult extends IncomingMessage
+
+public class BuyResult extends IncomingMessage
    {
       public static const SUCCESS_BRID:int = 0;
 

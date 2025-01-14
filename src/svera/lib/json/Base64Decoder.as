@@ -1,8 +1,8 @@
 package svera.lib.json
 {
-   import com.hurlant.util.Base64;
-   
-   public class Base64Decoder
+import com.hurlant.util.Base64;
+
+public class Base64Decoder
    {
        
       

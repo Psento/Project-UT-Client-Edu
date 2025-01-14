@@ -1,12 +1,13 @@
 package svera.untiered.account.web.view
 {
-   import com.company.ui.SimpleText;
-   import flash.display.CapsStyle;
-   import flash.display.JointStyle;
-   import flash.display.LineScaleMode;
-   import flash.display.Sprite;
-   
-   public class FormField extends Sprite
+import com.company.ui.SimpleText;
+
+import flash.display.CapsStyle;
+import flash.display.JointStyle;
+import flash.display.LineScaleMode;
+import flash.display.Sprite;
+
+public class FormField extends Sprite
    {
       
       protected static const BACKGROUND_COLOR:uint = 3355443;

@@ -17,9 +17,9 @@ import svera.untiered.assets.Environment.Overworld.Assets_Overworld_Environment_
 import svera.untiered.assets.Environment.Overworld.Assets_Overworld_Environment_AshenValley8x8;
 import svera.untiered.assets.Environment.Overworld.Assets_Overworld_Environment_DroughtsPath16x16;
 import svera.untiered.assets.Environment.Overworld.Assets_Overworld_Environment_DroughtsPath8x8;
-import svera.untiered.assets.Environment.Overworld.Assets_Overworld_Environment_FearedShallows8x8;
 import svera.untiered.assets.Environment.Overworld.Assets_Overworld_Environment_FearedShallows16x16;
 import svera.untiered.assets.Environment.Overworld.Assets_Overworld_Environment_FearedShallows32x32;
+import svera.untiered.assets.Environment.Overworld.Assets_Overworld_Environment_FearedShallows8x8;
 import svera.untiered.assets.Environment.Overworld.Assets_Overworld_Environment_Feltare16x16;
 import svera.untiered.assets.Environment.Overworld.Assets_Overworld_Environment_Feltare32x32;
 import svera.untiered.assets.Environment.Overworld.Assets_Overworld_Environment_Feltare8x8;

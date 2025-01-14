@@ -1,8 +1,8 @@
 package svera.untiered.startup.model.api
 {
-   import svera.lib.tasks.Task;
-   
-   public interface StartupDelegate
+import svera.lib.tasks.Task;
+
+public interface StartupDelegate
    {
        
       

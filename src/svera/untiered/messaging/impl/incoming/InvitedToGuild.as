@@ -1,8 +1,8 @@
 package svera.untiered.messaging.impl.incoming
 {
-   import flash.utils.IDataInput;
-   
-   public class InvitedToGuild extends IncomingMessage
+import flash.utils.IDataInput;
+
+public class InvitedToGuild extends IncomingMessage
    {
        
       

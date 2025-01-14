@@ -1,17 +1,19 @@
 package svera.untiered.minimap
 {
-   import svera.untiered.minimap.control.MiniMapZoomSignal;
-   import svera.untiered.minimap.control.SetMiniMapMapSignal;
-   import svera.untiered.minimap.control.UpdateGameObjectTileSignal;
-   import svera.untiered.minimap.control.UpdateGroundTileSignal;
-   import svera.untiered.minimap.view.MiniMap;
-   import svera.untiered.minimap.view.MiniMapMediator;
-   import org.swiftsuspenders.Injector;
-   import robotlegs.bender.extensions.mediatorMap.api.IMediatorMap;
-   import robotlegs.bender.framework.api.IConfig;
-   import robotlegs.bender.framework.api.IContext;
-   
-   public class MiniMapConfig implements IConfig
+import org.swiftsuspenders.Injector;
+
+import robotlegs.bender.extensions.mediatorMap.api.IMediatorMap;
+import robotlegs.bender.framework.api.IConfig;
+import robotlegs.bender.framework.api.IContext;
+
+import svera.untiered.minimap.control.MiniMapZoomSignal;
+import svera.untiered.minimap.control.SetMiniMapMapSignal;
+import svera.untiered.minimap.control.UpdateGameObjectTileSignal;
+import svera.untiered.minimap.control.UpdateGroundTileSignal;
+import svera.untiered.minimap.view.MiniMap;
+import svera.untiered.minimap.view.MiniMapMediator;
+
+public class MiniMapConfig implements IConfig
    {
        
       

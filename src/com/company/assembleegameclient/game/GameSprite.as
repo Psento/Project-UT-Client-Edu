@@ -1,45 +1,37 @@
 package com.company.assembleegameclient.game
 {
-   import com.company.assembleegameclient.map.Camera;
-   import com.company.assembleegameclient.map.Map;
-   import com.company.assembleegameclient.objects.GameObject;
-   import com.company.assembleegameclient.objects.IInteractiveObject;
-   import com.company.assembleegameclient.objects.Player;
-   import com.company.assembleegameclient.objects.Projectile;
-   import com.company.assembleegameclient.parameters.Parameters;
-   import com.company.assembleegameclient.ui.GuildText;
-   import com.company.assembleegameclient.ui.RankText;
-   import com.company.assembleegameclient.ui.TextBox;
-   import com.company.assembleegameclient.util.TextureRedrawer;
-   import com.company.util.CachingColorTransformer;
-   import com.company.util.MoreColorUtil;
-   import com.company.util.MoreObjectUtil;
-   import com.company.util.PointUtil;
-   import flash.display.DisplayObject;
-   import flash.display.Sprite;
-   import flash.events.Event;
-   import flash.external.ExternalInterface;
-   import flash.filters.ColorMatrixFilter;
-import flash.sampler.getSavedThis;
-import flash.utils.ByteArray;
-   import flash.utils.getTimer;
-   import svera.lib.loopedprocs.LoopedCallback;
-   import svera.lib.loopedprocs.LoopedProcess;
-   import svera.untiered.account.core.Account;
-   import svera.untiered.appengine.api.AppEngineClient;
-   import svera.untiered.constants.GeneralConstants;
-   import svera.untiered.core.StaticInjectorContext;
-   import svera.untiered.core.model.MapModel;
-   import svera.untiered.core.model.PlayerModel;
-   import svera.untiered.game.view.CurrencyDisplay;
-   import svera.untiered.messaging.impl.GameServerConnection;
-   import svera.untiered.messaging.impl.incoming.MapInfo;
+import com.company.assembleegameclient.map.Camera;
+import com.company.assembleegameclient.map.Map;
+import com.company.assembleegameclient.objects.GameObject;
+import com.company.assembleegameclient.objects.IInteractiveObject;
+import com.company.assembleegameclient.objects.Player;
+import com.company.assembleegameclient.ui.GuildText;
+import com.company.assembleegameclient.ui.RankText;
+import com.company.assembleegameclient.ui.TextBox;
+import com.company.assembleegameclient.util.TextureRedrawer;
+import com.company.util.CachingColorTransformer;
+import com.company.util.PointUtil;
+
+import flash.display.Sprite;
+import flash.events.Event;
+import flash.external.ExternalInterface;
+import flash.utils.getTimer;
+
+import org.osflash.signals.Signal;
+
+import svera.lib.loopedprocs.LoopedCallback;
+import svera.lib.loopedprocs.LoopedProcess;
+import svera.untiered.constants.GeneralConstants;
+import svera.untiered.core.model.MapModel;
+import svera.untiered.core.model.PlayerModel;
+import svera.untiered.game.view.CurrencyDisplay;
+import svera.untiered.messaging.impl.GameServerConnection;
+import svera.untiered.messaging.impl.incoming.MapInfo;
 import svera.untiered.stage3D.Renderer;
 import svera.untiered.ui.UIUtils;
-   import svera.untiered.ui.view.HUDView;
-   import org.osflash.signals.Signal;
-   
-   public class GameSprite extends Sprite
+import svera.untiered.ui.view.HUDView;
+
+public class GameSprite extends Sprite
    {
       public const closed:Signal = new Signal();
       public const modelInitialized:Signal = new Signal();

@@ -1,17 +1,18 @@
 package com.company.assembleegameclient.ui.guild
 {
-   import com.company.assembleegameclient.game.GameSprite;
-   import com.company.assembleegameclient.game.events.GuildResultEvent;
-   import com.company.assembleegameclient.objects.Player;
-   import com.company.assembleegameclient.screens.TitleMenuOption;
-   import com.company.assembleegameclient.ui.dialogs.Dialog;
-   import com.company.untiered.graphics.ScreenGraphic;
-   import flash.display.Sprite;
-   import flash.events.Event;
-   import flash.events.KeyboardEvent;
-   import flash.events.MouseEvent;
-   
-   public class GuildChronicleScreen extends Sprite
+import com.company.assembleegameclient.game.GameSprite;
+import com.company.assembleegameclient.game.events.GuildResultEvent;
+import com.company.assembleegameclient.objects.Player;
+import com.company.assembleegameclient.screens.TitleMenuOption;
+import com.company.assembleegameclient.ui.dialogs.Dialog;
+import com.company.untiered.graphics.ScreenGraphic;
+
+import flash.display.Sprite;
+import flash.events.Event;
+import flash.events.KeyboardEvent;
+import flash.events.MouseEvent;
+
+public class GuildChronicleScreen extends Sprite
    {
        
       

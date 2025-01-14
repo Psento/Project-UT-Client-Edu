@@ -1,12 +1,13 @@
 package svera.untiered.characters.deletion.service
 {
-   import com.company.assembleegameclient.appengine.SavedCharacter;
-   import svera.lib.tasks.BaseTask;
-   import svera.untiered.account.core.Account;
-   import svera.untiered.appengine.api.AppEngineClient;
-   import svera.untiered.characters.model.CharacterModel;
-   
-   public class DeleteCharacterTask extends BaseTask
+import com.company.assembleegameclient.appengine.SavedCharacter;
+
+import svera.lib.tasks.BaseTask;
+import svera.untiered.account.core.Account;
+import svera.untiered.appengine.api.AppEngineClient;
+import svera.untiered.characters.model.CharacterModel;
+
+public class DeleteCharacterTask extends BaseTask
    {
        
       

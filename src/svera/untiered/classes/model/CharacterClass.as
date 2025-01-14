@@ -1,9 +1,10 @@
 package svera.untiered.classes.model
 {
-   import com.company.assembleegameclient.appengine.CharacterStats;
-   import org.osflash.signals.Signal;
-   
-   public class CharacterClass
+import com.company.assembleegameclient.appengine.CharacterStats;
+
+import org.osflash.signals.Signal;
+
+public class CharacterClass
    {
        
       

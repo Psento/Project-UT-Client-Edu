@@ -7,7 +7,6 @@ import com.company.util.AssetLibrary;
 
 import flash.display.Bitmap;
 import flash.display.BitmapData;
-
 import flash.display.Sprite;
 import flash.events.Event;
 import flash.events.MouseEvent;
@@ -16,11 +15,8 @@ import flash.text.TextFieldAutoSize;
 import flash.text.TextFormat;
 import flash.text.TextFormatAlign;
 
-import mx.core.BitmapAsset;
-
 import org.swiftsuspenders.Injector;
 
-import svera.untiered.classes.view.CharacterSkinView;
 import svera.untiered.core.StaticInjectorContext;
 import svera.untiered.core.model.PlayerModel;
 import svera.untiered.game.model.GameInitData;

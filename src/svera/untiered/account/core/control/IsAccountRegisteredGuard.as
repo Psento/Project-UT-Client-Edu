@@ -1,11 +1,12 @@
 package svera.untiered.account.core.control
 {
-   import svera.untiered.account.core.Account;
-   import svera.untiered.account.core.view.RegisterPromptDialog;
-   import svera.untiered.dialogs.control.OpenDialogSignal;
-   import robotlegs.bender.framework.api.IGuard;
-   
-   public class IsAccountRegisteredGuard implements IGuard
+import robotlegs.bender.framework.api.IGuard;
+
+import svera.untiered.account.core.Account;
+import svera.untiered.account.core.view.RegisterPromptDialog;
+import svera.untiered.dialogs.control.OpenDialogSignal;
+
+public class IsAccountRegisteredGuard implements IGuard
    {
       
       private static const REGISTER_TO_PURCHASE:String = "In order to make purchase requests you must be a registered user.";

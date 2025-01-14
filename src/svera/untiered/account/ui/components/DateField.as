@@ -1,19 +1,21 @@
 package svera.untiered.account.ui.components
 {
-   import com.company.ui.SimpleText;
-   import flash.display.CapsStyle;
-   import flash.display.JointStyle;
-   import flash.display.LineScaleMode;
-   import flash.display.Sprite;
-   import flash.events.Event;
-   import flash.events.FocusEvent;
-   import flash.events.TextEvent;
-   import flash.filters.DropShadowFilter;
-   import flash.text.TextFormat;
-   import flash.text.TextFormatAlign;
-   import svera.lib.util.DateValidator;
-   
-   public class DateField extends Sprite
+import com.company.ui.SimpleText;
+
+import flash.display.CapsStyle;
+import flash.display.JointStyle;
+import flash.display.LineScaleMode;
+import flash.display.Sprite;
+import flash.events.Event;
+import flash.events.FocusEvent;
+import flash.events.TextEvent;
+import flash.filters.DropShadowFilter;
+import flash.text.TextFormat;
+import flash.text.TextFormatAlign;
+
+import svera.lib.util.DateValidator;
+
+public class DateField extends Sprite
    {
       
       private static const BACKGROUND_COLOR:uint = 3355443;

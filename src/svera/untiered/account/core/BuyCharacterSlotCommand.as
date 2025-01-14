@@ -2,19 +2,19 @@ package svera.untiered.account.core
 {
 import com.company.assembleegameclient.parameters.Parameters;
 import com.company.assembleegameclient.screens.CharacterSelectionAndNewsScreen;
-   import com.company.assembleegameclient.ui.dialogs.ErrorDialog;
-   import svera.lib.tasks.BranchingTask;
-   import svera.lib.tasks.DispatchSignalTask;
-   import svera.lib.tasks.Task;
-   import svera.lib.tasks.TaskMonitor;
-   import svera.lib.tasks.TaskSequence;
-   import svera.untiered.account.core.services.BuyCharacterSlotTask;
-   import svera.untiered.account.core.view.BuyingDialog;
-   import svera.untiered.core.model.PlayerModel;
-   import svera.untiered.core.signals.SetScreenSignal;
-   import svera.untiered.dialogs.control.CloseDialogsSignal;
-   import svera.untiered.dialogs.control.OpenDialogSignal;
-   import svera.untiered.ui.view.CharacterSlotNeedTsavoriteDialog;
+import com.company.assembleegameclient.ui.dialogs.ErrorDialog;
+
+import svera.lib.tasks.BranchingTask;
+import svera.lib.tasks.DispatchSignalTask;
+import svera.lib.tasks.Task;
+import svera.lib.tasks.TaskMonitor;
+import svera.lib.tasks.TaskSequence;
+import svera.untiered.account.core.services.BuyCharacterSlotTask;
+import svera.untiered.account.core.view.BuyingDialog;
+import svera.untiered.core.model.PlayerModel;
+import svera.untiered.core.signals.SetScreenSignal;
+import svera.untiered.dialogs.control.CloseDialogsSignal;
+import svera.untiered.dialogs.control.OpenDialogSignal;
 import svera.untiered.ui.view.MessageCloseDialog;
 
 public class BuyCharacterSlotCommand

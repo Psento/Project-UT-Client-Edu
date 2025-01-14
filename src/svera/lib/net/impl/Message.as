@@ -1,9 +1,9 @@
 package svera.lib.net.impl
 {
-   import flash.utils.IDataInput;
-   import flash.utils.IDataOutput;
-   
-   public class Message
+import flash.utils.IDataInput;
+import flash.utils.IDataOutput;
+
+public class Message
    {
        
       

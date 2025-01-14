@@ -1,11 +1,12 @@
 package com.company.assembleegameclient.ui.tooltip
 {
-   import com.company.assembleegameclient.objects.GameObject;
-   import com.company.assembleegameclient.ui.GameObjectListItem;
-   import com.company.ui.SimpleText;
-   import flash.filters.DropShadowFilter;
-   
-   public class QuestToolTip extends ToolTip
+import com.company.assembleegameclient.objects.GameObject;
+import com.company.assembleegameclient.ui.GameObjectListItem;
+import com.company.ui.SimpleText;
+
+import flash.filters.DropShadowFilter;
+
+public class QuestToolTip extends ToolTip
    {
        
       

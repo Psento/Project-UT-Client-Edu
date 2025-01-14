@@ -1,6 +1,6 @@
 package svera.untiered.ui
 {
-   import flash.display.Sprite;
+import flash.display.Sprite;
 import flash.display.StageQuality;
 
 public class UIUtils

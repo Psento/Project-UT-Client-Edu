@@ -1,9 +1,10 @@
 package svera.untiered.account.web.signals
 {
-   import svera.untiered.account.web.model.ChangePasswordData;
-   import org.osflash.signals.Signal;
-   
-   public class WebChangePasswordSignal extends Signal
+import org.osflash.signals.Signal;
+
+import svera.untiered.account.web.model.ChangePasswordData;
+
+public class WebChangePasswordSignal extends Signal
    {
        
       

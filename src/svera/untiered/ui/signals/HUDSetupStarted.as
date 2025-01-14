@@ -1,9 +1,10 @@
 package svera.untiered.ui.signals
 {
-   import com.company.assembleegameclient.game.GameSprite;
-   import org.osflash.signals.Signal;
-   
-   public class HUDSetupStarted extends Signal
+import com.company.assembleegameclient.game.GameSprite;
+
+import org.osflash.signals.Signal;
+
+public class HUDSetupStarted extends Signal
    {
        
       

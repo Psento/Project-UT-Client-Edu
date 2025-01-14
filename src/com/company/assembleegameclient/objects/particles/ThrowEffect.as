@@ -1,8 +1,8 @@
 package com.company.assembleegameclient.objects.particles
 {
-   import flash.geom.Point;
-   
-   public class ThrowEffect extends ParticleEffect
+import flash.geom.Point;
+
+public class ThrowEffect extends ParticleEffect
    {
        
       
@@ -35,6 +35,7 @@ package com.company.assembleegameclient.objects.particles
 import com.company.assembleegameclient.objects.particles.Particle;
 import com.company.assembleegameclient.objects.particles.SparkParticle;
 import com.company.assembleegameclient.util.RandomUtil;
+
 import flash.geom.Point;
 
 class ThrowParticle extends Particle

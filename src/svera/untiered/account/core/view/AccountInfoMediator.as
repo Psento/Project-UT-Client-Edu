@@ -1,10 +1,11 @@
 package svera.untiered.account.core.view
 {
-   import svera.untiered.account.core.Account;
-   import svera.untiered.account.core.signals.UpdateAccountInfoSignal;
-   import robotlegs.bender.bundles.mvcs.Mediator;
-   
-   public class AccountInfoMediator extends Mediator
+import robotlegs.bender.bundles.mvcs.Mediator;
+
+import svera.untiered.account.core.Account;
+import svera.untiered.account.core.signals.UpdateAccountInfoSignal;
+
+public class AccountInfoMediator extends Mediator
    {
        
       

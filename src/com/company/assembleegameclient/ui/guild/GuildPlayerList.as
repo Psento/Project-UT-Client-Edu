@@ -1,20 +1,22 @@
 package com.company.assembleegameclient.ui.guild
 {
-   import com.company.assembleegameclient.ui.Scrollbar;
-   import com.company.assembleegameclient.util.GuildUtil;
-   import com.company.ui.SimpleText;
-   import com.company.util.MoreObjectUtil;
-   import flash.display.Bitmap;
-   import flash.display.Graphics;
-   import flash.display.Shape;
-   import flash.display.Sprite;
-   import flash.events.Event;
-   import flash.filters.DropShadowFilter;
-   import svera.untiered.account.core.Account;
-   import svera.untiered.appengine.api.AppEngineClient;
-   import svera.untiered.core.StaticInjectorContext;
-   
-   public class GuildPlayerList extends Sprite
+import com.company.assembleegameclient.ui.Scrollbar;
+import com.company.assembleegameclient.util.GuildUtil;
+import com.company.ui.SimpleText;
+import com.company.util.MoreObjectUtil;
+
+import flash.display.Bitmap;
+import flash.display.Graphics;
+import flash.display.Shape;
+import flash.display.Sprite;
+import flash.events.Event;
+import flash.filters.DropShadowFilter;
+
+import svera.untiered.account.core.Account;
+import svera.untiered.appengine.api.AppEngineClient;
+import svera.untiered.core.StaticInjectorContext;
+
+public class GuildPlayerList extends Sprite
    {
        
       

@@ -1,13 +1,14 @@
 package svera.display.Loader
 {
-   import flash.display.DisplayObject;
-   import flash.display.Loader;
-   import flash.net.URLRequest;
-   import flash.system.LoaderContext;
-   import svera.display.LoaderInfo.LoaderInfoProxy;
-   import svera.display.LoaderInfo.LoaderInfoProxyConcrete;
-   
-   public class LoaderProxyConcrete extends LoaderProxy
+import flash.display.DisplayObject;
+import flash.display.Loader;
+import flash.net.URLRequest;
+import flash.system.LoaderContext;
+
+import svera.display.LoaderInfo.LoaderInfoProxy;
+import svera.display.LoaderInfo.LoaderInfoProxyConcrete;
+
+public class LoaderProxyConcrete extends LoaderProxy
    {
        
       

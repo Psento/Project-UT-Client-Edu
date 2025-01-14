@@ -11,10 +11,9 @@ import flash.text.Font;
 import flash.text.TextField;
 import flash.text.TextFieldType;
 import flash.text.TextFormat;
-import flash.text.TextFormatAlign;
 import flash.text.TextLineMetrics;
 
-   public class SimpleText extends TextField
+public class SimpleText extends TextField
    {
       private static const GUTTER:int = 16;
 

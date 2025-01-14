@@ -1,18 +1,19 @@
 package com.company.assembleegameclient.ui
 {
-   import com.company.util.GraphicsUtil;
-   import flash.display.Graphics;
-   import flash.display.GraphicsPath;
-   import flash.display.GraphicsSolidFill;
-   import flash.display.IGraphicsData;
-   import flash.display.Sprite;
-   import flash.events.Event;
-   import flash.events.MouseEvent;
-   import flash.geom.ColorTransform;
-   import flash.geom.Rectangle;
-   import flash.utils.getTimer;
-   
-   public class Scrollbar extends Sprite
+import com.company.util.GraphicsUtil;
+
+import flash.display.Graphics;
+import flash.display.GraphicsPath;
+import flash.display.GraphicsSolidFill;
+import flash.display.IGraphicsData;
+import flash.display.Sprite;
+import flash.events.Event;
+import flash.events.MouseEvent;
+import flash.geom.ColorTransform;
+import flash.geom.Rectangle;
+import flash.utils.getTimer;
+
+public class Scrollbar extends Sprite
    {
       private var width_:int;
       private var height_:int;

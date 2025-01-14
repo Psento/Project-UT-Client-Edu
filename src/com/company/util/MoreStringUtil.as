@@ -1,8 +1,8 @@
 package com.company.util
 {
-   import flash.utils.ByteArray;
-   
-   public class MoreStringUtil
+import flash.utils.ByteArray;
+
+public class MoreStringUtil
    {
        
       

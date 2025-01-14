@@ -1,10 +1,12 @@
 package com.company.assembleegameclient.objects.particles
 {
-   import com.company.assembleegameclient.objects.GameObject;
-   import flash.geom.Point;
-   import svera.untiered.messaging.impl.data.WorldPosData;
-   
-   public class FlowEffect extends ParticleEffect
+import com.company.assembleegameclient.objects.GameObject;
+
+import flash.geom.Point;
+
+import svera.untiered.messaging.impl.data.WorldPosData;
+
+public class FlowEffect extends ParticleEffect
    {
        
       
@@ -42,6 +44,7 @@ package com.company.assembleegameclient.objects.particles
 
 import com.company.assembleegameclient.objects.GameObject;
 import com.company.assembleegameclient.objects.particles.Particle;
+
 import flash.geom.Point;
 
 class FlowParticle extends Particle
@@ -92,10 +95,6 @@ class FlowParticle extends Particle
       return true;
    }
 }
-
-import com.company.assembleegameclient.objects.GameObject;
-import com.company.assembleegameclient.objects.particles.Particle;
-import flash.geom.Point;
 
 class FlowParticle2 extends Particle
 {

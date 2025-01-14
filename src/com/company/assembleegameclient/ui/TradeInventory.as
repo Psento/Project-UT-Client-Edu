@@ -5,10 +5,12 @@ import com.company.assembleegameclient.game.GameSprite;
 import com.company.assembleegameclient.ui.tooltip.EquipmentToolTip;
 import com.company.assembleegameclient.ui.tooltip.ToolTip;
 import com.company.ui.SimpleText;
+
 import flash.display.Sprite;
 import flash.events.Event;
 import flash.events.MouseEvent;
 import flash.filters.DropShadowFilter;
+
 import svera.untiered.constants.GeneralConstants;
 import svera.untiered.messaging.impl.data.TradeItemData;
 

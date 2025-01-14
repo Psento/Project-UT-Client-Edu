@@ -1,9 +1,10 @@
 package svera.untiered.messaging.impl.outgoing
 {
-   import flash.utils.IDataInput;
-   import svera.lib.net.impl.Message;
-   
-   public class OutgoingMessage extends Message
+import flash.utils.IDataInput;
+
+import svera.lib.net.impl.Message;
+
+public class OutgoingMessage extends Message
    {
        
       

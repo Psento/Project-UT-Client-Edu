@@ -1,18 +1,19 @@
 package svera.untiered.game.commands
 {
-   import com.company.assembleegameclient.screens.CharacterSelectionAndNewsScreen;
-   import svera.untiered.core.model.PlayerModel;
-   import svera.untiered.core.signals.InvalidateDataSignal;
-   import svera.untiered.core.signals.SetScreenSignal;
-   import svera.untiered.core.signals.SetScreenWithValidDataSignal;
-   import svera.untiered.death.model.DeathModel;
+import com.company.assembleegameclient.screens.CharacterSelectionAndNewsScreen;
+
+import svera.untiered.core.model.PlayerModel;
+import svera.untiered.core.signals.InvalidateDataSignal;
+import svera.untiered.core.signals.SetScreenSignal;
+import svera.untiered.core.signals.SetScreenWithValidDataSignal;
+import svera.untiered.death.model.DeathModel;
 import svera.untiered.dialogs.control.CloseDialogsSignal;
 import svera.untiered.fame.control.ShowFameViewSignal;
-   import svera.untiered.fame.model.FameVO;
-   import svera.untiered.fame.model.SimpleFameVO;
-   import svera.untiered.messaging.impl.incoming.Death;
-   
-   public class TransitionFromGameToMenuCommand
+import svera.untiered.fame.model.FameVO;
+import svera.untiered.fame.model.SimpleFameVO;
+import svera.untiered.messaging.impl.incoming.Death;
+
+public class TransitionFromGameToMenuCommand
    {
        
       

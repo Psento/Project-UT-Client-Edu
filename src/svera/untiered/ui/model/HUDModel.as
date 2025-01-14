@@ -1,9 +1,9 @@
 package svera.untiered.ui.model
 {
-   import com.company.assembleegameclient.game.GameSprite;
-   import com.company.assembleegameclient.parameters.Parameters;
-   
-   public class HUDModel
+import com.company.assembleegameclient.game.GameSprite;
+import com.company.assembleegameclient.parameters.Parameters;
+
+public class HUDModel
    {
        
       

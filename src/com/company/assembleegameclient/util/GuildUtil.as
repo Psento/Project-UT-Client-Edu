@@ -1,9 +1,10 @@
 package com.company.assembleegameclient.util
 {
-   import com.company.util.AssetLibrary;
-   import flash.display.BitmapData;
-   
-   public class GuildUtil
+import com.company.util.AssetLibrary;
+
+import flash.display.BitmapData;
+
+public class GuildUtil
    {
       
       public static const INITIATE:int = 0;

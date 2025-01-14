@@ -2,13 +2,14 @@ package com.company.assembleegameclient.util
 {
 import com.company.assembleegameclient.util.redrawers.GlowRedrawer;
 import com.company.util.AssetLibrary;
-   import com.company.util.PointUtil;
-   import flash.display.BitmapData;
-   import flash.filters.BitmapFilterQuality;
-   import flash.filters.GlowFilter;
-   import flash.geom.Matrix;
-   
-   public class ConditionEffect
+import com.company.util.PointUtil;
+
+import flash.display.BitmapData;
+import flash.filters.BitmapFilterQuality;
+import flash.filters.GlowFilter;
+import flash.geom.Matrix;
+
+public class ConditionEffect
    {
       public static const NOTHING:uint = 0;
       

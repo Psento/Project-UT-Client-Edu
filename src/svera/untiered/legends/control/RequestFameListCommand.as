@@ -1,16 +1,16 @@
 package svera.untiered.legends.control
 {
-   import svera.lib.tasks.BranchingTask;
-   import svera.lib.tasks.DispatchSignalTask;
-   import svera.lib.tasks.Task;
-   import svera.lib.tasks.TaskMonitor;
-   import svera.untiered.core.model.PlayerModel;
-   import svera.untiered.core.signals.TaskErrorSignal;
-   import svera.untiered.death.model.DeathModel;
-   import svera.untiered.fame.model.FameModel;
-   import svera.untiered.legends.service.GetLegendsListTask;
-   
-   public class RequestFameListCommand
+import svera.lib.tasks.BranchingTask;
+import svera.lib.tasks.DispatchSignalTask;
+import svera.lib.tasks.Task;
+import svera.lib.tasks.TaskMonitor;
+import svera.untiered.core.model.PlayerModel;
+import svera.untiered.core.signals.TaskErrorSignal;
+import svera.untiered.death.model.DeathModel;
+import svera.untiered.fame.model.FameModel;
+import svera.untiered.legends.service.GetLegendsListTask;
+
+public class RequestFameListCommand
    {
        
       

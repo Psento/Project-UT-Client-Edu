@@ -1,9 +1,11 @@
 package com.company.assembleegameclient.account.ui
 {
-   import com.company.assembleegameclient.game.GameSprite;
-   import com.company.assembleegameclient.game.events.GuildResultEvent;
+import com.company.assembleegameclient.game.GameSprite;
+import com.company.assembleegameclient.game.events.GuildResultEvent;
+
 import flash.events.Event;
-   import flash.events.MouseEvent;
+import flash.events.MouseEvent;
+
 public class CreateGuildFrame extends Frame
    {
        

@@ -1,10 +1,11 @@
 package svera.untiered.messaging.impl.data
 {
-   import com.company.assembleegameclient.util.FreeList;
-   import flash.utils.IDataInput;
-   import flash.utils.IDataOutput;
-   
-   public class ObjectStatusData
+import com.company.assembleegameclient.util.FreeList;
+
+import flash.utils.IDataInput;
+import flash.utils.IDataOutput;
+
+public class ObjectStatusData
    {
        
       

@@ -1,21 +1,22 @@
 package svera.untiered.game.view
 {
-   import com.company.assembleegameclient.parameters.Parameters;
-   import com.company.assembleegameclient.ui.TextBox;
-   import flash.events.Event;
-   import svera.untiered.account.core.Account;
-   import svera.untiered.account.core.signals.UpdateAccountInfoSignal;
-   import svera.untiered.account.web.view.WebRegisterDialog;
-   import svera.untiered.dialogs.control.OpenDialogSignal;
-   import svera.untiered.game.model.AddTextLineVO;
-   import svera.untiered.game.model.ChatFilter;
-   import svera.untiered.game.signals.AddTextLineSignal;
-   import svera.untiered.game.signals.SetTextBoxVisibilitySignal;
-import svera.untiered.game.signals.ShowChatInputSignal;
+import com.company.assembleegameclient.ui.TextBox;
+
+import flash.events.Event;
 
 import robotlegs.bender.bundles.mvcs.Mediator;
-   
-   public class TextBoxMediator extends Mediator
+
+import svera.untiered.account.core.Account;
+import svera.untiered.account.core.signals.UpdateAccountInfoSignal;
+import svera.untiered.account.web.view.WebRegisterDialog;
+import svera.untiered.dialogs.control.OpenDialogSignal;
+import svera.untiered.game.model.AddTextLineVO;
+import svera.untiered.game.model.ChatFilter;
+import svera.untiered.game.signals.AddTextLineSignal;
+import svera.untiered.game.signals.SetTextBoxVisibilitySignal;
+import svera.untiered.game.signals.ShowChatInputSignal;
+
+public class TextBoxMediator extends Mediator
    {
        
       

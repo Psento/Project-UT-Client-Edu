@@ -1,18 +1,18 @@
 package svera.untiered.account.web.view
 {
-   import com.company.assembleegameclient.account.ui.CheckBoxField;
-   import com.company.assembleegameclient.account.ui.Frame;
-   import com.company.assembleegameclient.parameters.Parameters;
+import com.company.assembleegameclient.account.ui.Frame;
 import com.company.ui.SimpleText;
-   import flash.events.MouseEvent;
-   import flash.events.TextEvent;
-   import flash.filters.DropShadowFilter;
-   import svera.untiered.account.ui.components.DateField;
-   import svera.untiered.account.web.model.AccountData;
-   import org.osflash.signals.Signal;
-   import org.osflash.signals.natives.NativeMappedSignal;
-   
-   public class WebRegisterDialog extends Frame
+
+import flash.events.MouseEvent;
+import flash.events.TextEvent;
+import flash.filters.DropShadowFilter;
+
+import org.osflash.signals.Signal;
+import org.osflash.signals.natives.NativeMappedSignal;
+
+import svera.untiered.account.web.model.AccountData;
+
+public class WebRegisterDialog extends Frame
    {
       private const SIGN_IN_TEXT:String = "Already registered? <font color=\"#7777EE\"><a href=\"event:flash.events.TextEvent\">here</a></font> to sign in!";
       

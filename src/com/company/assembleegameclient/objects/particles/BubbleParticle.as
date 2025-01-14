@@ -1,8 +1,8 @@
 package com.company.assembleegameclient.objects.particles
 {
-   import com.company.assembleegameclient.util.FreeList;
-   
-   public class BubbleParticle extends Particle
+import com.company.assembleegameclient.util.FreeList;
+
+public class BubbleParticle extends Particle
    {
        
       

@@ -2,11 +2,11 @@ package svera.untiered.classes.control
 {
 import svera.untiered.assets.EmbeddedData;
 import svera.untiered.assets.model.CharacterTemplate;
-   import svera.untiered.classes.model.CharacterClass;
-   import svera.untiered.classes.model.CharacterSkin;
-   import svera.untiered.classes.model.ClassesModel;
-   
-   public class ParseSkinsXmlCommand
+import svera.untiered.classes.model.CharacterClass;
+import svera.untiered.classes.model.CharacterSkin;
+import svera.untiered.classes.model.ClassesModel;
+
+public class ParseSkinsXmlCommand
    {
        
       

@@ -1,7 +1,5 @@
 ﻿//Created by Action Script Viewer - http://www.buraks.com/asv
 package com.company.untiered.graphics {
-import com.company.untiered.graphics.*;
-
 import flash.display.MovieClip;
 
 [Embed(source="StarGraphic.swf", symbol="com.company.rotmg.graphics.StarGraphic")]

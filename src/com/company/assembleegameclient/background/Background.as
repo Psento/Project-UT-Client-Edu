@@ -1,9 +1,10 @@
 package com.company.assembleegameclient.background
 {
-   import com.company.assembleegameclient.map.Camera;
-   import flash.display.Sprite;
-   
-   public class Background extends Sprite
+import com.company.assembleegameclient.map.Camera;
+
+import flash.display.Sprite;
+
+public class Background extends Sprite
    {
       
       public static const NO_BACKGROUND:int = 0;

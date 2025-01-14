@@ -1,8 +1,8 @@
 package svera.untiered.messaging.impl.data
 {
-   import flash.utils.IDataInput;
-   
-   public class GroundTileData
+import flash.utils.IDataInput;
+
+public class GroundTileData
    {
        
       

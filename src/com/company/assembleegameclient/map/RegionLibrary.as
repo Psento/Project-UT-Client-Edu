@@ -1,8 +1,8 @@
 package com.company.assembleegameclient.map
 {
-   import flash.utils.Dictionary;
-   
-   public class RegionLibrary
+import flash.utils.Dictionary;
+
+public class RegionLibrary
    {
       
       public static const xmlLibrary_:Dictionary = new Dictionary();

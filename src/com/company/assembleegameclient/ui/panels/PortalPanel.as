@@ -1,20 +1,21 @@
 package com.company.assembleegameclient.ui.panels
 {
-   import com.company.assembleegameclient.game.GameSprite;
-   import com.company.assembleegameclient.objects.ObjectLibrary;
-   import com.company.assembleegameclient.objects.Portal;
-   import com.company.assembleegameclient.parameters.Parameters;
-   import com.company.assembleegameclient.ui.TextBox;
-   import com.company.assembleegameclient.ui.TextButton;
-   import com.company.ui.SimpleText;
-   import flash.events.Event;
-   import flash.events.KeyboardEvent;
-   import flash.events.MouseEvent;
-   import flash.filters.DropShadowFilter;
-   import flash.text.TextFieldAutoSize;
-   import org.osflash.signals.Signal;
-   
-   public class PortalPanel extends Panel
+import com.company.assembleegameclient.game.GameSprite;
+import com.company.assembleegameclient.objects.Portal;
+import com.company.assembleegameclient.parameters.Parameters;
+import com.company.assembleegameclient.ui.TextBox;
+import com.company.assembleegameclient.ui.TextButton;
+import com.company.ui.SimpleText;
+
+import flash.events.Event;
+import flash.events.KeyboardEvent;
+import flash.events.MouseEvent;
+import flash.filters.DropShadowFilter;
+import flash.text.TextFieldAutoSize;
+
+import org.osflash.signals.Signal;
+
+public class PortalPanel extends Panel
    {
       public var owner_:Portal;
       private var nameText_:SimpleText;

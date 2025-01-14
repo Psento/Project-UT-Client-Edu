@@ -1,9 +1,9 @@
 package svera.untiered.messaging.impl.incoming
 {
-   import flash.display.BitmapData;
-   import flash.utils.IDataInput;
-   
-   public class Death extends IncomingMessage
+import flash.display.BitmapData;
+import flash.utils.IDataInput;
+
+public class Death extends IncomingMessage
    {
        
       

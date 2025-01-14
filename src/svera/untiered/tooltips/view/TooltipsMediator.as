@@ -1,11 +1,13 @@
 package svera.untiered.tooltips.view
 {
-   import com.company.assembleegameclient.ui.tooltip.ToolTip;
-   import svera.untiered.core.signals.HideTooltipsSignal;
-   import svera.untiered.core.signals.ShowTooltipSignal;
-   import robotlegs.bender.bundles.mvcs.Mediator;
-   
-   public class TooltipsMediator extends Mediator
+import com.company.assembleegameclient.ui.tooltip.ToolTip;
+
+import robotlegs.bender.bundles.mvcs.Mediator;
+
+import svera.untiered.core.signals.HideTooltipsSignal;
+import svera.untiered.core.signals.ShowTooltipSignal;
+
+public class TooltipsMediator extends Mediator
    {
        
       

@@ -1,8 +1,8 @@
 package com.company.assembleegameclient.editor
 {
-   import flash.events.Event;
-   
-   public class CommandEvent extends Event
+import flash.events.Event;
+
+public class CommandEvent extends Event
    {
       
       public static const UNDO_COMMAND_EVENT:String = "UNDO_COMMAND_EVENT";

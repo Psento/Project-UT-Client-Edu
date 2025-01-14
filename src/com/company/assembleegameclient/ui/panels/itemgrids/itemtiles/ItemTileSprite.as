@@ -1,15 +1,17 @@
 package com.company.assembleegameclient.ui.panels.itemgrids.itemtiles
 {
-   import com.company.assembleegameclient.objects.ObjectLibrary;
-   import com.company.ui.SimpleText;
-   import flash.display.Bitmap;
-   import flash.display.BitmapData;
-   import flash.display.Sprite;
-   import flash.filters.ColorMatrixFilter;
-   import flash.geom.Matrix;
-   import svera.untiered.constants.ItemConstants;
-   
-   public class ItemTileSprite extends Sprite
+import com.company.assembleegameclient.objects.ObjectLibrary;
+import com.company.ui.SimpleText;
+
+import flash.display.Bitmap;
+import flash.display.BitmapData;
+import flash.display.Sprite;
+import flash.filters.ColorMatrixFilter;
+import flash.geom.Matrix;
+
+import svera.untiered.constants.ItemConstants;
+
+public class ItemTileSprite extends Sprite
    {
       
       protected static const DIM_FILTER:Array = [new ColorMatrixFilter([0.4,0,0,0,0,0,0.4,0,0,0,0,0,0.4,0,0,0,0,0,1,0])];

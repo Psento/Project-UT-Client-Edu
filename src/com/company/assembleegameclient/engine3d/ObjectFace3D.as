@@ -4,6 +4,7 @@ import com.company.assembleegameclient.parameters.Parameters;
 import com.company.assembleegameclient.util.TextureRedrawer;
 import com.company.util.GraphicsUtil;
 import com.company.util.MoreColorUtil;
+
 import flash.display.BitmapData;
 import flash.display.GraphicsBitmapFill;
 import flash.display.GraphicsPath;
@@ -13,7 +14,6 @@ import flash.display.IGraphicsData;
 import flash.geom.ColorTransform;
 import flash.geom.Matrix;
 import flash.geom.Vector3D;
-import svera.untiered.stage3D.GraphicsFillExtra;
 
 public class ObjectFace3D
 {

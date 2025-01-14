@@ -1,15 +1,16 @@
 package com.company.assembleegameclient.ui.tooltip
 {
-   import com.company.assembleegameclient.objects.Player;
-   import com.company.assembleegameclient.ui.GameObjectListItem;
-   import com.company.assembleegameclient.ui.GuildText;
-   import com.company.assembleegameclient.ui.RankText;
-   import com.company.assembleegameclient.ui.StatusBar;
-   import com.company.assembleegameclient.ui.panels.itemgrids.EquippedGrid;
-   import com.company.ui.SimpleText;
-   import flash.filters.DropShadowFilter;
-   
-   public class PlayerToolTip extends ToolTip
+import com.company.assembleegameclient.objects.Player;
+import com.company.assembleegameclient.ui.GameObjectListItem;
+import com.company.assembleegameclient.ui.GuildText;
+import com.company.assembleegameclient.ui.RankText;
+import com.company.assembleegameclient.ui.StatusBar;
+import com.company.assembleegameclient.ui.panels.itemgrids.EquippedGrid;
+import com.company.ui.SimpleText;
+
+import flash.filters.DropShadowFilter;
+
+public class PlayerToolTip extends ToolTip
    {
        
       

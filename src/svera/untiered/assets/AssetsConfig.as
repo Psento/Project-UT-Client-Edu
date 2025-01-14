@@ -1,11 +1,13 @@
 package svera.untiered.assets
 {
-   import svera.untiered.assets.services.CharacterFactory;
-   import svera.untiered.assets.services.IconFactory;
-   import org.swiftsuspenders.Injector;
-   import robotlegs.bender.framework.api.IConfig;
-   
-   public class AssetsConfig implements IConfig
+import org.swiftsuspenders.Injector;
+
+import robotlegs.bender.framework.api.IConfig;
+
+import svera.untiered.assets.services.CharacterFactory;
+import svera.untiered.assets.services.IconFactory;
+
+public class AssetsConfig implements IConfig
    {
        
       

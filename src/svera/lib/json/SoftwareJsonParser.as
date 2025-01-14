@@ -1,7 +1,8 @@
 package svera.lib.json
 {
 import com.adobe.serialization.json.JSON;
-   public class SoftwareJsonParser implements JsonParser
+
+public class SoftwareJsonParser implements JsonParser
    {
        
       

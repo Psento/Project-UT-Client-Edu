@@ -1,13 +1,14 @@
 package svera.untiered.startup.control
 {
-   import svera.lib.tasks.BaseTask;
-   import svera.lib.tasks.Task;
-   import svera.untiered.startup.model.api.StartupDelegate;
-   import svera.untiered.startup.model.impl.SignalTaskDelegate;
-   import svera.untiered.startup.model.impl.TaskDelegate;
-   import org.swiftsuspenders.Injector;
-   
-   public class StartupSequence extends BaseTask
+import org.swiftsuspenders.Injector;
+
+import svera.lib.tasks.BaseTask;
+import svera.lib.tasks.Task;
+import svera.untiered.startup.model.api.StartupDelegate;
+import svera.untiered.startup.model.impl.SignalTaskDelegate;
+import svera.untiered.startup.model.impl.TaskDelegate;
+
+public class StartupSequence extends BaseTask
    {
       
       public static const LAST:int = int.MAX_VALUE;

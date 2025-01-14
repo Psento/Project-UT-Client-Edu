@@ -1,13 +1,15 @@
 package svera.untiered.util.components
 {
-   import flash.display.Sprite;
-   import flash.events.Event;
-   import flash.events.MouseEvent;
-   import svera.untiered.util.graphics.BevelRect;
-   import svera.untiered.util.graphics.GraphicsHelper;
-   import org.osflash.signals.Signal;
-   
-   public final class VerticalScrollbarBar extends Sprite
+import flash.display.Sprite;
+import flash.events.Event;
+import flash.events.MouseEvent;
+
+import org.osflash.signals.Signal;
+
+import svera.untiered.util.graphics.BevelRect;
+import svera.untiered.util.graphics.GraphicsHelper;
+
+public final class VerticalScrollbarBar extends Sprite
    {
       public static const WIDTH:int = VerticalScrollbar.WIDTH;
       public static const BEVEL:int = VerticalScrollbar.BEVEL;

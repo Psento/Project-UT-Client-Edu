@@ -1,11 +1,12 @@
 package com.company.assembleegameclient.map
 {
-   import com.company.assembleegameclient.objects.TextureData;
-   import com.company.util.BitmapUtil;
-   import flash.display.BitmapData;
-   import flash.utils.Dictionary;
-   
-   public class GroundLibrary
+import com.company.assembleegameclient.objects.TextureData;
+import com.company.util.BitmapUtil;
+
+import flash.display.BitmapData;
+import flash.utils.Dictionary;
+
+public class GroundLibrary
    {
       
       public static const propsLibrary_:Dictionary = new Dictionary();

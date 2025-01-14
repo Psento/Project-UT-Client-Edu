@@ -1,17 +1,18 @@
 package com.company.assembleegameclient.ui.menu
 {
-   import com.company.assembleegameclient.util.TextureRedrawer;
-   import com.company.ui.SimpleText;
-   import com.company.util.CachingColorTransformer;
-   import com.company.util.MoreColorUtil;
-   import flash.display.Bitmap;
-   import flash.display.BitmapData;
-   import flash.display.Sprite;
-   import flash.events.MouseEvent;
-   import flash.filters.DropShadowFilter;
-   import flash.geom.ColorTransform;
-   
-   public class MenuOption extends Sprite
+import com.company.assembleegameclient.util.TextureRedrawer;
+import com.company.ui.SimpleText;
+import com.company.util.CachingColorTransformer;
+import com.company.util.MoreColorUtil;
+
+import flash.display.Bitmap;
+import flash.display.BitmapData;
+import flash.display.Sprite;
+import flash.events.MouseEvent;
+import flash.filters.DropShadowFilter;
+import flash.geom.ColorTransform;
+
+public class MenuOption extends Sprite
    {
       
       protected static const mouseOverCT:ColorTransform = new ColorTransform(1,220 / 255,133 / 255);

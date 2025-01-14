@@ -1,8 +1,8 @@
 package svera.untiered.core.view
 {
-   import flash.display.Sprite;
-   
-   public class ScreensView extends Sprite
+import flash.display.Sprite;
+
+public class ScreensView extends Sprite
    {
        
       

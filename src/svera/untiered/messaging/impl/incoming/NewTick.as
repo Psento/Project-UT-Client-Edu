@@ -1,8 +1,10 @@
 package svera.untiered.messaging.impl.incoming
 {
-   import com.company.assembleegameclient.util.FreeList;
-   import flash.utils.IDataInput;
-   import svera.untiered.messaging.impl.data.ObjectStatusData;
+import com.company.assembleegameclient.util.FreeList;
+
+import flash.utils.IDataInput;
+
+import svera.untiered.messaging.impl.data.ObjectStatusData;
 import svera.untiered.messaging.impl.data.StatData;
 
 public class NewTick extends IncomingMessage

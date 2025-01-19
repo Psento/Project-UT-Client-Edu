@@ -65,9 +65,10 @@ public class SoundEffectLibrary
          var sound:Sound = load(name);
          try
          {
-            actualVolume = Number(volume);
+            actualVolume = volume;
             trans = new SoundTransform(actualVolume);
-            sound.play(0,0,trans);
+            if(trans)
+               sound.play(0,0,trans);
          }
          catch(error:Error)
          {

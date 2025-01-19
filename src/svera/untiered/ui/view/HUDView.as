@@ -93,7 +93,7 @@ public class HUDView extends Sprite
       this.statsView = new StatsView(191,45);
       this.interactPanel = new InteractPanel(gs,player,200,100);
 
-      this.inventoryGrid.x = 0 + this.equippedGrid.width * 3;
+      this.inventoryGrid.x = this.equippedGrid.width * 3;
       this.inventoryGrid.y = stage.stageHeight / 2 - this.inventoryGrid.height / 2;
       this.inventoryGrid.visible = false;
 

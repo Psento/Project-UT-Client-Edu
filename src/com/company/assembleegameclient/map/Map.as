@@ -618,7 +618,7 @@ public class Map extends Sprite
          this.mapOverlay_.draw(camera,time);
          this.partyOverlay_.draw(camera,time);
 
-         stage.scaleMode = StageScaleMode.EXACT_FIT;
+         stage.scaleMode = StageScaleMode.NO_SCALE;
       }
       private function getFilterIndex() : uint
       {

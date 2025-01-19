@@ -231,7 +231,7 @@ public class Renderer
             this.renderScene(graphicsDatas,grahpicsData3d,mapWidth,mapHeight,camera);
          }
          this.context3D.present();
-         GameClient.STAGE.scaleMode = StageScaleMode.EXACT_FIT;
+         GameClient.STAGE.scaleMode = StageScaleMode.NO_SCALE;
       }
       
       private function resizeStage3DBackBuffer() : void

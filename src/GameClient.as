@@ -1,6 +1,8 @@
 package
 {
+import com.company.assembleegameclient.map.Camera;
 import com.company.assembleegameclient.parameters.Parameters;
+import com.company.assembleegameclient.screens.AccountScreen;
 import com.company.assembleegameclient.sound.SoundEffectLibrary;
 import com.company.assembleegameclient.util.AssetLoader;
 import com.company.assembleegameclient.util.StageProxy;
@@ -32,14 +34,16 @@ import svera.untiered.game.GameConfig;
 import svera.untiered.hud.HUDConfig;
 import svera.untiered.legends.LegendsConfig;
 import svera.untiered.minimap.MiniMapConfig;
+import svera.untiered.stage3D.Renderer;
 import svera.untiered.stage3D.Stage3DConfig;
 import svera.untiered.startup.StartupConfig;
 import svera.untiered.startup.control.StartupSignal;
 import svera.untiered.tooltips.TooltipsConfig;
 import svera.untiered.ui.UIConfig;
 import svera.untiered.ui.UIUtils;
+import svera.untiered.ui.view.components.ScreenBase;
 
-[SWF(frameRate="60",backgroundColor="#000000",width="800",height="600")]
+[SWF(frameRate="60",backgroundColor="#0",width="800",height="600")]
    public class GameClient extends Sprite
    {
       public static var STAGE:Stage;
@@ -76,7 +80,7 @@ import svera.untiered.ui.UIUtils;
          this.hackParameters();
          this.createContext();
 
-         stage.scaleMode = StageScaleMode.EXACT_FIT;
+         stage.scaleMode = StageScaleMode.NO_SCALE;
          var startup:StartupSignal = this.context.injector.getInstance(StartupSignal);
          startup.dispatch();
          STAGE = stage;
@@ -94,14 +98,25 @@ import svera.untiered.ui.UIUtils;
 
       private function onResize(event:Event) : void
       {
-         setStageSize();
-         resized_ = true;
-      }
+         StageWidth = stage.stageWidth;
+         StageHeight = stage.stageHeight;
 
-      private function setStageSize() : void
-      {
-         StageWidth = stage.stageWidth / Parameters.data_.mScale;
-         StageHeight = stage.stageHeight / Parameters.data_.mScale;
+         if (Renderer.inGame) {
+            scaleX = StageWidth / 800.0;
+            scaleY = StageHeight / 600.0;
+            Camera.adjustDimensions();
+            Stage3DConfig.Dimensions();
+                        x = (800 - stage.stageWidth) / 2.0;
+                        y = (600 - stage.stageHeight) / 2.0;
+         }
+         else {
+/*            ScreenBase.resize(null);
+            AccountScreen.resize(null);*/
+            scaleX = 1;
+            scaleY = 1;
+            x = 0;
+            y = 0;
+         }
       }
 
       private static function onRightClick(event:MouseEvent) : void

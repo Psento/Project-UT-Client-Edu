@@ -14,6 +14,8 @@ import org.swiftsuspenders.Injector;
 
 import robotlegs.bender.framework.api.IConfig;
 
+import svera.untiered.stage3D.graphic3D.Graphic3D;
+
 import svera.untiered.stage3D.graphic3D.Graphic3DHelper;
 import svera.untiered.stage3D.graphic3D.IndexBufferFactory;
 import svera.untiered.stage3D.graphic3D.TextureFactory;
@@ -23,13 +25,13 @@ import svera.untiered.stage3D.proxies.Context3DProxy;
 public class Stage3DConfig implements IConfig
    {
       
-      public static const WIDTH:int = 600;
+      public static var WIDTH:int = 600;
       
-      public static const HALF_WIDTH:int = WIDTH / 2;
+      public static var HALF_WIDTH:int = WIDTH / 2;
       
-      public static const HEIGHT:int = 600;
+      public static var HEIGHT:int = 600;
       
-      public static const HALF_HEIGHT:int = HEIGHT / 2;
+      public static var HALF_HEIGHT:int = HEIGHT / 2;
        
       
       [Inject]
@@ -46,7 +48,18 @@ public class Stage3DConfig implements IConfig
       {
          super();
       }
-      
+
+      public static function Dimensions() : void
+      {
+         var mscale:Number = Parameters.data_.mScale;
+         var WidthScaled:Number = GameClient.StageWidth / mscale;
+         var HeightScaled:Number = GameClient.StageHeight / mscale;
+         WIDTH = WidthScaled;
+         HALF_WIDTH = WidthScaled / 2;
+         HEIGHT = HeightScaled;
+         HALF_HEIGHT = HeightScaled / 2;
+      }
+
       public function configure() : void
       {
          this.mapSingletons();
@@ -55,15 +68,17 @@ public class Stage3DConfig implements IConfig
          this.stage3D.addEventListener(Event.CONTEXT3D_CREATE,this.onContextCreate);
          this.stage3D.requestContext3D();
       }
-      
+
       private function mapSingletons() : void
       {
+         injector.map(Renderer).asSingleton();
+         injector.map(Graphic3D).asSingleton();
          this.injector.map(Render3D).asSingleton();
          this.injector.map(TextureFactory).asSingleton();
          this.injector.map(IndexBufferFactory).asSingleton();
          this.injector.map(VertexBufferFactory).asSingleton();
       }
-      
+
       private function onContextCreate(e:Event) : void
       {
          this.stage3D.removeEventListener(Event.CONTEXT3D_CREATE,this.onContextCreate);
@@ -72,7 +87,7 @@ public class Stage3DConfig implements IConfig
          {
             Parameters.clearGpuRender();
          }
-         context3D.configureBackBuffer(WIDTH,HEIGHT,2,true);
+         context3D.configureBackBuffer(WIDTH,HEIGHT,2);
          context3D.setBlendFactors(Context3DBlendFactor.SOURCE_ALPHA,Context3DBlendFactor.ONE_MINUS_SOURCE_ALPHA);
          context3D.setDepthTest(false,Context3DCompareMode.LESS_EQUAL);
          this.injector.map(Context3DProxy).toValue(context3D);

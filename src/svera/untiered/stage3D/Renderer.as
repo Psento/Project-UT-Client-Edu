@@ -32,7 +32,6 @@ import svera.untiered.stage3D.proxies.Context3DProxy;
 
 public class Renderer
    {
-      
       public static const STAGE3D_FILTER_PAUSE:uint = 1;
       
       public static const STAGE3D_FILTER_BLIND:uint = 2;
@@ -214,7 +213,7 @@ public class Renderer
          {
             this.resizeStage3DBackBuffer();
          }
-         if(Renderer.inGame == true)
+         if(Renderer.inGame)
          {
             this.setTranslationToGame();
          }
@@ -358,7 +357,6 @@ public class Renderer
                catch(e:Error)
                {
                   trace("ERROR CAUGHT -- Invalid Bitmap Data");
-                  continue;
                }
             }
          }

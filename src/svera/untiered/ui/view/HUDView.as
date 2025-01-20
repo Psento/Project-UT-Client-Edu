@@ -75,7 +75,7 @@ public class HUDView extends Sprite
    private function positionAssets() : void
    {
       hudOverlay.parent.mouseEnabled = false;
-      this.hudOverlay.x = 0 - (this.hudOverlay.width / 2);
+      this.hudOverlay.x =  -(this.hudOverlay.width / 2);
       this.hudOverlay.y = 0;
       this.miniMap.x = this.MAP_POSITION.x;
       this.miniMap.y = this.MAP_POSITION.y;

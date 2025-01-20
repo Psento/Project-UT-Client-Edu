@@ -76,6 +76,7 @@ import svera.untiered.ui.view.components.ScreenBase;
       private function setup() : void
       {
          new AssetLoader().load();
+         onResize(null);
 
          this.hackParameters();
          this.createContext();
@@ -86,7 +87,6 @@ import svera.untiered.ui.view.components.ScreenBase;
          STAGE = stage;
          STAGE.addEventListener(MouseEvent.RIGHT_CLICK, onRightClick);
          STAGE.addEventListener(Event.RESIZE, onResize);
-         onResize(null);
          STAGE.addEventListener(Event.ENTER_FRAME, onEnterFrame);
          UIUtils.toggleQuality(Parameters.data_.quality);
       }
@@ -106,8 +106,8 @@ import svera.untiered.ui.view.components.ScreenBase;
             scaleY = StageHeight / 600.0;
             Camera.adjustDimensions();
             Stage3DConfig.Dimensions();
-                        x = (800 - stage.stageWidth) / 2.0;
-                        y = (600 - stage.stageHeight) / 2.0;
+            x = (800 - stage.stageWidth) / 2.0;
+            y = (600 - stage.stageHeight) / 2.0;
          }
          else {
 /*            ScreenBase.resize(null);

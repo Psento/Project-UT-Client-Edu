@@ -6,8 +6,6 @@ import svera.untiered.ui.view.TitleView;
 
 public class ShowTitleUICommand
    {
-       
-      
       [Inject]
       public var setScreen:SetScreenSignal;
       

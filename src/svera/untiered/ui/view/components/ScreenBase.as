@@ -3,6 +3,7 @@ package svera.untiered.ui.view.components
 import com.company.assembleegameclient.ui.SoundIcon;
 
 import flash.display.Sprite;
+import flash.events.Event;
 
 import mx.core.BitmapAsset;
 
@@ -13,8 +14,13 @@ public class ScreenBase extends Sprite
       {
          ChangeBackground(newBackground);
          addChild(new SoundIcon());
+         addEventListener(Event.RESIZE, OnResize, false, 0, true);
+         OnResize(null);
       }
-
+      private function OnResize(e:Event):void{
+         currBackground.width = GameClient.StageWidth;
+         currBackground.height = GameClient.StageHeight;
+      }
       private function ChangeBackground(newBackground:int = 0):void
       {
          if(contains(currBackground))

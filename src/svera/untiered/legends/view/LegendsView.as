@@ -20,8 +20,6 @@ import svera.untiered.ui.view.components.ScreenBase;
 
 public class LegendsView extends Sprite
    {
-       
-      
       public const timespanChanged:Signal = new Signal(Timespan);
       
       public const showDetail:Signal = new Signal(Legend);
@@ -88,16 +86,15 @@ public class LegendsView extends Sprite
          this.loadingBanner.text = "Loading...";
          this.loadingBanner.useTextDimensions();
          this.loadingBanner.filters = [new DropShadowFilter(0,0,0,1,8,8)];
-         this.loadingBanner.x = 800 / 2 - this.loadingBanner.width / 2;
-         this.loadingBanner.y = 600 / 2 - this.loadingBanner.height / 2;
+         this.loadingBanner.x = GameClient.StageWidth / 2 - this.loadingBanner.width / 2;
+         this.loadingBanner.y = GameClient.StageHeight / 2 - this.loadingBanner.height / 2;
          this.loadingBanner.visible = false;
          addChild(this.loadingBanner);
       }
       
       private function makeMainContainer() : void
       {
-         var shape:Shape = null;
-         shape = new Shape();
+         var shape:Shape = new Shape();
          var g:Graphics = shape.graphics;
          g.beginFill(0);
          g.drawRect(0,0,LegendListItem.WIDTH,430);

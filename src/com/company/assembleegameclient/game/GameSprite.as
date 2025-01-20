@@ -70,8 +70,7 @@ public class GameSprite extends Sprite
       
       public function setFocus(focus:GameObject) : void
       {
-         focus = focus || this.map.player_;
-         this.focus = focus;
+         this.focus = focus || this.map.player_;
       }
       
       public function applyMapInfo(mapInfo:MapInfo) : void
@@ -82,7 +81,7 @@ public class GameSprite extends Sprite
       public function hudModelInitialized() : void
       {
          this.hudView = new HUDView();
-         this.hudView.x = 400;
+         this.hudView.x = 0;
          addChild(this.hudView);
       }
       

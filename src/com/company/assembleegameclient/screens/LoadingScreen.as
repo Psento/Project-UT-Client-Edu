@@ -11,8 +11,6 @@ import svera.untiered.ui.view.components.ScreenBase;
 
 public class LoadingScreen extends Sprite
    {
-       
-      
       private var text:SimpleText;
       
       public function LoadingScreen()

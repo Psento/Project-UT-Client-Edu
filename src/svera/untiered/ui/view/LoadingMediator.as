@@ -8,8 +8,6 @@ import svera.untiered.core.signals.SetLoadingMessageSignal;
 
 public class LoadingMediator extends Mediator
    {
-       
-      
       [Inject]
       public var view:LoadingScreen;
       

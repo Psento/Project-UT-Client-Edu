@@ -90,14 +90,14 @@ public class Map extends Sprite
          this.squares_ = new Vector.<Square>();
          this.goDict_ = new Dictionary();
          this.boDict_ = new Dictionary();
-         this.merchLookup_ = new Object();
+         this.merchLookup_ = {};
          this.objsToAdd_ = new Vector.<BasicObject>();
          this.idsToRemove_ = new Vector.<int>();
          this.graphicsData_ = new Vector.<IGraphicsData>();
          this.graphicsDataStageSoftware_ = new Vector.<IGraphicsData>();
          this.graphicsData3d_ = new Vector.<Object3DStage3D>();
-         this.visible_ = new Array();
-         this.visibleUnder_ = new Array();
+         this.visible_ = [];
+         this.visibleUnder_ = [];
          this.visibleSquares_ = new Vector.<Square>();
          this.topSquares_ = new Vector.<Square>();
          super();
@@ -193,15 +193,8 @@ public class Map extends Sprite
             {
                this.idsToRemove_.push(go.objectId_);
             }
-            else
-            {
-               if (go.props_.isEnemy_)
-               {
-                  if (go.isTargetable())
-                  {
-                     this.hittable_.push(go);
-                  }
-               }
+            else if (go.props_.isEnemy_ && go.isTargetable()) {
+               this.hittable_.push(go);
             }
          }
 
@@ -620,6 +613,7 @@ public class Map extends Sprite
 
          stage.scaleMode = StageScaleMode.NO_SCALE;
       }
+
       private function getFilterIndex() : uint
       {
          var filterIndex:uint = 0;

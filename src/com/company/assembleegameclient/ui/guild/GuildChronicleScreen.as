@@ -28,7 +28,7 @@ public class GuildChronicleScreen extends Sprite
          this.gs_ = gs;
          graphics.clear();
          graphics.beginFill(2829099,0.8);
-         graphics.drawRect(0,0,800,600);
+         graphics.drawRect(0,0,GameClient.StageWidth,600);
          graphics.endFill();
          this.addList();
          addChild(new ScreenGraphic());

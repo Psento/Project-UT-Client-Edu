@@ -15,7 +15,6 @@ import svera.untiered.account.core.view.AccountInfoView;
 
 public class WebAccountInfoView extends Sprite implements AccountInfoView
    {
-      
       private static const LOG_IN:String = "log in";
       
       private static const LOG_OUT:String = "log out";

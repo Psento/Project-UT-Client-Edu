@@ -15,7 +15,6 @@ import svera.untiered.util.components.StarsView;
 
 public class ClassDetailView extends Sprite
    {
-      
       private static const RIGHT_JUSTIFICATION_STATS:int = 205;
       
       private static const WIDTH:int = 344;

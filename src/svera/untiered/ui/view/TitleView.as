@@ -7,6 +7,7 @@ import com.company.assembleegameclient.screens.TitleMenuOption;
 import com.company.ui.SimpleText;
 
 import flash.display.Sprite;
+import flash.events.Event;
 import flash.filters.DropShadowFilter;
 
 import org.osflash.signals.Signal;
@@ -71,31 +72,34 @@ public class TitleView extends Sprite
       public function initialize() : void
       {
          this.updateVersionText();
-         this.positionButtons();
+         positionButtons(null);
+         GameClient.STAGE.addEventListener(Event.RESIZE, positionButtons, false, 0, true);
       }
-      
+      public function destroy() : void{
+         GameClient.STAGE.removeEventListener(Event.RESIZE, positionButtons);
+      }
       private function updateVersionText() : void
       {
          this.versionText.htmlText = "V" + Parameters.BUILD_VERSION;
          this.versionText.updateMetrics();
       }
       
-      private function positionButtons() : void
+      private function positionButtons(e:Event) : void
       {
-         this.playButton.x = stage.width / 2 - this.playButton.width / 2;
-         this.playButton.y = stage.height / 2 + (this.playButton.height * 2);
-         this.legendsButton.x = stage.width / 2 - this.legendsButton.width / 2;
+         this.playButton.x = GameClient.STAGE.width / 2 - this.playButton.width / 2;
+         this.playButton.y = GameClient.STAGE.height / 2 + (this.playButton.height * 2);
+         this.legendsButton.x = GameClient.STAGE.width / 2 - this.legendsButton.width / 2;
          this.legendsButton.y = this.playButton.y + this.legendsButton.height + 18;
-         this.editorButton.x = stage.width / 2 - this.editorButton.width / 2;
+         this.editorButton.x = GameClient.STAGE.width / 2 - this.editorButton.width / 2;
          this.editorButton.y = this.legendsButton.y + this.editorButton.height + 18;
-         this.accountButton.x = stage.width / 2 - this.accountButton.width / 2;
+         this.accountButton.x = GameClient.STAGE.width / 2 - this.accountButton.width / 2;
          this.accountButton.y = this.editorButton.y + this.accountButton.height + 18;
-         this.quitButton.x = stage.width / 2 - this.quitButton.width / 2;
+         this.quitButton.x = GameClient.STAGE.width / 2 - this.quitButton.width / 2;
          this.quitButton.y = this.accountButton.y + this.quitButton.height + 18;
-         this.versionText.x = stage.width - this.versionText.width - this.versionText.height / 2;
-         this.versionText.y = stage.height - this.versionText.height - this.versionText.height / 2;
-         this.copyrightText.x = stage.width - this.copyrightText.width - this.copyrightText.height / 2;
-         this.copyrightText.y = stage.height - this.versionText.height - this.copyrightText.height - this.copyrightText.height / 2;
+         this.versionText.x = GameClient.STAGE.width - this.versionText.width - this.versionText.height / 2;
+         this.versionText.y = GameClient.STAGE.height - this.versionText.height - this.versionText.height / 2;
+         this.copyrightText.x = GameClient.STAGE.width - this.copyrightText.width - this.copyrightText.height / 2;
+         this.copyrightText.y = GameClient.STAGE.height - this.versionText.height - this.copyrightText.height - this.copyrightText.height / 2;
       }
    }
 }

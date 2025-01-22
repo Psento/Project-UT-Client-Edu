@@ -14,8 +14,6 @@ import svera.untiered.core.signals.ShowTooltipSignal;
 
 public class AccountScreenMediator extends Mediator
    {
-       
-      
       [Inject]
       public var view:AccountScreen;
       
@@ -41,14 +39,9 @@ public class AccountScreenMediator extends Mediator
          this.view.tooltip.add(this.onTooltip);
          this.view.setRank(this.playerModel.getNumStars());
          this.view.setGuild(this.playerModel.getGuildName(),this.playerModel.getGuildRank());
-         this.view.setAccountInfo(this.getInfoView());
+         this.view.setAccountInfo(new WebAccountInfoView());
       }
-      
-      private function getInfoView() : AccountInfoView
-      {
-         var view:AccountInfoView = new WebAccountInfoView();
-         return view;
-      }
+
       
       override public function destroy() : void
       {

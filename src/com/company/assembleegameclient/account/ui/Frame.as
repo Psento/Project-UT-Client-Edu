@@ -20,8 +20,6 @@ import svera.untiered.account.web.view.LabeledField;
 
 public class Frame extends Sprite
    {
-       
-      
       public var titleText_:SimpleText;
       
       public var leftButton_:ClickableText;
@@ -124,21 +122,7 @@ public class Frame extends Sprite
          text.x = 17;
          this.h_ = this.h_ + 20;
       }
-      
-      public function addTitle(title:String) : void
-      {
-         var text:SimpleText = null;
-         text = new SimpleText(20,11711154,false,0,0);
-         text.text = title;
-         text.setBold(true);
-         text.updateMetrics();
-         text.filters = [new DropShadowFilter(0,0,0,0.5,12,12)];
-         addChild(text);
-         text.y = this.h_ - 60;
-         text.x = 15;
-         this.h_ = this.h_ + 40;
-      }
-      
+
       public function addCheckBox(checkBox:CheckBoxField) : void
       {
          addChild(checkBox);

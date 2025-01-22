@@ -8,8 +8,6 @@ import flash.events.Event;
 
 public class DialogsView extends Sprite
    {
-       
-      
       private var background:Shape;
       
       private var container:DisplayObjectContainer;
@@ -29,7 +27,7 @@ public class DialogsView extends Sprite
          var g:Graphics = this.background.graphics;
          g.clear();
          g.beginFill(color,0.6);
-         g.drawRect(0,0,800,600);
+         g.drawRect(0,0,GameClient.StageWidth,GameClient.StageHeight);
          g.endFill();
          this.background.visible = true;
       }

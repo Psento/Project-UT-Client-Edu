@@ -6,8 +6,6 @@ import org.osflash.signals.Signal;
 
 public class CharacterClass
    {
-       
-      
       public const selected:Signal = new Signal(CharacterClass);
       
       public var id:int;

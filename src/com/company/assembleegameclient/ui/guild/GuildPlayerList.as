@@ -60,7 +60,7 @@ public class GuildPlayerList extends Sprite
          this.loadingText_.text = "Loading...";
          this.loadingText_.useTextDimensions();
          this.loadingText_.filters = [new DropShadowFilter(0,0,0,1,8,8)];
-         this.loadingText_.x = 800 / 2 - this.loadingText_.width / 2;
+         this.loadingText_.x = GameClient.HalfStageWidth - this.loadingText_.width / 2;
          this.loadingText_.y = 600 / 2 - this.loadingText_.height / 2;
          addChild(this.loadingText_);
          var account:Account = StaticInjectorContext.getInjector().getInstance(Account);
@@ -169,7 +169,7 @@ public class GuildPlayerList extends Sprite
          if(this.listSprite_.height > 400)
          {
             this.scrollBar_ = new Scrollbar(16,400);
-            this.scrollBar_.x = 800 - this.scrollBar_.width - 4;
+            this.scrollBar_.x = GameClient.StageWidth - this.scrollBar_.width - 4;
             this.scrollBar_.y = 104;
             this.scrollBar_.setIndicatorSize(400,this.listSprite_.height);
             this.scrollBar_.addEventListener(Event.CHANGE,this.onScrollBarChange);

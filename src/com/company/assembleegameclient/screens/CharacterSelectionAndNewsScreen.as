@@ -21,8 +21,6 @@ import svera.untiered.ui.view.components.ScreenBase;
 
 public class CharacterSelectionAndNewsScreen extends Sprite
    {
-       
-      
       private const SCROLLBAR_REQUIREMENT_HEIGHT:Number = 400;
       
       private const DROP_SHADOW:DropShadowFilter = new DropShadowFilter(0,0,0,1,8,8);
@@ -93,9 +91,6 @@ public class CharacterSelectionAndNewsScreen extends Sprite
          this.createNameText();
          this.createCurrencyDisplay();
          this.createCharactersText();
-         //this.createNewsText();
-         //this.createNewsList();
-         //this.createBoundaryLines();
          this.createCharacterList();
 
          this.createButtons();
@@ -116,12 +111,12 @@ public class CharacterSelectionAndNewsScreen extends Sprite
       
       private function positionButtons() : void
       {
-         this.playButton.x = (this.stage.width - this.playButton.width) / 2;
-         this.playButton.y = 520;
-         this.backButton.x = (this.stage.width - this.backButton.width) / 2 - 94;
-         this.backButton.y = 532;
-         this.classesButton.x = (this.stage.width - this.classesButton.width) / 2 + 96;
-         this.classesButton.y = 532;
+         this.playButton.x = (this.stage.width - this.playButton.width) * 0.5;
+         this.playButton.y = GameClient.StageHeight - (600 - 520);
+         this.backButton.x = (this.stage.width - this.backButton.width) * 0.5 - 94;
+         this.backButton.y = GameClient.StageHeight - (600 - 532);
+         this.classesButton.x = (this.stage.width - this.classesButton.width) * 0.5 + 96;
+         this.classesButton.y = backButton.y;
       }
       
       private function createScrollbar() : void

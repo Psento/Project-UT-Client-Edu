@@ -25,14 +25,6 @@ public class StageProxy implements IEventDispatcher
         return this.reference.stage;
     }
 
-    public function getStageWidth() : Number
-    {
-        if(this.reference.stage != null)
-        {
-            return this.reference.stage.stageWidth;
-        }
-        return 800;
-    }
 
     public function getStageHeight() : Number
     {

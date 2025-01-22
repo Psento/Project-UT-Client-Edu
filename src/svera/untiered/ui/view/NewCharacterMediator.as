@@ -18,8 +18,6 @@ import svera.untiered.game.signals.PlayGameSignal;
 
 public class NewCharacterMediator extends Mediator
    {
-       
-      
       [Inject]
       public var view:NewCharacterScreen;
       

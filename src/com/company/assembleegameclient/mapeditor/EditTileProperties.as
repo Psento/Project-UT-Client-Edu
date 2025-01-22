@@ -25,7 +25,7 @@ public class EditTileProperties extends Sprite
          var g:Graphics = this.darkBox_.graphics;
          g.clear();
          g.beginFill(0,0.8);
-         g.drawRect(0,0,800,600);
+         g.drawRect(0,0,GameClient.StageWidth,600);
          g.endFill();
          addChild(this.darkBox_);
          this.frame_ = new EditTilePropertiesFrame(oldName);

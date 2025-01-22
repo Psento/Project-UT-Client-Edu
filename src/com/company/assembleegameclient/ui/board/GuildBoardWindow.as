@@ -38,7 +38,7 @@ public class GuildBoardWindow extends Sprite
          var g:Graphics = this.darkBox_.graphics;
          g.clear();
          g.beginFill(0,0.8);
-         g.drawRect(0,0,800,600);
+         g.drawRect(0,0,GameClient.StageWidth,600);
          g.endFill();
          addChild(this.darkBox_);
          this.load();
@@ -79,7 +79,7 @@ public class GuildBoardWindow extends Sprite
       private function show() : void
       {
          this.viewBoard_ = new ViewBoard(this.text_,this.canEdit_);
-         this.viewBoard_.x = 800 / 2 - this.viewBoard_.w_ / 2;
+         this.viewBoard_.x = GameClient.HalfStageWidth - this.viewBoard_.w_ / 2;
          this.viewBoard_.y = 600 / 2 - this.viewBoard_.h_ / 2;
          this.viewBoard_.addEventListener(Event.COMPLETE,this.onViewComplete);
          this.viewBoard_.addEventListener(Event.CHANGE,this.onViewChange);
@@ -101,7 +101,7 @@ public class GuildBoardWindow extends Sprite
          removeChild(this.viewBoard_);
          this.viewBoard_ = null;
          this.editBoard_ = new EditBoard(this.text_);
-         this.editBoard_.x = 800 / 2 - this.editBoard_.w_ / 2;
+         this.editBoard_.x = GameClient.HalfStageWidth - this.editBoard_.w_ / 2;
          this.editBoard_.y = 600 / 2 - this.editBoard_.h_ / 2;
          this.editBoard_.addEventListener(Event.CANCEL,this.onEditCancel);
          this.editBoard_.addEventListener(Event.COMPLETE,this.onEditComplete);

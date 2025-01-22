@@ -18,8 +18,6 @@ import svera.untiered.legends.view.LegendsView;
 
 public class LegendsConfig implements IConfig
    {
-       
-      
       [Inject]
       public var injector:Injector;
       

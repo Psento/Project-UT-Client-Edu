@@ -67,7 +67,7 @@ public class SoundEffectLibrary
          {
             actualVolume = volume;
             trans = new SoundTransform(actualVolume);
-            if(trans)
+            if(trans && sound)
                sound.play(0,0,trans);
          }
          catch(error:Error)

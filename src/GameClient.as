@@ -10,6 +10,7 @@ import com.company.assembleegameclient.util.StageProxy;
 import flash.display.LoaderInfo;
 import flash.display.Sprite;
 import flash.display.Stage;
+import flash.display.StageAlign;
 import flash.display.StageScaleMode;
 import flash.events.Event;
 import flash.events.MouseEvent;
@@ -41,7 +42,6 @@ import svera.untiered.startup.control.StartupSignal;
 import svera.untiered.tooltips.TooltipsConfig;
 import svera.untiered.ui.UIConfig;
 import svera.untiered.ui.UIUtils;
-import svera.untiered.ui.view.components.ScreenBase;
 
 [SWF(frameRate="60",backgroundColor="#0",width="800",height="600")]
    public class GameClient extends Sprite
@@ -51,8 +51,9 @@ import svera.untiered.ui.view.components.ScreenBase;
       protected var context:IContext;
       public static var StageWidth:int;
       public static var StageHeight:int;
-      private var resized_:Boolean;
-      
+      public static var HalfStageWidth:int;
+      public static var HalfStageHeight:int;
+
       public function GameClient()
       {
          super();
@@ -75,19 +76,22 @@ import svera.untiered.ui.view.components.ScreenBase;
       
       private function setup() : void
       {
-         new AssetLoader().load();
+         STAGE = stage;
+         STAGE.scaleMode = StageScaleMode.NO_SCALE;
+         STAGE.align = StageAlign.TOP_LEFT;
          onResize(null);
+         STAGE.addEventListener(MouseEvent.RIGHT_CLICK, onRightClick);
+         STAGE.addEventListener(Event.RESIZE, onResize);
+         STAGE.addEventListener(Event.ENTER_FRAME, onEnterFrame);
+
+         new AssetLoader().load();
 
          this.hackParameters();
          this.createContext();
 
-         stage.scaleMode = StageScaleMode.NO_SCALE;
          var startup:StartupSignal = this.context.injector.getInstance(StartupSignal);
          startup.dispatch();
-         STAGE = stage;
-         STAGE.addEventListener(MouseEvent.RIGHT_CLICK, onRightClick);
-         STAGE.addEventListener(Event.RESIZE, onResize);
-         STAGE.addEventListener(Event.ENTER_FRAME, onEnterFrame);
+
          UIUtils.toggleQuality(Parameters.data_.quality);
       }
 
@@ -100,18 +104,20 @@ import svera.untiered.ui.view.components.ScreenBase;
       {
          StageWidth = stage.stageWidth;
          StageHeight = stage.stageHeight;
+         HalfStageWidth = StageWidth * 0.5;
+         HalfStageHeight = StageHeight * 0.5;
 
          if (Renderer.inGame) {
             scaleX = StageWidth / 800.0;
             scaleY = StageHeight / 600.0;
             Camera.adjustDimensions();
             Stage3DConfig.Dimensions();
-            x = (800 - stage.stageWidth) / 2.0;
-            y = (600 - stage.stageHeight) / 2.0;
+/*            x = (800 - stage.stageWidth) / 2.0;
+            y = (600 - stage.stageHeight) / 2.0;*/
          }
          else {
-/*            ScreenBase.resize(null);
-            AccountScreen.resize(null);*/
+            //ScreenBase.OnResize(null);
+            //AccountScreen.resize(null);
             scaleX = 1;
             scaleY = 1;
             x = 0;

@@ -2,7 +2,6 @@ package svera.untiered.classes.view
 {
 import com.company.assembleegameclient.screens.AccountScreen;
 import com.company.assembleegameclient.screens.TitleMenuOption;
-import com.company.untiered.graphics.ScreenGraphic;
 
 import flash.display.Shape;
 import flash.display.Sprite;
@@ -16,23 +15,24 @@ import svera.untiered.ui.view.components.ScreenBase;
 
 public class CharacterSkinView extends Sprite
    {
-      private const base:ScreenBase = makeScreenBase();
-      private const account:AccountScreen = makeAccountScreen();
-      private const lines:Shape = makeLines();
-      private const currencyDisplay:CurrencyDisplay = makeCurrencyDisplay();
-      private const graphic:ScreenGraphic = makeScreenGraphic();
-      private const playBtn:TitleMenuOption = makePlayButton();
-      private const backBtn:TitleMenuOption = makeBackButton();
-      private const list:CharacterSkinListView = makeListView();
-      private const detail:ClassDetailView = makeClassDetailView();
-      public const play:Signal = new NativeMappedSignal(playBtn,MouseEvent.CLICK);
-      public const back:Signal = new NativeMappedSignal(backBtn,MouseEvent.CLICK);
+      private var playBtn:TitleMenuOption;
+      public var play:Signal;
+      public var back:Signal;
       
-      public function CharacterSkinView()
-      {
+      public function CharacterSkinView() {
          super();
+         makeScreenBase()
+         makeAccountScreen()
+         makeLines();
+         makeCurrencyDisplay();
+         playBtn = makePlayButton();
+         var backBtn:TitleMenuOption = makeBackButton();
+         play = new NativeMappedSignal(playBtn,MouseEvent.CLICK);
+         back = new NativeMappedSignal(backBtn,MouseEvent.CLICK);
+         makeListView();
+         makeClassDetailView();
       }
-      
+
       private function makeScreenBase() : ScreenBase
       {
          var base:ScreenBase = new ScreenBase();
@@ -50,7 +50,7 @@ public class CharacterSkinView extends Sprite
       private function makeCurrencyDisplay() : CurrencyDisplay
       {
          var display:CurrencyDisplay = new CurrencyDisplay();
-         display.x = 800;
+         display.x = GameClient.StageWidth;
          display.y = 20;
          addChild(display);
          return display;
@@ -62,26 +62,19 @@ public class CharacterSkinView extends Sprite
          shape.graphics.clear();
          shape.graphics.lineStyle(2,5526612);
          shape.graphics.moveTo(0,105);
-         shape.graphics.lineTo(800,105);
+         shape.graphics.lineTo(GameClient.StageWidth,105);
          shape.graphics.moveTo(346,105);
-         shape.graphics.lineTo(346,526);
+         shape.graphics.lineTo(346,GameClient.StageHeight - (600 - 526));
          addChild(shape);
          return shape;
-      }
-      
-      private function makeScreenGraphic() : ScreenGraphic
-      {
-         var graphic:ScreenGraphic = new ScreenGraphic();
-         addChild(graphic);
-         return graphic;
       }
       
       private function makePlayButton() : TitleMenuOption
       {
          var option:TitleMenuOption = null;
          option = new TitleMenuOption("play",36,false);
-         option.x = 400 - option.width / 2;
-         option.y = 520;
+         option.x = GameClient.HalfStageWidth - option.width / 2;
+         option.y = GameClient.StageHeight - (600 - 520);
          addChild(option);
          return option;
       }
@@ -90,7 +83,7 @@ public class CharacterSkinView extends Sprite
       {
          var option:TitleMenuOption = new TitleMenuOption("back",22,false);
          option.x = 30;
-         option.y = 534;
+         option.y = GameClient.StageHeight - (600 - 534);
          addChild(option);
          return option;
       }

@@ -21,7 +21,6 @@ import svera.untiered.minimap.view.MiniMap;
 
 public class HUDView extends Sprite
 {
-
    private const MAP_POSITION:Point = new Point(204,4);
 
    private const INTERACT_PANEL_POSITION:Point = new Point(0,500);

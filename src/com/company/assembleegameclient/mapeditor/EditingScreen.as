@@ -85,7 +85,7 @@ public class EditingScreen extends Sprite
          this.commandQueue_ = new CommandQueue();
          this.meMap_ = new MEMap();
          this.meMap_.addEventListener(TilesEvent.TILES_EVENT,this.onTilesEvent);
-         this.meMap_.x = 800 / 2 - MEMap.SIZE / 2;
+         this.meMap_.x = GameClient.HalfStageWidth - MEMap.SIZE / 2;
          this.meMap_.y = MAP_Y;
          addChild(this.meMap_);
          this.infoPane_ = new InfoPane(this.meMap_);

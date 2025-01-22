@@ -33,8 +33,6 @@ import svera.untiered.classes.view.ClassDetailView;
 
 public class ClassesConfig implements IConfig
    {
-       
-      
       [Inject]
       public var context:IContext;
       

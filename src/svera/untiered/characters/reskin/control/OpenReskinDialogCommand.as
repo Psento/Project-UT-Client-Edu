@@ -37,7 +37,7 @@ public class OpenReskinDialogCommand
       {
          var view:ReskinCharacterView = new ReskinCharacterView();
          view.setList(this.makeList());
-         view.x = (800 - view.width) * 0.5;
+         view.x = (GameClient.StageWidth - view.width) * 0.5;
          view.y = (600 - view.viewHeight) * 0.5;
          return view;
       }

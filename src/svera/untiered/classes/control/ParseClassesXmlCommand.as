@@ -9,10 +9,8 @@ import svera.untiered.classes.model.ClassesModel;
 
 public class ParseClassesXmlCommand
    {
-      
       public static const CLASSIC_NAME:String = "Classic";
-       
-      
+
       [Inject]
       public var data:XML;
       

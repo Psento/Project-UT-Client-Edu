@@ -81,7 +81,7 @@ public class GameSprite extends Sprite
       public function hudModelInitialized() : void
       {
          this.hudView = new HUDView();
-         this.hudView.x = 0;
+         this.hudView.x = GameClient.HalfStageWidth;
          addChild(this.hudView);
       }
       

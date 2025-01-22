@@ -9,15 +9,15 @@ import mx.core.BitmapAsset;
 
 public class ScreenBase extends Sprite
    {
-      private var currBackground:BitmapAsset = new DefaultBackground();
+      private static var currBackground:BitmapAsset = new DefaultBackground();
       public function ScreenBase(newBackground:int = 0)
       {
          ChangeBackground(newBackground);
          addChild(new SoundIcon());
-         addEventListener(Event.RESIZE, OnResize, false, 0, true);
+         GameClient.STAGE.addEventListener(Event.RESIZE, OnResize, false, 0, true);
          OnResize(null);
       }
-      private function OnResize(e:Event):void{
+      public function OnResize(e:Event):void{
          currBackground.width = GameClient.StageWidth;
          currBackground.height = GameClient.StageHeight;
       }

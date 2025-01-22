@@ -65,6 +65,7 @@ public class TitleMediator extends Mediator
          this.view.editorClicked.remove(this.showMapEditor);
          this.view.accountClicked.remove(this.handleIntentionToReviewAccount);
          this.view.quitClicked.remove(this.handleIntentionToQuitGame);
+         view.destroy();
       }
       
       private function handleIntentionToPlay() : void

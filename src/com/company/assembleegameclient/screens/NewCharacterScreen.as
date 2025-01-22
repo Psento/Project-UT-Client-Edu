@@ -1,6 +1,7 @@
 package com.company.assembleegameclient.screens
 {
 import com.company.assembleegameclient.objects.ObjectLibrary;
+import com.company.untiered.graphics.FullCharBoxGraphic;
 import com.company.untiered.graphics.ScreenGraphic;
 
 import flash.display.Sprite;
@@ -33,7 +34,6 @@ public class NewCharacterScreen extends Sprite
          this.close = new Signal();
          addChild(new ScreenBase());
          addChild(new AccountScreen());
-         addChild(new ScreenGraphic());
       }
       
       public function initialize(model:PlayerModel) : void
@@ -53,6 +53,9 @@ public class NewCharacterScreen extends Sprite
          this.currencyDisplay_ = new CurrencyDisplay();
          this.currencyDisplay_.draw(model.getTsavorite(),model.getMedallions(),model.getHonor(),model.getFame());
          addChild(this.currencyDisplay_);
+
+         var stripLen:int = GameClient.StageWidth / 140;
+
          for(var i:int = 0; i < ObjectLibrary.playerChars_.length; i++)
          {
             playerXML = ObjectLibrary.playerChars_[i];
@@ -61,16 +64,16 @@ public class NewCharacterScreen extends Sprite
 
             trace(objectType.toString(), characterType.toString())
             charBox = new CharacterBox(playerXML,model.getCharStats()[objectType],model);
-            charBox.x = 50 + 140 * int(i % 5) + 70 - charBox.width / 2;
-            charBox.y = 88 + 140 * int(i / 5);
+            charBox.x = 50 + 140 * int(i % stripLen) + 70 - charBox.width / 2;
+            charBox.y = 88 + 140 * int(i / stripLen);
             this.boxes_[objectType] = charBox;
             charBox.addEventListener(MouseEvent.ROLL_OVER,this.onCharBoxOver);
             charBox.addEventListener(MouseEvent.ROLL_OUT,this.onCharBoxOut);
             charBox.characterSelectClicked_.add(this.onCharBoxClick);
             addChild(charBox);
          }
-         this.backButton_.x = stage.stageWidth / 2 - this.backButton_.width / 2;
-         this.backButton_.y = 524;
+         this.backButton_.x = GameClient.HalfStageWidth - this.backButton_.width / 2;
+         this.backButton_.y = GameClient.StageHeight - (600 - 524);
          this.currencyDisplay_.x = stage.stageWidth;
          this.currencyDisplay_.y = 20;
       }

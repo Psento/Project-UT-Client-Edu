@@ -497,7 +497,7 @@ public class MapUserInput
       {
          if(this.enablePlayerInput_)
          {
-            player.setRelativeMovement((!!this.rotateRight_?1:0) - (!!this.rotateLeft_?1:0),(!!this.moveRight_?1:0) - (!!this.moveLeft_?1:0),(!!this.moveDown_?1:0) - (!!this.moveUp_?1:0));
+            player.setRelativeMovement((this.rotateRight_?1:0) - (this.rotateLeft_?1:0),(this.moveRight_?1:0) - (this.moveLeft_?1:0),(this.moveDown_?1:0) - (this.moveUp_?1:0));
          }
          else
          {

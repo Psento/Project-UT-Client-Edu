@@ -105,7 +105,7 @@ public class MiniMapZoomButtons extends Sprite
          if(this.canZoomOut())
          {
             this.zoom.dispatch(--this.zoomLevel);
-            this.zoomOut.transform.colorTransform = !!this.canZoomOut()?this.NORM:this.FADE;
+            this.zoomOut.transform.colorTransform = this.canZoomOut()?this.NORM:this.FADE;
          }
       }
       
@@ -119,7 +119,7 @@ public class MiniMapZoomButtons extends Sprite
          if(this.canZoomIn())
          {
             this.zoom.dispatch(++this.zoomLevel);
-            this.zoomIn.transform.colorTransform = !!this.canZoomIn()?this.NORM:this.FADE;
+            this.zoomIn.transform.colorTransform = this.canZoomIn()?this.NORM:this.FADE;
          }
       }
       
@@ -130,8 +130,8 @@ public class MiniMapZoomButtons extends Sprite
       
       private function updateButtons() : void
       {
-         this.zoomIn.transform.colorTransform = !!this.canZoomIn()?this.NORM:this.FADE;
-         this.zoomOut.transform.colorTransform = !!this.canZoomOut()?this.NORM:this.FADE;
+         this.zoomIn.transform.colorTransform = this.canZoomIn()?this.NORM:this.FADE;
+         this.zoomOut.transform.colorTransform = this.canZoomOut()?this.NORM:this.FADE;
       }
    }
 }

@@ -173,7 +173,7 @@ public class Slot extends Sprite
          {
             case RING_TYPE:
                p.x = objectType == 2878?Number(0):Number(-2);
-               p.y = !!back?Number(-2):Number(0);
+               p.y = back?Number(-2):Number(0);
                break;
             case SPELL_TYPE:
                p.y = -2;

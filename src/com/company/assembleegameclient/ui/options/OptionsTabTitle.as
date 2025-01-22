@@ -60,7 +60,7 @@ public class OptionsTabTitle extends Sprite
          {
             return 16762880;
          }
-         return !!isOver?uint(16777215):uint(11776947);
+         return isOver?uint(16777215):uint(11776947);
       }
    }
 }

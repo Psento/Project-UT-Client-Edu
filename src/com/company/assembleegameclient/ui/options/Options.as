@@ -162,11 +162,11 @@ public class Options extends Sprite
       private function onAddedToStage(event:Event) : void
       {
          this.continueButton_.x = stage.stageWidth / 2 - this.continueButton_.width / 2;
-         this.continueButton_.y = 520;
+         this.continueButton_.y = GameClient.StageHeight - (600 - 520);
          this.resetToDefaultsButton_.x = 20;
-         this.resetToDefaultsButton_.y = 532;
+         this.resetToDefaultsButton_.y = GameClient.StageHeight - (600 - 532);
          this.homeButton_.x = 620;
-         this.homeButton_.y = 532;
+         this.homeButton_.y = resetToDefaultsButton_.y;
          this.setSelected(this.tabs_[0]);
          stage.addEventListener(KeyboardEvent.KEY_DOWN,this.onKeyDown,false,1);
          stage.addEventListener(KeyboardEvent.KEY_UP,this.onKeyUp,false,1);
@@ -298,7 +298,7 @@ public class Options extends Sprite
       public static function refreshCursor():void {
          var cursorData:MouseCursorData;
          var bitmapData:Vector.<BitmapData>;
-         if (((!((Parameters.data_.cursor == MouseCursor.AUTO))) && ((registeredCursors.indexOf(Parameters.data_.cursor) == -1)))) {
+         if (!(Parameters.data_.cursor == MouseCursor.AUTO) && registeredCursors.indexOf(Parameters.data_.cursor) == -1) {
             cursorData = new MouseCursorData();
             cursorData.hotSpot = new Point(15, 15);
             bitmapData = new Vector.<BitmapData>(1, true);

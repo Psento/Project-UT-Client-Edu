@@ -214,13 +214,13 @@ public class AnimatedChar
             attack2Image = new MaskedImage(image,mask);
          }
          var standVec:Vector.<MaskedImage> = new Vector.<MaskedImage>();
-         standVec.push(!!mirror?standImage.mirror():standImage);
+         standVec.push(mirror?standImage.mirror():standImage);
          dirDict[STAND] = standVec;
          var walkVec:Vector.<MaskedImage> = new Vector.<MaskedImage>();
-         walkVec.push(!!mirror?walk1Image.mirror():walk1Image);
+         walkVec.push(mirror?walk1Image.mirror():walk1Image);
          if(walk2Image != null)
          {
-            walkVec.push(!!mirror?walk2Image.mirror():walk2Image);
+            walkVec.push(mirror?walk2Image.mirror():walk2Image);
          }
          else if(sym)
          {
@@ -228,7 +228,7 @@ public class AnimatedChar
          }
          else
          {
-            walkVec.push(!!mirror?standImage.mirror():standImage);
+            walkVec.push(mirror?standImage.mirror():standImage);
          }
          dirDict[WALK] = walkVec;
          if(attack1Image == null && attack2Image == null)
@@ -240,11 +240,11 @@ public class AnimatedChar
             attackVec = new Vector.<MaskedImage>();
             if(attack1Image != null)
             {
-               attackVec.push(!!mirror?attack1Image.mirror():attack1Image);
+               attackVec.push(mirror?attack1Image.mirror():attack1Image);
             }
             if(attack2Image != null)
             {
-               attackVec.push(!!mirror?attack2Image.mirror():attack2Image);
+               attackVec.push(mirror?attack2Image.mirror():attack2Image);
             }
          }
          dirDict[ATTACK] = attackVec;

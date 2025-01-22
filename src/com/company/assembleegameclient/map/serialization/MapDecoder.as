@@ -93,7 +93,7 @@ public class MapDecoder
          var objType:int = ObjectLibrary.idToType_[obj["id"]];
          var objXML:XML = ObjectLibrary.xmlLibrary_[objType];
          var go:GameObject = ObjectLibrary.getObjectFromType(objType);
-         go.size_ = !!obj.hasOwnProperty("size")?int(obj["size"]):int(go.props_.getSize());
+         go.size_ = obj.hasOwnProperty("size")?int(obj["size"]):int(go.props_.getSize());
          return go;
       }
    }

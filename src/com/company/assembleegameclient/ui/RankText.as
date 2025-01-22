@@ -24,7 +24,7 @@ public class RankText extends Sprite
          this.largeText_ = largeText;
          if(includePrefix)
          {
-            this.prefix_ = new SimpleText(!!this.largeText_?int(18):int(16),11776947,false,0,0);
+            this.prefix_ = new SimpleText(this.largeText_?int(18):int(16),11776947,false,0,0);
             this.prefix_.setBold(this.largeText_);
             this.prefix_.text = "Rank: ";
             this.prefix_.updateMetrics();
@@ -53,13 +53,13 @@ public class RankText extends Sprite
             return;
          }
          this.sprite_ = new Sprite();
-         var text:SimpleText = new SimpleText(!!this.largeText_?int(18):int(16),11776947,false,0,0);
+         var text:SimpleText = new SimpleText(this.largeText_?int(18):int(16),11776947,false,0,0);
          text.setBold(this.largeText_);
          text.text = this.numStars_.toString();
          text.updateMetrics();
          text.filters = [new DropShadowFilter(0,0,0,1,4,4,2)];
          this.sprite_.addChild(text);
-         icon = !!this.largeText_?FameUtil.numStarsToBigImage(this.numStars_):FameUtil.numStarsToImage(this.numStars_);
+         icon = this.largeText_?FameUtil.numStarsToBigImage(this.numStars_):FameUtil.numStarsToImage(this.numStars_);
          icon.x = text.width + 2;
          this.sprite_.addChild(icon);
          icon.y = int(text.height / 2 - icon.height / 2) + 1;

@@ -106,7 +106,7 @@ public class ChoiceBox extends Sprite
       {
          GraphicsUtil.clearPath(this.path_);
          GraphicsUtil.drawCutEdgeRect(0,0,WIDTH,HEIGHT,4,[1,1,1,1],this.path_);
-         this.lineStyle_.fill = !!this.over_?this.overLineFill_:this.normalLineFill_;
+         this.lineStyle_.fill = this.over_?this.overLineFill_:this.normalLineFill_;
          graphics.drawGraphicsData(this.graphicsData_);
          var g:Graphics = graphics;
          g.clear();

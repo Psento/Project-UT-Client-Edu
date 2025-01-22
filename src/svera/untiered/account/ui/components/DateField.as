@@ -116,7 +116,7 @@ public class DateField extends Sprite
       
       private function drawSimpleTextBackground(simpleText:SimpleText, hPadding:int, vPadding:int, hasError:Boolean) : void
       {
-         var borderColor:uint = !!hasError?uint(ERROR_BORDER_COLOR):uint(NORMAL_BORDER_COLOR);
+         var borderColor:uint = hasError?uint(ERROR_BORDER_COLOR):uint(NORMAL_BORDER_COLOR);
          graphics.lineStyle(2,borderColor,1,false,LineScaleMode.NORMAL,CapsStyle.ROUND,JointStyle.ROUND);
          graphics.beginFill(BACKGROUND_COLOR,1);
          graphics.drawRect(simpleText.x - hPadding - 5,simpleText.y - vPadding,simpleText.width + hPadding * 2,simpleText.height + vPadding * 2);

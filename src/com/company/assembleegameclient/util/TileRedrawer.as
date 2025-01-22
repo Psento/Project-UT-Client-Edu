@@ -416,7 +416,7 @@ public class TileRedrawer
                }
             }
          }
-         return !!hasEdge?sig:null;
+         return hasEdge?sig:null;
       }
       
       private static function drawEdges(sig:ByteArray) : BitmapData

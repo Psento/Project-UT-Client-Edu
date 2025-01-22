@@ -25,7 +25,7 @@ public class KeyMapper extends Option
       public function setDisabled(disabled:Boolean) : void
       {
          this.disabled_ = disabled;
-         transform.colorTransform = !!this.disabled_?MoreColorUtil.darkCT:MoreColorUtil.identity;
+         transform.colorTransform = this.disabled_?MoreColorUtil.darkCT:MoreColorUtil.identity;
          mouseEnabled = !this.disabled_;
          mouseChildren = !this.disabled_;
       }

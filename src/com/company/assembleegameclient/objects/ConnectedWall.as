@@ -214,7 +214,7 @@ public class ConnectedWall extends ConnectedObject
       var vertexBuffer3D:Vector.<Number> = null;
       var offset:int = obj3D_.vL_.length / 3;
       obj3D_.vL_.push(v0.x,v0.y,v0.z,v1.x,v1.y,v1.z,v2.x,v2.y,v2.z,v3.x,v3.y,v3.z);
-      var n:Number = !!leftIndent?Number(-(this.bI_ - this.tI_) / (1 - (this.bI_ - this.tI_) - (!!rightIndent?this.bI_ - this.tI_:0))):Number(0);
+      var n:Number = leftIndent?Number(-(this.bI_ - this.tI_) / (1 - (this.bI_ - this.tI_) - (rightIndent?this.bI_ - this.tI_:0))):Number(0);
       obj3D_.uvts_.push(0,0,0,1,0,0,1,1,0,n,1,0);
       var face:ObjectFace3D = new ObjectFace3D(obj3D_,new <int>[offset,offset + 1,offset + 2,offset + 3]);
       face.texture_ = texture;

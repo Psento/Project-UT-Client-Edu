@@ -56,7 +56,7 @@ public class TextButton extends Sprite
             return;
          }
          mouseEnabled = enabled;
-         this.graphicsData_[0] = !!enabled?this.enabledFill_:this.disabledFill_;
+         this.graphicsData_[0] = enabled?this.enabledFill_:this.disabledFill_;
          this.draw();
       }
       

@@ -90,7 +90,7 @@ public class ViewBoard extends Sprite
             this.scrollBar_.addEventListener(Event.CHANGE,this.onScrollBarChange);
             addChild(this.scrollBar_);
          }
-         this.w_ = TEXT_WIDTH + (!!showScrollbar?26:0);
+         this.w_ = TEXT_WIDTH + (showScrollbar?26:0);
          this.editButton_ = new TextButton(14,"Edit",120);
          this.editButton_.x = 4;
          this.editButton_.y = TEXT_HEIGHT + 4;

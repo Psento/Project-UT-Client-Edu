@@ -239,9 +239,9 @@ public class Renderer
             return;
          }
          var stage3d:Stage3D = GameClient.STAGE.stage3Ds[0];
-         stage3d.context3D.configureBackBuffer(GameClient.STAGE.stageWidth * 3 / 4,GameClient.STAGE.stageHeight,2,false);
-         this.stageWidth = GameClient.STAGE.stageWidth * 3 / 4;
-         this.stageHeight = GameClient.STAGE.stageHeight;
+         stage3d.context3D.configureBackBuffer(GameClient.StageWidth * 3 / 4,GameClient.StageHeight,2, true);
+         this.stageWidth = GameClient.StageWidth * 3 / 4;
+         this.stageHeight = GameClient.StageHeight;
       }
       
       private function renderWithPostEffect(graphicsDatas:Vector.<IGraphicsData>, grahpicsData3d:Vector.<Object3DStage3D>, mapWidth:Number, mapHeight:Number, camera:Camera, filterIndex:uint) : void

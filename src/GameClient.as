@@ -108,8 +108,10 @@ import svera.untiered.ui.UIUtils;
          HalfStageHeight = StageHeight * 0.5;
 
          if (Renderer.inGame) {
-            scaleX = StageWidth / 800.0;
-            scaleY = StageHeight / 600.0;
+/*            scaleX = StageWidth / 800.0;
+            scaleY = StageHeight / 600.0;*/
+            scaleX = 1
+            scaleY = 1
             Camera.adjustDimensions();
             Stage3DConfig.Dimensions();
 /*            x = (800 - stage.stageWidth) / 2.0;

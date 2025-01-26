@@ -446,7 +446,7 @@ public class MapUserInput
             break;
          case Parameters.data_.options:
             this.clearInput();
-            this.layers.overlay.addChild(new Options(this.gs_));
+            GameClient.STAGE.addChild(new Options(this.gs_));
             break;
          case Parameters.data_.toggleCentering:
             Parameters.data_.centerOnPlayer = !Parameters.data_.centerOnPlayer;

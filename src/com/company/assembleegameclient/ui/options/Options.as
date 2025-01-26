@@ -53,7 +53,7 @@ public class Options extends Sprite
          this.gs_ = gs;
          graphics.clear();
          graphics.beginFill(2829099,0.8);
-         graphics.drawRect(0,0,GameClient.StageWidth,600);
+         graphics.drawRect(0,0,GameClient.StageWidth,GameClient.StageHeight);
          graphics.endFill();
          graphics.lineStyle(1,6184542);
          graphics.moveTo(0,100);
@@ -158,18 +158,22 @@ public class Options extends Sprite
                break;
          }
       }
-      
+      private function onResize(event:Event) : void
+      {
+         this.continueButton_.x = GameClient.HalfStageWidth - this.continueButton_.width * 0.5;
+         this.continueButton_.y = GameClient.StageHeight - (600 - 520);
+         this.resetToDefaultsButton_.x = continueButton_.x - 300;
+         this.resetToDefaultsButton_.y = GameClient.StageHeight - (600 - 532);
+         this.homeButton_.x = continueButton_.x + 300;
+         this.homeButton_.y = resetToDefaultsButton_.y;
+      }
       private function onAddedToStage(event:Event) : void
       {
-         this.continueButton_.x = stage.stageWidth / 2 - this.continueButton_.width / 2;
-         this.continueButton_.y = GameClient.StageHeight - (600 - 520);
-         this.resetToDefaultsButton_.x = 20;
-         this.resetToDefaultsButton_.y = GameClient.StageHeight - (600 - 532);
-         this.homeButton_.x = 620;
-         this.homeButton_.y = resetToDefaultsButton_.y;
+         onResize(null);
          this.setSelected(this.tabs_[0]);
-         stage.addEventListener(KeyboardEvent.KEY_DOWN,this.onKeyDown,false,1);
-         stage.addEventListener(KeyboardEvent.KEY_UP,this.onKeyUp,false,1);
+         GameClient.STAGE.addEventListener(Event.RESIZE, onResize, false, 1, true);
+         stage.addEventListener(KeyboardEvent.KEY_DOWN,this.onKeyDown,false,1, true);
+         stage.addEventListener(KeyboardEvent.KEY_UP,this.onKeyUp,false,1, true);
       }
       
       private function onRemovedFromStage(event:Event) : void

@@ -52,6 +52,7 @@ public class HUDView extends Sprite
       instance = this;
       this.createAssets();
       this.addAssets();
+      GameClient.STAGE.addEventListener(Event.RESIZE, positionAssets);
       this.positionAssets();
    }
 
@@ -71,17 +72,31 @@ public class HUDView extends Sprite
       addChild(this.statMeters);
    }
 
-   private function positionAssets() : void
+   private function positionAssets(e:Event = null) : void
    {
       hudOverlay.parent.mouseEnabled = false;
-      this.hudOverlay.x =  -(this.hudOverlay.width / 2);
-      this.hudOverlay.y = 0;
-      this.miniMap.x = this.MAP_POSITION.x;
+      this.hudOverlay.x = -(this.hudOverlay.width * 0.5);
+      this.hudOverlay.y = GameClient.StageHeight - hudOverlay.height;
+      this.miniMap.x = GameClient.HalfStageWidth - miniMap._width - 2;
       this.miniMap.y = this.MAP_POSITION.y;
-      this.characterDetails.x -= 211;
-      this.characterDetails.y = 504;
-      this.statMeters.x -= 176 / 2;
-      this.statMeters.y = 593 - this.statMeters.height;
+      this.characterDetails.x = -211;
+      this.characterDetails.y = GameClient.StageHeight - 90;
+      this.statMeters.x = -176 * 0.5;
+      this.statMeters.y = GameClient.StageHeight - this.statMeters.height;
+
+      if(inventoryGrid && equippedGrid && statsView && interactPanel){
+         this.inventoryGrid.x = this.equippedGrid.width * 3;
+         this.inventoryGrid.y = GameClient.StageHeight - inventoryGrid.height;
+
+         this.equippedGrid.x = 0 - this.equippedGrid.width * 4;
+         this.equippedGrid.y = this.inventoryGrid.y;
+
+         this.statsView.x = this.equippedGrid.x - this.equippedGrid.width - (this.statsView.width);
+         this.statsView.y = this.inventoryGrid.y;
+
+         this.interactPanel.x = this.INTERACT_PANEL_POSITION.x;
+         this.interactPanel.y = GameClient.StageHeight - interactPanel.height;
+      }
    }
 
    public function setPlayerDependentAssets(gs:GameSprite) : void
@@ -93,7 +108,7 @@ public class HUDView extends Sprite
       this.interactPanel = new InteractPanel(gs,player,200,100);
 
       this.inventoryGrid.x = this.equippedGrid.width * 3;
-      this.inventoryGrid.y = stage.stageHeight / 2 - this.inventoryGrid.height / 2;
+      this.inventoryGrid.y = GameClient.StageHeight - this.inventoryGrid.height;
       this.inventoryGrid.visible = false;
 
       this.equippedGrid.x = 0 - this.equippedGrid.width * 4;
@@ -105,7 +120,7 @@ public class HUDView extends Sprite
       this.statsView.visible = false;
 
       this.interactPanel.x = this.INTERACT_PANEL_POSITION.x;
-      this.interactPanel.y = this.INTERACT_PANEL_POSITION.y;
+      this.interactPanel.y = GameClient.StageHeight - interactPanel.height;
 
       addChild(this.inventoryGrid);
       addChild(this.equippedGrid);
@@ -132,7 +147,7 @@ public class HUDView extends Sprite
          return;
       }
       this.tradePanel = new TradePanel(gs,tradeStart);
-      this.tradePanel.y = 200;
+      this.tradePanel.y = GameClient.StageHeight - (600 - 200);
       this.tradePanel.addEventListener(Event.CANCEL,this.onTradeCancel);
       addChild(this.tradePanel);
       this.characterDetails.visible = false;

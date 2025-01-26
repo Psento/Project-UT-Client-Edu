@@ -10,8 +10,6 @@ import svera.untiered.core.signals.SetScreenSignal;
 
 public class ScreensMediator extends Mediator
    {
-       
-      
       [Inject]
       public var view:ScreensView;
       

@@ -359,7 +359,18 @@ public class Map extends Sprite
          }
          return this.squares_[x + y * this.width_];
       }
-      
+      public function correctMapView(camera:Camera):Point {
+         var clipRect:Rectangle = camera.clipRect_;
+         x = (-clipRect.x * GameClient.StageWidth) / (GameClient.StageWidth / Parameters.data_.mScale);
+         y = (-clipRect.y * GameClient.StageHeight) / (GameClient.StageHeight / Parameters.data_.mScale);
+         var clipWidth:Number = (-clipRect.x - clipRect.width / 2) / 50;
+         var clipHeight:Number = (-clipRect.y - clipRect.height / 2) / 50;
+         var clipSqrt:Number = Math.sqrt(clipWidth * clipWidth + clipHeight * clipHeight);
+         var clipAngle:Number = camera.angleRad_ - (Math.PI / 2) - Math.atan2(clipWidth, clipHeight);
+         return new Point(camera.x_ + clipSqrt * Math.cos(clipAngle), camera.y_ + clipSqrt * Math.sin(clipAngle));
+      }
+
+
       public function draw(camera:Camera, time:int) : void
       {
          var isGpuRender:Boolean = Parameters.isGpuRender(); // cache result for faster access
@@ -392,11 +403,8 @@ public class Map extends Sprite
          var t:Number = NaN;
          var d:Number = NaN;
          var screenRect:Rectangle = camera.clipRect_;
-         x = 400;
-         y = Boolean(Parameters.data_.centerOnPlayer)?-Camera.CENTER_SCREEN_RECT.y:-Camera.OFFSET_SCREEN_RECT.y;
+         correctMapView(camera);
          stage.scaleMode = StageScaleMode.NO_SCALE;
-         scaleX = 800 / GameClient.StageWidth;
-         scaleY = 600 / GameClient.StageHeight;
          var distW:Number = (-screenRect.y - screenRect.height / 2) / 50;
          var screenCenterW:Point = new Point(camera.x_ + distW * Math.cos(camera.angleRad_ - Math.PI / 2),camera.y_ + distW * Math.sin(camera.angleRad_ - Math.PI / 2));
          if(this.background_ != null)

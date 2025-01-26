@@ -5,6 +5,7 @@ import com.company.assembleegameclient.map.Map;
 import com.company.assembleegameclient.objects.GameObject;
 import com.company.assembleegameclient.objects.IInteractiveObject;
 import com.company.assembleegameclient.objects.Player;
+import com.company.assembleegameclient.parameters.Parameters;
 import com.company.assembleegameclient.ui.GuildText;
 import com.company.assembleegameclient.ui.RankText;
 import com.company.assembleegameclient.ui.TextBox;
@@ -98,13 +99,108 @@ public class GameSprite extends Sprite
          {
             this.showSafeAreaDisplays();
          }
-
+         GameClient.STAGE.dispatchEvent(new Event(Event.RESIZE));
          if (this.map.name_ == "Nexus")
          {
             isNexus_ = true;
          }
       }
-      
+      public function onScreenResize(_arg_1:Event):void {
+         var uiscale:Boolean = true;//Parameters.data_.uiscale;
+         var sWidth:Number = 1;
+         var sHeight:Number = 1;
+         var result:Number = sWidth / sHeight;
+         if (this.map != null) {
+            this.map.scaleX = sWidth * Parameters.data_.mScale;
+            this.map.scaleY = sHeight * Parameters.data_.mScale;
+         }
+/*         if (this.scaledLayer != null) {
+            if (uiscale) {
+               this.scaledLayer.scaleX = result;
+               this.scaledLayer.scaleY = 1;
+            } else {
+               this.scaledLayer.scaleX = sWidth;
+               this.scaledLayer.scaleY = sHeight;
+            }
+            this.scaledLayer.x = 400 - ((800 * this.scaledLayer.scaleX) / 2);
+            this.scaledLayer.y = 300 - ((600 * this.scaledLayer.scaleY) / 2);
+         }
+         if (this.forceScaledLayer != null) {
+            this.forceScaledLayer.scaleX = result;
+            this.forceScaledLayer.scaleY = 1;
+         }
+         if (this.bossHealthBar != null)
+         {
+            if (uiscale)
+            {
+               this.bossHealthBar.scaleX = result;
+               this.bossHealthBar.scaleY = 1;
+            }
+            else
+            {
+               this.bossHealthBar.scaleX = sWidth;
+               this.bossHealthBar.scaleY = sHeight;
+            }
+         }*/
+         if (this.hudView != null) {
+/*            if (!Parameters.data_.hudscale) {
+               this.hudView.scaleX = result;
+               this.hudView.scaleY = 1;
+               this.hudView.y = 0;
+            } else {*/
+               this.hudView.scaleX = sWidth;
+               this.hudView.scaleY = sHeight;
+               //this.hudView.y = (300 * (1 - sHeight));
+            //}
+            //this.hudView.x = (800 - (200 * this.hudView.scaleX));
+            if (this.currencyDisplay_ != null) {
+               this.currencyDisplay_.x = (this.hudView.x - (6 * this.currencyDisplay_.scaleX));
+            }
+         }
+         if (this.textBox_ != null) {
+            if (uiscale) {
+               this.textBox_.scaleX = result;
+               this.textBox_.scaleY = 1;
+               this.textBox_.y = 0;
+            } else {
+               this.textBox_.scaleX = sWidth;
+               this.textBox_.scaleY = sHeight;
+               this.textBox_.y = (600 * (1 - sHeight));
+            }
+            //trace("resize",chatBox_.y,chatBox_.list.y)
+         }
+         if (this.rankText_ != null) {
+            if (uiscale) {
+               this.rankText_.scaleX = result;
+               this.rankText_.scaleY = 1;
+            } else {
+               this.rankText_.scaleX = sWidth;
+               this.rankText_.scaleY = sHeight;
+            }
+            this.rankText_.x = (8 * this.rankText_.scaleX);
+            this.rankText_.y = (2 * this.rankText_.scaleY);
+         }
+         if (this.guildText_ != null) {
+            if (uiscale) {
+               this.guildText_.scaleX = result;
+               this.guildText_.scaleY = 1;
+            } else {
+               this.guildText_.scaleX = sWidth;
+               this.guildText_.scaleY = sHeight;
+            }
+            this.guildText_.x = (64 * this.guildText_.scaleX);
+            this.guildText_.y = (2 * this.guildText_.scaleY);
+         }
+         if (this.currencyDisplay_ != null) {
+            if (uiscale) {
+               this.currencyDisplay_.scaleX = result;
+               this.currencyDisplay_.scaleY = 1;
+            } else {
+               this.currencyDisplay_.scaleX = sWidth;
+               this.currencyDisplay_.scaleY = sHeight;
+            }
+         }
+      }
       private function showSafeAreaDisplays() : void
       {
          this.showRankText();
@@ -185,6 +281,7 @@ public class GameSprite extends Sprite
             this.gsc_.connect();
             this.lastUpdate_ = getTimer();
             stage.addEventListener(Event.ENTER_FRAME,this.onEnterFrame);
+            GameClient.STAGE.addEventListener(Event.RESIZE, onScreenResize);
             LoopedProcess.addProcess(new LoopedCallback(100,this.updateNearestInteractive));
          }
       }
@@ -197,6 +294,7 @@ public class GameSprite extends Sprite
             Renderer.inGame = false;
             this.gsc_.serverConnection.disconnect();
             stage.removeEventListener(Event.ENTER_FRAME,this.onEnterFrame);
+            GameClient.STAGE.removeEventListener(Event.RESIZE, onScreenResize);
             LoopedProcess.destroyAll();
             contains(this.map) && removeChild(this.map);
             this.map.dispose();

@@ -4,8 +4,6 @@ import flash.display.Sprite;
 
 public class ScreensView extends Sprite
    {
-       
-      
       private var current:Sprite;
       
       private var previous:Sprite;
@@ -23,6 +21,7 @@ public class ScreensView extends Sprite
          }
          this.removePrevious();
          this.current = sprite;
+
          addChild(sprite);
       }
       

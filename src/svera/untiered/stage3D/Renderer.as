@@ -292,7 +292,7 @@ public class Renderer
       
       private function renderScene(graphicsDatas:Vector.<IGraphicsData>, grahpicsData3d:Vector.<Object3DStage3D>, mapWidth:Number, mapHeight:Number, camera:Camera) : void
       {
-         var test:int = 0;
+         var test:GraphicsBitmapFill;
          var graphicsData:IGraphicsData = null;
          this.context3D.clear();
          var finalTransform:Matrix3D = new Matrix3D();
@@ -307,14 +307,15 @@ public class Renderer
             {
                try
                {
-                  test = GraphicsBitmapFill(graphicsData).bitmapData.width;
+                  test = GraphicsBitmapFill(graphicsData);
+                  var a:int = test.bitmapData.width;
                }
                catch(e:Error)
                {
                   trace("ERROR CAUGHT -- Invalid Bitmap Data");
                   continue;
                }
-               this.graphic3D_.setGraphic(GraphicsBitmapFill(graphicsData),this.context3D);
+               this.graphic3D_.setGraphic(test,this.context3D);
                finalTransform.identity();
                finalTransform.append(this.graphic3D_.getMatrix3D());
                finalTransform.appendScale(1 / Stage3DConfig.HALF_WIDTH,1 / Stage3DConfig.HALF_HEIGHT,1);
@@ -361,7 +362,7 @@ public class Renderer
       private function setTranslationToGame() : void
       {
          this.tX = 0;
-         this.tY = Boolean(Parameters.data_.centerOnPlayer)?Number(-50):Number((Camera.OFFSET_SCREEN_RECT.y + Camera.CENTER_SCREEN_RECT.height / 2) * 2);
+         this.tY = Boolean(Parameters.data_.centerOnPlayer)?-50:(Camera.OFFSET_SCREEN_RECT.y + Camera.CENTER_SCREEN_RECT.height * 0.5) * 2;
       }
       
       private function setTranslationToTitle() : void

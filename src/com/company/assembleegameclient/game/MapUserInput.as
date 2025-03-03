@@ -200,6 +200,8 @@ public class MapUserInput {
             } else {
                 Parameters.data_.mScale = Math.max(Parameters.data_.mScale - 0.05, 0.7);
             }
+            if (event.delta != 0)
+                Parameters.root.dispatchEvent(new Event(Event.RESIZE));
             return;
         }
         if (event.delta > 0) {

@@ -328,10 +328,10 @@ public class Map extends Sprite {
     public function draw(camera:Camera, time:int):void {
         var isGpuRender:Boolean = Parameters.isGpuRender(); // cache result for faster access
         Parameters.GPURenderFrame = isGpuRender;
+
         if (wasLastFrameGpu != isGpuRender) {
             var context:Context3D = GameClient.STAGE.stage3Ds[0].context3D;
-            if (wasLastFrameGpu && context != null &&
-                    context.driverInfo.toLowerCase().indexOf("disposed") == -1) {
+            if (wasLastFrameGpu && context != null && context.driverInfo.toLowerCase().indexOf("disposed") == -1) {
                 context.clear();
                 context.present();
             } else {
@@ -340,7 +340,6 @@ public class Map extends Sprite {
             signalRenderSwitch.dispatch(wasLastFrameGpu);
             wasLastFrameGpu = isGpuRender;
         }
-
         var filter:uint = 0;
         var render3D:Render3D = null;
         var i:int = 0;
@@ -356,6 +355,10 @@ public class Map extends Sprite {
         var d:Number = NaN;
         var screenRect:Rectangle = camera.clipRect_;
         correctMapView(camera);
+        if (this.wasLastFrameGpu) {
+            GameClient.STAGE.stage3Ds[0].x = scaleX;/*400 - Stage3DConfig.HALF_WIDTH * Parameters.data_.mScale;*/
+            GameClient.STAGE.stage3Ds[0].y = scaleY;/*300 - Stage3DConfig.HALF_HEIGHT * Parameters.data_.mScale;*/
+        }
         stage.scaleMode = StageScaleMode.NO_SCALE;
         var distW:Number = (-screenRect.y - screenRect.height / 2) / 50;
         var screenCenterW:Point = new Point(camera.x_ + distW * Math.cos(camera.angleRad_ - Math.PI / 2), camera.y_ + distW * Math.sin(camera.angleRad_ - Math.PI / 2));
@@ -405,14 +408,12 @@ public class Map extends Sprite {
             if (!(square == null || square.lastVisible_ != time)) {
                 go.drawn_ = true;
                 go.computeSortVal(camera);
-                if (go.props_.drawUnder_) {
-                    if (go.props_.drawOnGround_) {
-                        go.draw(this.graphicsData_, camera, time);
-                    } else {
-                        this.visibleUnder_.push(go);
-                    }
-                } else {
+                if (!go.props_.drawUnder_) {
                     this.visible_.push(go);
+                } else if (go.props_.drawOnGround_) {
+                    go.draw(this.graphicsData_, camera, time);
+                } else {
+                    this.visibleUnder_.push(go);
                 }
             }
         }

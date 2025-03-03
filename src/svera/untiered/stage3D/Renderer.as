@@ -330,8 +330,8 @@ public class Renderer {
     }
 
     private function setTranslationToGame():void {
-        this.tX = 0;
-        this.tY = Boolean(Parameters.data_.centerOnPlayer) ? -50 : (Camera.OFFSET_SCREEN_RECT.y + Camera.CENTER_SCREEN_RECT.height * 0.5) * 2;
+        tX = -200.0 / Parameters.data_.mScale * (GameClient.StageHeight / 600.0);
+        tY = !Parameters.data_.centerOnPlayer ? (Camera.OFFSET_SCREEN_RECT.y + Camera.CENTER_SCREEN_RECT.height * 0.5) * 2 : -50.0 / Parameters.data_.mScale * (GameClient.StageHeight / 600.0);
     }
 
     private function setTranslationToTitle():void {

@@ -41,18 +41,18 @@ public class GiftWindow extends Sprite {
         graphics.endFill();
     }
 
-    public function setContent(size:int, slots:Vector.<StorageSlotUpdateData>) : void {
+    public function setContent(size:int, slots:Vector.<StorageSlotUpdateData>):void {
         this.owner_.setContainer(size, slots);
         this.contentView_.initialize(size, slots);
     }
 
-    public function updateSlot(slot:int, inventory:int, itemData:int) : void {
+    public function updateSlot(slot:int, inventory:int, itemData:int):void {
         this.owner_.equipment_[slot] = inventory;
         this.owner_.itemDatas_[slot] = itemData;
         this.contentView_.updateSlot(slot, inventory, itemData);
     }
 
-    private function onSort(e:MouseEvent) : void {
+    private function onSort(e:MouseEvent):void {
         var caller:StorageSortTab = e.currentTarget as StorageSortTab;
         if (caller == null) {
             return;
@@ -71,7 +71,7 @@ public class GiftWindow extends Sprite {
         }
     }
 
-    public function dispose() : void {
+    public function dispose():void {
 
     }
 }

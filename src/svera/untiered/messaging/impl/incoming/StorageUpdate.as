@@ -9,14 +9,12 @@ public class StorageUpdate extends IncomingMessage {
     public var size_:int;
     public var items_:Vector.<StorageSlotUpdateData>;
 
-    public function StorageUpdate(id:uint, callback:Function)
-    {
+    public function StorageUpdate(id:uint, callback:Function) {
         this.items_ = new Vector.<StorageSlotUpdateData>();
-        super(id,callback);
+        super(id, callback);
     }
 
-    override public function parseFromInput(data:IDataInput) : void
-    {
+    override public function parseFromInput(data:IDataInput):void {
         this.items_.length = 0;
 
         this.type_ = data.readByte();
@@ -29,7 +27,7 @@ public class StorageUpdate extends IncomingMessage {
         }
     }
 
-    override public function toString() : String {
+    override public function toString():String {
         return "";
     }
 }

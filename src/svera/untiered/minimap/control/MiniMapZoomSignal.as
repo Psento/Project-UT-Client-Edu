@@ -1,18 +1,15 @@
-package svera.untiered.minimap.control
-{
+package svera.untiered.minimap.control {
 import org.osflash.signals.Signal;
 
-public class MiniMapZoomSignal extends Signal
-   {
-      
-      public static const OUT:String = "OUT";
-      
-      public static const IN:String = "IN";
-       
-      
-      public function MiniMapZoomSignal()
-      {
-         super(String);
-      }
-   }
+public class MiniMapZoomSignal extends Signal {
+
+    public static const OUT:String = "OUT";
+
+    public static const IN:String = "IN";
+
+
+    public function MiniMapZoomSignal() {
+        super(String);
+    }
+}
 }

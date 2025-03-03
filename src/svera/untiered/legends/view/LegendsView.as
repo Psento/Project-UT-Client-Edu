@@ -2,7 +2,6 @@ package svera.untiered.legends.view {
 import com.company.assembleegameclient.screens.TitleMenuOption;
 import com.company.assembleegameclient.ui.Scrollbar;
 import com.company.ui.SimpleText;
-import com.company.untiered.graphics.ScreenGraphic;
 
 import flash.display.Graphics;
 import flash.display.Shape;

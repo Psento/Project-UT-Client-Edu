@@ -1,5 +1,4 @@
-package svera.untiered.ui.view.components
-{
+package svera.untiered.ui.view.components {
 import com.company.ui.SimpleText;
 import com.company.util.MoreColorUtil;
 
@@ -16,188 +15,168 @@ import flash.utils.Timer;
 import org.osflash.signals.Signal;
 import org.osflash.signals.natives.NativeSignal;
 
-public class PotionSlotView extends Sprite
-   {
-      private static var BUTTON_HEIGHT:int = 24;
-      private static const DOUBLE_CLICK_PAUSE:uint = 250;
-      //private static const DRAG_DIST:int = 3;
-      
-      public var position:int;
-      public var objectType:int;
-      public var click:NativeSignal;
-      public var buyUse:Signal;
-      //public var drop:Signal;
-      private var lightGrayFill:GraphicsSolidFill;
-      private var midGrayFill:GraphicsSolidFill;
-      private var darkGrayFill:GraphicsSolidFill;
-      private var text:SimpleText;
-      //private var potionIconDraggableSprite:Sprite;
-      private var potionIcon:Bitmap;
-      private var grayscaleMatrix:ColorMatrixFilter;
-      private var available:Boolean = false;
-      private var doubleClickTimer:Timer;
-      //private var dragStart:Point;
-      private var pendingSecondClick:Boolean;
-      //private var isDragging:Boolean;
-      private var showPots:Boolean;
-      
-      public function PotionSlotView(position:int)
-      {
-         this.lightGrayFill = new GraphicsSolidFill(5526612,1);
-         this.midGrayFill = new GraphicsSolidFill(4078909,1);
-         this.darkGrayFill = new GraphicsSolidFill(2368034,1);
-         super();
-         mouseChildren = false;
-         this.position = position;
-         this.grayscaleMatrix = new ColorMatrixFilter(MoreColorUtil.greyscaleFilterMatrix);
-         this.text = new SimpleText(8,16777215,false,BUTTON_HEIGHT,BUTTON_HEIGHT);
-         this.text.filters = [new DropShadowFilter(0,0,0,1,4,4,2)];
-         this.text.y = 4;
-         addChild(this.text);
-         //this.potionIconDraggableSprite = new Sprite();
-         this.doubleClickTimer = new Timer(DOUBLE_CLICK_PAUSE,1);
-         this.doubleClickTimer.addEventListener(TimerEvent.TIMER_COMPLETE,this.onDoubleClickTimerComplete);
-         //addEventListener(MouseEvent.MOUSE_DOWN,this.onMouseDown);
-         addEventListener(MouseEvent.MOUSE_UP,this.onMouseUp);
-         addEventListener(MouseEvent.MOUSE_OUT,this.onMouseOut);
-         addEventListener(Event.REMOVED_FROM_STAGE,this.onRemovedFromStage);
-         this.click = new NativeSignal(this,MouseEvent.CLICK,MouseEvent);
-         this.buyUse = new Signal();
-         //this.drop = new Signal(DisplayObject);
-      }
-      
-      public function setData(potions:int, available:Boolean, objectType:int = -1) : void
-      {
-         if(objectType != -1)
-         {
+public class PotionSlotView extends Sprite {
+    private static var BUTTON_HEIGHT:int = 24;
+    private static const DOUBLE_CLICK_PAUSE:uint = 250;
+    //private static const DRAG_DIST:int = 3;
+
+    public var position:int;
+    public var objectType:int;
+    public var click:NativeSignal;
+    public var buyUse:Signal;
+    //public var drop:Signal;
+    private var lightGrayFill:GraphicsSolidFill;
+    private var midGrayFill:GraphicsSolidFill;
+    private var darkGrayFill:GraphicsSolidFill;
+    private var text:SimpleText;
+    //private var potionIconDraggableSprite:Sprite;
+    private var potionIcon:Bitmap;
+    private var grayscaleMatrix:ColorMatrixFilter;
+    private var available:Boolean = false;
+    private var doubleClickTimer:Timer;
+    //private var dragStart:Point;
+    private var pendingSecondClick:Boolean;
+    //private var isDragging:Boolean;
+    private var showPots:Boolean;
+
+    public function PotionSlotView(position:int) {
+        this.lightGrayFill = new GraphicsSolidFill(5526612, 1);
+        this.midGrayFill = new GraphicsSolidFill(4078909, 1);
+        this.darkGrayFill = new GraphicsSolidFill(2368034, 1);
+        super();
+        mouseChildren = false;
+        this.position = position;
+        this.grayscaleMatrix = new ColorMatrixFilter(MoreColorUtil.greyscaleFilterMatrix);
+        this.text = new SimpleText(8, 16777215, false, BUTTON_HEIGHT, BUTTON_HEIGHT);
+        this.text.filters = [new DropShadowFilter(0, 0, 0, 1, 4, 4, 2)];
+        this.text.y = 4;
+        addChild(this.text);
+        //this.potionIconDraggableSprite = new Sprite();
+        this.doubleClickTimer = new Timer(DOUBLE_CLICK_PAUSE, 1);
+        this.doubleClickTimer.addEventListener(TimerEvent.TIMER_COMPLETE, this.onDoubleClickTimerComplete);
+        //addEventListener(MouseEvent.MOUSE_DOWN,this.onMouseDown);
+        addEventListener(MouseEvent.MOUSE_UP, this.onMouseUp);
+        addEventListener(MouseEvent.MOUSE_OUT, this.onMouseOut);
+        addEventListener(Event.REMOVED_FROM_STAGE, this.onRemovedFromStage);
+        this.click = new NativeSignal(this, MouseEvent.CLICK, MouseEvent);
+        this.buyUse = new Signal();
+        //this.drop = new Signal(DisplayObject);
+    }
+
+    public function setData(potions:int, available:Boolean, objectType:int = -1):void {
+        if (objectType != -1) {
             this.objectType = objectType;
-         }
-         this.available = available;
-         filters = available?[]:[this.grayscaleMatrix];
-         showPots = potions > 0;
-         if(showPots)
-         {
+        }
+        this.available = available;
+        filters = available ? [] : [this.grayscaleMatrix];
+        showPots = potions > 0;
+        if (showPots) {
             this.text.text = String(potions);
             this.text.textColor = 16777215;
             this.text.x = 5;
-         }
-         else
-         {
+        } else {
             this.text.text = "0";
             this.text.textColor = 11184810;
             this.text.x = 5;
-         }
-      }
-      
-      private function onMouseOut(e:MouseEvent) : void
-      {
-         this.setPendingDoubleClick(false);
-      }
-      
-      private function onMouseUp(e:MouseEvent) : void
-      {
-         //if(this.isDragging)
-         //{
-         //   return;
-         //}
-         if(e.shiftKey)
-         {
+        }
+    }
+
+    private function onMouseOut(e:MouseEvent):void {
+        this.setPendingDoubleClick(false);
+    }
+
+    private function onMouseUp(e:MouseEvent):void {
+        //if(this.isDragging)
+        //{
+        //   return;
+        //}
+        if (e.shiftKey) {
             this.setPendingDoubleClick(false);
             this.buyUse.dispatch();
-         }
-         else if(!this.pendingSecondClick)
-         {
+        } else if (!this.pendingSecondClick) {
             this.setPendingDoubleClick(true);
-         }
-         else
-         {
+        } else {
             this.setPendingDoubleClick(false);
             this.buyUse.dispatch();
-         }
-      }
-      
-      //private function onMouseDown(e:MouseEvent) : void
-      //{
-      //   if(showPots)
-      //   {
-      //      this.beginDragCheck(e);
-      //   }
-      //}
-      
-      private function setPendingDoubleClick(isPending:Boolean) : void
-      {
-         this.pendingSecondClick = isPending;
-         if(this.pendingSecondClick)
-         {
+        }
+    }
+
+    //private function onMouseDown(e:MouseEvent) : void
+    //{
+    //   if(showPots)
+    //   {
+    //      this.beginDragCheck(e);
+    //   }
+    //}
+
+    private function setPendingDoubleClick(isPending:Boolean):void {
+        this.pendingSecondClick = isPending;
+        if (this.pendingSecondClick) {
             this.doubleClickTimer.reset();
             this.doubleClickTimer.start();
-         }
-         else
-         {
+        } else {
             this.doubleClickTimer.stop();
-         }
-      }
-      
-      //private function beginDragCheck(e:MouseEvent) : void
-      //{
-      //   this.dragStart = new Point(e.stageX,e.stageY);
-      //   addEventListener(MouseEvent.MOUSE_MOVE,this.onMouseMoveCheckDrag);
-      //   addEventListener(MouseEvent.MOUSE_OUT,this.cancelDragCheck);
-      //   addEventListener(MouseEvent.MOUSE_UP,this.cancelDragCheck);
-      //}
-      
-      //private function cancelDragCheck(e:MouseEvent) : void
-      //{
-      //   removeEventListener(MouseEvent.MOUSE_MOVE,this.onMouseMoveCheckDrag);
-      //   removeEventListener(MouseEvent.MOUSE_OUT,this.cancelDragCheck);
-      //   removeEventListener(MouseEvent.MOUSE_UP,this.cancelDragCheck);
-      //}
-      
-      //private function onMouseMoveCheckDrag(e:MouseEvent) : void
-      //{
-      //   var dx:Number = e.stageX - this.dragStart.x;
-      //   var dy:Number = e.stageY - this.dragStart.y;
-      //   var distance:Number = Math.sqrt(dx * dx + dy * dy);
-      //   if(distance > DRAG_DIST)
-      //   {
-      //      this.cancelDragCheck(null);
-      //      this.setPendingDoubleClick(false);
-      //      this.beginDrag();
-      //   }
-      //}
-      
-      private function onDoubleClickTimerComplete(e:TimerEvent) : void
-      {
-         this.setPendingDoubleClick(false);
-      }
-      
-      //private function beginDrag() : void
-      //{
-      //   this.isDragging = true;
-      //   this.potionIconDraggableSprite.startDrag(true);
-      //   stage.addChild(this.potionIconDraggableSprite);
-      //   this.potionIconDraggableSprite.addEventListener(MouseEvent.MOUSE_UP,this.endDrag);
-      //}
-      
-      //private function endDrag(e:MouseEvent) : void
-      //{
-      //   this.isDragging = false;
-      //   this.potionIconDraggableSprite.stopDrag();
-      //   this.potionIconDraggableSprite.x = this.dragStart.x;
-      //   this.potionIconDraggableSprite.y = this.dragStart.y;
-      //   stage.removeChild(this.potionIconDraggableSprite);
-      //   this.potionIconDraggableSprite.removeEventListener(MouseEvent.MOUSE_UP,this.endDrag);
-      //   this.drop.dispatch(this.potionIconDraggableSprite.dropTarget);
-      //}
-      
-      private function onRemovedFromStage(e:Event) : void
-      {
-         this.setPendingDoubleClick(false);
-         //this.cancelDragCheck(null);
-         //if(this.isDragging)
-         //{
-         //   this.potionIconDraggableSprite.stopDrag();
-         //}
-      }
-   }
+        }
+    }
+
+    //private function beginDragCheck(e:MouseEvent) : void
+    //{
+    //   this.dragStart = new Point(e.stageX,e.stageY);
+    //   addEventListener(MouseEvent.MOUSE_MOVE,this.onMouseMoveCheckDrag);
+    //   addEventListener(MouseEvent.MOUSE_OUT,this.cancelDragCheck);
+    //   addEventListener(MouseEvent.MOUSE_UP,this.cancelDragCheck);
+    //}
+
+    //private function cancelDragCheck(e:MouseEvent) : void
+    //{
+    //   removeEventListener(MouseEvent.MOUSE_MOVE,this.onMouseMoveCheckDrag);
+    //   removeEventListener(MouseEvent.MOUSE_OUT,this.cancelDragCheck);
+    //   removeEventListener(MouseEvent.MOUSE_UP,this.cancelDragCheck);
+    //}
+
+    //private function onMouseMoveCheckDrag(e:MouseEvent) : void
+    //{
+    //   var dx:Number = e.stageX - this.dragStart.x;
+    //   var dy:Number = e.stageY - this.dragStart.y;
+    //   var distance:Number = Math.sqrt(dx * dx + dy * dy);
+    //   if(distance > DRAG_DIST)
+    //   {
+    //      this.cancelDragCheck(null);
+    //      this.setPendingDoubleClick(false);
+    //      this.beginDrag();
+    //   }
+    //}
+
+    private function onDoubleClickTimerComplete(e:TimerEvent):void {
+        this.setPendingDoubleClick(false);
+    }
+
+    //private function beginDrag() : void
+    //{
+    //   this.isDragging = true;
+    //   this.potionIconDraggableSprite.startDrag(true);
+    //   stage.addChild(this.potionIconDraggableSprite);
+    //   this.potionIconDraggableSprite.addEventListener(MouseEvent.MOUSE_UP,this.endDrag);
+    //}
+
+    //private function endDrag(e:MouseEvent) : void
+    //{
+    //   this.isDragging = false;
+    //   this.potionIconDraggableSprite.stopDrag();
+    //   this.potionIconDraggableSprite.x = this.dragStart.x;
+    //   this.potionIconDraggableSprite.y = this.dragStart.y;
+    //   stage.removeChild(this.potionIconDraggableSprite);
+    //   this.potionIconDraggableSprite.removeEventListener(MouseEvent.MOUSE_UP,this.endDrag);
+    //   this.drop.dispatch(this.potionIconDraggableSprite.dropTarget);
+    //}
+
+    private function onRemovedFromStage(e:Event):void {
+        this.setPendingDoubleClick(false);
+        //this.cancelDragCheck(null);
+        //if(this.isDragging)
+        //{
+        //   this.potionIconDraggableSprite.stopDrag();
+        //}
+    }
+}
 }

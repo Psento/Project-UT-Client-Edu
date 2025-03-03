@@ -39,7 +39,8 @@ public class GiftContent extends Sprite {
 
 
     private var content_:Vector.<StorageSlotUpdateData>;
-    public function initialize(size:int, content:Vector.<StorageSlotUpdateData>) : void {
+
+    public function initialize(size:int, content:Vector.<StorageSlotUpdateData>):void {
         if (this.containerGrid_ != null) {
             SpriteUtil.safeRemoveChild(this, this.containerGrid_);
         }
@@ -63,11 +64,11 @@ public class GiftContent extends Sprite {
         SpriteUtil.safeAddChild(this, this.containerGrid_);
     }
 
-    public function updateSlot(slot:int, inventory:int, itemData:int) : void {
+    public function updateSlot(slot:int, inventory:int, itemData:int):void {
         this.containerGrid_.setItem(slot, inventory, itemData);
     }
 
-    public function sortBy(sort:String) : void {
+    public function sortBy(sort:String):void {
         if (this.curSort_ == sort) {
             return;
         }
@@ -77,7 +78,7 @@ public class GiftContent extends Sprite {
     }
 
     public function filterSlotsBySlotType(types:Array):void {
-        while(this.containerGrid_.numChildren > 0) {
+        while (this.containerGrid_.numChildren > 0) {
             this.containerGrid_.removeChildAt(0);
         }
 

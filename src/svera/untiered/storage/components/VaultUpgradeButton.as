@@ -43,7 +43,7 @@ public class VaultUpgradeButton extends Sprite {
         this.addEventListener(MouseEvent.ROLL_OUT, this.rollOut);
     }
 
-    public function setPurchaseInfo(curCapacity:int) : void {
+    public function setPurchaseInfo(curCapacity:int):void {
         this.statusText_.setText(curCapacity + " > " + (curCapacity + CAPACITY_INCREMENT));
         this.purchaseText_.setText("Upgrade " + Parameters.VAULT_SLOT_PRICE);
 

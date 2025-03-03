@@ -1,14 +1,11 @@
-package svera.untiered.account.core.view
-{
+package svera.untiered.account.core.view {
 import com.company.assembleegameclient.ui.dialogs.Dialog;
 
-public class BuyingDialog extends Dialog
-   {
-       
-      
-      public function BuyingDialog()
-      {
-         super("Buying Character Slot...",null,null,null);
-      }
-   }
+public class BuyingDialog extends Dialog {
+
+
+    public function BuyingDialog() {
+        super("Buying Character Slot...", null, null, null);
+    }
+}
 }

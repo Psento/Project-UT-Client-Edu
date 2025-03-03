@@ -1,14 +1,11 @@
-package svera.untiered.core.signals
-{
+package svera.untiered.core.signals {
 import org.osflash.signals.Signal;
 
-public class GotoPreviousScreenSignal extends Signal
-   {
-       
-      
-      public function GotoPreviousScreenSignal()
-      {
-         super();
-      }
-   }
+public class GotoPreviousScreenSignal extends Signal {
+
+
+    public function GotoPreviousScreenSignal() {
+        super();
+    }
+}
 }

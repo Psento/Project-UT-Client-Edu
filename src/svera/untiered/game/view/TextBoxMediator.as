@@ -1,5 +1,4 @@
-package svera.untiered.game.view
-{
+package svera.untiered.game.view {
 import com.company.assembleegameclient.ui.TextBox;
 
 import flash.events.Event;
@@ -16,88 +15,76 @@ import svera.untiered.game.signals.AddTextLineSignal;
 import svera.untiered.game.signals.SetTextBoxVisibilitySignal;
 import svera.untiered.game.signals.ShowChatInputSignal;
 
-public class TextBoxMediator extends Mediator
-   {
-       
-      
-      [Inject]
-      public var chatFilter:ChatFilter;
-      
-      [Inject]
-      public var addTextLine:AddTextLineSignal;
-      
-      [Inject]
-      public var setTextBoxVisibility:SetTextBoxVisibilitySignal;
+public class TextBoxMediator extends Mediator {
 
-      [Inject]
-      public var showChatInput:ShowChatInputSignal;
-      
-      [Inject]
-      public var view:TextBox;
-      
-      [Inject]
-      public var account:Account;
-      
-      [Inject]
-      public var openDialog:OpenDialogSignal;
-      
-      [Inject]
-      public var updateAccount:UpdateAccountInfoSignal;
-      
-      public function TextBoxMediator()
-      {
-         super();
-      }
-      
-      override public function initialize() : void
-      {
-         this.addTextLine.add(this.onAddTextLine);
-         this.setTextBoxVisibility.add(this.onSetTextBoxVisibility);
-         this.updateAccount.add(this.onUpdateAccount);
-         this.view.setInputTextAllowed(this.account.isRegistered());
-         this.view.inputTextClicked.add(this.onInputTextClicked);
-         this.view.speechBubbleClicked.add(this.onInputTextClicked);
-         this.showChatInput.add(this.view.onShowChatInput);
-      }
-      
-      override public function destroy() : void
-      {
-         this.addTextLine.remove(this.onAddTextLine);
-         this.setTextBoxVisibility.remove(this.onSetTextBoxVisibility);
-         this.updateAccount.remove(this.onUpdateAccount);
-         this.view.inputTextClicked.remove(this.onInputTextClicked);
-         this.view.speechBubbleClicked.remove(this.onInputTextClicked);
-         this.showChatInput.remove(this.view.onShowChatInput);
-      }
-      
-      private function onAddTextLine(vo:AddTextLineVO) : void
-      {
-         if(this.account.isRegistered() || this.chatFilter.guestChatFilter(vo.name))
-         {
-            this.view.addTextFull(vo.name,vo.objectId,vo.numStars,vo.recipient,vo.text);
-         }
-      }
-      
-      private function onSetTextBoxVisibility(visible:Boolean) : void
-      {
-         this.view.textSprite_.visible = visible;
-      }
-      
-      private function onInputTextClicked(e:Event) : void
-      {
-         if(!this.account.isRegistered())
-         {
+
+    [Inject]
+    public var chatFilter:ChatFilter;
+
+    [Inject]
+    public var addTextLine:AddTextLineSignal;
+
+    [Inject]
+    public var setTextBoxVisibility:SetTextBoxVisibilitySignal;
+
+    [Inject]
+    public var showChatInput:ShowChatInputSignal;
+
+    [Inject]
+    public var view:TextBox;
+
+    [Inject]
+    public var account:Account;
+
+    [Inject]
+    public var openDialog:OpenDialogSignal;
+
+    [Inject]
+    public var updateAccount:UpdateAccountInfoSignal;
+
+    public function TextBoxMediator() {
+        super();
+    }
+
+    override public function initialize():void {
+        this.addTextLine.add(this.onAddTextLine);
+        this.setTextBoxVisibility.add(this.onSetTextBoxVisibility);
+        this.updateAccount.add(this.onUpdateAccount);
+        this.view.setInputTextAllowed(this.account.isRegistered());
+        this.view.inputTextClicked.add(this.onInputTextClicked);
+        this.view.speechBubbleClicked.add(this.onInputTextClicked);
+        this.showChatInput.add(this.view.onShowChatInput);
+    }
+
+    override public function destroy():void {
+        this.addTextLine.remove(this.onAddTextLine);
+        this.setTextBoxVisibility.remove(this.onSetTextBoxVisibility);
+        this.updateAccount.remove(this.onUpdateAccount);
+        this.view.inputTextClicked.remove(this.onInputTextClicked);
+        this.view.speechBubbleClicked.remove(this.onInputTextClicked);
+        this.showChatInput.remove(this.view.onShowChatInput);
+    }
+
+    private function onAddTextLine(vo:AddTextLineVO):void {
+        if (this.account.isRegistered() || this.chatFilter.guestChatFilter(vo.name)) {
+            this.view.addTextFull(vo.name, vo.objectId, vo.numStars, vo.recipient, vo.text);
+        }
+    }
+
+    private function onSetTextBoxVisibility(visible:Boolean):void {
+        this.view.textSprite_.visible = visible;
+    }
+
+    private function onInputTextClicked(e:Event):void {
+        if (!this.account.isRegistered()) {
             this.openDialog.dispatch(new WebRegisterDialog());
-         }
-         else
-         {
+        } else {
             this.view.stage.focus = null;
-         }
-      }
-      
-      private function onUpdateAccount() : void
-      {
-         this.view.setInputTextAllowed(this.account.isRegistered());
-      }
-   }
+        }
+    }
+
+    private function onUpdateAccount():void {
+        this.view.setInputTextAllowed(this.account.isRegistered());
+    }
+}
 }

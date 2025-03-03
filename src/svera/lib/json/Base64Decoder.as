@@ -1,27 +1,22 @@
-package svera.lib.json
-{
+package svera.lib.json {
 import com.hurlant.util.Base64;
 
-public class Base64Decoder
-   {
-       
-      
-      public function Base64Decoder()
-      {
-         super();
-      }
-      
-      public function decode(encodedString:String) : String
-      {
-         var patternMinus:RegExp = /-/g;
-         var patternUnderscore:RegExp = /_/g;
-         var padding:int = 4 - encodedString.length % 4;
-         while(padding--)
-         {
+public class Base64Decoder {
+
+
+    public function Base64Decoder() {
+        super();
+    }
+
+    public function decode(encodedString:String):String {
+        var patternMinus:RegExp = /-/g;
+        var patternUnderscore:RegExp = /_/g;
+        var padding:int = 4 - encodedString.length % 4;
+        while (padding--) {
             encodedString = encodedString + "=";
-         }
-         encodedString = encodedString.replace(patternMinus,"+").replace(patternUnderscore,"/");
-         return Base64.decode(encodedString);
-      }
-   }
+        }
+        encodedString = encodedString.replace(patternMinus, "+").replace(patternUnderscore, "/");
+        return Base64.decode(encodedString);
+    }
+}
 }

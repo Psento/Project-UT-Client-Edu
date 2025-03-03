@@ -1,5 +1,4 @@
-package svera.untiered.account
-{
+package svera.untiered.account {
 import flash.display.DisplayObjectContainer;
 import flash.display.LoaderInfo;
 
@@ -19,53 +18,48 @@ import svera.untiered.account.web.WebAccountConfig;
 import svera.untiered.core.signals.TaskErrorSignal;
 import svera.untiered.ui.signals.BuyCharacterSlotSignal;
 
-public class AccountConfig implements IConfig
-   {
-       
-      
-      [Inject]
-      public var root:DisplayObjectContainer;
-      
-      [Inject]
-      public var injector:Injector;
-      
-      [Inject]
-      public var commandMap:ISignalCommandMap;
-      
-      [Inject]
-      public var mediatorMap:IMediatorMap;
-      
-      [Inject]
-      public var context:IContext;
-      
-      [Inject]
-      public var info:LoaderInfo;
-      
-      [Inject]
-      public var logger:ILogger;
-      
-      public function AccountConfig()
-      {
-         super();
-      }
-      
-      public function configure() : void
-      {
-         this.configureCommonFunctionality();
-         this.configureAccountSpecificFunctionality();
-      }
-      
-      private function configureCommonFunctionality() : void
-      {
-         this.injector.map(TaskErrorSignal).asSingleton();
-         this.injector.map(UpdateAccountInfoSignal).asSingleton();
-         this.injector.map(GetCharListTask);
-         this.commandMap.map(BuyCharacterSlotSignal).toCommand(BuyCharacterSlotCommand).withGuards(IsAccountRegisteredGuard)
-      }
-      
-      private function configureAccountSpecificFunctionality() : void
-      {
-         this.context.configure(WebAccountConfig);
-      }
-   }
+public class AccountConfig implements IConfig {
+
+
+    [Inject]
+    public var root:DisplayObjectContainer;
+
+    [Inject]
+    public var injector:Injector;
+
+    [Inject]
+    public var commandMap:ISignalCommandMap;
+
+    [Inject]
+    public var mediatorMap:IMediatorMap;
+
+    [Inject]
+    public var context:IContext;
+
+    [Inject]
+    public var info:LoaderInfo;
+
+    [Inject]
+    public var logger:ILogger;
+
+    public function AccountConfig() {
+        super();
+    }
+
+    public function configure():void {
+        this.configureCommonFunctionality();
+        this.configureAccountSpecificFunctionality();
+    }
+
+    private function configureCommonFunctionality():void {
+        this.injector.map(TaskErrorSignal).asSingleton();
+        this.injector.map(UpdateAccountInfoSignal).asSingleton();
+        this.injector.map(GetCharListTask);
+        this.commandMap.map(BuyCharacterSlotSignal).toCommand(BuyCharacterSlotCommand).withGuards(IsAccountRegisteredGuard)
+    }
+
+    private function configureAccountSpecificFunctionality():void {
+        this.context.configure(WebAccountConfig);
+    }
+}
 }

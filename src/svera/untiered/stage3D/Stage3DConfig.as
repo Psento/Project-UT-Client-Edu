@@ -1,5 +1,4 @@
-package svera.untiered.stage3D
-{
+package svera.untiered.stage3D {
 import com.company.assembleegameclient.engine3d.Model3D;
 import com.company.assembleegameclient.parameters.Parameters;
 import com.company.assembleegameclient.util.Stage3DProxy;
@@ -15,86 +14,78 @@ import org.swiftsuspenders.Injector;
 import robotlegs.bender.framework.api.IConfig;
 
 import svera.untiered.stage3D.graphic3D.Graphic3D;
-
 import svera.untiered.stage3D.graphic3D.Graphic3DHelper;
 import svera.untiered.stage3D.graphic3D.IndexBufferFactory;
 import svera.untiered.stage3D.graphic3D.TextureFactory;
 import svera.untiered.stage3D.graphic3D.VertexBufferFactory;
 import svera.untiered.stage3D.proxies.Context3DProxy;
 
-public class Stage3DConfig implements IConfig
-   {
-      
-      public static var WIDTH:int = 600;
-      
-      public static var HALF_WIDTH:int = WIDTH / 2;
-      
-      public static var HEIGHT:int = 600;
-      
-      public static var HALF_HEIGHT:int = HEIGHT / 2;
-       
-      
-      [Inject]
-      public var stageProxy:StageProxy;
-      
-      [Inject]
-      public var injector:Injector;
-      
-      public var renderer:Renderer;
-      
-      private var stage3D:Stage3DProxy;
-      
-      public function Stage3DConfig()
-      {
-         super();
-      }
+public class Stage3DConfig implements IConfig {
 
-      public static function Dimensions() : void
-      {
-         var mscale:Number = Parameters.data_.mScale;
-         var WidthScaled:Number = GameClient.StageWidth / mscale;
-         var HeightScaled:Number = GameClient.StageHeight / mscale;
-         WIDTH = WidthScaled;
-         HALF_WIDTH = WidthScaled / 2;
-         HEIGHT = HeightScaled;
-         HALF_HEIGHT = HeightScaled / 2;
-      }
+    public static var WIDTH:int = 600;
 
-      public function configure() : void
-      {
-         this.mapSingletons();
-         this.stage3D = this.stageProxy.getStage3Ds(0);
-         this.stage3D.addEventListener(ErrorEvent.ERROR,Parameters.clearGpuRenderEvent);
-         this.stage3D.addEventListener(Event.CONTEXT3D_CREATE,this.onContextCreate);
-         this.stage3D.requestContext3D();
-      }
+    public static var HALF_WIDTH:int = WIDTH / 2;
 
-      private function mapSingletons() : void
-      {
-         injector.map(Renderer).asSingleton();
-         injector.map(Graphic3D).asSingleton();
-         this.injector.map(Render3D).asSingleton();
-         this.injector.map(TextureFactory).asSingleton();
-         this.injector.map(IndexBufferFactory).asSingleton();
-         this.injector.map(VertexBufferFactory).asSingleton();
-      }
+    public static var HEIGHT:int = 600;
 
-      private function onContextCreate(e:Event) : void
-      {
-         this.stage3D.removeEventListener(Event.CONTEXT3D_CREATE,this.onContextCreate);
-         var context3D:Context3DProxy = this.stage3D.getContext3D();
-         if(context3D.GetContext3D().driverInfo.toLowerCase().indexOf("software") != -1)
-         {
+    public static var HALF_HEIGHT:int = HEIGHT / 2;
+
+
+    [Inject]
+    public var stageProxy:StageProxy;
+
+    [Inject]
+    public var injector:Injector;
+
+    public var renderer:Renderer;
+
+    private var stage3D:Stage3DProxy;
+
+    public function Stage3DConfig() {
+        super();
+    }
+
+    public static function Dimensions():void {
+        var mscale:Number = Parameters.data_.mScale;
+        var WidthScaled:Number = GameClient.StageWidth / mscale;
+        var HeightScaled:Number = GameClient.StageHeight / mscale;
+        WIDTH = WidthScaled;
+        HALF_WIDTH = WidthScaled / 2;
+        HEIGHT = HeightScaled;
+        HALF_HEIGHT = HeightScaled / 2;
+    }
+
+    public function configure():void {
+        this.mapSingletons();
+        this.stage3D = this.stageProxy.getStage3Ds(0);
+        this.stage3D.addEventListener(ErrorEvent.ERROR, Parameters.clearGpuRenderEvent);
+        this.stage3D.addEventListener(Event.CONTEXT3D_CREATE, this.onContextCreate);
+        this.stage3D.requestContext3D();
+    }
+
+    private function mapSingletons():void {
+        injector.map(Renderer).asSingleton();
+        injector.map(Graphic3D).asSingleton();
+        this.injector.map(Render3D).asSingleton();
+        this.injector.map(TextureFactory).asSingleton();
+        this.injector.map(IndexBufferFactory).asSingleton();
+        this.injector.map(VertexBufferFactory).asSingleton();
+    }
+
+    private function onContextCreate(e:Event):void {
+        this.stage3D.removeEventListener(Event.CONTEXT3D_CREATE, this.onContextCreate);
+        var context3D:Context3DProxy = this.stage3D.getContext3D();
+        if (context3D.GetContext3D().driverInfo.toLowerCase().indexOf("software") != -1) {
             Parameters.clearGpuRender();
-         }
-         context3D.configureBackBuffer(WIDTH,HEIGHT,2);
-         context3D.setBlendFactors(Context3DBlendFactor.SOURCE_ALPHA,Context3DBlendFactor.ONE_MINUS_SOURCE_ALPHA);
-         context3D.setDepthTest(false,Context3DCompareMode.LESS_EQUAL);
-         this.injector.map(Context3DProxy).toValue(context3D);
-         Graphic3DHelper.map(this.injector);
-         this.renderer = this.injector.getInstance(Renderer);
-         this.renderer.init(context3D.GetContext3D());
-         Model3D.Create3dBuffer(context3D.GetContext3D());
-      }
-   }
+        }
+        context3D.configureBackBuffer(WIDTH, HEIGHT, 2);
+        context3D.setBlendFactors(Context3DBlendFactor.SOURCE_ALPHA, Context3DBlendFactor.ONE_MINUS_SOURCE_ALPHA);
+        context3D.setDepthTest(false, Context3DCompareMode.LESS_EQUAL);
+        this.injector.map(Context3DProxy).toValue(context3D);
+        Graphic3DHelper.map(this.injector);
+        this.renderer = this.injector.getInstance(Renderer);
+        this.renderer.init(context3D.GetContext3D());
+        Model3D.Create3dBuffer(context3D.GetContext3D());
+    }
+}
 }

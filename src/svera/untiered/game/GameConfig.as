@@ -1,5 +1,4 @@
-package svera.untiered.game
-{
+package svera.untiered.game {
 import com.company.assembleegameclient.game.GameSprite;
 import com.company.assembleegameclient.map.Map;
 import com.company.assembleegameclient.map.MapMediator;
@@ -49,64 +48,59 @@ import svera.untiered.game.view.components.StatView;
 import svera.untiered.game.view.components.StatsMediator;
 import svera.untiered.game.view.components.StatsView;
 
-public class GameConfig implements IConfig
-   {
-       
-      
-      [Inject]
-      public var context:IContext;
-      
-      [Inject]
-      public var injector:Injector;
-      
-      [Inject]
-      public var mediatorMap:IMediatorMap;
-      
-      [Inject]
-      public var commandMap:ISignalCommandMap;
-      
-      public function GameConfig()
-      {
-         super();
-      }
-      
-      public function configure() : void
-      {
-         this.context.configure(GameFocusConfig);
-         this.injector.map(GameModel).asSingleton();
-         this.generalGameConfiguration();
-      }
-      
-      private function generalGameConfiguration() : void
-      {
-         this.injector.map(SetWorldInteractionSignal).asSingleton();
-         this.injector.map(AddTextLineSignal).asSingleton();
-         this.injector.map(SetTextBoxVisibilitySignal).asSingleton();
-         this.injector.map(AddSpeechBalloonSignal).asSingleton();
-         this.injector.map(ChatFilter).asSingleton();
-         this.injector.map(DisconnectGameSignal).asSingleton();
-         this.injector.map(ExitGameSignal).asSingleton();
-         this.injector.map(ShowChatInputSignal).asSingleton();
-         this.makeStatusDisplayMappings();
-         this.mediatorMap.map(PortalPanel).toMediator(PortalPanelMediator);
-         this.mediatorMap.map(InteractPanel).toMediator(InteractPanelMediator);
-         this.mediatorMap.map(ItemGrid).toMediator(ItemGridMediator);
-         this.mediatorMap.map(InventoryGrid).toMediator(InventoryGridMediator);
-         this.mediatorMap.map(TextBox).toMediator(TextBoxMediator);
-         this.mediatorMap.map(MapOverlay).toMediator(MapOverlayMediator);
-         this.mediatorMap.map(Map).toMediator(MapMediator);
-         this.mediatorMap.map(StatView).toMediator(StatMediator);
-         this.mediatorMap.map(StatsView).toMediator(StatsMediator);
-         this.commandMap.map(UsePotionSignal).toCommand(UsePotionCommand);
-         this.commandMap.map(GameClosedSignal).toCommand(TransitionFromGameToMenuCommand);
-         this.commandMap.map(PlayGameSignal).toCommand(PlayGameCommand);
-      }
+public class GameConfig implements IConfig {
 
-      private function makeStatusDisplayMappings() : void
-      {
-         this.mediatorMap.map(GameSprite).toMediator(GameSpriteMediator);
-         this.mediatorMap.map(CurrencyDisplay).toMediator(CurrencyDisplayMediator);
-         this.mediatorMap.map(SellableObjectPanel).toMediator(SellableObjectPanelMediator);
-      }
-   }
+
+    [Inject]
+    public var context:IContext;
+
+    [Inject]
+    public var injector:Injector;
+
+    [Inject]
+    public var mediatorMap:IMediatorMap;
+
+    [Inject]
+    public var commandMap:ISignalCommandMap;
+
+    public function GameConfig() {
+        super();
+    }
+
+    public function configure():void {
+        this.context.configure(GameFocusConfig);
+        this.injector.map(GameModel).asSingleton();
+        this.generalGameConfiguration();
+    }
+
+    private function generalGameConfiguration():void {
+        this.injector.map(SetWorldInteractionSignal).asSingleton();
+        this.injector.map(AddTextLineSignal).asSingleton();
+        this.injector.map(SetTextBoxVisibilitySignal).asSingleton();
+        this.injector.map(AddSpeechBalloonSignal).asSingleton();
+        this.injector.map(ChatFilter).asSingleton();
+        this.injector.map(DisconnectGameSignal).asSingleton();
+        this.injector.map(ExitGameSignal).asSingleton();
+        this.injector.map(ShowChatInputSignal).asSingleton();
+        this.makeStatusDisplayMappings();
+        this.mediatorMap.map(PortalPanel).toMediator(PortalPanelMediator);
+        this.mediatorMap.map(InteractPanel).toMediator(InteractPanelMediator);
+        this.mediatorMap.map(ItemGrid).toMediator(ItemGridMediator);
+        this.mediatorMap.map(InventoryGrid).toMediator(InventoryGridMediator);
+        this.mediatorMap.map(TextBox).toMediator(TextBoxMediator);
+        this.mediatorMap.map(MapOverlay).toMediator(MapOverlayMediator);
+        this.mediatorMap.map(Map).toMediator(MapMediator);
+        this.mediatorMap.map(StatView).toMediator(StatMediator);
+        this.mediatorMap.map(StatsView).toMediator(StatsMediator);
+        this.commandMap.map(UsePotionSignal).toCommand(UsePotionCommand);
+        this.commandMap.map(GameClosedSignal).toCommand(TransitionFromGameToMenuCommand);
+        this.commandMap.map(PlayGameSignal).toCommand(PlayGameCommand);
+    }
+
+    private function makeStatusDisplayMappings():void {
+        this.mediatorMap.map(GameSprite).toMediator(GameSpriteMediator);
+        this.mediatorMap.map(CurrencyDisplay).toMediator(CurrencyDisplayMediator);
+        this.mediatorMap.map(SellableObjectPanel).toMediator(SellableObjectPanelMediator);
+    }
+}
 }

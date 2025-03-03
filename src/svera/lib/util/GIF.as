@@ -49,7 +49,7 @@ public class GIF extends Sprite {
     private function playFrames():void {
         if (this._currentFrame >= this._maxFrames) {
             this._currentFrame = 0;
-            if(this.contains(this._bitmap)) {
+            if (this.contains(this._bitmap)) {
                 this.stop();
                 this.removeChild(this._bitmap);
             }

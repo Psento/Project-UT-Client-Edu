@@ -13,7 +13,7 @@ public class StorageUtil {
     public static const LEFT_PAD:int = 60;
     public static const TOP_PAD:int = 10;
 
-    public static function makeStorageSortCategories() : Vector.<StorageSortTab> {
+    public static function makeStorageSortCategories():Vector.<StorageSortTab> {
         var categories:Vector.<StorageSortTab> = new Vector.<StorageSortTab>();
 
         categories[0] = new StorageSortTab(StorageSortTab.ALL);

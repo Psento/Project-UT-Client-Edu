@@ -1,5 +1,4 @@
-package svera.untiered.hud
-{
+package svera.untiered.hud {
 
 import mx.core.*;
 

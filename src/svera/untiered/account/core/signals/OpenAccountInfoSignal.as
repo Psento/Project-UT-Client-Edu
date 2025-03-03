@@ -1,14 +1,11 @@
-package svera.untiered.account.core.signals
-{
+package svera.untiered.account.core.signals {
 import org.osflash.signals.Signal;
 
-public class OpenAccountInfoSignal extends Signal
-   {
-       
-      
-      public function OpenAccountInfoSignal()
-      {
-         super();
-      }
-   }
+public class OpenAccountInfoSignal extends Signal {
+
+
+    public function OpenAccountInfoSignal() {
+        super();
+    }
+}
 }

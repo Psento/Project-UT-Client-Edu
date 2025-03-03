@@ -1,38 +1,32 @@
-package svera.untiered.ui.view
-{
+package svera.untiered.ui.view {
 import com.company.assembleegameclient.screens.LoadingScreen;
 
 import robotlegs.bender.bundles.mvcs.Mediator;
 
 import svera.untiered.core.signals.SetLoadingMessageSignal;
 
-public class LoadingMediator extends Mediator
-   {
-      [Inject]
-      public var view:LoadingScreen;
-      
-      [Inject]
-      public var setMessage:SetLoadingMessageSignal;
-      
-      public function LoadingMediator()
-      {
-         super();
-      }
-      
-      override public function initialize() : void
-      {
-         this.setMessage.add(this.onSetMessage);
-         this.view.setText("<p align=\"center\">Loading...</p>");
-      }
-      
-      override public function destroy() : void
-      {
-         this.setMessage.remove(this.onSetMessage);
-      }
-      
-      private function onSetMessage(message:String) : void
-      {
-         this.view.setText(message);
-      }
-   }
+public class LoadingMediator extends Mediator {
+    [Inject]
+    public var view:LoadingScreen;
+
+    [Inject]
+    public var setMessage:SetLoadingMessageSignal;
+
+    public function LoadingMediator() {
+        super();
+    }
+
+    override public function initialize():void {
+        this.setMessage.add(this.onSetMessage);
+        this.view.setText("<p align=\"center\">Loading...</p>");
+    }
+
+    override public function destroy():void {
+        this.setMessage.remove(this.onSetMessage);
+    }
+
+    private function onSetMessage(message:String):void {
+        this.view.setText(message);
+    }
+}
 }

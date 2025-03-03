@@ -1,14 +1,11 @@
-package svera.untiered.account.core.signals
-{
+package svera.untiered.account.core.signals {
 import org.osflash.signals.Signal;
 
-public class SendPasswordReminderSignal extends Signal
-   {
-       
-      
-      public function SendPasswordReminderSignal()
-      {
-         super(String);
-      }
-   }
+public class SendPasswordReminderSignal extends Signal {
+
+
+    public function SendPasswordReminderSignal() {
+        super(String);
+    }
+}
 }

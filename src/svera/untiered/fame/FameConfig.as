@@ -1,5 +1,4 @@
-package svera.untiered.fame
-{
+package svera.untiered.fame {
 import org.swiftsuspenders.Injector;
 
 import robotlegs.bender.extensions.mediatorMap.api.IMediatorMap;
@@ -13,30 +12,27 @@ import svera.untiered.fame.service.RequestCharacterFameTask;
 import svera.untiered.fame.view.FameMediator;
 import svera.untiered.fame.view.FameView;
 
-public class FameConfig implements IConfig
-   {
-       
-      
-      [Inject]
-      public var injector:Injector;
-      
-      [Inject]
-      public var mediatorMap:IMediatorMap;
-      
-      [Inject]
-      public var commandMap:ISignalCommandMap;
-      
-      public function FameConfig()
-      {
-         super();
-      }
-      
-      public function configure() : void
-      {
-         this.injector.map(FameModel).asSingleton();
-         this.injector.map(RequestCharacterFameTask);
-         this.commandMap.map(ShowFameViewSignal).toCommand(ShowFameViewCommand);
-         this.mediatorMap.map(FameView).toMediator(FameMediator);
-      }
-   }
+public class FameConfig implements IConfig {
+
+
+    [Inject]
+    public var injector:Injector;
+
+    [Inject]
+    public var mediatorMap:IMediatorMap;
+
+    [Inject]
+    public var commandMap:ISignalCommandMap;
+
+    public function FameConfig() {
+        super();
+    }
+
+    public function configure():void {
+        this.injector.map(FameModel).asSingleton();
+        this.injector.map(RequestCharacterFameTask);
+        this.commandMap.map(ShowFameViewSignal).toCommand(ShowFameViewCommand);
+        this.mediatorMap.map(FameView).toMediator(FameMediator);
+    }
+}
 }

@@ -126,7 +126,7 @@ public class TraitsGUI extends Sprite {
         this.addDesc();
     }
 
-    public function onClose(param1:MouseEvent) : void {
+    public function onClose(param1:MouseEvent):void {
         /* efficient way to remove the GUI from the screen. */
         var game:GameInitData = new GameInitData();
         var injector:Injector = StaticInjectorContext.getInjector();
@@ -311,7 +311,7 @@ public class TraitsGUI extends Sprite {
         this.containerThree.addChild(this.backgroundIcons[0]);
     }
 
-    private function f1(event:Event) : void {
+    private function f1(event:Event):void {
         /* increases the trait type by one */
         this.typeOne++;
 
@@ -323,7 +323,7 @@ public class TraitsGUI extends Sprite {
         this.updateText();
     }
 
-    private function b1(event:Event) : void {
+    private function b1(event:Event):void {
         /* decrease the trait type by one */
         this.typeOne--;
 
@@ -337,14 +337,14 @@ public class TraitsGUI extends Sprite {
     }
 
     /* this function does the exact same thing, but for the second trait slot. */
-    private function f2(event:Event) : void {
+    private function f2(event:Event):void {
         this.typeTwo++;
         this.containerTwo.removeChild(this.relicIcons[this.typeTwo - 1]);
         this.containerTwo.addChild(this.relicIcons[this.typeTwo]);
         this.updateText();
     }
 
-    private function b2(event:Event) : void {
+    private function b2(event:Event):void {
         this.typeTwo--;
         this.containerTwo.removeChild(this.relicIcons[this.typeTwo + 1]);
         if (this.typeTwo < 0) this.typeTwo = 8;
@@ -353,14 +353,14 @@ public class TraitsGUI extends Sprite {
     }
 
     /* this function does the exact same thing, but for the second trait slot. */
-    private function f3(event:Event) : void {
+    private function f3(event:Event):void {
         this.typeThree++;
         this.containerThree.removeChild(this.backgroundIcons[this.typeThree - 1]);
         this.containerThree.addChild(this.backgroundIcons[this.typeThree]);
         this.updateText();
     }
 
-    private function b3(event:Event) : void {
+    private function b3(event:Event):void {
         this.typeThree--;
         this.containerThree.removeChild(this.backgroundIcons[this.typeThree + 1]);
         if (this.typeThree < 0) this.typeThree = 10;

@@ -1,5 +1,4 @@
-package svera.untiered.game.view
-{
+package svera.untiered.game.view {
 import com.company.assembleegameclient.objects.SellableObject;
 import com.company.assembleegameclient.util.Currency;
 
@@ -10,55 +9,46 @@ import svera.untiered.account.core.view.RegisterPromptDialog;
 import svera.untiered.core.model.PlayerModel;
 import svera.untiered.dialogs.control.OpenDialogSignal;
 
-public class SellableObjectPanelMediator extends Mediator
-   {
-      
-      public static const TEXT:String = "In order to use ${type} you must be a registered user.";
-       
-      
-      [Inject]
-      public var account:Account;
-      
-      [Inject]
-      public var view:SellableObjectPanel;
-      
-      [Inject]
-      public var openDialog:OpenDialogSignal;
-      
-      [Inject]
-      public var playerModel:PlayerModel;
-      
-      public function SellableObjectPanelMediator()
-      {
-         super();
-      }
-      
-      override public function initialize() : void
-      {
-         this.view.buyItem.add(this.onBuyItem);
-      }
+public class SellableObjectPanelMediator extends Mediator {
 
-      override public function destroy() : void
-      {
-         this.view.buyItem.remove(this.onBuyItem);
-      }
-      
-      private function onBuyItem(item:SellableObject, currencyType:int) : void
-      {
-         if(this.account.isRegistered())
-         {
-            this.view.gs_.gsc_.buy(item.objectId_,currencyType);
-         }
-         else
-         {
+    public static const TEXT:String = "In order to use ${type} you must be a registered user.";
+
+
+    [Inject]
+    public var account:Account;
+
+    [Inject]
+    public var view:SellableObjectPanel;
+
+    [Inject]
+    public var openDialog:OpenDialogSignal;
+
+    [Inject]
+    public var playerModel:PlayerModel;
+
+    public function SellableObjectPanelMediator() {
+        super();
+    }
+
+    override public function initialize():void {
+        this.view.buyItem.add(this.onBuyItem);
+    }
+
+    override public function destroy():void {
+        this.view.buyItem.remove(this.onBuyItem);
+    }
+
+    private function onBuyItem(item:SellableObject, currencyType:int):void {
+        if (this.account.isRegistered()) {
+            this.view.gs_.gsc_.buy(item.objectId_, currencyType);
+        } else {
             this.openDialog.dispatch(this.makeRegisterDialog(item));
-         }
-      }
-      
-      private function makeRegisterDialog(item:SellableObject) : RegisterPromptDialog
-      {
-         var text:String = TEXT.replace("${type}",Currency.typeToName(item.currency_));
-         return new RegisterPromptDialog(text);
-      }
-   }
+        }
+    }
+
+    private function makeRegisterDialog(item:SellableObject):RegisterPromptDialog {
+        var text:String = TEXT.replace("${type}", Currency.typeToName(item.currency_));
+        return new RegisterPromptDialog(text);
+    }
+}
 }

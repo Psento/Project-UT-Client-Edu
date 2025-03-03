@@ -1,5 +1,4 @@
-package svera.untiered.game.view
-{
+package svera.untiered.game.view {
 import com.company.assembleegameclient.game.GameSprite;
 import com.company.assembleegameclient.game.events.ReconnectEvent;
 import com.company.assembleegameclient.objects.Player;
@@ -21,123 +20,112 @@ import svera.untiered.ui.signals.HUDModelInitialized;
 import svera.untiered.ui.signals.HUDSetupStarted;
 import svera.untiered.ui.signals.UpdateHUDSignal;
 
-public class GameSpriteMediator extends Mediator
-   {
-       
-      
-      [Inject]
-      public var view:GameSprite;
-      
-      [Inject]
-      public var setWorldInteraction:SetWorldInteractionSignal;
-      
-      [Inject]
-      public var invalidate:InvalidateDataSignal;
-      
-      [Inject]
-      public var setScreenWithValidData:SetScreenWithValidDataSignal;
-      
-      [Inject]
-      public var setScreen:SetScreenSignal;
-      
-      [Inject]
-      public var playGame:PlayGameSignal;
-      
-      [Inject]
-      public var playerModel:PlayerModel;
-      
-      [Inject]
-      public var gameClosed:GameClosedSignal;
-      
-      [Inject]
-      public var mapModel:MapModel;
-      
-      [Inject]
-      public var closeDialogs:CloseDialogsSignal;
-      
-      [Inject]
-      public var disconnect:DisconnectGameSignal;
-      
-      [Inject]
-      public var hudSetupStarted:HUDSetupStarted;
-      
-      [Inject]
-      public var updateHUDSignal:UpdateHUDSignal;
-      
-      [Inject]
-      public var hudModelInitialized:HUDModelInitialized;
-      
-      public function GameSpriteMediator()
-      {
-         super();
-      }
-      
-      override public function initialize() : void
-      {
-         this.setWorldInteraction.add(this.onSetWorldInteraction);
-         addViewListener(ReconnectEvent.RECONNECT,this.onReconnect);
-         this.view.modelInitialized.add(this.onGameSpriteModelInitialized);
-         this.view.drawCharacterWindow.add(this.onStatusPanelDraw);
-         this.hudModelInitialized.add(this.onHUDModelInitialized);
-         this.disconnect.add(this.onDisconnect);
-         this.view.closed.add(this.onClosed);
-         this.view.mapModel = this.mapModel;
-         this.view.connect();
-      }
+public class GameSpriteMediator extends Mediator {
 
-      override public function destroy() : void
-      {
-         this.setWorldInteraction.remove(this.onSetWorldInteraction);
-         removeViewListener(ReconnectEvent.RECONNECT,this.onReconnect);
-         this.view.modelInitialized.remove(this.onGameSpriteModelInitialized);
-         this.view.drawCharacterWindow.remove(this.onStatusPanelDraw);
-         this.hudModelInitialized.remove(this.onHUDModelInitialized);
-         this.disconnect.remove(this.onDisconnect);
-         this.view.closed.remove(this.onClosed);
-         this.view.disconnect();
-      }
-      
-      private function onDisconnect() : void
-      {
-         this.view.disconnect();
-      }
-      
-      public function onSetWorldInteraction(value:Boolean) : void
-      {
-         this.view.mui_.setEnablePlayerInput(value);
-      }
-      
-      private function onClosed() : void
-      {
-         this.closeDialogs.dispatch();
-         this.gameClosed.dispatch();
-      }
-      
-      private function onReconnect(event:ReconnectEvent) : void
-      {
-         if(this.view.isEditor) {
+
+    [Inject]
+    public var view:GameSprite;
+
+    [Inject]
+    public var setWorldInteraction:SetWorldInteractionSignal;
+
+    [Inject]
+    public var invalidate:InvalidateDataSignal;
+
+    [Inject]
+    public var setScreenWithValidData:SetScreenWithValidDataSignal;
+
+    [Inject]
+    public var setScreen:SetScreenSignal;
+
+    [Inject]
+    public var playGame:PlayGameSignal;
+
+    [Inject]
+    public var playerModel:PlayerModel;
+
+    [Inject]
+    public var gameClosed:GameClosedSignal;
+
+    [Inject]
+    public var mapModel:MapModel;
+
+    [Inject]
+    public var closeDialogs:CloseDialogsSignal;
+
+    [Inject]
+    public var disconnect:DisconnectGameSignal;
+
+    [Inject]
+    public var hudSetupStarted:HUDSetupStarted;
+
+    [Inject]
+    public var updateHUDSignal:UpdateHUDSignal;
+
+    [Inject]
+    public var hudModelInitialized:HUDModelInitialized;
+
+    public function GameSpriteMediator() {
+        super();
+    }
+
+    override public function initialize():void {
+        this.setWorldInteraction.add(this.onSetWorldInteraction);
+        addViewListener(ReconnectEvent.RECONNECT, this.onReconnect);
+        this.view.modelInitialized.add(this.onGameSpriteModelInitialized);
+        this.view.drawCharacterWindow.add(this.onStatusPanelDraw);
+        this.hudModelInitialized.add(this.onHUDModelInitialized);
+        this.disconnect.add(this.onDisconnect);
+        this.view.closed.add(this.onClosed);
+        this.view.mapModel = this.mapModel;
+        this.view.connect();
+    }
+
+    override public function destroy():void {
+        this.setWorldInteraction.remove(this.onSetWorldInteraction);
+        removeViewListener(ReconnectEvent.RECONNECT, this.onReconnect);
+        this.view.modelInitialized.remove(this.onGameSpriteModelInitialized);
+        this.view.drawCharacterWindow.remove(this.onStatusPanelDraw);
+        this.hudModelInitialized.remove(this.onHUDModelInitialized);
+        this.disconnect.remove(this.onDisconnect);
+        this.view.closed.remove(this.onClosed);
+        this.view.disconnect();
+    }
+
+    private function onDisconnect():void {
+        this.view.disconnect();
+    }
+
+    public function onSetWorldInteraction(value:Boolean):void {
+        this.view.mui_.setEnablePlayerInput(value);
+    }
+
+    private function onClosed():void {
+        this.closeDialogs.dispatch();
+        this.gameClosed.dispatch();
+    }
+
+    private function onReconnect(event:ReconnectEvent):void {
+        if (this.view.isEditor) {
             return;
-         }
-         var data:GameInitData = new GameInitData();
-         data.gameId = event.gameId_;
-         data.createCharacter = event.createCharacter_;
-         data.charId = event.charId_;
-         this.playGame.dispatch(data);
-      }
-      
-      private function onGameSpriteModelInitialized() : void
-      {
-         this.hudSetupStarted.dispatch(this.view);
-      }
-      
-      private function onStatusPanelDraw(player:Player) : void
-      {
-         this.updateHUDSignal.dispatch(player);
-      }
-      
-      private function onHUDModelInitialized() : void
-      {
-         this.view.hudModelInitialized();
-      }
-   }
+        }
+        var data:GameInitData = new GameInitData();
+        data.gameId = event.gameId_;
+        data.createCharacter = event.createCharacter_;
+        data.charId = event.charId_;
+        this.playGame.dispatch(data);
+    }
+
+    private function onGameSpriteModelInitialized():void {
+        this.hudSetupStarted.dispatch(this.view);
+    }
+
+    private function onStatusPanelDraw(player:Player):void {
+        this.updateHUDSignal.dispatch(player);
+    }
+
+    private function onHUDModelInitialized():void {
+        this.view.hudModelInitialized();
+    }
+}
 }

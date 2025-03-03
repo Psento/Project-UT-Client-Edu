@@ -1,14 +1,11 @@
-package svera.untiered.legends.control
-{
+package svera.untiered.legends.control {
 import org.osflash.signals.Signal;
 
-public class ExitLegendsSignal extends Signal
-   {
-       
-      
-      public function ExitLegendsSignal()
-      {
-         super();
-      }
-   }
+public class ExitLegendsSignal extends Signal {
+
+
+    public function ExitLegendsSignal() {
+        super();
+    }
+}
 }

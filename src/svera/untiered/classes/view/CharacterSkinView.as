@@ -1,5 +1,4 @@
-package svera.untiered.classes.view
-{
+package svera.untiered.classes.view {
 import com.company.assembleegameclient.screens.AccountScreen;
 import com.company.assembleegameclient.screens.TitleMenuOption;
 
@@ -13,103 +12,94 @@ import org.osflash.signals.natives.NativeMappedSignal;
 import svera.untiered.game.view.CurrencyDisplay;
 import svera.untiered.ui.view.components.ScreenBase;
 
-public class CharacterSkinView extends Sprite
-   {
-      private var playBtn:TitleMenuOption;
-      public var play:Signal;
-      public var back:Signal;
-      
-      public function CharacterSkinView() {
-         super();
-         makeScreenBase()
-         makeAccountScreen()
-         makeLines();
-         makeCurrencyDisplay();
-         playBtn = makePlayButton();
-         var backBtn:TitleMenuOption = makeBackButton();
-         play = new NativeMappedSignal(playBtn,MouseEvent.CLICK);
-         back = new NativeMappedSignal(backBtn,MouseEvent.CLICK);
-         makeListView();
-         makeClassDetailView();
-      }
+public class CharacterSkinView extends Sprite {
+    private var playBtn:TitleMenuOption;
+    public var play:Signal;
+    public var back:Signal;
 
-      private function makeScreenBase() : ScreenBase
-      {
-         var base:ScreenBase = new ScreenBase();
-         addChild(base);
-         return base;
-      }
-      
-      private function makeAccountScreen() : AccountScreen
-      {
-         var screen:AccountScreen = new AccountScreen();
-         addChild(screen);
-         return screen;
-      }
-      
-      private function makeCurrencyDisplay() : CurrencyDisplay
-      {
-         var display:CurrencyDisplay = new CurrencyDisplay();
-         display.x = GameClient.StageWidth;
-         display.y = 20;
-         addChild(display);
-         return display;
-      }
-      
-      private function makeLines() : Shape
-      {
-         var shape:Shape = new Shape();
-         shape.graphics.clear();
-         shape.graphics.lineStyle(2,5526612);
-         shape.graphics.moveTo(0,105);
-         shape.graphics.lineTo(GameClient.StageWidth,105);
-         shape.graphics.moveTo(346,105);
-         shape.graphics.lineTo(346,GameClient.StageHeight - (600 - 526));
-         addChild(shape);
-         return shape;
-      }
-      
-      private function makePlayButton() : TitleMenuOption
-      {
-         var option:TitleMenuOption = null;
-         option = new TitleMenuOption("play",36,false);
-         option.x = GameClient.HalfStageWidth - option.width / 2;
-         option.y = GameClient.StageHeight - (600 - 520);
-         addChild(option);
-         return option;
-      }
-      
-      private function makeBackButton() : TitleMenuOption
-      {
-         var option:TitleMenuOption = new TitleMenuOption("back",22,false);
-         option.x = 30;
-         option.y = GameClient.StageHeight - (600 - 534);
-         addChild(option);
-         return option;
-      }
-      
-      private function makeListView() : CharacterSkinListView
-      {
-         var view:CharacterSkinListView = new CharacterSkinListView();
-         view.x = 351;
-         view.y = 110;
-         addChild(view);
-         return view;
-      }
-      
-      private function makeClassDetailView() : ClassDetailView
-      {
-         var view:ClassDetailView = new ClassDetailView();
-         view.x = 5;
-         view.y = 110;
-         addChild(view);
-         return view;
-      }
+    public function CharacterSkinView() {
+        super();
+        makeScreenBase()
+        makeAccountScreen()
+        makeLines();
+        makeCurrencyDisplay();
+        playBtn = makePlayButton();
+        var backBtn:TitleMenuOption = makeBackButton();
+        play = new NativeMappedSignal(playBtn, MouseEvent.CLICK);
+        back = new NativeMappedSignal(backBtn, MouseEvent.CLICK);
+        makeListView();
+        makeClassDetailView();
+    }
 
-      public function setPlayButtonEnabled(activate:Boolean):void {
-         if (!activate) {
+    private function makeScreenBase():ScreenBase {
+        var base:ScreenBase = new ScreenBase();
+        addChild(base);
+        return base;
+    }
+
+    private function makeAccountScreen():AccountScreen {
+        var screen:AccountScreen = new AccountScreen();
+        addChild(screen);
+        return screen;
+    }
+
+    private function makeCurrencyDisplay():CurrencyDisplay {
+        var display:CurrencyDisplay = new CurrencyDisplay();
+        display.x = GameClient.StageWidth;
+        display.y = 20;
+        addChild(display);
+        return display;
+    }
+
+    private function makeLines():Shape {
+        var shape:Shape = new Shape();
+        shape.graphics.clear();
+        shape.graphics.lineStyle(2, 5526612);
+        shape.graphics.moveTo(0, 105);
+        shape.graphics.lineTo(GameClient.StageWidth, 105);
+        shape.graphics.moveTo(346, 105);
+        shape.graphics.lineTo(346, GameClient.StageHeight - (600 - 526));
+        addChild(shape);
+        return shape;
+    }
+
+    private function makePlayButton():TitleMenuOption {
+        var option:TitleMenuOption = null;
+        option = new TitleMenuOption("play", 36, false);
+        option.x = GameClient.HalfStageWidth - option.width / 2;
+        option.y = GameClient.StageHeight - (600 - 520);
+        addChild(option);
+        return option;
+    }
+
+    private function makeBackButton():TitleMenuOption {
+        var option:TitleMenuOption = new TitleMenuOption("back", 22, false);
+        option.x = 30;
+        option.y = GameClient.StageHeight - (600 - 534);
+        addChild(option);
+        return option;
+    }
+
+    private function makeListView():CharacterSkinListView {
+        var view:CharacterSkinListView = new CharacterSkinListView();
+        view.x = 351;
+        view.y = 110;
+        addChild(view);
+        return view;
+    }
+
+    private function makeClassDetailView():ClassDetailView {
+        var view:ClassDetailView = new ClassDetailView();
+        view.x = 5;
+        view.y = 110;
+        addChild(view);
+        return view;
+    }
+
+    public function setPlayButtonEnabled(activate:Boolean):void {
+        if (!activate) {
             this.playBtn.deactivate();
-         }
-      }
-   }
+        }
+    }
+}
 }

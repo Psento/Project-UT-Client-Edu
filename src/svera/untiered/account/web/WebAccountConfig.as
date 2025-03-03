@@ -1,5 +1,4 @@
-package svera.untiered.account.web
-{
+package svera.untiered.account.web {
 import org.swiftsuspenders.Injector;
 
 import robotlegs.bender.extensions.mediatorMap.api.IMediatorMap;
@@ -44,67 +43,60 @@ import svera.untiered.account.web.view.WebQuitMediator;
 import svera.untiered.account.web.view.WebRegisterDialog;
 import svera.untiered.account.web.view.WebRegisterMediator;
 
-public class WebAccountConfig implements IConfig
-   {
-       
-      
-      [Inject]
-      public var injector:Injector;
-      
-      [Inject]
-      public var mediatorMap:IMediatorMap;
-      
-      [Inject]
-      public var commandMap:ISignalCommandMap;
-      
-      public function WebAccountConfig()
-      {
-         super();
-      }
-      
-      public function configure() : void
-      {
-         this.mapModel();
-         this.mapCommands();
-         this.mapMediators();
-         this.mapTasks();
-      }
-      
-      protected function mapModel() : void
-      {
-         this.injector.map(Account).toSingleton(WebAccount);
-         //this.injector.map(CharListDataSignal).asSingleton();
-      }
-      
-      protected function mapCommands() : void
-      {
-         this.commandMap.map(OpenQuitDialogSignal).toCommand(WebOpenQuitDialogCommand);
-         this.commandMap.map(OpenAccountInfoSignal).toCommand(WebOpenAccountInfoCommand);
-         this.commandMap.map(LoginSignal).toCommand(WebLoginCommand);
-         this.commandMap.map(LogoutSignal).toCommand(WebLogoutCommand);
-         this.commandMap.map(WebChangePasswordSignal).toCommand(WebChangePasswordCommand);
-         this.commandMap.map(SendPasswordReminderSignal).toCommand(WebSendPasswordReminderCommand);
-         this.commandMap.map(RegisterSignal).toCommand(WebRegisterAccountCommand);
-         //this.commandMap.map(CharListDataSignal);
-      }
-      
-      protected function mapMediators() : void
-      {
-         this.mediatorMap.map(WebQuitDialog).toMediator(WebQuitMediator);
-         this.mediatorMap.map(WebAccountInfoView).toMediator(WebAccountInfoMediator);
-         this.mediatorMap.map(WebChangePasswordDialog).toMediator(WebChangePasswordMediator);
-         this.mediatorMap.map(WebAccountDetailDialog).toMediator(WebAccountDetailMediator);
-         this.mediatorMap.map(WebRegisterDialog).toMediator(WebRegisterMediator);
-         this.mediatorMap.map(WebLoginDialog).toMediator(WebLoginMediator);
-      }
-      
-      protected function mapTasks() : void
-      {
-         this.injector.map(ChangePasswordTask).toType(WebChangePasswordTask);
-         this.injector.map(LoadAccountTask).toType(WebLoadAccountTask);
-         this.injector.map(LoginTask).toType(WebLoginTask);
-         this.injector.map(RegisterAccountTask).toType(WebRegisterAccountTask);
-         this.injector.map(SendPasswordReminderTask).toType(WebSendPasswordReminderTask);
-      }
-   }
+public class WebAccountConfig implements IConfig {
+
+
+    [Inject]
+    public var injector:Injector;
+
+    [Inject]
+    public var mediatorMap:IMediatorMap;
+
+    [Inject]
+    public var commandMap:ISignalCommandMap;
+
+    public function WebAccountConfig() {
+        super();
+    }
+
+    public function configure():void {
+        this.mapModel();
+        this.mapCommands();
+        this.mapMediators();
+        this.mapTasks();
+    }
+
+    protected function mapModel():void {
+        this.injector.map(Account).toSingleton(WebAccount);
+        //this.injector.map(CharListDataSignal).asSingleton();
+    }
+
+    protected function mapCommands():void {
+        this.commandMap.map(OpenQuitDialogSignal).toCommand(WebOpenQuitDialogCommand);
+        this.commandMap.map(OpenAccountInfoSignal).toCommand(WebOpenAccountInfoCommand);
+        this.commandMap.map(LoginSignal).toCommand(WebLoginCommand);
+        this.commandMap.map(LogoutSignal).toCommand(WebLogoutCommand);
+        this.commandMap.map(WebChangePasswordSignal).toCommand(WebChangePasswordCommand);
+        this.commandMap.map(SendPasswordReminderSignal).toCommand(WebSendPasswordReminderCommand);
+        this.commandMap.map(RegisterSignal).toCommand(WebRegisterAccountCommand);
+        //this.commandMap.map(CharListDataSignal);
+    }
+
+    protected function mapMediators():void {
+        this.mediatorMap.map(WebQuitDialog).toMediator(WebQuitMediator);
+        this.mediatorMap.map(WebAccountInfoView).toMediator(WebAccountInfoMediator);
+        this.mediatorMap.map(WebChangePasswordDialog).toMediator(WebChangePasswordMediator);
+        this.mediatorMap.map(WebAccountDetailDialog).toMediator(WebAccountDetailMediator);
+        this.mediatorMap.map(WebRegisterDialog).toMediator(WebRegisterMediator);
+        this.mediatorMap.map(WebLoginDialog).toMediator(WebLoginMediator);
+    }
+
+    protected function mapTasks():void {
+        this.injector.map(ChangePasswordTask).toType(WebChangePasswordTask);
+        this.injector.map(LoadAccountTask).toType(WebLoadAccountTask);
+        this.injector.map(LoginTask).toType(WebLoginTask);
+        this.injector.map(RegisterAccountTask).toType(WebRegisterAccountTask);
+        this.injector.map(SendPasswordReminderTask).toType(WebSendPasswordReminderTask);
+    }
+}
 }

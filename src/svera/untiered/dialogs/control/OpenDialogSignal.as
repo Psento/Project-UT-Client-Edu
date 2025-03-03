@@ -1,14 +1,11 @@
-package svera.untiered.dialogs.control
-{
+package svera.untiered.dialogs.control {
 import flash.display.Sprite;
 
 import org.osflash.signals.Signal;
 
-public class OpenDialogSignal extends Signal
-   {
-      public function OpenDialogSignal()
-      {
-         super(Sprite);
-      }
-   }
+public class OpenDialogSignal extends Signal {
+    public function OpenDialogSignal() {
+        super(Sprite);
+    }
+}
 }

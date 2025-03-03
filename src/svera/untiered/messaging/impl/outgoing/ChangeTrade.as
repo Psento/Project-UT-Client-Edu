@@ -1,31 +1,25 @@
-package svera.untiered.messaging.impl.outgoing
-{
+package svera.untiered.messaging.impl.outgoing {
 import flash.utils.IDataOutput;
 
-public class ChangeTrade extends OutgoingMessage
-{
+public class ChangeTrade extends OutgoingMessage {
 
 
     public var offer_:Vector.<Boolean>;
 
-    public function ChangeTrade(id:uint, callback:Function)
-    {
+    public function ChangeTrade(id:uint, callback:Function) {
         this.offer_ = new Vector.<Boolean>();
-        super(id,callback);
+        super(id, callback);
     }
 
-    override public function writeToOutput(data:IDataOutput) : void
-    {
+    override public function writeToOutput(data:IDataOutput):void {
         data.writeByte(this.offer_.length);
-        for(var i:int = 0; i < this.offer_.length; i++)
-        {
+        for (var i:int = 0; i < this.offer_.length; i++) {
             data.writeBoolean(this.offer_[i]);
         }
     }
 
-    override public function toString() : String
-    {
-        return formatToString("CHANGETRADE","offer_");
+    override public function toString():String {
+        return formatToString("CHANGETRADE", "offer_");
     }
 }
 }

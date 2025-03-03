@@ -1,14 +1,11 @@
-package svera.untiered.core.signals
-{
+package svera.untiered.core.signals {
 import org.osflash.signals.Signal;
 
-public class InvalidateDataSignal extends Signal
-   {
-       
-      
-      public function InvalidateDataSignal()
-      {
-         super();
-      }
-   }
+public class InvalidateDataSignal extends Signal {
+
+
+    public function InvalidateDataSignal() {
+        super();
+    }
+}
 }

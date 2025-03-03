@@ -1,11 +1,9 @@
-package svera.lib.resizing.view
-{
+package svera.lib.resizing.view {
 import flash.geom.Rectangle;
 
-public interface Resizable
-   {
-       
-      
-      function resize(param1:Rectangle) : void;
-   }
+public interface Resizable {
+
+
+    function resize(param1:Rectangle):void;
+}
 }

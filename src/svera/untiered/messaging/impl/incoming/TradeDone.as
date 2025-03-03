@@ -1,9 +1,7 @@
-package svera.untiered.messaging.impl.incoming
-{
+package svera.untiered.messaging.impl.incoming {
 import flash.utils.IDataInput;
 
-public class TradeDone extends IncomingMessage
-{
+public class TradeDone extends IncomingMessage {
 
     public static const TRADE_SUCCESSFUL:int = 0;
 
@@ -16,13 +14,11 @@ public class TradeDone extends IncomingMessage
 
     public var description_:String;
 
-    public function TradeDone(id:uint, callback:Function)
-    {
-        super(id,callback);
+    public function TradeDone(id:uint, callback:Function) {
+        super(id, callback);
     }
 
-    override public function parseFromInput(data:IDataInput) : void
-    {
+    override public function parseFromInput(data:IDataInput):void {
         this.code_ = data.readByte();
         switch (code_) {
             case 0:
@@ -36,9 +32,8 @@ public class TradeDone extends IncomingMessage
         }
     }
 
-    override public function toString() : String
-    {
-        return formatToString("TRADEDONE","code_","description_");
+    override public function toString():String {
+        return formatToString("TRADEDONE", "code_", "description_");
     }
 }
 }

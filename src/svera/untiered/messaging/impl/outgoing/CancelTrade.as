@@ -1,20 +1,15 @@
-package svera.untiered.messaging.impl.outgoing
-{
+package svera.untiered.messaging.impl.outgoing {
 import flash.utils.IDataOutput;
 
-public class CancelTrade extends OutgoingMessage
-{
-    public function CancelTrade(id:uint, callback:Function)
-    {
-        super(id,callback);
+public class CancelTrade extends OutgoingMessage {
+    public function CancelTrade(id:uint, callback:Function) {
+        super(id, callback);
     }
 
-    override public function writeToOutput(data:IDataOutput) : void
-    {
+    override public function writeToOutput(data:IDataOutput):void {
     }
 
-    override public function toString() : String
-    {
+    override public function toString():String {
         return formatToString("CANCELTRADE");
     }
 }

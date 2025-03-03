@@ -13,7 +13,7 @@ public class GiftChest extends GameObject implements IInteractiveObject {
     }
 
 
-    public function setContainer(size:int, slots:Vector.<StorageSlotUpdateData>) : void {
+    public function setContainer(size:int, slots:Vector.<StorageSlotUpdateData>):void {
         this.equipment_ = new Vector.<int>(size);
         this.itemDatas_ = new Vector.<int>(size);
 
@@ -23,7 +23,7 @@ public class GiftChest extends GameObject implements IInteractiveObject {
         }
     }
 
-    public function getPanel(gs:GameSprite) : Panel {
+    public function getPanel(gs:GameSprite):Panel {
         return new GiftChestPanel(this, gs);
     }
 }

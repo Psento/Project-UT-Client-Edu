@@ -1,5 +1,4 @@
-package com.company.assembleegameclient.ui.panels.itemgrids.itemtiles
-{
+package com.company.assembleegameclient.ui.panels.itemgrids.itemtiles {
 import com.company.assembleegameclient.objects.ObjectLibrary;
 import com.company.assembleegameclient.objects.Player;
 import com.company.assembleegameclient.ui.panels.itemgrids.ItemGrid;
@@ -12,179 +11,157 @@ import flash.filters.ColorMatrixFilter;
 
 import svera.untiered.constants.ItemConstants;
 
-public class EquipmentTile extends InteractiveItemTile
-   {
-      
-      private static const greyColorFilter:ColorMatrixFilter = new ColorMatrixFilter(MoreColorUtil.singleColorFilterMatrix(3552822));
-       
-      
-      public var backgroundDetail:Bitmap;
-      
-      public var itemType:int;
-      
-      private var minResourceUsage:int;
-      
-      public function EquipmentTile(id:int, parentGrid:ItemGrid, isInteractive:Boolean)
-      {
-         super(id,parentGrid,isInteractive);
-      }
-      
-      override public function canHoldItem(type:int) : Boolean
-      {
-         return type <= 0 || this.itemType == ObjectLibrary.getSlotTypeFromType(type);
-      }
-      
-      public function setType(type:int) : void
-      {
-         var bd:BitmapData = null;
-         var dx:int = 0;
-         var dy:int = 0;
-         switch(type)
-         {
+public class EquipmentTile extends InteractiveItemTile {
+
+    private static const greyColorFilter:ColorMatrixFilter = new ColorMatrixFilter(MoreColorUtil.singleColorFilterMatrix(3552822));
+
+
+    public var backgroundDetail:Bitmap;
+
+    public var itemType:int;
+
+    private var minResourceUsage:int;
+
+    public function EquipmentTile(id:int, parentGrid:ItemGrid, isInteractive:Boolean) {
+        super(id, parentGrid, isInteractive);
+    }
+
+    override public function canHoldItem(type:int):Boolean {
+        return type <= 0 || this.itemType == ObjectLibrary.getSlotTypeFromType(type);
+    }
+
+    public function setType(type:int):void {
+        var bd:BitmapData = null;
+        var dx:int = 0;
+        var dy:int = 0;
+        switch (type) {
             case ItemConstants.ALL_TYPE:
-               break;
+                break;
             case ItemConstants.SWORD_TYPE:
-               bd = AssetLibrary.getImageFromSet("lofiObj5",48);
-               break;
+                bd = AssetLibrary.getImageFromSet("lofiObj5", 48);
+                break;
             case ItemConstants.DAGGER_TYPE:
-               bd = AssetLibrary.getImageFromSet("Assets_StarterGear",0x03);
-               break;
+                bd = AssetLibrary.getImageFromSet("Assets_StarterGear", 0x03);
+                break;
             case ItemConstants.BOW_TYPE:
-               bd = AssetLibrary.getImageFromSet("lofiObj5",80);
-               break;
+                bd = AssetLibrary.getImageFromSet("lofiObj5", 80);
+                break;
             case ItemConstants.TOME_TYPE:
-               bd = AssetLibrary.getImageFromSet("lofiObj6",80);
-               break;
+                bd = AssetLibrary.getImageFromSet("lofiObj6", 80);
+                break;
             case ItemConstants.SHIELD_TYPE:
-               bd = AssetLibrary.getImageFromSet("lofiObj6",112);
-               break;
+                bd = AssetLibrary.getImageFromSet("lofiObj6", 112);
+                break;
             case ItemConstants.LEATHER_TYPE:
-               bd = AssetLibrary.getImageFromSet("Assets_StarterGear",0xae);
-               break;
+                bd = AssetLibrary.getImageFromSet("Assets_StarterGear", 0xae);
+                break;
             case ItemConstants.PLATE_TYPE:
-               bd = AssetLibrary.getImageFromSet("lofiObj5",32);
-               break;
+                bd = AssetLibrary.getImageFromSet("lofiObj5", 32);
+                break;
             case ItemConstants.WAND_TYPE:
-               bd = AssetLibrary.getImageFromSet("lofiObj5",64);
-               break;
+                bd = AssetLibrary.getImageFromSet("lofiObj5", 64);
+                break;
             case ItemConstants.RING_TYPE:
-               bd = AssetLibrary.getImageFromSet("Assets_StarterGear",0x9f);
-               break;
+                bd = AssetLibrary.getImageFromSet("Assets_StarterGear", 0x9f);
+                break;
             case ItemConstants.SPELL_TYPE:
-               bd = AssetLibrary.getImageFromSet("lofiObj6",64);
-               break;
+                bd = AssetLibrary.getImageFromSet("lofiObj6", 64);
+                break;
             case ItemConstants.SEAL_TYPE:
-               bd = AssetLibrary.getImageFromSet("lofiObj6",160);
-               break;
+                bd = AssetLibrary.getImageFromSet("lofiObj6", 160);
+                break;
             case ItemConstants.CLOAK_TYPE:
-               bd = AssetLibrary.getImageFromSet("Assets_StarterGear",0x0a);
-               break;
+                bd = AssetLibrary.getImageFromSet("Assets_StarterGear", 0x0a);
+                break;
             case ItemConstants.ROBE_TYPE:
-               bd = AssetLibrary.getImageFromSet("lofiObj5",16);
-               break;
+                bd = AssetLibrary.getImageFromSet("lofiObj5", 16);
+                break;
             case ItemConstants.QUIVER_TYPE:
-               bd = AssetLibrary.getImageFromSet("lofiObj6",48);
-               break;
+                bd = AssetLibrary.getImageFromSet("lofiObj6", 48);
+                break;
             case ItemConstants.HELM_TYPE:
-               bd = AssetLibrary.getImageFromSet("lofiObj6",96);
-               break;
+                bd = AssetLibrary.getImageFromSet("lofiObj6", 96);
+                break;
             case ItemConstants.STAFF_TYPE:
-               bd = AssetLibrary.getImageFromSet("lofiObj5",112);
-               break;
+                bd = AssetLibrary.getImageFromSet("lofiObj5", 112);
+                break;
             case ItemConstants.POISON_TYPE:
-               bd = AssetLibrary.getImageFromSet("lofiObj6",128);
-               break;
+                bd = AssetLibrary.getImageFromSet("lofiObj6", 128);
+                break;
             case ItemConstants.SKULL_TYPE:
-               bd = AssetLibrary.getImageFromSet("lofiObj6",0);
-               break;
+                bd = AssetLibrary.getImageFromSet("lofiObj6", 0);
+                break;
             case ItemConstants.TRAP_TYPE:
-               bd = AssetLibrary.getImageFromSet("lofiObj6",16);
-               break;
+                bd = AssetLibrary.getImageFromSet("lofiObj6", 16);
+                break;
             case ItemConstants.ORB_TYPE:
-               bd = AssetLibrary.getImageFromSet("lofiObj6",144);
-               break;
+                bd = AssetLibrary.getImageFromSet("lofiObj6", 144);
+                break;
             case ItemConstants.PRISM_TYPE:
-               bd = AssetLibrary.getImageFromSet("lofiObj6",176);
-               break;
+                bd = AssetLibrary.getImageFromSet("lofiObj6", 176);
+                break;
             case ItemConstants.SCEPTER_TYPE:
-               bd = AssetLibrary.getImageFromSet("lofiObj6",192);
-               break;
+                bd = AssetLibrary.getImageFromSet("lofiObj6", 192);
+                break;
             case ItemConstants.KATANA_TYPE:
-               bd = AssetLibrary.getImageFromSet("lofiObj3",540);
-               break;
+                bd = AssetLibrary.getImageFromSet("lofiObj3", 540);
+                break;
             case ItemConstants.SHURIKEN_TYPE:
-               bd = AssetLibrary.getImageFromSet("lofiObj3",555);
-         }
-         if(bd != null)
-         {
+                bd = AssetLibrary.getImageFromSet("lofiObj3", 555);
+        }
+        if (bd != null) {
             this.backgroundDetail = new Bitmap(bd);
             this.backgroundDetail.x = BORDER;
             this.backgroundDetail.y = BORDER;
             this.backgroundDetail.scaleX = 4;
             this.backgroundDetail.scaleY = 4;
             this.backgroundDetail.filters = [greyColorFilter];
-            addChildAt(this.backgroundDetail,0);
-         }
-         this.itemType = type;
-      }
-      
-      override public function setItem(itemId:int, itemData:int) : Boolean
-      {
-         var itemChanged:Boolean = super.setItem(itemId, itemData);
-         if(itemChanged)
-         {
+            addChildAt(this.backgroundDetail, 0);
+        }
+        this.itemType = type;
+    }
+
+    override public function setItem(itemId:int, itemData:int):Boolean {
+        var itemChanged:Boolean = super.setItem(itemId, itemData);
+        if (itemChanged) {
             this.backgroundDetail.visible = itemSprite.itemId <= 0;
             this.updateMinMana();
-         }
-         return itemChanged;
-      }
-      
-      private function updateMinMana() : void
-      {
-         var itemDataXML:XML = null;
-         if(itemSprite.itemId > 0)
-         {
+        }
+        return itemChanged;
+    }
+
+    private function updateMinMana():void {
+        var itemDataXML:XML = null;
+        if (itemSprite.itemId > 0) {
             itemDataXML = ObjectLibrary.xmlLibrary_[itemSprite.itemId];
-            if(itemDataXML && itemDataXML.hasOwnProperty("Usable"))
-            {
-               if(itemDataXML.hasOwnProperty("MultiPhase"))
-               {
-                  this.minResourceUsage = itemDataXML.rpEndCost;
-               }
-               else
-               {
-                  this.minResourceUsage = itemDataXML.rpCost;
-               }
+            if (itemDataXML && itemDataXML.hasOwnProperty("Usable")) {
+                if (itemDataXML.hasOwnProperty("MultiPhase")) {
+                    this.minResourceUsage = itemDataXML.rpEndCost;
+                } else {
+                    this.minResourceUsage = itemDataXML.rpCost;
+                }
+            } else {
+                this.minResourceUsage = 0;
             }
-            else
-            {
-               this.minResourceUsage = 0;
-            }
-         }
-         else
-         {
+        } else {
             this.minResourceUsage = 0;
-         }
-      }
-      
-      public function updateDim(player:Player) : void
-      {
-         itemSprite.setDim(player && player.rp_ < this.minResourceUsage);
-      }
-      
-      override protected function beginDragCallback() : void
-      {
-         this.backgroundDetail.visible = true;
-      }
-      
-      override protected function endDragCallback() : void
-      {
-         this.backgroundDetail.visible = itemSprite.itemId <= 0;
-      }
-      
-      override protected function getBackgroundColor() : int
-      {
-         return 4539717;
-      }
-   }
+        }
+    }
+
+    public function updateDim(player:Player):void {
+        itemSprite.setDim(player && player.rp_ < this.minResourceUsage);
+    }
+
+    override protected function beginDragCallback():void {
+        this.backgroundDetail.visible = true;
+    }
+
+    override protected function endDragCallback():void {
+        this.backgroundDetail.visible = itemSprite.itemId <= 0;
+    }
+
+    override protected function getBackgroundColor():int {
+        return 4539717;
+    }
+}
 }

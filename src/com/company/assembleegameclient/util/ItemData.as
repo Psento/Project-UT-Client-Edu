@@ -1,6 +1,5 @@
 package com.company.assembleegameclient.util {
-public class ItemData
-{
+public class ItemData {
     public static const T0_BIT:uint = 1 << 0;
     public static const T1_BIT:uint = 1 << 1;
     public static const T2_BIT:uint = 1 << 2;
@@ -28,31 +27,27 @@ public class ItemData
     public static const DAMAGE_MULTIPLIER:Number = 0.05;
     public static const RATE_OF_FIRE_MULTIPLIER:Number = 0.05;
 
-    public static function hasStat(data:int, bit:uint) : Boolean
-    {
+    public static function hasStat(data:int, bit:uint):Boolean {
         if (data == -1) {
             return false;
         }
         return (uint(data) & bit) != 0
     }
 
-    public static function getStat(data:int, bit:uint, multiplier:Number) : Number
-    {
+    public static function getStat(data:int, bit:uint, multiplier:Number):Number {
         var rank:int = getRank(data);
         if (rank == -1) {
             return 0;
         }
         var value:int = 0;
-        if (hasStat(data, bit))
-        {
+        if (hasStat(data, bit)) {
             value += rank;
         }
         return value * multiplier;
     }
 
-    public static function getRank(data:int) : int
-    {
-        if (data == -1){
+    public static function getRank(data:int):int {
+        if (data == -1) {
             return -1;
         }
         if (hasStat(data, T0_BIT)) {
@@ -82,75 +77,43 @@ public class ItemData
         return -1;
     }
 
-    public static function getColor(data:int) : int
-    {
-        if (hasStat(data, ItemData.T0_BIT))
-        {
+    public static function getColor(data:int):int {
+        if (hasStat(data, ItemData.T0_BIT)) {
             return 0x00a6ff;
-        }
-        else if (hasStat(data, ItemData.T1_BIT))
-        {
+        } else if (hasStat(data, ItemData.T1_BIT)) {
             return 0x7300ff;
-        }
-        else if (ItemData.hasStat(data, ItemData.T2_BIT))
-        {
+        } else if (ItemData.hasStat(data, ItemData.T2_BIT)) {
             return 0xffc800;
-        }
-        else if (ItemData.hasStat(data, ItemData.T3_BIT))
-        {
+        } else if (ItemData.hasStat(data, ItemData.T3_BIT)) {
             return 0x84ff00;
-        }
-        else if (ItemData.hasStat(data, ItemData.T4_BIT))
-        {
+        } else if (ItemData.hasStat(data, ItemData.T4_BIT)) {
             return 0xf542e6;
-        }
-        else if (ItemData.hasStat(data, ItemData.T5_BIT))
-        {
+        } else if (ItemData.hasStat(data, ItemData.T5_BIT)) {
             return 0x00ffdd;
-        }
-        else if (ItemData.hasStat(data, ItemData.T6_BIT))
-        {
+        } else if (ItemData.hasStat(data, ItemData.T6_BIT)) {
             return 0xffffff;
-        }
-        else if (ItemData.hasStat(data, ItemData.T7_BIT))
-        {
+        } else if (ItemData.hasStat(data, ItemData.T7_BIT)) {
             return 0xff5500;
         }
         return -1;
     }
 
-    public static function getColorString(data:int) : String
-    {
-        if (hasStat(data, ItemData.T0_BIT))
-        {
+    public static function getColorString(data:int):String {
+        if (hasStat(data, ItemData.T0_BIT)) {
             return "#00a6ff";
-        }
-        else if (hasStat(data, ItemData.T1_BIT))
-        {
+        } else if (hasStat(data, ItemData.T1_BIT)) {
             return "#7300ff";
-        }
-        else if (ItemData.hasStat(data, ItemData.T2_BIT))
-        {
+        } else if (ItemData.hasStat(data, ItemData.T2_BIT)) {
             return "#ffc800";
-        }
-        else if (ItemData.hasStat(data, ItemData.T3_BIT))
-        {
+        } else if (ItemData.hasStat(data, ItemData.T3_BIT)) {
             return "#84ff00";
-        }
-        else if (ItemData.hasStat(data, ItemData.T4_BIT))
-        {
+        } else if (ItemData.hasStat(data, ItemData.T4_BIT)) {
             return "#f542e6";
-        }
-        else if (ItemData.hasStat(data, ItemData.T5_BIT))
-        {
+        } else if (ItemData.hasStat(data, ItemData.T5_BIT)) {
             return "#00ffdd";
-        }
-        else if (ItemData.hasStat(data, ItemData.T6_BIT))
-        {
+        } else if (ItemData.hasStat(data, ItemData.T6_BIT)) {
             return "#ffffff";
-        }
-        else if (ItemData.hasStat(data, ItemData.T7_BIT))
-        {
+        } else if (ItemData.hasStat(data, ItemData.T7_BIT)) {
             return "#ff5500";
         }
         return "";

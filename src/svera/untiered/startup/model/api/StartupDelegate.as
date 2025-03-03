@@ -1,13 +1,11 @@
-package svera.untiered.startup.model.api
-{
+package svera.untiered.startup.model.api {
 import svera.lib.tasks.Task;
 
-public interface StartupDelegate
-   {
-       
-      
-      function getPriority() : int;
-      
-      function make() : Task;
-   }
+public interface StartupDelegate {
+
+
+    function getPriority():int;
+
+    function make():Task;
+}
 }

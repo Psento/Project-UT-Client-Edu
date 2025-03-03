@@ -3,9 +3,9 @@ import mx.core.*;
 
 [Embed(source="Assets_Overworld_Environment_SandstoneValley32x32.png")]
 public class Assets_Overworld_Environment_SandstoneValley32x32 extends BitmapAsset {
-   public function Assets_Overworld_Environment_SandstoneValley32x32() {
-      super();
+    public function Assets_Overworld_Environment_SandstoneValley32x32() {
+        super();
 
-   }
+    }
 }
 }

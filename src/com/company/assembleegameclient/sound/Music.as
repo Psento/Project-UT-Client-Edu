@@ -1,9 +1,7 @@
-package com.company.assembleegameclient.sound
-{
+package com.company.assembleegameclient.sound {
 import com.company.assembleegameclient.parameters.Parameters;
 
-public class Music
-{
+public class Music {
     public static const MENU_MUSIC:String = "waterfall";
     public static const DEATH_MUSIC:String = "good_night";
 
@@ -12,8 +10,7 @@ public class Music
     private static var song:Song = null;
 
 
-    public function Music()
-    {
+    public function Music() {
         super();
     }
 
@@ -44,8 +41,7 @@ public class Music
         Parameters.save();
         if (play) {
             transitionNewMusic();
-        }
-        else if (song) {
+        } else if (song) {
             song.stop(true);
             song = null;
         }

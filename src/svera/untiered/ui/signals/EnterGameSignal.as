@@ -1,12 +1,9 @@
-package svera.untiered.ui.signals
-{
+package svera.untiered.ui.signals {
 import org.osflash.signals.Signal;
 
-public class EnterGameSignal extends Signal
-   {
-      public function EnterGameSignal()
-      {
-         super();
-      }
-   }
+public class EnterGameSignal extends Signal {
+    public function EnterGameSignal() {
+        super();
+    }
+}
 }

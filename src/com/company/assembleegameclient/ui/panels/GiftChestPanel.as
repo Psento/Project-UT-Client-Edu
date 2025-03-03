@@ -8,15 +8,14 @@ public class GiftChestPanel extends Panel {
 
     private var window_:GiftWindow;
 
-    public function GiftChestPanel(go:GiftChest, gs:GameSprite)
-    {
+    public function GiftChestPanel(go:GiftChest, gs:GameSprite) {
         super(gs);
 
         this.window_ = new GiftWindow(go, gs.map.player_);
         gs.addChild(this.window_);
     }
 
-    public override function onRemoved() : void {
+    public override function onRemoved():void {
         this.window_.dispose();
         this.gs_.removeChild(this.window_);
 

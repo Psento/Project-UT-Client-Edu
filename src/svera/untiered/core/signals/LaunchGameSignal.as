@@ -1,14 +1,11 @@
-package svera.untiered.core.signals
-{
+package svera.untiered.core.signals {
 import org.osflash.signals.Signal;
 
-public class LaunchGameSignal extends Signal
-   {
-       
-      
-      public function LaunchGameSignal()
-      {
-         super();
-      }
-   }
+public class LaunchGameSignal extends Signal {
+
+
+    public function LaunchGameSignal() {
+        super();
+    }
+}
 }

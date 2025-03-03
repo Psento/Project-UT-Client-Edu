@@ -8,14 +8,13 @@ public class VaultChestPanel extends Panel {
 
     private var window_:VaultWindow;
 
-    public function VaultChestPanel(go:VaultChest, gs:GameSprite)
-    {
+    public function VaultChestPanel(go:VaultChest, gs:GameSprite) {
         super(gs);
         this.window_ = new VaultWindow(go, gs.map.player_);
         this.gs_.addChild(this.window_);
     }
 
-    override public function onRemoved() : void {
+    override public function onRemoved():void {
         this.window_.dispose();
         this.gs_.removeChild(this.window_);
 

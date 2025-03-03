@@ -1,30 +1,25 @@
-package svera.untiered.messaging.impl.outgoing
-{
+package svera.untiered.messaging.impl.outgoing {
 import flash.utils.IDataOutput;
 
 import svera.untiered.messaging.impl.data.WorldPosData;
 
-public class Move extends OutgoingMessage
-   {
-      public var time_:int;
-      
-      public var newPosition_:WorldPosData;
-      
-      public function Move(id:uint, callback:Function)
-      {
-         this.newPosition_ = new WorldPosData();
-         super(id,callback);
-      }
-      
-      override public function writeToOutput(data:IDataOutput) : void
-      {
-         data.writeInt(this.time_);
-         this.newPosition_.writeToOutput(data);
-      }
-      
-      override public function toString() : String
-      {
-         return formatToString("MOVE","tickId_","time_","newPosition_");
-      }
-   }
+public class Move extends OutgoingMessage {
+    public var time_:int;
+
+    public var newPosition_:WorldPosData;
+
+    public function Move(id:uint, callback:Function) {
+        this.newPosition_ = new WorldPosData();
+        super(id, callback);
+    }
+
+    override public function writeToOutput(data:IDataOutput):void {
+        data.writeInt(this.time_);
+        this.newPosition_.writeToOutput(data);
+    }
+
+    override public function toString():String {
+        return formatToString("MOVE", "tickId_", "time_", "newPosition_");
+    }
+}
 }

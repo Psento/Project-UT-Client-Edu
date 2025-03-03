@@ -1,200 +1,175 @@
-package com.company.assembleegameclient.ui
-{
+package com.company.assembleegameclient.ui {
 import com.company.assembleegameclient.objects.Player;
 import com.company.ui.SimpleText;
 
 import flash.display.Sprite;
 import flash.filters.DropShadowFilter;
 
-public class StatusBar extends Sprite
-   {
-      public var w_:int;
-      
-      public var h_:int;
-      
-      public var color_:uint;
-      
-      public var backColor_:uint;
-      
-      public var pulseBackColor:uint;
+public class StatusBar extends Sprite {
+    public var w_:int;
 
-      public var textColor_:uint;
-      
-      public var val_:int = -1;
-      
-      public var max_:int = -1;
-      
-      public var boost_:int = -1;
-      
-      public var maxMax_:int = -1;
+    public var h_:int;
 
-      public var stat:int = -1;
-      
-      public var labelText_:SimpleText;
-      
-      public var valueText_:SimpleText;
-      
-      public var boostText_:SimpleText;
+    public var color_:uint;
 
-      private var colorSprite:Sprite;
-      
-      private var defaultForegroundColor:Number;
-      
-      private var defaultBackgroundColor:Number;
-      
-      private var repetitions:int;
-      
-      private var direction:int = -1;
-      
-      private var speed:Number = 0.1;
+    public var backColor_:uint;
 
-      private var player:Player;
-      
-      public function StatusBar(w:int, h:int, color:uint, backColor:uint, label:String = null, labelColor:uint = 16777215)
-      {
-         this.colorSprite = new Sprite();
-         super();
-         addChild(this.colorSprite);
-         this.w_ = w;
-         this.h_ = h;
-         this.defaultForegroundColor = this.color_ = color;
-         this.defaultBackgroundColor = this.backColor_ = backColor;
-         this.textColor_ = 16777215;
-         var valueColor:uint = 16777215;
-         if(labelColor != this.textColor_ || labelColor != valueColor)
-         {
+    public var pulseBackColor:uint;
+
+    public var textColor_:uint;
+
+    public var val_:int = -1;
+
+    public var max_:int = -1;
+
+    public var boost_:int = -1;
+
+    public var maxMax_:int = -1;
+
+    public var stat:int = -1;
+
+    public var labelText_:SimpleText;
+
+    public var valueText_:SimpleText;
+
+    public var boostText_:SimpleText;
+
+    private var colorSprite:Sprite;
+
+    private var defaultForegroundColor:Number;
+
+    private var defaultBackgroundColor:Number;
+
+    private var repetitions:int;
+
+    private var direction:int = -1;
+
+    private var speed:Number = 0.1;
+
+    private var player:Player;
+
+    public function StatusBar(w:int, h:int, color:uint, backColor:uint, label:String = null, labelColor:uint = 16777215) {
+        this.colorSprite = new Sprite();
+        super();
+        addChild(this.colorSprite);
+        this.w_ = w;
+        this.h_ = h;
+        this.defaultForegroundColor = this.color_ = color;
+        this.defaultBackgroundColor = this.backColor_ = backColor;
+        this.textColor_ = 16777215;
+        var valueColor:uint = 16777215;
+        if (labelColor != this.textColor_ || labelColor != valueColor) {
             this.textColor_ = labelColor;
             valueColor = labelColor;
-         }
-         if(label != null && label.length != 0)
-         {
-            this.labelText_ = new SimpleText(14,labelColor != this.textColor_ ? labelColor : this.textColor_,false,0,0);
+        }
+        if (label != null && label.length != 0) {
+            this.labelText_ = new SimpleText(14, labelColor != this.textColor_ ? labelColor : this.textColor_, false, 0, 0);
             this.labelText_.setBold(true);
             this.labelText_.text = label;
             this.labelText_.y = -3;
-            this.labelText_.filters = [new DropShadowFilter(0,0,0,1.0,1.5,1.5,255)];
+            this.labelText_.filters = [new DropShadowFilter(0, 0, 0, 1.0, 1.5, 1.5, 255)];
             this.labelText_.updateMetrics();
             addChild(this.labelText_);
-         }
-         this.valueText_ = new SimpleText(14,valueColor,false,0,0);
-         this.valueText_.setBold(true);
-         this.valueText_.filters = [new DropShadowFilter(0,0,0,1.0,1.5,1.5,255)];
-         this.valueText_.y = -3;
-         this.boostText_ = new SimpleText(14,this.textColor_,false,0,0);
-         this.boostText_.setBold(true);
-         this.boostText_.alpha = 0.6;
-         this.boostText_.y = this.valueText_.y;
-         this.boostText_.filters = [new DropShadowFilter(0,0,0,1.0,1.5,1.5,255)];
-      }
-      
-      public function draw(val:int, max:int, boost:int, maxMax:int = -1) : void
-      {
-         if(max > 0)
-         {
-            val = Math.min(max,Math.max(0,val));
-         }
-         if(val == this.val_ && max == this.max_ && boost == this.boost_ && maxMax == this.maxMax_)
-         {
+        }
+        this.valueText_ = new SimpleText(14, valueColor, false, 0, 0);
+        this.valueText_.setBold(true);
+        this.valueText_.filters = [new DropShadowFilter(0, 0, 0, 1.0, 1.5, 1.5, 255)];
+        this.valueText_.y = -3;
+        this.boostText_ = new SimpleText(14, this.textColor_, false, 0, 0);
+        this.boostText_.setBold(true);
+        this.boostText_.alpha = 0.6;
+        this.boostText_.y = this.valueText_.y;
+        this.boostText_.filters = [new DropShadowFilter(0, 0, 0, 1.0, 1.5, 1.5, 255)];
+    }
+
+    public function draw(val:int, max:int, boost:int, maxMax:int = -1):void {
+        if (max > 0) {
+            val = Math.min(max, Math.max(0, val));
+        }
+        if (val == this.val_ && max == this.max_ && boost == this.boost_ && maxMax == this.maxMax_) {
             return;
-         }
-         this.val_ = val;
-         this.max_ = max;
-         this.boost_ = boost;
-         this.maxMax_ = maxMax;
-         this.stat = stat;
-         if(player != null)
+        }
+        this.val_ = val;
+        this.max_ = max;
+        this.boost_ = boost;
+        this.maxMax_ = maxMax;
+        this.stat = stat;
+        if (player != null)
             this.player = player;
-         this.internalDraw();
-      }
-      
-      private function setTextColor(textColor:uint) : void
-      {
-         this.textColor_ = textColor;
-         if(this.boostText_ != null)
-         {
+        this.internalDraw();
+    }
+
+    private function setTextColor(textColor:uint):void {
+        this.textColor_ = textColor;
+        if (this.boostText_ != null) {
             this.boostText_.setColor(this.textColor_);
-         }
-         this.valueText_.setColor(this.textColor_);
-      }
-      
-      private function internalDraw() : void
-      {
-         graphics.clear();
-         this.colorSprite.graphics.clear();
-         var textColor:uint = 16777215;
-         if(this.maxMax_ > 0 && this.max_ - this.boost_ == this.maxMax_)
-         {
+        }
+        this.valueText_.setColor(this.textColor_);
+    }
+
+    private function internalDraw():void {
+        graphics.clear();
+        this.colorSprite.graphics.clear();
+        var textColor:uint = 16777215;
+        if (this.maxMax_ > 0 && this.max_ - this.boost_ == this.maxMax_) {
             textColor = 16572160;
-         }
-         else if(this.boost_ > 0)
-         {
+        } else if (this.boost_ > 0) {
             textColor = 6206769;
-         }
-         if(this.textColor_ != textColor)
-         {
+        }
+        if (this.textColor_ != textColor) {
             this.setTextColor(textColor);
-         }
-         if(color_ != 16777215) {
+        }
+        if (color_ != 16777215) {
             graphics.beginFill(this.backColor_);
             graphics.drawRect(0, 0, this.w_, this.h_);
             graphics.endFill();
-         }
-         this.colorSprite.graphics.beginFill(this.color_);
-         if(this.max_ > 0)
-         {
-            this.colorSprite.graphics.drawRect(0,0,this.w_ * (this.val_ / this.max_),this.h_);
-         }
-         else
-         {
-            this.colorSprite.graphics.drawRect(0,0,this.w_,this.h_);
-         }
-         this.colorSprite.graphics.endFill();
-         if(this.max_ > 0)
-         {
+        }
+        this.colorSprite.graphics.beginFill(this.color_);
+        if (this.max_ > 0) {
+            this.colorSprite.graphics.drawRect(0, 0, this.w_ * (this.val_ / this.max_), this.h_);
+        } else {
+            this.colorSprite.graphics.drawRect(0, 0, this.w_, this.h_);
+        }
+        this.colorSprite.graphics.endFill();
+        if (this.max_ > 0) {
             this.valueText_.text = "" + NumberFormat(this.val_) + "/" + NumberFormat(this.max_);
-         }
-         else
-         {
+        } else {
             this.valueText_.text = "" + NumberFormat(this.val_);
-         }
-         this.valueText_.updateMetrics();
-         if(!contains(this.valueText_))
-         {
+        }
+        this.valueText_.updateMetrics();
+        if (!contains(this.valueText_)) {
             addChild(this.valueText_);
-         }
-         if(this.boost_ != 0)
-         {
-            this.boostText_.text = " (" + (this.boost_ > 0?"+":"") + NumberFormat(this.boost_) + ")";
+        }
+        if (this.boost_ != 0) {
+            this.boostText_.text = " (" + (this.boost_ > 0 ? "+" : "") + NumberFormat(this.boost_) + ")";
             this.boostText_.updateMetrics();
             this.valueText_.x = this.w_ / 2 - (this.valueText_.width + this.boostText_.width) / 2;
             this.boostText_.x = this.valueText_.x + this.valueText_.width;
-            if(!contains(this.boostText_))
-            {
-               addChild(this.boostText_);
+            if (!contains(this.boostText_)) {
+                addChild(this.boostText_);
             }
-         }
-         else
-         {
+        } else {
             this.valueText_.x = this.w_ / 2 - this.valueText_.width / 2;
-            if(contains(this.boostText_))
-            {
-               removeChild(this.boostText_);
+            if (contains(this.boostText_)) {
+                removeChild(this.boostText_);
             }
-         }
-      }
-      private static function NumberFormat(number:int):String {
-         var suffix:Array = ["K", "M", "B", "T"];
-         var size:int = (number != 0) ? logx(number) : 0;
-         if(size >= 3) {
+        }
+    }
+
+    private static function NumberFormat(number:int):String {
+        var suffix:Array = ["K", "M", "B", "T"];
+        var size:int = (number != 0) ? logx(number) : 0;
+        if (size >= 3) {
             while (size % 3 != 0)
-               size = size - 1;
-         }
-         var notation:Number = Math.pow(10, size);
-         var result:* = (size >= 3) ? +(Math.round((number / notation) * 100) / 100.0) + suffix[(size / 3) - 1] : +number + "";
-         return result;
-      }
-      private static function logx(val:Number, base:Number = 10):Number {
-         return Math.log(val) / Math.log(base);
-      }
-   }
+                size = size - 1;
+        }
+        var notation:Number = Math.pow(10, size);
+        var result:* = (size >= 3) ? +(Math.round((number / notation) * 100) / 100.0) + suffix[(size / 3) - 1] : +number + "";
+        return result;
+    }
+
+    private static function logx(val:Number, base:Number = 10):Number {
+        return Math.log(val) / Math.log(base);
+    }
+}
 }

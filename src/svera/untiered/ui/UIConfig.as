@@ -1,5 +1,4 @@
-package svera.untiered.ui
-{
+package svera.untiered.ui {
 import com.company.assembleegameclient.mapeditor.MapEditor;
 import com.company.assembleegameclient.screens.AccountScreen;
 import com.company.assembleegameclient.screens.CharacterSelectionAndNewsScreen;
@@ -76,75 +75,71 @@ import svera.untiered.ui.view.TitleView;
 import svera.untiered.ui.view.components.PotionSlotMediator;
 import svera.untiered.ui.view.components.PotionSlotView;
 
-public class UIConfig implements IConfig
-   {
-       
-      
-      [Inject]
-      public var injector:Injector;
-      
-      [Inject]
-      public var mediatorMap:IMediatorMap;
-      
-      [Inject]
-      public var commandMap:ISignalCommandMap;
-      
-      [Inject]
-      public var startup:StartupSequence;
-      
-      public function UIConfig()
-      {
-         super();
-      }
-      
-      public function configure() : void
-      {
-         this.injector.map(NameChangedSignal).asSingleton();
-         this.injector.map(PotionInventoryModel).asSingleton();
-         this.injector.map(UpdatePotionInventorySignal).asSingleton();
-         this.injector.map(VaultUpdateSignal).asSingleton();
-         this.injector.map(VaultSlotUpdateSignal).asSingleton();
-         this.commandMap.map(ShowLoadingUISignal).toCommand(ShowLoadingUICommand);
-         this.commandMap.map(ShowTitleUISignal).toCommand(ShowTitleUICommand);
-         this.commandMap.map(EnterGameSignal).toCommand(EnterGameCommand);
-         this.mediatorMap.map(LoadingScreen).toMediator(LoadingMediator);
-         this.mediatorMap.map(CharacterSelectionAndNewsScreen).toMediator(CurrentCharacterMediator);
-         this.mediatorMap.map(AccountInfoView).toMediator(AccountInfoMediator);
-         this.mediatorMap.map(AccountScreen).toMediator(AccountScreenMediator);
-         this.mediatorMap.map(TitleView).toMediator(TitleMediator);
-         this.mediatorMap.map(NewCharacterScreen).toMediator(NewCharacterMediator);
-         this.mediatorMap.map(MapEditor).toMediator(MapEditorMediator);
-         this.mediatorMap.map(CurrentCharacterRect).toMediator(CurrentCharacterRectMediator);
-         this.mediatorMap.map(CharacterRectList).toMediator(CharacterRectListMediator);
-         this.mediatorMap.map(ErrorDialog).toMediator(ErrorDialogMediator);
-         this.mediatorMap.map(NewsLine).toMediator(NewsLineMediator);
-         this.mediatorMap.map(NotEnoughTsavoriteDialog).toMediator(NotEnoughTsavoriteMediator);
-         this.mediatorMap.map(MessageCloseDialog).toMediator(MessageCloseMediator);
-         this.mediatorMap.map(InteractPanel).toMediator(InteractPanelMediator);
-         this.mediatorMap.map(ItemGrid).toMediator(ItemGridMediator);
-         this.mediatorMap.map(ChooseNameRegisterDialog).toMediator(ChooseNameRegisterMediator);
-         this.mediatorMap.map(CharacterSlotRegisterDialog).toMediator(CharacterSlotRegisterMediator);
-         this.mediatorMap.map(RegisterPromptDialog).toMediator(RegisterPromptDialogMediator);
-         this.mediatorMap.map(CharacterSlotNeedTsavoriteDialog).toMediator(CharacterSlotNeedTsavoriteMediator);
-         this.mediatorMap.map(PlayerGroupMenu).toMediator(PlayerGroupMenuMediator);
-         this.mediatorMap.map(StatMetersView).toMediator(StatMetersMediator);
-         this.mediatorMap.map(HUDView).toMediator(HUDMediator);
-         this.mediatorMap.map(PotionSlotView).toMediator(PotionSlotMediator);
-         this.mediatorMap.map(VaultWindow).toMediator(VaultWindowMediator);
-         this.setupCharacterWindow();
-         this.startup.addSignal(ShowLoadingUISignal,-1);
-         this.startup.addTask(LoadAccountTask);
-         this.startup.addTask(GetCharListTask);
-         this.startup.addSignal(ShowTitleUISignal,StartupSequence.LAST);
-      }
-      
-      private function setupCharacterWindow() : void
-      {
-         this.injector.map(HUDModel).asSingleton();
-         this.injector.map(UpdateHUDSignal).asSingleton();
-         this.injector.map(HUDModelInitialized).asSingleton();
-         this.commandMap.map(HUDSetupStarted).toCommand(HUDInitCommand);
-         this.mediatorMap.map(CharacterDetailsView).toMediator(CharacterDetailsMediator);
-      }
-   }
+public class UIConfig implements IConfig {
+
+
+    [Inject]
+    public var injector:Injector;
+
+    [Inject]
+    public var mediatorMap:IMediatorMap;
+
+    [Inject]
+    public var commandMap:ISignalCommandMap;
+
+    [Inject]
+    public var startup:StartupSequence;
+
+    public function UIConfig() {
+        super();
+    }
+
+    public function configure():void {
+        this.injector.map(NameChangedSignal).asSingleton();
+        this.injector.map(PotionInventoryModel).asSingleton();
+        this.injector.map(UpdatePotionInventorySignal).asSingleton();
+        this.injector.map(VaultUpdateSignal).asSingleton();
+        this.injector.map(VaultSlotUpdateSignal).asSingleton();
+        this.commandMap.map(ShowLoadingUISignal).toCommand(ShowLoadingUICommand);
+        this.commandMap.map(ShowTitleUISignal).toCommand(ShowTitleUICommand);
+        this.commandMap.map(EnterGameSignal).toCommand(EnterGameCommand);
+        this.mediatorMap.map(LoadingScreen).toMediator(LoadingMediator);
+        this.mediatorMap.map(CharacterSelectionAndNewsScreen).toMediator(CurrentCharacterMediator);
+        this.mediatorMap.map(AccountInfoView).toMediator(AccountInfoMediator);
+        this.mediatorMap.map(AccountScreen).toMediator(AccountScreenMediator);
+        this.mediatorMap.map(TitleView).toMediator(TitleMediator);
+        this.mediatorMap.map(NewCharacterScreen).toMediator(NewCharacterMediator);
+        this.mediatorMap.map(MapEditor).toMediator(MapEditorMediator);
+        this.mediatorMap.map(CurrentCharacterRect).toMediator(CurrentCharacterRectMediator);
+        this.mediatorMap.map(CharacterRectList).toMediator(CharacterRectListMediator);
+        this.mediatorMap.map(ErrorDialog).toMediator(ErrorDialogMediator);
+        this.mediatorMap.map(NewsLine).toMediator(NewsLineMediator);
+        this.mediatorMap.map(NotEnoughTsavoriteDialog).toMediator(NotEnoughTsavoriteMediator);
+        this.mediatorMap.map(MessageCloseDialog).toMediator(MessageCloseMediator);
+        this.mediatorMap.map(InteractPanel).toMediator(InteractPanelMediator);
+        this.mediatorMap.map(ItemGrid).toMediator(ItemGridMediator);
+        this.mediatorMap.map(ChooseNameRegisterDialog).toMediator(ChooseNameRegisterMediator);
+        this.mediatorMap.map(CharacterSlotRegisterDialog).toMediator(CharacterSlotRegisterMediator);
+        this.mediatorMap.map(RegisterPromptDialog).toMediator(RegisterPromptDialogMediator);
+        this.mediatorMap.map(CharacterSlotNeedTsavoriteDialog).toMediator(CharacterSlotNeedTsavoriteMediator);
+        this.mediatorMap.map(PlayerGroupMenu).toMediator(PlayerGroupMenuMediator);
+        this.mediatorMap.map(StatMetersView).toMediator(StatMetersMediator);
+        this.mediatorMap.map(HUDView).toMediator(HUDMediator);
+        this.mediatorMap.map(PotionSlotView).toMediator(PotionSlotMediator);
+        this.mediatorMap.map(VaultWindow).toMediator(VaultWindowMediator);
+        this.setupCharacterWindow();
+        this.startup.addSignal(ShowLoadingUISignal, -1);
+        this.startup.addTask(LoadAccountTask);
+        this.startup.addTask(GetCharListTask);
+        this.startup.addSignal(ShowTitleUISignal, StartupSequence.LAST);
+    }
+
+    private function setupCharacterWindow():void {
+        this.injector.map(HUDModel).asSingleton();
+        this.injector.map(UpdateHUDSignal).asSingleton();
+        this.injector.map(HUDModelInitialized).asSingleton();
+        this.commandMap.map(HUDSetupStarted).toCommand(HUDInitCommand);
+        this.mediatorMap.map(CharacterDetailsView).toMediator(CharacterDetailsMediator);
+    }
+}
 }

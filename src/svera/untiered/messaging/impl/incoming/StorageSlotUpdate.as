@@ -9,10 +9,10 @@ public class StorageSlotUpdate extends IncomingMessage {
     public var itemData_:int;
 
     public function StorageSlotUpdate(id:uint, callback:Function) {
-        super(id,callback);
+        super(id, callback);
     }
 
-    override public function parseFromInput(data:IDataInput) : void {
+    override public function parseFromInput(data:IDataInput):void {
         this.type_ = data.readByte();
         this.slot_ = data.readShort();
         this.inventory_ = data.readInt();

@@ -3,9 +3,9 @@ import mx.core.*;
 
 [Embed(source="background.png")]
 public class background extends BitmapAsset {
-   public function background() {
-      super();
+    public function background() {
+        super();
 
-   }
+    }
 }
 }

@@ -1,5 +1,4 @@
-package com.company.assembleegameclient.ui
-{
+package com.company.assembleegameclient.ui {
 import com.company.assembleegameclient.constants.InventoryOwnerTypes;
 import com.company.assembleegameclient.game.GameSprite;
 import com.company.assembleegameclient.ui.tooltip.EquipmentToolTip;
@@ -14,12 +13,11 @@ import flash.filters.DropShadowFilter;
 import svera.untiered.constants.GeneralConstants;
 import svera.untiered.messaging.impl.data.TradeItemData;
 
-public class TradeInventory extends Sprite
-{
+public class TradeInventory extends Sprite {
 
-    private static const NO_CUT:Array = [0,0,0,0];
+    private static const NO_CUT:Array = [0, 0, 0, 0];
 
-    private static const cuts:Array = [[1,0,0,1],NO_CUT,NO_CUT,[0,1,1,0],[1,0,0,0],NO_CUT,NO_CUT,[0,1,0,0],[0,0,0,1],NO_CUT,NO_CUT,[0,0,1,0]];
+    private static const cuts:Array = [[1, 0, 0, 1], NO_CUT, NO_CUT, [0, 1, 1, 0], [1, 0, 0, 0], NO_CUT, NO_CUT, [0, 1, 0, 0], [0, 0, 0, 1], NO_CUT, NO_CUT, [0, 0, 1, 0]];
 
     public static const CLICKITEMS_MESSAGE:int = 0;
 
@@ -44,110 +42,91 @@ public class TradeInventory extends Sprite
 
     public var slots_:Vector.<TradeSlot>;
 
-    public function TradeInventory(gs:GameSprite, playerName:String, items:Vector.<TradeItemData>, canSelect:Boolean)
-    {
+    public function TradeInventory(gs:GameSprite, playerName:String, items:Vector.<TradeItemData>, canSelect:Boolean) {
         var item:TradeItemData = null;
         var slot:TradeSlot = null;
         this.slots_ = new Vector.<TradeSlot>();
         super();
         this.gs_ = gs;
         this.playerName_ = playerName;
-        this.nameText_ = new SimpleText(20,11776947,false,0,0);
+        this.nameText_ = new SimpleText(20, 11776947, false, 0, 0);
         this.nameText_.setBold(true);
         this.nameText_.x = 0;
         this.nameText_.y = 0;
         this.nameText_.text = this.playerName_;
         this.nameText_.updateMetrics();
-        this.nameText_.filters = [new DropShadowFilter(0,0,0)];
+        this.nameText_.filters = [new DropShadowFilter(0, 0, 0)];
         addChild(this.nameText_);
-        this.taglineText_ = new SimpleText(12,11776947,false,0,0);
+        this.taglineText_ = new SimpleText(12, 11776947, false, 0, 0);
         this.taglineText_.x = 0;
         this.taglineText_.y = 22;
         this.taglineText_.text = "";
         this.taglineText_.updateMetrics();
-        this.taglineText_.filters = [new DropShadowFilter(0,0,0)];
+        this.taglineText_.filters = [new DropShadowFilter(0, 0, 0)];
         addChild(this.taglineText_);
-        for(var i:int = 0; i < GeneralConstants.NUM_EQUIPMENT_SLOTS + GeneralConstants.NUM_INVENTORY_SLOTS; i++)
-        {
+        for (var i:int = 0; i < GeneralConstants.NUM_EQUIPMENT_SLOTS + GeneralConstants.NUM_INVENTORY_SLOTS; i++) {
             item = items[i];
-            slot = new TradeSlot(item.itemType_,item.itemData_,item.tradeable_,item.included_,item.slotType_,i - 3,cuts[i],i);
+            slot = new TradeSlot(item.itemType_, item.itemData_, item.tradeable_, item.included_, item.slotType_, i - 3, cuts[i], i);
             slot.x = int(i % 4) * (Slot.WIDTH + 4);
             slot.y = int(i / 4) * (Slot.HEIGHT + 4) + 46;
-            if(item.itemType_ != -1)
-            {
-                slot.addEventListener(MouseEvent.MOUSE_OVER,this.onMouseOver);
-                slot.addEventListener(MouseEvent.ROLL_OUT,this.onRollOut);
+            if (item.itemType_ != -1) {
+                slot.addEventListener(MouseEvent.MOUSE_OVER, this.onMouseOver);
+                slot.addEventListener(MouseEvent.ROLL_OUT, this.onRollOut);
             }
-            if(canSelect && item.tradeable_)
-            {
-                slot.addEventListener(MouseEvent.MOUSE_DOWN,this.onSlotClick);
+            if (canSelect && item.tradeable_) {
+                slot.addEventListener(MouseEvent.MOUSE_DOWN, this.onSlotClick);
             }
             this.slots_.push(slot);
             addChild(slot);
         }
-        addEventListener(Event.REMOVED_FROM_STAGE,this.onRemovedFromStage);
+        addEventListener(Event.REMOVED_FROM_STAGE, this.onRemovedFromStage);
     }
 
-    public function getOffer() : Vector.<Boolean>
-    {
+    public function getOffer():Vector.<Boolean> {
         var offer:Vector.<Boolean> = new Vector.<Boolean>();
-        for(var i:int = 0; i < this.slots_.length; i++)
-        {
+        for (var i:int = 0; i < this.slots_.length; i++) {
             offer.push(this.slots_[i].included_);
         }
         return offer;
     }
 
-    public function setOffer(offer:Vector.<Boolean>) : void
-    {
-        for(var i:int = 0; i < this.slots_.length; i++)
-        {
+    public function setOffer(offer:Vector.<Boolean>):void {
+        for (var i:int = 0; i < this.slots_.length; i++) {
             this.slots_[i].setIncluded(offer[i]);
         }
     }
 
-    public function isOffer(offer:Vector.<Boolean>) : Boolean
-    {
-        for(var i:int = 0; i < this.slots_.length; i++)
-        {
-            if(offer[i] != this.slots_[i].included_)
-            {
+    public function isOffer(offer:Vector.<Boolean>):Boolean {
+        for (var i:int = 0; i < this.slots_.length; i++) {
+            if (offer[i] != this.slots_[i].included_) {
                 return false;
             }
         }
         return true;
     }
 
-    public function numIncluded() : int
-    {
+    public function numIncluded():int {
         var num:int = 0;
-        for(var i:int = 0; i < this.slots_.length; i++)
-        {
-            if(this.slots_[i].included_)
-            {
+        for (var i:int = 0; i < this.slots_.length; i++) {
+            if (this.slots_[i].included_) {
                 num++;
             }
         }
         return num;
     }
 
-    public function numEmpty() : int
-    {
+    public function numEmpty():int {
         var num:int = 0;
-        for(var i:int = 4; i < this.slots_.length; i++)
-        {
-            if(this.slots_[i].itemType_ == -1)
-            {
+        for (var i:int = 4; i < this.slots_.length; i++) {
+            if (this.slots_[i].itemType_ == -1) {
                 num++;
             }
         }
         return num;
     }
 
-    public function setMessage(message:int) : void
-    {
-        switch(message)
-        {
+    public function setMessage(message:int):void {
+        switch (message) {
             case CLICKITEMS_MESSAGE:
                 this.nameText_.setColor(11776947);
                 this.taglineText_.setColor(11776947);
@@ -174,46 +153,37 @@ public class TradeInventory extends Sprite
         }
     }
 
-    private function onRemovedFromStage(event:Event) : void
-    {
+    private function onRemovedFromStage(event:Event):void {
         this.removeTooltip();
     }
 
-    private function onMouseOver(event:Event) : void
-    {
+    private function onMouseOver(event:Event):void {
         var tradeSlot:TradeSlot = event.currentTarget as TradeSlot;
-        this.setToolTip(new EquipmentToolTip(tradeSlot.itemType_,tradeSlot.itemData_, this.gs_.map.player_,-1,InventoryOwnerTypes.OTHER_PLAYER,tradeSlot.id));
+        this.setToolTip(new EquipmentToolTip(tradeSlot.itemType_, tradeSlot.itemData_, this.gs_.map.player_, -1, InventoryOwnerTypes.OTHER_PLAYER, tradeSlot.id));
     }
 
-    private function onRollOut(event:Event) : void
-    {
+    private function onRollOut(event:Event):void {
         this.removeTooltip();
     }
 
-    private function setToolTip(toolTip:ToolTip) : void
-    {
+    private function setToolTip(toolTip:ToolTip):void {
         this.removeTooltip();
         tooltip_ = toolTip;
-        if(tooltip_ != null)
-        {
+        if (tooltip_ != null) {
             stage.addChild(tooltip_);
         }
     }
 
-    private function removeTooltip() : void
-    {
-        if(tooltip_ != null)
-        {
-            if(tooltip_.parent != null)
-            {
+    private function removeTooltip():void {
+        if (tooltip_ != null) {
+            if (tooltip_.parent != null) {
                 tooltip_.parent.removeChild(tooltip_);
             }
             tooltip_ = null;
         }
     }
 
-    private function onSlotClick(event:MouseEvent) : void
-    {
+    private function onSlotClick(event:MouseEvent):void {
         var slot:TradeSlot = event.currentTarget as TradeSlot;
         slot.setIncluded(!slot.included_);
         dispatchEvent(new Event(Event.CHANGE));

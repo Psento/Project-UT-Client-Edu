@@ -5,15 +5,15 @@ public class StorageRequest extends OutgoingMessage {
     public var objectId_:int;
 
     public function StorageRequest(id:uint, callback:Function) {
-        super(id,callback);
+        super(id, callback);
     }
 
-    override public function writeToOutput(data:IDataOutput) : void {
+    override public function writeToOutput(data:IDataOutput):void {
         data.writeInt(this.objectId_);
     }
 
-    override public function toString() : String {
-        return formatToString("VAULTREQUEST","objectId_");
+    override public function toString():String {
+        return formatToString("VAULTREQUEST", "objectId_");
     }
 }
 }

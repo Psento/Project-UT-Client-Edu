@@ -1,5 +1,4 @@
-package com.company.assembleegameclient.screens
-{
+package com.company.assembleegameclient.screens {
 import com.company.assembleegameclient.ui.Scrollbar;
 import com.company.ui.SimpleText;
 
@@ -19,212 +18,189 @@ import svera.untiered.core.model.PlayerModel;
 import svera.untiered.game.view.CurrencyDisplay;
 import svera.untiered.ui.view.components.ScreenBase;
 
-public class CharacterSelectionAndNewsScreen extends Sprite
-   {
-      private const SCROLLBAR_REQUIREMENT_HEIGHT:Number = 400;
-      
-      private const DROP_SHADOW:DropShadowFilter = new DropShadowFilter(0,0,0,1,8,8);
-      
-      private var model:PlayerModel;
-      
-      private var isInitialized:Boolean;
-      
-      private var nameText:SimpleText;
-      
-      private var currencyDisplay:CurrencyDisplay;
-      
-      private var charactersText:SimpleText;
-      
-      private var newsText:SimpleText;
+public class CharacterSelectionAndNewsScreen extends Sprite {
+    private const SCROLLBAR_REQUIREMENT_HEIGHT:Number = 400;
 
-      private var newsList:NewsList;
-      
-      private var characterList:CharacterList;
-      
-      private var characterListHeight:Number;
-      
-      private var playButton:TitleMenuOption;
-      
-      private var backButton:TitleMenuOption;
-      
-      private var classesButton:TitleMenuOption;
-      
-      private var lines:Shape;
-      
-      private var scrollBar:Scrollbar;
-      
-      public var close:Signal;
-      
-      public var showClasses:Signal;
-      
-      public var newCharacter:Signal;
-      
-      public var playGame:Signal;
-      
-      public function CharacterSelectionAndNewsScreen()
-      {
-         this.playButton = new TitleMenuOption("play",36,true);
-         this.backButton = new TitleMenuOption("back",22,false);
-         this.classesButton = new TitleMenuOption("classes",22,false);
-         this.newCharacter = new Signal();
-         this.playGame = new Signal();
-         super();
-         addChild(new ScreenBase(2));
-         addChild(new AccountScreen());
-         this.close = new NativeMappedSignal(this.backButton,MouseEvent.CLICK);
-         this.showClasses = new NativeMappedSignal(this.classesButton,MouseEvent.CLICK);
-      }
-      
-      public function initialize(model:PlayerModel) : void
-      {
-         if(this.isInitialized)
-         {
+    private const DROP_SHADOW:DropShadowFilter = new DropShadowFilter(0, 0, 0, 1, 8, 8);
+
+    private var model:PlayerModel;
+
+    private var isInitialized:Boolean;
+
+    private var nameText:SimpleText;
+
+    private var currencyDisplay:CurrencyDisplay;
+
+    private var charactersText:SimpleText;
+
+    private var newsText:SimpleText;
+
+    private var newsList:NewsList;
+
+    private var characterList:CharacterList;
+
+    private var characterListHeight:Number;
+
+    private var playButton:TitleMenuOption;
+
+    private var backButton:TitleMenuOption;
+
+    private var classesButton:TitleMenuOption;
+
+    private var lines:Shape;
+
+    private var scrollBar:Scrollbar;
+
+    public var close:Signal;
+
+    public var showClasses:Signal;
+
+    public var newCharacter:Signal;
+
+    public var playGame:Signal;
+
+    public function CharacterSelectionAndNewsScreen() {
+        this.playButton = new TitleMenuOption("play", 36, true);
+        this.backButton = new TitleMenuOption("back", 22, false);
+        this.classesButton = new TitleMenuOption("classes", 22, false);
+        this.newCharacter = new Signal();
+        this.playGame = new Signal();
+        super();
+        addChild(new ScreenBase(2));
+        addChild(new AccountScreen());
+        this.close = new NativeMappedSignal(this.backButton, MouseEvent.CLICK);
+        this.showClasses = new NativeMappedSignal(this.classesButton, MouseEvent.CLICK);
+    }
+
+    public function initialize(model:PlayerModel):void {
+        if (this.isInitialized) {
             return;
-         }
-         this.isInitialized = true;
-         this.model = model;
-         this.createDisplayAssets(model);
-      }
-      
-      private function createDisplayAssets(model:PlayerModel) : void
-      {
-         this.createNameText();
-         this.createCurrencyDisplay();
-         this.createCharactersText();
-         this.createCharacterList();
+        }
+        this.isInitialized = true;
+        this.model = model;
+        this.createDisplayAssets(model);
+    }
 
-         this.createButtons();
-         this.positionButtons();
+    private function createDisplayAssets(model:PlayerModel):void {
+        this.createNameText();
+        this.createCurrencyDisplay();
+        this.createCharactersText();
+        this.createCharacterList();
 
-         if (this.characterListHeight > this.SCROLLBAR_REQUIREMENT_HEIGHT) {
+        this.createButtons();
+        this.positionButtons();
+
+        if (this.characterListHeight > this.SCROLLBAR_REQUIREMENT_HEIGHT) {
             this.createScrollbar();
-         }
-      }
-      
-      private function createButtons() : void
-      {
-         addChild(this.playButton);
-         addChild(this.classesButton);
-         addChild(this.backButton);
-         this.playButton.addEventListener(MouseEvent.CLICK,this.onPlayClick);
-      }
-      
-      private function positionButtons() : void
-      {
-         this.playButton.x = (this.stage.width - this.playButton.width) * 0.5;
-         this.playButton.y = GameClient.StageHeight - (600 - 520);
-         this.backButton.x = (this.stage.width - this.backButton.width) * 0.5 - 94;
-         this.backButton.y = GameClient.StageHeight - (600 - 532);
-         this.classesButton.x = (this.stage.width - this.classesButton.width) * 0.5 + 96;
-         this.classesButton.y = backButton.y;
-      }
-      
-      private function createScrollbar() : void
-      {
-         this.scrollBar = new Scrollbar(16,399);
-         this.scrollBar.x = 375;
-         this.scrollBar.y = 113;
-         this.scrollBar.setIndicatorSize(399,this.characterList.height);
-         this.scrollBar.addEventListener(Event.CHANGE,this.onScrollBarChange);
-         addChild(this.scrollBar);
-      }
-      
-      private function createCharacterList() : void
-      {
-         this.characterList = new CharacterList(this.model);
-         this.characterList.x = 115;
-         this.characterList.y = 153;
-         this.characterListHeight = this.characterList.height;
-         addChild(this.characterList);
-      }
-      
-      private function createCharactersText() : void
-      {
-         this.charactersText = new SimpleText(18,11776947,false,0,0);
-         this.charactersText.setBold(true);
-         this.charactersText.text = "Characters";
-         this.charactersText.updateMetrics();
-         this.charactersText.filters = [this.DROP_SHADOW];
-         this.charactersText.setAlignment(TextFormatAlign.LEFT);
-         this.charactersText.x = 10;
-         this.charactersText.y = 79;
-         addChild(this.charactersText);
-      }
-      
-      private function createCurrencyDisplay() : void
-      {
-         this.currencyDisplay = new CurrencyDisplay();
-         this.currencyDisplay.draw(this.model.getTsavorite(),this.model.getMedallions(),this.model.getHonor(),this.model.getFame(), true);
-         this.currencyDisplay.x = this.stage.width;
-         this.currencyDisplay.y = 20;
-         addChild(this.currencyDisplay);
-      }
-      
-      private function createNameText() : void
-      {
-         this.nameText = new SimpleText(22,11776947,false,0,0);
-         this.nameText.setBold(true);
-         this.nameText.text = this.model.getName() || "Undefined";
-         this.nameText.updateMetrics();
-         this.nameText.filters = [this.DROP_SHADOW];
-         this.nameText.y = 24 + this.nameText.height;
-         this.nameText.x = (this.stage.width - this.nameText.width) / 2;
-         addChild(this.nameText);
-      }
-      
-      private function getReferenceRectangle() : Rectangle
-      {
-         var rectangle:Rectangle = new Rectangle();
-         if(stage)
-         {
-            rectangle = new Rectangle(0,0,stage.stageWidth,stage.stageHeight);
-         }
-         return rectangle;
-      }
-      
-      private function createBoundaryLines() : void
-      {
-         this.lines = new Shape();
-         this.lines.graphics.clear();
-         this.lines.graphics.lineStyle(2,5526612);
-         this.lines.graphics.moveTo(0,105);
-         this.lines.graphics.lineTo(this.stage.width,105);
-         this.lines.graphics.moveTo(400,107);
-         this.lines.graphics.lineTo(400,526);
-         this.lines.graphics.lineStyle();
-         addChild(this.lines);
-      }
-      
-      private function onScrollBarChange(event:Event) : void
-      {
-         this.characterList.setPos(-this.scrollBar.pos() * (this.characterListHeight - 400));
-      }
-      
-      private function removeIfAble(object:DisplayObject) : void
-      {
-         if(object && contains(object))
-         {
+        }
+    }
+
+    private function createButtons():void {
+        addChild(this.playButton);
+        addChild(this.classesButton);
+        addChild(this.backButton);
+        this.playButton.addEventListener(MouseEvent.CLICK, this.onPlayClick);
+    }
+
+    private function positionButtons():void {
+        this.playButton.x = (this.stage.width - this.playButton.width) * 0.5;
+        this.playButton.y = GameClient.StageHeight - (600 - 520);
+        this.backButton.x = (this.stage.width - this.backButton.width) * 0.5 - 94;
+        this.backButton.y = GameClient.StageHeight - (600 - 532);
+        this.classesButton.x = (this.stage.width - this.classesButton.width) * 0.5 + 96;
+        this.classesButton.y = backButton.y;
+    }
+
+    private function createScrollbar():void {
+        this.scrollBar = new Scrollbar(16, 399);
+        this.scrollBar.x = 375;
+        this.scrollBar.y = 113;
+        this.scrollBar.setIndicatorSize(399, this.characterList.height);
+        this.scrollBar.addEventListener(Event.CHANGE, this.onScrollBarChange);
+        addChild(this.scrollBar);
+    }
+
+    private function createCharacterList():void {
+        this.characterList = new CharacterList(this.model);
+        this.characterList.x = 115;
+        this.characterList.y = 153;
+        this.characterListHeight = this.characterList.height;
+        addChild(this.characterList);
+    }
+
+    private function createCharactersText():void {
+        this.charactersText = new SimpleText(18, 11776947, false, 0, 0);
+        this.charactersText.setBold(true);
+        this.charactersText.text = "Characters";
+        this.charactersText.updateMetrics();
+        this.charactersText.filters = [this.DROP_SHADOW];
+        this.charactersText.setAlignment(TextFormatAlign.LEFT);
+        this.charactersText.x = 10;
+        this.charactersText.y = 79;
+        addChild(this.charactersText);
+    }
+
+    private function createCurrencyDisplay():void {
+        this.currencyDisplay = new CurrencyDisplay();
+        this.currencyDisplay.draw(this.model.getTsavorite(), this.model.getMedallions(), this.model.getHonor(), this.model.getFame(), true);
+        this.currencyDisplay.x = this.stage.width;
+        this.currencyDisplay.y = 20;
+        addChild(this.currencyDisplay);
+    }
+
+    private function createNameText():void {
+        this.nameText = new SimpleText(22, 11776947, false, 0, 0);
+        this.nameText.setBold(true);
+        this.nameText.text = this.model.getName() || "Undefined";
+        this.nameText.updateMetrics();
+        this.nameText.filters = [this.DROP_SHADOW];
+        this.nameText.y = 24 + this.nameText.height;
+        this.nameText.x = (this.stage.width - this.nameText.width) / 2;
+        addChild(this.nameText);
+    }
+
+    private function getReferenceRectangle():Rectangle {
+        var rectangle:Rectangle = new Rectangle();
+        if (stage) {
+            rectangle = new Rectangle(0, 0, stage.stageWidth, stage.stageHeight);
+        }
+        return rectangle;
+    }
+
+    private function createBoundaryLines():void {
+        this.lines = new Shape();
+        this.lines.graphics.clear();
+        this.lines.graphics.lineStyle(2, 5526612);
+        this.lines.graphics.moveTo(0, 105);
+        this.lines.graphics.lineTo(this.stage.width, 105);
+        this.lines.graphics.moveTo(400, 107);
+        this.lines.graphics.lineTo(400, 526);
+        this.lines.graphics.lineStyle();
+        addChild(this.lines);
+    }
+
+    private function onScrollBarChange(event:Event):void {
+        this.characterList.setPos(-this.scrollBar.pos() * (this.characterListHeight - 400));
+    }
+
+    private function removeIfAble(object:DisplayObject):void {
+        if (object && contains(object)) {
             removeChild(object);
-         }
-      }
-      
-      private function onPlayClick(event:Event) : void
-      {
-         if(this.model.getCharacterCount() == 0)
-         {
+        }
+    }
+
+    private function onPlayClick(event:Event):void {
+        if (this.model.getCharacterCount() == 0) {
             this.newCharacter.dispatch();
-         }
-         else
-         {
+        } else {
             this.playGame.dispatch();
-         }
-      }
-      
-      public function setName(name:String) : void
-      {
-         this.nameText.text = name;
-         this.nameText.updateMetrics();
-         this.nameText.x = (this.stage.width - this.nameText.width) * 0.5;
-      }
-   }
+        }
+    }
+
+    public function setName(name:String):void {
+        this.nameText.text = name;
+        this.nameText.updateMetrics();
+        this.nameText.x = (this.stage.width - this.nameText.width) * 0.5;
+    }
+}
 }

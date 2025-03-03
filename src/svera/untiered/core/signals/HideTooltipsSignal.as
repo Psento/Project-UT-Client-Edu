@@ -1,14 +1,11 @@
-package svera.untiered.core.signals
-{
+package svera.untiered.core.signals {
 import org.osflash.signals.Signal;
 
-public class HideTooltipsSignal extends Signal
-   {
-       
-      
-      public function HideTooltipsSignal()
-      {
-         super();
-      }
-   }
+public class HideTooltipsSignal extends Signal {
+
+
+    public function HideTooltipsSignal() {
+        super();
+    }
+}
 }

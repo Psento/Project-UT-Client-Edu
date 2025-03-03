@@ -1,5 +1,4 @@
-package svera.untiered.ui.view
-{
+package svera.untiered.ui.view {
 import com.company.assembleegameclient.screens.NewsLine;
 
 import robotlegs.bender.bundles.mvcs.Mediator;
@@ -7,34 +6,29 @@ import robotlegs.bender.bundles.mvcs.Mediator;
 import svera.untiered.fame.control.ShowFameViewSignal;
 import svera.untiered.fame.model.SimpleFameVO;
 
-public class NewsLineMediator extends Mediator
-   {
-       
-      
-      [Inject]
-      public var view:NewsLine;
-      
-      [Inject]
-      public var showFameView:ShowFameViewSignal;
-      
-      public function NewsLineMediator()
-      {
-         super();
-      }
-      
-      override public function initialize() : void
-      {
-         this.view.viewCharacterFame.add(this.onViewFame);
-      }
-      
-      override public function destroy() : void
-      {
-         this.view.viewCharacterFame.remove(this.onViewFame);
-      }
-      
-      private function onViewFame(characterId:int) : void
-      {
-         this.showFameView.dispatch(new SimpleFameVO(this.view.accountId,characterId));
-      }
-   }
+public class NewsLineMediator extends Mediator {
+
+
+    [Inject]
+    public var view:NewsLine;
+
+    [Inject]
+    public var showFameView:ShowFameViewSignal;
+
+    public function NewsLineMediator() {
+        super();
+    }
+
+    override public function initialize():void {
+        this.view.viewCharacterFame.add(this.onViewFame);
+    }
+
+    override public function destroy():void {
+        this.view.viewCharacterFame.remove(this.onViewFame);
+    }
+
+    private function onViewFame(characterId:int):void {
+        this.showFameView.dispatch(new SimpleFameVO(this.view.accountId, characterId));
+    }
+}
 }

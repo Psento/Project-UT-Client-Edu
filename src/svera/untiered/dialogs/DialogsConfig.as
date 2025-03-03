@@ -1,5 +1,4 @@
-package svera.untiered.dialogs
-{
+package svera.untiered.dialogs {
 import org.swiftsuspenders.Injector;
 
 import robotlegs.bender.extensions.mediatorMap.api.IMediatorMap;
@@ -11,27 +10,24 @@ import svera.untiered.dialogs.control.ShowDialogBackgroundSignal;
 import svera.untiered.dialogs.view.DialogsMediator;
 import svera.untiered.dialogs.view.DialogsView;
 
-public class DialogsConfig implements IConfig
-   {
-       
-      
-      [Inject]
-      public var injector:Injector;
-      
-      [Inject]
-      public var mediatorMap:IMediatorMap;
-      
-      public function DialogsConfig()
-      {
-         super();
-      }
-      
-      public function configure() : void
-      {
-         this.injector.map(ShowDialogBackgroundSignal).asSingleton();
-         this.injector.map(OpenDialogSignal).asSingleton();
-         this.injector.map(CloseDialogsSignal).asSingleton();
-         this.mediatorMap.map(DialogsView).toMediator(DialogsMediator);
-      }
-   }
+public class DialogsConfig implements IConfig {
+
+
+    [Inject]
+    public var injector:Injector;
+
+    [Inject]
+    public var mediatorMap:IMediatorMap;
+
+    public function DialogsConfig() {
+        super();
+    }
+
+    public function configure():void {
+        this.injector.map(ShowDialogBackgroundSignal).asSingleton();
+        this.injector.map(OpenDialogSignal).asSingleton();
+        this.injector.map(CloseDialogsSignal).asSingleton();
+        this.mediatorMap.map(DialogsView).toMediator(DialogsMediator);
+    }
+}
 }

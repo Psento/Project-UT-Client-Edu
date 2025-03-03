@@ -1,14 +1,11 @@
-package svera.lib.tasks
-{
+package svera.lib.tasks {
 import org.osflash.signals.Signal;
 
-public class TaskResultSignal extends Signal
-   {
-       
-      
-      public function TaskResultSignal()
-      {
-         super(BaseTask,Boolean,String);
-      }
-   }
+public class TaskResultSignal extends Signal {
+
+
+    public function TaskResultSignal() {
+        super(BaseTask, Boolean, String);
+    }
+}
 }

@@ -1,16 +1,13 @@
-package svera.untiered.game.model
-{
+package svera.untiered.game.model {
 import com.company.assembleegameclient.objects.Player;
 
-public class GameModel
-   {
-       
-      
-      public var player:Player;
-      
-      public function GameModel()
-      {
-         super();
-      }
-   }
+public class GameModel {
+
+
+    public var player:Player;
+
+    public function GameModel() {
+        super();
+    }
+}
 }

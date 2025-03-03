@@ -37,7 +37,8 @@ public class VaultContent extends Sprite {
     }
 
     private var content_:Vector.<StorageSlotUpdateData>;
-    public function initialize(size:int, content:Vector.<StorageSlotUpdateData>) : void {
+
+    public function initialize(size:int, content:Vector.<StorageSlotUpdateData>):void {
         if (this.vaultGrid_ != null) {
             SpriteUtil.safeRemoveChild(this, this.vaultGrid_);
         }
@@ -61,11 +62,11 @@ public class VaultContent extends Sprite {
         SpriteUtil.safeAddChild(this, this.vaultGrid_);
     }
 
-    public function updateSlot(slot:int, inventory:int, itemData:int) : void {
+    public function updateSlot(slot:int, inventory:int, itemData:int):void {
         this.vaultGrid_.setItem(slot, inventory, itemData);
     }
 
-    public function sortBy(sort:String) : void {
+    public function sortBy(sort:String):void {
         if (this.curSort_ == sort) {
             return;
         }
@@ -75,7 +76,7 @@ public class VaultContent extends Sprite {
     }
 
     public function filterSlotsBySlotType(types:Array):void {
-        while(this.vaultGrid_.numChildren > 0) {
+        while (this.vaultGrid_.numChildren > 0) {
             this.vaultGrid_.removeChildAt(0);
         }
 
@@ -90,7 +91,7 @@ public class VaultContent extends Sprite {
         }
     }
 
-    public function dispose() : void {
+    public function dispose():void {
         removeChild(this.vaultGrid_);
         this.vaultGrid_ = null;
     }

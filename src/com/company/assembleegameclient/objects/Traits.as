@@ -4,14 +4,12 @@ import com.company.assembleegameclient.ui.panels.Panel;
 import com.company.assembleegameclient.ui.panels.TraitsPanel;
 
 public class Traits extends GameObject implements IInteractiveObject {
-    public function Traits(objectXML:XML)
-    {
+    public function Traits(objectXML:XML) {
         super(objectXML);
         isInteractive_ = true;
     }
 
-    public function getPanel(gs:GameSprite) : Panel
-    {
+    public function getPanel(gs:GameSprite):Panel {
         return new TraitsPanel(gs);
     }
 }

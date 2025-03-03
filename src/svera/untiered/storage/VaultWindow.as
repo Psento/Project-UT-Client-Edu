@@ -54,25 +54,25 @@ public class VaultWindow extends Sprite {
         graphics.endFill();
     }
 
-    private function onUpgradeClick(e:MouseEvent) : void {
+    private function onUpgradeClick(e:MouseEvent):void {
         // do some verification
         GameServerConnection.instance.vaultUpgrade(this.owner_.objectId_);
     }
 
-    public function setContent(size:int, slots:Vector.<StorageSlotUpdateData>) : void {
+    public function setContent(size:int, slots:Vector.<StorageSlotUpdateData>):void {
         this.owner_.setContainer(size, slots);
         this.contentView_.initialize(size, slots);
         this.upgradeButton_.setPurchaseInfo(size);
     }
 
-    public function updateSlot(slot:int, inventory:int, itemData:int) : void {
+    public function updateSlot(slot:int, inventory:int, itemData:int):void {
         this.owner_.equipment_[slot] = inventory;
         this.owner_.itemDatas_[slot] = itemData;
         this.contentView_.updateSlot(slot, inventory, itemData);
     }
 
 
-    private function onSort(e:MouseEvent) : void {
+    private function onSort(e:MouseEvent):void {
         var caller:StorageSortTab = e.currentTarget as StorageSortTab;
         if (caller == null) {
             return;
@@ -89,9 +89,9 @@ public class VaultWindow extends Sprite {
             }
             sorter.unselect();
         }
-     }
+    }
 
-    public function dispose() : void {
+    public function dispose():void {
         this.sortCategories_.length = 0;
         this.sortCategories_ = null;
         this.contentView_.dispose();

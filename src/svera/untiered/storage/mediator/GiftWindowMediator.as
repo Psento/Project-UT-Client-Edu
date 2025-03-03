@@ -18,21 +18,21 @@ public class GiftWindowMediator extends Mediator {
     [Inject]
     public var giftSlotUpdate_:GiftSlotUpdateSignal;
 
-    public override function initialize() : void {
+    public override function initialize():void {
         this.giftUpdate_.add(this.onVaultUpdate);
         this.giftSlotUpdate_.add(this.onVaultSlotUpdate);
     }
 
-    public override function destroy() : void {
+    public override function destroy():void {
         this.giftUpdate_.remove(this.onVaultUpdate);
         this.giftSlotUpdate_.remove(this.onVaultSlotUpdate);
     }
 
-    private function onVaultUpdate(size:int, slots:Vector.<StorageSlotUpdateData>) : void {
+    private function onVaultUpdate(size:int, slots:Vector.<StorageSlotUpdateData>):void {
         this.view_.setContent(size, slots);
     }
 
-    private function onVaultSlotUpdate(slot:int, inventory:int, itemData:int) : void {
+    private function onVaultSlotUpdate(slot:int, inventory:int, itemData:int):void {
         this.view_.updateSlot(slot, inventory, itemData);
     }
 }

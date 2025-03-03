@@ -1,14 +1,11 @@
-package svera.untiered.core.signals
-{
+package svera.untiered.core.signals {
 import org.osflash.signals.Signal;
 
-public class SetLoadingMessageSignal extends Signal
-   {
-       
-      
-      public function SetLoadingMessageSignal()
-      {
-         super(String);
-      }
-   }
+public class SetLoadingMessageSignal extends Signal {
+
+
+    public function SetLoadingMessageSignal() {
+        super(String);
+    }
+}
 }

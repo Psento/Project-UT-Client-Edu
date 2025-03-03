@@ -17,7 +17,7 @@ public class Song {
 
     public function Song(name:String) {
         sound = new Sound();
-        sound.load(new URLRequest(Parameters.appServerAddress() + "/music/"+name+".mp3"));
+        sound.load(new URLRequest(Parameters.appServerAddress() + "/music/" + name + ".mp3"));
         transform = new SoundTransform(0);
         tween = new GTween(transform);
         tween.onChange = updateTransform;

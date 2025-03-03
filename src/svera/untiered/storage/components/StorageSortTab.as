@@ -14,21 +14,26 @@ public class StorageSortTab extends Sprite {
     public static const MISC:String = "MISC";
     public static const ALL:String = "ALL";
 
-    private static const WEAPON_CATEGORY:Array =  [1, 2, 17, 8, 24, 3, 26, 27, 28, 29, 30]; //slot types
+    private static const WEAPON_CATEGORY:Array = [1, 2, 17, 8, 24, 3, 26, 27, 28, 29, 30]; //slot types
     private static const ABILITY_CATEGORY:Array = [13, 11, 4, 16, 15, 12, 18, 19, 5, 20, 21, 25, 22, 23];
-    private static const ARMOR_CATEGORY:Array =   [6, 7, 14];
-    private static const RING_CATEGORY:Array =    [9];
-    private static const OTHER_CATEGORY:Array =   [10];
+    private static const ARMOR_CATEGORY:Array = [6, 7, 14];
+    private static const RING_CATEGORY:Array = [9];
+    private static const OTHER_CATEGORY:Array = [10];
 
     public static const SIZE:int = 50;
 
-    public static function getSortArray(sort:String) : Array {
-        switch(sort) {
-            case WEAPON:  return WEAPON_CATEGORY;
-            case ABILITY: return ABILITY_CATEGORY;
-            case ARMOR:   return ARMOR_CATEGORY;
-            case RING:    return RING_CATEGORY;
-            case MISC:    return OTHER_CATEGORY;
+    public static function getSortArray(sort:String):Array {
+        switch (sort) {
+            case WEAPON:
+                return WEAPON_CATEGORY;
+            case ABILITY:
+                return ABILITY_CATEGORY;
+            case ARMOR:
+                return ARMOR_CATEGORY;
+            case RING:
+                return RING_CATEGORY;
+            case MISC:
+                return OTHER_CATEGORY;
         }
         return [];
     }
@@ -53,7 +58,7 @@ public class StorageSortTab extends Sprite {
         this.addEventListener(MouseEvent.ROLL_OUT, this.rollOut);
     }
 
-    public function select() : void {
+    public function select():void {
         this.selected_ = !this.selected_;
         if (this.selected_) {
             this.transform.colorTransform = MoreColorUtil.darkCT;
@@ -62,12 +67,12 @@ public class StorageSortTab extends Sprite {
         }
     }
 
-    public function unselect() : void {
+    public function unselect():void {
         this.selected_ = false;
         this.transform.colorTransform = MoreColorUtil.identity;
     }
 
-    public function isSelected() : Boolean {
+    public function isSelected():Boolean {
         return this.selected_;
     }
 

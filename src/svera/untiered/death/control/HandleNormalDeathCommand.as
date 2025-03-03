@@ -1,5 +1,4 @@
-package svera.untiered.death.control
-{
+package svera.untiered.death.control {
 import robotlegs.bender.framework.api.ILogger;
 
 import svera.lib.tasks.DispatchSignalTask;
@@ -13,63 +12,55 @@ import svera.untiered.fame.model.SimpleFameVO;
 import svera.untiered.game.signals.DisconnectGameSignal;
 import svera.untiered.messaging.impl.incoming.Death;
 
-public class HandleNormalDeathCommand
-   {
-       
-      
-      [Inject]
-      public var death:Death;
-      
-      [Inject]
-      public var player:PlayerModel;
-      
-      [Inject]
-      public var task:GetCharListTask;
-      
-      [Inject]
-      public var showFame:ShowFameViewSignal;
-      
-      [Inject]
-      public var monitor:TaskMonitor;
-      
-      [Inject]
-      public var disconnect:DisconnectGameSignal;
-      
-      [Inject]
-      public var logger:ILogger;
-      
-      private var fameVO:FameVO;
-      
-      public function HandleNormalDeathCommand()
-      {
-         super();
-      }
-      
-      public function execute() : void
-      {
-         this.fameVO = new SimpleFameVO(this.death.accountId_,this.death.charId_);
-         this.gotoFameView();
-      }
-      
-      private function gotoFameView() : void
-      {
-         if(this.player.getAccountId() == -1)
-         {
+public class HandleNormalDeathCommand {
+
+
+    [Inject]
+    public var death:Death;
+
+    [Inject]
+    public var player:PlayerModel;
+
+    [Inject]
+    public var task:GetCharListTask;
+
+    [Inject]
+    public var showFame:ShowFameViewSignal;
+
+    [Inject]
+    public var monitor:TaskMonitor;
+
+    [Inject]
+    public var disconnect:DisconnectGameSignal;
+
+    [Inject]
+    public var logger:ILogger;
+
+    private var fameVO:FameVO;
+
+    public function HandleNormalDeathCommand() {
+        super();
+    }
+
+    public function execute():void {
+        this.fameVO = new SimpleFameVO(this.death.accountId_, this.death.charId_);
+        this.gotoFameView();
+    }
+
+    private function gotoFameView():void {
+        if (this.player.getAccountId() == -1) {
             this.gotoFameViewOnceDataIsLoaded();
-         }
-         else
-         {
+        } else {
             this.showFame.dispatch(this.fameVO);
-         }
-      }
-      
-      private function gotoFameViewOnceDataIsLoaded() : void
-      {
-         var sequence:TaskSequence = new TaskSequence();
-         sequence.add(this.task);
-         sequence.add(new DispatchSignalTask(this.showFame,this.fameVO));
-         this.monitor.add(sequence);
-         sequence.start();
-      }
-   }
+        }
+    }
+
+    private function gotoFameViewOnceDataIsLoaded():void {
+        var sequence:TaskSequence = new TaskSequence();
+        sequence.add(this.task);
+        sequence.add(new DispatchSignalTask(this.showFame, this.fameVO));
+        this.monitor.add(sequence);
+        sequence.start();
+    }
+}
 }

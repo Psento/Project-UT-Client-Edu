@@ -1,50 +1,40 @@
-package svera.untiered.account.web.services
-{
+package svera.untiered.account.web.services {
 import svera.lib.tasks.BaseTask;
 import svera.untiered.account.core.services.SendPasswordReminderTask;
 import svera.untiered.appengine.api.AppEngineClient;
 
-public class WebSendPasswordReminderTask extends BaseTask implements SendPasswordReminderTask
-   {
-       
-      
-      [Inject]
-      public var email:String;
-      
-      [Inject]
-      public var client:AppEngineClient;
-      
-      public function WebSendPasswordReminderTask()
-      {
-         super();
-      }
-      
-      override protected function startTask() : void
-      {
-         this.client.complete.addOnce(this.onComplete);
-         this.client.sendRequest("/account/forgotPassword",{"guid":this.email});
-      }
-      
-      private function onComplete(isOK:Boolean, data:*) : void
-      {
-         if(isOK)
-         {
+public class WebSendPasswordReminderTask extends BaseTask implements SendPasswordReminderTask {
+
+
+    [Inject]
+    public var email:String;
+
+    [Inject]
+    public var client:AppEngineClient;
+
+    public function WebSendPasswordReminderTask() {
+        super();
+    }
+
+    override protected function startTask():void {
+        this.client.complete.addOnce(this.onComplete);
+        this.client.sendRequest("/account/forgotPassword", {"guid": this.email});
+    }
+
+    private function onComplete(isOK:Boolean, data:*):void {
+        if (isOK) {
             this.onForgotDone();
-         }
-         else
-         {
+        } else {
             this.onForgotError(data);
-         }
-      }
-      
-      private function onForgotDone() : void
-      {
-         completeTask(true);
-      }
-      
-      private function onForgotError(error:String) : void
-      {
-         completeTask(false,error);
-      }
-   }
+        }
+    }
+
+    private function onForgotDone():void {
+        completeTask(true);
+    }
+
+    private function onForgotError(error:String):void {
+        completeTask(false, error);
+    }
+}
 }

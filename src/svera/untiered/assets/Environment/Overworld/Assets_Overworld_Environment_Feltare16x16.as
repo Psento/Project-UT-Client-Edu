@@ -3,9 +3,9 @@ import mx.core.*;
 
 [Embed(source="Assets_Overworld_Environment_Feltare16x16.png")]
 public class Assets_Overworld_Environment_Feltare16x16 extends BitmapAsset {
-   public function Assets_Overworld_Environment_Feltare16x16() {
-      super();
+    public function Assets_Overworld_Environment_Feltare16x16() {
+        super();
 
-   }
+    }
 }
 }

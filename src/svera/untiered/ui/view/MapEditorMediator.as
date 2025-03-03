@@ -1,29 +1,25 @@
-package svera.untiered.ui.view
-{
+package svera.untiered.ui.view {
 import com.company.assembleegameclient.mapeditor.MapEditor;
 
 import robotlegs.bender.bundles.mvcs.Mediator;
 
 import svera.untiered.core.model.PlayerModel;
 
-public class MapEditorMediator extends Mediator
-   {
-       
-      
-      [Inject]
-      public var view:MapEditor;
-      
-      [Inject]
-      public var model:PlayerModel;
-      
-      public function MapEditorMediator()
-      {
-         super();
-      }
-      
-      override public function initialize() : void
-      {
-         this.view.initialize(this.model);
-      }
-   }
+public class MapEditorMediator extends Mediator {
+
+
+    [Inject]
+    public var view:MapEditor;
+
+    [Inject]
+    public var model:PlayerModel;
+
+    public function MapEditorMediator() {
+        super();
+    }
+
+    override public function initialize():void {
+        this.view.initialize(this.model);
+    }
+}
 }

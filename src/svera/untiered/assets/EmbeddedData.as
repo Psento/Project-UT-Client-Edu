@@ -1,22 +1,27 @@
 package svera.untiered.assets {
 public class EmbeddedData {
     // Svera System
-    private static const Environment_Ground:Class = XML_Environment_Ground;
-    private static const Environment_Objects:Class = XML_Environment_Objects;
+    [Embed(source="Xmls/Environment_Ground.xml", mimeType="application/octet-stream")]
+    private static const Environment_Ground:Class;
+    [Embed(source="Xmls/Environment_Objects.xml", mimeType="application/octet-stream")]
+    private static const Environment_Objects:Class;
     // Old System
-    public static const PlayersCXML:Class = XML_Players;
-    public static const groundFiles:Array = [new Environment_Ground()];
-    private static const SkinsCXML:Class = EmbeddedData_SkinsCXML;
-    private static const DyesCXML:Class = EmbeddedData_DyesCXML;
-    private static const TextilesCXML:Class = EmbeddedData_TextilesCXML;
-    private static const TutorialObjectsCXML:Class = EmbeddedData_TutorialObjectsCXML;
+    [Embed(source="Xmls/Players.xml", mimeType="application/octet-stream")]
+    public static const Players:Class;
+    [Embed(source="Xmls/Skins.xml", mimeType="application/octet-stream")]
+    private static const Skins:Class;
+    [Embed(source="Xmls/Dyes.xml", mimeType="application/octet-stream")]
+    private static const Dyes:Class;
+    [Embed(source="Xmls/Textiles.xml", mimeType="application/octet-stream")]
+    private static const Textiles:Class;
+    [Embed(source="Xmls/Regions.xml", mimeType="application/octet-stream")]
+    private static const Regions:Class;
 
-    public static const skinsXML:XML = XML(new SkinsCXML());
-    public static const objectFiles:Array = [new Environment_Objects(), new DyesCXML(), new TextilesCXML(), new PlayersCXML(), new TutorialObjectsCXML()];
-    private static const RegionsCXML:Class = EmbeddedData_RegionsCXML;
-    public static const regionFiles:Array = [new RegionsCXML()];
-    private static const TutorialScriptCXML:Class = EmbeddedData_TutorialScriptCXML;
-    public static const tutorialXML:XML = XML(new TutorialScriptCXML());
+
+    public static const groundFiles:Array = [new Environment_Ground()];
+    public static const skinsXML:XML = XML(new Skins());
+    public static const objectFiles:Array = [new Environment_Objects(), new Dyes(), new Textiles(), new Players()];
+    public static const regionFiles:Array = [new Regions()];
 
 
     public function EmbeddedData() {

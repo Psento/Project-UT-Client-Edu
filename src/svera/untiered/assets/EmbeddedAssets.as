@@ -2,139 +2,251 @@ package svera.untiered.assets {
 public class EmbeddedAssets {
     // Svera System
     // Particles
-    []
-    public static var Assets_Player_ParticlesEmbed_:Class = Assets_Player_Particles;
+    [Embed(source="Entities/Player/Player_Particles.png")]
+    public static var Player_Particles:Class;
     // Icons
-    public static var Assets_Currency_Icons8x8Embed_:Class = Assets_Currency_Icons8x8;
-    public static var Assets_Currency_Icons16x16Embed_:Class = Assets_Currency_Icons16x16;
-    public static var Assets_StatusIcons16x16Embed_:Class = Assets_StatusIcons16x16;
-    public static var Assets_StatusIcons18x18Embed_:Class = Assets_StatusIcons18x18;
+    [Embed(source="Interface/Currency/Currency_Icons8x8.png")]
+    public static var Currency_Icons8x8:Class;
+    [Embed(source="Interface/Currency/Currency_Icons16x16.png")]
+    public static var Currency_Icons16x16:Class;
+    [Embed(source="Interface/StatusIcons/StatusIcons16x16.png")]
+    public static var StatusIcons16x16:Class;
+    [Embed(source="Interface/StatusIcons/StatusIcons18x18.png")]
+    public static var StatusIcons18x18:Class;
     // Characters
-    public static var Assets_Pets16x16Embed_:Class = Assets_Pets16x16;
+    [Embed(source="Entities/Player/Pets16x16.png")]
+    public static var Pets16x16:Class;
     // Environment
-    public static var Assets_Foundry_Environment8x8Embed_:Class = Assets_Foundry_Environment8x8;
-    public static var Assets_Foundry_Environment16x16Embed_:Class = Assets_Foundry_Environment16x16;
-    public static var Assets_Foundry_Environment32x32Embed_:Class = Assets_Foundry_Environment32x32;
-    public static var Assets_Tavern_Environment8x8Embed_:Class = Assets_Tavern_Environment8x8;
-    public static var Assets_Vault_Environment8x8Embed_:Class = Assets_Vault_Environment8x8;
-    public static var Assets_Overworld_Environment_NotSpecific8x8Embed_:Class = Assets_Overworld_Environment_NotSpecific8x8;
-    public static var Assets_Overworld_Environment_FearedShallows8x8Embed_:Class = Assets_Overworld_Environment_FearedShallows8x8;
-    public static var Assets_Overworld_Environment_FearedShallows16x16Embed_:Class = Assets_Overworld_Environment_FearedShallows16x16;
-    public static var Assets_Overworld_Environment_FearedShallows32x32Embed_:Class = Assets_Overworld_Environment_FearedShallows32x32;
-    public static var Assets_Overworld_Environment_GarnetWoods8x8Embed_:Class = Assets_Overworld_Environment_GarnetWoods8x8;
-    public static var Assets_Overworld_Environment_GarnetWoods8x16Embed_:Class = Assets_Overworld_Environment_GarnetWoods8x16;
-    public static var Assets_Overworld_Environment_GarnetWoods16x16Embed_:Class = Assets_Overworld_Environment_GarnetWoods16x16;
-    public static var Assets_Overworld_Environment_GarnetWoods32x32Embed_:Class = Assets_Overworld_Environment_GarnetWoods32x32;
-    public static var Assets_Overworld_Environment_SandstoneValley8x8Embed_:Class = Assets_Overworld_Environment_SandstoneValley8x8;
-    public static var Assets_Overworld_Environment_SandstoneValley16x8Embed_:Class = Assets_Overworld_Environment_SandstoneValley16x8;
-    public static var Assets_Overworld_Environment_SandstoneValley16x16Embed_:Class = Assets_Overworld_Environment_SandstoneValley16x16;
-    public static var Assets_Overworld_Environment_SandstoneValley32x32Embed_:Class = Assets_Overworld_Environment_SandstoneValley32x32;
-    public static var Assets_Overworld_Environment_Feltare8x8Embed_:Class = Assets_Overworld_Environment_Feltare8x8;
-    public static var Assets_Overworld_Environment_Feltare16x16Embed_:Class = Assets_Overworld_Environment_Feltare16x16;
-    public static var Assets_Overworld_Environment_Feltare32x32Embed_:Class = Assets_Overworld_Environment_Feltare32x32;
-    public static var Assets_Overworld_Environment_AshenValley8x8Embed_:Class = Assets_Overworld_Environment_AshenValley8x8;
-    public static var Assets_Overworld_Environment_AshenValley16x16Embed_:Class = Assets_Overworld_Environment_AshenValley16x16;
-    public static var Assets_Overworld_Environment_DroughtsPath8x8Embed_:Class = Assets_Overworld_Environment_DroughtsPath8x8;
-    public static var Assets_Overworld_Environment_DroughtsPath16x16Embed_:Class = Assets_Overworld_Environment_DroughtsPath16x16;
-    public static var Assets_Overworld_Environment_Nidavellir8x8Embed_:Class = Assets_Overworld_Environment_Nidavellir8x8;
-    public static var Assets_Overworld_Environment_Nidavellir16x8Embed_:Class = Assets_Overworld_Environment_Nidavellir16x8;
-    public static var Assets_Overworld_Environment_Nidavellir16x16Embed_:Class = Assets_Overworld_Environment_Nidavellir16x16;
+
+    [Embed(source="Environment/Foundry/Foundry_Environment8x8.png")]
+    public static var Foundry_Environment8x8:Class;
+    [Embed(source="Environment/Foundry/Foundry_Environment16x16.png")]
+    public static var Foundry_Environment16x16:Class;
+    [Embed(source="Environment/Foundry/Foundry_Environment32x32.png")]
+    public static var Foundry_Environment32x32:Class;
+    [Embed(source="Environment/Tavern/Tavern_Environment8x8.png")]
+    public static var Tavern_Environment8x8:Class;
+    [Embed(source="Environment/Vault/Vault_Environment8x8.png")]
+    public static var Vault_Environment8x8:Class;
+    [Embed(source="Environment/Overworld/Overworld_Environment_NotSpecific8x8.png")]
+    public static var Overworld_Environment_NotSpecific8x8:Class;
+    [Embed(source="Environment/Overworld/Overworld_Environment_FearedShallows8x8.png")]
+    public static var Overworld_Environment_FearedShallows8x8:Class;
+    [Embed(source="Environment/Overworld/Overworld_Environment_FearedShallows16x16.png")]
+    public static var Overworld_Environment_FearedShallows16x16:Class;
+    [Embed(source="Environment/Overworld/Overworld_Environment_FearedShallows32x32.png")]
+    public static var Overworld_Environment_FearedShallows32x32:Class;
+    [Embed(source="Environment/Overworld/Overworld_Environment_GarnetWoods8x8.png")]
+    public static var Overworld_Environment_GarnetWoods8x8:Class;
+    [Embed(source="Environment/Overworld/Overworld_Environment_GarnetWoods8x16.png")]
+    public static var Overworld_Environment_GarnetWoods8x16:Class;
+    [Embed(source="Environment/Overworld/Overworld_Environment_GarnetWoods16x16.png")]
+    public static var Overworld_Environment_GarnetWoods16x16:Class;
+    [Embed(source="Environment/Overworld/Overworld_Environment_GarnetWoods32x32.png")]
+    public static var Overworld_Environment_GarnetWoods32x32:Class;
+    [Embed(source="Environment/Overworld/Overworld_Environment_SandstoneValley8x8.png")]
+    public static var Overworld_Environment_SandstoneValley8x8:Class;
+    [Embed(source="Environment/Overworld/Overworld_Environment_SandstoneValley16x8.png")]
+    public static var Overworld_Environment_SandstoneValley16x8:Class;
+    [Embed(source="Environment/Overworld/Overworld_Environment_SandstoneValley16x16.png")]
+    public static var Overworld_Environment_SandstoneValley16x16:Class;
+    [Embed(source="Environment/Overworld/Overworld_Environment_SandstoneValley32x32.png")]
+    public static var Overworld_Environment_SandstoneValley32x32:Class;
+    [Embed(source="Environment/Overworld/Overworld_Environment_Feltare8x8.png")]
+    public static var Overworld_Environment_Feltare8x8:Class;
+    [Embed(source="Environment/Overworld/Overworld_Environment_Feltare16x16.png")]
+    public static var Overworld_Environment_Feltare16x16:Class;
+    [Embed(source="Environment/Overworld/Overworld_Environment_Feltare32x32.png")]
+    public static var Overworld_Environment_Feltare32x32:Class;
+    [Embed(source="Environment/Overworld/Overworld_Environment_AshenValley8x8.png")]
+    public static var Overworld_Environment_AshenValley8x8:Class;
+    [Embed(source="Environment/Overworld/Overworld_Environment_AshenValley16x16.png")]
+    public static var Overworld_Environment_AshenValley16x16:Class;
+    [Embed(source="Environment/Overworld/Overworld_Environment_DroughtsPath8x8.png")]
+    public static var Overworld_Environment_DroughtsPath8x8:Class;
+    [Embed(source="Environment/Overworld/Overworld_Environment_DroughtsPath16x16.png")]
+    public static var Overworld_Environment_DroughtsPath16x16:Class;
+    [Embed(source="Environment/Overworld/Overworld_Environment_Nidavellir8x8.png")]
+    public static var Overworld_Environment_Nidavellir8x8:Class;
+    [Embed(source="Environment/Overworld/Overworld_Environment_Nidavellir16x8.png")]
+    public static var Overworld_Environment_Nidavellir16x8:Class;
+    [Embed(source="Environment/Overworld/Overworld_Environment_Nidavellir16x16.png")]
+    public static var Overworld_Environment_Nidavellir16x16:Class;
     // Equipment
-    public static var Assets_StarterGearEmbed_:Class = Assets_StarterGear;
+    [Embed(source="Items/StarterGear.png")]
+    public static var StarterGear:Class;
 
-    public static var Assets_ArtifactAbilitiesEmbed_:Class = Assets_ArtifactAbilities;
-    public static var Assets_ArtifactAbilityCharacters8x8Embed_:Class = Assets_ArtifactAbilityCharacters8x8;
-    public static var Assets_ArtifactAbilityCharacters16x16Embed_:Class = Assets_ArtifactAbilityCharacters16x16;
-    public static var Assets_ArtifactAbilityEntitiesEmbed_:Class = Assets_ArtifactAbilityEntities;
-    public static var Assets_ArtifactAbilityEntities16x16Embed_:Class = Assets_ArtifactAbilityEntities16x16;
-    public static var Assets_ArtifactAbilityProjectilesEmbed_:Class = Assets_ArtifactAbilityProjectiles;
-    public static var Assets_ArtifactAccessoriesEmbed_:Class = Assets_ArtifactAccessories;
-    public static var Assets_ArtifactArmorEmbed_:Class = Assets_ArtifactArmor;
-    public static var Assets_ArtifactWeaponsEmbed_:Class = Assets_ArtifactWeapons;
-    public static var Assets_ArtifactWeaponsProjectilesEmbed_:Class = Assets_ArtifactWeaponsProjectiles;
+    [Embed(source="Items/Artifact/ArtifactAbilities.png")]
+    public static var ArtifactAbilities:Class;
+    [Embed(source="Items/Artifact/ArtifactAbilityCharacters8x8.png")]
+    public static var ArtifactAbilityCharacters8x8:Class;
+    [Embed(source="Items/Artifact/ArtifactAbilityCharacters16x16.png")]
+    public static var ArtifactAbilityCharacters16x16:Class;
+    [Embed(source="Items/Artifact/ArtifactAbilityEntities.png")]
+    public static var ArtifactAbilityEntities:Class;
+    [Embed(source="Items/Artifact/ArtifactAbilityEntities16x16.png")]
+    public static var ArtifactAbilityEntities16x16:Class;
+    [Embed(source="Items/Artifact/ArtifactAbilityProjectiles.png")]
+    public static var ArtifactAbilityProjectiles:Class;
+    [Embed(source="Items/Artifact/ArtifactAccessories.png")]
+    public static var ArtifactAccessories:Class;
+    [Embed(source="Items/Artifact/ArtifactArmor.png")]
+    public static var ArtifactArmor:Class;
+    [Embed(source="Items/Artifact/ArtifactWeapons.png")]
+    public static var ArtifactWeapons:Class;
+    [Embed(source="Items/Artifact/ArtifactWeaponsProjectiles.png")]
+    public static var ArtifactWeaponsProjectiles:Class;
 
-    public static var Assets_ValiantAbilitiesEmbed_:Class = Assets_ValiantAbilities;
-    public static var Assets_ValiantAbilityCharactersEmbed_:Class = Assets_ValiantAbilityCharacters;
-    public static var Assets_ValiantAbilityEntities16x16Embed_:Class = Assets_ValiantAbilityEntities16x16;
-    public static var Assets_ValiantAbilityProjectilesEmbed_:Class = Assets_ValiantAbilityProjectiles;
-    public static var Assets_ValiantAccessoriesEmbed_:Class = Assets_ValiantAccessories;
-    public static var Assets_ValiantArmorEmbed_:Class = Assets_ValiantArmor;
-    public static var Assets_ValiantWeaponsEmbed_:Class = Assets_ValiantWeapons;
-    public static var Assets_ValiantWeaponsProjectilesEmbed_:Class = Assets_ValiantWeaponsProjectiles;
+    [Embed(source="Items/Valiant/ValiantAbilities.png")]
+    public static var ValiantAbilities:Class;
+    [Embed(source="Items/Valiant/ValiantAbilityCharacters.png")]
+    public static var ValiantAbilityCharacters:Class;
+    [Embed(source="Items/Valiant/ValiantAbilityEntities16x16.png")]
+    public static var ValiantAbilityEntities16x16:Class;
+    [Embed(source="Items/Valiant/ValiantAbilityProjectiles.png")]
+    public static var ValiantAbilityProjectiles:Class;
+    [Embed(source="Items/Valiant/ValiantAccessories.png")]
+    public static var ValiantAccessories:Class;
+    [Embed(source="Items/Valiant/ValiantArmor.png")]
+    public static var ValiantArmor:Class;
+    [Embed(source="Items/Valiant/ValiantWeapons.png")]
+    public static var ValiantWeapons:Class;
+    [Embed(source="Items/Valiant/ValiantWeaponsProjectiles.png")]
+    public static var ValiantWeaponsProjectiles:Class;
     // Crafting, Consumables, Ingredients
-    public static var Assets_Consumables_Maxing8x8Embed_:Class = Assets_Consumables_Maxing8x8;
-    public static var Assets_Consumables_Tokens8x8Embed_:Class = Assets_Consumables_Tokens8x8;
-    public static var Assets_Consumables_Upgrades8x8Embed_:Class = Assets_Consumables_Upgrades8x8;
-    public static var Assets_Utilities_Artifact8x8Embed_:Class = Assets_Utilities_Artifact8x8;
-    public static var Assets_Utilities_PetStones8x8Embed_:Class = Assets_Utilities_PetStones8x8;
-    public static var Assets_Utilities_Valiant8x8Embed_:Class = Assets_Utilities_Valiant8x8;
-    public static var Assets_Crafting_Capsules8x8Embed_:Class = Assets_Crafting_Capsules8x8;
-    public static var Assets_Crafting_Ingredients8x8Embed_:Class = Assets_Crafting_Ingredients8x8;
-    public static var Assets_Crafting_LuckyDipsEmbed_:Class = Assets_Crafting_LuckyDips;
+    [Embed(source="Items/Consumables/Consumables_Maxing8x8.png")]
+    public static var Consumables_Maxing8x8:Class;
+    [Embed(source="Items/Consumables/Consumables_Tokens8x8.png")]
+    public static var Consumables_Tokens8x8:Class;
+    [Embed(source="Items/Consumables/Consumables_Upgrades8x8.png")]
+    public static var Consumables_Upgrades8x8:Class;
+
+    [Embed(source="Items/Utilities/Utilities_Artifact8x8.png")]
+    public static var Utilities_Artifact8x8:Class;
+    [Embed(source="Items/Utilities/Utilities_PetStones8x8.png")]
+    public static var Utilities_PetStones8x8:Class;
+    [Embed(source="Items/Utilities/Utilities_Valiant8x8.png")]
+    public static var Utilities_Valiant8x8:Class;
+
+    [Embed(source="Items/Crafting/Crafting_Capsules8x8.png")]
+    public static var Crafting_Capsules8x8:Class;
+    [Embed(source="Items/Crafting/Crafting_Ingredients8x8.png")]
+    public static var Crafting_Ingredients8x8:Class;
+    [Embed(source="Items/Crafting/Crafting_LuckyDips.png")]
+    public static var Crafting_LuckyDips:Class;
     // Interactables
-    public static var Assets_DroppedContainers8x8Embed_:Class = Assets_DroppedContainers8x8;
-    public static var Assets_Foundry_Containers16x16Embed_:Class = Assets_Foundry_Containers16x16;
-    public static var Assets_Foundry_Portals16x16Embed_:Class = Assets_Foundry_Portals16x16;
-    public static var Assets_Foundry_Portals32x32Embed_:Class = Assets_Foundry_Portals32x32;
-    public static var Assets_Foundry_Stations16x16Embed_:Class = Assets_Foundry_Stations16x16;
-    public static var Assets_Foundry_Stations32x32Embed_:Class = Assets_Foundry_Stations32x32;
-    public static var Assets_Marketplace_Stations16x16Embed_:Class = Assets_Marketplace_Stations16x16;
+    [Embed(source="Entities/Containers/DroppedContainers8x8.png")]
+    public static var DroppedContainers8x8:Class;
+    [Embed(source="Entities/Containers/Foundry_Containers16x16.png")]
+    public static var Foundry_Containers16x16:Class;
+
+    [Embed(source="Portals/Foundry_Portals16x16.png")]
+    public static var Foundry_Portals16x16:Class;
+    [Embed(source="Portals/Foundry_Portals32x32.png")]
+    public static var Foundry_Portals32x32:Class;
+
+    [Embed(source="Entities/Stations/Foundry_Stations16x16.png")]
+    public static var Foundry_Stations16x16:Class;
+    [Embed(source="Entities/Stations/Foundry_Stations32x32.png")]
+    public static var Foundry_Stations32x32:Class;
+    [Embed(source="Entities/Stations/Marketplace_Stations16x16.png")]
+    public static var Marketplace_Stations16x16:Class;
     // Old System
-    public static var particlesEmbed:Class = EmbeddedAssets_particlesEmbed;
-    public static var lofiInterfaceEmbed_:Class = EmbeddedAssets_lofiInterfaceEmbed_;
-    public static var lofiInterfaceBigEmbed_:Class = EmbeddedAssets_lofiInterfaceBigEmbed_;
-    public static var lofiInterface2Embed_:Class = EmbeddedAssets_lofiInterface2Embed_;
-    public static var lofiPartsEmbed_:Class = EmbeddedAssets_lofiPartsEmbed_;
-    public static var players:Class = Assets_Players;
-    public static var playersMask:Class = Assets_PlayersMask;
-    public static var playersSkinsEmbed_:Class = EmbeddedAssets_playersSkinsEmbed_;
-    public static var playersSkinsMaskEmbed_:Class = EmbeddedAssets_playersSkinsMaskEmbed_;
-    public static var starsEmbed_:Class = EmbeddedAssets_starsEmbed_;
-    public static var textile4x4Embed_:Class = EmbeddedAssets_textile4x4Embed_;
-    public static var textile5x5Embed_:Class = EmbeddedAssets_textile5x5Embed_;
-    public static var Assets_Textiles8x8Embed_:Class = Assets_Textiles8x8;
-    public static var textile9x9Embed_:Class = EmbeddedAssets_textile9x9Embed_;
-    public static var textile10x10Embed_:Class = EmbeddedAssets_textile10x10Embed_;
-    public static var innerMaskEmbed_:Class = EmbeddedAssets_innerMaskEmbed_;
-    public static var sidesMaskEmbed_:Class = EmbeddedAssets_sidesMaskEmbed_;
-    public static var outerMaskEmbed_:Class = EmbeddedAssets_outerMaskEmbed_;
-    public static var innerP1MaskEmbed_:Class = EmbeddedAssets_innerP1MaskEmbed_;
-    public static var innerP2MaskEmbed_:Class = EmbeddedAssets_innerP2MaskEmbed_;
-    public static var cursorsEmbed_:Class = EmbeddedAssets_cursorsEmbed_;
-    private static var crateEmbed_:Class = EmbeddedAssets_crateEmbed_;
-    private static var cubeEmbed_:Class = EmbeddedAssets_cubeEmbed_;
-    private static var bigcubeEmbed_:Class = EmbeddedAssets_bigcubeEmbed_;
-    private static var icosahedronEmbed_:Class = EmbeddedAssets_icosahedronEmbed_;
-    private static var octahedronEmbed_:Class = EmbeddedAssets_octahedronEmbed_;
-    private static var pyramidEmbed_:Class = EmbeddedAssets_pyramidEmbed_;
-    private static var tetrahedronEmbed_:Class = EmbeddedAssets_tetrahedronEmbed_;
-    private static var dodecahedronEmbed_:Class = EmbeddedAssets_dodecahedronEmbed_;
-    private static var pillarEmbed_:Class = EmbeddedAssets_pillarEmbed_;
-    private static var brokenPillarEmbed_:Class = EmbeddedAssets_brokenPillarEmbed_;
-    private static var towerEmbed_:Class = EmbeddedAssets_towerEmbed_;
-    private static var obeliskEmbed_:Class = EmbeddedAssets_obeliskEmbed_;
-    private static var tableEmbed_:Class = EmbeddedAssets_tableEmbed_;
-    private static var tableEdgeEmbed_:Class = EmbeddedAssets_tableEdgeEmbed_;
-    private static var signEmbed_:Class = EmbeddedAssets_signEmbed_;
-    private static var webEmbed_:Class = EmbeddedAssets_webEmbed_;
+    [Embed(source="Xmls/Particles.xml", mimeType="application/octet-stream")]
+    public static var particles:Class;
+    [Embed(source="lofiInterface.png")]
+    public static var lofiInterface:Class;
+    [Embed(source="lofiInterfaceBig.png")]
+    public static var lofiInterfaceBig:Class;
+    [Embed(source="lofiInterface2.png")]
+    public static var lofiInterface2:Class;
+    [Embed(source="lofiParts.png")]
+    public static var lofiParts:Class;
+    [Embed(source="Entities/Player/Players.png")]
+    public static var Players:Class;
+    [Embed(source="Entities/Player/PlayersMask.png")]
+    public static var playersMask:Class;
+    [Embed(source="Entities/Player/playersSkins.png")]
+    public static var playersSkins:Class;
+    [Embed(source="Entities/Player/playersSkinsMask.png")]
+    public static var playersSkinsMask:Class;
+
+    [Embed(source="stars.png")]
+    public static var stars:Class;
+    [Embed(source="Entities/Player/textile4x4.png")]
+    public static var textile4x4:Class;
+    [Embed(source="Entities/Player/textile5x5.png")]
+    public static var textile5x5:Class;
+    [Embed(source="Entities/Player/Textiles8x8.png")]
+    public static var Textiles8x8:Class;
+    [Embed(source="Entities/Player/textile9x9.png")]
+    public static var textile9x9:Class;
+    [Embed(source="Entities/Player/textile10x10.png")]
+    public static var textile10x10:Class;
+    [Embed(source="innerMask.png")]
+    public static var innerMask:Class;
+    [Embed(source="sidesMask.png")]
+    public static var sidesMask:Class;
+    [Embed(source="outerMask.png")]
+    public static var outerMask:Class;
+    [Embed(source="innerP1Mask.png")]
+    public static var innerP1Mask:Class;
+    [Embed(source="innerP2Mask.png")]
+    public static var innerP2Mask:Class;
+    [Embed(source="cursors.png")]
+    public static var cursors:Class;
+    //models
+
+    [Embed(source="Models/crate.dat", mimeType="application/octet-stream")]
+    private static var crate:Class;
+    [Embed(source="Models/cube.dat", mimeType="application/octet-stream")]
+    private static var cube:Class;
+    [Embed(source="Models/bigcube.dat", mimeType="application/octet-stream")]
+    private static var bigcube:Class;
+    [Embed(source="Models/icosahedron.dat", mimeType="application/octet-stream")]
+    private static var icosahedron:Class;
+    [Embed(source="Models/octahedron.dat", mimeType="application/octet-stream")]
+    private static var octahedron:Class;
+    [Embed(source="Models/pyramid.dat", mimeType="application/octet-stream")]
+    private static var pyramid:Class;
+    [Embed(source="Models/tetrahedron.dat", mimeType="application/octet-stream")]
+    private static var tetrahedron:Class;
+    [Embed(source="Models/dodecahedron.dat", mimeType="application/octet-stream")]
+    private static var dodecahedron:Class;
+    [Embed(source="Models/pillar.dat", mimeType="application/octet-stream")]
+    private static var pillar:Class;
+    [Embed(source="Models/brokenPillar.dat", mimeType="application/octet-stream")]
+    private static var brokenPillar:Class;
+    [Embed(source="Models/tower.dat", mimeType="application/octet-stream")]
+    private static var tower:Class;
+    [Embed(source="Models/obelisk.dat", mimeType="application/octet-stream")]
+    private static var obelisk:Class;
+    [Embed(source="Models/table.dat", mimeType="application/octet-stream")]
+    private static var table:Class;
+    [Embed(source="Models/tableEdge.dat", mimeType="application/octet-stream")]
+    private static var tableEdge:Class;
+    [Embed(source="Models/sign.dat", mimeType="application/octet-stream")]
+    private static var sign:Class;
+    [Embed(source="Models/web.dat", mimeType="application/octet-stream")]
+    private static var web:Class;
 
     public static var models_:Object = {
-        "Crate": new crateEmbed_(),
-        "Cube": new cubeEmbed_(),
-        "Big Cube": new bigcubeEmbed_(),
-        "Ico": new icosahedronEmbed_(),
-        "Octa": new octahedronEmbed_(),
-        "Pyramid": new pyramidEmbed_(),
-        "Tetra": new tetrahedronEmbed_(),
-        "Dodec": new dodecahedronEmbed_(),
-        "Pillar": new pillarEmbed_(),
-        "Broken Pillar": new brokenPillarEmbed_(),
-        "Tower": new towerEmbed_(),
-        "Obelisk": new obeliskEmbed_(),
-        "Table": new tableEmbed_(),
-        "Table Edge": new tableEdgeEmbed_(),
-        "Sign": new signEmbed_(),
-        "Web": new webEmbed_()
+        "Crate": new crate(),
+        "Cube": new cube(),
+        "Big Cube": new bigcube(),
+        "Ico": new icosahedron(),
+        "Octa": new octahedron(),
+        "Pyramid": new pyramid(),
+        "Tetra": new tetrahedron(),
+        "Dodec": new dodecahedron(),
+        "Pillar": new pillar(),
+        "Broken Pillar": new brokenPillar(),
+        "Tower": new tower(),
+        "Obelisk": new obelisk(),
+        "Table": new table(),
+        "Table Edge": new tableEdge(),
+        "Sign": new sign(),
+        "Web": new web()
     };
 
 

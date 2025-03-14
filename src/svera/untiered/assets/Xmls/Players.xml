@@ -3,7 +3,7 @@
     <Class>Player</Class>
     <Description>The beast relies on their claws to deal damage at small range.</Description>
     <AnimatedTexture>
-      <File>players</File>
+      <File>Players</File>
       <Index>0</Index>
     </AnimatedTexture>
     <HitSound>player/rogue_hit</HitSound>
@@ -26,7 +26,7 @@
     <Class>Player</Class>
     <Description>The striker relies on their gauntlets to deal damage at small range.</Description>
     <AnimatedTexture>
-      <File>players</File>
+      <File>Players</File>
       <Index>1</Index>
     </AnimatedTexture>
     <HitSound>player/rogue_hit</HitSound>
@@ -49,7 +49,7 @@
     <Class>Player</Class>
     <Description>The reaver relies on their dual weapon mastery to deal damage at small range.</Description>
     <AnimatedTexture>
-      <File>players</File>
+      <File>Players</File>
       <Index>2</Index>
     </AnimatedTexture>
     <HitSound>player/rogue_hit</HitSound>
@@ -72,7 +72,7 @@
     <Class>Player</Class>
     <Description>The scout relies on their dagger to deal damage at small range.</Description>
     <AnimatedTexture>
-      <File>players</File>
+      <File>Players</File>
       <Index>3</Index>
     </AnimatedTexture>
     <HitSound>player/rogue_hit</HitSound>
@@ -95,7 +95,7 @@
     <Class>Player</Class>
     <Description>The nomad relies on their axe to deal damage at short range.</Description>
     <AnimatedTexture>
-      <File>players</File>
+      <File>Players</File>
       <Index>4</Index>
     </AnimatedTexture>
     <HitSound>player/rogue_hit</HitSound>
@@ -118,7 +118,7 @@
     <Class>Player</Class>
     <Description>The warlock relies on their mace to deal damage at short range.</Description>
     <AnimatedTexture>
-      <File>players</File>
+      <File>Players</File>
       <Index>5</Index>
     </AnimatedTexture>
     <HitSound>player/rogue_hit</HitSound>
@@ -141,7 +141,7 @@
     <Class>Player</Class>
     <Description>The swashbuckler relies on their sword to deal damage at short range.</Description>
     <AnimatedTexture>
-      <File>players</File>
+      <File>Players</File>
       <Index>6</Index>
     </AnimatedTexture>
     <HitSound>player/rogue_hit</HitSound>
@@ -164,7 +164,7 @@
     <Class>Player</Class>
     <Description>The lancer relies on their lance to deal damage at short range.</Description>
     <AnimatedTexture>
-      <File>players</File>
+      <File>Players</File>
       <Index>7</Index>
     </AnimatedTexture>
     <HitSound>player/rogue_hit</HitSound>
@@ -187,7 +187,7 @@
     <Class>Player</Class>
     <Description>The ronin relies on their katana to deal damage at short range.</Description>
     <AnimatedTexture>
-      <File>players</File>
+      <File>Players</File>
       <Index>8</Index>
     </AnimatedTexture>
     <HitSound>player/rogue_hit</HitSound>
@@ -210,7 +210,7 @@
     <Class>Player</Class>
     <Description>The harvester relies on their scythe to deal damage at short range.</Description>
     <AnimatedTexture>
-      <File>players</File>
+      <File>Players</File>
       <Index>9</Index>
     </AnimatedTexture>
     <HitSound>player/rogue_hit</HitSound>
@@ -233,7 +233,7 @@
     <Class>Player</Class>
     <Description>The chakram-dancer relies on their chakram to deal damage at medium range.</Description>
     <AnimatedTexture>
-      <File>players</File>
+      <File>Players</File>
       <Index>10</Index>
     </AnimatedTexture>
     <HitSound>player/rogue_hit</HitSound>
@@ -256,7 +256,7 @@
     <Class>Player</Class>
     <Description>The mage relies on their staff to deal damage at medium range.</Description>
     <AnimatedTexture>
-      <File>players</File>
+      <File>Players</File>
       <Index>11</Index>
     </AnimatedTexture>
     <HitSound>player/rogue_hit</HitSound>
@@ -279,7 +279,7 @@
     <Class>Player</Class>
     <Description>The gunslinger relies on their gun to deal damage at long range.</Description>
     <AnimatedTexture>
-      <File>players</File>
+      <File>Players</File>
       <Index>12</Index>
     </AnimatedTexture>
     <HitSound>player/rogue_hit</HitSound>
@@ -302,7 +302,7 @@
     <Class>Player</Class>
     <Description>The bolt-caster relies on their crossbow to deal damage at long range.</Description>
     <AnimatedTexture>
-      <File>players</File>
+      <File>Players</File>
       <Index>13</Index>
     </AnimatedTexture>
     <HitSound>player/rogue_hit</HitSound>
@@ -325,7 +325,7 @@
     <Class>Player</Class>
     <Description>The enchanter relies on their wand to deal damage at long range.</Description>
     <AnimatedTexture>
-      <File>players</File>
+      <File>Players</File>
       <Index>14</Index>
     </AnimatedTexture>
     <HitSound>player/rogue_hit</HitSound>
@@ -348,7 +348,7 @@
     <Class>Player</Class>
     <Description>The sharpshooter relies on their bow to deal damage at long range.</Description>
     <AnimatedTexture>
-      <File>players</File>
+      <File>Players</File>
       <Index>15</Index>
     </AnimatedTexture>
     <HitSound>player/rogue_hit</HitSound>

@@ -3,11 +3,11 @@
 		<Class>Dye</Class>
 		<Item/>
 		<Texture>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x10</Index>
 		</Texture>
 		<Mask>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x00</Index>
 		</Mask>
 		<Tex1>0x01A84300</Tex1>
@@ -21,11 +21,11 @@
 		<Class>Dye</Class>
 		<Item/>
 		<Texture>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x01</Index>
 		</Texture>
 		<Mask>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x02</Index>
 		</Mask>
 		<Tex2>0x01A84300</Tex2>
@@ -40,11 +40,11 @@
 		<Class>Dye</Class>
 		<Item/>
 		<Texture>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x10</Index>
 		</Texture>
 		<Mask>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x00</Index>
 		</Mask>
 		<Tex1>0x01925448</Tex1>
@@ -58,11 +58,11 @@
 		<Class>Dye</Class>
 		<Item/>
 		<Texture>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x01</Index>
 		</Texture>
 		<Mask>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x02</Index>
 		</Mask>
 		<Tex2>0x01925448</Tex2>
@@ -77,11 +77,11 @@
 		<Class>Dye</Class>
 		<Item/>
 		<Texture>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x10</Index>
 		</Texture>
 		<Mask>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x00</Index>
 		</Mask>
 		<Tex1>0x01F1C40F</Tex1>
@@ -95,11 +95,11 @@
 		<Class>Dye</Class>
 		<Item/>
 		<Texture>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x01</Index>
 		</Texture>
 		<Mask>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x02</Index>
 		</Mask>
 		<Tex2>0x01F1C40F</Tex2>
@@ -114,11 +114,11 @@
 		<Class>Dye</Class>
 		<Item/>
 		<Texture>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x10</Index>
 		</Texture>
 		<Mask>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x00</Index>
 		</Mask>
 		<Tex1>0x01E67E22</Tex1>
@@ -132,11 +132,11 @@
 		<Class>Dye</Class>
 		<Item/>
 		<Texture>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x01</Index>
 		</Texture>
 		<Mask>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x02</Index>
 		</Mask>
 		<Tex2>0x01E67E22</Tex2>
@@ -151,11 +151,11 @@
 		<Class>Dye</Class>
 		<Item/>
 		<Texture>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x10</Index>
 		</Texture>
 		<Mask>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x00</Index>
 		</Mask>
 		<Tex1>0x01E74C3C</Tex1>
@@ -169,11 +169,11 @@
 		<Class>Dye</Class>
 		<Item/>
 		<Texture>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x01</Index>
 		</Texture>
 		<Mask>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x02</Index>
 		</Mask>
 		<Tex2>0x01E74C3C</Tex2>
@@ -188,11 +188,11 @@
 		<Class>Dye</Class>
 		<Item/>
 		<Texture>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x10</Index>
 		</Texture>
 		<Mask>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x00</Index>
 		</Mask>
 		<Tex1>0x01be2a4e</Tex1>
@@ -206,11 +206,11 @@
 		<Class>Dye</Class>
 		<Item/>
 		<Texture>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x01</Index>
 		</Texture>
 		<Mask>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x02</Index>
 		</Mask>
 		<Tex2>0x01be2a4e</Tex2>
@@ -225,11 +225,11 @@
 		<Class>Dye</Class>
 		<Item/>
 		<Texture>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x10</Index>
 		</Texture>
 		<Mask>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x00</Index>
 		</Mask>
 		<Tex1>0x017c5e44</Tex1>
@@ -243,11 +243,11 @@
 		<Class>Dye</Class>
 		<Item/>
 		<Texture>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x01</Index>
 		</Texture>
 		<Mask>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x02</Index>
 		</Mask>
 		<Tex2>0x017c5e44</Tex2>
@@ -262,11 +262,11 @@
 		<Class>Dye</Class>
 		<Item/>
 		<Texture>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x10</Index>
 		</Texture>
 		<Mask>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x00</Index>
 		</Mask>
 		<Tex1>0x0164a8b1</Tex1>
@@ -280,11 +280,11 @@
 		<Class>Dye</Class>
 		<Item/>
 		<Texture>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x01</Index>
 		</Texture>
 		<Mask>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x02</Index>
 		</Mask>
 		<Tex2>0x0164a8b1</Tex2>
@@ -299,11 +299,11 @@
 		<Class>Dye</Class>
 		<Item/>
 		<Texture>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x10</Index>
 		</Texture>
 		<Mask>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x00</Index>
 		</Mask>
 		<Tex1>0x01f1d600</Tex1>
@@ -317,11 +317,11 @@
 		<Class>Dye</Class>
 		<Item/>
 		<Texture>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x01</Index>
 		</Texture>
 		<Mask>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x02</Index>
 		</Mask>
 		<Tex2>0x01f1d600</Tex2>
@@ -336,11 +336,11 @@
 		<Class>Dye</Class>
 		<Item/>
 		<Texture>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x10</Index>
 		</Texture>
 		<Mask>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x00</Index>
 		</Mask>
 		<Tex1>0x01ee2626</Tex1>
@@ -354,11 +354,11 @@
 		<Class>Dye</Class>
 		<Item/>
 		<Texture>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x01</Index>
 		</Texture>
 		<Mask>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x02</Index>
 		</Mask>
 		<Tex2>0x01ee2626</Tex2>
@@ -373,11 +373,11 @@
 		<Class>Dye</Class>
 		<Item/>
 		<Texture>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x10</Index>
 		</Texture>
 		<Mask>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x00</Index>
 		</Mask>
 		<Tex1>0x015ed44c</Tex1>
@@ -391,11 +391,11 @@
 		<Class>Dye</Class>
 		<Item/>
 		<Texture>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x01</Index>
 		</Texture>
 		<Mask>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x02</Index>
 		</Mask>
 		<Tex2>0x015ed44c</Tex2>
@@ -410,11 +410,11 @@
 		<Class>Dye</Class>
 		<Item/>
 		<Texture>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x10</Index>
 		</Texture>
 		<Mask>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x00</Index>
 		</Mask>
 		<Tex1>0x01299133</Tex1>
@@ -428,11 +428,11 @@
 		<Class>Dye</Class>
 		<Item/>
 		<Texture>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x01</Index>
 		</Texture>
 		<Mask>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x02</Index>
 		</Mask>
 		<Tex2>0x01299133</Tex2>
@@ -447,11 +447,11 @@
 		<Class>Dye</Class>
 		<Item/>
 		<Texture>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x10</Index>
 		</Texture>
 		<Mask>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x00</Index>
 		</Mask>
 		<Tex1>0x01665485</Tex1>
@@ -465,11 +465,11 @@
 		<Class>Dye</Class>
 		<Item/>
 		<Texture>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x01</Index>
 		</Texture>
 		<Mask>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x02</Index>
 		</Mask>
 		<Tex2>0x01665485</Tex2>
@@ -484,11 +484,11 @@
 		<Class>Dye</Class>
 		<Item/>
 		<Texture>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x10</Index>
 		</Texture>
 		<Mask>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x00</Index>
 		</Mask>
 		<Tex1>0x01E91E63</Tex1>
@@ -502,11 +502,11 @@
 		<Class>Dye</Class>
 		<Item/>
 		<Texture>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x01</Index>
 		</Texture>
 		<Mask>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x02</Index>
 		</Mask>
 		<Tex2>0x01E91E63</Tex2>
@@ -521,11 +521,11 @@
 		<Class>Dye</Class>
 		<Item/>
 		<Texture>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x10</Index>
 		</Texture>
 		<Mask>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x00</Index>
 		</Mask>
 		<Tex1>0x019B59B6</Tex1>
@@ -539,11 +539,11 @@
 		<Class>Dye</Class>
 		<Item/>
 		<Texture>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x01</Index>
 		</Texture>
 		<Mask>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x02</Index>
 		</Mask>
 		<Tex2>0x019B59B6</Tex2>
@@ -558,11 +558,11 @@
 		<Class>Dye</Class>
 		<Item/>
 		<Texture>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x10</Index>
 		</Texture>
 		<Mask>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x00</Index>
 		</Mask>
 		<Tex1>0x01010000</Tex1>
@@ -576,11 +576,11 @@
 		<Class>Dye</Class>
 		<Item/>
 		<Texture>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x01</Index>
 		</Texture>
 		<Mask>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x02</Index>
 		</Mask>
 		<Tex2>0x01010000</Tex2>
@@ -595,11 +595,11 @@
 		<Class>Dye</Class>
 		<Item/>
 		<Texture>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x10</Index>
 		</Texture>
 		<Mask>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x00</Index>
 		</Mask>
 		<Tex1>0x01C4C4C4</Tex1>
@@ -613,11 +613,11 @@
 		<Class>Dye</Class>
 		<Item/>
 		<Texture>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x01</Index>
 		</Texture>
 		<Mask>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x02</Index>
 		</Mask>
 		<Tex2>0x01C4C4C4</Tex2>
@@ -632,11 +632,11 @@
 		<Class>Dye</Class>
 		<Item/>
 		<Texture>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x10</Index>
 		</Texture>
 		<Mask>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x00</Index>
 		</Mask>
 		<Tex1>0x010ff03c</Tex1>
@@ -650,11 +650,11 @@
 		<Class>Dye</Class>
 		<Item/>
 		<Texture>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x01</Index>
 		</Texture>
 		<Mask>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x02</Index>
 		</Mask>
 		<Tex2>0x010ff03c</Tex2>
@@ -669,11 +669,11 @@
 		<Class>Dye</Class>
 		<Item/>
 		<Texture>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x10</Index>
 		</Texture>
 		<Mask>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x00</Index>
 		</Mask>
 		<Tex1>0x01db74d1</Tex1>
@@ -687,11 +687,11 @@
 		<Class>Dye</Class>
 		<Item/>
 		<Texture>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x01</Index>
 		</Texture>
 		<Mask>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x02</Index>
 		</Mask>
 		<Tex2>0x01db74d1</Tex2>
@@ -706,11 +706,11 @@
 		<Class>Dye</Class>
 		<Item/>
 		<Texture>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x10</Index>
 		</Texture>
 		<Mask>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x00</Index>
 		</Mask>
 		<Tex1>0x0189cff0</Tex1>
@@ -724,11 +724,11 @@
 		<Class>Dye</Class>
 		<Item/>
 		<Texture>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x01</Index>
 		</Texture>
 		<Mask>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x02</Index>
 		</Mask>
 		<Tex2>0x0189cff0</Tex2>
@@ -743,11 +743,11 @@
 		<Class>Dye</Class>
 		<Item/>
 		<Texture>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x10</Index>
 		</Texture>
 		<Mask>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x00</Index>
 		</Mask>
 		<Tex1>0x0195A5A6</Tex1>
@@ -761,11 +761,11 @@
 		<Class>Dye</Class>
 		<Item/>
 		<Texture>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x01</Index>
 		</Texture>
 		<Mask>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x02</Index>
 		</Mask>
 		<Tex2>0x0195A5A6</Tex2>
@@ -780,11 +780,11 @@
 		<Class>Dye</Class>
 		<Item/>
 		<Texture>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x10</Index>
 		</Texture>
 		<Mask>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x00</Index>
 		</Mask>
 		<Tex1>0x01607D8B</Tex1>
@@ -798,11 +798,11 @@
 		<Class>Dye</Class>
 		<Item/>
 		<Texture>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x01</Index>
 		</Texture>
 		<Mask>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x02</Index>
 		</Mask>
 		<Tex2>0x01607D8B</Tex2>
@@ -817,11 +817,11 @@
 		<Class>Dye</Class>
 		<Item/>
 		<Texture>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x10</Index>
 		</Texture>
 		<Mask>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x00</Index>
 		</Mask>
 		<Tex1>0x0111806A</Tex1>
@@ -835,11 +835,11 @@
 		<Class>Dye</Class>
 		<Item/>
 		<Texture>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x01</Index>
 		</Texture>
 		<Mask>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x02</Index>
 		</Mask>
 		<Tex2>0x0111806A</Tex2>
@@ -854,11 +854,11 @@
 		<Class>Dye</Class>
 		<Item/>
 		<Texture>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x10</Index>
 		</Texture>
 		<Mask>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x00</Index>
 		</Mask>
 		<Tex1>0x011F8B4C</Tex1>
@@ -872,11 +872,11 @@
 		<Class>Dye</Class>
 		<Item/>
 		<Texture>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x01</Index>
 		</Texture>
 		<Mask>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x02</Index>
 		</Mask>
 		<Tex2>0x011F8B4C</Tex2>
@@ -891,11 +891,11 @@
 		<Class>Dye</Class>
 		<Item/>
 		<Texture>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x10</Index>
 		</Texture>
 		<Mask>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x00</Index>
 		</Mask>
 		<Tex1>0x013359ff</Tex1>
@@ -909,11 +909,11 @@
 		<Class>Dye</Class>
 		<Item/>
 		<Texture>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x01</Index>
 		</Texture>
 		<Mask>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x02</Index>
 		</Mask>
 		<Tex2>0x013359ff</Tex2>
@@ -928,11 +928,11 @@
 		<Class>Dye</Class>
 		<Item/>
 		<Texture>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x10</Index>
 		</Texture>
 		<Mask>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x00</Index>
 		</Mask>
 		<Tex1>0x011a1a79</Tex1>
@@ -946,11 +946,11 @@
 		<Class>Dye</Class>
 		<Item/>
 		<Texture>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x01</Index>
 		</Texture>
 		<Mask>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x02</Index>
 		</Mask>
 		<Tex2>0x011a1a79</Tex2>
@@ -965,11 +965,11 @@
 		<Class>Dye</Class>
 		<Item/>
 		<Texture>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x10</Index>
 		</Texture>
 		<Mask>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x00</Index>
 		</Mask>
 		<Tex1>0x011ABC9C</Tex1>
@@ -983,11 +983,11 @@
 		<Class>Dye</Class>
 		<Item/>
 		<Texture>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x01</Index>
 		</Texture>
 		<Mask>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x02</Index>
 		</Mask>
 		<Tex2>0x011ABC9C</Tex2>
@@ -1002,11 +1002,11 @@
 		<Class>Dye</Class>
 		<Item/>
 		<Texture>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x10</Index>
 		</Texture>
 		<Mask>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x00</Index>
 		</Mask>
 		<Tex1>0x012ECC71</Tex1>
@@ -1020,11 +1020,11 @@
 		<Class>Dye</Class>
 		<Item/>
 		<Texture>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x01</Index>
 		</Texture>
 		<Mask>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x02</Index>
 		</Mask>
 		<Tex2>0x012ECC71</Tex2>
@@ -1039,11 +1039,11 @@
 		<Class>Dye</Class>
 		<Item/>
 		<Texture>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x10</Index>
 		</Texture>
 		<Mask>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x00</Index>
 		</Mask>
 		<Tex1>0x01834cdb</Tex1>
@@ -1057,11 +1057,11 @@
 		<Class>Dye</Class>
 		<Item/>
 		<Texture>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x01</Index>
 		</Texture>
 		<Mask>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x02</Index>
 		</Mask>
 		<Tex2>0x01834cdb</Tex2>
@@ -1076,11 +1076,11 @@
 		<Class>Dye</Class>
 		<Item/>
 		<Texture>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x10</Index>
 		</Texture>
 		<Mask>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x00</Index>
 		</Mask>
 		<Tex1>0x01a82b3c</Tex1>
@@ -1094,11 +1094,11 @@
 		<Class>Dye</Class>
 		<Item/>
 		<Texture>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x01</Index>
 		</Texture>
 		<Mask>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x02</Index>
 		</Mask>
 		<Tex2>0x01a82b3c</Tex2>
@@ -1113,11 +1113,11 @@
 		<Class>Dye</Class>
 		<Item/>
 		<Texture>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x10</Index>
 		</Texture>
 		<Mask>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x00</Index>
 		</Mask>
 		<Tex1>0x013498DB</Tex1>
@@ -1131,11 +1131,11 @@
 		<Class>Dye</Class>
 		<Item/>
 		<Texture>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x01</Index>
 		</Texture>
 		<Mask>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x02</Index>
 		</Mask>
 		<Tex2>0x013498DB</Tex2>
@@ -1150,11 +1150,11 @@
 		<Class>Dye</Class>
 		<Item/>
 		<Texture>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x10</Index>
 		</Texture>
 		<Mask>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x00</Index>
 		</Mask>
 		<Tex1>0x01c6aa69</Tex1>
@@ -1168,11 +1168,11 @@
 		<Class>Dye</Class>
 		<Item/>
 		<Texture>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x01</Index>
 		</Texture>
 		<Mask>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x02</Index>
 		</Mask>
 		<Tex2>0x01c6aa69</Tex2>
@@ -1187,11 +1187,11 @@
 		<Class>Dye</Class>
 		<Item/>
 		<Texture>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x10</Index>
 		</Texture>
 		<Mask>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x00</Index>
 		</Mask>
 		<Tex1>0x01a2bf7c</Tex1>
@@ -1205,11 +1205,11 @@
 		<Class>Dye</Class>
 		<Item/>
 		<Texture>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x01</Index>
 		</Texture>
 		<Mask>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x02</Index>
 		</Mask>
 		<Tex2>0x01a2bf7c</Tex2>
@@ -1224,11 +1224,11 @@
 		<Class>Dye</Class>
 		<Item/>
 		<Texture>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x10</Index>
 		</Texture>
 		<Mask>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x00</Index>
 		</Mask>
 		<Tex1>0x01cfcfc1</Tex1>
@@ -1242,11 +1242,11 @@
 		<Class>Dye</Class>
 		<Item/>
 		<Texture>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x01</Index>
 		</Texture>
 		<Mask>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x02</Index>
 		</Mask>
 		<Tex2>0x01cfcfc1</Tex2>
@@ -1261,11 +1261,11 @@
 		<Class>Dye</Class>
 		<Item/>
 		<Texture>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x10</Index>
 		</Texture>
 		<Mask>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x00</Index>
 		</Mask>
 		<Tex1>0x01724e92</Tex1>
@@ -1279,11 +1279,11 @@
 		<Class>Dye</Class>
 		<Item/>
 		<Texture>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x01</Index>
 		</Texture>
 		<Mask>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x02</Index>
 		</Mask>
 		<Tex2>0x01724e92</Tex2>
@@ -1298,11 +1298,11 @@
 		<Class>Dye</Class>
 		<Item/>
 		<Texture>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x10</Index>
 		</Texture>
 		<Mask>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x00</Index>
 		</Mask>
 		<Tex1>0x01c15744</Tex1>
@@ -1316,11 +1316,11 @@
 		<Class>Dye</Class>
 		<Item/>
 		<Texture>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x01</Index>
 		</Texture>
 		<Mask>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x02</Index>
 		</Mask>
 		<Tex2>0x01c15744</Tex2>
@@ -1335,11 +1335,11 @@
 		<Class>Dye</Class>
 		<Item/>
 		<Texture>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x10</Index>
 		</Texture>
 		<Mask>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x00</Index>
 		</Mask>
 		<Tex1>0x0145c3ff</Tex1>
@@ -1353,11 +1353,11 @@
 		<Class>Dye</Class>
 		<Item/>
 		<Texture>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x01</Index>
 		</Texture>
 		<Mask>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x02</Index>
 		</Mask>
 		<Tex2>0x0145c3ff</Tex2>
@@ -1372,11 +1372,11 @@
 		<Class>Dye</Class>
 		<Item/>
 		<Texture>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x10</Index>
 		</Texture>
 		<Mask>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x00</Index>
 		</Mask>
 		<Tex1>0x01d8d100</Tex1>
@@ -1390,11 +1390,11 @@
 		<Class>Dye</Class>
 		<Item/>
 		<Texture>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x01</Index>
 		</Texture>
 		<Mask>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x02</Index>
 		</Mask>
 		<Tex2>0x01d8d100</Tex2>
@@ -1409,11 +1409,11 @@
 		<Class>Dye</Class>
 		<Item/>
 		<Texture>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x10</Index>
 		</Texture>
 		<Mask>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x00</Index>
 		</Mask>
 		<Tex1>0x01fc3b3b</Tex1>
@@ -1427,11 +1427,11 @@
 		<Class>Dye</Class>
 		<Item/>
 		<Texture>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x01</Index>
 		</Texture>
 		<Mask>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x02</Index>
 		</Mask>
 		<Tex2>0x01fc3b3b</Tex2>
@@ -1446,11 +1446,11 @@
 		<Class>Dye</Class>
 		<Item/>
 		<Texture>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x10</Index>
 		</Texture>
 		<Mask>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x00</Index>
 		</Mask>
 		<Tex1>0x016acd0c</Tex1>
@@ -1464,11 +1464,11 @@
 		<Class>Dye</Class>
 		<Item/>
 		<Texture>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x01</Index>
 		</Texture>
 		<Mask>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x02</Index>
 		</Mask>
 		<Tex2>0x016acd0c</Tex2>
@@ -1483,11 +1483,11 @@
 		<Class>Dye</Class>
 		<Item/>
 		<Texture>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x10</Index>
 		</Texture>
 		<Mask>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x00</Index>
 		</Mask>
 		<Tex1>0x01c6e400</Tex1>
@@ -1501,11 +1501,11 @@
 		<Class>Dye</Class>
 		<Item/>
 		<Texture>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x01</Index>
 		</Texture>
 		<Mask>
-			<File>Assets_Textiles8x8</File>
+			<File>Textiles8x8</File>
 			<Index>0x02</Index>
 		</Mask>
 		<Tex2>0x01c6e400</Tex2>

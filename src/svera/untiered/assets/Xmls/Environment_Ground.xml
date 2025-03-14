@@ -3,38 +3,38 @@
   <Ground type="0x100" id="[Overworld:NotSpecific] Deep Water">
     <SameTypeEdgeMode/>
     <Texture>
-      <File>Assets_Overworld_Environment_NotSpecific8x8</File>
+      <File>Overworld_Environment_NotSpecific8x8</File>
       <Index>0x00</Index>
     </Texture>
   </Ground>
   <Ground type="0x101" id="Road">
     <RandomTexture>
       <Texture>
-        <File>Assets_Overworld_Environment_FearedShallows8x8</File>
+        <File>Overworld_Environment_FearedShallows8x8</File>
         <Index>0x40</Index>
       </Texture>
       <Texture>
-        <File>Assets_Overworld_Environment_FearedShallows8x8</File>
+        <File>Overworld_Environment_FearedShallows8x8</File>
         <Index>0x40</Index>
       </Texture>
       <Texture>
-        <File>Assets_Overworld_Environment_FearedShallows8x8</File>
+        <File>Overworld_Environment_FearedShallows8x8</File>
         <Index>0x40</Index>
       </Texture>
       <Texture>
-        <File>Assets_Overworld_Environment_FearedShallows8x8</File>
+        <File>Overworld_Environment_FearedShallows8x8</File>
         <Index>0x40</Index>
       </Texture>
       <Texture>
-        <File>Assets_Overworld_Environment_FearedShallows8x8</File>
+        <File>Overworld_Environment_FearedShallows8x8</File>
         <Index>0x41</Index>
       </Texture>
       <Texture>
-        <File>Assets_Overworld_Environment_FearedShallows8x8</File>
+        <File>Overworld_Environment_FearedShallows8x8</File>
         <Index>0x42</Index>
       </Texture>
       <Texture>
-        <File>Assets_Overworld_Environment_FearedShallows8x8</File>
+        <File>Overworld_Environment_FearedShallows8x8</File>
         <Index>0x43</Index>
       </Texture>
     </RandomTexture>
@@ -42,7 +42,7 @@
   </Ground>
   <Ground type="0xff" id="Empty">
     <Texture>
-      <File>Assets_Overworld_Environment_NotSpecific8x8</File>
+      <File>Overworld_Environment_NotSpecific8x8</File>
       <Index>0x07</Index>
     </Texture>
     <NoWalk/>
@@ -50,7 +50,7 @@
   </Ground>
   <Ground type="0x102" id="Space">
     <Texture>
-      <File>Assets_Overworld_Environment_NotSpecific8x8</File>
+      <File>Overworld_Environment_NotSpecific8x8</File>
       <Index>0x07</Index>
     </Texture>
     <NoWalk/>
@@ -58,7 +58,7 @@
   </Ground>
   <Ground type="0x103" id="Composite">
     <Texture>
-      <File>Assets_Overworld_Environment_NotSpecific8x8</File>
+      <File>Overworld_Environment_NotSpecific8x8</File>
       <Index>0x07</Index>
     </Texture>
     <CompositePriority>-1</CompositePriority>
@@ -67,7 +67,7 @@
   <!-- #region --> // Ocean
   <Ground type="0x104" id="[Overworld:FearedShallows] Ocean Water">
     <Texture>
-      <File>Assets_Overworld_Environment_FearedShallows8x8</File>
+      <File>Overworld_Environment_FearedShallows8x8</File>
       <Index>0x00</Index>
     </Texture>
     <Sink/>
@@ -79,31 +79,31 @@
   <Ground type="0x106" id="[Overworld:FearedShallows] Dirt">
     <RandomTexture>
       <Texture>
-        <File>Assets_Overworld_Environment_FearedShallows8x8</File>
+        <File>Overworld_Environment_FearedShallows8x8</File>
         <Index>0x15</Index>
       </Texture>
       <Texture>
-        <File>Assets_Overworld_Environment_FearedShallows8x8</File>
+        <File>Overworld_Environment_FearedShallows8x8</File>
         <Index>0x15</Index>
       </Texture>
       <Texture>
-        <File>Assets_Overworld_Environment_FearedShallows8x8</File>
+        <File>Overworld_Environment_FearedShallows8x8</File>
         <Index>0x15</Index>
       </Texture>
       <Texture>
-        <File>Assets_Overworld_Environment_FearedShallows8x8</File>
+        <File>Overworld_Environment_FearedShallows8x8</File>
         <Index>0x15</Index>
       </Texture>
       <Texture>
-        <File>Assets_Overworld_Environment_FearedShallows8x8</File>
+        <File>Overworld_Environment_FearedShallows8x8</File>
         <Index>0x21</Index>
       </Texture>
       <Texture>
-        <File>Assets_Overworld_Environment_FearedShallows8x8</File>
+        <File>Overworld_Environment_FearedShallows8x8</File>
         <Index>0x22</Index>
       </Texture>
       <Texture>
-        <File>Assets_Overworld_Environment_FearedShallows8x8</File>
+        <File>Overworld_Environment_FearedShallows8x8</File>
         <Index>0x23</Index>
       </Texture>
     </RandomTexture>
@@ -111,27 +111,27 @@
   <Ground type="0x107" id="[Overworld:FearedShallows] Grass">
     <RandomTexture>
       <Texture>
-        <File>Assets_Overworld_Environment_FearedShallows8x8</File>
+        <File>Overworld_Environment_FearedShallows8x8</File>
         <Index>0x04</Index>
       </Texture>
       <Texture>
-        <File>Assets_Overworld_Environment_FearedShallows8x8</File>
+        <File>Overworld_Environment_FearedShallows8x8</File>
         <Index>0x10</Index>
       </Texture>
       <Texture>
-        <File>Assets_Overworld_Environment_FearedShallows8x8</File>
+        <File>Overworld_Environment_FearedShallows8x8</File>
         <Index>0x11</Index>
       </Texture>
       <Texture>
-        <File>Assets_Overworld_Environment_FearedShallows8x8</File>
+        <File>Overworld_Environment_FearedShallows8x8</File>
         <Index>0x12</Index>
       </Texture>
       <Texture>
-        <File>Assets_Overworld_Environment_FearedShallows8x8</File>
+        <File>Overworld_Environment_FearedShallows8x8</File>
         <Index>0x13</Index>
       </Texture>
       <Texture>
-        <File>Assets_Overworld_Environment_FearedShallows8x8</File>
+        <File>Overworld_Environment_FearedShallows8x8</File>
         <Index>0x14</Index>
       </Texture>
     </RandomTexture>

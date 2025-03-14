@@ -29,7 +29,7 @@ public class PlayerGroupMenuMediator extends Mediator {
     }
 
     private function onUnableToTeleport():void {
-        this.addTextLine.dispatch(new AddTextLineVO(Parameters.ERROR_CHAT_NAME, "No players are eligible for teleporting"));
+        this.addTextLine.dispatch(new AddTextLineVO(Parameters.ERROR_CHAT_NAME, "No Players are eligible for teleporting"));
     }
 }
 }

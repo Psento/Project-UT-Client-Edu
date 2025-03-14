@@ -47,7 +47,7 @@ public class MapUserInput {
     private var potionInventoryModel:PotionInventoryModel;
     private var hudView:HUDView;
     private var layers:Layers;
-    private var nexusHeld = -1;
+    private var nexusHeld:int = -1;
 
     public function MapUserInput(gs:GameSprite) {
         super();

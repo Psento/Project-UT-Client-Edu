@@ -72,7 +72,7 @@ public class MEMap extends Sprite {
         addChild(this.overlay_);
         this.posT_ = new IntPoint(NUM_SQUARES / 2 - this.sizeInTiles() / 2, NUM_SQUARES / 2 - this.sizeInTiles() / 2);
         this.invisibleTexture_ = AssetLibrary.getImageFromSet("invisible", 0);
-        this.replaceTexture_ = AssetLibrary.getImageFromSet("Assets_Overworld_Environment_NotSpecific8x8", 1);
+        this.replaceTexture_ = AssetLibrary.getImageFromSet("Overworld_Environment_NotSpecific8x8", 1);
         this.draw();
         addEventListener(Event.ADDED_TO_STAGE, this.onAddedToStage);
         addEventListener(Event.REMOVED_FROM_STAGE, this.onRemovedFromStage);

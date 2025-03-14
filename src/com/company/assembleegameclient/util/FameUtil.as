@@ -91,7 +91,7 @@ public class FameUtil {
     }
 
     public static function getFameIcon():BitmapData {
-        var fameBD:BitmapData = AssetLibrary.getImageFromSet("Assets_Currency_Icons16x16", 0);
+        var fameBD:BitmapData = AssetLibrary.getImageFromSet("Currency_Icons16x16", 0);
         return TextureRedrawer.redraw(fameBD, 40, true, 0);
     }
 }

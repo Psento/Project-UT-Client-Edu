@@ -119,7 +119,7 @@ public class LegendListItem extends Sprite {
     }
 
     private function makeFameIcon():void {
-        var fameBD:BitmapData = AssetLibrary.getImageFromSet("Assets_Currency_Icons16x16", 0);
+        var fameBD:BitmapData = AssetLibrary.getImageFromSet("Currency_Icons16x16", 0);
         this.fameIcon = new Bitmap(TextureRedrawer.redraw(fameBD, 40, true, 0));
         this.fameIcon.x = 652;
         this.fameIcon.y = HEIGHT / 2 - this.fameIcon.height / 2;

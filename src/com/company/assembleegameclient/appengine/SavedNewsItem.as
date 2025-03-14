@@ -35,12 +35,12 @@ public class SavedNewsItem {
     }
 
     private static function fameIcon():BitmapData {
-        var bd:BitmapData = AssetLibrary.getImageFromSet("Assets_Currency_Icons16x16", 0);
+        var bd:BitmapData = AssetLibrary.getImageFromSet("Currency_Icons16x16", 0);
         return TextureRedrawer.redraw(bd, 80, true, 0);
     }
 
     private static function oryxIcon():BitmapData {
-        var bd:BitmapData = AssetLibrary.getImageFromSet("Assets_Utilities_PetStones8x8", 8);
+        var bd:BitmapData = AssetLibrary.getImageFromSet("Utilities_PetStones8x8", 8);
         return TextureRedrawer.redraw(bd, 110, true, 0);
     }
 

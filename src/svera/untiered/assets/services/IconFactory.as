@@ -15,27 +15,27 @@ public class IconFactory {
     }
 
     public static function makeTsavorite():BitmapData {
-        var data:BitmapData = TextureRedrawer.resize(AssetLibrary.getImageFromSet("Assets_Currency_Icons16x16", 2), null, 40, true, 0, 0);
+        var data:BitmapData = TextureRedrawer.resize(AssetLibrary.getImageFromSet("Currency_Icons16x16", 2), null, 40, true, 0, 0);
         return cropAndGlowIcon(data);
     }
 
     public static function makeMedallions():BitmapData {
-        var data:BitmapData = TextureRedrawer.resize(AssetLibrary.getImageFromSet("Assets_Currency_Icons16x16", 1), null, 40, true, 0, 0);
+        var data:BitmapData = TextureRedrawer.resize(AssetLibrary.getImageFromSet("Currency_Icons16x16", 1), null, 40, true, 0, 0);
         return cropAndGlowIcon(data);
     }
 
     public static function makeHonor():BitmapData {
-        var data:BitmapData = TextureRedrawer.resize(AssetLibrary.getImageFromSet("Assets_Currency_Icons16x16", 0), null, 40, true, 0, 0);
+        var data:BitmapData = TextureRedrawer.resize(AssetLibrary.getImageFromSet("Currency_Icons16x16", 0), null, 40, true, 0, 0);
         return cropAndGlowIcon(data);
     }
 
     public static function makeFame():BitmapData {
-        var data:BitmapData = TextureRedrawer.resize(AssetLibrary.getImageFromSet("Assets_Currency_Icons16x16", 0), null, 40, true, 0, 0);
+        var data:BitmapData = TextureRedrawer.resize(AssetLibrary.getImageFromSet("Currency_Icons16x16", 0), null, 40, true, 0, 0);
         return cropAndGlowIcon(data);
     }
 
     public static function makeGuildFame():BitmapData {
-        var data:BitmapData = TextureRedrawer.resize(AssetLibrary.getImageFromSet("Assets_Currency_Icons16x16", 0), null, 40, true, 0, 0);
+        var data:BitmapData = TextureRedrawer.resize(AssetLibrary.getImageFromSet("Currency_Icons16x16", 0), null, 40, true, 0, 0);
         return cropAndGlowIcon(data);
     }
 

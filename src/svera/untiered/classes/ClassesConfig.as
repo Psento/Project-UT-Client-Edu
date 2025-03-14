@@ -65,7 +65,7 @@ public class ClassesConfig implements IConfig {
     }
 
     private function init():void {
-        var xml:XML = XML(new EmbeddedData.PlayersCXML());
+        var xml:XML = XML(new EmbeddedData.Players());
         var parseClasses:ParseClassesXMLSignal = this.injector.getInstance(ParseClassesXMLSignal);
         parseClasses.dispatch(xml);
     }

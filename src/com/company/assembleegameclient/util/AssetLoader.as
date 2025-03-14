@@ -131,7 +131,7 @@ public class AssetLoader {
     }
 
     private function addAnimatedCharacters():void {
-        AnimatedChars.add("Players", new EmbeddedAssets.Players().bitmapData, new EmbeddedAssets.playersMask().bitmapData, 16, 16, 112, 48, AnimatedChar.RIGHT);
+        AnimatedChars.add("players", new EmbeddedAssets.Players().bitmapData, new EmbeddedAssets.playersMask().bitmapData, 16, 16, 112, 48, AnimatedChar.RIGHT);
         AnimatedChars.add("playerskins", new EmbeddedAssets.playersSkins().bitmapData, new EmbeddedAssets.playersSkinsMask().bitmapData, 8, 8, 56, 24, AnimatedChar.RIGHT);
         AnimatedChars.add("Pets16x16", new EmbeddedAssets.Pets16x16().bitmapData, null, 16, 16, 112, 304, AnimatedChar.DOWN);
     }

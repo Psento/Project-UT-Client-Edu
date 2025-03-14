@@ -148,7 +148,7 @@ public class ObjectLibrary {
         var textureData:TextureData = typeToTextureData_[objectType];
         var texture:BitmapData = Boolean(textureData) ? textureData.getTexture() : null;
         if (texture == null) {
-            texture = AssetLibrary.getImageFromSet("Assets_Overworld_Environment_NotSpecific8x8", 1);
+            texture = AssetLibrary.getImageFromSet("Overworld_Environment_NotSpecific8x8", 1);
         }
         var mask:BitmapData = Boolean(textureData) ? textureData.mask_ : null;
         if (mask == null) {

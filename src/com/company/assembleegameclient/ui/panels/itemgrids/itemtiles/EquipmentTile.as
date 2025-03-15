@@ -37,16 +37,16 @@ public class EquipmentTile extends InteractiveItemTile {
         switch (type) {
             case ItemConstants.ALL_TYPE:
                 break;
-            case ItemConstants.SWORD_TYPE:
+            case ItemConstants.SWORD_AXE_TYPE:
                 bd = AssetLibrary.getImageFromSet("lofiObj5", 48);
                 break;
             case ItemConstants.DAGGER_TYPE:
                 bd = AssetLibrary.getImageFromSet("StarterGear", 0x03);
                 break;
-            case ItemConstants.BOW_TYPE:
+            case ItemConstants.BOW_CROSSBOW_TYPE:
                 bd = AssetLibrary.getImageFromSet("lofiObj5", 80);
                 break;
-            case ItemConstants.TOME_TYPE:
+            case ItemConstants.MACE_LANCE_TYPE:
                 bd = AssetLibrary.getImageFromSet("lofiObj6", 80);
                 break;
             case ItemConstants.SHIELD_TYPE:
@@ -58,7 +58,7 @@ public class EquipmentTile extends InteractiveItemTile {
             case ItemConstants.PLATE_TYPE:
                 bd = AssetLibrary.getImageFromSet("lofiObj5", 32);
                 break;
-            case ItemConstants.WAND_TYPE:
+            case ItemConstants.STAFF_WAND_TYPE:
                 bd = AssetLibrary.getImageFromSet("lofiObj5", 64);
                 break;
             case ItemConstants.RING_TYPE:
@@ -76,7 +76,7 @@ public class EquipmentTile extends InteractiveItemTile {
             case ItemConstants.ROBE_TYPE:
                 bd = AssetLibrary.getImageFromSet("lofiObj5", 16);
                 break;
-            case ItemConstants.QUIVER_TYPE:
+            case ItemConstants.GUN_TYPE:
                 bd = AssetLibrary.getImageFromSet("lofiObj6", 48);
                 break;
             case ItemConstants.HELM_TYPE:
@@ -94,7 +94,7 @@ public class EquipmentTile extends InteractiveItemTile {
             case ItemConstants.TRAP_TYPE:
                 bd = AssetLibrary.getImageFromSet("lofiObj6", 16);
                 break;
-            case ItemConstants.ORB_TYPE:
+            case ItemConstants.DUAL_WIELD_TYPE:
                 bd = AssetLibrary.getImageFromSet("lofiObj6", 144);
                 break;
             case ItemConstants.PRISM_TYPE:
@@ -103,10 +103,10 @@ public class EquipmentTile extends InteractiveItemTile {
             case ItemConstants.SCEPTER_TYPE:
                 bd = AssetLibrary.getImageFromSet("lofiObj6", 192);
                 break;
-            case ItemConstants.KATANA_TYPE:
+            case ItemConstants.KATANA_SCYTHE_TYPE:
                 bd = AssetLibrary.getImageFromSet("lofiObj3", 540);
                 break;
-            case ItemConstants.SHURIKEN_TYPE:
+            case ItemConstants.CHAKRAM_TYPE:
                 bd = AssetLibrary.getImageFromSet("lofiObj3", 555);
         }
         if (bd != null) {

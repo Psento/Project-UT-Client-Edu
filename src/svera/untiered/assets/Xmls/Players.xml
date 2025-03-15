@@ -10,7 +10,7 @@
     <DeathSound>player/rogue_death</DeathSound>
     <Player/>
     <BloodProb>1.0</BloodProb>
-    <SlotTypes>2, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
+    <SlotTypes>24, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
     <Equipment>-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1</Equipment>
     <MaxHitPoints max="720">150</MaxHitPoints>
     <MaxShieldPoints max="0">0</MaxShieldPoints>
@@ -33,7 +33,7 @@
     <DeathSound>player/rogue_death</DeathSound>
     <Player/>
     <BloodProb>1.0</BloodProb>
-    <SlotTypes>2, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
+    <SlotTypes>17, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
     <Equipment>-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1</Equipment>
     <MaxHitPoints max="720">150</MaxHitPoints>
     <MaxShieldPoints max="0">0</MaxShieldPoints>
@@ -56,7 +56,7 @@
     <DeathSound>player/rogue_death</DeathSound>
     <Player/>
     <BloodProb>1.0</BloodProb>
-    <SlotTypes>2, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
+    <SlotTypes>3, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
     <Equipment>-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1</Equipment>
     <MaxHitPoints max="720">150</MaxHitPoints>
     <MaxShieldPoints max="0">0</MaxShieldPoints>
@@ -79,7 +79,7 @@
     <DeathSound>player/rogue_death</DeathSound>
     <Player/>
     <BloodProb>1.0</BloodProb>
-    <SlotTypes>2, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
+    <SlotTypes>24, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
     <Equipment>-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1</Equipment>
     <MaxHitPoints max="720">150</MaxHitPoints>
     <MaxShieldPoints max="0">0</MaxShieldPoints>
@@ -102,7 +102,7 @@
     <DeathSound>player/rogue_death</DeathSound>
     <Player/>
     <BloodProb>1.0</BloodProb>
-    <SlotTypes>2, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
+    <SlotTypes>25, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
     <Equipment>-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1</Equipment>
     <MaxHitPoints max="720">150</MaxHitPoints>
     <MaxShieldPoints max="0">0</MaxShieldPoints>
@@ -125,7 +125,7 @@
     <DeathSound>player/rogue_death</DeathSound>
     <Player/>
     <BloodProb>1.0</BloodProb>
-    <SlotTypes>2, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
+    <SlotTypes>3, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
     <Equipment>-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1</Equipment>
     <MaxHitPoints max="720">150</MaxHitPoints>
     <MaxShieldPoints max="0">0</MaxShieldPoints>
@@ -148,7 +148,7 @@
     <DeathSound>player/rogue_death</DeathSound>
     <Player/>
     <BloodProb>1.0</BloodProb>
-    <SlotTypes>2, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
+    <SlotTypes>3, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
     <Equipment>-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1</Equipment>
     <MaxHitPoints max="720">150</MaxHitPoints>
     <MaxShieldPoints max="0">0</MaxShieldPoints>
@@ -171,7 +171,7 @@
     <DeathSound>player/rogue_death</DeathSound>
     <Player/>
     <BloodProb>1.0</BloodProb>
-    <SlotTypes>2, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
+    <SlotTypes>1, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
     <Equipment>-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1</Equipment>
     <MaxHitPoints max="720">150</MaxHitPoints>
     <MaxShieldPoints max="0">0</MaxShieldPoints>
@@ -194,7 +194,7 @@
     <DeathSound>player/rogue_death</DeathSound>
     <Player/>
     <BloodProb>1.0</BloodProb>
-    <SlotTypes>2, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
+    <SlotTypes>4, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
     <Equipment>-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1</Equipment>
     <MaxHitPoints max="720">150</MaxHitPoints>
     <MaxShieldPoints max="0">0</MaxShieldPoints>
@@ -217,7 +217,7 @@
     <DeathSound>player/rogue_death</DeathSound>
     <Player/>
     <BloodProb>1.0</BloodProb>
-    <SlotTypes>2, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
+    <SlotTypes>17, 0, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
     <Equipment>-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1</Equipment>
     <MaxHitPoints max="720">150</MaxHitPoints>
     <MaxShieldPoints max="0">0</MaxShieldPoints>
@@ -240,7 +240,7 @@
     <DeathSound>player/rogue_death</DeathSound>
     <Player/>
     <BloodProb>1.0</BloodProb>
-    <SlotTypes>2, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
+    <SlotTypes>2, 0, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
     <Equipment>-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1</Equipment>
     <MaxHitPoints max="720">150</MaxHitPoints>
     <MaxShieldPoints max="0">0</MaxShieldPoints>
@@ -263,7 +263,7 @@
     <DeathSound>player/rogue_death</DeathSound>
     <Player/>
     <BloodProb>1.0</BloodProb>
-    <SlotTypes>2, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
+    <SlotTypes>8, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
     <Equipment>-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1</Equipment>
     <MaxHitPoints max="720">150</MaxHitPoints>
     <MaxShieldPoints max="0">0</MaxShieldPoints>
@@ -286,7 +286,7 @@
     <DeathSound>player/rogue_death</DeathSound>
     <Player/>
     <BloodProb>1.0</BloodProb>
-    <SlotTypes>2, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
+    <SlotTypes>8, 0, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
     <Equipment>-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1</Equipment>
     <MaxHitPoints max="720">150</MaxHitPoints>
     <MaxShieldPoints max="0">0</MaxShieldPoints>
@@ -309,7 +309,7 @@
     <DeathSound>player/rogue_death</DeathSound>
     <Player/>
     <BloodProb>1.0</BloodProb>
-    <SlotTypes>2, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
+    <SlotTypes>3, 0, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
     <Equipment>-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1</Equipment>
     <MaxHitPoints max="720">150</MaxHitPoints>
     <MaxShieldPoints max="0">0</MaxShieldPoints>
@@ -332,7 +332,7 @@
     <DeathSound>player/rogue_death</DeathSound>
     <Player/>
     <BloodProb>1.0</BloodProb>
-    <SlotTypes>2, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
+    <SlotTypes>25, 0, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
     <Equipment>-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1</Equipment>
     <MaxHitPoints max="720">150</MaxHitPoints>
     <MaxShieldPoints max="0">0</MaxShieldPoints>
@@ -355,7 +355,7 @@
     <DeathSound>player/rogue_death</DeathSound>
     <Player/>
     <BloodProb>1.0</BloodProb>
-    <SlotTypes>2, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
+    <SlotTypes>1, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
     <Equipment>-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1</Equipment>
     <MaxHitPoints max="720">150</MaxHitPoints>
     <MaxShieldPoints max="0">0</MaxShieldPoints>
@@ -378,7 +378,7 @@
     <DeathSound>player/rogue_death</DeathSound>
     <Player/>
     <BloodProb>1.0</BloodProb>
-    <SlotTypes>2, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
+    <SlotTypes>1, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
     <Equipment>-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1</Equipment>
     <MaxHitPoints max="720">150</MaxHitPoints>
     <MaxShieldPoints max="0">0</MaxShieldPoints>
@@ -401,7 +401,7 @@
     <DeathSound>player/rogue_death</DeathSound>
     <Player/>
     <BloodProb>1.0</BloodProb>
-    <SlotTypes>2, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
+    <SlotTypes>1, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
     <Equipment>-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1</Equipment>
     <MaxHitPoints max="720">150</MaxHitPoints>
     <MaxShieldPoints max="0">0</MaxShieldPoints>
@@ -424,7 +424,7 @@
     <DeathSound>player/rogue_death</DeathSound>
     <Player/>
     <BloodProb>1.0</BloodProb>
-    <SlotTypes>2, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
+    <SlotTypes>24, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
     <Equipment>-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1</Equipment>
     <MaxHitPoints max="720">150</MaxHitPoints>
     <MaxShieldPoints max="0">0</MaxShieldPoints>
@@ -447,7 +447,7 @@
     <DeathSound>player/rogue_death</DeathSound>
     <Player/>
     <BloodProb>1.0</BloodProb>
-    <SlotTypes>2, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
+    <SlotTypes>15, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
     <Equipment>-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1</Equipment>
     <MaxHitPoints max="720">150</MaxHitPoints>
     <MaxShieldPoints max="0">0</MaxShieldPoints>
@@ -470,7 +470,7 @@
     <DeathSound>player/rogue_death</DeathSound>
     <Player/>
     <BloodProb>1.0</BloodProb>
-    <SlotTypes>2, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
+    <SlotTypes>17, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
     <Equipment>-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1</Equipment>
     <MaxHitPoints max="720">150</MaxHitPoints>
     <MaxShieldPoints max="0">0</MaxShieldPoints>
@@ -493,7 +493,7 @@
     <DeathSound>player/rogue_death</DeathSound>
     <Player/>
     <BloodProb>1.0</BloodProb>
-    <SlotTypes>2, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
+    <SlotTypes>4, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
     <Equipment>-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1</Equipment>
     <MaxHitPoints max="720">150</MaxHitPoints>
     <MaxShieldPoints max="0">0</MaxShieldPoints>
@@ -516,7 +516,7 @@
     <DeathSound>player/rogue_death</DeathSound>
     <Player/>
     <BloodProb>1.0</BloodProb>
-    <SlotTypes>2, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
+    <SlotTypes>25, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
     <Equipment>-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1</Equipment>
     <MaxHitPoints max="720">150</MaxHitPoints>
     <MaxShieldPoints max="0">0</MaxShieldPoints>
@@ -539,7 +539,7 @@
     <DeathSound>player/rogue_death</DeathSound>
     <Player/>
     <BloodProb>1.0</BloodProb>
-    <SlotTypes>2, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
+    <SlotTypes>15, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
     <Equipment>-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1</Equipment>
     <MaxHitPoints max="720">150</MaxHitPoints>
     <MaxShieldPoints max="0">0</MaxShieldPoints>
@@ -562,7 +562,7 @@
     <DeathSound>player/rogue_death</DeathSound>
     <Player/>
     <BloodProb>1.0</BloodProb>
-    <SlotTypes>2, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
+    <SlotTypes>8, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
     <Equipment>-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1</Equipment>
     <MaxHitPoints max="720">150</MaxHitPoints>
     <MaxShieldPoints max="0">0</MaxShieldPoints>
@@ -585,7 +585,7 @@
     <DeathSound>player/rogue_death</DeathSound>
     <Player/>
     <BloodProb>1.0</BloodProb>
-    <SlotTypes>2, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
+    <SlotTypes>24, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
     <Equipment>-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1</Equipment>
     <MaxHitPoints max="720">150</MaxHitPoints>
     <MaxShieldPoints max="0">0</MaxShieldPoints>
@@ -608,7 +608,7 @@
     <DeathSound>player/rogue_death</DeathSound>
     <Player/>
     <BloodProb>1.0</BloodProb>
-    <SlotTypes>2, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
+    <SlotTypes>17, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
     <Equipment>-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1</Equipment>
     <MaxHitPoints max="720">150</MaxHitPoints>
     <MaxShieldPoints max="0">0</MaxShieldPoints>
@@ -654,7 +654,7 @@
     <DeathSound>player/rogue_death</DeathSound>
     <Player/>
     <BloodProb>1.0</BloodProb>
-    <SlotTypes>2, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
+    <SlotTypes>21, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
     <Equipment>-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1</Equipment>
     <MaxHitPoints max="720">150</MaxHitPoints>
     <MaxShieldPoints max="0">0</MaxShieldPoints>
@@ -666,7 +666,7 @@
     <HpRegen max="40">15</HpRegen>
     <MpRegen max="50">10</MpRegen>
   </Object>
-  <Object type="0x31d" id="Royal-Guard">
+  <Object type="0x31d" id="Dragoon">
     <Class>Player</Class>
     <Description>The sharpshooter relies on their bow to deal damage at long range.</Description>
     <AnimatedTexture>
@@ -677,7 +677,7 @@
     <DeathSound>player/rogue_death</DeathSound>
     <Player/>
     <BloodProb>1.0</BloodProb>
-    <SlotTypes>2, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
+    <SlotTypes>4, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
     <Equipment>-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1</Equipment>
     <MaxHitPoints max="720">150</MaxHitPoints>
     <MaxShieldPoints max="0">0</MaxShieldPoints>
@@ -700,7 +700,7 @@
     <DeathSound>player/rogue_death</DeathSound>
     <Player/>
     <BloodProb>1.0</BloodProb>
-    <SlotTypes>2, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
+    <SlotTypes>21, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
     <Equipment>-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1</Equipment>
     <MaxHitPoints max="720">150</MaxHitPoints>
     <MaxShieldPoints max="0">0</MaxShieldPoints>
@@ -723,7 +723,7 @@
     <DeathSound>player/rogue_death</DeathSound>
     <Player/>
     <BloodProb>1.0</BloodProb>
-    <SlotTypes>2, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
+    <SlotTypes>4, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
     <Equipment>-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1</Equipment>
     <MaxHitPoints max="720">150</MaxHitPoints>
     <MaxShieldPoints max="0">0</MaxShieldPoints>
@@ -746,7 +746,7 @@
     <DeathSound>player/rogue_death</DeathSound>
     <Player/>
     <BloodProb>1.0</BloodProb>
-    <SlotTypes>2, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
+    <SlotTypes>24, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
     <Equipment>-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1</Equipment>
     <MaxHitPoints max="720">150</MaxHitPoints>
     <MaxShieldPoints max="0">0</MaxShieldPoints>
@@ -769,7 +769,7 @@
     <DeathSound>player/rogue_death</DeathSound>
     <Player/>
     <BloodProb>1.0</BloodProb>
-    <SlotTypes>2, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
+    <SlotTypes>1, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
     <Equipment>-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1</Equipment>
     <MaxHitPoints max="720">150</MaxHitPoints>
     <MaxShieldPoints max="0">0</MaxShieldPoints>
@@ -781,7 +781,7 @@
     <HpRegen max="40">15</HpRegen>
     <MpRegen max="50">10</MpRegen>
   </Object>
-  <Object type="0x322" id="Oracle">
+  <Object type="0x322" id="Orbiter">
     <Class>Player</Class>
     <Description>The sharpshooter relies on their bow to deal damage at long range.</Description>
     <AnimatedTexture>
@@ -792,7 +792,7 @@
     <DeathSound>player/rogue_death</DeathSound>
     <Player/>
     <BloodProb>1.0</BloodProb>
-    <SlotTypes>2, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
+    <SlotTypes>25, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
     <Equipment>-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1</Equipment>
     <MaxHitPoints max="720">150</MaxHitPoints>
     <MaxShieldPoints max="0">0</MaxShieldPoints>
@@ -815,7 +815,7 @@
     <DeathSound>player/rogue_death</DeathSound>
     <Player/>
     <BloodProb>1.0</BloodProb>
-    <SlotTypes>2, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
+    <SlotTypes>4, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
     <Equipment>-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1</Equipment>
     <MaxHitPoints max="720">150</MaxHitPoints>
     <MaxShieldPoints max="0">0</MaxShieldPoints>
@@ -838,7 +838,7 @@
     <DeathSound>player/rogue_death</DeathSound>
     <Player/>
     <BloodProb>1.0</BloodProb>
-    <SlotTypes>2, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
+    <SlotTypes>3, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
     <Equipment>-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1</Equipment>
     <MaxHitPoints max="720">150</MaxHitPoints>
     <MaxShieldPoints max="0">0</MaxShieldPoints>
@@ -861,7 +861,7 @@
     <DeathSound>player/rogue_death</DeathSound>
     <Player/>
     <BloodProb>1.0</BloodProb>
-    <SlotTypes>2, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
+    <SlotTypes>17, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
     <Equipment>-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1</Equipment>
     <MaxHitPoints max="720">150</MaxHitPoints>
     <MaxShieldPoints max="0">0</MaxShieldPoints>
@@ -884,7 +884,7 @@
     <DeathSound>player/rogue_death</DeathSound>
     <Player/>
     <BloodProb>1.0</BloodProb>
-    <SlotTypes>2, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
+    <SlotTypes>21, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
     <Equipment>-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1</Equipment>
     <MaxHitPoints max="720">150</MaxHitPoints>
     <MaxShieldPoints max="0">0</MaxShieldPoints>
@@ -896,7 +896,7 @@
     <HpRegen max="40">15</HpRegen>
     <MpRegen max="50">10</MpRegen>
   </Object>
-  <Object type="0x327" id="Lancer">
+  <Object type="0x327" id="Royal-Guard">
     <Class>Player</Class>
     <Description>The sharpshooter relies on their bow to deal damage at long range.</Description>
     <AnimatedTexture>
@@ -907,7 +907,7 @@
     <DeathSound>player/rogue_death</DeathSound>
     <Player/>
     <BloodProb>1.0</BloodProb>
-    <SlotTypes>2, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
+    <SlotTypes>4, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
     <Equipment>-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1</Equipment>
     <MaxHitPoints max="720">150</MaxHitPoints>
     <MaxShieldPoints max="0">0</MaxShieldPoints>
@@ -919,7 +919,7 @@
     <HpRegen max="40">15</HpRegen>
     <MpRegen max="50">10</MpRegen>
   </Object>
-  <Object type="0x328" id="Hunter">
+  <Object type="0x328" id="Bullseye">
     <Class>Player</Class>
     <Description>The sharpshooter relies on their bow to deal damage at long range.</Description>
     <AnimatedTexture>
@@ -930,7 +930,7 @@
     <DeathSound>player/rogue_death</DeathSound>
     <Player/>
     <BloodProb>1.0</BloodProb>
-    <SlotTypes>2, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
+    <SlotTypes>3, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
     <Equipment>-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1</Equipment>
     <MaxHitPoints max="720">150</MaxHitPoints>
     <MaxShieldPoints max="0">0</MaxShieldPoints>
@@ -953,7 +953,7 @@
     <DeathSound>player/rogue_death</DeathSound>
     <Player/>
     <BloodProb>1.0</BloodProb>
-    <SlotTypes>2, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
+    <SlotTypes>15, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
     <Equipment>-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1</Equipment>
     <MaxHitPoints max="720">150</MaxHitPoints>
     <MaxShieldPoints max="0">0</MaxShieldPoints>
@@ -976,7 +976,7 @@
     <DeathSound>player/rogue_death</DeathSound>
     <Player/>
     <BloodProb>1.0</BloodProb>
-    <SlotTypes>2, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
+    <SlotTypes>17, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
     <Equipment>-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1</Equipment>
     <MaxHitPoints max="720">150</MaxHitPoints>
     <MaxShieldPoints max="0">0</MaxShieldPoints>
@@ -999,7 +999,7 @@
     <DeathSound>player/rogue_death</DeathSound>
     <Player/>
     <BloodProb>1.0</BloodProb>
-    <SlotTypes>2, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
+    <SlotTypes>8, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
     <Equipment>-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1</Equipment>
     <MaxHitPoints max="720">150</MaxHitPoints>
     <MaxShieldPoints max="0">0</MaxShieldPoints>
@@ -1045,7 +1045,7 @@
     <DeathSound>player/rogue_death</DeathSound>
     <Player/>
     <BloodProb>1.0</BloodProb>
-    <SlotTypes>2, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
+    <SlotTypes>24, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
     <Equipment>-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1</Equipment>
     <MaxHitPoints max="720">150</MaxHitPoints>
     <MaxShieldPoints max="0">0</MaxShieldPoints>
@@ -1068,7 +1068,7 @@
     <DeathSound>player/rogue_death</DeathSound>
     <Player/>
     <BloodProb>1.0</BloodProb>
-    <SlotTypes>2, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
+    <SlotTypes>8, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
     <Equipment>-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1</Equipment>
     <MaxHitPoints max="720">150</MaxHitPoints>
     <MaxShieldPoints max="0">0</MaxShieldPoints>
@@ -1091,7 +1091,7 @@
     <DeathSound>player/rogue_death</DeathSound>
     <Player/>
     <BloodProb>1.0</BloodProb>
-    <SlotTypes>2, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
+    <SlotTypes>1, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
     <Equipment>-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1</Equipment>
     <MaxHitPoints max="720">150</MaxHitPoints>
     <MaxShieldPoints max="0">0</MaxShieldPoints>
@@ -1114,7 +1114,7 @@
     <DeathSound>player/rogue_death</DeathSound>
     <Player/>
     <BloodProb>1.0</BloodProb>
-    <SlotTypes>2, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
+    <SlotTypes>8, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
     <Equipment>-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1</Equipment>
     <MaxHitPoints max="720">150</MaxHitPoints>
     <MaxShieldPoints max="0">0</MaxShieldPoints>
@@ -1126,7 +1126,7 @@
     <HpRegen max="40">15</HpRegen>
     <MpRegen max="50">10</MpRegen>
   </Object>
-  <Object type="0x331" id="Rapper">
+  <Object type="0x331" id="Wild Card">
     <Class>Player</Class>
     <Description>The sharpshooter relies on their bow to deal damage at long range.</Description>
     <AnimatedTexture>
@@ -1149,7 +1149,7 @@
     <HpRegen max="40">15</HpRegen>
     <MpRegen max="50">10</MpRegen>
   </Object>
-  <Object type="0x332" id="Spirit">
+  <Object type="0x332" id="Rapper">
     <Class>Player</Class>
     <Description>The sharpshooter relies on their bow to deal damage at long range.</Description>
     <AnimatedTexture>
@@ -1160,7 +1160,30 @@
     <DeathSound>player/rogue_death</DeathSound>
     <Player/>
     <BloodProb>1.0</BloodProb>
-    <SlotTypes>2, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
+    <SlotTypes>4, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
+    <Equipment>-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1</Equipment>
+    <MaxHitPoints max="720">150</MaxHitPoints>
+    <MaxShieldPoints max="0">0</MaxShieldPoints>
+    <MaxResourcePoints max="252">100</MaxResourcePoints>
+    <Attack max="50">10</Attack>
+    <Armor max="25">0</Armor>
+    <Speed max="75">15</Speed>
+    <Dexterity max="75">15</Dexterity>
+    <HpRegen max="40">15</HpRegen>
+    <MpRegen max="50">10</MpRegen>
+  </Object>
+  <Object type="0x333" id="Spirit">
+    <Class>Player</Class>
+    <Description>The sharpshooter relies on their bow to deal damage at long range.</Description>
+    <AnimatedTexture>
+      <File>players</File>
+      <Index>51</Index>
+    </AnimatedTexture>
+    <HitSound>player/rogue_hit</HitSound>
+    <DeathSound>player/rogue_death</DeathSound>
+    <Player/>
+    <BloodProb>1.0</BloodProb>
+    <SlotTypes>8, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
     <Equipment>-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1</Equipment>
     <MaxHitPoints max="720">150</MaxHitPoints>
     <MaxShieldPoints max="0">0</MaxShieldPoints>

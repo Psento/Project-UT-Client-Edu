@@ -119,7 +119,7 @@
     <PlayerClassType>0x0325</PlayerClassType>
     <UnlockLevel>10</UnlockLevel>
   </Object>
-  <Object type="0x034f" id="Shadow">
+  <Object type="0x034f" id="Shadow Skin">
     <Skin/>
     <Class>Skin</Class>
     <AnimatedTexture>
@@ -128,6 +128,7 @@
     </AnimatedTexture>
     <PlayerClassType>0x0326</PlayerClassType>
     <UnlockLevel>10</UnlockLevel>
+    <DisplayId>Shadow</DisplayId>
   </Object>
   <Object type="0x0350" id="Elder Wizard">
     <Skin/>

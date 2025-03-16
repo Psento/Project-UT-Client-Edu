@@ -82,7 +82,7 @@ public class EquipmentTile extends InteractiveItemTile {
             case ItemConstants.HELM_TYPE:
                 bd = AssetLibrary.getImageFromSet("lofiObj6", 96);
                 break;
-            case ItemConstants.STAFF_TYPE:
+            case ItemConstants.CLAWS_GAUNTLET_TYPE:
                 bd = AssetLibrary.getImageFromSet("lofiObj5", 112);
                 break;
             case ItemConstants.POISON_TYPE:

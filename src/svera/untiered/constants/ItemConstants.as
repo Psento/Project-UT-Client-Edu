@@ -6,7 +6,7 @@ public class ItemConstants {
     public static const DAGGER_TYPE:int = 2;
     public static const BOW_CROSSBOW_TYPE:int = 3;
     public static const MACE_LANCE_TYPE:int = 4;
-    public static const SHIELD_TYPE:int = 5;
+    public static const SHIELD_OLD_TYPE:int = 5;
     public static const LEATHER_TYPE:int = 6;
     public static const PLATE_TYPE:int = 7;
     public static const STAFF_WAND_TYPE:int = 8;
@@ -21,20 +21,50 @@ public class ItemConstants {
     public static const CLAWS_GAUNTLET_TYPE = 17;
     public static const POISON_TYPE:int = 18;
     public static const SKULL_TYPE:int = 19;
-    public static const TRAP_TYPE:int = 20;
+    public static const TRAP_OLD_TYPE:int = 20;
     public static const DUAL_WIELD_TYPE:int = 21;
     public static const PRISM_TYPE:int = 22;
     public static const SCEPTER_TYPE:int = 23;
     public static const KATANA_SCYTHE_TYPE:int = 24;
     public static const CHAKRAM_TYPE:int = 25;
+    public static const MASK_TYPE:int = 26
+    public static const BALLOON_FRIEND_TYPE:int = 27
+    public static const COUNTER_TYPE:int = 28
+    public static const SACRIFICIAL_SPIRIT_TYPE:int = 29
+    public static const PLANT_SHACKLE_TYPE:int = 30
+    public static const FOCUS_MANA_TYPE:int = 31
+    public static const LEECHING_VIGOR_TYPE:int = 32
+    public static const CURSE_TYPE:int = 33
+    public static const Z_DASH_TYPE:int = 34
+    public static const MORALE_RAISE_TYPE:int = 35
+    public static const SWEEP_TYPE:int = 36
+    public static const LAST_STAND_TYPE:int = 37
+    public static const REWARDING_BLOW_TYPE:int = 38
+    public static const BOUNCE_TYPE:int = 39
+    public static const DISTRACT_TYPE:int = 40
+    public static const EMPOWER_ARROW_TYPE:int = 41
+    public static const ARROW_SPLIT_TYPE:int = 42
+    public static const TORCH_TYPE:int = 43
+    public static const SPEED_TRIGGER_TYPE:int = 44
+    public static const TROPHIE_RECOGNITION_TYPE:int = 45
+    public static const TRAP_TYPE:int = 46
+    public static const FEAR_MONGER_TYPE:int = 47
+    public static const SERRATION_TYPE:int = 48
+    public static const RALLY_TYPE:int = 49
+    public static const ENHANCE_RANGE_TYPE:int = 50
+    public static const ATTENTION_SEEK_TYPE:int = 51
+    public static const SHIELD_TYPE:int = 52
+    public static const INFLATE_POWER_TYPE:int = 53
+    public static const AIRSTRIKE_TYPE:int = 54
+    public static const EARTH_SHATTER_TYPE:int = 55
 
 
     public function ItemConstants() {
         super();
     }
 
-    public static function itemTypeToName(type:int):String {
-        switch (type) {
+    public static function itemTypeToName(itemType:int):String {
+        switch (itemType) {
             case ALL_TYPE:
                 return "Any";
             case SWORD_AXE_TYPE:
@@ -45,7 +75,7 @@ public class ItemConstants {
                 return "Bow, crossbow";
             case MACE_LANCE_TYPE:
                 return "Mace, lance";
-            case SHIELD_TYPE:
+            case SHIELD_OLD_TYPE:
                 return "Shield";
             case LEATHER_TYPE:
                 return "Leather Armor";
@@ -75,7 +105,7 @@ public class ItemConstants {
                 return "Poison";
             case SKULL_TYPE:
                 return "Skull";
-            case TRAP_TYPE:
+            case TRAP_OLD_TYPE:
                 return "Trap";
             case DUAL_WIELD_TYPE:
                 return "Orb";
@@ -87,6 +117,66 @@ public class ItemConstants {
                 return "Katana, Scythe";
             case CHAKRAM_TYPE:
                 return "Chakram";
+            case MASK_TYPE:
+                return "Mask";
+            case BALLOON_FRIEND_TYPE:
+                return "Balloon-Friend";
+            case COUNTER_TYPE:
+                return "Counter";
+            case SACRIFICIAL_SPIRIT_TYPE:
+                return "Sacrificial-Spirit";
+            case PLANT_SHACKLE_TYPE:
+                return "Plant-Shackle";
+            case FOCUS_MANA_TYPE:
+                return "Focus-Mana";
+            case LEECHING_VIGOR_TYPE:
+                return "Leeching-Vigor";
+            case CURSE_TYPE:
+                return "Curse";
+            case Z_DASH_TYPE:
+                return "Z-Dash";
+            case MORALE_RAISE_TYPE:
+                return "Morale-Raise";
+            case SWEEP_TYPE:
+                return "Sweep";
+            case LAST_STAND_TYPE:
+                return "Last-Stand";
+            case REWARDING_BLOW_TYPE:
+                return "Rewarding-Blow";
+            case BOUNCE_TYPE:
+                return "Bounce";
+            case DISTRACT_TYPE:
+                return "Distract";
+            case EMPOWER_ARROW_TYPE:
+                return "Empower-Arrow";
+            case ARROW_SPLIT_TYPE:
+                return "Arrow-Split";
+            case TORCH_TYPE:
+                return "Torch";
+            case SPEED_TRIGGER_TYPE:
+                return "Speed-Trigger";
+            case TROPHIE_RECOGNITION_TYPE:
+                return "Trophie-Recognition";
+            case TRAP_TYPE:
+                return "Trap";
+            case FEAR_MONGER_TYPE:
+                return "Fear-Monger";
+            case SERRATION_TYPE:
+                return "Serration";
+            case RALLY_TYPE:
+                return "Rally";
+            case ENHANCE_RANGE_TYPE:
+                return "Enhance-Range";
+            case ATTENTION_SEEK_TYPE:
+                return "Attention-Seek";
+            case SHIELD_TYPE:
+                return "Shield";
+            case INFLATE_POWER_TYPE:
+                return "Inflate-Power";
+            case AIRSTRIKE_TYPE:
+                return "Airstrike";
+            case EARTH_SHATTER_TYPE:
+                return "Earth-Shatter";
             default:
                 return "Invalid Type!";
         }

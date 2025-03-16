@@ -66,7 +66,7 @@ public class TextureData {
     private function parse(xml:XML):void {
         var image:MaskedImage = null;
         var childXML:XML = null;
-        trace(xml.File);
+        //trace(xml.File);
         switch (xml.name().toString()) {
             case "Texture":
                 this.texture_ = AssetLibrary.getImageFromSet(String(xml.File), int(xml.Index));

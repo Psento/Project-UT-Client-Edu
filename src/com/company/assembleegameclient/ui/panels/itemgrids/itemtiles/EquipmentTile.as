@@ -30,11 +30,11 @@ public class EquipmentTile extends InteractiveItemTile {
         return type <= 0 || this.itemType == ObjectLibrary.getSlotTypeFromType(type);
     }
 
-    public function setType(type:int):void {
+    public function setType(itemType_:int):void {
         var bd:BitmapData = null;
         var dx:int = 0;
         var dy:int = 0;
-        switch (type) {
+        switch (itemType_) {
             case ItemConstants.ALL_TYPE:
                 break;
             case ItemConstants.SWORD_AXE_TYPE:
@@ -108,6 +108,7 @@ public class EquipmentTile extends InteractiveItemTile {
                 break;
             case ItemConstants.CHAKRAM_TYPE:
                 bd = AssetLibrary.getImageFromSet("lofiObj3", 555);
+                break;
         }
         if (bd != null) {
             this.backgroundDetail = new Bitmap(bd);
@@ -118,7 +119,7 @@ public class EquipmentTile extends InteractiveItemTile {
             this.backgroundDetail.filters = [greyColorFilter];
             addChildAt(this.backgroundDetail, 0);
         }
-        this.itemType = type;
+        this.itemType = itemType_;
     }
 
     override public function setItem(itemId:int, itemData:int):Boolean {

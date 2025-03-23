@@ -1,675 +1,675 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Objects>
-	<Object type="0x5566" id="Marble Pet Stone">
-		<Class>Equipment</Class>
-		<Item/>
-		<Texture>
-			<File>Utilities_PetStones8x8</File>
-			<Index>0x00</Index>
-		</Texture>
-		<SlotType>10</SlotType>
-		<TierType>Artifact</TierType>
-		<Description>Spawns a Marble Colossus Pet.</Description>
-		<Sound>spell/fire_nova</Sound>
-		<ExtraTooltipData>
-			<EffectInfo name="Use this pet stone again to disable your pet." description=""/>
-		</ExtraTooltipData>
-		<Activate petType="0x5567">PetStone</Activate>
-		<Cooldown>1</Cooldown>
-		<InvUse/>
-		<ReUse/>
-		<Soulbound/>
-		<ContainerType>Artifact</ContainerType>
-	</Object>
-	<Object type="0x5567" id="MBC Pet">
-		<Class>Character</Class>
-		<Ally/>
-		<Pet/>
-		<AnimatedTexture>
-			<File>Pets16x16</File>
-			<Index>0</Index>
-		</AnimatedTexture>
-		<NoMiniMap/>
-		<Size>50</Size>
-		<ShadowSize>0</ShadowSize>
-	</Object>
-	<Object type="0x5585" id="Void Pet Stone">
-		<Class>Equipment</Class>
-		<Item/>
-		<Texture>
-			<File>Utilities_PetStones8x8</File>
-			<Index>0x01</Index>
-		</Texture>
-		<SlotType>10</SlotType>
-		<TierType>Artifact</TierType>
-		<Description>Spawns a Void Pet.</Description>
-		<Sound>spell/fire_nova</Sound>
-		<ExtraTooltipData>
-			<EffectInfo name="Use this pet stone again to disable your pet." description=""/>
-		</ExtraTooltipData>
-		<Activate petType="0x5586">PetStone</Activate>
-		<Cooldown>1</Cooldown>
-		<InvUse/>
-		<ReUse/>
-		<Soulbound/>
-		<ContainerType>Artifact</ContainerType>
-	</Object>
-	<Object type="0x5586" id="Void Pet">
-		<Class>Character</Class>
-		<Ally/>
-		<Pet/>
-		<AnimatedTexture>
-			<File>Pets16x16</File>
-			<Index>1</Index>
-		</AnimatedTexture>
-		<NoMiniMap/>
-		<Size>50</Size>
-		<ShadowSize>0</ShadowSize>
-	</Object>
-	<Object type="0x5582" id="Girl Pet Stone">
-		<Class>Equipment</Class>
-		<Item/>
-		<Texture>
-			<File>Utilities_PetStones8x8</File>
-			<Index>0x02</Index>
-		</Texture>
-		<SlotType>10</SlotType>
-		<TierType>Artifact</TierType>
-		<Description>Spawns a Girl Pet.</Description>
-		<Sound>spell/fire_nova</Sound>
-		<ExtraTooltipData>
-			<EffectInfo name="Use this pet stone again to disable your pet." description=""/>
-		</ExtraTooltipData>
-		<Activate petType="0x5583">PetStone</Activate>
-		<Cooldown>1</Cooldown>
-		<InvUse/>
-		<ReUse/>
-		<Soulbound/>
-		<ContainerType>Artifact</ContainerType>
-	</Object>
-	<Object type="0x5583" id="Girl Pet">
-		<Class>Character</Class>
-		<Ally/>
-		<Pet/>
-		<AnimatedTexture>
-			<File>Pets16x16</File>
-			<Index>2</Index>
-		</AnimatedTexture>
-		<NoMiniMap/>
-		<Size>50</Size>
-		<ShadowSize>0</ShadowSize>
-	</Object>
-	<Object type="0x5587" id="Royal Pet Stone">
-		<Class>Equipment</Class>
-		<Item/>
-		<Texture>
-			<File>Utilities_PetStones8x8</File>
-			<Index>0x03</Index>
-		</Texture>
-		<SlotType>10</SlotType>
-		<TierType>Artifact</TierType>
-		<Description>Spawns a Royal Pet.</Description>
-		<Sound>spell/fire_nova</Sound>
-		<ExtraTooltipData>
-			<EffectInfo name="Use this pet stone again to disable your pet." description=""/>
-		</ExtraTooltipData>
-		<Activate petType="0x5588">PetStone</Activate>
-		<Cooldown>1</Cooldown>
-		<InvUse/>
-		<ReUse/>
-		<Soulbound/>
-		<ContainerType>Artifact</ContainerType>
-	</Object>
-	<Object type="0x5588" id="Royal Pet">
-		<Class>Character</Class>
-		<Ally/>
-		<Pet/>
-		<AnimatedTexture>
-			<File>Pets16x16</File>
-			<Index>3</Index>
-		</AnimatedTexture>
-		<NoMiniMap/>
-		<Size>50</Size>
-		<ShadowSize>0</ShadowSize>
-	</Object>
-	<Object type="0x5589" id="Twilight Pet Stone">
-		<Class>Equipment</Class>
-		<Item/>
-		<Texture>
-			<File>Utilities_PetStones8x8</File>
-			<Index>0x04</Index>
-		</Texture>
-		<SlotType>10</SlotType>
-		<TierType>Artifact</TierType>
-		<Description>Spawns a Twilight Pet.</Description>
-		<Sound>spell/fire_nova</Sound>
-		<ExtraTooltipData>
-			<EffectInfo name="Use this pet stone again to disable your pet." description=""/>
-		</ExtraTooltipData>
-		<Activate petType="0x558a">PetStone</Activate>
-		<Cooldown>1</Cooldown>
-		<InvUse/>
-		<ReUse/>
-		<Soulbound/>
-		<ContainerType>Artifact</ContainerType>
-	</Object>
-	<Object type="0x558a" id="Twilight Pet">
-		<Class>Character</Class>
-		<Ally/>
-		<Pet/>
-		<AnimatedTexture>
-			<File>Pets16x16</File>
-			<Index>4</Index>
-		</AnimatedTexture>
-		<NoMiniMap/>
-		<Size>50</Size>
-		<ShadowSize>0</ShadowSize>
-	</Object>
-	<Object type="0x558b" id="Sentient Pet Stone">
-		<Class>Equipment</Class>
-		<Item/>
-		<Texture>
-			<File>Utilities_PetStones8x8</File>
-			<Index>0x05</Index>
-		</Texture>
-		<SlotType>10</SlotType>
-		<TierType>Artifact</TierType>
-		<Description>Spawns a Sentient Pet.</Description>
-		<Sound>spell/fire_nova</Sound>
-		<ExtraTooltipData>
-			<EffectInfo name="Use this pet stone again to disable your pet." description=""/>
-		</ExtraTooltipData>
-		<Activate petType="0x558c">PetStone</Activate>
-		<Cooldown>1</Cooldown>
-		<InvUse/>
-		<ReUse/>
-		<Soulbound/>
-		<ContainerType>Artifact</ContainerType>
-	</Object>
-	<Object type="0x558c" id="Sentient Pet">
-		<Class>Character</Class>
-		<Ally/>
-		<Pet/>
-		<AnimatedTexture>
-			<File>Pets16x16</File>
-			<Index>5</Index>
-		</AnimatedTexture>
-		<NoMiniMap/>
-		<Size>50</Size>
-		<ShadowSize>0</ShadowSize>
-	</Object>
-	<Object type="0x558d" id="Wishing Pet Stone">
-		<Class>Equipment</Class>
-		<Item/>
-		<Texture>
-			<File>Utilities_PetStones8x8</File>
-			<Index>0x06</Index>
-		</Texture>
-		<SlotType>10</SlotType>
-		<TierType>Artifact</TierType>
-		<Description>Spawns a Wishing Pet.</Description>
-		<Sound>spell/fire_nova</Sound>
-		<ExtraTooltipData>
-			<EffectInfo name="Use this pet stone again to disable your pet." description=""/>
-		</ExtraTooltipData>
-		<Activate petType="0x558e">PetStone</Activate>
-		<Cooldown>1</Cooldown>
-		<InvUse/>
-		<ReUse/>
-		<Soulbound/>
-		<ContainerType>Artifact</ContainerType>
-	</Object>
-	<Object type="0x558e" id="Wishing Pet">
-		<Class>Character</Class>
-		<Ally/>
-		<Pet/>
-		<AnimatedTexture>
-			<File>Pets16x16</File>
-			<Index>6</Index>
-		</AnimatedTexture>
-		<NoMiniMap/>
-		<Size>50</Size>
-		<ShadowSize>0</ShadowSize>
-	</Object>
-	<Object type="0x558f" id="Mechanical Pet Stone">
-		<Class>Equipment</Class>
-		<Item/>
-		<Texture>
-			<File>Utilities_PetStones8x8</File>
-			<Index>0x07</Index>
-		</Texture>
-		<SlotType>10</SlotType>
-		<TierType>Artifact</TierType>
-		<Description>Spawns a Mechanical Pet.</Description>
-		<Sound>spell/fire_nova</Sound>
-		<ExtraTooltipData>
-			<EffectInfo name="Use this pet stone again to disable your pet." description=""/>
-		</ExtraTooltipData>
-		<Activate petType="0x5590">PetStone</Activate>
-		<Cooldown>1</Cooldown>
-		<InvUse/>
-		<ReUse/>
-		<Soulbound/>
-		<ContainerType>Artifact</ContainerType>
-	</Object>
-	<Object type="0x5590" id="Mechanical Pet">
-		<Class>Character</Class>
-		<Ally/>
-		<Pet/>
-		<AnimatedTexture>
-			<File>Pets16x16</File>
-			<Index>7</Index>
-		</AnimatedTexture>
-		<NoMiniMap/>
-		<Size>50</Size>
-		<ShadowSize>0</ShadowSize>
-	</Object>
-	<Object type="0x5591" id="All-Seeing Pet Stone">
-		<Class>Equipment</Class>
-		<Item/>
-		<Texture>
-			<File>Utilities_PetStones8x8</File>
-			<Index>0x08</Index>
-		</Texture>
-		<SlotType>10</SlotType>
-		<TierType>Artifact</TierType>
-		<Description>Spawns a All-Seeing Pet.</Description>
-		<Sound>spell/fire_nova</Sound>
-		<ExtraTooltipData>
-			<EffectInfo name="Use this pet stone again to disable your pet." description=""/>
-		</ExtraTooltipData>
-		<Activate petType="0x5592">PetStone</Activate>
-		<Cooldown>1</Cooldown>
-		<InvUse/>
-		<ReUse/>
-		<Soulbound/>
-		<ContainerType>Artifact</ContainerType>
-	</Object>
-	<Object type="0x5592" id="All-Seeing Pet">
-		<Class>Character</Class>
-		<Ally/>
-		<Pet/>
-		<AnimatedTexture>
-			<File>Pets16x16</File>
-			<Index>8</Index>
-		</AnimatedTexture>
-		<NoMiniMap/>
-		<Size>50</Size>
-		<ShadowSize>0</ShadowSize>
-	</Object>
-	<Object type="0x5593" id="Sprite Pet Stone">
-		<Class>Equipment</Class>
-		<Item/>
-		<Texture>
-			<File>Utilities_PetStones8x8</File>
-			<Index>0x09</Index>
-		</Texture>
-		<SlotType>10</SlotType>
-		<TierType>Artifact</TierType>
-		<Description>Spawns a Sprite Pet.</Description>
-		<Sound>spell/fire_nova</Sound>
-		<ExtraTooltipData>
-			<EffectInfo name="Use this pet stone again to disable your pet." description=""/>
-		</ExtraTooltipData>
-		<Activate petType="0x5594">PetStone</Activate>
-		<Cooldown>1</Cooldown>
-		<InvUse/>
-		<ReUse/>
-		<Soulbound/>
-		<ContainerType>Artifact</ContainerType>
-	</Object>
-	<Object type="0x5594" id="Sprite Pet">
-		<Class>Character</Class>
-		<Ally/>
-		<Pet/>
-		<AnimatedTexture>
-			<File>Pets16x16</File>
-			<Index>9</Index>
-		</AnimatedTexture>
-		<NoMiniMap/>
-		<Size>50</Size>
-		<ShadowSize>0</ShadowSize>
-	</Object>
-	<Object type="0x5595" id="Exotic Pet Stone">
-		<Class>Equipment</Class>
-		<Item/>
-		<Texture>
-			<File>Utilities_PetStones8x8</File>
-			<Index>0x0a</Index>
-		</Texture>
-		<SlotType>10</SlotType>
-		<TierType>Artifact</TierType>
-		<Description>Spawns a Exotic Pet.</Description>
-		<Sound>spell/fire_nova</Sound>
-		<ExtraTooltipData>
-			<EffectInfo name="Use this pet stone again to disable your pet." description=""/>
-		</ExtraTooltipData>
-		<Activate petType="0x5596">PetStone</Activate>
-		<Cooldown>1</Cooldown>
-		<InvUse/>
-		<ReUse/>
-		<Soulbound/>
-		<ContainerType>Artifact</ContainerType>
-	</Object>
-	<Object type="0x5596" id="Exotic Pet">
-		<Class>Character</Class>
-		<Ally/>
-		<Pet/>
-		<AnimatedTexture>
-			<File>Pets16x16</File>
-			<Index>10</Index>
-		</AnimatedTexture>
-		<NoMiniMap/>
-		<Size>50</Size>
-		<ShadowSize>0</ShadowSize>
-	</Object>
-	<Object type="0x5597" id="Vampiric Pet Stone">
-		<Class>Equipment</Class>
-		<Item/>
-		<Texture>
-			<File>Utilities_PetStones8x8</File>
-			<Index>0x0b</Index>
-		</Texture>
-		<SlotType>10</SlotType>
-		<TierType>Artifact</TierType>
-		<Description>Spawns a Vampiric Pet.</Description>
-		<Sound>spell/fire_nova</Sound>
-		<ExtraTooltipData>
-			<EffectInfo name="Use this pet stone again to disable your pet." description=""/>
-		</ExtraTooltipData>
-		<Activate petType="0x5598">PetStone</Activate>
-		<Cooldown>1</Cooldown>
-		<InvUse/>
-		<ReUse/>
-		<Soulbound/>
-		<ContainerType>Artifact</ContainerType>
-	</Object>
-	<Object type="0x5598" id="Vampiric Pet">
-		<Class>Character</Class>
-		<Ally/>
-		<Pet/>
-		<AnimatedTexture>
-			<File>Pets16x16</File>
-			<Index>11</Index>
-		</AnimatedTexture>
-		<NoMiniMap/>
-		<Size>50</Size>
-		<ShadowSize>0</ShadowSize>
-	</Object>
-	<Object type="0x5599" id="Scaly Pet Stone">
-		<Class>Equipment</Class>
-		<Item/>
-		<Texture>
-			<File>Utilities_PetStones8x8</File>
-			<Index>0x0c</Index>
-		</Texture>
-		<SlotType>10</SlotType>
-		<TierType>Artifact</TierType>
-		<Description>Spawns a Scaly Pet.</Description>
-		<Sound>spell/fire_nova</Sound>
-		<ExtraTooltipData>
-			<EffectInfo name="Use this pet stone again to disable your pet." description=""/>
-		</ExtraTooltipData>
-		<Activate petType="0x559a">PetStone</Activate>
-		<Cooldown>1</Cooldown>
-		<InvUse/>
-		<ReUse/>
-		<Soulbound/>
-		<ContainerType>Artifact</ContainerType>
-	</Object>
-	<Object type="0x559a" id="Scaly Pet">
-		<Class>Character</Class>
-		<Ally/>
-		<Pet/>
-		<AnimatedTexture>
-			<File>Pets16x16</File>
-			<Index>12</Index>
-		</AnimatedTexture>
-		<NoMiniMap/>
-		<Size>50</Size>
-		<ShadowSize>0</ShadowSize>
-	</Object>
-	<Object type="0x559b" id="Succubus Pet Stone">
-		<Class>Equipment</Class>
-		<Item/>
-		<Texture>
-			<File>Utilities_PetStones8x8</File>
-			<Index>0x0d</Index>
-		</Texture>
-		<SlotType>10</SlotType>
-		<TierType>Artifact</TierType>
-		<Description>Spawns a Succubus Pet.</Description>
-		<Sound>spell/fire_nova</Sound>
-		<ExtraTooltipData>
-			<EffectInfo name="Use this pet stone again to disable your pet." description=""/>
-		</ExtraTooltipData>
-		<Activate petType="0x559c">PetStone</Activate>
-		<Cooldown>1</Cooldown>
-		<InvUse/>
-		<ReUse/>
-		<Soulbound/>
-		<ContainerType>Artifact</ContainerType>
-	</Object>
-	<Object type="0x559c" id="Succubus Pet">
-		<Class>Character</Class>
-		<Ally/>
-		<Pet/>
-		<AnimatedTexture>
-			<File>Pets16x16</File>
-			<Index>13</Index>
-		</AnimatedTexture>
-		<NoMiniMap/>
-		<Size>50</Size>
-		<ShadowSize>0</ShadowSize>
-	</Object>
-	<Object type="0x559d" id="Ghostly Pet Stone">
-		<Class>Equipment</Class>
-		<Item/>
-		<Texture>
-			<File>Utilities_PetStones8x8</File>
-			<Index>0x0e</Index>
-		</Texture>
-		<SlotType>10</SlotType>
-		<TierType>Artifact</TierType>
-		<Description>Spawns a Ghostly Pet.</Description>
-		<Sound>spell/fire_nova</Sound>
-		<ExtraTooltipData>
-			<EffectInfo name="Use this pet stone again to disable your pet." description=""/>
-		</ExtraTooltipData>
-		<Activate petType="0x559e">PetStone</Activate>
-		<Cooldown>1</Cooldown>
-		<InvUse/>
-		<ReUse/>
-		<Soulbound/>
-		<ContainerType>Artifact</ContainerType>
-	</Object>
-	<Object type="0x559e" id="Ghostly Pet">
-		<Class>Character</Class>
-		<Ally/>
-		<Pet/>
-		<AnimatedTexture>
-			<File>Pets16x16</File>
-			<Index>14</Index>
-		</AnimatedTexture>
-		<NoMiniMap/>
-		<Size>50</Size>
-		<ShadowSize>0</ShadowSize>
-	</Object>
-	<Object type="0x559f" id="Soaring Pet Stone">
-		<Class>Equipment</Class>
-		<Item/>
-		<Texture>
-			<File>Utilities_PetStones8x8</File>
-			<Index>0x0f</Index>
-		</Texture>
-		<SlotType>10</SlotType>
-		<TierType>Artifact</TierType>
-		<Description>Spawns a Soaring Pet.</Description>
-		<Sound>spell/fire_nova</Sound>
-		<ExtraTooltipData>
-			<EffectInfo name="Use this pet stone again to disable your pet." description=""/>
-		</ExtraTooltipData>
-		<Activate petType="0x5600">PetStone</Activate>
-		<Cooldown>1</Cooldown>
-		<InvUse/>
-		<ReUse/>
-		<Soulbound/>
-		<ContainerType>Artifact</ContainerType>
-	</Object>
-	<Object type="0x5600" id="Soaring Pet">
-		<Class>Character</Class>
-		<Ally/>
-		<Pet/>
-		<AnimatedTexture>
-			<File>Pets16x16</File>
-			<Index>15</Index>
-		</AnimatedTexture>
-		<NoMiniMap/>
-		<Size>50</Size>
-		<ShadowSize>0</ShadowSize>
-	</Object>
-	<Object type="0x5601" id="Joker Pet Stone">
-		<Class>Equipment</Class>
-		<Item/>
-		<Texture>
-			<File>Utilities_PetStones8x8</File>
-			<Index>0x10</Index>
-		</Texture>
-		<SlotType>10</SlotType>
-		<TierType>Artifact</TierType>
-		<Description>Spawns a Joker Pet.</Description>
-		<Sound>spell/fire_nova</Sound>
-		<ExtraTooltipData>
-			<EffectInfo name="Use this pet stone again to disable your pet." description=""/>
-		</ExtraTooltipData>
-		<Activate petType="0x5602">PetStone</Activate>
-		<Cooldown>1</Cooldown>
-		<InvUse/>
-		<ReUse/>
-		<Soulbound/>
-		<ContainerType>Artifact</ContainerType>
-	</Object>
-	<Object type="0x5602" id="Joker Pet">
-		<Class>Character</Class>
-		<Ally/>
-		<Pet/>
-		<AnimatedTexture>
-			<File>Pets16x16</File>
-			<Index>16</Index>
-		</AnimatedTexture>
-		<NoMiniMap/>
-		<Size>50</Size>
-		<ShadowSize>0</ShadowSize>
-	</Object>
-	<Object type="0x5603" id="Hellish Pet Stone">
-		<Class>Equipment</Class>
-		<Item/>
-		<Texture>
-			<File>Utilities_PetStones8x8</File>
-			<Index>0x11</Index>
-		</Texture>
-		<SlotType>10</SlotType>
-		<TierType>Artifact</TierType>
-		<Description>Spawns a Hellish Pet.</Description>
-		<Sound>spell/fire_nova</Sound>
-		<ExtraTooltipData>
-			<EffectInfo name="Use this pet stone again to disable your pet." description=""/>
-		</ExtraTooltipData>
-		<Activate petType="0x5604">PetStone</Activate>
-		<Cooldown>1</Cooldown>
-		<InvUse/>
-		<ReUse/>
-		<Soulbound/>
-		<ContainerType>Artifact</ContainerType>
-	</Object>
-	<Object type="0x5604" id="Hellish Pet">
-		<Class>Character</Class>
-		<Ally/>
-		<Pet/>
-		<AnimatedTexture>
-			<File>Pets16x16</File>
-			<Index>17</Index>
-		</AnimatedTexture>
-		<NoMiniMap/>
-		<Size>50</Size>
-		<ShadowSize>0</ShadowSize>
-	</Object>
-	<Object type="0x5605" id="Oceanic Pet Stone">
-		<Class>Equipment</Class>
-		<Item/>
-		<Texture>
-			<File>Utilities_PetStones8x8</File>
-			<Index>0x12</Index>
-		</Texture>
-		<SlotType>10</SlotType>
-		<TierType>Artifact</TierType>
-		<Description>Spawns a Oceanic Pet.</Description>
-		<Sound>spell/fire_nova</Sound>
-		<ExtraTooltipData>
-			<EffectInfo name="Use this pet stone again to disable your pet." description=""/>
-		</ExtraTooltipData>
-		<Activate petType="0x5606">PetStone</Activate>
-		<Cooldown>1</Cooldown>
-		<InvUse/>
-		<ReUse/>
-		<Soulbound/>
-		<ContainerType>Artifact</ContainerType>
-	</Object>
-	<Object type="0x5606" id="Oceanic Pet">
-		<Class>Character</Class>
-		<Ally/>
-		<Pet/>
-		<AnimatedTexture>
-			<File>Pets16x16</File>
-			<Index>18</Index>
-		</AnimatedTexture>
-		<NoMiniMap/>
-		<Size>50</Size>
-		<ShadowSize>0</ShadowSize>
-	</Object>
-	<Object type="0xF100" id="Test Transmog Stone">
-		<Class>Equipment</Class>
-		<Item/>
-		<Texture>
-			<File>Utilities_PetStones8x8</File>
-			<Index>0x12</Index>
-		</Texture>
-		<SlotType>10</SlotType>
-		<TierType>Artifact</TierType>
-		<Description>Changes an items sprite.</Description>
-		<Sound>spell/fire_nova</Sound>
-		<TransmogData id="0x0001" slot="1" />
-		<Soulbound/>
-		<ContainerType>Artifact</ContainerType>
-	</Object>
-	<Object type="0xF101" id="Test Transmog Stone 1">
-		<Class>Equipment</Class>
-		<Item/>
-		<Texture>
-			<File>Utilities_PetStones8x8</File>
-			<Index>0x12</Index>
-		</Texture>
-		<SlotType>10</SlotType>
-		<TierType>Artifact</TierType>
-		<Description>Changes an items sprite.</Description>
-		<Sound>spell/fire_nova</Sound>
-		<TransmogData id="0x0002" slot="1" tier="Valiant" />
-		<Soulbound/>
-		<ContainerType>Artifact</ContainerType>
-	</Object>
-	<Object type="0xF102" id="Test Transmog Stone 2">
-		<Class>Equipment</Class>
-		<Item/>
-		<Texture>
-			<File>Utilities_PetStones8x8</File>
-			<Index>0x12</Index>
-		</Texture>
-		<SlotType>10</SlotType>
-		<TierType>Artifact</TierType>
-		<Description>Changes an items sprite.</Description>
-		<Sound>spell/fire_nova</Sound>
-		<TransmogData id="0x0002" type="0x42f4" />
-		<Soulbound/>
-		<ContainerType>Artifact</ContainerType>
-	</Object>
+    <Object type="0x5566" id="Marble Pet Stone">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>Utilities_PetStones8x8</File>
+            <Index>0x00</Index>
+        </Texture>
+        <SlotType>10</SlotType>
+        <TierType>Artifact</TierType>
+        <Description>Spawns a Marble Colossus Pet.</Description>
+        <Sound>spell/fire_nova</Sound>
+        <ExtraTooltipData>
+            <EffectInfo name="Use this pet stone again to disable your pet." description=""/>
+        </ExtraTooltipData>
+        <Activate petType="0x5567">PetStone</Activate>
+        <Cooldown>1</Cooldown>
+        <InvUse/>
+        <ReUse/>
+        <Soulbound/>
+        <ContainerType>Artifact</ContainerType>
+    </Object>
+    <Object type="0x5567" id="MBC Pet">
+        <Class>Character</Class>
+        <Ally/>
+        <Pet/>
+        <AnimatedTexture>
+            <File>Pets16x16</File>
+            <Index>0</Index>
+        </AnimatedTexture>
+        <NoMiniMap/>
+        <Size>50</Size>
+        <ShadowSize>0</ShadowSize>
+    </Object>
+    <Object type="0x5585" id="Void Pet Stone">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>Utilities_PetStones8x8</File>
+            <Index>0x01</Index>
+        </Texture>
+        <SlotType>10</SlotType>
+        <TierType>Artifact</TierType>
+        <Description>Spawns a Void Pet.</Description>
+        <Sound>spell/fire_nova</Sound>
+        <ExtraTooltipData>
+            <EffectInfo name="Use this pet stone again to disable your pet." description=""/>
+        </ExtraTooltipData>
+        <Activate petType="0x5586">PetStone</Activate>
+        <Cooldown>1</Cooldown>
+        <InvUse/>
+        <ReUse/>
+        <Soulbound/>
+        <ContainerType>Artifact</ContainerType>
+    </Object>
+    <Object type="0x5586" id="Void Pet">
+        <Class>Character</Class>
+        <Ally/>
+        <Pet/>
+        <AnimatedTexture>
+            <File>Pets16x16</File>
+            <Index>1</Index>
+        </AnimatedTexture>
+        <NoMiniMap/>
+        <Size>50</Size>
+        <ShadowSize>0</ShadowSize>
+    </Object>
+    <Object type="0x5582" id="Girl Pet Stone">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>Utilities_PetStones8x8</File>
+            <Index>0x02</Index>
+        </Texture>
+        <SlotType>10</SlotType>
+        <TierType>Artifact</TierType>
+        <Description>Spawns a Girl Pet.</Description>
+        <Sound>spell/fire_nova</Sound>
+        <ExtraTooltipData>
+            <EffectInfo name="Use this pet stone again to disable your pet." description=""/>
+        </ExtraTooltipData>
+        <Activate petType="0x5583">PetStone</Activate>
+        <Cooldown>1</Cooldown>
+        <InvUse/>
+        <ReUse/>
+        <Soulbound/>
+        <ContainerType>Artifact</ContainerType>
+    </Object>
+    <Object type="0x5583" id="Girl Pet">
+        <Class>Character</Class>
+        <Ally/>
+        <Pet/>
+        <AnimatedTexture>
+            <File>Pets16x16</File>
+            <Index>2</Index>
+        </AnimatedTexture>
+        <NoMiniMap/>
+        <Size>50</Size>
+        <ShadowSize>0</ShadowSize>
+    </Object>
+    <Object type="0x5587" id="Royal Pet Stone">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>Utilities_PetStones8x8</File>
+            <Index>0x03</Index>
+        </Texture>
+        <SlotType>10</SlotType>
+        <TierType>Artifact</TierType>
+        <Description>Spawns a Royal Pet.</Description>
+        <Sound>spell/fire_nova</Sound>
+        <ExtraTooltipData>
+            <EffectInfo name="Use this pet stone again to disable your pet." description=""/>
+        </ExtraTooltipData>
+        <Activate petType="0x5588">PetStone</Activate>
+        <Cooldown>1</Cooldown>
+        <InvUse/>
+        <ReUse/>
+        <Soulbound/>
+        <ContainerType>Artifact</ContainerType>
+    </Object>
+    <Object type="0x5588" id="Royal Pet">
+        <Class>Character</Class>
+        <Ally/>
+        <Pet/>
+        <AnimatedTexture>
+            <File>Pets16x16</File>
+            <Index>3</Index>
+        </AnimatedTexture>
+        <NoMiniMap/>
+        <Size>50</Size>
+        <ShadowSize>0</ShadowSize>
+    </Object>
+    <Object type="0x5589" id="Twilight Pet Stone">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>Utilities_PetStones8x8</File>
+            <Index>0x04</Index>
+        </Texture>
+        <SlotType>10</SlotType>
+        <TierType>Artifact</TierType>
+        <Description>Spawns a Twilight Pet.</Description>
+        <Sound>spell/fire_nova</Sound>
+        <ExtraTooltipData>
+            <EffectInfo name="Use this pet stone again to disable your pet." description=""/>
+        </ExtraTooltipData>
+        <Activate petType="0x558a">PetStone</Activate>
+        <Cooldown>1</Cooldown>
+        <InvUse/>
+        <ReUse/>
+        <Soulbound/>
+        <ContainerType>Artifact</ContainerType>
+    </Object>
+    <Object type="0x558a" id="Twilight Pet">
+        <Class>Character</Class>
+        <Ally/>
+        <Pet/>
+        <AnimatedTexture>
+            <File>Pets16x16</File>
+            <Index>4</Index>
+        </AnimatedTexture>
+        <NoMiniMap/>
+        <Size>50</Size>
+        <ShadowSize>0</ShadowSize>
+    </Object>
+    <Object type="0x558b" id="Sentient Pet Stone">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>Utilities_PetStones8x8</File>
+            <Index>0x05</Index>
+        </Texture>
+        <SlotType>10</SlotType>
+        <TierType>Artifact</TierType>
+        <Description>Spawns a Sentient Pet.</Description>
+        <Sound>spell/fire_nova</Sound>
+        <ExtraTooltipData>
+            <EffectInfo name="Use this pet stone again to disable your pet." description=""/>
+        </ExtraTooltipData>
+        <Activate petType="0x558c">PetStone</Activate>
+        <Cooldown>1</Cooldown>
+        <InvUse/>
+        <ReUse/>
+        <Soulbound/>
+        <ContainerType>Artifact</ContainerType>
+    </Object>
+    <Object type="0x558c" id="Sentient Pet">
+        <Class>Character</Class>
+        <Ally/>
+        <Pet/>
+        <AnimatedTexture>
+            <File>Pets16x16</File>
+            <Index>5</Index>
+        </AnimatedTexture>
+        <NoMiniMap/>
+        <Size>50</Size>
+        <ShadowSize>0</ShadowSize>
+    </Object>
+    <Object type="0x558d" id="Wishing Pet Stone">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>Utilities_PetStones8x8</File>
+            <Index>0x06</Index>
+        </Texture>
+        <SlotType>10</SlotType>
+        <TierType>Artifact</TierType>
+        <Description>Spawns a Wishing Pet.</Description>
+        <Sound>spell/fire_nova</Sound>
+        <ExtraTooltipData>
+            <EffectInfo name="Use this pet stone again to disable your pet." description=""/>
+        </ExtraTooltipData>
+        <Activate petType="0x558e">PetStone</Activate>
+        <Cooldown>1</Cooldown>
+        <InvUse/>
+        <ReUse/>
+        <Soulbound/>
+        <ContainerType>Artifact</ContainerType>
+    </Object>
+    <Object type="0x558e" id="Wishing Pet">
+        <Class>Character</Class>
+        <Ally/>
+        <Pet/>
+        <AnimatedTexture>
+            <File>Pets16x16</File>
+            <Index>6</Index>
+        </AnimatedTexture>
+        <NoMiniMap/>
+        <Size>50</Size>
+        <ShadowSize>0</ShadowSize>
+    </Object>
+    <Object type="0x558f" id="Mechanical Pet Stone">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>Utilities_PetStones8x8</File>
+            <Index>0x07</Index>
+        </Texture>
+        <SlotType>10</SlotType>
+        <TierType>Artifact</TierType>
+        <Description>Spawns a Mechanical Pet.</Description>
+        <Sound>spell/fire_nova</Sound>
+        <ExtraTooltipData>
+            <EffectInfo name="Use this pet stone again to disable your pet." description=""/>
+        </ExtraTooltipData>
+        <Activate petType="0x5590">PetStone</Activate>
+        <Cooldown>1</Cooldown>
+        <InvUse/>
+        <ReUse/>
+        <Soulbound/>
+        <ContainerType>Artifact</ContainerType>
+    </Object>
+    <Object type="0x5590" id="Mechanical Pet">
+        <Class>Character</Class>
+        <Ally/>
+        <Pet/>
+        <AnimatedTexture>
+            <File>Pets16x16</File>
+            <Index>7</Index>
+        </AnimatedTexture>
+        <NoMiniMap/>
+        <Size>50</Size>
+        <ShadowSize>0</ShadowSize>
+    </Object>
+    <Object type="0x5591" id="All-Seeing Pet Stone">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>Utilities_PetStones8x8</File>
+            <Index>0x08</Index>
+        </Texture>
+        <SlotType>10</SlotType>
+        <TierType>Artifact</TierType>
+        <Description>Spawns a All-Seeing Pet.</Description>
+        <Sound>spell/fire_nova</Sound>
+        <ExtraTooltipData>
+            <EffectInfo name="Use this pet stone again to disable your pet." description=""/>
+        </ExtraTooltipData>
+        <Activate petType="0x5592">PetStone</Activate>
+        <Cooldown>1</Cooldown>
+        <InvUse/>
+        <ReUse/>
+        <Soulbound/>
+        <ContainerType>Artifact</ContainerType>
+    </Object>
+    <Object type="0x5592" id="All-Seeing Pet">
+        <Class>Character</Class>
+        <Ally/>
+        <Pet/>
+        <AnimatedTexture>
+            <File>Pets16x16</File>
+            <Index>8</Index>
+        </AnimatedTexture>
+        <NoMiniMap/>
+        <Size>50</Size>
+        <ShadowSize>0</ShadowSize>
+    </Object>
+    <Object type="0x5593" id="Sprite Pet Stone">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>Utilities_PetStones8x8</File>
+            <Index>0x09</Index>
+        </Texture>
+        <SlotType>10</SlotType>
+        <TierType>Artifact</TierType>
+        <Description>Spawns a Sprite Pet.</Description>
+        <Sound>spell/fire_nova</Sound>
+        <ExtraTooltipData>
+            <EffectInfo name="Use this pet stone again to disable your pet." description=""/>
+        </ExtraTooltipData>
+        <Activate petType="0x5594">PetStone</Activate>
+        <Cooldown>1</Cooldown>
+        <InvUse/>
+        <ReUse/>
+        <Soulbound/>
+        <ContainerType>Artifact</ContainerType>
+    </Object>
+    <Object type="0x5594" id="Sprite Pet">
+        <Class>Character</Class>
+        <Ally/>
+        <Pet/>
+        <AnimatedTexture>
+            <File>Pets16x16</File>
+            <Index>9</Index>
+        </AnimatedTexture>
+        <NoMiniMap/>
+        <Size>50</Size>
+        <ShadowSize>0</ShadowSize>
+    </Object>
+    <Object type="0x5595" id="Exotic Pet Stone">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>Utilities_PetStones8x8</File>
+            <Index>0x0a</Index>
+        </Texture>
+        <SlotType>10</SlotType>
+        <TierType>Artifact</TierType>
+        <Description>Spawns a Exotic Pet.</Description>
+        <Sound>spell/fire_nova</Sound>
+        <ExtraTooltipData>
+            <EffectInfo name="Use this pet stone again to disable your pet." description=""/>
+        </ExtraTooltipData>
+        <Activate petType="0x5596">PetStone</Activate>
+        <Cooldown>1</Cooldown>
+        <InvUse/>
+        <ReUse/>
+        <Soulbound/>
+        <ContainerType>Artifact</ContainerType>
+    </Object>
+    <Object type="0x5596" id="Exotic Pet">
+        <Class>Character</Class>
+        <Ally/>
+        <Pet/>
+        <AnimatedTexture>
+            <File>Pets16x16</File>
+            <Index>10</Index>
+        </AnimatedTexture>
+        <NoMiniMap/>
+        <Size>50</Size>
+        <ShadowSize>0</ShadowSize>
+    </Object>
+    <Object type="0x5597" id="Vampiric Pet Stone">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>Utilities_PetStones8x8</File>
+            <Index>0x0b</Index>
+        </Texture>
+        <SlotType>10</SlotType>
+        <TierType>Artifact</TierType>
+        <Description>Spawns a Vampiric Pet.</Description>
+        <Sound>spell/fire_nova</Sound>
+        <ExtraTooltipData>
+            <EffectInfo name="Use this pet stone again to disable your pet." description=""/>
+        </ExtraTooltipData>
+        <Activate petType="0x5598">PetStone</Activate>
+        <Cooldown>1</Cooldown>
+        <InvUse/>
+        <ReUse/>
+        <Soulbound/>
+        <ContainerType>Artifact</ContainerType>
+    </Object>
+    <Object type="0x5598" id="Vampiric Pet">
+        <Class>Character</Class>
+        <Ally/>
+        <Pet/>
+        <AnimatedTexture>
+            <File>Pets16x16</File>
+            <Index>11</Index>
+        </AnimatedTexture>
+        <NoMiniMap/>
+        <Size>50</Size>
+        <ShadowSize>0</ShadowSize>
+    </Object>
+    <Object type="0x5599" id="Scaly Pet Stone">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>Utilities_PetStones8x8</File>
+            <Index>0x0c</Index>
+        </Texture>
+        <SlotType>10</SlotType>
+        <TierType>Artifact</TierType>
+        <Description>Spawns a Scaly Pet.</Description>
+        <Sound>spell/fire_nova</Sound>
+        <ExtraTooltipData>
+            <EffectInfo name="Use this pet stone again to disable your pet." description=""/>
+        </ExtraTooltipData>
+        <Activate petType="0x559a">PetStone</Activate>
+        <Cooldown>1</Cooldown>
+        <InvUse/>
+        <ReUse/>
+        <Soulbound/>
+        <ContainerType>Artifact</ContainerType>
+    </Object>
+    <Object type="0x559a" id="Scaly Pet">
+        <Class>Character</Class>
+        <Ally/>
+        <Pet/>
+        <AnimatedTexture>
+            <File>Pets16x16</File>
+            <Index>12</Index>
+        </AnimatedTexture>
+        <NoMiniMap/>
+        <Size>50</Size>
+        <ShadowSize>0</ShadowSize>
+    </Object>
+    <Object type="0x559b" id="Succubus Pet Stone">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>Utilities_PetStones8x8</File>
+            <Index>0x0d</Index>
+        </Texture>
+        <SlotType>10</SlotType>
+        <TierType>Artifact</TierType>
+        <Description>Spawns a Succubus Pet.</Description>
+        <Sound>spell/fire_nova</Sound>
+        <ExtraTooltipData>
+            <EffectInfo name="Use this pet stone again to disable your pet." description=""/>
+        </ExtraTooltipData>
+        <Activate petType="0x559c">PetStone</Activate>
+        <Cooldown>1</Cooldown>
+        <InvUse/>
+        <ReUse/>
+        <Soulbound/>
+        <ContainerType>Artifact</ContainerType>
+    </Object>
+    <Object type="0x559c" id="Succubus Pet">
+        <Class>Character</Class>
+        <Ally/>
+        <Pet/>
+        <AnimatedTexture>
+            <File>Pets16x16</File>
+            <Index>13</Index>
+        </AnimatedTexture>
+        <NoMiniMap/>
+        <Size>50</Size>
+        <ShadowSize>0</ShadowSize>
+    </Object>
+    <Object type="0x559d" id="Ghostly Pet Stone">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>Utilities_PetStones8x8</File>
+            <Index>0x0e</Index>
+        </Texture>
+        <SlotType>10</SlotType>
+        <TierType>Artifact</TierType>
+        <Description>Spawns a Ghostly Pet.</Description>
+        <Sound>spell/fire_nova</Sound>
+        <ExtraTooltipData>
+            <EffectInfo name="Use this pet stone again to disable your pet." description=""/>
+        </ExtraTooltipData>
+        <Activate petType="0x559e">PetStone</Activate>
+        <Cooldown>1</Cooldown>
+        <InvUse/>
+        <ReUse/>
+        <Soulbound/>
+        <ContainerType>Artifact</ContainerType>
+    </Object>
+    <Object type="0x559e" id="Ghostly Pet">
+        <Class>Character</Class>
+        <Ally/>
+        <Pet/>
+        <AnimatedTexture>
+            <File>Pets16x16</File>
+            <Index>14</Index>
+        </AnimatedTexture>
+        <NoMiniMap/>
+        <Size>50</Size>
+        <ShadowSize>0</ShadowSize>
+    </Object>
+    <Object type="0x559f" id="Soaring Pet Stone">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>Utilities_PetStones8x8</File>
+            <Index>0x0f</Index>
+        </Texture>
+        <SlotType>10</SlotType>
+        <TierType>Artifact</TierType>
+        <Description>Spawns a Soaring Pet.</Description>
+        <Sound>spell/fire_nova</Sound>
+        <ExtraTooltipData>
+            <EffectInfo name="Use this pet stone again to disable your pet." description=""/>
+        </ExtraTooltipData>
+        <Activate petType="0x5600">PetStone</Activate>
+        <Cooldown>1</Cooldown>
+        <InvUse/>
+        <ReUse/>
+        <Soulbound/>
+        <ContainerType>Artifact</ContainerType>
+    </Object>
+    <Object type="0x5600" id="Soaring Pet">
+        <Class>Character</Class>
+        <Ally/>
+        <Pet/>
+        <AnimatedTexture>
+            <File>Pets16x16</File>
+            <Index>15</Index>
+        </AnimatedTexture>
+        <NoMiniMap/>
+        <Size>50</Size>
+        <ShadowSize>0</ShadowSize>
+    </Object>
+    <Object type="0x5601" id="Joker Pet Stone">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>Utilities_PetStones8x8</File>
+            <Index>0x10</Index>
+        </Texture>
+        <SlotType>10</SlotType>
+        <TierType>Artifact</TierType>
+        <Description>Spawns a Joker Pet.</Description>
+        <Sound>spell/fire_nova</Sound>
+        <ExtraTooltipData>
+            <EffectInfo name="Use this pet stone again to disable your pet." description=""/>
+        </ExtraTooltipData>
+        <Activate petType="0x5602">PetStone</Activate>
+        <Cooldown>1</Cooldown>
+        <InvUse/>
+        <ReUse/>
+        <Soulbound/>
+        <ContainerType>Artifact</ContainerType>
+    </Object>
+    <Object type="0x5602" id="Joker Pet">
+        <Class>Character</Class>
+        <Ally/>
+        <Pet/>
+        <AnimatedTexture>
+            <File>Pets16x16</File>
+            <Index>16</Index>
+        </AnimatedTexture>
+        <NoMiniMap/>
+        <Size>50</Size>
+        <ShadowSize>0</ShadowSize>
+    </Object>
+    <Object type="0x5603" id="Hellish Pet Stone">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>Utilities_PetStones8x8</File>
+            <Index>0x11</Index>
+        </Texture>
+        <SlotType>10</SlotType>
+        <TierType>Artifact</TierType>
+        <Description>Spawns a Hellish Pet.</Description>
+        <Sound>spell/fire_nova</Sound>
+        <ExtraTooltipData>
+            <EffectInfo name="Use this pet stone again to disable your pet." description=""/>
+        </ExtraTooltipData>
+        <Activate petType="0x5604">PetStone</Activate>
+        <Cooldown>1</Cooldown>
+        <InvUse/>
+        <ReUse/>
+        <Soulbound/>
+        <ContainerType>Artifact</ContainerType>
+    </Object>
+    <Object type="0x5604" id="Hellish Pet">
+        <Class>Character</Class>
+        <Ally/>
+        <Pet/>
+        <AnimatedTexture>
+            <File>Pets16x16</File>
+            <Index>17</Index>
+        </AnimatedTexture>
+        <NoMiniMap/>
+        <Size>50</Size>
+        <ShadowSize>0</ShadowSize>
+    </Object>
+    <Object type="0x5605" id="Oceanic Pet Stone">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>Utilities_PetStones8x8</File>
+            <Index>0x12</Index>
+        </Texture>
+        <SlotType>10</SlotType>
+        <TierType>Artifact</TierType>
+        <Description>Spawns a Oceanic Pet.</Description>
+        <Sound>spell/fire_nova</Sound>
+        <ExtraTooltipData>
+            <EffectInfo name="Use this pet stone again to disable your pet." description=""/>
+        </ExtraTooltipData>
+        <Activate petType="0x5606">PetStone</Activate>
+        <Cooldown>1</Cooldown>
+        <InvUse/>
+        <ReUse/>
+        <Soulbound/>
+        <ContainerType>Artifact</ContainerType>
+    </Object>
+    <Object type="0x5606" id="Oceanic Pet">
+        <Class>Character</Class>
+        <Ally/>
+        <Pet/>
+        <AnimatedTexture>
+            <File>Pets16x16</File>
+            <Index>18</Index>
+        </AnimatedTexture>
+        <NoMiniMap/>
+        <Size>50</Size>
+        <ShadowSize>0</ShadowSize>
+    </Object>
+    <Object type="0xF100" id="Test Transmog Stone">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>Utilities_PetStones8x8</File>
+            <Index>0x12</Index>
+        </Texture>
+        <SlotType>10</SlotType>
+        <TierType>Artifact</TierType>
+        <Description>Changes an items sprite.</Description>
+        <Sound>spell/fire_nova</Sound>
+        <TransmogData id="0x0001" slot="1"/>
+        <Soulbound/>
+        <ContainerType>Artifact</ContainerType>
+    </Object>
+    <Object type="0xF101" id="Test Transmog Stone 1">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>Utilities_PetStones8x8</File>
+            <Index>0x12</Index>
+        </Texture>
+        <SlotType>10</SlotType>
+        <TierType>Artifact</TierType>
+        <Description>Changes an items sprite.</Description>
+        <Sound>spell/fire_nova</Sound>
+        <TransmogData id="0x0002" slot="1" tier="Valiant"/>
+        <Soulbound/>
+        <ContainerType>Artifact</ContainerType>
+    </Object>
+    <Object type="0xF102" id="Test Transmog Stone 2">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>Utilities_PetStones8x8</File>
+            <Index>0x12</Index>
+        </Texture>
+        <SlotType>10</SlotType>
+        <TierType>Artifact</TierType>
+        <Description>Changes an items sprite.</Description>
+        <Sound>spell/fire_nova</Sound>
+        <TransmogData id="0x0002" type="0x42f4"/>
+        <Soulbound/>
+        <ContainerType>Artifact</ContainerType>
+    </Object>
 </Objects>

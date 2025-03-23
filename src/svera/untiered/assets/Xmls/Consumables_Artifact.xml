@@ -1,35 +1,37 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Objects>
-	<Object type="0x7190" id="Restoral Essence">
-		<Class>Equipment</Class>
-		<Item/>
-		<Texture>
-			<File>Crafting_Ingredients8x8</File>
-			<Index>0x04</Index>
-		</Texture>
-		<SlotType>37</SlotType>
-		<Description>This essence holds the power to restore Tarnished items to their true form.</Description>
-		<ExtraTooltipData>
-			<EffectInfo name="" description="Fusing this item transcends ancient artifacts to their former glory."/>
-		</ExtraTooltipData>
-		<Sound>use_potion</Sound>
-		<TierType>Artifact</TierType>
-		<ContainerType>Artifact</ContainerType>
-	</Object>
-	<Object type="0x7200" id="Soul of Decay">
-		<Class>Equipment</Class>
-		<Item/>
-		<Texture>
-			<File>Crafting_Ingredients8x8</File>
-			<Index>0x03</Index>
-		</Texture>
-		<SlotType>37</SlotType>
-		<Description>A soul so powerful it deconstructs the Artifact back to nothing but the Tarnished remains it once was.</Description>
-		<ExtraTooltipData>
-			<EffectInfo name="" description="Fusing this item brings back Artifact items to their original form."/>
-		</ExtraTooltipData>
-		<Sound>use_potion</Sound>
-		<TierType>Artifact</TierType>
-		<ContainerType>Artifact</ContainerType>
-	</Object>
+    <Object type="0x7190" id="Restoral Essence">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>Crafting_Ingredients8x8</File>
+            <Index>0x04</Index>
+        </Texture>
+        <SlotType>37</SlotType>
+        <Description>This essence holds the power to restore Tarnished items to their true form.</Description>
+        <ExtraTooltipData>
+            <EffectInfo name="" description="Fusing this item transcends ancient artifacts to their former glory."/>
+        </ExtraTooltipData>
+        <Sound>use_potion</Sound>
+        <TierType>Artifact</TierType>
+        <ContainerType>Artifact</ContainerType>
+    </Object>
+    <Object type="0x7200" id="Soul of Decay">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>Crafting_Ingredients8x8</File>
+            <Index>0x03</Index>
+        </Texture>
+        <SlotType>37</SlotType>
+        <Description>A soul so powerful it deconstructs the Artifact back to nothing but the Tarnished remains it once
+            was.
+        </Description>
+        <ExtraTooltipData>
+            <EffectInfo name="" description="Fusing this item brings back Artifact items to their original form."/>
+        </ExtraTooltipData>
+        <Sound>use_potion</Sound>
+        <TierType>Artifact</TierType>
+        <ContainerType>Artifact</ContainerType>
+    </Object>
 </Objects>

@@ -1,50 +1,53 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Objects>
-	<Object type="0x7916" id="Luck of the Roll">
-		<Class>Equipment</Class>
-		<Item/>
-		<Texture>
-			<File>Crafting_Ingredients8x8</File>
-			<Index>0x02</Index>
-		</Texture>
-		<SlotType>37</SlotType>
-		<TierType>Valiant</TierType>
-		<Description>Roll the dice and writhe in pain.</Description>
-		<ExtraTooltipData>
-			<EffectInfo name="" description="In you forge you can fuse this item with a Valiant or Artifact to reroll the item based on their tier."/>
-		</ExtraTooltipData>
-		<Sound>use_potion</Sound>
-	</Object>
-	<Object type="0x7917" id="Capsule Extractor">
-		<Class>Equipment</Class>
-		<Item/>
-		<Texture>
-			<File>Crafting_Ingredients8x8</File>
-			<Index>0x01</Index>
-		</Texture>
-		<SlotType>37</SlotType>
-		<TierType>Valiant</TierType>
-		<Description>A Powerful essence made of unknown materials, this item is used to extract Valiant equipment out of capsules.</Description>
-		<ExtraTooltipData>
-			<EffectInfo name="" description="Used to extract valiant items from a valiant capsule."/>
-		</ExtraTooltipData>
-		<Sound>use_potion</Sound>
-		<ContainerType>Valiant</ContainerType>
-	</Object>
-	<Object type="0x53aa" id="Master Eon">
-		<Class>Equipment</Class>
-		<Item/>
-		<Texture>
-			<File>Consumables_Maxing8x8</File>
-			<Index>0x30</Index>
-		</Texture>
-		<SlotType>38</SlotType>
-		<TierType>Valiant</TierType>
-		<Description>The original Eon has returned. Maxes all stats.</Description>
-		<Sound>use_potion</Sound>
-		<Activate>EonActivate</Activate>
-		<InvUse/>
-		<Potion/>
-		<ContainerType>Valiant</ContainerType>
-	</Object>
+    <Object type="0x7916" id="Luck of the Roll">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>Crafting_Ingredients8x8</File>
+            <Index>0x02</Index>
+        </Texture>
+        <SlotType>37</SlotType>
+        <TierType>Valiant</TierType>
+        <Description>Roll the dice and writhe in pain.</Description>
+        <ExtraTooltipData>
+            <EffectInfo name=""
+                        description="In you forge you can fuse this item with a Valiant or Artifact to reroll the item based on their tier."/>
+        </ExtraTooltipData>
+        <Sound>use_potion</Sound>
+    </Object>
+    <Object type="0x7917" id="Capsule Extractor">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>Crafting_Ingredients8x8</File>
+            <Index>0x01</Index>
+        </Texture>
+        <SlotType>37</SlotType>
+        <TierType>Valiant</TierType>
+        <Description>A Powerful essence made of unknown materials, this item is used to extract Valiant equipment out of
+            capsules.
+        </Description>
+        <ExtraTooltipData>
+            <EffectInfo name="" description="Used to extract valiant items from a valiant capsule."/>
+        </ExtraTooltipData>
+        <Sound>use_potion</Sound>
+        <ContainerType>Valiant</ContainerType>
+    </Object>
+    <Object type="0x53aa" id="Master Eon">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>Consumables_Maxing8x8</File>
+            <Index>0x30</Index>
+        </Texture>
+        <SlotType>38</SlotType>
+        <TierType>Valiant</TierType>
+        <Description>The original Eon has returned. Maxes all stats.</Description>
+        <Sound>use_potion</Sound>
+        <Activate>EonActivate</Activate>
+        <InvUse/>
+        <Potion/>
+        <ContainerType>Valiant</ContainerType>
+    </Object>
 </Objects>

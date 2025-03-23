@@ -161,9 +161,9 @@ public class AssetLoader {
         AnimatedChars.add("players", new EmbeddedAssets.Players().bitmapData, new EmbeddedAssets.playersMask().bitmapData, 16, 16, 112, 48, AnimatedChar.RIGHT);
         AnimatedChars.add("playerskins", new EmbeddedAssets.playersSkins().bitmapData, new EmbeddedAssets.playersSkinsMask().bitmapData, 8, 8, 56, 24, AnimatedChar.RIGHT);
         AnimatedChars.add("Pets16x16", new EmbeddedAssets.Pets16x16().bitmapData, null, 16, 16, 112, 16, AnimatedChar.DOWN);
-        AnimatedChars.add("ValiantAbilityCharacters", new EmbeddedAssets.ValiantAbilityCharacters().bitmapData, null,8, 8, 56, 8, AnimatedChar.RIGHT);
-        AnimatedChars.add("ArtifactAbilityCharacters8x8", new EmbeddedAssets.ArtifactAbilityCharacters8x8().bitmapData, null,8, 8, 56, 8, AnimatedChar.RIGHT);
-        AnimatedChars.add("ArtifactAbilityCharacters16x16", new EmbeddedAssets.ArtifactAbilityCharacters16x16().bitmapData, null,16, 16, 112, 16, AnimatedChar.RIGHT);
+        AnimatedChars.add("ValiantAbilityCharacters", new EmbeddedAssets.ValiantAbilityCharacters().bitmapData, null, 8, 8, 56, 8, AnimatedChar.RIGHT);
+        AnimatedChars.add("ArtifactAbilityCharacters8x8", new EmbeddedAssets.ArtifactAbilityCharacters8x8().bitmapData, null, 8, 8, 56, 8, AnimatedChar.RIGHT);
+        AnimatedChars.add("ArtifactAbilityCharacters16x16", new EmbeddedAssets.ArtifactAbilityCharacters16x16().bitmapData, null, 16, 16, 112, 16, AnimatedChar.RIGHT);
     }
 
     private function addSoundEffects():void {

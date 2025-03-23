@@ -1,843 +1,891 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Objects>
-	<Object type="0xae9" id="Potion of Life">
-		<Class>Equipment</Class>
-		<Item/>
-		<Texture>
-			<File>Consumables_Maxing8x8</File>
-			<Index>0x00</Index>
-		</Texture>
-		<SlotType>10</SlotType>
-		<TierType>Stat</TierType>
-		<Description>A potion that permanently increases your Health stat by 5.</Description>
-		<ExtraTooltipData>
-			<EffectInfo name="Combine to quadruple the stat increase" description="Drag two of the same potion on top of eachother to combine!"/>
-		</ExtraTooltipData>
-		<Sound>use_potion</Sound>
-		<Activate stat="0" amount="5">IncrementStat</Activate>
-		<Consumable/>
-		<Potion/>
-		<ContainerType>Stat</ContainerType>
-	</Object>
-	<Object type="0x236E" id="Greater Potion of Life">
-		<Class>Equipment</Class>
-		<Item/>
-		<Texture>
-			<File>Consumables_Maxing8x8</File>
-			<Index>0x01</Index>
-		</Texture>
-		<SlotType>10</SlotType>
-		<TierType>Stat</TierType>
-		<Description>A potion that permanently increases your Health stat by 10.</Description>
-		<ExtraTooltipData>
-			<EffectInfo name="Combine into an eon" description="Drag two of the same potion on top of eachother to combine!"/>
-		</ExtraTooltipData>
-		<Sound>use_potion</Sound>
-		<Activate stat="0" amount="10">IncrementStat</Activate>
-		<Consumable/>
-		<Potion/>
-		<ContainerType>Stat</ContainerType>
-	</Object>
-	<Object type="0x62a5" id="Vial of Life">
-		<Class>Equipment</Class>
-		<Item/>
-		<Texture>
-			<File>Consumables_Maxing8x8</File>
-			<Index>0x02</Index>
-		</Texture>
-		<SlotType>10</SlotType>
-		<TierType>Stat</TierType>
-		<Description>A potion that permanently ascends your maximum health stat by 17.</Description>
-		<Sound>use_potion</Sound>
-		<Activate stat="0" amount="17">PowerStat</Activate>
-		<Consumable/>
-		<Potion/>
-		<ContainerType>Stat</ContainerType>
-	</Object>
-	<Object type="0x45a8" id="Life Eon">
-		<Class>Equipment</Class>
-		<Item/>
-		<Texture>
-			<File>Consumables_Maxing8x8</File>
-			<Index>0x03</Index>
-		</Texture>
-		<SlotType>10</SlotType>
-		<TierType>Stat</TierType>
-		<Description>This relic can be shattered. Once shattered it causes the mortal to have the endurance of the gods, maxing their Health stat.</Description>
-		<Sound>use_potion</Sound>
-		<Activate stat="0" amount="50">PowerStat</Activate>
-		<Consumable/>
-		<Potion/>
-		<ContainerType>Stat</ContainerType>
-	</Object>
-	<Object type="0xaea" id="Potion of Mana">
-		<Class>Equipment</Class>
-		<Item/>
-		<Texture>
-			<File>Consumables_Maxing8x8</File>
-			<Index>0x04</Index>
-		</Texture>
-		<SlotType>10</SlotType>
-		<TierType>Stat</TierType>
-		<Description>A potion that permanently increases your Magic stat by 5.</Description>
-		<ExtraTooltipData>
-			<EffectInfo name="Combine to quadruple the stat increase" description="Drag two of the same potion on top of eachother to combine!"/>
-		</ExtraTooltipData>
-		<Sound>use_potion</Sound>
-		<Activate stat="3" amount="5">IncrementStat</Activate>
-		<Consumable/>
-		<Potion/>
-		<ContainerType>Stat</ContainerType>
-	</Object>
-	<Object type="0x236F" id="Greater Potion of Mana">
-		<Class>Equipment</Class>
-		<Item/>
-		<Texture>
-			<File>Consumables_Maxing8x8</File>
-			<Index>0x05</Index>
-		</Texture>
-		<SlotType>10</SlotType>
-		<TierType>Stat</TierType>
-		<Description>A potion that permanently increases your Magic stat by 10.</Description>
-		<ExtraTooltipData>
-			<EffectInfo name="Combine into an eon" description="Drag two of the same potion on top of eachother to combine!"/>
-		</ExtraTooltipData>
-		<Sound>use_potion</Sound>
-		<Activate stat="3" amount="10">IncrementStat</Activate>
-		<Consumable/>
-		<Potion/>
-		<ContainerType>Stat</ContainerType>
-	</Object>
-	<Object type="0x619c" id="Vial of Mana">
-		<Class>Equipment</Class>
-		<Item/>
-		<Texture>
-			<File>Consumables_Maxing8x8</File>
-			<Index>0x06</Index>
-		</Texture>
-		<SlotType>10</SlotType>
-		<TierType>Stat</TierType>
-		<Description>A potion that permanently ascends your maximum mana stat by 17.</Description>
-		<Sound>use_potion</Sound>
-		<Activate stat="3" amount="17">PowerStat</Activate>
-		<Consumable/>
-		<Potion/>
-		<ContainerType>Stat</ContainerType>
-	</Object>
-	<Object type="0x45a5" id="Mana Eon">
-		<Class>Equipment</Class>
-		<Item/>
-		<Texture>
-			<File>Consumables_Maxing8x8</File>
-			<Index>0x07</Index>
-		</Texture>
-		<SlotType>10</SlotType>
-		<TierType>Stat</TierType>
-		<Description>This relic can be shattered. Once shattered it causes the mortal to have the power of the gods, maxing their Magic stat.</Description>
-		<Sound>use_potion</Sound>
-		<Activate stat="3" amount="50">PowerStat</Activate>
-		<Consumable/>
-		<Potion/>
-		<ContainerType>Stat</ContainerType>
-	</Object>
-	<Object type="0xa1f" id="Potion of Attack">
-		<Class>Equipment</Class>
-		<Item/>
-		<Texture>
-			<File>Consumables_Maxing8x8</File>
-			<Index>0x08</Index>
-		</Texture>
-		<SlotType>10</SlotType>
-		<TierType>Stat</TierType>
-		<Description>A potion that permanently increases your Attack stat by 1.</Description>
-		<ExtraTooltipData>
-			<EffectInfo name="Combine to quadruple the stat increase" description="Drag two of the same potion on top of eachother to combine!"/>
-		</ExtraTooltipData>
-		<Sound>use_potion</Sound>
-		<Activate stat="20" amount="1">IncrementStat</Activate>
-		<Consumable/>
-		<Potion/>
-		<ContainerType>Stat</ContainerType>
-	</Object>
-	<Object type="0x2368" id="Greater Potion of Attack">
-		<Class>Equipment</Class>
-		<Item/>
-		<Texture>
-			<File>Consumables_Maxing8x8</File>
-			<Index>0x09</Index>
-		</Texture>
-		<SlotType>10</SlotType>
-		<TierType>Stat</TierType>
-		<Description>A potion that permanently increases your Attack stat by 4.</Description>
-		<ExtraTooltipData>
-			<EffectInfo name="Combine into an eon" description="Drag two of the same potion on top of eachother to combine!"/>
-		</ExtraTooltipData>
-		<Sound>use_potion</Sound>
-		<Activate stat="20" amount="4">IncrementStat</Activate>
-		<Consumable/>
-		<Potion/>
-		<ContainerType>Stat</ContainerType>
-	</Object>
-	<Object type="0x619f" id="Vial of Attack">
-		<Class>Equipment</Class>
-		<Item/>
-		<Texture>
-			<File>Consumables_Maxing8x8</File>
-			<Index>0x0a</Index>
-		</Texture>
-		<SlotType>10</SlotType>
-		<TierType>Stat</TierType>
-		<Description>A potion that permanently ascends your attack stat by 3.</Description>
-		<Sound>use_potion</Sound>
-		<Activate stat="20" amount="3">PowerStat</Activate>
-		<Consumable/>
-		<Potion/>
-		<ContainerType>Stat</ContainerType>
-	</Object>
-	<Object type="0x45a7" id="Attack Eon">
-		<Class>Equipment</Class>
-		<Item/>
-		<Texture>
-			<File>Consumables_Maxing8x8</File>
-			<Index>0x0b</Index>
-		</Texture>
-		<SlotType>10</SlotType>
-		<TierType>Stat</TierType>
-		<Description>This relic can be shattered. Once shattered it causes the mortal to have the strength of the gods, maxing their Attack stat.</Description>
-		<Sound>use_potion</Sound>
-		<Activate stat="20" amount="10">PowerStat</Activate>
-		<Consumable/>
-		<Potion/>
-		<ContainerType>Stat</ContainerType>
-	</Object>
-	<Object type="0xa20" id="Potion of Defense">
-		<Class>Equipment</Class>
-		<Item/>
-		<Texture>
-			<File>Consumables_Maxing8x8</File>
-			<Index>0x0c</Index>
-		</Texture>
-		<SlotType>10</SlotType>
-		<TierType>Stat</TierType>
-		<Description>A potion that permanently increases your Defense stat by 1.</Description>
-		<ExtraTooltipData>
-			<EffectInfo name="Combine to quadruple the stat increase" description="Drag two of the same potion on top of eachother to combine!"/>
-		</ExtraTooltipData>
-		<Sound>use_potion</Sound>
-		<Activate stat="21" amount="1">IncrementStat</Activate>
-		<Consumable/>
-		<Potion/>
-		<ContainerType>Stat</ContainerType>
-	</Object>
-	<Object type="0x2369" id="Greater Potion of Defense">
-		<Class>Equipment</Class>
-		<Item/>
-		<Texture>
-			<File>Consumables_Maxing8x8</File>
-			<Index>0x0d</Index>
-		</Texture>
-		<SlotType>10</SlotType>
-		<TierType>Stat</TierType>
-		<Description>A potion that permanently increases your Defense stat by 4.</Description>
-		<ExtraTooltipData>
-			<EffectInfo name="Combine into an eon" description="Drag two of the same potion on top of eachother to combine!"/>
-		</ExtraTooltipData>
-		<Sound>use_potion</Sound>
-		<Activate stat="21" amount="4">IncrementStat</Activate>
-		<Consumable/>
-		<Potion/>
-		<ContainerType>Stat</ContainerType>
-	</Object>
-	<Object type="0x62a3" id="Vial of Defense">
-		<Class>Equipment</Class>
-		<Item/>
-		<Texture>
-			<File>Consumables_Maxing8x8</File>
-			<Index>0x0e</Index>
-		</Texture>
-		<SlotType>10</SlotType>
-		<TierType>Stat</TierType>
-		<Description>A potion that permanently ascends your defense stat by 3.</Description>
-		<Sound>use_potion</Sound>
-		<Activate stat="21" amount="3">PowerStat</Activate>
-		<Consumable/>
-		<Potion/>
-		<ContainerType>Stat</ContainerType>
-	</Object>
-	<Object type="0x45a6" id="Defense Eon">
-		<Class>Equipment</Class>
-		<Item/>
-		<Texture>
-			<File>Consumables_Maxing8x8</File>
-			<Index>0x0f</Index>
-		</Texture>
-		<SlotType>10</SlotType>
-		<TierType>Stat</TierType>
-		<Description>This relic can be shattered. Once shattered it causes the mortal to have the fortitude of the gods, maxing their Defense stat.</Description>
-		<Sound>use_potion</Sound>
-		<Activate stat="21" amount="10">PowerStat</Activate>
-		<Consumable/>
-		<Potion/>
-		<ContainerType>Stat</ContainerType>
-	</Object>
-	<Object type="0xa21" id="Potion of Speed">
-		<Class>Equipment</Class>
-		<Item/>
-		<Texture>
-			<File>Consumables_Maxing8x8</File>
-			<Index>0x10</Index>
-		</Texture>
-		<SlotType>10</SlotType>
-		<TierType>Stat</TierType>
-		<Description>A potion that permanently increases your Speed stat by 1.</Description>
-		<ExtraTooltipData>
-			<EffectInfo name="Combine to quadruple the stat increase" description="Drag two of the same potion on top of eachother to combine!"/>
-		</ExtraTooltipData>
-		<Sound>use_potion</Sound>
-		<Activate stat="22" amount="1">IncrementStat</Activate>
-		<Consumable/>
-		<Potion/>
-		<ContainerType>Stat</ContainerType>
-	</Object>
-	<Object type="0x236A" id="Greater Potion of Speed">
-		<Class>Equipment</Class>
-		<Item/>
-		<Texture>
-			<File>Consumables_Maxing8x8</File>
-			<Index>0x11</Index>
-		</Texture>
-		<SlotType>10</SlotType>
-		<TierType>Stat</TierType>
-		<Description>A potion that permanently increases your Speed stat by 4.</Description>
-		<ExtraTooltipData>
-			<EffectInfo name="Combine into an eon" description="Drag two of the same potion on top of eachother to combine!"/>
-		</ExtraTooltipData>
-		<Sound>use_potion</Sound>
-		<Activate stat="22" amount="4">IncrementStat</Activate>
-		<Consumable/>
-		<Potion/>
-		<ContainerType>Stat</ContainerType>
-	</Object>
-	<Object type="0x62a1" id="Vial of Speed">
-		<Class>Equipment</Class>
-		<Item/>
-		<Texture>
-			<File>Consumables_Maxing8x8</File>
-			<Index>0x12</Index>
-		</Texture>
-		<SlotType>10</SlotType>
-		<TierType>Stat</TierType>
-		<Description>A potion that permanently ascends your speed stat by 3.</Description>
-		<Sound>use_potion</Sound>
-		<Activate stat="22" amount="3">PowerStat</Activate>
-		<Consumable/>
-		<Potion/>
-		<ContainerType>Stat</ContainerType>
-	</Object>
-	<Object type="0x45a9" id="Speed Eon">
-		<Class>Equipment</Class>
-		<Item/>
-		<Texture>
-			<File>Consumables_Maxing8x8</File>
-			<Index>0x13</Index>
-		</Texture>
-		<SlotType>10</SlotType>
-		<TierType>Stat</TierType>
-		<Description>This relic can be shattered. Once shattered it causes the mortal to have the quickness of the gods, maxing their Speed stat.</Description>
-		<Sound>use_potion</Sound>
-		<Activate stat="22" amount="10">PowerStat</Activate>
-		<Consumable/>
-		<Potion/>
-		<ContainerType>Stat</ContainerType>
-	</Object>
-	<Object type="0xa4c" id="Potion of Dexterity">
-		<Class>Equipment</Class>
-		<Item/>
-		<Texture>
-			<File>Consumables_Maxing8x8</File>
-			<Index>0x14</Index>
-		</Texture>
-		<SlotType>10</SlotType>
-		<TierType>Stat</TierType>
-		<Description>A potion that permanently increases your Dexterity stat by 1.</Description>
-		<ExtraTooltipData>
-			<EffectInfo name="Combine to quadruple the stat increase" description="Drag two of the same potion on top of eachother to combine!"/>
-		</ExtraTooltipData>
-		<Sound>use_potion</Sound>
-		<Activate stat="28" amount="1">IncrementStat</Activate>
-		<Consumable/>
-		<Potion/>
-		<ContainerType>Stat</ContainerType>
-	</Object>
-	<Object type="0x236D" id="Greater Potion of Dexterity">
-		<Class>Equipment</Class>
-		<Item/>
-		<Texture>
-			<File>Consumables_Maxing8x8</File>
-			<Index>0x15</Index>
-		</Texture>
-		<SlotType>10</SlotType>
-		<TierType>Stat</TierType>
-		<Description>A potion that permanently increases your Dexterity stat by 4.</Description>
-		<ExtraTooltipData>
-			<EffectInfo name="Combine into an eon" description="Drag two of the same potion on top of eachother to combine!"/>
-		</ExtraTooltipData>
-		<Sound>use_potion</Sound>
-		<Activate stat="28" amount="4">IncrementStat</Activate>
-		<Consumable/>
-		<Potion/>
-		<ContainerType>Stat</ContainerType>
-	</Object>
-	<Object type="0x62a4" id="Vial of Dexterity">
-		<Class>Equipment</Class>
-		<Item/>
-		<Texture>
-			<File>Consumables_Maxing8x8</File>
-			<Index>0x16</Index>
-		</Texture>
-		<SlotType>10</SlotType>
-		<TierType>Stat</TierType>
-		<Description>A potion that permanently ascends your dexterity stat by 3.</Description>
-		<Sound>use_potion</Sound>
-		<Activate stat="28" amount="3">PowerStat</Activate>
-		<Consumable/>
-		<Potion/>
-		<ContainerType>Stat</ContainerType>
-	</Object>
-	<Object type="0x45a3" id="Dexterity Eon">
-		<Class>Equipment</Class>
-		<Item/>
-		<Texture>
-			<File>Consumables_Maxing8x8</File>
-			<Index>0x17</Index>
-		</Texture>
-		<SlotType>10</SlotType>
-		<TierType>Stat</TierType>
-		<Description>This relic can be shattered. Once shattered it causes the mortal to have the reflexes of the gods, maxing their Dexterity stat.</Description>
-		<Sound>use_potion</Sound>
-		<Activate stat="28" amount="10">PowerStat</Activate>
-		<Consumable/>
-		<Potion/>
-		<ContainerType>Stat</ContainerType>
-	</Object>
-	<Object type="0xa34" id="Potion of Vitality">
-		<Class>Equipment</Class>
-		<Item/>
-		<Texture>
-			<File>Consumables_Maxing8x8</File>
-			<Index>0x18</Index>
-		</Texture>
-		<SlotType>10</SlotType>
-		<TierType>Stat</TierType>
-		<Description>A potion that permanently increases your Vitality stat by 1.</Description>
-		<ExtraTooltipData>
-			<EffectInfo name="Combine to quadruple the stat increase" description="Drag two of the same potion on top of eachother to combine!"/>
-		</ExtraTooltipData>
-		<Sound>use_potion</Sound>
-		<Activate stat="26" amount="1">IncrementStat</Activate>
-		<Consumable/>
-		<Potion/>
-		<ContainerType>Stat</ContainerType>
-	</Object>
-	<Object type="0x236B" id="Greater Potion of Vitality">
-		<Class>Equipment</Class>
-		<Item/>
-		<Texture>
-			<File>Consumables_Maxing8x8</File>
-			<Index>0x19</Index>
-		</Texture>
-		<SlotType>10</SlotType>
-		<TierType>Stat</TierType>
-		<Description>A potion that permanently increases your Vitality stat by 4.</Description>
-		<ExtraTooltipData>
-			<EffectInfo name="Combine into an eon" description="Drag two of the same potion on top of eachother to combine!"/>
-		</ExtraTooltipData>
-		<Sound>use_potion</Sound>
-		<Activate stat="26" amount="4">IncrementStat</Activate>
-		<Consumable/>
-		<Potion/>
-		<ContainerType>Stat</ContainerType>
-	</Object>
-	<Object type="0x62a0" id="Vial of Vitality">
-		<Class>Equipment</Class>
-		<Item/>
-		<Texture>
-			<File>Consumables_Maxing8x8</File>
-			<Index>0x1a</Index>
-		</Texture>
-		<SlotType>10</SlotType>
-		<TierType>Stat</TierType>
-		<Description>A potion that permanently ascends your vitality stat by 3.</Description>
-		<Sound>use_potion</Sound>
-		<Activate stat="26" amount="3">PowerStat</Activate>
-		<Consumable/>
-		<Potion/>
-		<ContainerType>Stat</ContainerType>
-	</Object>
-	<Object type="0x45aa" id="Vitality Eon">
-		<Class>Equipment</Class>
-		<Item/>
-		<Texture>
-			<File>Consumables_Maxing8x8</File>
-			<Index>0x1b</Index>
-		</Texture>
-		<SlotType>10</SlotType>
-		<TierType>Stat</TierType>
-		<Description>This relic can be shattered. Once shattered it causes the mortal to have the recovery of the gods, maxing their Vitality stat.</Description>
-		<Sound>use_potion</Sound>
-		<Activate stat="26" amount="10">PowerStat</Activate>
-		<Consumable/>
-		<Potion/>
-		<ContainerType>Stat</ContainerType>
-	</Object>
-	<Object type="0xa35" id="Potion of Wisdom">
-		<Class>Equipment</Class>
-		<Item/>
-		<Texture>
-			<File>Consumables_Maxing8x8</File>
-			<Index>0x1c</Index>
-		</Texture>
-		<SlotType>10</SlotType>
-		<TierType>Stat</TierType>
-		<Description>A potion that permanently increases your Wisdom stat by 1.</Description>
-		<ExtraTooltipData>
-			<EffectInfo name="Combine to quadruple the stat increase" description="Drag two of the same potion on top of eachother to combine!"/>
-		</ExtraTooltipData>
-		<Sound>use_potion</Sound>
-		<Activate stat="27" amount="1">IncrementStat</Activate>
-		<Consumable/>
-		<Potion/>
-		<ContainerType>Stat</ContainerType>
-	</Object>
-	<Object type="0x236C" id="Greater Potion of Wisdom">
-		<Class>Equipment</Class>
-		<Item/>
-		<Texture>
-			<File>Consumables_Maxing8x8</File>
-			<Index>0x1d</Index>
-		</Texture>
-		<SlotType>10</SlotType>
-		<TierType>Stat</TierType>
-		<Description>A potion that permanently increases your Wisdom stat by 4.</Description>
-		<ExtraTooltipData>
-			<EffectInfo name="Combine into an eon" description="Drag two of the same potion on top of eachother to combine!"/>
-		</ExtraTooltipData>
-		<Sound>use_potion</Sound>
-		<Activate stat="27" amount="4">IncrementStat</Activate>
-		<Consumable/>
-		<Potion/>
-		<ContainerType>Stat</ContainerType>
-	</Object>
-	<Object type="0x619e" id="Vial of Wisdom">
-		<Class>Equipment</Class>
-		<Item/>
-		<Texture>
-			<File>Consumables_Maxing8x8</File>
-			<Index>0x1e</Index>
-		</Texture>
-		<SlotType>10</SlotType>
-		<TierType>Stat</TierType>
-		<Description>A potion that permanently ascends your wisdom stat by 3.</Description>
-		<Sound>use_potion</Sound>
-		<Activate stat="27" amount="3">PowerStat</Activate>
-		<Consumable/>
-		<Potion/>
-		<ContainerType>Stat</ContainerType>
-	</Object>
-	<Object type="0x45a2" id="Wisdom Eon">
-		<Class>Equipment</Class>
-		<Item/>
-		<Texture>
-			<File>Consumables_Maxing8x8</File>
-			<Index>0x1f</Index>
-		</Texture>
-		<SlotType>10</SlotType>
-		<TierType>Stat</TierType>
-		<Description>This relic can be shattered. Once shattered it causes the mortal to have the intellect of the gods, maxing their Wisdom stat.</Description>
-		<Sound>use_potion</Sound>
-		<Activate stat="27" amount="10">PowerStat</Activate>
-		<Consumable/>
-		<Potion/>
-		<ContainerType>Stat</ContainerType>
-	</Object>
-	<Object type="0x5822" id="Potion of Might">
-		<Class>Equipment</Class>
-		<Item/>
-		<Texture>
-			<File>Consumables_Maxing8x8</File>
-			<Index>0x20</Index>
-		</Texture>
-		<SlotType>10</SlotType>
-		<TierType>Stat</TierType>
-		<Description>A potion that permanently increases your Might by 1.</Description>
-		<ExtraTooltipData>
-			<EffectInfo name="Combine to quadruple the stat increase" description="Drag two of the same potion on top of eachother to combine!"/>
-		</ExtraTooltipData>
-		<Sound>use_potion</Sound>
-		<Activate stat="112" amount="1">IncrementStat</Activate>
-		<Consumable/>
-		<Potion/>
-		<ContainerType>Stat</ContainerType>
-	</Object>
-	<Object type="0x61c9" id="Greater Potion of Might">
-		<Class>Equipment</Class>
-		<Item/>
-		<Texture>
-			<File>Consumables_Maxing8x8</File>
-			<Index>0x21</Index>
-		</Texture>
-		<SlotType>10</SlotType>
-		<TierType>Stat</TierType>
-		<Description>A potion that permanently increases Might by 4.</Description>
-		<ExtraTooltipData>
-			<EffectInfo name="Combine into an eon" description="Drag two of the same potion on top of eachother to combine!"/>
-		</ExtraTooltipData>
-		<Sound>use_potion</Sound>
-		<Activate stat="112" amount="4">IncrementStat</Activate>
-		<Consumable/>
-		<Potion/>
-		<ContainerType>Stat</ContainerType>
-	</Object>
-	<Object type="0x62a6" id="Vial of Might">
-		<Class>Equipment</Class>
-		<Item/>
-		<Texture>
-			<File>Consumables_Maxing8x8</File>
-			<Index>0x22</Index>
-		</Texture>
-		<SlotType>10</SlotType>
-		<TierType>Stat</TierType>
-		<Description>A potion that permanently ascends your might stat by 3.</Description>
-		<Sound>use_potion</Sound>
-		<Activate stat="112" amount="3">PowerStat</Activate>
-		<Consumable/>
-		<Potion/>
-		<ContainerType>Stat</ContainerType>
-	</Object>
-	<Object type="0x68ff" id="Might Eon">
-		<Class>Equipment</Class>
-		<Item/>
-		<Texture>
-			<File>Consumables_Maxing8x8</File>
-			<Index>0x23</Index>
-		</Texture>
-		<SlotType>10</SlotType>
-		<TierType>Stat</TierType>
-		<Description>This relic can be shattered. Once shattered it causes the mortal to have the ferocity of the gods, maxing their Might stat.</Description>
-		<Sound>use_potion</Sound>
-		<Activate stat="112" amount="10">PowerStat</Activate>
-		<Consumable/>
-		<Potion/>
-		<ContainerType>Stat</ContainerType>
-	</Object>
-	<Object type="0x5823" id="Potion of Luck">
-		<Class>Equipment</Class>
-		<Item/>
-		<Texture>
-			<File>Consumables_Maxing8x8</File>
-			<Index>0x24</Index>
-		</Texture>
-		<SlotType>10</SlotType>
-		<TierType>Stat</TierType>
-		<Description>A potion that permanently increases your Luck by 1.</Description>
-		<ExtraTooltipData>
-			<EffectInfo name="Combine to quadruple the stat increase" description="Drag two of the same potion on top of eachother to combine!"/>
-		</ExtraTooltipData>
-		<Sound>use_potion</Sound>
-		<Activate stat="114" amount="1">IncrementStat</Activate>
-		<Consumable/>
-		<Potion/>
-		<ContainerType>Stat</ContainerType>
-	</Object>
-	<Object type="0x61cb" id="Greater Potion of Luck">
-		<Class>Equipment</Class>
-		<Item/>
-		<Texture>
-			<File>Consumables_Maxing8x8</File>
-			<Index>0x25</Index>
-		</Texture>
-		<SlotType>10</SlotType>
-		<TierType>Stat</TierType>
-		<Description>A potion that permanently increases Luck by 4.</Description>
-		<ExtraTooltipData>
-			<EffectInfo name="Combine into an eon" description="Drag two of the same potion on top of eachother to combine!"/>
-		</ExtraTooltipData>
-		<Sound>use_potion</Sound>
-		<Activate stat="114" amount="4">IncrementStat</Activate>
-		<Consumable/>
-		<Potion/>
-		<ContainerType>Stat</ContainerType>
-	</Object>
-	<Object type="0x62a7" id="Vial of Luck">
-		<Class>Equipment</Class>
-		<Item/>
-		<Texture>
-			<File>Consumables_Maxing8x8</File>
-			<Index>0x26</Index>
-		</Texture>
-		<SlotType>10</SlotType>
-		<TierType>Stat</TierType>
-		<Description>A potion that permanently ascends your luck stat by 3.</Description>
-		<Sound>use_potion</Sound>
-		<Activate stat="114" amount="3">PowerStat</Activate>
-		<Consumable/>
-		<Potion/>
-		<ContainerType>Stat</ContainerType>
-	</Object>
-	<Object type="0x69a1" id="Luck Eon">
-		<Class>Equipment</Class>
-		<Item/>
-		<Texture>
-			<File>Consumables_Maxing8x8</File>
-			<Index>0x27</Index>
-		</Texture>
-		<SlotType>10</SlotType>
-		<TierType>Stat</TierType>
-		<Description>This relic can be shattered. Once shattered it causes the mortal to have the fortune of the gods, maxing their Luck stat.</Description>
-		<Sound>use_potion</Sound>
-		<Activate stat="114" amount="10">PowerStat</Activate>
-		<Consumable/>
-		<Potion/>
-		<ContainerType>Stat</ContainerType>
-	</Object>
-	<Object type="0x68fd" id="Potion of Restoration">
-		<Class>Equipment</Class>
-		<Item/>
-		<Texture>
-			<File>Consumables_Maxing8x8</File>
-			<Index>0x28</Index>
-		</Texture>
-		<SlotType>10</SlotType>
-		<TierType>Stat</TierType>
-		<Description>A potion that permanently increases your Restoration stat by 1.</Description>
-		<ExtraTooltipData>
-			<EffectInfo name="Combine to quadruple the stat increase" description="Drag two of the same potion on top of eachother to combine!"/>
-		</ExtraTooltipData>
-		<Sound>use_potion</Sound>
-		<Activate stat="121" amount="1">IncrementStat</Activate>
-		<Consumable/>
-		<Potion/>
-		<ContainerType>Stat</ContainerType>
-	</Object>
-	<Object type="0x61ca" id="Greater Potion of Restoration">
-		<Class>Equipment</Class>
-		<Item/>
-		<Texture>
-			<File>Consumables_Maxing8x8</File>
-			<Index>0x29</Index>
-		</Texture>
-		<SlotType>10</SlotType>
-		<TierType>Stat</TierType>
-		<Description>A potion that permanently increases Restoration by 4.</Description>
-		<ExtraTooltipData>
-			<EffectInfo name="Combine into an eon" description="Drag two of the same potion on top of eachother to combine!"/>
-		</ExtraTooltipData>
-		<Sound>use_potion</Sound>
-		<Activate stat="121" amount="4">IncrementStat</Activate>
-		<Consumable/>
-		<Potion/>
-		<ContainerType>Stat</ContainerType>
-	</Object>
-	<Object type="0x619d" id="Vial of Restoration">
-		<Class>Equipment</Class>
-		<Item/>
-		<Texture>
-			<File>Consumables_Maxing8x8</File>
-			<Index>0x2a</Index>
-		</Texture>
-		<SlotType>10</SlotType>
-		<TierType>Stat</TierType>
-		<Description>A potion that permanently ascends your restoration stat by 3.</Description>
-		<Sound>use_potion</Sound>
-		<Activate stat="121" amount="3">PowerStat</Activate>
-		<Consumable/>
-		<Potion/>
-		<ContainerType>Stat</ContainerType>
-	</Object>
-	<Object type="0x69a2" id="Restoration Eon">
-		<Class>Equipment</Class>
-		<Item/>
-		<Texture>
-			<File>Consumables_Maxing8x8</File>
-			<Index>0x2b</Index>
-		</Texture>
-		<SlotType>10</SlotType>
-		<TierType>Stat</TierType>
-		<Description>This relic can be shattered. Once shattered it causes the mortal to have the sturdiness of the gods, maxing their Restoration stat.</Description>
-		<Sound>use_potion</Sound>
-		<Activate stat="121" amount="10">PowerStat</Activate>
-		<Consumable/>
-		<Potion/>
-		<ContainerType>Stat</ContainerType>
-	</Object>
-	<Object type="0x68fe" id="Potion of Protection">
-		<Class>Equipment</Class>
-		<Item/>
-		<Texture>
-			<File>Consumables_Maxing8x8</File>
-			<Index>0x2c</Index>
-		</Texture>
-		<SlotType>10</SlotType>
-		<TierType>Stat</TierType>
-		<Description>A potion that permanently increases your Protection stat by 1.</Description>
-		<ExtraTooltipData>
-			<EffectInfo name="Combine to quadruple the stat increase" description="Drag two of the same potion on top of eachother to combine!"/>
-		</ExtraTooltipData>
-		<Sound>use_potion</Sound>
-		<Activate stat="122" amount="1">IncrementStat</Activate>
-		<Consumable/>
-		<Potion/>
-		<ContainerType>Stat</ContainerType>
-	</Object>
-	<Object type="0x61cc" id="Greater Potion of Protection">
-		<Class>Equipment</Class>
-		<Item/>
-		<Texture>
-			<File>Consumables_Maxing8x8</File>
-			<Index>0x2d</Index>
-		</Texture>
-		<SlotType>10</SlotType>
-		<TierType>Stat</TierType>
-		<Description>A potion that permanently increases Protection by 4.</Description>
-		<ExtraTooltipData>
-			<EffectInfo name="Combine into an eon" description="Drag two of the same potion on top of eachother to combine!"/>
-		</ExtraTooltipData>
-		<Sound>use_potion</Sound>
-		<Activate stat="122" amount="4">IncrementStat</Activate>
-		<Consumable/>
-		<Potion/>
-		<ContainerType>Stat</ContainerType>
-	</Object>
-	<Object type="0x62a2" id="Vial of Protection">
-		<Class>Equipment</Class>
-		<Item/>
-		<Texture>
-			<File>Consumables_Maxing8x8</File>
-			<Index>0x2e</Index>
-		</Texture>
-		<SlotType>10</SlotType>
-		<TierType>Stat</TierType>
-		<Description>A potion that permanently ascends your protection stat by 3.</Description>
-		<Sound>use_potion</Sound>
-		<Activate stat="122" amount="3">PowerStat</Activate>
-		<Consumable/>
-		<Potion/>
-		<ContainerType>Stat</ContainerType>
-	</Object>
-	<Object type="0x69a3" id="Protection Eon">
-		<Class>Equipment</Class>
-		<Item/>
-		<Texture>
-			<File>Consumables_Maxing8x8</File>
-			<Index>0x2f</Index>
-		</Texture>
-		<SlotType>10</SlotType>
-		<TierType>Stat</TierType>
-		<Description>This relic can be shattered. Once shattered it causes the mortal to have the indemnity of the gods, maxing their Protection stat.</Description>
-		<Sound>use_potion</Sound>
-		<Activate stat="122" amount="10">PowerStat</Activate>
-		<Consumable/>
-		<Potion/>
-		<ContainerType>Stat</ContainerType>
-	</Object>
+    <Object type="0xae9" id="Potion of Life">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>Consumables_Maxing8x8</File>
+            <Index>0x00</Index>
+        </Texture>
+        <SlotType>10</SlotType>
+        <TierType>Stat</TierType>
+        <Description>A potion that permanently increases your Health stat by 5.</Description>
+        <ExtraTooltipData>
+            <EffectInfo name="Combine to quadruple the stat increase"
+                        description="Drag two of the same potion on top of eachother to combine!"/>
+        </ExtraTooltipData>
+        <Sound>use_potion</Sound>
+        <Activate stat="0" amount="5">IncrementStat</Activate>
+        <Consumable/>
+        <Potion/>
+        <ContainerType>Stat</ContainerType>
+    </Object>
+    <Object type="0x236E" id="Greater Potion of Life">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>Consumables_Maxing8x8</File>
+            <Index>0x01</Index>
+        </Texture>
+        <SlotType>10</SlotType>
+        <TierType>Stat</TierType>
+        <Description>A potion that permanently increases your Health stat by 10.</Description>
+        <ExtraTooltipData>
+            <EffectInfo name="Combine into an eon"
+                        description="Drag two of the same potion on top of eachother to combine!"/>
+        </ExtraTooltipData>
+        <Sound>use_potion</Sound>
+        <Activate stat="0" amount="10">IncrementStat</Activate>
+        <Consumable/>
+        <Potion/>
+        <ContainerType>Stat</ContainerType>
+    </Object>
+    <Object type="0x62a5" id="Vial of Life">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>Consumables_Maxing8x8</File>
+            <Index>0x02</Index>
+        </Texture>
+        <SlotType>10</SlotType>
+        <TierType>Stat</TierType>
+        <Description>A potion that permanently ascends your maximum health stat by 17.</Description>
+        <Sound>use_potion</Sound>
+        <Activate stat="0" amount="17">PowerStat</Activate>
+        <Consumable/>
+        <Potion/>
+        <ContainerType>Stat</ContainerType>
+    </Object>
+    <Object type="0x45a8" id="Life Eon">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>Consumables_Maxing8x8</File>
+            <Index>0x03</Index>
+        </Texture>
+        <SlotType>10</SlotType>
+        <TierType>Stat</TierType>
+        <Description>This relic can be shattered. Once shattered it causes the mortal to have the endurance of the gods,
+            maxing their Health stat.
+        </Description>
+        <Sound>use_potion</Sound>
+        <Activate stat="0" amount="50">PowerStat</Activate>
+        <Consumable/>
+        <Potion/>
+        <ContainerType>Stat</ContainerType>
+    </Object>
+    <Object type="0xaea" id="Potion of Mana">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>Consumables_Maxing8x8</File>
+            <Index>0x04</Index>
+        </Texture>
+        <SlotType>10</SlotType>
+        <TierType>Stat</TierType>
+        <Description>A potion that permanently increases your Magic stat by 5.</Description>
+        <ExtraTooltipData>
+            <EffectInfo name="Combine to quadruple the stat increase"
+                        description="Drag two of the same potion on top of eachother to combine!"/>
+        </ExtraTooltipData>
+        <Sound>use_potion</Sound>
+        <Activate stat="3" amount="5">IncrementStat</Activate>
+        <Consumable/>
+        <Potion/>
+        <ContainerType>Stat</ContainerType>
+    </Object>
+    <Object type="0x236F" id="Greater Potion of Mana">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>Consumables_Maxing8x8</File>
+            <Index>0x05</Index>
+        </Texture>
+        <SlotType>10</SlotType>
+        <TierType>Stat</TierType>
+        <Description>A potion that permanently increases your Magic stat by 10.</Description>
+        <ExtraTooltipData>
+            <EffectInfo name="Combine into an eon"
+                        description="Drag two of the same potion on top of eachother to combine!"/>
+        </ExtraTooltipData>
+        <Sound>use_potion</Sound>
+        <Activate stat="3" amount="10">IncrementStat</Activate>
+        <Consumable/>
+        <Potion/>
+        <ContainerType>Stat</ContainerType>
+    </Object>
+    <Object type="0x619c" id="Vial of Mana">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>Consumables_Maxing8x8</File>
+            <Index>0x06</Index>
+        </Texture>
+        <SlotType>10</SlotType>
+        <TierType>Stat</TierType>
+        <Description>A potion that permanently ascends your maximum mana stat by 17.</Description>
+        <Sound>use_potion</Sound>
+        <Activate stat="3" amount="17">PowerStat</Activate>
+        <Consumable/>
+        <Potion/>
+        <ContainerType>Stat</ContainerType>
+    </Object>
+    <Object type="0x45a5" id="Mana Eon">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>Consumables_Maxing8x8</File>
+            <Index>0x07</Index>
+        </Texture>
+        <SlotType>10</SlotType>
+        <TierType>Stat</TierType>
+        <Description>This relic can be shattered. Once shattered it causes the mortal to have the power of the gods,
+            maxing their Magic stat.
+        </Description>
+        <Sound>use_potion</Sound>
+        <Activate stat="3" amount="50">PowerStat</Activate>
+        <Consumable/>
+        <Potion/>
+        <ContainerType>Stat</ContainerType>
+    </Object>
+    <Object type="0xa1f" id="Potion of Attack">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>Consumables_Maxing8x8</File>
+            <Index>0x08</Index>
+        </Texture>
+        <SlotType>10</SlotType>
+        <TierType>Stat</TierType>
+        <Description>A potion that permanently increases your Attack stat by 1.</Description>
+        <ExtraTooltipData>
+            <EffectInfo name="Combine to quadruple the stat increase"
+                        description="Drag two of the same potion on top of eachother to combine!"/>
+        </ExtraTooltipData>
+        <Sound>use_potion</Sound>
+        <Activate stat="20" amount="1">IncrementStat</Activate>
+        <Consumable/>
+        <Potion/>
+        <ContainerType>Stat</ContainerType>
+    </Object>
+    <Object type="0x2368" id="Greater Potion of Attack">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>Consumables_Maxing8x8</File>
+            <Index>0x09</Index>
+        </Texture>
+        <SlotType>10</SlotType>
+        <TierType>Stat</TierType>
+        <Description>A potion that permanently increases your Attack stat by 4.</Description>
+        <ExtraTooltipData>
+            <EffectInfo name="Combine into an eon"
+                        description="Drag two of the same potion on top of eachother to combine!"/>
+        </ExtraTooltipData>
+        <Sound>use_potion</Sound>
+        <Activate stat="20" amount="4">IncrementStat</Activate>
+        <Consumable/>
+        <Potion/>
+        <ContainerType>Stat</ContainerType>
+    </Object>
+    <Object type="0x619f" id="Vial of Attack">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>Consumables_Maxing8x8</File>
+            <Index>0x0a</Index>
+        </Texture>
+        <SlotType>10</SlotType>
+        <TierType>Stat</TierType>
+        <Description>A potion that permanently ascends your attack stat by 3.</Description>
+        <Sound>use_potion</Sound>
+        <Activate stat="20" amount="3">PowerStat</Activate>
+        <Consumable/>
+        <Potion/>
+        <ContainerType>Stat</ContainerType>
+    </Object>
+    <Object type="0x45a7" id="Attack Eon">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>Consumables_Maxing8x8</File>
+            <Index>0x0b</Index>
+        </Texture>
+        <SlotType>10</SlotType>
+        <TierType>Stat</TierType>
+        <Description>This relic can be shattered. Once shattered it causes the mortal to have the strength of the gods,
+            maxing their Attack stat.
+        </Description>
+        <Sound>use_potion</Sound>
+        <Activate stat="20" amount="10">PowerStat</Activate>
+        <Consumable/>
+        <Potion/>
+        <ContainerType>Stat</ContainerType>
+    </Object>
+    <Object type="0xa20" id="Potion of Defense">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>Consumables_Maxing8x8</File>
+            <Index>0x0c</Index>
+        </Texture>
+        <SlotType>10</SlotType>
+        <TierType>Stat</TierType>
+        <Description>A potion that permanently increases your Defense stat by 1.</Description>
+        <ExtraTooltipData>
+            <EffectInfo name="Combine to quadruple the stat increase"
+                        description="Drag two of the same potion on top of eachother to combine!"/>
+        </ExtraTooltipData>
+        <Sound>use_potion</Sound>
+        <Activate stat="21" amount="1">IncrementStat</Activate>
+        <Consumable/>
+        <Potion/>
+        <ContainerType>Stat</ContainerType>
+    </Object>
+    <Object type="0x2369" id="Greater Potion of Defense">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>Consumables_Maxing8x8</File>
+            <Index>0x0d</Index>
+        </Texture>
+        <SlotType>10</SlotType>
+        <TierType>Stat</TierType>
+        <Description>A potion that permanently increases your Defense stat by 4.</Description>
+        <ExtraTooltipData>
+            <EffectInfo name="Combine into an eon"
+                        description="Drag two of the same potion on top of eachother to combine!"/>
+        </ExtraTooltipData>
+        <Sound>use_potion</Sound>
+        <Activate stat="21" amount="4">IncrementStat</Activate>
+        <Consumable/>
+        <Potion/>
+        <ContainerType>Stat</ContainerType>
+    </Object>
+    <Object type="0x62a3" id="Vial of Defense">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>Consumables_Maxing8x8</File>
+            <Index>0x0e</Index>
+        </Texture>
+        <SlotType>10</SlotType>
+        <TierType>Stat</TierType>
+        <Description>A potion that permanently ascends your defense stat by 3.</Description>
+        <Sound>use_potion</Sound>
+        <Activate stat="21" amount="3">PowerStat</Activate>
+        <Consumable/>
+        <Potion/>
+        <ContainerType>Stat</ContainerType>
+    </Object>
+    <Object type="0x45a6" id="Defense Eon">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>Consumables_Maxing8x8</File>
+            <Index>0x0f</Index>
+        </Texture>
+        <SlotType>10</SlotType>
+        <TierType>Stat</TierType>
+        <Description>This relic can be shattered. Once shattered it causes the mortal to have the fortitude of the gods,
+            maxing their Defense stat.
+        </Description>
+        <Sound>use_potion</Sound>
+        <Activate stat="21" amount="10">PowerStat</Activate>
+        <Consumable/>
+        <Potion/>
+        <ContainerType>Stat</ContainerType>
+    </Object>
+    <Object type="0xa21" id="Potion of Speed">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>Consumables_Maxing8x8</File>
+            <Index>0x10</Index>
+        </Texture>
+        <SlotType>10</SlotType>
+        <TierType>Stat</TierType>
+        <Description>A potion that permanently increases your Speed stat by 1.</Description>
+        <ExtraTooltipData>
+            <EffectInfo name="Combine to quadruple the stat increase"
+                        description="Drag two of the same potion on top of eachother to combine!"/>
+        </ExtraTooltipData>
+        <Sound>use_potion</Sound>
+        <Activate stat="22" amount="1">IncrementStat</Activate>
+        <Consumable/>
+        <Potion/>
+        <ContainerType>Stat</ContainerType>
+    </Object>
+    <Object type="0x236A" id="Greater Potion of Speed">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>Consumables_Maxing8x8</File>
+            <Index>0x11</Index>
+        </Texture>
+        <SlotType>10</SlotType>
+        <TierType>Stat</TierType>
+        <Description>A potion that permanently increases your Speed stat by 4.</Description>
+        <ExtraTooltipData>
+            <EffectInfo name="Combine into an eon"
+                        description="Drag two of the same potion on top of eachother to combine!"/>
+        </ExtraTooltipData>
+        <Sound>use_potion</Sound>
+        <Activate stat="22" amount="4">IncrementStat</Activate>
+        <Consumable/>
+        <Potion/>
+        <ContainerType>Stat</ContainerType>
+    </Object>
+    <Object type="0x62a1" id="Vial of Speed">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>Consumables_Maxing8x8</File>
+            <Index>0x12</Index>
+        </Texture>
+        <SlotType>10</SlotType>
+        <TierType>Stat</TierType>
+        <Description>A potion that permanently ascends your speed stat by 3.</Description>
+        <Sound>use_potion</Sound>
+        <Activate stat="22" amount="3">PowerStat</Activate>
+        <Consumable/>
+        <Potion/>
+        <ContainerType>Stat</ContainerType>
+    </Object>
+    <Object type="0x45a9" id="Speed Eon">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>Consumables_Maxing8x8</File>
+            <Index>0x13</Index>
+        </Texture>
+        <SlotType>10</SlotType>
+        <TierType>Stat</TierType>
+        <Description>This relic can be shattered. Once shattered it causes the mortal to have the quickness of the gods,
+            maxing their Speed stat.
+        </Description>
+        <Sound>use_potion</Sound>
+        <Activate stat="22" amount="10">PowerStat</Activate>
+        <Consumable/>
+        <Potion/>
+        <ContainerType>Stat</ContainerType>
+    </Object>
+    <Object type="0xa4c" id="Potion of Dexterity">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>Consumables_Maxing8x8</File>
+            <Index>0x14</Index>
+        </Texture>
+        <SlotType>10</SlotType>
+        <TierType>Stat</TierType>
+        <Description>A potion that permanently increases your Dexterity stat by 1.</Description>
+        <ExtraTooltipData>
+            <EffectInfo name="Combine to quadruple the stat increase"
+                        description="Drag two of the same potion on top of eachother to combine!"/>
+        </ExtraTooltipData>
+        <Sound>use_potion</Sound>
+        <Activate stat="28" amount="1">IncrementStat</Activate>
+        <Consumable/>
+        <Potion/>
+        <ContainerType>Stat</ContainerType>
+    </Object>
+    <Object type="0x236D" id="Greater Potion of Dexterity">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>Consumables_Maxing8x8</File>
+            <Index>0x15</Index>
+        </Texture>
+        <SlotType>10</SlotType>
+        <TierType>Stat</TierType>
+        <Description>A potion that permanently increases your Dexterity stat by 4.</Description>
+        <ExtraTooltipData>
+            <EffectInfo name="Combine into an eon"
+                        description="Drag two of the same potion on top of eachother to combine!"/>
+        </ExtraTooltipData>
+        <Sound>use_potion</Sound>
+        <Activate stat="28" amount="4">IncrementStat</Activate>
+        <Consumable/>
+        <Potion/>
+        <ContainerType>Stat</ContainerType>
+    </Object>
+    <Object type="0x62a4" id="Vial of Dexterity">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>Consumables_Maxing8x8</File>
+            <Index>0x16</Index>
+        </Texture>
+        <SlotType>10</SlotType>
+        <TierType>Stat</TierType>
+        <Description>A potion that permanently ascends your dexterity stat by 3.</Description>
+        <Sound>use_potion</Sound>
+        <Activate stat="28" amount="3">PowerStat</Activate>
+        <Consumable/>
+        <Potion/>
+        <ContainerType>Stat</ContainerType>
+    </Object>
+    <Object type="0x45a3" id="Dexterity Eon">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>Consumables_Maxing8x8</File>
+            <Index>0x17</Index>
+        </Texture>
+        <SlotType>10</SlotType>
+        <TierType>Stat</TierType>
+        <Description>This relic can be shattered. Once shattered it causes the mortal to have the reflexes of the gods,
+            maxing their Dexterity stat.
+        </Description>
+        <Sound>use_potion</Sound>
+        <Activate stat="28" amount="10">PowerStat</Activate>
+        <Consumable/>
+        <Potion/>
+        <ContainerType>Stat</ContainerType>
+    </Object>
+    <Object type="0xa34" id="Potion of Vitality">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>Consumables_Maxing8x8</File>
+            <Index>0x18</Index>
+        </Texture>
+        <SlotType>10</SlotType>
+        <TierType>Stat</TierType>
+        <Description>A potion that permanently increases your Vitality stat by 1.</Description>
+        <ExtraTooltipData>
+            <EffectInfo name="Combine to quadruple the stat increase"
+                        description="Drag two of the same potion on top of eachother to combine!"/>
+        </ExtraTooltipData>
+        <Sound>use_potion</Sound>
+        <Activate stat="26" amount="1">IncrementStat</Activate>
+        <Consumable/>
+        <Potion/>
+        <ContainerType>Stat</ContainerType>
+    </Object>
+    <Object type="0x236B" id="Greater Potion of Vitality">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>Consumables_Maxing8x8</File>
+            <Index>0x19</Index>
+        </Texture>
+        <SlotType>10</SlotType>
+        <TierType>Stat</TierType>
+        <Description>A potion that permanently increases your Vitality stat by 4.</Description>
+        <ExtraTooltipData>
+            <EffectInfo name="Combine into an eon"
+                        description="Drag two of the same potion on top of eachother to combine!"/>
+        </ExtraTooltipData>
+        <Sound>use_potion</Sound>
+        <Activate stat="26" amount="4">IncrementStat</Activate>
+        <Consumable/>
+        <Potion/>
+        <ContainerType>Stat</ContainerType>
+    </Object>
+    <Object type="0x62a0" id="Vial of Vitality">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>Consumables_Maxing8x8</File>
+            <Index>0x1a</Index>
+        </Texture>
+        <SlotType>10</SlotType>
+        <TierType>Stat</TierType>
+        <Description>A potion that permanently ascends your vitality stat by 3.</Description>
+        <Sound>use_potion</Sound>
+        <Activate stat="26" amount="3">PowerStat</Activate>
+        <Consumable/>
+        <Potion/>
+        <ContainerType>Stat</ContainerType>
+    </Object>
+    <Object type="0x45aa" id="Vitality Eon">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>Consumables_Maxing8x8</File>
+            <Index>0x1b</Index>
+        </Texture>
+        <SlotType>10</SlotType>
+        <TierType>Stat</TierType>
+        <Description>This relic can be shattered. Once shattered it causes the mortal to have the recovery of the gods,
+            maxing their Vitality stat.
+        </Description>
+        <Sound>use_potion</Sound>
+        <Activate stat="26" amount="10">PowerStat</Activate>
+        <Consumable/>
+        <Potion/>
+        <ContainerType>Stat</ContainerType>
+    </Object>
+    <Object type="0xa35" id="Potion of Wisdom">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>Consumables_Maxing8x8</File>
+            <Index>0x1c</Index>
+        </Texture>
+        <SlotType>10</SlotType>
+        <TierType>Stat</TierType>
+        <Description>A potion that permanently increases your Wisdom stat by 1.</Description>
+        <ExtraTooltipData>
+            <EffectInfo name="Combine to quadruple the stat increase"
+                        description="Drag two of the same potion on top of eachother to combine!"/>
+        </ExtraTooltipData>
+        <Sound>use_potion</Sound>
+        <Activate stat="27" amount="1">IncrementStat</Activate>
+        <Consumable/>
+        <Potion/>
+        <ContainerType>Stat</ContainerType>
+    </Object>
+    <Object type="0x236C" id="Greater Potion of Wisdom">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>Consumables_Maxing8x8</File>
+            <Index>0x1d</Index>
+        </Texture>
+        <SlotType>10</SlotType>
+        <TierType>Stat</TierType>
+        <Description>A potion that permanently increases your Wisdom stat by 4.</Description>
+        <ExtraTooltipData>
+            <EffectInfo name="Combine into an eon"
+                        description="Drag two of the same potion on top of eachother to combine!"/>
+        </ExtraTooltipData>
+        <Sound>use_potion</Sound>
+        <Activate stat="27" amount="4">IncrementStat</Activate>
+        <Consumable/>
+        <Potion/>
+        <ContainerType>Stat</ContainerType>
+    </Object>
+    <Object type="0x619e" id="Vial of Wisdom">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>Consumables_Maxing8x8</File>
+            <Index>0x1e</Index>
+        </Texture>
+        <SlotType>10</SlotType>
+        <TierType>Stat</TierType>
+        <Description>A potion that permanently ascends your wisdom stat by 3.</Description>
+        <Sound>use_potion</Sound>
+        <Activate stat="27" amount="3">PowerStat</Activate>
+        <Consumable/>
+        <Potion/>
+        <ContainerType>Stat</ContainerType>
+    </Object>
+    <Object type="0x45a2" id="Wisdom Eon">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>Consumables_Maxing8x8</File>
+            <Index>0x1f</Index>
+        </Texture>
+        <SlotType>10</SlotType>
+        <TierType>Stat</TierType>
+        <Description>This relic can be shattered. Once shattered it causes the mortal to have the intellect of the gods,
+            maxing their Wisdom stat.
+        </Description>
+        <Sound>use_potion</Sound>
+        <Activate stat="27" amount="10">PowerStat</Activate>
+        <Consumable/>
+        <Potion/>
+        <ContainerType>Stat</ContainerType>
+    </Object>
+    <Object type="0x5822" id="Potion of Might">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>Consumables_Maxing8x8</File>
+            <Index>0x20</Index>
+        </Texture>
+        <SlotType>10</SlotType>
+        <TierType>Stat</TierType>
+        <Description>A potion that permanently increases your Might by 1.</Description>
+        <ExtraTooltipData>
+            <EffectInfo name="Combine to quadruple the stat increase"
+                        description="Drag two of the same potion on top of eachother to combine!"/>
+        </ExtraTooltipData>
+        <Sound>use_potion</Sound>
+        <Activate stat="112" amount="1">IncrementStat</Activate>
+        <Consumable/>
+        <Potion/>
+        <ContainerType>Stat</ContainerType>
+    </Object>
+    <Object type="0x61c9" id="Greater Potion of Might">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>Consumables_Maxing8x8</File>
+            <Index>0x21</Index>
+        </Texture>
+        <SlotType>10</SlotType>
+        <TierType>Stat</TierType>
+        <Description>A potion that permanently increases Might by 4.</Description>
+        <ExtraTooltipData>
+            <EffectInfo name="Combine into an eon"
+                        description="Drag two of the same potion on top of eachother to combine!"/>
+        </ExtraTooltipData>
+        <Sound>use_potion</Sound>
+        <Activate stat="112" amount="4">IncrementStat</Activate>
+        <Consumable/>
+        <Potion/>
+        <ContainerType>Stat</ContainerType>
+    </Object>
+    <Object type="0x62a6" id="Vial of Might">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>Consumables_Maxing8x8</File>
+            <Index>0x22</Index>
+        </Texture>
+        <SlotType>10</SlotType>
+        <TierType>Stat</TierType>
+        <Description>A potion that permanently ascends your might stat by 3.</Description>
+        <Sound>use_potion</Sound>
+        <Activate stat="112" amount="3">PowerStat</Activate>
+        <Consumable/>
+        <Potion/>
+        <ContainerType>Stat</ContainerType>
+    </Object>
+    <Object type="0x68ff" id="Might Eon">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>Consumables_Maxing8x8</File>
+            <Index>0x23</Index>
+        </Texture>
+        <SlotType>10</SlotType>
+        <TierType>Stat</TierType>
+        <Description>This relic can be shattered. Once shattered it causes the mortal to have the ferocity of the gods,
+            maxing their Might stat.
+        </Description>
+        <Sound>use_potion</Sound>
+        <Activate stat="112" amount="10">PowerStat</Activate>
+        <Consumable/>
+        <Potion/>
+        <ContainerType>Stat</ContainerType>
+    </Object>
+    <Object type="0x5823" id="Potion of Luck">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>Consumables_Maxing8x8</File>
+            <Index>0x24</Index>
+        </Texture>
+        <SlotType>10</SlotType>
+        <TierType>Stat</TierType>
+        <Description>A potion that permanently increases your Luck by 1.</Description>
+        <ExtraTooltipData>
+            <EffectInfo name="Combine to quadruple the stat increase"
+                        description="Drag two of the same potion on top of eachother to combine!"/>
+        </ExtraTooltipData>
+        <Sound>use_potion</Sound>
+        <Activate stat="114" amount="1">IncrementStat</Activate>
+        <Consumable/>
+        <Potion/>
+        <ContainerType>Stat</ContainerType>
+    </Object>
+    <Object type="0x61cb" id="Greater Potion of Luck">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>Consumables_Maxing8x8</File>
+            <Index>0x25</Index>
+        </Texture>
+        <SlotType>10</SlotType>
+        <TierType>Stat</TierType>
+        <Description>A potion that permanently increases Luck by 4.</Description>
+        <ExtraTooltipData>
+            <EffectInfo name="Combine into an eon"
+                        description="Drag two of the same potion on top of eachother to combine!"/>
+        </ExtraTooltipData>
+        <Sound>use_potion</Sound>
+        <Activate stat="114" amount="4">IncrementStat</Activate>
+        <Consumable/>
+        <Potion/>
+        <ContainerType>Stat</ContainerType>
+    </Object>
+    <Object type="0x62a7" id="Vial of Luck">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>Consumables_Maxing8x8</File>
+            <Index>0x26</Index>
+        </Texture>
+        <SlotType>10</SlotType>
+        <TierType>Stat</TierType>
+        <Description>A potion that permanently ascends your luck stat by 3.</Description>
+        <Sound>use_potion</Sound>
+        <Activate stat="114" amount="3">PowerStat</Activate>
+        <Consumable/>
+        <Potion/>
+        <ContainerType>Stat</ContainerType>
+    </Object>
+    <Object type="0x69a1" id="Luck Eon">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>Consumables_Maxing8x8</File>
+            <Index>0x27</Index>
+        </Texture>
+        <SlotType>10</SlotType>
+        <TierType>Stat</TierType>
+        <Description>This relic can be shattered. Once shattered it causes the mortal to have the fortune of the gods,
+            maxing their Luck stat.
+        </Description>
+        <Sound>use_potion</Sound>
+        <Activate stat="114" amount="10">PowerStat</Activate>
+        <Consumable/>
+        <Potion/>
+        <ContainerType>Stat</ContainerType>
+    </Object>
+    <Object type="0x68fd" id="Potion of Restoration">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>Consumables_Maxing8x8</File>
+            <Index>0x28</Index>
+        </Texture>
+        <SlotType>10</SlotType>
+        <TierType>Stat</TierType>
+        <Description>A potion that permanently increases your Restoration stat by 1.</Description>
+        <ExtraTooltipData>
+            <EffectInfo name="Combine to quadruple the stat increase"
+                        description="Drag two of the same potion on top of eachother to combine!"/>
+        </ExtraTooltipData>
+        <Sound>use_potion</Sound>
+        <Activate stat="121" amount="1">IncrementStat</Activate>
+        <Consumable/>
+        <Potion/>
+        <ContainerType>Stat</ContainerType>
+    </Object>
+    <Object type="0x61ca" id="Greater Potion of Restoration">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>Consumables_Maxing8x8</File>
+            <Index>0x29</Index>
+        </Texture>
+        <SlotType>10</SlotType>
+        <TierType>Stat</TierType>
+        <Description>A potion that permanently increases Restoration by 4.</Description>
+        <ExtraTooltipData>
+            <EffectInfo name="Combine into an eon"
+                        description="Drag two of the same potion on top of eachother to combine!"/>
+        </ExtraTooltipData>
+        <Sound>use_potion</Sound>
+        <Activate stat="121" amount="4">IncrementStat</Activate>
+        <Consumable/>
+        <Potion/>
+        <ContainerType>Stat</ContainerType>
+    </Object>
+    <Object type="0x619d" id="Vial of Restoration">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>Consumables_Maxing8x8</File>
+            <Index>0x2a</Index>
+        </Texture>
+        <SlotType>10</SlotType>
+        <TierType>Stat</TierType>
+        <Description>A potion that permanently ascends your restoration stat by 3.</Description>
+        <Sound>use_potion</Sound>
+        <Activate stat="121" amount="3">PowerStat</Activate>
+        <Consumable/>
+        <Potion/>
+        <ContainerType>Stat</ContainerType>
+    </Object>
+    <Object type="0x69a2" id="Restoration Eon">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>Consumables_Maxing8x8</File>
+            <Index>0x2b</Index>
+        </Texture>
+        <SlotType>10</SlotType>
+        <TierType>Stat</TierType>
+        <Description>This relic can be shattered. Once shattered it causes the mortal to have the sturdiness of the
+            gods, maxing their Restoration stat.
+        </Description>
+        <Sound>use_potion</Sound>
+        <Activate stat="121" amount="10">PowerStat</Activate>
+        <Consumable/>
+        <Potion/>
+        <ContainerType>Stat</ContainerType>
+    </Object>
+    <Object type="0x68fe" id="Potion of Protection">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>Consumables_Maxing8x8</File>
+            <Index>0x2c</Index>
+        </Texture>
+        <SlotType>10</SlotType>
+        <TierType>Stat</TierType>
+        <Description>A potion that permanently increases your Protection stat by 1.</Description>
+        <ExtraTooltipData>
+            <EffectInfo name="Combine to quadruple the stat increase"
+                        description="Drag two of the same potion on top of eachother to combine!"/>
+        </ExtraTooltipData>
+        <Sound>use_potion</Sound>
+        <Activate stat="122" amount="1">IncrementStat</Activate>
+        <Consumable/>
+        <Potion/>
+        <ContainerType>Stat</ContainerType>
+    </Object>
+    <Object type="0x61cc" id="Greater Potion of Protection">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>Consumables_Maxing8x8</File>
+            <Index>0x2d</Index>
+        </Texture>
+        <SlotType>10</SlotType>
+        <TierType>Stat</TierType>
+        <Description>A potion that permanently increases Protection by 4.</Description>
+        <ExtraTooltipData>
+            <EffectInfo name="Combine into an eon"
+                        description="Drag two of the same potion on top of eachother to combine!"/>
+        </ExtraTooltipData>
+        <Sound>use_potion</Sound>
+        <Activate stat="122" amount="4">IncrementStat</Activate>
+        <Consumable/>
+        <Potion/>
+        <ContainerType>Stat</ContainerType>
+    </Object>
+    <Object type="0x62a2" id="Vial of Protection">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>Consumables_Maxing8x8</File>
+            <Index>0x2e</Index>
+        </Texture>
+        <SlotType>10</SlotType>
+        <TierType>Stat</TierType>
+        <Description>A potion that permanently ascends your protection stat by 3.</Description>
+        <Sound>use_potion</Sound>
+        <Activate stat="122" amount="3">PowerStat</Activate>
+        <Consumable/>
+        <Potion/>
+        <ContainerType>Stat</ContainerType>
+    </Object>
+    <Object type="0x69a3" id="Protection Eon">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>Consumables_Maxing8x8</File>
+            <Index>0x2f</Index>
+        </Texture>
+        <SlotType>10</SlotType>
+        <TierType>Stat</TierType>
+        <Description>This relic can be shattered. Once shattered it causes the mortal to have the indemnity of the gods,
+            maxing their Protection stat.
+        </Description>
+        <Sound>use_potion</Sound>
+        <Activate stat="122" amount="10">PowerStat</Activate>
+        <Consumable/>
+        <Potion/>
+        <ContainerType>Stat</ContainerType>
+    </Object>
 </Objects>

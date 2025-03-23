@@ -1,602 +1,683 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Objects>
-	<!-- #region --> // Armor
-	<Object type="0x7209" id="Tarnished Robe">
-		<Class>Equipment</Class>
-		<Item/>
-		<Texture>
-			<File>Crafting_LuckyDips</File>
-			<Index>0x60</Index>
-		</Texture>
-		<SlotType>37</SlotType>
-		<TierType>Tarnished</TierType>
-		<Description>A Tarnished Robe radiating immense power from within, why don't you forge it at the anvil with a Restoral Essence at the blacksmith to repair it!</Description>
-		<ContainerType>Tarnished</ContainerType>
-	</Object>
-	<Object type="0x7231" id="Tarnished Leather Hide">
-		<Class>Equipment</Class>
-		<Item/>
-		<Texture>
-			<File>Crafting_LuckyDips</File>
-			<Index>0x61</Index>
-		</Texture>
-		<SlotType>37</SlotType>
-		<TierType>Tarnished</TierType>
-		<Description>A Tarnished Leather Hide radiating immense power from within, why don't you forge it at the anvil with a Restoral Essence at the blacksmith to repair it!</Description>
-		<ContainerType>Tarnished</ContainerType>
-	</Object>
-	<Object type="0x7208" id="Tarnished Platemail">
-		<Class>Equipment</Class>
-		<Item/>
-		<Texture>
-			<File>Crafting_LuckyDips</File>
-			<Index>0x62</Index>
-		</Texture>
-		<SlotType>37</SlotType>
-		<TierType>Tarnished</TierType>
-		<Description>A Tarnished Platemail radiating immense power from within, why don't you forge it at the anvil with a Restoral Essence at the blacksmith to repair it!</Description>
-		<ContainerType>Tarnished</ContainerType>
-	</Object>
-	<!-- #region --> // Weapons
-	<Object type="0x7304" id="Tarnished Sword">
-		<Class>Equipment</Class>
-		<Item/>
-		<Texture>
-			<File>Crafting_LuckyDips</File>
-			<Index>0x12</Index>
-		</Texture>
-		<SlotType>37</SlotType>
-		<TierType>Tarnished</TierType>
-		<Description>A Tarnished Sword radiating immense power from within, why don't you forge it at the anvil with a Restoral Essence at the blacksmith to repair it!</Description>
-		<ContainerType>Tarnished</ContainerType>
-	</Object>
-	<Object type="0x7203" id="Tarnished Bow">
-		<Class>Equipment</Class>
-		<Item/>
-		<Texture>
-			<File>Crafting_LuckyDips</File>
-			<Index>0x33</Index>
-		</Texture>
-		<SlotType>37</SlotType>
-		<TierType>Tarnished</TierType>
-		<Description>A Tarnished Bow radiating immense power from within, why don't you forge it at the anvil with a Restoral Essence at the blacksmith to repair it!</Description>
-		<ContainerType>Tarnished</ContainerType>
-	</Object>
-	<Object type="0x7303" id="Tarnished Dagger">
-		<Class>Equipment</Class>
-		<Item/>
-		<Texture>
-			<File>Crafting_LuckyDips</File>
-			<Index>0x03</Index>
-		</Texture>
-		<SlotType>37</SlotType>
-		<TierType>Tarnished</TierType>
-		<Description>A Tarnished Dagger radiating immense power from within, why don't you forge it at the anvil with a Restoral Essence at the blacksmith to repair it!</Description>
-		<ContainerType>Tarnished</ContainerType>
-	</Object>
-	<Object type="0x7302" id="Tarnished Wand">
-		<Class>Equipment</Class>
-		<Item/>
-		<Texture>
-			<File>Crafting_LuckyDips</File>
-			<Index>0x32</Index>
-		</Texture>
-		<SlotType>37</SlotType>
-		<TierType>Tarnished</TierType>
-		<Description>A Tarnished Wand radiating immense power from within, why don't you forge it at the anvil with a Restoral Essence at the blacksmith to repair it!</Description>
-		<ContainerType>Tarnished</ContainerType>
-	</Object>
-	<Object type="0x7300" id="Tarnished Staff">
-		<Class>Equipment</Class>
-		<Item/>
-		<Texture>
-			<File>Crafting_LuckyDips</File>
-			<Index>0x21</Index>
-		</Texture>
-		<SlotType>37</SlotType>
-		<TierType>Tarnished</TierType>
-		<Description>A Tarnished Staff radiating immense power from within, why don't you forge it at the anvil with a Restoral Essence at the blacksmith to repair it!</Description>
-		<ContainerType>Tarnished</ContainerType>
-	</Object>
-	<Object type="0x7306" id="Tarnished Katana">
-		<Class>Equipment</Class>
-		<Item/>
-		<Texture>
-			<File>Crafting_LuckyDips</File>
-			<Index>0x14</Index>
-		</Texture>
-		<SlotType>37</SlotType>
-		<TierType>Tarnished</TierType>
-		<Description>A Tarnished Katana radiating immense power from within, why don't you forge it at the anvil with a Restoral Essence at the blacksmith to repair it!</Description>
-		<ContainerType>Tarnished</ContainerType>
-	</Object>
-	<Object type="0x7301" id="Tarnished Lance">
-		<Class>Equipment</Class>
-		<Item/>
-		<Texture>
-			<File>Crafting_LuckyDips</File>
-			<Index>0x13</Index>
-		</Texture>
-		<SlotType>37</SlotType>
-		<TierType>Tarnished</TierType>
-		<Description>A Tarnished Lance radiating immense power from within, why don't you forge it at the anvil with a Restoral Essence at the blacksmith to repair it!</Description>
-		<ContainerType>Tarnished</ContainerType>
-	</Object>
-	<Object type="0x7305" id="Tarnished Blades">
-		<Class>Equipment</Class>
-		<Item/>
-		<Texture>
-			<File>lofiObjSc</File>
-			<Index>0x02</Index>
-		</Texture>
-		<SlotType>37</SlotType>
-		<TierType>Tarnished</TierType>
-		<Description>A Tarnished set of Blades radiating immense power from within, why don't you forge it at the anvil with a Restoral Essence at the blacksmith to repair it!</Description>
-		<ContainerType>Tarnished</ContainerType>
-	</Object>
-	<!-- #region --> // Abilities
-	<Object type="0x7222" id="Tarnished Cloak">
-		<Class>Equipment</Class>
-		<Item/>
-		<Texture>
-			<File>lofiObjSc</File>
-			<Index>0x16</Index>
-		</Texture>
-		<SlotType>37</SlotType>
-		<TierType>Tarnished</TierType>
-		<Description>A Tarnished Cloak radiating immense power from within, why don't you forge it at the anvil with a Restoral Essence at the blacksmith to repair it!</Description>
-		<ContainerType>Tarnished</ContainerType>
-	</Object>
-	<Object type="0x7226" id="Tarnished Quiver">
-		<Class>Equipment</Class>
-		<Item/>
-		<Texture>
-			<File>lofiObjSc</File>
-			<Index>0x1a</Index>
-		</Texture>
-		<SlotType>37</SlotType>
-		<TierType>Tarnished</TierType>
-		<Description>A Tarnished Quiver radiating immense power from within, why don't you forge it at the anvil with a Restoral Essence at the blacksmith to repair it!</Description>
-		<ContainerType>Tarnished</ContainerType>
-	</Object>
-	<Object type="0x7214" id="Tarnished Spell">
-		<Class>Equipment</Class>
-		<Item/>
-		<Texture>
-			<File>lofiObjSc</File>
-			<Index>0x0e</Index>
-		</Texture>
-		<SlotType>37</SlotType>
-		<TierType>Tarnished</TierType>
-		<Description>A Tarnished Spell radiating immense power from within, why don't you forge it at the anvil with a Restoral Essence at the blacksmith to repair it!</Description>
-		<ContainerType>Tarnished</ContainerType>
-	</Object>
-	<Object type="0x7218" id="Tarnished Tome">
-		<Class>Equipment</Class>
-		<Item/>
-		<Texture>
-			<File>lofiObjSc</File>
-			<Index>0x12</Index>
-		</Texture>
-		<SlotType>37</SlotType>
-		<TierType>Tarnished</TierType>
-		<Description>A Tarnished Tome radiating immense power from within, why don't you forge it at the anvil with a Restoral Essence at the blacksmith to repair it!</Description>
-		<ContainerType>Tarnished</ContainerType>
-	</Object>
-	<Object type="0x7210" id="Tarnished Helmet">
-		<Class>Equipment</Class>
-		<Item/>
-		<Texture>
-			<File>lofiObjSc</File>
-			<Index>0x0a</Index>
-		</Texture>
-		<SlotType>37</SlotType>
-		<TierType>Tarnished</TierType>
-		<Description>A Tarnished Helmet radiating immense power from within, why don't you forge it at the anvil with a Restoral Essence at the blacksmith to repair it!</Description>
-		<ContainerType>Tarnished</ContainerType>
-	</Object>
-	<Object type="0x7211" id="Tarnished Shield">
-		<Class>Equipment</Class>
-		<Item/>
-		<Texture>
-			<File>lofiObjSc</File>
-			<Index>0x0b</Index>
-		</Texture>
-		<SlotType>37</SlotType>
-		<TierType>Tarnished</TierType>
-		<Description>A Tarnished Shield radiating immense power from within, why don't you forge it at the anvil with a Restoral Essence at the blacksmith to repair it!</Description>
-		<ContainerType>Tarnished</ContainerType>
-	</Object>
-	<Object type="0x7213" id="Tarnished Seal">
-		<Class>Equipment</Class>
-		<Item/>
-		<Texture>
-			<File>lofiObjSc</File>
-			<Index>0x0d</Index>
-		</Texture>
-		<SlotType>37</SlotType>
-		<TierType>Tarnished</TierType>
-		<Description>A Tarnished Seal radiating immense power from within, why don't you forge it at the anvil with a Restoral Essence at the blacksmith to repair it!</Description>
-		<ContainerType>Tarnished</ContainerType>
-	</Object>
-	<Object type="0x7228" id="Tarnished Poison">
-		<Class>Equipment</Class>
-		<Item/>
-		<Texture>
-			<File>lofiObjSc</File>
-			<Index>0x1c</Index>
-		</Texture>
-		<SlotType>37</SlotType>
-		<TierType>Tarnished</TierType>
-		<Description>A Tarnished Poison radiating immense power from within, why don't you forge it at the anvil with a Restoral Essence at the blacksmith to repair it!</Description>
-		<ContainerType>Tarnished</ContainerType>
-	</Object>
-	<Object type="0x7212" id="Tarnished Skull">
-		<Class>Equipment</Class>
-		<Item/>
-		<Texture>
-			<File>lofiObjSc</File>
-			<Index>0x0c</Index>
-		</Texture>
-		<SlotType>37</SlotType>
-		<TierType>Tarnished</TierType>
-		<Description>A Tarnished Skull radiating immense power from within, why don't you forge it at the anvil with a Restoral Essence at the blacksmith to repair it!</Description>
-		<ContainerType>Tarnished</ContainerType>
-	</Object>
-	<Object type="0x7219" id="Tarnished Trap">
-		<Class>Equipment</Class>
-		<Item/>
-		<Texture>
-			<File>lofiObjSc</File>
-			<Index>0x13</Index>
-		</Texture>
-		<SlotType>37</SlotType>
-		<TierType>Tarnished</TierType>
-		<Description>A Tarnished Trap radiating immense power from within, why don't you forge it at the anvil with a Restoral Essence at the blacksmith to repair it!</Description>
-		<ContainerType>Tarnished</ContainerType>
-	</Object>
-	<Object type="0x7225" id="Tarnished Orb">
-		<Class>Equipment</Class>
-		<Item/>
-		<Texture>
-			<File>lofiObjSc</File>
-			<Index>0x19</Index>
-		</Texture>
-		<SlotType>37</SlotType>
-		<TierType>Tarnished</TierType>
-		<Description>A Tarnished Orb radiating immense power from within, why don't you forge it at the anvil with a Restoral Essence at the blacksmith to repair it!</Description>
-		<ContainerType>Tarnished</ContainerType>
-	</Object>
-	<Object type="0x7224" id="Tarnished Prism">
-		<Class>Equipment</Class>
-		<Item/>
-		<Texture>
-			<File>lofiObjSc</File>
-			<Index>0x18</Index>
-		</Texture>
-		<SlotType>37</SlotType>
-		<TierType>Tarnished</TierType>
-		<Description>A Tarnished Prism radiating immense power from within, why don't you forge it at the anvil with a Restoral Essence at the blacksmith to repair it!</Description>
-		<ContainerType>Tarnished</ContainerType>
-	</Object>
-	<Object type="0x7221" id="Tarnished Scepter">
-		<Class>Equipment</Class>
-		<Item/>
-		<Texture>
-			<File>lofiObjSc</File>
-			<Index>0x15</Index>
-		</Texture>
-		<SlotType>37</SlotType>
-		<TierType>Tarnished</TierType>
-		<Description>A Tarnished Scepter radiating immense power from within, why don't you forge it at the anvil with a Restoral Essence at the blacksmith to repair it!</Description>
-		<ContainerType>Tarnished</ContainerType>
-	</Object>
-	<Object type="0x7215" id="Tarnished Shuriken">
-		<Class>Equipment</Class>
-		<Item/>
-		<Texture>
-			<File>lofiObjSc</File>
-			<Index>0x0f</Index>
-		</Texture>
-		<SlotType>37</SlotType>
-		<TierType>Tarnished</TierType>
-		<Description>A Tarnished Shuriken radiating immense power from within, why don't you forge it at the anvil with a Restoral Essence at the blacksmith to repair it!</Description>
-		<ContainerType>Tarnished</ContainerType>
-	</Object>
-	<Object type="0x7220" id="Tarnished Sheath">
-		<Class>Equipment</Class>
-		<Item/>
-		<Texture>
-			<File>lofiObjSc</File>
-			<Index>0x14</Index>
-		</Texture>
-		<SlotType>37</SlotType>
-		<TierType>Tarnished</TierType>
-		<Description>A Tarnished Sheath radiating immense power from within, why don't you forge it at the anvil with a Restoral Essence at the blacksmith to repair it!</Description>
-		<ContainerType>Tarnished</ContainerType>
-	</Object>
-	<Object type="0x7223" id="Tarnished Banner">
-		<Class>Equipment</Class>
-		<Item/>
-		<Texture>
-			<File>lofiObjSc</File>
-			<Index>0x17</Index>
-		</Texture>
-		<SlotType>37</SlotType>
-		<TierType>Tarnished</TierType>
-		<Description>A Tarnished Banner radiating immense power from within, why don't you forge it at the anvil with a Restoral Essence at the blacksmith to repair it!</Description>
-		<ContainerType>Tarnished</ContainerType>
-	</Object>
-	<Object type="0x7230" id="Tarnished Charm">
-		<Class>Equipment</Class>
-		<Item/>
-		<Texture>
-			<File>lofiObjSc</File>
-			<Index>0x1e</Index>
-		</Texture>
-		<SlotType>37</SlotType>
-		<TierType>Tarnished</TierType>
-		<Description>A Tarnished Charm radiating immense power from within, why don't you forge it at the anvil with a Restoral Essence at the blacksmith to repair it!</Description>
-		<ContainerType>Tarnished</ContainerType>
-	</Object>
-	<Object type="0x7227" id="Tarnished Dice">
-		<Class>Equipment</Class>
-		<Item/>
-		<Texture>
-			<File>lofiObjSc</File>
-			<Index>0x1b</Index>
-		</Texture>
-		<SlotType>37</SlotType>
-		<TierType>Tarnished</TierType>
-		<Description>A Tarnished Dice radiating immense power from within, why don't you forge it at the anvil with a Restoral Essence at the blacksmith to repair it!</Description>
-		<ContainerType>Tarnished</ContainerType>
-	</Object>
-	<Object type="0x7240" id="Tarnished Jacket">
-		<Class>Equipment</Class>
-		<Item/>
-		<Texture>
-			<File>lofiObjSc</File>
-			<Index>0x2e</Index>
-		</Texture>
-		<SlotType>37</SlotType>
-		<TierType>Tarnished</TierType>
-		<Description>A Tarnished Jacket radiating immense power from within, why don't you forge it at the anvil with a Restoral Essence at the blacksmith to repair it!</Description>
-		<ContainerType>Tarnished</ContainerType>
-	</Object>
-	<Object type="0x7217" id="Tarnished Talisman">
-		<Class>Equipment</Class>
-		<Item/>
-		<Texture>
-			<File>lofiObjSc</File>
-			<Index>0x11</Index>
-		</Texture>
-		<SlotType>37</SlotType>
-		<TierType>Tarnished</TierType>
-		<Description>A Tarnished Talisman radiating immense power from within, why don't you forge it at the anvil with a Restoral Essence at the blacksmith to repair it!</Description>
-		<ContainerType>Tarnished</ContainerType>
-	</Object>
-	<!-- #region --> // Accessories
-	<Object type="0x7229" id="Tarnished Accessory">
-		<Class>Equipment</Class>
-		<Item/>
-		<Texture>
-			<File>Crafting_LuckyDips</File>
-			<Index>0x65</Index>
-		</Texture>
-		<SlotType>37</SlotType>
-		<TierType>Tarnished</TierType>
-		<Description>A Tarnished Ring radiating immense power from within, why don't you forge it at the anvil with a Restoral Essence at the blacksmith to repair it!</Description>
-		<ContainerType>Tarnished</ContainerType>
-	</Object>
-	<!-- #region --> // Being Removed
-	<Object type="0x7242" id="Tarnished Light Abilities Chest">
-		<Class>Equipment</Class>
-		<Item/>
-		<Texture>
-			<File>lofiObjSc</File>
-			<Index>0xd0</Index>
-		</Texture>
-		<SlotType>37</SlotType>
-		<TierType>Tarnished</TierType>
-		<Description>A Tarnished treasure chest containing a random Tarnished ability. Why don't you try opening it?</Description>
-		<ExtraTooltipData>
-			<EffectInfo name="Tarnished:" description="This item grants any Tarnished ability from the robe class."/>
-		</ExtraTooltipData>
-		<Sound>use_potion</Sound>
-		<Activate gifts="0x7214,0x7216,0x7225,0x7230,0x7218,0x7221,0x7217,0x7212">Gift</Activate>
-		<InvUse/>
-		<ContainerType>Tarnished</ContainerType>
-	</Object>
-	<Object type="0x7243" id="Tarnished Medium Abilities Chest">
-		<Class>Equipment</Class>
-		<Item/>
-		<Texture>
-			<File>lofiObjSc</File>
-			<Index>0xd1</Index>
-		</Texture>
-		<SlotType>37</SlotType>
-		<TierType>Tarnished</TierType>
-		<Description>A Tarnished treasure chest containing a random Tarnished ability. Why don't you try opening it?</Description>
-		<ExtraTooltipData>
-			<EffectInfo name="Tarnished Chest:" description="This item grants any Tarnished ability from the hide class."/>
-		</ExtraTooltipData>
-		<Sound>use_potion</Sound>
-		<Activate gifts="0x7215,0x7226,0x7227,0x7228,0x7222,0x7219,0x7224,0x7240">Gift</Activate>
-		<InvUse/>
-		<ContainerType>Tarnished</ContainerType>
-	</Object>
-	<Object type="0x7244" id="Tarnished Heavy Abilities Chest">
-		<Class>Equipment</Class>
-		<Item/>
-		<Texture>
-			<File>lofiObjSc</File>
-			<Index>0xd2</Index>
-		</Texture>
-		<SlotType>37</SlotType>
-		<TierType>Tarnished</TierType>
-		<Description>A Tarnished treasure chest containing a random Tarnished ability. Why don't you try opening it?</Description>
-		<ExtraTooltipData>
-			<EffectInfo name="Tarnished Chest:" description="This item grants any Tarnished ability from the armor class."/>
-		</ExtraTooltipData>
-		<Sound>use_potion</Sound>
-		<Activate gifts="0x7210,0x7211,0x7213,0x7220,0x7223">Gift</Activate>
-		<InvUse/>
-		<ContainerType>Tarnished</ContainerType>
-	</Object>
-	<!-- #region --> // Armor
-	<Object type="0x64e7" id="Relic Platemail">
-		<Class>Equipment</Class>
-		<Item/>
-		<Texture>
-			<File>Crafting_LuckyDips</File>
-			<Index>0x6a</Index>
-		</Texture>
-		<SlotType>37</SlotType>
-		<TierType>Relic</TierType>
-		<Description>An unfathomable amount of strength pulses through this platemail, why don't you forge it at the anvil with a Godly Remnant at the blacksmith to return it's former power!</Description>
-		<ContainerType>Relic</ContainerType>
-	</Object>
-	<!-- #region --> // Weapons
-	<Object type="0x48fb" id="Relic Sword">
-		<Class>Equipment</Class>
-		<Item/>
-		<Texture>
-			<File>Crafting_LuckyDips</File>
-			<Index>0x1a</Index>
-		</Texture>
-		<SlotType>37</SlotType>
-		<TierType>Relic</TierType>
-		<Description>An unfathomable amount of strength pulses through this blade, why don't you forge it at the anvil with a Godly Remnant at the blacksmith to return it's former power!</Description>
-		<ContainerType>Relic</ContainerType>
-	</Object>
-	<Object type="0x5865" id="Relic Bow">
-		<Class>Equipment</Class>
-		<Item/>
-		<Texture>
-			<File>Crafting_LuckyDips</File>
-			<Index>0x3b</Index>
-		</Texture>
-		<SlotType>37</SlotType>
-		<TierType>Relic</TierType>
-		<Description>An unfathomable amount of strength pulses through it's thread, why don't you forge it at the anvil with a Godly Remnant at the blacksmith to return it's former power!</Description>
-		<ContainerType>Relic</ContainerType>
-	</Object>
-	<Object type="0x6846" id="Relic Dagger">
-		<Class>Equipment</Class>
-		<Item/>
-		<Texture>
-			<File>Crafting_LuckyDips</File>
-			<Index>0x0b</Index>
-		</Texture>
-		<SlotType>37</SlotType>
-		<TierType>Relic</TierType>
-		<Description>An unfathomable amount of strength pulses through this blade, why don't you forge it at the anvil with a Godly Remnant at the blacksmith to return it's former power!</Description>
-		<ContainerType>Relic</ContainerType>
-	</Object>
-	<Object type="0x10f" id="Relic Staff">
-		<Class>Equipment</Class>
-		<Item/>
-		<Texture>
-			<File>Crafting_LuckyDips</File>
-			<Index>0x29</Index>
-		</Texture>
-		<SlotType>37</SlotType>
-		<TierType>Relic</TierType>
-		<Description>An unfathomable amount of strength pulses through it's crystal, why don't you forge it at the anvil with a Godly Remnant at the blacksmith to return it's former power!</Description>
-		<ContainerType>Relic</ContainerType>
-	</Object>
-	<!-- #region --> // Accessories
-	<Object type="0x5483" id="Relic Accessory">
-		<Class>Equipment</Class>
-		<Item/>
-		<Texture>
-			<File>Crafting_LuckyDips</File>
-			<Index>0x6d</Index>
-		</Texture>
-		<SlotType>37</SlotType>
-		<TierType>Relic</TierType>
-		<Description>An unfathomable amount of strength pulses through this accessory, why don't you forge it at the anvil with a Godly Remnant at the blacksmith to return it's former power!</Description>
-		<ContainerType>Relic</ContainerType>
-	</Object>
-	<!-- #region --> // Capsules
-	<Object type="0x7920" id="Scorched Capsule">
-		<Class>Equipment</Class>
-		<Item/>
-		<Texture>
-			<File>Crafting_Capsules8x8</File>
-			<Index>0x00</Index>
-		</Texture>
-		<SlotType>39</SlotType>
-		<TierType>Valiant</TierType>
-		<Description>A strange container emitting a shimmer of the heat held within.</Description>
-		<ExtraTooltipData>
-			<EffectInfo name="" description="Contains valiant items within."/>
-		</ExtraTooltipData>
-		<Sound>use_potion</Sound>
-		<ContainerType>Valiant</ContainerType>
-	</Object>
-	<Object type="0x5484" id="Holy Capsule">
-		<Class>Equipment</Class>
-		<Item/>
-		<Texture>
-			<File>Crafting_Capsules8x8</File>
-			<Index>0x01</Index>
-		</Texture>
-		<SlotType>39</SlotType>
-		<TierType>Valiant</TierType>
-		<Description>A strange container emitting an angelic aura.</Description>
-		<ExtraTooltipData>
-			<EffectInfo name="" description="Contains valiant items within."/>
-		</ExtraTooltipData>
-		<Sound>use_potion</Sound>
-		<ContainerType>Valiant</ContainerType>
-	</Object>
-	<Object type="0x791d" id="Cosmic Capsule">
-		<Class>Equipment</Class>
-		<Item/>
-		<Texture>
-			<File>Crafting_Capsules8x8</File>
-			<Index>0x02</Index>
-		</Texture>
-		<SlotType>39</SlotType>
-		<TierType>Valiant</TierType>
-		<Description>A strange container emitting an aura of uncertainty.</Description>
-		<ExtraTooltipData>
-			<EffectInfo name="" description="Contains valiant items within."/>
-		</ExtraTooltipData>
-		<Sound>use_potion</Sound>
-		<ContainerType>Valiant</ContainerType>
-	</Object>
-	<Object type="0x791e" id="Power Capsule">
-		<Class>Equipment</Class>
-		<Item/>
-		<Texture>
-			<File>Crafting_Capsules8x8</File>
-			<Index>0x03</Index>
-		</Texture>
-		<SlotType>39</SlotType>
-		<TierType>Valiant</TierType>
-		<Description>A strange container emitting a current through itself.</Description>
-		<ExtraTooltipData>
-			<EffectInfo name="" description="Contains valiant items within."/>
-		</ExtraTooltipData>
-		<Sound>use_potion</Sound>
-		<ContainerType>Valiant</ContainerType>
-	</Object>
-	<Object type="0x791f" id="Depths Capsule">
-		<Class>Equipment</Class>
-		<Item/>
-		<Texture>
-			<File>Crafting_Capsules8x8</File>
-			<Index>0x04</Index>
-		</Texture>
-		<SlotType>39</SlotType>
-		<TierType>Valiant</TierType>
-		<Description>A strange container emitting a crushing aura that manipulates the gravity around it.</Description>
-		<ExtraTooltipData>
-			<EffectInfo name="" description="Contains valiant items within."/>
-		</ExtraTooltipData>
-		<Sound>use_potion</Sound>
-		<ContainerType>Valiant</ContainerType>
-	</Object>
+    <!-- #region --> // Armor
+    <Object type="0x7209" id="Tarnished Robe">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>Crafting_LuckyDips</File>
+            <Index>0x60</Index>
+        </Texture>
+        <SlotType>37</SlotType>
+        <TierType>Tarnished</TierType>
+        <Description>A Tarnished Robe radiating immense power from within, why don't you forge it at the anvil with a
+            Restoral Essence at the blacksmith to repair it!
+        </Description>
+        <ContainerType>Tarnished</ContainerType>
+    </Object>
+    <Object type="0x7231" id="Tarnished Leather Hide">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>Crafting_LuckyDips</File>
+            <Index>0x61</Index>
+        </Texture>
+        <SlotType>37</SlotType>
+        <TierType>Tarnished</TierType>
+        <Description>A Tarnished Leather Hide radiating immense power from within, why don't you forge it at the anvil
+            with a Restoral Essence at the blacksmith to repair it!
+        </Description>
+        <ContainerType>Tarnished</ContainerType>
+    </Object>
+    <Object type="0x7208" id="Tarnished Platemail">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>Crafting_LuckyDips</File>
+            <Index>0x62</Index>
+        </Texture>
+        <SlotType>37</SlotType>
+        <TierType>Tarnished</TierType>
+        <Description>A Tarnished Platemail radiating immense power from within, why don't you forge it at the anvil with
+            a Restoral Essence at the blacksmith to repair it!
+        </Description>
+        <ContainerType>Tarnished</ContainerType>
+    </Object>
+    <!-- #region --> // Weapons
+    <Object type="0x7304" id="Tarnished Sword">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>Crafting_LuckyDips</File>
+            <Index>0x12</Index>
+        </Texture>
+        <SlotType>37</SlotType>
+        <TierType>Tarnished</TierType>
+        <Description>A Tarnished Sword radiating immense power from within, why don't you forge it at the anvil with a
+            Restoral Essence at the blacksmith to repair it!
+        </Description>
+        <ContainerType>Tarnished</ContainerType>
+    </Object>
+    <Object type="0x7203" id="Tarnished Bow">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>Crafting_LuckyDips</File>
+            <Index>0x33</Index>
+        </Texture>
+        <SlotType>37</SlotType>
+        <TierType>Tarnished</TierType>
+        <Description>A Tarnished Bow radiating immense power from within, why don't you forge it at the anvil with a
+            Restoral Essence at the blacksmith to repair it!
+        </Description>
+        <ContainerType>Tarnished</ContainerType>
+    </Object>
+    <Object type="0x7303" id="Tarnished Dagger">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>Crafting_LuckyDips</File>
+            <Index>0x03</Index>
+        </Texture>
+        <SlotType>37</SlotType>
+        <TierType>Tarnished</TierType>
+        <Description>A Tarnished Dagger radiating immense power from within, why don't you forge it at the anvil with a
+            Restoral Essence at the blacksmith to repair it!
+        </Description>
+        <ContainerType>Tarnished</ContainerType>
+    </Object>
+    <Object type="0x7302" id="Tarnished Wand">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>Crafting_LuckyDips</File>
+            <Index>0x32</Index>
+        </Texture>
+        <SlotType>37</SlotType>
+        <TierType>Tarnished</TierType>
+        <Description>A Tarnished Wand radiating immense power from within, why don't you forge it at the anvil with a
+            Restoral Essence at the blacksmith to repair it!
+        </Description>
+        <ContainerType>Tarnished</ContainerType>
+    </Object>
+    <Object type="0x7300" id="Tarnished Staff">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>Crafting_LuckyDips</File>
+            <Index>0x21</Index>
+        </Texture>
+        <SlotType>37</SlotType>
+        <TierType>Tarnished</TierType>
+        <Description>A Tarnished Staff radiating immense power from within, why don't you forge it at the anvil with a
+            Restoral Essence at the blacksmith to repair it!
+        </Description>
+        <ContainerType>Tarnished</ContainerType>
+    </Object>
+    <Object type="0x7306" id="Tarnished Katana">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>Crafting_LuckyDips</File>
+            <Index>0x14</Index>
+        </Texture>
+        <SlotType>37</SlotType>
+        <TierType>Tarnished</TierType>
+        <Description>A Tarnished Katana radiating immense power from within, why don't you forge it at the anvil with a
+            Restoral Essence at the blacksmith to repair it!
+        </Description>
+        <ContainerType>Tarnished</ContainerType>
+    </Object>
+    <Object type="0x7301" id="Tarnished Lance">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>Crafting_LuckyDips</File>
+            <Index>0x13</Index>
+        </Texture>
+        <SlotType>37</SlotType>
+        <TierType>Tarnished</TierType>
+        <Description>A Tarnished Lance radiating immense power from within, why don't you forge it at the anvil with a
+            Restoral Essence at the blacksmith to repair it!
+        </Description>
+        <ContainerType>Tarnished</ContainerType>
+    </Object>
+    <Object type="0x7305" id="Tarnished Blades">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>lofiObjSc</File>
+            <Index>0x02</Index>
+        </Texture>
+        <SlotType>37</SlotType>
+        <TierType>Tarnished</TierType>
+        <Description>A Tarnished set of Blades radiating immense power from within, why don't you forge it at the anvil
+            with a Restoral Essence at the blacksmith to repair it!
+        </Description>
+        <ContainerType>Tarnished</ContainerType>
+    </Object>
+    <!-- #region --> // Abilities
+    <Object type="0x7222" id="Tarnished Cloak">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>lofiObjSc</File>
+            <Index>0x16</Index>
+        </Texture>
+        <SlotType>37</SlotType>
+        <TierType>Tarnished</TierType>
+        <Description>A Tarnished Cloak radiating immense power from within, why don't you forge it at the anvil with a
+            Restoral Essence at the blacksmith to repair it!
+        </Description>
+        <ContainerType>Tarnished</ContainerType>
+    </Object>
+    <Object type="0x7226" id="Tarnished Quiver">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>lofiObjSc</File>
+            <Index>0x1a</Index>
+        </Texture>
+        <SlotType>37</SlotType>
+        <TierType>Tarnished</TierType>
+        <Description>A Tarnished Quiver radiating immense power from within, why don't you forge it at the anvil with a
+            Restoral Essence at the blacksmith to repair it!
+        </Description>
+        <ContainerType>Tarnished</ContainerType>
+    </Object>
+    <Object type="0x7214" id="Tarnished Spell">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>lofiObjSc</File>
+            <Index>0x0e</Index>
+        </Texture>
+        <SlotType>37</SlotType>
+        <TierType>Tarnished</TierType>
+        <Description>A Tarnished Spell radiating immense power from within, why don't you forge it at the anvil with a
+            Restoral Essence at the blacksmith to repair it!
+        </Description>
+        <ContainerType>Tarnished</ContainerType>
+    </Object>
+    <Object type="0x7218" id="Tarnished Tome">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>lofiObjSc</File>
+            <Index>0x12</Index>
+        </Texture>
+        <SlotType>37</SlotType>
+        <TierType>Tarnished</TierType>
+        <Description>A Tarnished Tome radiating immense power from within, why don't you forge it at the anvil with a
+            Restoral Essence at the blacksmith to repair it!
+        </Description>
+        <ContainerType>Tarnished</ContainerType>
+    </Object>
+    <Object type="0x7210" id="Tarnished Helmet">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>lofiObjSc</File>
+            <Index>0x0a</Index>
+        </Texture>
+        <SlotType>37</SlotType>
+        <TierType>Tarnished</TierType>
+        <Description>A Tarnished Helmet radiating immense power from within, why don't you forge it at the anvil with a
+            Restoral Essence at the blacksmith to repair it!
+        </Description>
+        <ContainerType>Tarnished</ContainerType>
+    </Object>
+    <Object type="0x7211" id="Tarnished Shield">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>lofiObjSc</File>
+            <Index>0x0b</Index>
+        </Texture>
+        <SlotType>37</SlotType>
+        <TierType>Tarnished</TierType>
+        <Description>A Tarnished Shield radiating immense power from within, why don't you forge it at the anvil with a
+            Restoral Essence at the blacksmith to repair it!
+        </Description>
+        <ContainerType>Tarnished</ContainerType>
+    </Object>
+    <Object type="0x7213" id="Tarnished Seal">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>lofiObjSc</File>
+            <Index>0x0d</Index>
+        </Texture>
+        <SlotType>37</SlotType>
+        <TierType>Tarnished</TierType>
+        <Description>A Tarnished Seal radiating immense power from within, why don't you forge it at the anvil with a
+            Restoral Essence at the blacksmith to repair it!
+        </Description>
+        <ContainerType>Tarnished</ContainerType>
+    </Object>
+    <Object type="0x7228" id="Tarnished Poison">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>lofiObjSc</File>
+            <Index>0x1c</Index>
+        </Texture>
+        <SlotType>37</SlotType>
+        <TierType>Tarnished</TierType>
+        <Description>A Tarnished Poison radiating immense power from within, why don't you forge it at the anvil with a
+            Restoral Essence at the blacksmith to repair it!
+        </Description>
+        <ContainerType>Tarnished</ContainerType>
+    </Object>
+    <Object type="0x7212" id="Tarnished Skull">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>lofiObjSc</File>
+            <Index>0x0c</Index>
+        </Texture>
+        <SlotType>37</SlotType>
+        <TierType>Tarnished</TierType>
+        <Description>A Tarnished Skull radiating immense power from within, why don't you forge it at the anvil with a
+            Restoral Essence at the blacksmith to repair it!
+        </Description>
+        <ContainerType>Tarnished</ContainerType>
+    </Object>
+    <Object type="0x7219" id="Tarnished Trap">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>lofiObjSc</File>
+            <Index>0x13</Index>
+        </Texture>
+        <SlotType>37</SlotType>
+        <TierType>Tarnished</TierType>
+        <Description>A Tarnished Trap radiating immense power from within, why don't you forge it at the anvil with a
+            Restoral Essence at the blacksmith to repair it!
+        </Description>
+        <ContainerType>Tarnished</ContainerType>
+    </Object>
+    <Object type="0x7225" id="Tarnished Orb">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>lofiObjSc</File>
+            <Index>0x19</Index>
+        </Texture>
+        <SlotType>37</SlotType>
+        <TierType>Tarnished</TierType>
+        <Description>A Tarnished Orb radiating immense power from within, why don't you forge it at the anvil with a
+            Restoral Essence at the blacksmith to repair it!
+        </Description>
+        <ContainerType>Tarnished</ContainerType>
+    </Object>
+    <Object type="0x7224" id="Tarnished Prism">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>lofiObjSc</File>
+            <Index>0x18</Index>
+        </Texture>
+        <SlotType>37</SlotType>
+        <TierType>Tarnished</TierType>
+        <Description>A Tarnished Prism radiating immense power from within, why don't you forge it at the anvil with a
+            Restoral Essence at the blacksmith to repair it!
+        </Description>
+        <ContainerType>Tarnished</ContainerType>
+    </Object>
+    <Object type="0x7221" id="Tarnished Scepter">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>lofiObjSc</File>
+            <Index>0x15</Index>
+        </Texture>
+        <SlotType>37</SlotType>
+        <TierType>Tarnished</TierType>
+        <Description>A Tarnished Scepter radiating immense power from within, why don't you forge it at the anvil with a
+            Restoral Essence at the blacksmith to repair it!
+        </Description>
+        <ContainerType>Tarnished</ContainerType>
+    </Object>
+    <Object type="0x7215" id="Tarnished Shuriken">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>lofiObjSc</File>
+            <Index>0x0f</Index>
+        </Texture>
+        <SlotType>37</SlotType>
+        <TierType>Tarnished</TierType>
+        <Description>A Tarnished Shuriken radiating immense power from within, why don't you forge it at the anvil with
+            a Restoral Essence at the blacksmith to repair it!
+        </Description>
+        <ContainerType>Tarnished</ContainerType>
+    </Object>
+    <Object type="0x7220" id="Tarnished Sheath">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>lofiObjSc</File>
+            <Index>0x14</Index>
+        </Texture>
+        <SlotType>37</SlotType>
+        <TierType>Tarnished</TierType>
+        <Description>A Tarnished Sheath radiating immense power from within, why don't you forge it at the anvil with a
+            Restoral Essence at the blacksmith to repair it!
+        </Description>
+        <ContainerType>Tarnished</ContainerType>
+    </Object>
+    <Object type="0x7223" id="Tarnished Banner">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>lofiObjSc</File>
+            <Index>0x17</Index>
+        </Texture>
+        <SlotType>37</SlotType>
+        <TierType>Tarnished</TierType>
+        <Description>A Tarnished Banner radiating immense power from within, why don't you forge it at the anvil with a
+            Restoral Essence at the blacksmith to repair it!
+        </Description>
+        <ContainerType>Tarnished</ContainerType>
+    </Object>
+    <Object type="0x7230" id="Tarnished Charm">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>lofiObjSc</File>
+            <Index>0x1e</Index>
+        </Texture>
+        <SlotType>37</SlotType>
+        <TierType>Tarnished</TierType>
+        <Description>A Tarnished Charm radiating immense power from within, why don't you forge it at the anvil with a
+            Restoral Essence at the blacksmith to repair it!
+        </Description>
+        <ContainerType>Tarnished</ContainerType>
+    </Object>
+    <Object type="0x7227" id="Tarnished Dice">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>lofiObjSc</File>
+            <Index>0x1b</Index>
+        </Texture>
+        <SlotType>37</SlotType>
+        <TierType>Tarnished</TierType>
+        <Description>A Tarnished Dice radiating immense power from within, why don't you forge it at the anvil with a
+            Restoral Essence at the blacksmith to repair it!
+        </Description>
+        <ContainerType>Tarnished</ContainerType>
+    </Object>
+    <Object type="0x7240" id="Tarnished Jacket">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>lofiObjSc</File>
+            <Index>0x2e</Index>
+        </Texture>
+        <SlotType>37</SlotType>
+        <TierType>Tarnished</TierType>
+        <Description>A Tarnished Jacket radiating immense power from within, why don't you forge it at the anvil with a
+            Restoral Essence at the blacksmith to repair it!
+        </Description>
+        <ContainerType>Tarnished</ContainerType>
+    </Object>
+    <Object type="0x7217" id="Tarnished Talisman">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>lofiObjSc</File>
+            <Index>0x11</Index>
+        </Texture>
+        <SlotType>37</SlotType>
+        <TierType>Tarnished</TierType>
+        <Description>A Tarnished Talisman radiating immense power from within, why don't you forge it at the anvil with
+            a Restoral Essence at the blacksmith to repair it!
+        </Description>
+        <ContainerType>Tarnished</ContainerType>
+    </Object>
+    <!-- #region --> // Accessories
+    <Object type="0x7229" id="Tarnished Accessory">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>Crafting_LuckyDips</File>
+            <Index>0x65</Index>
+        </Texture>
+        <SlotType>37</SlotType>
+        <TierType>Tarnished</TierType>
+        <Description>A Tarnished Ring radiating immense power from within, why don't you forge it at the anvil with a
+            Restoral Essence at the blacksmith to repair it!
+        </Description>
+        <ContainerType>Tarnished</ContainerType>
+    </Object>
+    <!-- #region --> // Being Removed
+    <Object type="0x7242" id="Tarnished Light Abilities Chest">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>lofiObjSc</File>
+            <Index>0xd0</Index>
+        </Texture>
+        <SlotType>37</SlotType>
+        <TierType>Tarnished</TierType>
+        <Description>A Tarnished treasure chest containing a random Tarnished ability. Why don't you try opening it?
+        </Description>
+        <ExtraTooltipData>
+            <EffectInfo name="Tarnished:" description="This item grants any Tarnished ability from the robe class."/>
+        </ExtraTooltipData>
+        <Sound>use_potion</Sound>
+        <Activate gifts="0x7214,0x7216,0x7225,0x7230,0x7218,0x7221,0x7217,0x7212">Gift</Activate>
+        <InvUse/>
+        <ContainerType>Tarnished</ContainerType>
+    </Object>
+    <Object type="0x7243" id="Tarnished Medium Abilities Chest">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>lofiObjSc</File>
+            <Index>0xd1</Index>
+        </Texture>
+        <SlotType>37</SlotType>
+        <TierType>Tarnished</TierType>
+        <Description>A Tarnished treasure chest containing a random Tarnished ability. Why don't you try opening it?
+        </Description>
+        <ExtraTooltipData>
+            <EffectInfo name="Tarnished Chest:"
+                        description="This item grants any Tarnished ability from the hide class."/>
+        </ExtraTooltipData>
+        <Sound>use_potion</Sound>
+        <Activate gifts="0x7215,0x7226,0x7227,0x7228,0x7222,0x7219,0x7224,0x7240">Gift</Activate>
+        <InvUse/>
+        <ContainerType>Tarnished</ContainerType>
+    </Object>
+    <Object type="0x7244" id="Tarnished Heavy Abilities Chest">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>lofiObjSc</File>
+            <Index>0xd2</Index>
+        </Texture>
+        <SlotType>37</SlotType>
+        <TierType>Tarnished</TierType>
+        <Description>A Tarnished treasure chest containing a random Tarnished ability. Why don't you try opening it?
+        </Description>
+        <ExtraTooltipData>
+            <EffectInfo name="Tarnished Chest:"
+                        description="This item grants any Tarnished ability from the armor class."/>
+        </ExtraTooltipData>
+        <Sound>use_potion</Sound>
+        <Activate gifts="0x7210,0x7211,0x7213,0x7220,0x7223">Gift</Activate>
+        <InvUse/>
+        <ContainerType>Tarnished</ContainerType>
+    </Object>
+    <!-- #region --> // Armor
+    <Object type="0x64e7" id="Relic Platemail">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>Crafting_LuckyDips</File>
+            <Index>0x6a</Index>
+        </Texture>
+        <SlotType>37</SlotType>
+        <TierType>Relic</TierType>
+        <Description>An unfathomable amount of strength pulses through this platemail, why don't you forge it at the
+            anvil with a Godly Remnant at the blacksmith to return it's former power!
+        </Description>
+        <ContainerType>Relic</ContainerType>
+    </Object>
+    <!-- #region --> // Weapons
+    <Object type="0x48fb" id="Relic Sword">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>Crafting_LuckyDips</File>
+            <Index>0x1a</Index>
+        </Texture>
+        <SlotType>37</SlotType>
+        <TierType>Relic</TierType>
+        <Description>An unfathomable amount of strength pulses through this blade, why don't you forge it at the anvil
+            with a Godly Remnant at the blacksmith to return it's former power!
+        </Description>
+        <ContainerType>Relic</ContainerType>
+    </Object>
+    <Object type="0x5865" id="Relic Bow">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>Crafting_LuckyDips</File>
+            <Index>0x3b</Index>
+        </Texture>
+        <SlotType>37</SlotType>
+        <TierType>Relic</TierType>
+        <Description>An unfathomable amount of strength pulses through it's thread, why don't you forge it at the anvil
+            with a Godly Remnant at the blacksmith to return it's former power!
+        </Description>
+        <ContainerType>Relic</ContainerType>
+    </Object>
+    <Object type="0x6846" id="Relic Dagger">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>Crafting_LuckyDips</File>
+            <Index>0x0b</Index>
+        </Texture>
+        <SlotType>37</SlotType>
+        <TierType>Relic</TierType>
+        <Description>An unfathomable amount of strength pulses through this blade, why don't you forge it at the anvil
+            with a Godly Remnant at the blacksmith to return it's former power!
+        </Description>
+        <ContainerType>Relic</ContainerType>
+    </Object>
+    <Object type="0x10f" id="Relic Staff">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>Crafting_LuckyDips</File>
+            <Index>0x29</Index>
+        </Texture>
+        <SlotType>37</SlotType>
+        <TierType>Relic</TierType>
+        <Description>An unfathomable amount of strength pulses through it's crystal, why don't you forge it at the anvil
+            with a Godly Remnant at the blacksmith to return it's former power!
+        </Description>
+        <ContainerType>Relic</ContainerType>
+    </Object>
+    <!-- #region --> // Accessories
+    <Object type="0x5483" id="Relic Accessory">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>Crafting_LuckyDips</File>
+            <Index>0x6d</Index>
+        </Texture>
+        <SlotType>37</SlotType>
+        <TierType>Relic</TierType>
+        <Description>An unfathomable amount of strength pulses through this accessory, why don't you forge it at the
+            anvil with a Godly Remnant at the blacksmith to return it's former power!
+        </Description>
+        <ContainerType>Relic</ContainerType>
+    </Object>
+    <!-- #region --> // Capsules
+    <Object type="0x7920" id="Scorched Capsule">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>Crafting_Capsules8x8</File>
+            <Index>0x00</Index>
+        </Texture>
+        <SlotType>39</SlotType>
+        <TierType>Valiant</TierType>
+        <Description>A strange container emitting a shimmer of the heat held within.</Description>
+        <ExtraTooltipData>
+            <EffectInfo name="" description="Contains valiant items within."/>
+        </ExtraTooltipData>
+        <Sound>use_potion</Sound>
+        <ContainerType>Valiant</ContainerType>
+    </Object>
+    <Object type="0x5484" id="Holy Capsule">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>Crafting_Capsules8x8</File>
+            <Index>0x01</Index>
+        </Texture>
+        <SlotType>39</SlotType>
+        <TierType>Valiant</TierType>
+        <Description>A strange container emitting an angelic aura.</Description>
+        <ExtraTooltipData>
+            <EffectInfo name="" description="Contains valiant items within."/>
+        </ExtraTooltipData>
+        <Sound>use_potion</Sound>
+        <ContainerType>Valiant</ContainerType>
+    </Object>
+    <Object type="0x791d" id="Cosmic Capsule">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>Crafting_Capsules8x8</File>
+            <Index>0x02</Index>
+        </Texture>
+        <SlotType>39</SlotType>
+        <TierType>Valiant</TierType>
+        <Description>A strange container emitting an aura of uncertainty.</Description>
+        <ExtraTooltipData>
+            <EffectInfo name="" description="Contains valiant items within."/>
+        </ExtraTooltipData>
+        <Sound>use_potion</Sound>
+        <ContainerType>Valiant</ContainerType>
+    </Object>
+    <Object type="0x791e" id="Power Capsule">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>Crafting_Capsules8x8</File>
+            <Index>0x03</Index>
+        </Texture>
+        <SlotType>39</SlotType>
+        <TierType>Valiant</TierType>
+        <Description>A strange container emitting a current through itself.</Description>
+        <ExtraTooltipData>
+            <EffectInfo name="" description="Contains valiant items within."/>
+        </ExtraTooltipData>
+        <Sound>use_potion</Sound>
+        <ContainerType>Valiant</ContainerType>
+    </Object>
+    <Object type="0x791f" id="Depths Capsule">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>Crafting_Capsules8x8</File>
+            <Index>0x04</Index>
+        </Texture>
+        <SlotType>39</SlotType>
+        <TierType>Valiant</TierType>
+        <Description>A strange container emitting a crushing aura that manipulates the gravity around it.</Description>
+        <ExtraTooltipData>
+            <EffectInfo name="" description="Contains valiant items within."/>
+        </ExtraTooltipData>
+        <Sound>use_potion</Sound>
+        <ContainerType>Valiant</ContainerType>
+    </Object>
 </Objects>

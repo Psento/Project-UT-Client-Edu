@@ -1,1518 +1,1518 @@
 <Objects>
-	<Object type="0x15" id="Windsor-Tan Clothing Dye">
-		<Class>Dye</Class>
-		<Item/>
-		<Texture>
-			<File>Textiles8x8</File>
-			<Index>0x10</Index>
-		</Texture>
-		<Mask>
-			<File>Textiles8x8</File>
-			<Index>0x00</Index>
-		</Mask>
-		<Tex1>0x01A84300</Tex1>
-		<SlotType>10</SlotType>
-		<Description>A vial of dye for coloring clothing.</Description>
-		<Activate>Dye</Activate>
-		<Sound>use_potion</Sound>
-		<Consumable/>
-	</Object>
-	<Object type="0x16" id="Windsor-Tan Accessory Dye">
-		<Class>Dye</Class>
-		<Item/>
-		<Texture>
-			<File>Textiles8x8</File>
-			<Index>0x01</Index>
-		</Texture>
-		<Mask>
-			<File>Textiles8x8</File>
-			<Index>0x02</Index>
-		</Mask>
-		<Tex2>0x01A84300</Tex2>
-		<SlotType>10</SlotType>
-		<Description>A vial of dye for coloring accessories.</Description>
-		<Activate>Dye</Activate>
-		<Sound>use_potion</Sound>
-		<Consumable/>
-	</Object>
+    <Object type="0x15" id="Windsor-Tan Clothing Dye">
+        <Class>Dye</Class>
+        <Item/>
+        <Texture>
+            <File>Textiles8x8</File>
+            <Index>0x10</Index>
+        </Texture>
+        <Mask>
+            <File>Textiles8x8</File>
+            <Index>0x00</Index>
+        </Mask>
+        <Tex1>0x01A84300</Tex1>
+        <SlotType>10</SlotType>
+        <Description>A vial of dye for coloring clothing.</Description>
+        <Activate>Dye</Activate>
+        <Sound>use_potion</Sound>
+        <Consumable/>
+    </Object>
+    <Object type="0x16" id="Windsor-Tan Accessory Dye">
+        <Class>Dye</Class>
+        <Item/>
+        <Texture>
+            <File>Textiles8x8</File>
+            <Index>0x01</Index>
+        </Texture>
+        <Mask>
+            <File>Textiles8x8</File>
+            <Index>0x02</Index>
+        </Mask>
+        <Tex2>0x01A84300</Tex2>
+        <SlotType>10</SlotType>
+        <Description>A vial of dye for coloring accessories.</Description>
+        <Activate>Dye</Activate>
+        <Sound>use_potion</Sound>
+        <Consumable/>
+    </Object>
 
-	<Object type="0x17" id="Coconut Clothing Dye">
-		<Class>Dye</Class>
-		<Item/>
-		<Texture>
-			<File>Textiles8x8</File>
-			<Index>0x10</Index>
-		</Texture>
-		<Mask>
-			<File>Textiles8x8</File>
-			<Index>0x00</Index>
-		</Mask>
-		<Tex1>0x01925448</Tex1>
-		<SlotType>10</SlotType>
-		<Description>A vial of dye for coloring clothing.</Description>
-		<Activate>Dye</Activate>
-		<Sound>use_potion</Sound>
-		<Consumable/>
-	</Object>
-	<Object type="0x18" id="Coconut Accessory Dye">
-		<Class>Dye</Class>
-		<Item/>
-		<Texture>
-			<File>Textiles8x8</File>
-			<Index>0x01</Index>
-		</Texture>
-		<Mask>
-			<File>Textiles8x8</File>
-			<Index>0x02</Index>
-		</Mask>
-		<Tex2>0x01925448</Tex2>
-		<SlotType>10</SlotType>
-		<Description>A vial of dye for coloring accessories.</Description>
-		<Activate>Dye</Activate>
-		<Sound>use_potion</Sound>
-		<Consumable/>
-	</Object>
+    <Object type="0x17" id="Coconut Clothing Dye">
+        <Class>Dye</Class>
+        <Item/>
+        <Texture>
+            <File>Textiles8x8</File>
+            <Index>0x10</Index>
+        </Texture>
+        <Mask>
+            <File>Textiles8x8</File>
+            <Index>0x00</Index>
+        </Mask>
+        <Tex1>0x01925448</Tex1>
+        <SlotType>10</SlotType>
+        <Description>A vial of dye for coloring clothing.</Description>
+        <Activate>Dye</Activate>
+        <Sound>use_potion</Sound>
+        <Consumable/>
+    </Object>
+    <Object type="0x18" id="Coconut Accessory Dye">
+        <Class>Dye</Class>
+        <Item/>
+        <Texture>
+            <File>Textiles8x8</File>
+            <Index>0x01</Index>
+        </Texture>
+        <Mask>
+            <File>Textiles8x8</File>
+            <Index>0x02</Index>
+        </Mask>
+        <Tex2>0x01925448</Tex2>
+        <SlotType>10</SlotType>
+        <Description>A vial of dye for coloring accessories.</Description>
+        <Activate>Dye</Activate>
+        <Sound>use_potion</Sound>
+        <Consumable/>
+    </Object>
 
-	<Object type="0x19" id="Jonquill Clothing Dye">
-		<Class>Dye</Class>
-		<Item/>
-		<Texture>
-			<File>Textiles8x8</File>
-			<Index>0x10</Index>
-		</Texture>
-		<Mask>
-			<File>Textiles8x8</File>
-			<Index>0x00</Index>
-		</Mask>
-		<Tex1>0x01F1C40F</Tex1>
-		<SlotType>10</SlotType>
-		<Description>A vial of dye for coloring clothing.</Description>
-		<Activate>Dye</Activate>
-		<Sound>use_potion</Sound>
-		<Consumable/>
-	</Object>
-	<Object type="0x1a" id="Jonquill Accessory Dye">
-		<Class>Dye</Class>
-		<Item/>
-		<Texture>
-			<File>Textiles8x8</File>
-			<Index>0x01</Index>
-		</Texture>
-		<Mask>
-			<File>Textiles8x8</File>
-			<Index>0x02</Index>
-		</Mask>
-		<Tex2>0x01F1C40F</Tex2>
-		<SlotType>10</SlotType>
-		<Description>A vial of dye for coloring accessories.</Description>
-		<Activate>Dye</Activate>
-		<Sound>use_potion</Sound>
-		<Consumable/>
-	</Object>
+    <Object type="0x19" id="Jonquill Clothing Dye">
+        <Class>Dye</Class>
+        <Item/>
+        <Texture>
+            <File>Textiles8x8</File>
+            <Index>0x10</Index>
+        </Texture>
+        <Mask>
+            <File>Textiles8x8</File>
+            <Index>0x00</Index>
+        </Mask>
+        <Tex1>0x01F1C40F</Tex1>
+        <SlotType>10</SlotType>
+        <Description>A vial of dye for coloring clothing.</Description>
+        <Activate>Dye</Activate>
+        <Sound>use_potion</Sound>
+        <Consumable/>
+    </Object>
+    <Object type="0x1a" id="Jonquill Accessory Dye">
+        <Class>Dye</Class>
+        <Item/>
+        <Texture>
+            <File>Textiles8x8</File>
+            <Index>0x01</Index>
+        </Texture>
+        <Mask>
+            <File>Textiles8x8</File>
+            <Index>0x02</Index>
+        </Mask>
+        <Tex2>0x01F1C40F</Tex2>
+        <SlotType>10</SlotType>
+        <Description>A vial of dye for coloring accessories.</Description>
+        <Activate>Dye</Activate>
+        <Sound>use_potion</Sound>
+        <Consumable/>
+    </Object>
 
-	<Object type="0x1b" id="Vivid-Tango Clothing Dye">
-		<Class>Dye</Class>
-		<Item/>
-		<Texture>
-			<File>Textiles8x8</File>
-			<Index>0x10</Index>
-		</Texture>
-		<Mask>
-			<File>Textiles8x8</File>
-			<Index>0x00</Index>
-		</Mask>
-		<Tex1>0x01E67E22</Tex1>
-		<SlotType>10</SlotType>
-		<Description>A vial of dye for coloring clothing.</Description>
-		<Activate>Dye</Activate>
-		<Sound>use_potion</Sound>
-		<Consumable/>
-	</Object>
-	<Object type="0x1c" id="Vivid-Tango Accessory Dye">
-		<Class>Dye</Class>
-		<Item/>
-		<Texture>
-			<File>Textiles8x8</File>
-			<Index>0x01</Index>
-		</Texture>
-		<Mask>
-			<File>Textiles8x8</File>
-			<Index>0x02</Index>
-		</Mask>
-		<Tex2>0x01E67E22</Tex2>
-		<SlotType>10</SlotType>
-		<Description>A vial of dye for coloring accessories.</Description>
-		<Activate>Dye</Activate>
-		<Sound>use_potion</Sound>
-		<Consumable/>
-	</Object>
+    <Object type="0x1b" id="Vivid-Tango Clothing Dye">
+        <Class>Dye</Class>
+        <Item/>
+        <Texture>
+            <File>Textiles8x8</File>
+            <Index>0x10</Index>
+        </Texture>
+        <Mask>
+            <File>Textiles8x8</File>
+            <Index>0x00</Index>
+        </Mask>
+        <Tex1>0x01E67E22</Tex1>
+        <SlotType>10</SlotType>
+        <Description>A vial of dye for coloring clothing.</Description>
+        <Activate>Dye</Activate>
+        <Sound>use_potion</Sound>
+        <Consumable/>
+    </Object>
+    <Object type="0x1c" id="Vivid-Tango Accessory Dye">
+        <Class>Dye</Class>
+        <Item/>
+        <Texture>
+            <File>Textiles8x8</File>
+            <Index>0x01</Index>
+        </Texture>
+        <Mask>
+            <File>Textiles8x8</File>
+            <Index>0x02</Index>
+        </Mask>
+        <Tex2>0x01E67E22</Tex2>
+        <SlotType>10</SlotType>
+        <Description>A vial of dye for coloring accessories.</Description>
+        <Activate>Dye</Activate>
+        <Sound>use_potion</Sound>
+        <Consumable/>
+    </Object>
 
-	<Object type="0x1d" id="Carmine-Pink Clothing Dye">
-		<Class>Dye</Class>
-		<Item/>
-		<Texture>
-			<File>Textiles8x8</File>
-			<Index>0x10</Index>
-		</Texture>
-		<Mask>
-			<File>Textiles8x8</File>
-			<Index>0x00</Index>
-		</Mask>
-		<Tex1>0x01E74C3C</Tex1>
-		<SlotType>10</SlotType>
-		<Description>A vial of dye for coloring clothing.</Description>
-		<Activate>Dye</Activate>
-		<Sound>use_potion</Sound>
-		<Consumable/>
-	</Object>
-	<Object type="0x1e" id="Carmine-Pink Accessory Dye">
-		<Class>Dye</Class>
-		<Item/>
-		<Texture>
-			<File>Textiles8x8</File>
-			<Index>0x01</Index>
-		</Texture>
-		<Mask>
-			<File>Textiles8x8</File>
-			<Index>0x02</Index>
-		</Mask>
-		<Tex2>0x01E74C3C</Tex2>
-		<SlotType>10</SlotType>
-		<Description>A vial of dye for coloring accessories.</Description>
-		<Activate>Dye</Activate>
-		<Sound>use_potion</Sound>
-		<Consumable/>
-	</Object>
+    <Object type="0x1d" id="Carmine-Pink Clothing Dye">
+        <Class>Dye</Class>
+        <Item/>
+        <Texture>
+            <File>Textiles8x8</File>
+            <Index>0x10</Index>
+        </Texture>
+        <Mask>
+            <File>Textiles8x8</File>
+            <Index>0x00</Index>
+        </Mask>
+        <Tex1>0x01E74C3C</Tex1>
+        <SlotType>10</SlotType>
+        <Description>A vial of dye for coloring clothing.</Description>
+        <Activate>Dye</Activate>
+        <Sound>use_potion</Sound>
+        <Consumable/>
+    </Object>
+    <Object type="0x1e" id="Carmine-Pink Accessory Dye">
+        <Class>Dye</Class>
+        <Item/>
+        <Texture>
+            <File>Textiles8x8</File>
+            <Index>0x01</Index>
+        </Texture>
+        <Mask>
+            <File>Textiles8x8</File>
+            <Index>0x02</Index>
+        </Mask>
+        <Tex2>0x01E74C3C</Tex2>
+        <SlotType>10</SlotType>
+        <Description>A vial of dye for coloring accessories.</Description>
+        <Activate>Dye</Activate>
+        <Sound>use_potion</Sound>
+        <Consumable/>
+    </Object>
 
-	<Object type="0x1f" id="Dingy-Dungeon Clothing Dye">
-		<Class>Dye</Class>
-		<Item/>
-		<Texture>
-			<File>Textiles8x8</File>
-			<Index>0x10</Index>
-		</Texture>
-		<Mask>
-			<File>Textiles8x8</File>
-			<Index>0x00</Index>
-		</Mask>
-		<Tex1>0x01be2a4e</Tex1>
-		<SlotType>10</SlotType>
-		<Description>A vial of dye for coloring clothing.</Description>
-		<Activate>Dye</Activate>
-		<Sound>use_potion</Sound>
-		<Consumable/>
-	</Object>
-	<Object type="0x20" id="Dingy-Dungeon Accessory Dye">
-		<Class>Dye</Class>
-		<Item/>
-		<Texture>
-			<File>Textiles8x8</File>
-			<Index>0x01</Index>
-		</Texture>
-		<Mask>
-			<File>Textiles8x8</File>
-			<Index>0x02</Index>
-		</Mask>
-		<Tex2>0x01be2a4e</Tex2>
-		<SlotType>10</SlotType>
-		<Description>A vial of dye for coloring accessories.</Description>
-		<Activate>Dye</Activate>
-		<Sound>use_potion</Sound>
-		<Consumable/>
-	</Object>
+    <Object type="0x1f" id="Dingy-Dungeon Clothing Dye">
+        <Class>Dye</Class>
+        <Item/>
+        <Texture>
+            <File>Textiles8x8</File>
+            <Index>0x10</Index>
+        </Texture>
+        <Mask>
+            <File>Textiles8x8</File>
+            <Index>0x00</Index>
+        </Mask>
+        <Tex1>0x01be2a4e</Tex1>
+        <SlotType>10</SlotType>
+        <Description>A vial of dye for coloring clothing.</Description>
+        <Activate>Dye</Activate>
+        <Sound>use_potion</Sound>
+        <Consumable/>
+    </Object>
+    <Object type="0x20" id="Dingy-Dungeon Accessory Dye">
+        <Class>Dye</Class>
+        <Item/>
+        <Texture>
+            <File>Textiles8x8</File>
+            <Index>0x01</Index>
+        </Texture>
+        <Mask>
+            <File>Textiles8x8</File>
+            <Index>0x02</Index>
+        </Mask>
+        <Tex2>0x01be2a4e</Tex2>
+        <SlotType>10</SlotType>
+        <Description>A vial of dye for coloring accessories.</Description>
+        <Activate>Dye</Activate>
+        <Sound>use_potion</Sound>
+        <Consumable/>
+    </Object>
 
-	<Object type="0x21" id="Coyote-Brown Clothing Dye">
-		<Class>Dye</Class>
-		<Item/>
-		<Texture>
-			<File>Textiles8x8</File>
-			<Index>0x10</Index>
-		</Texture>
-		<Mask>
-			<File>Textiles8x8</File>
-			<Index>0x00</Index>
-		</Mask>
-		<Tex1>0x017c5e44</Tex1>
-		<SlotType>10</SlotType>
-		<Description>A vial of dye for coloring clothing.</Description>
-		<Activate>Dye</Activate>
-		<Sound>use_potion</Sound>
-		<Consumable/>
-	</Object>
-	<Object type="0x22" id="Coyote-Brown Accessory Dye">
-		<Class>Dye</Class>
-		<Item/>
-		<Texture>
-			<File>Textiles8x8</File>
-			<Index>0x01</Index>
-		</Texture>
-		<Mask>
-			<File>Textiles8x8</File>
-			<Index>0x02</Index>
-		</Mask>
-		<Tex2>0x017c5e44</Tex2>
-		<SlotType>10</SlotType>
-		<Description>A vial of dye for coloring accessories.</Description>
-		<Activate>Dye</Activate>
-		<Sound>use_potion</Sound>
-		<Consumable/>
-	</Object>
+    <Object type="0x21" id="Coyote-Brown Clothing Dye">
+        <Class>Dye</Class>
+        <Item/>
+        <Texture>
+            <File>Textiles8x8</File>
+            <Index>0x10</Index>
+        </Texture>
+        <Mask>
+            <File>Textiles8x8</File>
+            <Index>0x00</Index>
+        </Mask>
+        <Tex1>0x017c5e44</Tex1>
+        <SlotType>10</SlotType>
+        <Description>A vial of dye for coloring clothing.</Description>
+        <Activate>Dye</Activate>
+        <Sound>use_potion</Sound>
+        <Consumable/>
+    </Object>
+    <Object type="0x22" id="Coyote-Brown Accessory Dye">
+        <Class>Dye</Class>
+        <Item/>
+        <Texture>
+            <File>Textiles8x8</File>
+            <Index>0x01</Index>
+        </Texture>
+        <Mask>
+            <File>Textiles8x8</File>
+            <Index>0x02</Index>
+        </Mask>
+        <Tex2>0x017c5e44</Tex2>
+        <SlotType>10</SlotType>
+        <Description>A vial of dye for coloring accessories.</Description>
+        <Activate>Dye</Activate>
+        <Sound>use_potion</Sound>
+        <Consumable/>
+    </Object>
 
-	<Object type="0x23" id="Crystal-Blue Clothing Dye">
-		<Class>Dye</Class>
-		<Item/>
-		<Texture>
-			<File>Textiles8x8</File>
-			<Index>0x10</Index>
-		</Texture>
-		<Mask>
-			<File>Textiles8x8</File>
-			<Index>0x00</Index>
-		</Mask>
-		<Tex1>0x0164a8b1</Tex1>
-		<SlotType>10</SlotType>
-		<Description>A vial of dye for coloring clothing.</Description>
-		<Activate>Dye</Activate>
-		<Sound>use_potion</Sound>
-		<Consumable/>
-	</Object>
-	<Object type="0x24" id="Crystal-Blue Accessory Dye">
-		<Class>Dye</Class>
-		<Item/>
-		<Texture>
-			<File>Textiles8x8</File>
-			<Index>0x01</Index>
-		</Texture>
-		<Mask>
-			<File>Textiles8x8</File>
-			<Index>0x02</Index>
-		</Mask>
-		<Tex2>0x0164a8b1</Tex2>
-		<SlotType>10</SlotType>
-		<Description>A vial of dye for coloring accessories.</Description>
-		<Activate>Dye</Activate>
-		<Sound>use_potion</Sound>
-		<Consumable/>
-	</Object>
+    <Object type="0x23" id="Crystal-Blue Clothing Dye">
+        <Class>Dye</Class>
+        <Item/>
+        <Texture>
+            <File>Textiles8x8</File>
+            <Index>0x10</Index>
+        </Texture>
+        <Mask>
+            <File>Textiles8x8</File>
+            <Index>0x00</Index>
+        </Mask>
+        <Tex1>0x0164a8b1</Tex1>
+        <SlotType>10</SlotType>
+        <Description>A vial of dye for coloring clothing.</Description>
+        <Activate>Dye</Activate>
+        <Sound>use_potion</Sound>
+        <Consumable/>
+    </Object>
+    <Object type="0x24" id="Crystal-Blue Accessory Dye">
+        <Class>Dye</Class>
+        <Item/>
+        <Texture>
+            <File>Textiles8x8</File>
+            <Index>0x01</Index>
+        </Texture>
+        <Mask>
+            <File>Textiles8x8</File>
+            <Index>0x02</Index>
+        </Mask>
+        <Tex2>0x0164a8b1</Tex2>
+        <SlotType>10</SlotType>
+        <Description>A vial of dye for coloring accessories.</Description>
+        <Activate>Dye</Activate>
+        <Sound>use_potion</Sound>
+        <Consumable/>
+    </Object>
 
-	<Object type="0x25" id="Safety-Yellow Clothing Dye">
-		<Class>Dye</Class>
-		<Item/>
-		<Texture>
-			<File>Textiles8x8</File>
-			<Index>0x10</Index>
-		</Texture>
-		<Mask>
-			<File>Textiles8x8</File>
-			<Index>0x00</Index>
-		</Mask>
-		<Tex1>0x01f1d600</Tex1>
-		<SlotType>10</SlotType>
-		<Description>A vial of dye for coloring clothing.</Description>
-		<Activate>Dye</Activate>
-		<Sound>use_potion</Sound>
-		<Consumable/>
-	</Object>
-	<Object type="0x26" id="Safety-Yellow Accessory Dye">
-		<Class>Dye</Class>
-		<Item/>
-		<Texture>
-			<File>Textiles8x8</File>
-			<Index>0x01</Index>
-		</Texture>
-		<Mask>
-			<File>Textiles8x8</File>
-			<Index>0x02</Index>
-		</Mask>
-		<Tex2>0x01f1d600</Tex2>
-		<SlotType>10</SlotType>
-		<Description>A vial of dye for coloring accessories.</Description>
-		<Activate>Dye</Activate>
-		<Sound>use_potion</Sound>
-		<Consumable/>
-	</Object>
+    <Object type="0x25" id="Safety-Yellow Clothing Dye">
+        <Class>Dye</Class>
+        <Item/>
+        <Texture>
+            <File>Textiles8x8</File>
+            <Index>0x10</Index>
+        </Texture>
+        <Mask>
+            <File>Textiles8x8</File>
+            <Index>0x00</Index>
+        </Mask>
+        <Tex1>0x01f1d600</Tex1>
+        <SlotType>10</SlotType>
+        <Description>A vial of dye for coloring clothing.</Description>
+        <Activate>Dye</Activate>
+        <Sound>use_potion</Sound>
+        <Consumable/>
+    </Object>
+    <Object type="0x26" id="Safety-Yellow Accessory Dye">
+        <Class>Dye</Class>
+        <Item/>
+        <Texture>
+            <File>Textiles8x8</File>
+            <Index>0x01</Index>
+        </Texture>
+        <Mask>
+            <File>Textiles8x8</File>
+            <Index>0x02</Index>
+        </Mask>
+        <Tex2>0x01f1d600</Tex2>
+        <SlotType>10</SlotType>
+        <Description>A vial of dye for coloring accessories.</Description>
+        <Activate>Dye</Activate>
+        <Sound>use_potion</Sound>
+        <Consumable/>
+    </Object>
 
-	<Object type="0x27" id="Red Clothing Dye">
-		<Class>Dye</Class>
-		<Item/>
-		<Texture>
-			<File>Textiles8x8</File>
-			<Index>0x10</Index>
-		</Texture>
-		<Mask>
-			<File>Textiles8x8</File>
-			<Index>0x00</Index>
-		</Mask>
-		<Tex1>0x01ee2626</Tex1>
-		<SlotType>10</SlotType>
-		<Description>A vial of dye for coloring clothing.</Description>
-		<Activate>Dye</Activate>
-		<Sound>use_potion</Sound>
-		<Consumable/>
-	</Object>
-	<Object type="0x28" id="Red Accessory Dye">
-		<Class>Dye</Class>
-		<Item/>
-		<Texture>
-			<File>Textiles8x8</File>
-			<Index>0x01</Index>
-		</Texture>
-		<Mask>
-			<File>Textiles8x8</File>
-			<Index>0x02</Index>
-		</Mask>
-		<Tex2>0x01ee2626</Tex2>
-		<SlotType>10</SlotType>
-		<Description>A vial of dye for coloring accessories.</Description>
-		<Activate>Dye</Activate>
-		<Sound>use_potion</Sound>
-		<Consumable/>
-	</Object>
+    <Object type="0x27" id="Red Clothing Dye">
+        <Class>Dye</Class>
+        <Item/>
+        <Texture>
+            <File>Textiles8x8</File>
+            <Index>0x10</Index>
+        </Texture>
+        <Mask>
+            <File>Textiles8x8</File>
+            <Index>0x00</Index>
+        </Mask>
+        <Tex1>0x01ee2626</Tex1>
+        <SlotType>10</SlotType>
+        <Description>A vial of dye for coloring clothing.</Description>
+        <Activate>Dye</Activate>
+        <Sound>use_potion</Sound>
+        <Consumable/>
+    </Object>
+    <Object type="0x28" id="Red Accessory Dye">
+        <Class>Dye</Class>
+        <Item/>
+        <Texture>
+            <File>Textiles8x8</File>
+            <Index>0x01</Index>
+        </Texture>
+        <Mask>
+            <File>Textiles8x8</File>
+            <Index>0x02</Index>
+        </Mask>
+        <Tex2>0x01ee2626</Tex2>
+        <SlotType>10</SlotType>
+        <Description>A vial of dye for coloring accessories.</Description>
+        <Activate>Dye</Activate>
+        <Sound>use_potion</Sound>
+        <Consumable/>
+    </Object>
 
-	<Object type="0x29" id="Apple Clothing Dye">
-		<Class>Dye</Class>
-		<Item/>
-		<Texture>
-			<File>Textiles8x8</File>
-			<Index>0x10</Index>
-		</Texture>
-		<Mask>
-			<File>Textiles8x8</File>
-			<Index>0x00</Index>
-		</Mask>
-		<Tex1>0x015ed44c</Tex1>
-		<SlotType>10</SlotType>
-		<Description>A vial of dye for coloring clothing.</Description>
-		<Activate>Dye</Activate>
-		<Sound>use_potion</Sound>
-		<Consumable/>
-	</Object>
-	<Object type="0x2a" id="Apple Accessory Dye">
-		<Class>Dye</Class>
-		<Item/>
-		<Texture>
-			<File>Textiles8x8</File>
-			<Index>0x01</Index>
-		</Texture>
-		<Mask>
-			<File>Textiles8x8</File>
-			<Index>0x02</Index>
-		</Mask>
-		<Tex2>0x015ed44c</Tex2>
-		<SlotType>10</SlotType>
-		<Description>A vial of dye for coloring accessories.</Description>
-		<Activate>Dye</Activate>
-		<Sound>use_potion</Sound>
-		<Consumable/>
-	</Object>
+    <Object type="0x29" id="Apple Clothing Dye">
+        <Class>Dye</Class>
+        <Item/>
+        <Texture>
+            <File>Textiles8x8</File>
+            <Index>0x10</Index>
+        </Texture>
+        <Mask>
+            <File>Textiles8x8</File>
+            <Index>0x00</Index>
+        </Mask>
+        <Tex1>0x015ed44c</Tex1>
+        <SlotType>10</SlotType>
+        <Description>A vial of dye for coloring clothing.</Description>
+        <Activate>Dye</Activate>
+        <Sound>use_potion</Sound>
+        <Consumable/>
+    </Object>
+    <Object type="0x2a" id="Apple Accessory Dye">
+        <Class>Dye</Class>
+        <Item/>
+        <Texture>
+            <File>Textiles8x8</File>
+            <Index>0x01</Index>
+        </Texture>
+        <Mask>
+            <File>Textiles8x8</File>
+            <Index>0x02</Index>
+        </Mask>
+        <Tex2>0x015ed44c</Tex2>
+        <SlotType>10</SlotType>
+        <Description>A vial of dye for coloring accessories.</Description>
+        <Activate>Dye</Activate>
+        <Sound>use_potion</Sound>
+        <Consumable/>
+    </Object>
 
-	<Object type="0x2b" id="Forest-Green Clothing Dye">
-		<Class>Dye</Class>
-		<Item/>
-		<Texture>
-			<File>Textiles8x8</File>
-			<Index>0x10</Index>
-		</Texture>
-		<Mask>
-			<File>Textiles8x8</File>
-			<Index>0x00</Index>
-		</Mask>
-		<Tex1>0x01299133</Tex1>
-		<SlotType>10</SlotType>
-		<Description>A vial of dye for coloring clothing.</Description>
-		<Activate>Dye</Activate>
-		<Sound>use_potion</Sound>
-		<Consumable/>
-	</Object>
-	<Object type="0x2c" id="Forest-Green Accessory Dye">
-		<Class>Dye</Class>
-		<Item/>
-		<Texture>
-			<File>Textiles8x8</File>
-			<Index>0x01</Index>
-		</Texture>
-		<Mask>
-			<File>Textiles8x8</File>
-			<Index>0x02</Index>
-		</Mask>
-		<Tex2>0x01299133</Tex2>
-		<SlotType>10</SlotType>
-		<Description>A vial of dye for coloring accessories.</Description>
-		<Activate>Dye</Activate>
-		<Sound>use_potion</Sound>
-		<Consumable/>
-	</Object>
+    <Object type="0x2b" id="Forest-Green Clothing Dye">
+        <Class>Dye</Class>
+        <Item/>
+        <Texture>
+            <File>Textiles8x8</File>
+            <Index>0x10</Index>
+        </Texture>
+        <Mask>
+            <File>Textiles8x8</File>
+            <Index>0x00</Index>
+        </Mask>
+        <Tex1>0x01299133</Tex1>
+        <SlotType>10</SlotType>
+        <Description>A vial of dye for coloring clothing.</Description>
+        <Activate>Dye</Activate>
+        <Sound>use_potion</Sound>
+        <Consumable/>
+    </Object>
+    <Object type="0x2c" id="Forest-Green Accessory Dye">
+        <Class>Dye</Class>
+        <Item/>
+        <Texture>
+            <File>Textiles8x8</File>
+            <Index>0x01</Index>
+        </Texture>
+        <Mask>
+            <File>Textiles8x8</File>
+            <Index>0x02</Index>
+        </Mask>
+        <Tex2>0x01299133</Tex2>
+        <SlotType>10</SlotType>
+        <Description>A vial of dye for coloring accessories.</Description>
+        <Activate>Dye</Activate>
+        <Sound>use_potion</Sound>
+        <Consumable/>
+    </Object>
 
-	<Object type="0x2d" id="Dolphin Clothing Dye">
-		<Class>Dye</Class>
-		<Item/>
-		<Texture>
-			<File>Textiles8x8</File>
-			<Index>0x10</Index>
-		</Texture>
-		<Mask>
-			<File>Textiles8x8</File>
-			<Index>0x00</Index>
-		</Mask>
-		<Tex1>0x01665485</Tex1>
-		<SlotType>10</SlotType>
-		<Description>A vial of dye for coloring clothing.</Description>
-		<Activate>Dye</Activate>
-		<Sound>use_potion</Sound>
-		<Consumable/>
-	</Object>
-	<Object type="0x2e" id="Dolphin Accessory Dye">
-		<Class>Dye</Class>
-		<Item/>
-		<Texture>
-			<File>Textiles8x8</File>
-			<Index>0x01</Index>
-		</Texture>
-		<Mask>
-			<File>Textiles8x8</File>
-			<Index>0x02</Index>
-		</Mask>
-		<Tex2>0x01665485</Tex2>
-		<SlotType>10</SlotType>
-		<Description>A vial of dye for coloring accessories.</Description>
-		<Activate>Dye</Activate>
-		<Sound>use_potion</Sound>
-		<Consumable/>
-	</Object>
+    <Object type="0x2d" id="Dolphin Clothing Dye">
+        <Class>Dye</Class>
+        <Item/>
+        <Texture>
+            <File>Textiles8x8</File>
+            <Index>0x10</Index>
+        </Texture>
+        <Mask>
+            <File>Textiles8x8</File>
+            <Index>0x00</Index>
+        </Mask>
+        <Tex1>0x01665485</Tex1>
+        <SlotType>10</SlotType>
+        <Description>A vial of dye for coloring clothing.</Description>
+        <Activate>Dye</Activate>
+        <Sound>use_potion</Sound>
+        <Consumable/>
+    </Object>
+    <Object type="0x2e" id="Dolphin Accessory Dye">
+        <Class>Dye</Class>
+        <Item/>
+        <Texture>
+            <File>Textiles8x8</File>
+            <Index>0x01</Index>
+        </Texture>
+        <Mask>
+            <File>Textiles8x8</File>
+            <Index>0x02</Index>
+        </Mask>
+        <Tex2>0x01665485</Tex2>
+        <SlotType>10</SlotType>
+        <Description>A vial of dye for coloring accessories.</Description>
+        <Activate>Dye</Activate>
+        <Sound>use_potion</Sound>
+        <Consumable/>
+    </Object>
 
-	<Object type="0x2f" id="Razzmatazz Clothing Dye">
-		<Class>Dye</Class>
-		<Item/>
-		<Texture>
-			<File>Textiles8x8</File>
-			<Index>0x10</Index>
-		</Texture>
-		<Mask>
-			<File>Textiles8x8</File>
-			<Index>0x00</Index>
-		</Mask>
-		<Tex1>0x01E91E63</Tex1>
-		<SlotType>10</SlotType>
-		<Description>A vial of dye for coloring clothing.</Description>
-		<Activate>Dye</Activate>
-		<Sound>use_potion</Sound>
-		<Consumable/>
-	</Object>
-	<Object type="0x30" id="Razzmatazz Accessory Dye">
-		<Class>Dye</Class>
-		<Item/>
-		<Texture>
-			<File>Textiles8x8</File>
-			<Index>0x01</Index>
-		</Texture>
-		<Mask>
-			<File>Textiles8x8</File>
-			<Index>0x02</Index>
-		</Mask>
-		<Tex2>0x01E91E63</Tex2>
-		<SlotType>10</SlotType>
-		<Description>A vial of dye for coloring accessories.</Description>
-		<Activate>Dye</Activate>
-		<Sound>use_potion</Sound>
-		<Consumable/>
-	</Object>
+    <Object type="0x2f" id="Razzmatazz Clothing Dye">
+        <Class>Dye</Class>
+        <Item/>
+        <Texture>
+            <File>Textiles8x8</File>
+            <Index>0x10</Index>
+        </Texture>
+        <Mask>
+            <File>Textiles8x8</File>
+            <Index>0x00</Index>
+        </Mask>
+        <Tex1>0x01E91E63</Tex1>
+        <SlotType>10</SlotType>
+        <Description>A vial of dye for coloring clothing.</Description>
+        <Activate>Dye</Activate>
+        <Sound>use_potion</Sound>
+        <Consumable/>
+    </Object>
+    <Object type="0x30" id="Razzmatazz Accessory Dye">
+        <Class>Dye</Class>
+        <Item/>
+        <Texture>
+            <File>Textiles8x8</File>
+            <Index>0x01</Index>
+        </Texture>
+        <Mask>
+            <File>Textiles8x8</File>
+            <Index>0x02</Index>
+        </Mask>
+        <Tex2>0x01E91E63</Tex2>
+        <SlotType>10</SlotType>
+        <Description>A vial of dye for coloring accessories.</Description>
+        <Activate>Dye</Activate>
+        <Sound>use_potion</Sound>
+        <Consumable/>
+    </Object>
 
-	<Object type="0x31" id="Deep-Lilac Clothing Dye">
-		<Class>Dye</Class>
-		<Item/>
-		<Texture>
-			<File>Textiles8x8</File>
-			<Index>0x10</Index>
-		</Texture>
-		<Mask>
-			<File>Textiles8x8</File>
-			<Index>0x00</Index>
-		</Mask>
-		<Tex1>0x019B59B6</Tex1>
-		<SlotType>10</SlotType>
-		<Description>A vial of dye for coloring clothing.</Description>
-		<Activate>Dye</Activate>
-		<Sound>use_potion</Sound>
-		<Consumable/>
-	</Object>
-	<Object type="0x32" id="Deep-Lilac Accessory Dye">
-		<Class>Dye</Class>
-		<Item/>
-		<Texture>
-			<File>Textiles8x8</File>
-			<Index>0x01</Index>
-		</Texture>
-		<Mask>
-			<File>Textiles8x8</File>
-			<Index>0x02</Index>
-		</Mask>
-		<Tex2>0x019B59B6</Tex2>
-		<SlotType>10</SlotType>
-		<Description>A vial of dye for coloring accessories.</Description>
-		<Activate>Dye</Activate>
-		<Sound>use_potion</Sound>
-		<Consumable/>
-	</Object>
+    <Object type="0x31" id="Deep-Lilac Clothing Dye">
+        <Class>Dye</Class>
+        <Item/>
+        <Texture>
+            <File>Textiles8x8</File>
+            <Index>0x10</Index>
+        </Texture>
+        <Mask>
+            <File>Textiles8x8</File>
+            <Index>0x00</Index>
+        </Mask>
+        <Tex1>0x019B59B6</Tex1>
+        <SlotType>10</SlotType>
+        <Description>A vial of dye for coloring clothing.</Description>
+        <Activate>Dye</Activate>
+        <Sound>use_potion</Sound>
+        <Consumable/>
+    </Object>
+    <Object type="0x32" id="Deep-Lilac Accessory Dye">
+        <Class>Dye</Class>
+        <Item/>
+        <Texture>
+            <File>Textiles8x8</File>
+            <Index>0x01</Index>
+        </Texture>
+        <Mask>
+            <File>Textiles8x8</File>
+            <Index>0x02</Index>
+        </Mask>
+        <Tex2>0x019B59B6</Tex2>
+        <SlotType>10</SlotType>
+        <Description>A vial of dye for coloring accessories.</Description>
+        <Activate>Dye</Activate>
+        <Sound>use_potion</Sound>
+        <Consumable/>
+    </Object>
 
-	<Object type="0x33" id="Black Clothing Dye">
-		<Class>Dye</Class>
-		<Item/>
-		<Texture>
-			<File>Textiles8x8</File>
-			<Index>0x10</Index>
-		</Texture>
-		<Mask>
-			<File>Textiles8x8</File>
-			<Index>0x00</Index>
-		</Mask>
-		<Tex1>0x01010000</Tex1>
-		<SlotType>10</SlotType>
-		<Description>A vial of dye for coloring clothing.</Description>
-		<Activate>Dye</Activate>
-		<Sound>use_potion</Sound>
-		<Consumable/>
-	</Object>
-	<Object type="0x34" id="Black Accessory Dye">
-		<Class>Dye</Class>
-		<Item/>
-		<Texture>
-			<File>Textiles8x8</File>
-			<Index>0x01</Index>
-		</Texture>
-		<Mask>
-			<File>Textiles8x8</File>
-			<Index>0x02</Index>
-		</Mask>
-		<Tex2>0x01010000</Tex2>
-		<SlotType>10</SlotType>
-		<Description>A vial of dye for coloring accessories.</Description>
-		<Activate>Dye</Activate>
-		<Sound>use_potion</Sound>
-		<Consumable/>
-	</Object>
+    <Object type="0x33" id="Black Clothing Dye">
+        <Class>Dye</Class>
+        <Item/>
+        <Texture>
+            <File>Textiles8x8</File>
+            <Index>0x10</Index>
+        </Texture>
+        <Mask>
+            <File>Textiles8x8</File>
+            <Index>0x00</Index>
+        </Mask>
+        <Tex1>0x01010000</Tex1>
+        <SlotType>10</SlotType>
+        <Description>A vial of dye for coloring clothing.</Description>
+        <Activate>Dye</Activate>
+        <Sound>use_potion</Sound>
+        <Consumable/>
+    </Object>
+    <Object type="0x34" id="Black Accessory Dye">
+        <Class>Dye</Class>
+        <Item/>
+        <Texture>
+            <File>Textiles8x8</File>
+            <Index>0x01</Index>
+        </Texture>
+        <Mask>
+            <File>Textiles8x8</File>
+            <Index>0x02</Index>
+        </Mask>
+        <Tex2>0x01010000</Tex2>
+        <SlotType>10</SlotType>
+        <Description>A vial of dye for coloring accessories.</Description>
+        <Activate>Dye</Activate>
+        <Sound>use_potion</Sound>
+        <Consumable/>
+    </Object>
 
-	<Object type="0x35" id="Silver-Sand Clothing Dye">
-		<Class>Dye</Class>
-		<Item/>
-		<Texture>
-			<File>Textiles8x8</File>
-			<Index>0x10</Index>
-		</Texture>
-		<Mask>
-			<File>Textiles8x8</File>
-			<Index>0x00</Index>
-		</Mask>
-		<Tex1>0x01C4C4C4</Tex1>
-		<SlotType>10</SlotType>
-		<Description>A vial of dye for coloring clothing.</Description>
-		<Activate>Dye</Activate>
-		<Sound>use_potion</Sound>
-		<Consumable/>
-	</Object>
-	<Object type="0x36" id="Silver-Sand Accessory Dye">
-		<Class>Dye</Class>
-		<Item/>
-		<Texture>
-			<File>Textiles8x8</File>
-			<Index>0x01</Index>
-		</Texture>
-		<Mask>
-			<File>Textiles8x8</File>
-			<Index>0x02</Index>
-		</Mask>
-		<Tex2>0x01C4C4C4</Tex2>
-		<SlotType>10</SlotType>
-		<Description>A vial of dye for coloring accessories.</Description>
-		<Activate>Dye</Activate>
-		<Sound>use_potion</Sound>
-		<Consumable/>
-	</Object>
+    <Object type="0x35" id="Silver-Sand Clothing Dye">
+        <Class>Dye</Class>
+        <Item/>
+        <Texture>
+            <File>Textiles8x8</File>
+            <Index>0x10</Index>
+        </Texture>
+        <Mask>
+            <File>Textiles8x8</File>
+            <Index>0x00</Index>
+        </Mask>
+        <Tex1>0x01C4C4C4</Tex1>
+        <SlotType>10</SlotType>
+        <Description>A vial of dye for coloring clothing.</Description>
+        <Activate>Dye</Activate>
+        <Sound>use_potion</Sound>
+        <Consumable/>
+    </Object>
+    <Object type="0x36" id="Silver-Sand Accessory Dye">
+        <Class>Dye</Class>
+        <Item/>
+        <Texture>
+            <File>Textiles8x8</File>
+            <Index>0x01</Index>
+        </Texture>
+        <Mask>
+            <File>Textiles8x8</File>
+            <Index>0x02</Index>
+        </Mask>
+        <Tex2>0x01C4C4C4</Tex2>
+        <SlotType>10</SlotType>
+        <Description>A vial of dye for coloring accessories.</Description>
+        <Activate>Dye</Activate>
+        <Sound>use_potion</Sound>
+        <Consumable/>
+    </Object>
 
-	<Object type="0x37" id="Malachite Clothing Dye">
-		<Class>Dye</Class>
-		<Item/>
-		<Texture>
-			<File>Textiles8x8</File>
-			<Index>0x10</Index>
-		</Texture>
-		<Mask>
-			<File>Textiles8x8</File>
-			<Index>0x00</Index>
-		</Mask>
-		<Tex1>0x010ff03c</Tex1>
-		<SlotType>10</SlotType>
-		<Description>A vial of dye for coloring clothing.</Description>
-		<Activate>Dye</Activate>
-		<Sound>use_potion</Sound>
-		<Consumable/>
-	</Object>
-	<Object type="0x38" id="Malachite Accessory Dye">
-		<Class>Dye</Class>
-		<Item/>
-		<Texture>
-			<File>Textiles8x8</File>
-			<Index>0x01</Index>
-		</Texture>
-		<Mask>
-			<File>Textiles8x8</File>
-			<Index>0x02</Index>
-		</Mask>
-		<Tex2>0x010ff03c</Tex2>
-		<SlotType>10</SlotType>
-		<Description>A vial of dye for coloring accessories.</Description>
-		<Activate>Dye</Activate>
-		<Sound>use_potion</Sound>
-		<Consumable/>
-	</Object>
+    <Object type="0x37" id="Malachite Clothing Dye">
+        <Class>Dye</Class>
+        <Item/>
+        <Texture>
+            <File>Textiles8x8</File>
+            <Index>0x10</Index>
+        </Texture>
+        <Mask>
+            <File>Textiles8x8</File>
+            <Index>0x00</Index>
+        </Mask>
+        <Tex1>0x010ff03c</Tex1>
+        <SlotType>10</SlotType>
+        <Description>A vial of dye for coloring clothing.</Description>
+        <Activate>Dye</Activate>
+        <Sound>use_potion</Sound>
+        <Consumable/>
+    </Object>
+    <Object type="0x38" id="Malachite Accessory Dye">
+        <Class>Dye</Class>
+        <Item/>
+        <Texture>
+            <File>Textiles8x8</File>
+            <Index>0x01</Index>
+        </Texture>
+        <Mask>
+            <File>Textiles8x8</File>
+            <Index>0x02</Index>
+        </Mask>
+        <Tex2>0x010ff03c</Tex2>
+        <SlotType>10</SlotType>
+        <Description>A vial of dye for coloring accessories.</Description>
+        <Activate>Dye</Activate>
+        <Sound>use_potion</Sound>
+        <Consumable/>
+    </Object>
 
-	<Object type="0x39" id="Orchid Clothing Dye">
-		<Class>Dye</Class>
-		<Item/>
-		<Texture>
-			<File>Textiles8x8</File>
-			<Index>0x10</Index>
-		</Texture>
-		<Mask>
-			<File>Textiles8x8</File>
-			<Index>0x00</Index>
-		</Mask>
-		<Tex1>0x01db74d1</Tex1>
-		<SlotType>10</SlotType>
-		<Description>A vial of dye for coloring clothing.</Description>
-		<Activate>Dye</Activate>
-		<Sound>use_potion</Sound>
-		<Consumable/>
-	</Object>
-	<Object type="0x3a" id="Orchid Accessory Dye">
-		<Class>Dye</Class>
-		<Item/>
-		<Texture>
-			<File>Textiles8x8</File>
-			<Index>0x01</Index>
-		</Texture>
-		<Mask>
-			<File>Textiles8x8</File>
-			<Index>0x02</Index>
-		</Mask>
-		<Tex2>0x01db74d1</Tex2>
-		<SlotType>10</SlotType>
-		<Description>A vial of dye for coloring accessories.</Description>
-		<Activate>Dye</Activate>
-		<Sound>use_potion</Sound>
-		<Consumable/>
-	</Object>
+    <Object type="0x39" id="Orchid Clothing Dye">
+        <Class>Dye</Class>
+        <Item/>
+        <Texture>
+            <File>Textiles8x8</File>
+            <Index>0x10</Index>
+        </Texture>
+        <Mask>
+            <File>Textiles8x8</File>
+            <Index>0x00</Index>
+        </Mask>
+        <Tex1>0x01db74d1</Tex1>
+        <SlotType>10</SlotType>
+        <Description>A vial of dye for coloring clothing.</Description>
+        <Activate>Dye</Activate>
+        <Sound>use_potion</Sound>
+        <Consumable/>
+    </Object>
+    <Object type="0x3a" id="Orchid Accessory Dye">
+        <Class>Dye</Class>
+        <Item/>
+        <Texture>
+            <File>Textiles8x8</File>
+            <Index>0x01</Index>
+        </Texture>
+        <Mask>
+            <File>Textiles8x8</File>
+            <Index>0x02</Index>
+        </Mask>
+        <Tex2>0x01db74d1</Tex2>
+        <SlotType>10</SlotType>
+        <Description>A vial of dye for coloring accessories.</Description>
+        <Activate>Dye</Activate>
+        <Sound>use_potion</Sound>
+        <Consumable/>
+    </Object>
 
-	<Object type="0x3b" id="Baby-Blue Clothing Dye">
-		<Class>Dye</Class>
-		<Item/>
-		<Texture>
-			<File>Textiles8x8</File>
-			<Index>0x10</Index>
-		</Texture>
-		<Mask>
-			<File>Textiles8x8</File>
-			<Index>0x00</Index>
-		</Mask>
-		<Tex1>0x0189cff0</Tex1>
-		<SlotType>10</SlotType>
-		<Description>A vial of dye for coloring clothing.</Description>
-		<Activate>Dye</Activate>
-		<Sound>use_potion</Sound>
-		<Consumable/>
-	</Object>
-	<Object type="0x3c" id="Baby-Blue Accessory Dye">
-		<Class>Dye</Class>
-		<Item/>
-		<Texture>
-			<File>Textiles8x8</File>
-			<Index>0x01</Index>
-		</Texture>
-		<Mask>
-			<File>Textiles8x8</File>
-			<Index>0x02</Index>
-		</Mask>
-		<Tex2>0x0189cff0</Tex2>
-		<SlotType>10</SlotType>
-		<Description>A vial of dye for coloring accessories.</Description>
-		<Activate>Dye</Activate>
-		<Sound>use_potion</Sound>
-		<Consumable/>
-	</Object>
+    <Object type="0x3b" id="Baby-Blue Clothing Dye">
+        <Class>Dye</Class>
+        <Item/>
+        <Texture>
+            <File>Textiles8x8</File>
+            <Index>0x10</Index>
+        </Texture>
+        <Mask>
+            <File>Textiles8x8</File>
+            <Index>0x00</Index>
+        </Mask>
+        <Tex1>0x0189cff0</Tex1>
+        <SlotType>10</SlotType>
+        <Description>A vial of dye for coloring clothing.</Description>
+        <Activate>Dye</Activate>
+        <Sound>use_potion</Sound>
+        <Consumable/>
+    </Object>
+    <Object type="0x3c" id="Baby-Blue Accessory Dye">
+        <Class>Dye</Class>
+        <Item/>
+        <Texture>
+            <File>Textiles8x8</File>
+            <Index>0x01</Index>
+        </Texture>
+        <Mask>
+            <File>Textiles8x8</File>
+            <Index>0x02</Index>
+        </Mask>
+        <Tex2>0x0189cff0</Tex2>
+        <SlotType>10</SlotType>
+        <Description>A vial of dye for coloring accessories.</Description>
+        <Activate>Dye</Activate>
+        <Sound>use_potion</Sound>
+        <Consumable/>
+    </Object>
 
-	<Object type="0x3d" id="Cadet-Grey Clothing Dye">
-		<Class>Dye</Class>
-		<Item/>
-		<Texture>
-			<File>Textiles8x8</File>
-			<Index>0x10</Index>
-		</Texture>
-		<Mask>
-			<File>Textiles8x8</File>
-			<Index>0x00</Index>
-		</Mask>
-		<Tex1>0x0195A5A6</Tex1>
-		<SlotType>10</SlotType>
-		<Description>A vial of dye for coloring clothing.</Description>
-		<Activate>Dye</Activate>
-		<Sound>use_potion</Sound>
-		<Consumable/>
-	</Object>
-	<Object type="0x3e" id="Cadet-Grey Accessory Dye">
-		<Class>Dye</Class>
-		<Item/>
-		<Texture>
-			<File>Textiles8x8</File>
-			<Index>0x01</Index>
-		</Texture>
-		<Mask>
-			<File>Textiles8x8</File>
-			<Index>0x02</Index>
-		</Mask>
-		<Tex2>0x0195A5A6</Tex2>
-		<SlotType>10</SlotType>
-		<Description>A vial of dye for coloring accessories.</Description>
-		<Activate>Dye</Activate>
-		<Sound>use_potion</Sound>
-		<Consumable/>
-	</Object>
+    <Object type="0x3d" id="Cadet-Grey Clothing Dye">
+        <Class>Dye</Class>
+        <Item/>
+        <Texture>
+            <File>Textiles8x8</File>
+            <Index>0x10</Index>
+        </Texture>
+        <Mask>
+            <File>Textiles8x8</File>
+            <Index>0x00</Index>
+        </Mask>
+        <Tex1>0x0195A5A6</Tex1>
+        <SlotType>10</SlotType>
+        <Description>A vial of dye for coloring clothing.</Description>
+        <Activate>Dye</Activate>
+        <Sound>use_potion</Sound>
+        <Consumable/>
+    </Object>
+    <Object type="0x3e" id="Cadet-Grey Accessory Dye">
+        <Class>Dye</Class>
+        <Item/>
+        <Texture>
+            <File>Textiles8x8</File>
+            <Index>0x01</Index>
+        </Texture>
+        <Mask>
+            <File>Textiles8x8</File>
+            <Index>0x02</Index>
+        </Mask>
+        <Tex2>0x0195A5A6</Tex2>
+        <SlotType>10</SlotType>
+        <Description>A vial of dye for coloring accessories.</Description>
+        <Activate>Dye</Activate>
+        <Sound>use_potion</Sound>
+        <Consumable/>
+    </Object>
 
-	<Object type="0x3f" id="Steel-Teal Clothing Dye">
-		<Class>Dye</Class>
-		<Item/>
-		<Texture>
-			<File>Textiles8x8</File>
-			<Index>0x10</Index>
-		</Texture>
-		<Mask>
-			<File>Textiles8x8</File>
-			<Index>0x00</Index>
-		</Mask>
-		<Tex1>0x01607D8B</Tex1>
-		<SlotType>10</SlotType>
-		<Description>A vial of dye for coloring clothing.</Description>
-		<Activate>Dye</Activate>
-		<Sound>use_potion</Sound>
-		<Consumable/>
-	</Object>
-	<Object type="0x40" id="Steel-Teal Accessory Dye">
-		<Class>Dye</Class>
-		<Item/>
-		<Texture>
-			<File>Textiles8x8</File>
-			<Index>0x01</Index>
-		</Texture>
-		<Mask>
-			<File>Textiles8x8</File>
-			<Index>0x02</Index>
-		</Mask>
-		<Tex2>0x01607D8B</Tex2>
-		<SlotType>10</SlotType>
-		<Description>A vial of dye for coloring accessories.</Description>
-		<Activate>Dye</Activate>
-		<Sound>use_potion</Sound>
-		<Consumable/>
-	</Object>
+    <Object type="0x3f" id="Steel-Teal Clothing Dye">
+        <Class>Dye</Class>
+        <Item/>
+        <Texture>
+            <File>Textiles8x8</File>
+            <Index>0x10</Index>
+        </Texture>
+        <Mask>
+            <File>Textiles8x8</File>
+            <Index>0x00</Index>
+        </Mask>
+        <Tex1>0x01607D8B</Tex1>
+        <SlotType>10</SlotType>
+        <Description>A vial of dye for coloring clothing.</Description>
+        <Activate>Dye</Activate>
+        <Sound>use_potion</Sound>
+        <Consumable/>
+    </Object>
+    <Object type="0x40" id="Steel-Teal Accessory Dye">
+        <Class>Dye</Class>
+        <Item/>
+        <Texture>
+            <File>Textiles8x8</File>
+            <Index>0x01</Index>
+        </Texture>
+        <Mask>
+            <File>Textiles8x8</File>
+            <Index>0x02</Index>
+        </Mask>
+        <Tex2>0x01607D8B</Tex2>
+        <SlotType>10</SlotType>
+        <Description>A vial of dye for coloring accessories.</Description>
+        <Activate>Dye</Activate>
+        <Sound>use_potion</Sound>
+        <Consumable/>
+    </Object>
 
-	<Object type="0x41" id="Deep-Green-Cyan-Turquoise Clothing Dye">
-		<Class>Dye</Class>
-		<Item/>
-		<Texture>
-			<File>Textiles8x8</File>
-			<Index>0x10</Index>
-		</Texture>
-		<Mask>
-			<File>Textiles8x8</File>
-			<Index>0x00</Index>
-		</Mask>
-		<Tex1>0x0111806A</Tex1>
-		<SlotType>10</SlotType>
-		<Description>A vial of dye for coloring clothing.</Description>
-		<Activate>Dye</Activate>
-		<Sound>use_potion</Sound>
-		<Consumable/>
-	</Object>
-	<Object type="0x42" id="Deep-Green-Cyan-Turquoise Accessory Dye">
-		<Class>Dye</Class>
-		<Item/>
-		<Texture>
-			<File>Textiles8x8</File>
-			<Index>0x01</Index>
-		</Texture>
-		<Mask>
-			<File>Textiles8x8</File>
-			<Index>0x02</Index>
-		</Mask>
-		<Tex2>0x0111806A</Tex2>
-		<SlotType>10</SlotType>
-		<Description>A vial of dye for coloring accessories.</Description>
-		<Activate>Dye</Activate>
-		<Sound>use_potion</Sound>
-		<Consumable/>
-	</Object>
+    <Object type="0x41" id="Deep-Green-Cyan-Turquoise Clothing Dye">
+        <Class>Dye</Class>
+        <Item/>
+        <Texture>
+            <File>Textiles8x8</File>
+            <Index>0x10</Index>
+        </Texture>
+        <Mask>
+            <File>Textiles8x8</File>
+            <Index>0x00</Index>
+        </Mask>
+        <Tex1>0x0111806A</Tex1>
+        <SlotType>10</SlotType>
+        <Description>A vial of dye for coloring clothing.</Description>
+        <Activate>Dye</Activate>
+        <Sound>use_potion</Sound>
+        <Consumable/>
+    </Object>
+    <Object type="0x42" id="Deep-Green-Cyan-Turquoise Accessory Dye">
+        <Class>Dye</Class>
+        <Item/>
+        <Texture>
+            <File>Textiles8x8</File>
+            <Index>0x01</Index>
+        </Texture>
+        <Mask>
+            <File>Textiles8x8</File>
+            <Index>0x02</Index>
+        </Mask>
+        <Tex2>0x0111806A</Tex2>
+        <SlotType>10</SlotType>
+        <Description>A vial of dye for coloring accessories.</Description>
+        <Activate>Dye</Activate>
+        <Sound>use_potion</Sound>
+        <Consumable/>
+    </Object>
 
-	<Object type="0x43" id="Salem Clothing Dye">
-		<Class>Dye</Class>
-		<Item/>
-		<Texture>
-			<File>Textiles8x8</File>
-			<Index>0x10</Index>
-		</Texture>
-		<Mask>
-			<File>Textiles8x8</File>
-			<Index>0x00</Index>
-		</Mask>
-		<Tex1>0x011F8B4C</Tex1>
-		<SlotType>10</SlotType>
-		<Description>A vial of dye for coloring clothing.</Description>
-		<Activate>Dye</Activate>
-		<Sound>use_potion</Sound>
-		<Consumable/>
-	</Object>
-	<Object type="0x44" id="Salem Accessory Dye">
-		<Class>Dye</Class>
-		<Item/>
-		<Texture>
-			<File>Textiles8x8</File>
-			<Index>0x01</Index>
-		</Texture>
-		<Mask>
-			<File>Textiles8x8</File>
-			<Index>0x02</Index>
-		</Mask>
-		<Tex2>0x011F8B4C</Tex2>
-		<SlotType>10</SlotType>
-		<Description>A vial of dye for coloring accessories.</Description>
-		<Activate>Dye</Activate>
-		<Sound>use_potion</Sound>
-		<Consumable/>
-	</Object>
+    <Object type="0x43" id="Salem Clothing Dye">
+        <Class>Dye</Class>
+        <Item/>
+        <Texture>
+            <File>Textiles8x8</File>
+            <Index>0x10</Index>
+        </Texture>
+        <Mask>
+            <File>Textiles8x8</File>
+            <Index>0x00</Index>
+        </Mask>
+        <Tex1>0x011F8B4C</Tex1>
+        <SlotType>10</SlotType>
+        <Description>A vial of dye for coloring clothing.</Description>
+        <Activate>Dye</Activate>
+        <Sound>use_potion</Sound>
+        <Consumable/>
+    </Object>
+    <Object type="0x44" id="Salem Accessory Dye">
+        <Class>Dye</Class>
+        <Item/>
+        <Texture>
+            <File>Textiles8x8</File>
+            <Index>0x01</Index>
+        </Texture>
+        <Mask>
+            <File>Textiles8x8</File>
+            <Index>0x02</Index>
+        </Mask>
+        <Tex2>0x011F8B4C</Tex2>
+        <SlotType>10</SlotType>
+        <Description>A vial of dye for coloring accessories.</Description>
+        <Activate>Dye</Activate>
+        <Sound>use_potion</Sound>
+        <Consumable/>
+    </Object>
 
-	<Object type="0x45" id="Ultramarine-Blue Clothing Dye">
-		<Class>Dye</Class>
-		<Item/>
-		<Texture>
-			<File>Textiles8x8</File>
-			<Index>0x10</Index>
-		</Texture>
-		<Mask>
-			<File>Textiles8x8</File>
-			<Index>0x00</Index>
-		</Mask>
-		<Tex1>0x013359ff</Tex1>
-		<SlotType>10</SlotType>
-		<Description>A vial of dye for coloring clothing.</Description>
-		<Activate>Dye</Activate>
-		<Sound>use_potion</Sound>
-		<Consumable/>
-	</Object>
-	<Object type="0x46" id="Ultramarine-Blue Accessory Dye">
-		<Class>Dye</Class>
-		<Item/>
-		<Texture>
-			<File>Textiles8x8</File>
-			<Index>0x01</Index>
-		</Texture>
-		<Mask>
-			<File>Textiles8x8</File>
-			<Index>0x02</Index>
-		</Mask>
-		<Tex2>0x013359ff</Tex2>
-		<SlotType>10</SlotType>
-		<Description>A vial of dye for coloring accessories.</Description>
-		<Activate>Dye</Activate>
-		<Sound>use_potion</Sound>
-		<Consumable/>
-	</Object>
+    <Object type="0x45" id="Ultramarine-Blue Clothing Dye">
+        <Class>Dye</Class>
+        <Item/>
+        <Texture>
+            <File>Textiles8x8</File>
+            <Index>0x10</Index>
+        </Texture>
+        <Mask>
+            <File>Textiles8x8</File>
+            <Index>0x00</Index>
+        </Mask>
+        <Tex1>0x013359ff</Tex1>
+        <SlotType>10</SlotType>
+        <Description>A vial of dye for coloring clothing.</Description>
+        <Activate>Dye</Activate>
+        <Sound>use_potion</Sound>
+        <Consumable/>
+    </Object>
+    <Object type="0x46" id="Ultramarine-Blue Accessory Dye">
+        <Class>Dye</Class>
+        <Item/>
+        <Texture>
+            <File>Textiles8x8</File>
+            <Index>0x01</Index>
+        </Texture>
+        <Mask>
+            <File>Textiles8x8</File>
+            <Index>0x02</Index>
+        </Mask>
+        <Tex2>0x013359ff</Tex2>
+        <SlotType>10</SlotType>
+        <Description>A vial of dye for coloring accessories.</Description>
+        <Activate>Dye</Activate>
+        <Sound>use_potion</Sound>
+        <Consumable/>
+    </Object>
 
-	<Object type="0x47" id="St-Patricks-Blue Clothing Dye">
-		<Class>Dye</Class>
-		<Item/>
-		<Texture>
-			<File>Textiles8x8</File>
-			<Index>0x10</Index>
-		</Texture>
-		<Mask>
-			<File>Textiles8x8</File>
-			<Index>0x00</Index>
-		</Mask>
-		<Tex1>0x011a1a79</Tex1>
-		<SlotType>10</SlotType>
-		<Description>A vial of dye for coloring clothing.</Description>
-		<Activate>Dye</Activate>
-		<Sound>use_potion</Sound>
-		<Consumable/>
-	</Object>
-	<Object type="0x48" id="St-Patricks-Blue Accessory Dye">
-		<Class>Dye</Class>
-		<Item/>
-		<Texture>
-			<File>Textiles8x8</File>
-			<Index>0x01</Index>
-		</Texture>
-		<Mask>
-			<File>Textiles8x8</File>
-			<Index>0x02</Index>
-		</Mask>
-		<Tex2>0x011a1a79</Tex2>
-		<SlotType>10</SlotType>
-		<Description>A vial of dye for coloring accessories.</Description>
-		<Activate>Dye</Activate>
-		<Sound>use_potion</Sound>
-		<Consumable/>
-	</Object>
+    <Object type="0x47" id="St-Patricks-Blue Clothing Dye">
+        <Class>Dye</Class>
+        <Item/>
+        <Texture>
+            <File>Textiles8x8</File>
+            <Index>0x10</Index>
+        </Texture>
+        <Mask>
+            <File>Textiles8x8</File>
+            <Index>0x00</Index>
+        </Mask>
+        <Tex1>0x011a1a79</Tex1>
+        <SlotType>10</SlotType>
+        <Description>A vial of dye for coloring clothing.</Description>
+        <Activate>Dye</Activate>
+        <Sound>use_potion</Sound>
+        <Consumable/>
+    </Object>
+    <Object type="0x48" id="St-Patricks-Blue Accessory Dye">
+        <Class>Dye</Class>
+        <Item/>
+        <Texture>
+            <File>Textiles8x8</File>
+            <Index>0x01</Index>
+        </Texture>
+        <Mask>
+            <File>Textiles8x8</File>
+            <Index>0x02</Index>
+        </Mask>
+        <Tex2>0x011a1a79</Tex2>
+        <SlotType>10</SlotType>
+        <Description>A vial of dye for coloring accessories.</Description>
+        <Activate>Dye</Activate>
+        <Sound>use_potion</Sound>
+        <Consumable/>
+    </Object>
 
-	<Object type="0x49" id="Light-Sea-Green Clothing Dye">
-		<Class>Dye</Class>
-		<Item/>
-		<Texture>
-			<File>Textiles8x8</File>
-			<Index>0x10</Index>
-		</Texture>
-		<Mask>
-			<File>Textiles8x8</File>
-			<Index>0x00</Index>
-		</Mask>
-		<Tex1>0x011ABC9C</Tex1>
-		<SlotType>10</SlotType>
-		<Description>A vial of dye for coloring clothing.</Description>
-		<Activate>Dye</Activate>
-		<Sound>use_potion</Sound>
-		<Consumable/>
-	</Object>
-	<Object type="0x4a" id="Light-Sea-Green Accessory Dye">
-		<Class>Dye</Class>
-		<Item/>
-		<Texture>
-			<File>Textiles8x8</File>
-			<Index>0x01</Index>
-		</Texture>
-		<Mask>
-			<File>Textiles8x8</File>
-			<Index>0x02</Index>
-		</Mask>
-		<Tex2>0x011ABC9C</Tex2>
-		<SlotType>10</SlotType>
-		<Description>A vial of dye for coloring accessories.</Description>
-		<Activate>Dye</Activate>
-		<Sound>use_potion</Sound>
-		<Consumable/>
-	</Object>
+    <Object type="0x49" id="Light-Sea-Green Clothing Dye">
+        <Class>Dye</Class>
+        <Item/>
+        <Texture>
+            <File>Textiles8x8</File>
+            <Index>0x10</Index>
+        </Texture>
+        <Mask>
+            <File>Textiles8x8</File>
+            <Index>0x00</Index>
+        </Mask>
+        <Tex1>0x011ABC9C</Tex1>
+        <SlotType>10</SlotType>
+        <Description>A vial of dye for coloring clothing.</Description>
+        <Activate>Dye</Activate>
+        <Sound>use_potion</Sound>
+        <Consumable/>
+    </Object>
+    <Object type="0x4a" id="Light-Sea-Green Accessory Dye">
+        <Class>Dye</Class>
+        <Item/>
+        <Texture>
+            <File>Textiles8x8</File>
+            <Index>0x01</Index>
+        </Texture>
+        <Mask>
+            <File>Textiles8x8</File>
+            <Index>0x02</Index>
+        </Mask>
+        <Tex2>0x011ABC9C</Tex2>
+        <SlotType>10</SlotType>
+        <Description>A vial of dye for coloring accessories.</Description>
+        <Activate>Dye</Activate>
+        <Sound>use_potion</Sound>
+        <Consumable/>
+    </Object>
 
-	<Object type="0x4b" id="UFO-Green Clothing Dye">
-		<Class>Dye</Class>
-		<Item/>
-		<Texture>
-			<File>Textiles8x8</File>
-			<Index>0x10</Index>
-		</Texture>
-		<Mask>
-			<File>Textiles8x8</File>
-			<Index>0x00</Index>
-		</Mask>
-		<Tex1>0x012ECC71</Tex1>
-		<SlotType>10</SlotType>
-		<Description>A vial of dye for coloring clothing.</Description>
-		<Activate>Dye</Activate>
-		<Sound>use_potion</Sound>
-		<Consumable/>
-	</Object>
-	<Object type="0x4c" id="UFO-Green Accessory Dye">
-		<Class>Dye</Class>
-		<Item/>
-		<Texture>
-			<File>Textiles8x8</File>
-			<Index>0x01</Index>
-		</Texture>
-		<Mask>
-			<File>Textiles8x8</File>
-			<Index>0x02</Index>
-		</Mask>
-		<Tex2>0x012ECC71</Tex2>
-		<SlotType>10</SlotType>
-		<Description>A vial of dye for coloring accessories.</Description>
-		<Activate>Dye</Activate>
-		<Sound>use_potion</Sound>
-		<Consumable/>
-	</Object>
+    <Object type="0x4b" id="UFO-Green Clothing Dye">
+        <Class>Dye</Class>
+        <Item/>
+        <Texture>
+            <File>Textiles8x8</File>
+            <Index>0x10</Index>
+        </Texture>
+        <Mask>
+            <File>Textiles8x8</File>
+            <Index>0x00</Index>
+        </Mask>
+        <Tex1>0x012ECC71</Tex1>
+        <SlotType>10</SlotType>
+        <Description>A vial of dye for coloring clothing.</Description>
+        <Activate>Dye</Activate>
+        <Sound>use_potion</Sound>
+        <Consumable/>
+    </Object>
+    <Object type="0x4c" id="UFO-Green Accessory Dye">
+        <Class>Dye</Class>
+        <Item/>
+        <Texture>
+            <File>Textiles8x8</File>
+            <Index>0x01</Index>
+        </Texture>
+        <Mask>
+            <File>Textiles8x8</File>
+            <Index>0x02</Index>
+        </Mask>
+        <Tex2>0x012ECC71</Tex2>
+        <SlotType>10</SlotType>
+        <Description>A vial of dye for coloring accessories.</Description>
+        <Activate>Dye</Activate>
+        <Sound>use_potion</Sound>
+        <Consumable/>
+    </Object>
 
-	<Object type="0x4d" id="Lavender-Indigo Clothing Dye">
-		<Class>Dye</Class>
-		<Item/>
-		<Texture>
-			<File>Textiles8x8</File>
-			<Index>0x10</Index>
-		</Texture>
-		<Mask>
-			<File>Textiles8x8</File>
-			<Index>0x00</Index>
-		</Mask>
-		<Tex1>0x01834cdb</Tex1>
-		<SlotType>10</SlotType>
-		<Description>A vial of dye for coloring clothing.</Description>
-		<Activate>Dye</Activate>
-		<Sound>use_potion</Sound>
-		<Consumable/>
-	</Object>
-	<Object type="0x4e" id="Lavender-Indigo Accessory Dye">
-		<Class>Dye</Class>
-		<Item/>
-		<Texture>
-			<File>Textiles8x8</File>
-			<Index>0x01</Index>
-		</Texture>
-		<Mask>
-			<File>Textiles8x8</File>
-			<Index>0x02</Index>
-		</Mask>
-		<Tex2>0x01834cdb</Tex2>
-		<SlotType>10</SlotType>
-		<Description>A vial of dye for coloring accessories.</Description>
-		<Activate>Dye</Activate>
-		<Sound>use_potion</Sound>
-		<Consumable/>
-	</Object>
+    <Object type="0x4d" id="Lavender-Indigo Clothing Dye">
+        <Class>Dye</Class>
+        <Item/>
+        <Texture>
+            <File>Textiles8x8</File>
+            <Index>0x10</Index>
+        </Texture>
+        <Mask>
+            <File>Textiles8x8</File>
+            <Index>0x00</Index>
+        </Mask>
+        <Tex1>0x01834cdb</Tex1>
+        <SlotType>10</SlotType>
+        <Description>A vial of dye for coloring clothing.</Description>
+        <Activate>Dye</Activate>
+        <Sound>use_potion</Sound>
+        <Consumable/>
+    </Object>
+    <Object type="0x4e" id="Lavender-Indigo Accessory Dye">
+        <Class>Dye</Class>
+        <Item/>
+        <Texture>
+            <File>Textiles8x8</File>
+            <Index>0x01</Index>
+        </Texture>
+        <Mask>
+            <File>Textiles8x8</File>
+            <Index>0x02</Index>
+        </Mask>
+        <Tex2>0x01834cdb</Tex2>
+        <SlotType>10</SlotType>
+        <Description>A vial of dye for coloring accessories.</Description>
+        <Activate>Dye</Activate>
+        <Sound>use_potion</Sound>
+        <Consumable/>
+    </Object>
 
-	<Object type="0x4f" id="Deep-Carmine Clothing Dye">
-		<Class>Dye</Class>
-		<Item/>
-		<Texture>
-			<File>Textiles8x8</File>
-			<Index>0x10</Index>
-		</Texture>
-		<Mask>
-			<File>Textiles8x8</File>
-			<Index>0x00</Index>
-		</Mask>
-		<Tex1>0x01a82b3c</Tex1>
-		<SlotType>10</SlotType>
-		<Description>A vial of dye for coloring clothing.</Description>
-		<Activate>Dye</Activate>
-		<Sound>use_potion</Sound>
-		<Consumable/>
-	</Object>
-	<Object type="0x50" id="Deep-Carmine Accessory Dye">
-		<Class>Dye</Class>
-		<Item/>
-		<Texture>
-			<File>Textiles8x8</File>
-			<Index>0x01</Index>
-		</Texture>
-		<Mask>
-			<File>Textiles8x8</File>
-			<Index>0x02</Index>
-		</Mask>
-		<Tex2>0x01a82b3c</Tex2>
-		<SlotType>10</SlotType>
-		<Description>A vial of dye for coloring accessories.</Description>
-		<Activate>Dye</Activate>
-		<Sound>use_potion</Sound>
-		<Consumable/>
-	</Object>
+    <Object type="0x4f" id="Deep-Carmine Clothing Dye">
+        <Class>Dye</Class>
+        <Item/>
+        <Texture>
+            <File>Textiles8x8</File>
+            <Index>0x10</Index>
+        </Texture>
+        <Mask>
+            <File>Textiles8x8</File>
+            <Index>0x00</Index>
+        </Mask>
+        <Tex1>0x01a82b3c</Tex1>
+        <SlotType>10</SlotType>
+        <Description>A vial of dye for coloring clothing.</Description>
+        <Activate>Dye</Activate>
+        <Sound>use_potion</Sound>
+        <Consumable/>
+    </Object>
+    <Object type="0x50" id="Deep-Carmine Accessory Dye">
+        <Class>Dye</Class>
+        <Item/>
+        <Texture>
+            <File>Textiles8x8</File>
+            <Index>0x01</Index>
+        </Texture>
+        <Mask>
+            <File>Textiles8x8</File>
+            <Index>0x02</Index>
+        </Mask>
+        <Tex2>0x01a82b3c</Tex2>
+        <SlotType>10</SlotType>
+        <Description>A vial of dye for coloring accessories.</Description>
+        <Activate>Dye</Activate>
+        <Sound>use_potion</Sound>
+        <Consumable/>
+    </Object>
 
-	<Object type="0x51" id="Tufts-Blue Clothing Dye">
-		<Class>Dye</Class>
-		<Item/>
-		<Texture>
-			<File>Textiles8x8</File>
-			<Index>0x10</Index>
-		</Texture>
-		<Mask>
-			<File>Textiles8x8</File>
-			<Index>0x00</Index>
-		</Mask>
-		<Tex1>0x013498DB</Tex1>
-		<SlotType>10</SlotType>
-		<Description>A vial of dye for coloring clothing.</Description>
-		<Activate>Dye</Activate>
-		<Sound>use_potion</Sound>
-		<Consumable/>
-	</Object>
-	<Object type="0x52" id="Tufts-Blue Accessory Dye">
-		<Class>Dye</Class>
-		<Item/>
-		<Texture>
-			<File>Textiles8x8</File>
-			<Index>0x01</Index>
-		</Texture>
-		<Mask>
-			<File>Textiles8x8</File>
-			<Index>0x02</Index>
-		</Mask>
-		<Tex2>0x013498DB</Tex2>
-		<SlotType>10</SlotType>
-		<Description>A vial of dye for coloring accessories.</Description>
-		<Activate>Dye</Activate>
-		<Sound>use_potion</Sound>
-		<Consumable/>
-	</Object>
+    <Object type="0x51" id="Tufts-Blue Clothing Dye">
+        <Class>Dye</Class>
+        <Item/>
+        <Texture>
+            <File>Textiles8x8</File>
+            <Index>0x10</Index>
+        </Texture>
+        <Mask>
+            <File>Textiles8x8</File>
+            <Index>0x00</Index>
+        </Mask>
+        <Tex1>0x013498DB</Tex1>
+        <SlotType>10</SlotType>
+        <Description>A vial of dye for coloring clothing.</Description>
+        <Activate>Dye</Activate>
+        <Sound>use_potion</Sound>
+        <Consumable/>
+    </Object>
+    <Object type="0x52" id="Tufts-Blue Accessory Dye">
+        <Class>Dye</Class>
+        <Item/>
+        <Texture>
+            <File>Textiles8x8</File>
+            <Index>0x01</Index>
+        </Texture>
+        <Mask>
+            <File>Textiles8x8</File>
+            <Index>0x02</Index>
+        </Mask>
+        <Tex2>0x013498DB</Tex2>
+        <SlotType>10</SlotType>
+        <Description>A vial of dye for coloring accessories.</Description>
+        <Activate>Dye</Activate>
+        <Sound>use_potion</Sound>
+        <Consumable/>
+    </Object>
 
-	<Object type="0x53" id="Dark-Khaki Clothing Dye">
-		<Class>Dye</Class>
-		<Item/>
-		<Texture>
-			<File>Textiles8x8</File>
-			<Index>0x10</Index>
-		</Texture>
-		<Mask>
-			<File>Textiles8x8</File>
-			<Index>0x00</Index>
-		</Mask>
-		<Tex1>0x01c6aa69</Tex1>
-		<SlotType>10</SlotType>
-		<Description>A vial of dye for coloring clothing.</Description>
-		<Activate>Dye</Activate>
-		<Sound>use_potion</Sound>
-		<Consumable/>
-	</Object>
-	<Object type="0x54" id="Dark-Khaki Accessory Dye">
-		<Class>Dye</Class>
-		<Item/>
-		<Texture>
-			<File>Textiles8x8</File>
-			<Index>0x01</Index>
-		</Texture>
-		<Mask>
-			<File>Textiles8x8</File>
-			<Index>0x02</Index>
-		</Mask>
-		<Tex2>0x01c6aa69</Tex2>
-		<SlotType>10</SlotType>
-		<Description>A vial of dye for coloring accessories.</Description>
-		<Activate>Dye</Activate>
-		<Sound>use_potion</Sound>
-		<Consumable/>
-	</Object>
+    <Object type="0x53" id="Dark-Khaki Clothing Dye">
+        <Class>Dye</Class>
+        <Item/>
+        <Texture>
+            <File>Textiles8x8</File>
+            <Index>0x10</Index>
+        </Texture>
+        <Mask>
+            <File>Textiles8x8</File>
+            <Index>0x00</Index>
+        </Mask>
+        <Tex1>0x01c6aa69</Tex1>
+        <SlotType>10</SlotType>
+        <Description>A vial of dye for coloring clothing.</Description>
+        <Activate>Dye</Activate>
+        <Sound>use_potion</Sound>
+        <Consumable/>
+    </Object>
+    <Object type="0x54" id="Dark-Khaki Accessory Dye">
+        <Class>Dye</Class>
+        <Item/>
+        <Texture>
+            <File>Textiles8x8</File>
+            <Index>0x01</Index>
+        </Texture>
+        <Mask>
+            <File>Textiles8x8</File>
+            <Index>0x02</Index>
+        </Mask>
+        <Tex2>0x01c6aa69</Tex2>
+        <SlotType>10</SlotType>
+        <Description>A vial of dye for coloring accessories.</Description>
+        <Activate>Dye</Activate>
+        <Sound>use_potion</Sound>
+        <Consumable/>
+    </Object>
 
-	<Object type="0x55" id="Olivine Clothing Dye">
-		<Class>Dye</Class>
-		<Item/>
-		<Texture>
-			<File>Textiles8x8</File>
-			<Index>0x10</Index>
-		</Texture>
-		<Mask>
-			<File>Textiles8x8</File>
-			<Index>0x00</Index>
-		</Mask>
-		<Tex1>0x01a2bf7c</Tex1>
-		<SlotType>10</SlotType>
-		<Description>A vial of dye for coloring clothing.</Description>
-		<Activate>Dye</Activate>
-		<Sound>use_potion</Sound>
-		<Consumable/>
-	</Object>
-	<Object type="0x56" id="Olivine Accessory Dye">
-		<Class>Dye</Class>
-		<Item/>
-		<Texture>
-			<File>Textiles8x8</File>
-			<Index>0x01</Index>
-		</Texture>
-		<Mask>
-			<File>Textiles8x8</File>
-			<Index>0x02</Index>
-		</Mask>
-		<Tex2>0x01a2bf7c</Tex2>
-		<SlotType>10</SlotType>
-		<Description>A vial of dye for coloring accessories.</Description>
-		<Activate>Dye</Activate>
-		<Sound>use_potion</Sound>
-		<Consumable/>
-	</Object>
+    <Object type="0x55" id="Olivine Clothing Dye">
+        <Class>Dye</Class>
+        <Item/>
+        <Texture>
+            <File>Textiles8x8</File>
+            <Index>0x10</Index>
+        </Texture>
+        <Mask>
+            <File>Textiles8x8</File>
+            <Index>0x00</Index>
+        </Mask>
+        <Tex1>0x01a2bf7c</Tex1>
+        <SlotType>10</SlotType>
+        <Description>A vial of dye for coloring clothing.</Description>
+        <Activate>Dye</Activate>
+        <Sound>use_potion</Sound>
+        <Consumable/>
+    </Object>
+    <Object type="0x56" id="Olivine Accessory Dye">
+        <Class>Dye</Class>
+        <Item/>
+        <Texture>
+            <File>Textiles8x8</File>
+            <Index>0x01</Index>
+        </Texture>
+        <Mask>
+            <File>Textiles8x8</File>
+            <Index>0x02</Index>
+        </Mask>
+        <Tex2>0x01a2bf7c</Tex2>
+        <SlotType>10</SlotType>
+        <Description>A vial of dye for coloring accessories.</Description>
+        <Activate>Dye</Activate>
+        <Sound>use_potion</Sound>
+        <Consumable/>
+    </Object>
 
-	<Object type="0x57" id="Pastel-Grey Clothing Dye">
-		<Class>Dye</Class>
-		<Item/>
-		<Texture>
-			<File>Textiles8x8</File>
-			<Index>0x10</Index>
-		</Texture>
-		<Mask>
-			<File>Textiles8x8</File>
-			<Index>0x00</Index>
-		</Mask>
-		<Tex1>0x01cfcfc1</Tex1>
-		<SlotType>10</SlotType>
-		<Description>A vial of dye for coloring clothing.</Description>
-		<Activate>Dye</Activate>
-		<Sound>use_potion</Sound>
-		<Consumable/>
-	</Object>
-	<Object type="0x58" id="Pastel-Grey Accessory Dye">
-		<Class>Dye</Class>
-		<Item/>
-		<Texture>
-			<File>Textiles8x8</File>
-			<Index>0x01</Index>
-		</Texture>
-		<Mask>
-			<File>Textiles8x8</File>
-			<Index>0x02</Index>
-		</Mask>
-		<Tex2>0x01cfcfc1</Tex2>
-		<SlotType>10</SlotType>
-		<Description>A vial of dye for coloring accessories.</Description>
-		<Activate>Dye</Activate>
-		<Sound>use_potion</Sound>
-		<Consumable/>
-	</Object>
+    <Object type="0x57" id="Pastel-Grey Clothing Dye">
+        <Class>Dye</Class>
+        <Item/>
+        <Texture>
+            <File>Textiles8x8</File>
+            <Index>0x10</Index>
+        </Texture>
+        <Mask>
+            <File>Textiles8x8</File>
+            <Index>0x00</Index>
+        </Mask>
+        <Tex1>0x01cfcfc1</Tex1>
+        <SlotType>10</SlotType>
+        <Description>A vial of dye for coloring clothing.</Description>
+        <Activate>Dye</Activate>
+        <Sound>use_potion</Sound>
+        <Consumable/>
+    </Object>
+    <Object type="0x58" id="Pastel-Grey Accessory Dye">
+        <Class>Dye</Class>
+        <Item/>
+        <Texture>
+            <File>Textiles8x8</File>
+            <Index>0x01</Index>
+        </Texture>
+        <Mask>
+            <File>Textiles8x8</File>
+            <Index>0x02</Index>
+        </Mask>
+        <Tex2>0x01cfcfc1</Tex2>
+        <SlotType>10</SlotType>
+        <Description>A vial of dye for coloring accessories.</Description>
+        <Activate>Dye</Activate>
+        <Sound>use_potion</Sound>
+        <Consumable/>
+    </Object>
 
-	<Object type="0x59" id="Dark-Lavender Clothing Dye">
-		<Class>Dye</Class>
-		<Item/>
-		<Texture>
-			<File>Textiles8x8</File>
-			<Index>0x10</Index>
-		</Texture>
-		<Mask>
-			<File>Textiles8x8</File>
-			<Index>0x00</Index>
-		</Mask>
-		<Tex1>0x01724e92</Tex1>
-		<SlotType>10</SlotType>
-		<Description>A vial of dye for coloring clothing.</Description>
-		<Activate>Dye</Activate>
-		<Sound>use_potion</Sound>
-		<Consumable/>
-	</Object>
-	<Object type="0x5a" id="Dark-Lavender Accessory Dye">
-		<Class>Dye</Class>
-		<Item/>
-		<Texture>
-			<File>Textiles8x8</File>
-			<Index>0x01</Index>
-		</Texture>
-		<Mask>
-			<File>Textiles8x8</File>
-			<Index>0x02</Index>
-		</Mask>
-		<Tex2>0x01724e92</Tex2>
-		<SlotType>10</SlotType>
-		<Description>A vial of dye for coloring accessories.</Description>
-		<Activate>Dye</Activate>
-		<Sound>use_potion</Sound>
-		<Consumable/>
-	</Object>
+    <Object type="0x59" id="Dark-Lavender Clothing Dye">
+        <Class>Dye</Class>
+        <Item/>
+        <Texture>
+            <File>Textiles8x8</File>
+            <Index>0x10</Index>
+        </Texture>
+        <Mask>
+            <File>Textiles8x8</File>
+            <Index>0x00</Index>
+        </Mask>
+        <Tex1>0x01724e92</Tex1>
+        <SlotType>10</SlotType>
+        <Description>A vial of dye for coloring clothing.</Description>
+        <Activate>Dye</Activate>
+        <Sound>use_potion</Sound>
+        <Consumable/>
+    </Object>
+    <Object type="0x5a" id="Dark-Lavender Accessory Dye">
+        <Class>Dye</Class>
+        <Item/>
+        <Texture>
+            <File>Textiles8x8</File>
+            <Index>0x01</Index>
+        </Texture>
+        <Mask>
+            <File>Textiles8x8</File>
+            <Index>0x02</Index>
+        </Mask>
+        <Tex2>0x01724e92</Tex2>
+        <SlotType>10</SlotType>
+        <Description>A vial of dye for coloring accessories.</Description>
+        <Activate>Dye</Activate>
+        <Sound>use_potion</Sound>
+        <Consumable/>
+    </Object>
 
-	<Object type="0x5b" id="Cedar-Chest Clothing Dye">
-		<Class>Dye</Class>
-		<Item/>
-		<Texture>
-			<File>Textiles8x8</File>
-			<Index>0x10</Index>
-		</Texture>
-		<Mask>
-			<File>Textiles8x8</File>
-			<Index>0x00</Index>
-		</Mask>
-		<Tex1>0x01c15744</Tex1>
-		<SlotType>10</SlotType>
-		<Description>A vial of dye for coloring clothing.</Description>
-		<Activate>Dye</Activate>
-		<Sound>use_potion</Sound>
-		<Consumable/>
-	</Object>
-	<Object type="0x5c" id="Cedar-Chest Accessory Dye">
-		<Class>Dye</Class>
-		<Item/>
-		<Texture>
-			<File>Textiles8x8</File>
-			<Index>0x01</Index>
-		</Texture>
-		<Mask>
-			<File>Textiles8x8</File>
-			<Index>0x02</Index>
-		</Mask>
-		<Tex2>0x01c15744</Tex2>
-		<SlotType>10</SlotType>
-		<Description>A vial of dye for coloring accessories.</Description>
-		<Activate>Dye</Activate>
-		<Sound>use_potion</Sound>
-		<Consumable/>
-	</Object>
+    <Object type="0x5b" id="Cedar-Chest Clothing Dye">
+        <Class>Dye</Class>
+        <Item/>
+        <Texture>
+            <File>Textiles8x8</File>
+            <Index>0x10</Index>
+        </Texture>
+        <Mask>
+            <File>Textiles8x8</File>
+            <Index>0x00</Index>
+        </Mask>
+        <Tex1>0x01c15744</Tex1>
+        <SlotType>10</SlotType>
+        <Description>A vial of dye for coloring clothing.</Description>
+        <Activate>Dye</Activate>
+        <Sound>use_potion</Sound>
+        <Consumable/>
+    </Object>
+    <Object type="0x5c" id="Cedar-Chest Accessory Dye">
+        <Class>Dye</Class>
+        <Item/>
+        <Texture>
+            <File>Textiles8x8</File>
+            <Index>0x01</Index>
+        </Texture>
+        <Mask>
+            <File>Textiles8x8</File>
+            <Index>0x02</Index>
+        </Mask>
+        <Tex2>0x01c15744</Tex2>
+        <SlotType>10</SlotType>
+        <Description>A vial of dye for coloring accessories.</Description>
+        <Activate>Dye</Activate>
+        <Sound>use_potion</Sound>
+        <Consumable/>
+    </Object>
 
-	<Object type="0x5d" id="Picton-Blue Clothing Dye">
-		<Class>Dye</Class>
-		<Item/>
-		<Texture>
-			<File>Textiles8x8</File>
-			<Index>0x10</Index>
-		</Texture>
-		<Mask>
-			<File>Textiles8x8</File>
-			<Index>0x00</Index>
-		</Mask>
-		<Tex1>0x0145c3ff</Tex1>
-		<SlotType>10</SlotType>
-		<Description>A vial of dye for coloring clothing.</Description>
-		<Activate>Dye</Activate>
-		<Sound>use_potion</Sound>
-		<Consumable/>
-	</Object>
-	<Object type="0x5e" id="Picton-Blue Accessory Dye">
-		<Class>Dye</Class>
-		<Item/>
-		<Texture>
-			<File>Textiles8x8</File>
-			<Index>0x01</Index>
-		</Texture>
-		<Mask>
-			<File>Textiles8x8</File>
-			<Index>0x02</Index>
-		</Mask>
-		<Tex2>0x0145c3ff</Tex2>
-		<SlotType>10</SlotType>
-		<Description>A vial of dye for coloring accessories.</Description>
-		<Activate>Dye</Activate>
-		<Sound>use_potion</Sound>
-		<Consumable/>
-	</Object>
+    <Object type="0x5d" id="Picton-Blue Clothing Dye">
+        <Class>Dye</Class>
+        <Item/>
+        <Texture>
+            <File>Textiles8x8</File>
+            <Index>0x10</Index>
+        </Texture>
+        <Mask>
+            <File>Textiles8x8</File>
+            <Index>0x00</Index>
+        </Mask>
+        <Tex1>0x0145c3ff</Tex1>
+        <SlotType>10</SlotType>
+        <Description>A vial of dye for coloring clothing.</Description>
+        <Activate>Dye</Activate>
+        <Sound>use_potion</Sound>
+        <Consumable/>
+    </Object>
+    <Object type="0x5e" id="Picton-Blue Accessory Dye">
+        <Class>Dye</Class>
+        <Item/>
+        <Texture>
+            <File>Textiles8x8</File>
+            <Index>0x01</Index>
+        </Texture>
+        <Mask>
+            <File>Textiles8x8</File>
+            <Index>0x02</Index>
+        </Mask>
+        <Tex2>0x0145c3ff</Tex2>
+        <SlotType>10</SlotType>
+        <Description>A vial of dye for coloring accessories.</Description>
+        <Activate>Dye</Activate>
+        <Sound>use_potion</Sound>
+        <Consumable/>
+    </Object>
 
-	<Object type="0x5f" id="Citrine Clothing Dye">
-		<Class>Dye</Class>
-		<Item/>
-		<Texture>
-			<File>Textiles8x8</File>
-			<Index>0x10</Index>
-		</Texture>
-		<Mask>
-			<File>Textiles8x8</File>
-			<Index>0x00</Index>
-		</Mask>
-		<Tex1>0x01d8d100</Tex1>
-		<SlotType>10</SlotType>
-		<Description>A vial of dye for coloring clothing.</Description>
-		<Activate>Dye</Activate>
-		<Sound>use_potion</Sound>
-		<Consumable/>
-	</Object>
-	<Object type="0x60" id="Citrine Accessory Dye">
-		<Class>Dye</Class>
-		<Item/>
-		<Texture>
-			<File>Textiles8x8</File>
-			<Index>0x01</Index>
-		</Texture>
-		<Mask>
-			<File>Textiles8x8</File>
-			<Index>0x02</Index>
-		</Mask>
-		<Tex2>0x01d8d100</Tex2>
-		<SlotType>10</SlotType>
-		<Description>A vial of dye for coloring accessories.</Description>
-		<Activate>Dye</Activate>
-		<Sound>use_potion</Sound>
-		<Consumable/>
-	</Object>
+    <Object type="0x5f" id="Citrine Clothing Dye">
+        <Class>Dye</Class>
+        <Item/>
+        <Texture>
+            <File>Textiles8x8</File>
+            <Index>0x10</Index>
+        </Texture>
+        <Mask>
+            <File>Textiles8x8</File>
+            <Index>0x00</Index>
+        </Mask>
+        <Tex1>0x01d8d100</Tex1>
+        <SlotType>10</SlotType>
+        <Description>A vial of dye for coloring clothing.</Description>
+        <Activate>Dye</Activate>
+        <Sound>use_potion</Sound>
+        <Consumable/>
+    </Object>
+    <Object type="0x60" id="Citrine Accessory Dye">
+        <Class>Dye</Class>
+        <Item/>
+        <Texture>
+            <File>Textiles8x8</File>
+            <Index>0x01</Index>
+        </Texture>
+        <Mask>
+            <File>Textiles8x8</File>
+            <Index>0x02</Index>
+        </Mask>
+        <Tex2>0x01d8d100</Tex2>
+        <SlotType>10</SlotType>
+        <Description>A vial of dye for coloring accessories.</Description>
+        <Activate>Dye</Activate>
+        <Sound>use_potion</Sound>
+        <Consumable/>
+    </Object>
 
-	<Object type="0x61" id="Coral-Red Clothing Dye">
-		<Class>Dye</Class>
-		<Item/>
-		<Texture>
-			<File>Textiles8x8</File>
-			<Index>0x10</Index>
-		</Texture>
-		<Mask>
-			<File>Textiles8x8</File>
-			<Index>0x00</Index>
-		</Mask>
-		<Tex1>0x01fc3b3b</Tex1>
-		<SlotType>10</SlotType>
-		<Description>A vial of dye for coloring clothing.</Description>
-		<Activate>Dye</Activate>
-		<Sound>use_potion</Sound>
-		<Consumable/>
-	</Object>
-	<Object type="0x62" id="Coral-Red Accessory Dye">
-		<Class>Dye</Class>
-		<Item/>
-		<Texture>
-			<File>Textiles8x8</File>
-			<Index>0x01</Index>
-		</Texture>
-		<Mask>
-			<File>Textiles8x8</File>
-			<Index>0x02</Index>
-		</Mask>
-		<Tex2>0x01fc3b3b</Tex2>
-		<SlotType>10</SlotType>
-		<Description>A vial of dye for coloring accessories.</Description>
-		<Activate>Dye</Activate>
-		<Sound>use_potion</Sound>
-		<Consumable/>
-	</Object>
+    <Object type="0x61" id="Coral-Red Clothing Dye">
+        <Class>Dye</Class>
+        <Item/>
+        <Texture>
+            <File>Textiles8x8</File>
+            <Index>0x10</Index>
+        </Texture>
+        <Mask>
+            <File>Textiles8x8</File>
+            <Index>0x00</Index>
+        </Mask>
+        <Tex1>0x01fc3b3b</Tex1>
+        <SlotType>10</SlotType>
+        <Description>A vial of dye for coloring clothing.</Description>
+        <Activate>Dye</Activate>
+        <Sound>use_potion</Sound>
+        <Consumable/>
+    </Object>
+    <Object type="0x62" id="Coral-Red Accessory Dye">
+        <Class>Dye</Class>
+        <Item/>
+        <Texture>
+            <File>Textiles8x8</File>
+            <Index>0x01</Index>
+        </Texture>
+        <Mask>
+            <File>Textiles8x8</File>
+            <Index>0x02</Index>
+        </Mask>
+        <Tex2>0x01fc3b3b</Tex2>
+        <SlotType>10</SlotType>
+        <Description>A vial of dye for coloring accessories.</Description>
+        <Activate>Dye</Activate>
+        <Sound>use_potion</Sound>
+        <Consumable/>
+    </Object>
 
-	<Object type="0x63" id="Alien-Armpit Clothing Dye">
-		<Class>Dye</Class>
-		<Item/>
-		<Texture>
-			<File>Textiles8x8</File>
-			<Index>0x10</Index>
-		</Texture>
-		<Mask>
-			<File>Textiles8x8</File>
-			<Index>0x00</Index>
-		</Mask>
-		<Tex1>0x016acd0c</Tex1>
-		<SlotType>10</SlotType>
-		<Description>A vial of dye for coloring clothing.</Description>
-		<Activate>Dye</Activate>
-		<Sound>use_potion</Sound>
-		<Consumable/>
-	</Object>
-	<Object type="0x64" id="Alien-Armpit Accessory Dye">
-		<Class>Dye</Class>
-		<Item/>
-		<Texture>
-			<File>Textiles8x8</File>
-			<Index>0x01</Index>
-		</Texture>
-		<Mask>
-			<File>Textiles8x8</File>
-			<Index>0x02</Index>
-		</Mask>
-		<Tex2>0x016acd0c</Tex2>
-		<SlotType>10</SlotType>
-		<Description>A vial of dye for coloring accessories.</Description>
-		<Activate>Dye</Activate>
-		<Sound>use_potion</Sound>
-		<Consumable/>
-	</Object>
+    <Object type="0x63" id="Alien-Armpit Clothing Dye">
+        <Class>Dye</Class>
+        <Item/>
+        <Texture>
+            <File>Textiles8x8</File>
+            <Index>0x10</Index>
+        </Texture>
+        <Mask>
+            <File>Textiles8x8</File>
+            <Index>0x00</Index>
+        </Mask>
+        <Tex1>0x016acd0c</Tex1>
+        <SlotType>10</SlotType>
+        <Description>A vial of dye for coloring clothing.</Description>
+        <Activate>Dye</Activate>
+        <Sound>use_potion</Sound>
+        <Consumable/>
+    </Object>
+    <Object type="0x64" id="Alien-Armpit Accessory Dye">
+        <Class>Dye</Class>
+        <Item/>
+        <Texture>
+            <File>Textiles8x8</File>
+            <Index>0x01</Index>
+        </Texture>
+        <Mask>
+            <File>Textiles8x8</File>
+            <Index>0x02</Index>
+        </Mask>
+        <Tex2>0x016acd0c</Tex2>
+        <SlotType>10</SlotType>
+        <Description>A vial of dye for coloring accessories.</Description>
+        <Activate>Dye</Activate>
+        <Sound>use_potion</Sound>
+        <Consumable/>
+    </Object>
 
-	<Object type="0x65" id="Bitter-Lemon Clothing Dye">
-		<Class>Dye</Class>
-		<Item/>
-		<Texture>
-			<File>Textiles8x8</File>
-			<Index>0x10</Index>
-		</Texture>
-		<Mask>
-			<File>Textiles8x8</File>
-			<Index>0x00</Index>
-		</Mask>
-		<Tex1>0x01c6e400</Tex1>
-		<SlotType>10</SlotType>
-		<Description>A vial of dye for coloring clothing.</Description>
-		<Activate>Dye</Activate>
-		<Sound>use_potion</Sound>
-		<Consumable/>
-	</Object>
-	<Object type="0x66" id="Bitter-Lemon Accessory Dye">
-		<Class>Dye</Class>
-		<Item/>
-		<Texture>
-			<File>Textiles8x8</File>
-			<Index>0x01</Index>
-		</Texture>
-		<Mask>
-			<File>Textiles8x8</File>
-			<Index>0x02</Index>
-		</Mask>
-		<Tex2>0x01c6e400</Tex2>
-		<SlotType>10</SlotType>
-		<Description>A vial of dye for coloring accessories.</Description>
-		<Activate>Dye</Activate>
-		<Sound>use_potion</Sound>
-		<Consumable/>
-	</Object>
+    <Object type="0x65" id="Bitter-Lemon Clothing Dye">
+        <Class>Dye</Class>
+        <Item/>
+        <Texture>
+            <File>Textiles8x8</File>
+            <Index>0x10</Index>
+        </Texture>
+        <Mask>
+            <File>Textiles8x8</File>
+            <Index>0x00</Index>
+        </Mask>
+        <Tex1>0x01c6e400</Tex1>
+        <SlotType>10</SlotType>
+        <Description>A vial of dye for coloring clothing.</Description>
+        <Activate>Dye</Activate>
+        <Sound>use_potion</Sound>
+        <Consumable/>
+    </Object>
+    <Object type="0x66" id="Bitter-Lemon Accessory Dye">
+        <Class>Dye</Class>
+        <Item/>
+        <Texture>
+            <File>Textiles8x8</File>
+            <Index>0x01</Index>
+        </Texture>
+        <Mask>
+            <File>Textiles8x8</File>
+            <Index>0x02</Index>
+        </Mask>
+        <Tex2>0x01c6e400</Tex2>
+        <SlotType>10</SlotType>
+        <Description>A vial of dye for coloring accessories.</Description>
+        <Activate>Dye</Activate>
+        <Sound>use_potion</Sound>
+        <Consumable/>
+    </Object>
 </Objects>

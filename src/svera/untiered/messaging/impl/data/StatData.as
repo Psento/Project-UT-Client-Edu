@@ -188,6 +188,7 @@ public class StatData {
     public static const PartySummoner:int = 182;
     public static const CosmeticPetType:int = 183;
     public static const HasCosmeticPet:int = 184;
+    
     public static const FireFragments:int = 185;
     public static const WaterFragments:int = 186;
     public static const AirFragments:int = 187;
@@ -196,6 +197,7 @@ public class StatData {
     public static const IceFragments:int = 190;
     public static const VoidFragments:int = 191;
     public static const LightFragments:int = 192;
+
     public static const APotions:int = 193;
     public static const DPotions:int = 194;
     public static const SPotions:int = 195;
@@ -217,12 +219,15 @@ public class StatData {
     public static const VoidAspect:int = 211;
     public static const LightAspect:int = 212;
     public static const EvasionBonus:int = 213;
+
     public static const LegendaryLootbox:int = 214;
     public static const EventLootbox:int = 215;
     public static const GoldLootbox:int = 216;
     public static const EliteLootbox:int = 217;
     public static const PremiumLootbox:int = 218;
+
     public static const Effects3:int = 219;
+
     public static const MiningTier:int = 220;
     public static const LumberTier:int = 221;
     public static const ForageTier:int = 222;

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Objects>
+	<Object type="0x5878" id="Godly Remnant">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>Crafting_Ingredients8x8</File>
+			<Index>0x00</Index>
+		</Texture>
+		<SlotType>37</SlotType>
+		<TierType>Exiled</TierType>
+		<Description>A remnant from the God of Creation, very few of these remain.</Description>
+		<ExtraTooltipData>
+			<EffectInfo name="" description="Fuse this item with a relic to restore it's incomprehensible power."/>
+		</ExtraTooltipData>
+		<Sound>use_potion</Sound>
+		<ContainerType>Exiled</ContainerType>
+	</Object>
+</Objects>

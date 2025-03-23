@@ -18,6 +18,8 @@ public class EmbeddedAssets {
     public static var Pets16x16:Class;
     // Environment
 
+    [Embed(source="Environment/customobjects16x16.png")]
+    public static var customobjects16x16:Class;
     [Embed(source="Environment/Foundry/Foundry_Environment8x8.png")]
     public static var Foundry_Environment8x8:Class;
     [Embed(source="Environment/Foundry/Foundry_Environment16x16.png")]
@@ -73,6 +75,57 @@ public class EmbeddedAssets {
     [Embed(source="Environment/Overworld/Overworld_Environment_Nidavellir16x16.png")]
     public static var Overworld_Environment_Nidavellir16x16:Class;
     // Equipment
+    [Embed(source="Items/Godly/GodlyMiscellaneous.png")]
+    public static var GodlyMiscellaneous:Class;
+    [Embed(source="Items/Godly/GodlyAbilities.png")]
+    public static var GodlyAbilities:Class;
+    [Embed(source="Items/Godly/GodlyAccessories.png")]
+    public static var GodlyAccessories:Class;
+    [Embed(source="Items/Godly/GodlyArmor.png")]
+    public static var GodlyArmor:Class;
+    [Embed(source="Items/Godly/GodlyProjectiles.png")]
+    public static var GodlyProjectiles:Class;
+    [Embed(source="Items/Godly/GodlyWeapons.png")]
+    public static var GodlyWeapons:Class;
+
+    [Embed(source="Items/GodSlayer/GodSlayerWeapons.png")]
+    public static var GodSlayerWeapons:Class;
+    [Embed(source="Items/GodSlayer/GodSlayerAbilities.png")]
+    public static var GodSlayerAbilities:Class;
+    [Embed(source="Items/GodSlayer/GodSlayerAccessories.png")]
+    public static var GodSlayerAccessories:Class;
+    [Embed(source="Items/GodSlayer/GodSlayerArmor.png")]
+    public static var GodSlayerArmor:Class;
+    [Embed(source="Items/GodSlayer/GodSlayerProjectiles.png")]
+    public static var GodSlayerProjectiles:Class;
+
+    [Embed(source="Items/Legendary/LegendaryWeapons.png")]
+    public static var LegendaryWeapons:Class;
+    [Embed(source="Items/Legendary/LegendaryAbilities.png")]
+    public static var LegendaryAbilities:Class;
+    [Embed(source="Items/Legendary/LegendaryAccessories.png")]
+    public static var LegendaryAccessories:Class;
+    [Embed(source="Items/Legendary/LegendaryArmor.png")]
+    public static var LegendaryArmor:Class;
+    [Embed(source="Items/Legendary/LegendaryProjectiles.png")]
+    public static var LegendaryProjectiles:Class;
+
+    [Embed(source="Items/Sacred/Sacred.png")]
+    public static var Sacred:Class;
+    [Embed(source="Items/Sacred/SacredWeapons.png")]
+    public static var SacredWeapons:Class;
+    [Embed(source="Items/Sacred/SacredAbilities.png")]
+    public static var SacredAbilities:Class;
+    [Embed(source="Items/Sacred/SacredAccessories.png")]
+    public static var SacredAccessories:Class;
+    [Embed(source="Items/Sacred/SacredArmor.png")]
+    public static var SacredArmor:Class;
+    [Embed(source="Items/Sacred/SacredProjectiles.png")]
+    public static var SacredProjectiles:Class;
+    [Embed(source="Items/Sacred/SacredProjs.png")]
+    public static var SacredProjs:Class;
+
+
     [Embed(source="Items/StarterGear.png")]
     public static var StarterGear:Class;
 

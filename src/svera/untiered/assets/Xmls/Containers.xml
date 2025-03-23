@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Objects>
+    <Object type="0xf000" id="Loot Player Drop Container">
+        <Class>Container</Class>
+        <Container/>
+        <CanPutNormalObjects/>
+        <Loot/>
+        <Texture>
+          <File>DroppedContainers8x8</File>
+          <Index>0x00</Index>
+        </Texture>
+        <Size>80</Size>
+        <SlotTypes>0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
+    </Object>
+    <Object type="0xf001" id="Loot Soul-Bound Container">
+        <Class>Container</Class>
+        <Container/>
+        <CanPutSoulboundObjects/>
+        <Loot/>
+        <Texture>
+          <File>DroppedContainers8x8</File>
+          <Index>0x01</Index>
+        </Texture>
+        <Size>80</Size>
+        <SlotTypes>0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
+    </Object>
+    <Object type="0xf002" id="Loot Common Container">
+        <Class>Container</Class>
+        <Container/>
+        <CanPutNormalObjects/>
+        <Loot/>
+        <Texture>
+          <File>DroppedContainers8x8</File>
+          <Index>0x02</Index>
+        </Texture>
+        <Size>80</Size>
+        <SlotTypes>0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
+    </Object>
+    <Object type="0xf003" id="Loot Stat Container">
+        <Class>Container</Class>
+        <Container/>
+        <CanPutNormalObjects/>
+        <CanPutSoulboundObjects/>
+        <Loot/>
+        <Texture>
+          <File>DroppedContainers8x8</File>
+          <Index>0x03</Index>
+        </Texture>
+        <Size>80</Size>
+        <SlotTypes>0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
+    </Object>
+    <Object type="0xf004" id="Loot Uncommon Container">
+        <Class>Container</Class>
+        <Container/>
+        <CanPutNormalObjects/>
+        <CanPutSoulboundObjects/>
+        <Loot/>
+        <Texture>
+          <File>DroppedContainers8x8</File>
+          <Index>0x04</Index>
+        </Texture>
+        <Size>80</Size>
+        <SlotTypes>0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
+    </Object>
+    <Object type="0xf005" id="Loot Tarnished Container">
+        <Class>Container</Class>
+        <Container/>
+        <CanPutNormalObjects/>
+        <CanPutSoulboundObjects/>
+        <Loot/>
+        <Texture>
+          <File>DroppedContainers8x8</File>
+          <Index>0x05</Index>
+        </Texture>
+        <Size>80</Size>
+        <SlotTypes>0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
+    </Object>
+	<Object type="0xf006" id="Loot Artifact Container">
+		<Class>Container</Class>
+		<Container/>
+		<CanPutNormalObjects/>
+		<CanPutSoulboundObjects/>
+		<Loot/>
+		<Texture>
+			<File>DroppedContainers8x8</File>
+			<Index>0x06</Index>
+		</Texture>
+		<Size>100</Size>
+		<SlotTypes>0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
+	</Object>
+	<Object type="0xf007" id="Loot Ancestral Container">
+		<Class>Container</Class>
+		<Container/>
+		<CanPutNormalObjects/>
+		<CanPutSoulboundObjects/>
+		<Loot/>
+		<Texture>
+			<File>DroppedContainers8x8</File>
+			<Index>0x07</Index>
+		</Texture>
+		<Size>120</Size>
+		<SlotTypes>0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
+	</Object>
+    <Object type="0xf008" id="Loot Valiant Container">
+        <Class>Container</Class>
+        <Container/>
+        <CanPutNormalObjects/>
+        <CanPutSoulboundObjects/>
+        <Loot/>
+        <Texture>
+          <File>DroppedContainers8x8</File>
+          <Index>0x08</Index>
+        </Texture>
+        <Size>120</Size>
+        <SlotTypes>0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
+    </Object>
+	<Object type="0xf009" id="Loot Relic Container">
+		<Class>Container</Class>
+		<Container/>
+		<CanPutNormalObjects/>
+		<CanPutSoulboundObjects/>
+		<Loot/>
+		<Texture>
+			<File>DroppedContainers8x8</File>
+			<Index>0x09</Index>
+		</Texture>
+		<Size>80</Size>
+		<SlotTypes>0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
+	</Object>
+	<Object type="0xf00a" id="Loot Exiled Container">
+		<Class>Container</Class>
+		<Container/>
+		<CanPutNormalObjects/>
+		<CanPutSoulboundObjects/>
+		<Loot/>
+		<Texture>
+			<File>DroppedContainers8x8</File>
+			<Index>0x0a</Index>
+		</Texture>
+		<Size>120</Size>
+		<SlotTypes>0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
+	</Object>
+</Objects>

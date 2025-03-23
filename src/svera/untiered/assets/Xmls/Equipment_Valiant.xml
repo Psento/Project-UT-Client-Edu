@@ -1,0 +1,2927 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Objects>
+	<!-- #region --> // Light
+	<Object type="0x47db" id="Garments of the Immovable">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ValiantArmor</File>
+			<Index>00</Index>
+		</Texture>
+		<SlotType>14</SlotType>
+		<TierType>Valiant</TierType>
+		<Description>What happens when the unstoppable force meets the immovable object?</Description>
+		<ActivateOnEquip stat="0" amount="15" isPerc="true">IncrementStat</ActivateOnEquip> // HP
+		<ActivateOnEquip stat="20" amount="7">IncrementStat</ActivateOnEquip> // ATT
+		<ActivateOnEquip stat="21" amount="5">IncrementStat</ActivateOnEquip> // DEF
+		<ActivateOnEquip stat="22" amount="15">IncrementStat</ActivateOnEquip> // SPD
+		<ActivateOnEquip stat="26" amount="15">IncrementStat</ActivateOnEquip> // VIT
+		<ActivateOnEquip stat="28" amount="5">IncrementStat</ActivateOnEquip> // DEX
+		<FameBonus>8</FameBonus>
+		<Valiant id="Unstoppable Advance"/>
+		<Origin>Cosmic Capsule</Origin>
+	</Object>
+	<Object type="0x5481" id="Mantle of Untold Malice">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ValiantArmor</File>
+			<Index>0x01</Index>
+		</Texture>
+		<SlotType>14</SlotType>
+		<TierType>Valiant</TierType>
+		<Description>A jet black silk garment that fills the bearer's soul with a sense of incomprehensible burden.</Description>
+		<ActivateOnEquip stat="20" amount="13">IncrementStat</ActivateOnEquip> // ATT
+		<ActivateOnEquip stat="22" amount="15">IncrementStat</ActivateOnEquip> // SPD
+		<ActivateOnEquip stat="28" amount="7">IncrementStat</ActivateOnEquip> // DEX
+		<ActivateOnEquip stat="112" amount="50">IncrementStat</ActivateOnEquip> // MGT
+		<ActivateOnEquip stat="114" amount="75">IncrementStat</ActivateOnEquip> // LCK
+		<Steal type="life" amount="1"/>
+		<FameBonus>8</FameBonus>
+		<Valiant id="Hellish Alliance"/>
+		<Origin>Cosmic Capsule</Origin>
+	</Object>
+	<Object type="0x42f3" id="Cosmic Whispers">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ValiantArmor</File>
+			<Index>0x02</Index>
+		</Texture>
+		<SlotType>14</SlotType>
+		<TierType>Valiant</TierType>
+		<Description>In life, in death, though silence and cacophony you can hear them, only if you’d know what they say.</Description>
+		<ActivateOnEquip stat="3" amount="400">IncrementStat</ActivateOnEquip> // MP
+		<ActivateOnEquip stat="21" amount="5">IncrementStat</ActivateOnEquip> // WIS
+		<ActivateOnEquip stat="22" amount="15">IncrementStat</ActivateOnEquip> // SPD
+		<ActivateOnEquip stat="27" amount="75">IncrementStat</ActivateOnEquip> // WIS
+		<Steal type="mana" amount="2"/>
+		<FameBonus>8</FameBonus>
+		<Valiant id="White Noise"/>
+		<Origin>Cosmic Capsule</Origin>
+	</Object>
+	<Object type="0x1644" id="Thunderous Robes">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ValiantArmor</File>
+			<Index>0x03</Index>
+		</Texture>
+		<SlotType>14</SlotType>
+		<TierType>Valiant</TierType>
+		<Description>If you listen closely, you can hear the raindrops, feel the wind and control the thunder.</Description>
+		<ActivateOnEquip stat="3" amount="100">IncrementStat</ActivateOnEquip> // MP
+		<ActivateOnEquip stat="20" amount="20">IncrementStat</ActivateOnEquip> // ATT
+		<ActivateOnEquip stat="21" amount="5">IncrementStat</ActivateOnEquip> // DEF
+		<ActivateOnEquip stat="22" amount="15">IncrementStat</ActivateOnEquip> // SPD
+		<ActivateOnEquip stat="27" amount="10">IncrementStat</ActivateOnEquip> // WIS
+		<ActivateOnEquip stat="28" amount="10">IncrementStat</ActivateOnEquip> // DEX
+		<FameBonus>8</FameBonus>
+		<Valiant id="Cheapskate"/>
+		<Origin>Cosmic Capsule</Origin>
+	</Object>
+	<Object type="0x69e3" id="Earthveil">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ValiantArmor</File>
+			<Index>0x04</Index>
+		</Texture>
+		<SlotType>14</SlotType>
+		<TierType>Valiant</TierType>
+		<Description>When wearing this you feel like the very nature surrounding you fends off all harm.</Description>
+		<ActivateOnEquip stat="0" amount="100">IncrementStat</ActivateOnEquip> // HP
+		<ActivateOnEquip stat="3" amount="100">IncrementStat</ActivateOnEquip> // MP
+		<ActivateOnEquip stat="21" amount="5">IncrementStat</ActivateOnEquip> // DEF
+		<ActivateOnEquip stat="22" amount="25">IncrementStat</ActivateOnEquip> // SPD
+		<ActivateOnEquip stat="28" amount="20">IncrementStat</ActivateOnEquip> // DEX
+		<FameBonus>8</FameBonus>
+		<Valiant id="Alchemic Frenzy"/>
+		<Origin>Cosmic Capsule</Origin>
+	</Object>
+	<!-- #endregion -->
+	<!-- #region --> // Medium
+	<Object type="0x791a" id="Beastly Empowerment">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ValiantArmor</File>
+			<Index>0x20</Index>
+		</Texture>
+		<SlotType>6</SlotType>
+		<TierType>Valiant</TierType>
+		<Description>Carved from the Heart of a Titan, it fills the wearer with an unrivaled sense of vigor.</Description>
+		<ActivateOnEquip stat="0" amount="250">IncrementStat</ActivateOnEquip> // HP
+		<ActivateOnEquip stat="20" amount="10">IncrementStat</ActivateOnEquip> // ATK
+		<ActivateOnEquip stat="21" amount="14">IncrementStat</ActivateOnEquip> // DEF
+		<ActivateOnEquip stat="22" amount="9">IncrementStat</ActivateOnEquip> // SPD
+		<ActivateOnEquip stat="26" amount="20">IncrementStat</ActivateOnEquip> // VIT
+		<ActivateOnEquip stat="28" amount="5">IncrementStat</ActivateOnEquip> // DEX
+		<FameBonus>8</FameBonus>
+		<Valiant id="Getting Serious"/>
+		<Origin>Cosmic Capsule</Origin>
+	</Object>
+	<Object type="0x1398" id="Souvenir of the Underworld">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ValiantArmor</File>
+			<Index>0x21</Index>
+		</Texture>
+		<SlotType>6</SlotType>
+		<TierType>Valiant</TierType>
+		<Description>A gift given to a shady rogue after completing a deal with the Devil, it makes you feel like you aren’t in control of your actions.</Description>
+		<ActivateOnEquip stat="20" amount="10">IncrementStat</ActivateOnEquip> // ATK
+		<ActivateOnEquip stat="21" amount="10">IncrementStat</ActivateOnEquip> // DEF
+		<ActivateOnEquip stat="22" amount="9">IncrementStat</ActivateOnEquip>  // SPD
+		<ActivateOnEquip stat="112" amount="65">IncrementStat</ActivateOnEquip> // MGT
+		<ActivateOnEquip stat="114" amount="90">IncrementStat</ActivateOnEquip> // LCK
+		<FameBonus>8</FameBonus>
+		<Valiant id="Burning Ambition"/>
+		<Origin>Cosmic Capsule</Origin>
+	</Object>
+	<Object type="0x63a6" id="Beastly Nature">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ValiantArmor</File>
+			<Index>0x22</Index>
+		</Texture>
+		<SlotType>6</SlotType>
+		<TierType>Valiant</TierType>
+		<Description>Rage is not a tool, it’s a metric.</Description>
+		<ActivateOnEquip stat="20" amount="12">IncrementStat</ActivateOnEquip> // ATK
+		<ActivateOnEquip stat="21" amount="10">IncrementStat</ActivateOnEquip> // DEF
+		<ActivateOnEquip stat="22" amount="9">IncrementStat</ActivateOnEquip> // SPD
+		<ActivateOnEquip stat="27" amount="10">IncrementStat</ActivateOnEquip> // WIS
+		<ActivateOnEquip stat="28" amount="18">IncrementStat</ActivateOnEquip> // DEX
+		<ActivateOnEquip stat="114" amount="40">IncrementStat</ActivateOnEquip> // LCK
+		<FameBonus>8</FameBonus>
+		<Valiant id="End of Patience"/>
+		<Origin>Cosmic Capsule</Origin>
+	</Object>
+	<Object type="0x55f6" id="Guardian's Might">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ValiantArmor</File>
+			<Index>0x23</Index>
+		</Texture>
+		<SlotType>6</SlotType>
+		<TierType>Valiant</TierType>
+		<Description>The ancient guardian held to his duty until the bitter end now his task is in your hands but beware, his power brought peril to all who wished to acquire it.</Description>
+		<ActivateOnEquip stat="20" amount="60">IncrementStat</ActivateOnEquip> // ATK
+		<ActivateOnEquip stat="21" amount="-20">IncrementStat</ActivateOnEquip> // DEF
+		<ActivateOnEquip stat="22" amount="9">IncrementStat</ActivateOnEquip> // SPD
+		<FameBonus>8</FameBonus>
+		<Valiant id="Power of Knowledge"/>
+		<Origin>Cosmic Capsule</Origin>
+	</Object>
+	<Object type="0x5468" id="Shadowlace">
+		<Class>Equipment</Class>
+		<Item/>
+		<Description>An armor forged together from Shadows fading in and out of reality.</Description>
+		<Texture>
+			<File>ValiantArmor</File>
+			<Index>0x24</Index>
+		</Texture>
+		<SlotType>6</SlotType>
+		<TierType>Valiant</TierType>
+		<ActivateOnEquip stat="0" amount="100">IncrementStat</ActivateOnEquip> // HP
+		<ActivateOnEquip stat="20" amount="10">IncrementStat</ActivateOnEquip> // ATT
+		<ActivateOnEquip stat="21" amount="16">IncrementStat</ActivateOnEquip> // DEF
+		<ActivateOnEquip stat="22" amount="20">IncrementStat</ActivateOnEquip> // SPD
+		<ActivateOnEquip stat="28" amount="10">IncrementStat</ActivateOnEquip> // PRT
+		<FameBonus>8</FameBonus>
+		<Valiant id="Abyssal Absorption"/>
+		<Origin>Cosmic Capsule</Origin>
+	</Object>
+	<Object type="0x49e4" id="Audacious Approachment">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ValiantArmor</File>
+			<Index>0x25</Index>
+		</Texture>
+		<SlotType>6</SlotType>
+		<TierType>Valiant</TierType>
+		<Description>An odd looking, time worn leather suit that seemingly suffered a thousand cuts… all of which seem to be of lethal severity.</Description>
+		<ActivateOnEquip stat="0" amount="100">IncrementStat</ActivateOnEquip> // HP
+		<ActivateOnEquip stat="3" amount="-10000">IncrementStat</ActivateOnEquip> // MP
+		<ActivateOnEquip stat="20" amount="30" isPerc="true">IncrementStat</ActivateOnEquip> // ATK
+		<ActivateOnEquip stat="21" amount="12">IncrementStat</ActivateOnEquip> // DEF
+		<ActivateOnEquip stat="22" amount="12">IncrementStat</ActivateOnEquip> // SPD
+		<ActivateOnEquip stat="28" amount="30" isPerc="true">IncrementStat</ActivateOnEquip> // DEX
+		<Steal type="life" amount="2"/>
+		<FameBonus>8</FameBonus>
+		<Valiant id="Perilous Advantage"/>
+		<Origin>Cosmic Capsule</Origin>
+	</Object>
+	<Object type="0x46d5" id="Basilisk Scales">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ValiantArmor</File>
+			<Index>0x26</Index>
+		</Texture>
+		<SlotType>6</SlotType>
+		<TierType>Valiant</TierType>
+		<Description>Crafted from the Hide of a Great beast, it is a warrior’s utmost honor slaying one of them as their scales are nigh Untouchable because of the poison residing underneath.</Description>
+		<ActivateOnEquip stat="3" amount="300">IncrementStat</ActivateOnEquip> // MP
+		<ActivateOnEquip stat="21" amount="5">IncrementStat</ActivateOnEquip> // DEF
+		<ActivateOnEquip stat="22" amount="12">IncrementStat</ActivateOnEquip> // SPD
+		<ActivateOnEquip stat="27" amount="55">IncrementStat</ActivateOnEquip> // WIS
+		<FameBonus>8</FameBonus>
+		<Valiant id="Virulent Buildup"/>
+		<Origin>Cosmic Capsule</Origin>
+	</Object>
+	<!-- #endregion -->
+	<!-- #region --> // Heavy
+	<Object type="0x5476" id="Marble Aegis">
+		<Class>Equipment</Class>
+		<Item/>
+		<Description>Seems brittle to the untrained eye, yet in truth this armor is more enduring than time itself.</Description>
+		<Texture>
+			<File>ValiantArmor</File>
+			<Index>0x40</Index>
+		</Texture>
+		<SlotType>7</SlotType>
+		<TierType>Valiant</TierType>
+		<ActivateOnEquip stat="0" amount="125">IncrementStat</ActivateOnEquip>// HP
+		<ActivateOnEquip stat="3" amount="200">IncrementStat</ActivateOnEquip>// MP
+		<ActivateOnEquip stat="21" amount="16">IncrementStat</ActivateOnEquip> // DEF
+		<ActivateOnEquip stat="22" amount="7">IncrementStat</ActivateOnEquip> // SPD
+		<ActivateOnEquip stat="27" amount="35">IncrementStat</ActivateOnEquip> // WIS
+		<ActivateOnEquip stat="121" amount="25">IncrementStat</ActivateOnEquip> // RES
+		<FameBonus>8</FameBonus>
+		<Valiant id="Holy Blessing"/>
+		<Origin>Cosmic Capsule</Origin>
+	</Object>
+	<Object type="0x46d9" id="Realmbreaker">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ValiantArmor</File>
+			<Index>0x41</Index>
+		</Texture>
+		<SlotType>7</SlotType>
+		<TierType>Valiant</TierType>
+		<Description>The last stand is where I plant my feet. Not one step more.</Description>
+		<ActivateOnEquip stat="20" amount="15">IncrementStat</ActivateOnEquip> // ATK
+		<ActivateOnEquip stat="21" amount="16">IncrementStat</ActivateOnEquip> // DEF
+		<ActivateOnEquip stat="22" amount="7">IncrementStat</ActivateOnEquip> // SPD
+		<ActivateOnEquip stat="28" amount="10">IncrementStat</ActivateOnEquip> // DEX
+		<ActivateOnEquip stat="112" amount="50">IncrementStat</ActivateOnEquip> // MGT
+		<ActivateOnEquip stat="114" amount="50">IncrementStat</ActivateOnEquip> // LCK
+		<FameBonus>8</FameBonus>
+		<Valiant id="Rending Rage"/>
+		<Origin>Cosmic Capsule</Origin>
+	</Object>
+	<Object type="0x42fa" id="Godheart">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ValiantArmor</File>
+			<Index>0x42</Index>
+		</Texture>
+		<SlotType>7</SlotType>
+		<TierType>Valiant</TierType>
+		<Description>The closest humans have ever gotten to reaching immortality.</Description>
+		<ActivateOnEquip stat="0" amount="400">IncrementStat</ActivateOnEquip> // HP
+		<ActivateOnEquip stat="21" amount="16">IncrementStat</ActivateOnEquip> // DEF
+		<ActivateOnEquip stat="22" amount="7">IncrementStat</ActivateOnEquip> // SPD
+		<ActivateOnEquip stat="27" amount="15">IncrementStat</ActivateOnEquip> // WIS
+		<FameBonus>8</FameBonus>
+		<Valiant id="Underheld Reserve"/>
+		<Origin>Cosmic Capsule</Origin>
+	</Object>
+	<Object type="0x169f" id="Warmaster's Advance">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ValiantArmor</File>
+			<Index>0x43</Index>
+		</Texture>
+		<SlotType>7</SlotType>
+		<TierType>Valiant</TierType>
+		<Description>In times of war charge through hell and never look back.</Description>
+		<ActivateOnEquip stat="0" amount="200">IncrementStat</ActivateOnEquip> // HP
+		<ActivateOnEquip stat="21" amount="10">IncrementStat</ActivateOnEquip> // DEF
+		<ActivateOnEquip stat="22" amount="50" isPerc="true">IncrementStat</ActivateOnEquip> // SPD
+		<FameBonus>8</FameBonus>
+		<Valiant id="Retreat Command"/>
+		<Origin>Cosmic Capsule</Origin>
+	</Object>
+	<Object type="0x45d8" id="Plate of Corrupted Trenches">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ValiantArmor</File>
+			<Index>0x44</Index>
+		</Texture>
+		<SlotType>7</SlotType>
+		<TierType>Valiant</TierType>
+		<Description>What is hidden in the deep? No man will ever live to tell the tale.</Description>
+		<ActivateOnEquip stat="20" amount="10">IncrementStat</ActivateOnEquip> // ATK
+		<ActivateOnEquip stat="21" amount="16">IncrementStat</ActivateOnEquip>// DEF
+		<ActivateOnEquip stat="22" amount="10">IncrementStat</ActivateOnEquip> // SPD
+		<ActivateOnEquip stat="26" amount="10">IncrementStat</ActivateOnEquip> // VIT
+		<ActivateOnEquip stat="27" amount="10">IncrementStat</ActivateOnEquip> // WIS
+		<ActivateOnEquip stat="28" amount="10">IncrementStat</ActivateOnEquip> // DEX
+		<ActivateOnEquip stat="112" amount="20">IncrementStat</ActivateOnEquip> // MGT
+		<ActivateOnEquip stat="114" amount="20">IncrementStat</ActivateOnEquip> // LCK
+		<ActivateOnEquip stat="121" amount="10">IncrementStat</ActivateOnEquip> // RES
+		<FameBonus>8</FameBonus>
+		<Valiant id="Allrounder"/>
+		<Origin>Cosmic Capsule</Origin>
+	</Object>
+	<Object type="0x69da" id="Anubis' Pride">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ValiantArmor</File>
+			<Index>0x45</Index>
+		</Texture>
+		<SlotType>7</SlotType>
+		<TierType>Valiant</TierType>
+		<Description>The ancient gods favored gilded sacrifices, this one however speaks of a more... robust design.</Description>
+		<ActivateOnEquip stat="3" amount="250">IncrementStat</ActivateOnEquip> // MP
+		<ActivateOnEquip stat="20" amount="5">IncrementStat</ActivateOnEquip> // ATK
+		<ActivateOnEquip stat="21" amount="16">IncrementStat</ActivateOnEquip> // DEF
+		<ActivateOnEquip stat="22" amount="7">IncrementStat</ActivateOnEquip> // SPD
+		<ActivateOnEquip stat="28" amount="5">IncrementStat</ActivateOnEquip> // DEX
+		<ActivateOnEquip stat="121" amount="30">IncrementStat</ActivateOnEquip> // RES
+		<Steal type="mana" amount="3"/>
+		<FameBonus>8</FameBonus>
+		<Valiant id="Ambrosia"/>
+		<Origin>Cosmic Capsule</Origin>
+	</Object>
+	<!-- #endregion -->
+	<!-- #region --> // Swords
+	<Object type="0x5478" id="Tyrant's Guillotine">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ValiantWeapons</File>
+			<Index>0x00</Index>
+		</Texture>
+		<SlotType>1</SlotType>
+		<TierType>Valiant</TierType>
+		<Description>My kingdom for a horse.</Description>
+		<ActivateOnEquip stat="3" amount="100">IncrementStat</ActivateOnEquip> // MP
+		<ActivateOnEquip stat="27" amount="12">IncrementStat</ActivateOnEquip> // WIS
+		<ActivateOnEquip stat="121" amount="15">IncrementStat</ActivateOnEquip> // RES
+		<RateOfFire>0.95</RateOfFire>
+		<Sound>weapon/newsounds/heavysword</Sound>
+		<OldSound>weapon/newsounds/heavyswordswing</OldSound>
+		<Projectile>
+			<ObjectId>Tyrant's Slash</ObjectId>
+			<Speed>100</Speed>
+			<MinDamage>420</MinDamage>
+			<MaxDamage>430</MaxDamage>
+			<LifetimeMS>430</LifetimeMS>
+			<FaceDir/>
+		</Projectile>
+		<FameBonus>8</FameBonus>
+		<Valiant id="Oppressor's Resolve"/>
+		<Origin>Cosmic Capsule</Origin>
+	</Object>
+	<Object type="0x5486" id="Tyrant's Slash">
+		<Class>Projectile</Class>
+		<Texture>
+			<File>ValiantWeaponsProjectiles</File>
+			<Index>0x00</Index>
+		</Texture>
+		<AngleCorrection>1</AngleCorrection>
+	</Object>
+	<Object type="0x5437" id="Beacon of the Deep">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ValiantWeapons</File>
+			<Index>0x01</Index>
+		</Texture>
+		<SlotType>1</SlotType>
+		<TierType>Valiant</TierType>
+		<Description>A relic of the abyss brought ashore by the great tear in the cosmic sea, it seems to call for it's place among the stars... can't you hear it?</Description>
+		<RateOfFire>1.45</RateOfFire>
+		<Sound>weapon/newsounds/longsword</Sound>
+		<OldSound>weapon/newsounds/longswordswing</OldSound>
+		<Projectile>
+			<ObjectId>BDeep Shot</ObjectId>
+			<Speed>100</Speed>
+			<MinDamage>320</MinDamage>
+			<MaxDamage>320</MaxDamage>
+			<LifetimeMS>430</LifetimeMS>
+			<PassesCover/>
+		</Projectile>
+		<FameBonus>8</FameBonus>
+		<Valiant id="Call of the Deep"/>
+		<Origin>Cosmic Capsule</Origin>
+	</Object>
+	<Object type="0x5436" id="BDeep Shot">
+		<Class>Projectile</Class>
+		<Texture>
+			<File>ValiantWeaponsProjectiles</File>
+			<Index>0x01</Index>
+		</Texture>
+		<AngleCorrection>1</AngleCorrection>
+	</Object>
+	<Object type="0x1485" id="Phantom's Scissor Blade">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ValiantWeapons</File>
+			<Index>0x02</Index>
+		</Texture>
+		<SlotType>1</SlotType>
+		<TierType>Valiant</TierType>
+		<Description>Half of a massive scissor taken from the haunting phantoms dwelling in the asylum.</Description>
+		<ActivateOnEquip stat="20" amount="5">IncrementStat</ActivateOnEquip> // ATK
+		<ActivateOnEquip stat="21" amount="10">IncrementStat</ActivateOnEquip>// DEF
+		<ActivateOnEquip stat="28" amount="5">IncrementStat</ActivateOnEquip> // DEX
+		<RateOfFire>0.7</RateOfFire>
+		<Sound>weapon/newsounds/longsword</Sound>
+		<OldSound>weapon/newsounds/longswordswing</OldSound>
+		<NumProjectiles>5</NumProjectiles>
+		<Projectile>
+			<ObjectId>PScissor Shot</ObjectId>
+			<Speed>100</Speed>
+			<MinDamage>220</MinDamage>
+			<MaxDamage>245</MaxDamage>
+			<LifetimeMS>320</LifetimeMS>
+		</Projectile>
+		<FameBonus>8</FameBonus>
+		<Valiant id="Blood Drinker"/>
+		<Origin>Cosmic Capsule</Origin>
+	</Object>
+	<Object type="0x1484" id="PScissor Shot">
+		<Class>Projectile</Class>
+		<Texture>
+			<File>ValiantWeaponsProjectiles</File>
+			<Index>0x02</Index>
+		</Texture>
+		<AngleCorrection>1</AngleCorrection>
+	</Object>
+	<Object type="0x42f4" id="Starlight">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ValiantWeapons</File>
+			<Index>0x03</Index>
+		</Texture>
+		<SlotType>1</SlotType>
+		<TierType>Valiant</TierType>
+		<Description>It once cut a sun straight in half.</Description>
+		<ActivateOnEquip stat="20" amount="5">IncrementStat</ActivateOnEquip> // ATK
+		<RateOfFire>0.5</RateOfFire>
+		<Sound>weapon/newsounds/heavysword</Sound>
+		<OldSound>weapon/newsounds/heavyswordswing</OldSound>
+		<Projectile>
+			<ObjectId>Starlight Shot</ObjectId>
+			<Speed>100</Speed>
+			<MinDamage>625</MinDamage>
+			<MaxDamage>985</MaxDamage>
+			<LifetimeMS>340</LifetimeMS>
+			<PassesCover/>
+			<MultiHit/>
+			<ArmorPiercing/>
+			<CondChance effect="Bind" chance="0.5" duration="1.5"/>
+			<CondChance effect="Sluggish" chance="3" duration="2.0"/>
+		</Projectile>
+		<FameBonus>8</FameBonus>
+		<Valiant id="Blinding Glory"/>
+		<Origin>Cosmic Capsule</Origin>
+	</Object>
+	<Object type="0x42f5" id="Starlight Shot">
+		<Class>Projectile</Class>
+		<RandomTexture>
+			<Texture>
+				<File>ValiantWeaponsProjectiles</File>
+				<Index>0x03</Index>
+			</Texture>
+			<Texture>
+				<File>ValiantWeaponsProjectiles</File>
+				<Index>0x04</Index>
+			</Texture>
+		</RandomTexture>
+		<AngleCorrection>1</AngleCorrection>
+	</Object>
+	<!-- #endregion -->
+	<!-- #region --> // Bows
+	<Object type="0x5466" id="Eternity's Demise">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ValiantWeapons</File>
+			<Index>0x20</Index>
+		</Texture>
+		<SlotType>3</SlotType>
+		<TierType>Valiant</TierType>
+		<Description>Even light, dies eventually.</Description>
+		<ActivateOnEquip stat="22" amount="5">IncrementStat</ActivateOnEquip> // SPD
+		<ActivateOnEquip stat="28" amount="5">IncrementStat</ActivateOnEquip> // DEX
+		<RateOfFire>0.95</RateOfFire>
+		<Sound>weapon/newsounds/lightbow</Sound>
+		<OldSound>weapon/newsounds/lightbowshoot</OldSound>
+		<NumProjectiles>2</NumProjectiles>
+		<Projectile>
+			<ObjectId>EDemise Arrow</ObjectId>
+			<Speed>100</Speed>
+			<MinDamage>210</MinDamage>
+			<MaxDamage>285</MaxDamage>
+			<LifetimeMS>600</LifetimeMS>
+			<Amplitude>0.35</Amplitude>
+			<Frequency>0.2</Frequency>
+			<MultiHit/>
+		</Projectile>
+		<FameBonus>8</FameBonus>
+		<Valiant id="Supernova"/>
+		<Origin>Cosmic Capsule</Origin>
+	</Object>
+	<Object type="0x5475" id="EDemise Arrow">
+		<Class>Projectile</Class>
+		<Texture>
+			<File>ValiantWeaponsProjectiles</File>
+			<Index>0x20</Index>
+		</Texture>
+		<AngleCorrection>1</AngleCorrection>
+	</Object>
+	<Object type="0x69e1" id="Thunderchild">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ValiantWeapons</File>
+			<Index>0x21</Index>
+		</Texture>
+		<SlotType>3</SlotType>
+		<TierType>Valiant</TierType>
+		<Description>“183mm's of pure democracy” - FV4005</Description>
+		<ActivateOnEquip stat="112" amount="40">IncrementStat</ActivateOnEquip> // MGT
+		<ActivateOnEquip stat="114" amount="20">IncrementStat</ActivateOnEquip> // LCK
+		<RateOfFire>1.35</RateOfFire>
+		<Sound>weapon/newsounds/heavybow</Sound>
+		<OldSound>weapon/newsounds/heavybow</OldSound>
+		<Projectile>
+			<ObjectId>Thunderchild Shot</ObjectId>
+			<Speed>100</Speed>
+			<MinDamage>270</MinDamage>
+			<MaxDamage>310</MaxDamage>
+			<LifetimeMS>680</LifetimeMS>
+			<ArmorPiercing/>
+		</Projectile>
+		<FameBonus>8</FameBonus>
+		<Valiant id="Domino Effect"/>
+		<Origin>Cosmic Capsule</Origin>
+	</Object>
+	<Object type="0x69e2" id="Thunderchild Shot">
+		<Class>Projectile</Class>
+		<Texture>
+			<File>ValiantWeaponsProjectiles</File>
+			<Index>0x21</Index>
+		</Texture>
+		<AngleCorrection>1</AngleCorrection>
+	</Object>
+	<Object type="0x42c7" id="Predatory Instinct">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ValiantWeapons</File>
+			<Index>0x22</Index>
+		</Texture>
+		<SlotType>3</SlotType>
+		<TierType>Valiant</TierType>
+		<Description>It’s the cornerstone of existence, the moving gear of all living creatures, now unshackled.</Description>
+		<RateOfFire>0.80</RateOfFire>
+		<Sound>weapon/newsounds/heavybow</Sound>
+		<OldSound>weapon/newsounds/heavybowshoot</OldSound>
+		<NumProjectiles>3</NumProjectiles>
+		<Projectile>
+			<ObjectId>PInstinct Arrow</ObjectId>
+			<Speed>100</Speed>
+			<MinDamage>165</MinDamage>
+			<MaxDamage>200</MaxDamage>
+			<LifetimeMS>500</LifetimeMS>
+			<CondChance effect="Stunned" chance="0.8" duration="1.0"/>
+			<ArmorPiercing/>
+		</Projectile>
+		<FameBonus>8</FameBonus>
+		<Valiant id="Spiritual Hunt"/>
+		<Origin>Cosmic Capsule</Origin>
+	</Object>
+	<Object type="0x42c6" id="PInstinct Arrow">
+		<Class>Projectile</Class>
+		<Texture>
+			<File>ValiantWeaponsProjectiles</File>
+			<Index>0x22</Index>
+		</Texture>
+		<AngleCorrection>1</AngleCorrection>
+	</Object>
+	<Object type="0x542b" id="Foretold Tragedy">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ValiantWeapons</File>
+			<Index>0x23</Index>
+		</Texture>
+		<SlotType>3</SlotType>
+		<TierType>Valiant</TierType>
+		<Description>They warned us when we could make it right, they warned us when we could stop it, they warned us when we could still run... but we never listened.</Description>
+		<ActivateOnEquip stat="21" amount="10">IncrementStat</ActivateOnEquip>// DEF
+		<RateOfFire>0.70</RateOfFire>
+		<Sound>weapon/newsounds/heavybow</Sound>
+		<OldSound>weapon/newsounds/heavybowshoot</OldSound>
+		<NumProjectiles>2</NumProjectiles>
+		<Projectile>
+			<ObjectId>FTragedy Arrow</ObjectId>
+			<Speed>100</Speed>
+			<MinDamage>300</MinDamage>
+			<MaxDamage>350</MaxDamage>
+			<LifetimeMS>660</LifetimeMS>
+			<MultiHit/>
+			<PassesCover/>
+		</Projectile>
+		<FameBonus>8</FameBonus>
+		<Valiant id="Accumulating Calamity"/>
+		<Origin>Cosmic Capsule</Origin>
+	</Object>
+	<Object type="0x5037" id="FTragedy Arrow">
+		// NEW OBJECT TYPE
+		<Class>Projectile</Class>
+		<Texture>
+			<File>ValiantWeaponsProjectiles</File>
+			<Index>0x23</Index>
+		</Texture>
+	</Object>
+	<Object type="0x5060" id="Light Puncturer">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ValiantWeapons</File>
+			<Index>0x24</Index>
+		</Texture>
+		<SlotType>3</SlotType>
+		<TierType>Valiant</TierType>
+		<Description>This bow punched holes through the most incredible beings, larger beasts couldn’t take the beating given from this weapon, after time anything hit by this weapon became demolished.</Description>
+		<RateOfFire>0.9</RateOfFire>
+		<Sound>weapon/newsounds/lightbow</Sound>
+		<OldSound>weapon/newsounds/lightbow</OldSound>
+		<NumProjectiles>2</NumProjectiles>
+		<Projectile>
+			<ObjectId>LPuncturer Arrow</ObjectId>
+			<Speed>100</Speed>
+			<MinDamage>245</MinDamage>
+			<MaxDamage>245</MaxDamage>
+			<LifetimeMS>620</LifetimeMS>
+			<ArmorPiercing/>
+		</Projectile>
+		<FameBonus>8</FameBonus>
+		<Valiant id="Hematophobia"/>
+		<Origin>Cosmic Capsule</Origin>
+	</Object>
+	<Object type="0x503b" id="LPuncturer Arrow">
+		// NEW OBJECT TYPE
+		<Class>Projectile</Class>
+		<Texture>
+			<File>ValiantWeaponsProjectiles</File>
+			<Index>0x24</Index>
+		</Texture>
+		<AngleCorrection>1</AngleCorrection>
+	</Object>
+	<!-- #endregion -->
+	<!-- #region --> // Daggers
+	<Object type="0x69c4" id="Pestilential Agony">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ValiantWeapons</File>
+			<Index>0x40</Index>
+		</Texture>
+		<SlotType>2</SlotType>
+		<TierType>Valiant</TierType>
+		<Description>The treasure of the catacombs, lots have sought to grasp it in their hand... the only thing remaining is their rotting bones among the swarm of rodents.</Description>
+		<ActivateOnEquip stat="20" amount="5">IncrementStat</ActivateOnEquip> // ATK
+		<ActivateOnEquip stat="121" amount="20">IncrementStat</ActivateOnEquip> // RES
+		<Steal type="mana" amount="2"/>
+		<RateOfFire>1.2</RateOfFire>
+		<Sound>weapon/newsounds/lightdagger</Sound>
+		<OldSound>weapon/newsounds/lightdaggerswing</OldSound>
+		<Projectile>
+			<ObjectId>PAgony Shot</ObjectId>
+			<Speed>100</Speed>
+			<MinDamage>300</MinDamage>
+			<MaxDamage>420</MaxDamage>
+			<LifetimeMS>510</LifetimeMS>
+			<CondChance effect="Hemorrhage" chance="4" duration="4"/>
+		</Projectile>
+		<FameBonus>8</FameBonus>
+		<Valiant id="Black Plague"/>
+		<Origin>Cosmic Capsule</Origin>
+	</Object>
+	<Object type="0x61fc" id="PAgony Shot">
+		<Class>Projectile</Class>
+		<Texture>
+			<File>ValiantWeaponsProjectiles</File>
+			<Index>0x40</Index>
+		</Texture>
+		<AngleCorrection>1</AngleCorrection>
+	</Object>
+	<Object type="0x43a2" id="The Devil's Ante">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ValiantWeapons</File>
+			<Index>0x41</Index>
+		</Texture>
+		<SlotType>2</SlotType>
+		<TierType>Valiant</TierType>
+		<Description>Someone. Has. To. Pay!</Description>
+		<RateOfFire>0.9</RateOfFire>
+		<Sound>weapon/newsounds/lightdagger</Sound>
+		<OldSound>weapon/newsounds/lightdaggerswing</OldSound>
+		<NumProjectiles>2</NumProjectiles>
+		<Projectile>
+			<ObjectId>DAnte Shot</ObjectId>
+			<Speed>100</Speed>
+			<MinDamage>220</MinDamage>
+			<MaxDamage>240</MaxDamage>
+			<LifetimeMS>540</LifetimeMS>
+		</Projectile>
+		<FameBonus>8</FameBonus>
+		<Valiant id="Sacrificial Disaster"/>
+		<Origin>Cosmic Capsule</Origin>
+	</Object>
+	<Object type="0x43a1" id="DAnte Shot">
+		<Class>Projectile</Class>
+		<Texture>
+			<File>ValiantWeaponsProjectiles</File>
+			<Index>0x41</Index>
+		</Texture>
+		<AngleCorrection>1</AngleCorrection>
+	</Object>
+	<Object type="0x69d4" id="Gilded Grudge">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ValiantWeapons</File>
+			<Index>0x42</Index>
+		</Texture>
+		<SlotType>2</SlotType>
+		<TierType>Valiant</TierType>
+		<Description>A professional assassin's tool, used for matters other than business.</Description>
+		<ActivateOnEquip stat="22" amount="10">IncrementStat</ActivateOnEquip> // SPD
+		<ActivateOnEquip stat="28" amount="5">IncrementStat</ActivateOnEquip> // DEX
+		<RateOfFire>1</RateOfFire>
+		<Sound>weapon/newsounds/lightdagger</Sound>
+		<OldSound>weapon/newsounds/lightdaggerswing</OldSound>
+		<Projectile>
+			<ObjectId>GGrudge Shot</ObjectId>
+			<Speed>100</Speed>
+			<MinDamage>425</MinDamage>
+			<MaxDamage>450</MaxDamage>
+			<LifetimeMS>650</LifetimeMS>
+		</Projectile>
+		<FameBonus>8</FameBonus>
+		<Valiant id="Assassin's Ambition"/>
+		<Origin>Cosmic Capsule</Origin>
+	</Object>
+	<Object type="0x69d5" id="GGrudge Shot">
+		<Class>Projectile</Class>
+		<Texture>
+			<File>ValiantWeaponsProjectiles</File>
+			<Index>0x42</Index>
+		</Texture>
+		<AngleCorrection>1</AngleCorrection>
+	</Object>
+	<Object type="0x69e6" id="Void Drinker">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ValiantWeapons</File>
+			<Index>0x43</Index>
+		</Texture>
+		<SlotType>2</SlotType>
+		<TierType>Valiant</TierType>
+		<Description>A dark blade of unending gluttony, devour all knowledge, the blade can endlessly wreak carnage.</Description>
+		<ActivateOnEquip stat="3" amount="100">IncrementStat</ActivateOnEquip> // MP
+		<ActivateOnEquip stat="27" amount="25">IncrementStat</ActivateOnEquip> // WIS
+		<RateOfFire>1.25</RateOfFire>
+		<Sound>weapon/newsounds/lightdagger</Sound>
+		<OldSound>weapon/newsounds/lightdaggerswing</OldSound>
+		<Projectile>
+			<ObjectId>VDrinker Shot</ObjectId>
+			<Speed>100</Speed>
+			<MinDamage>300</MinDamage>
+			<MaxDamage>345</MaxDamage>
+			<LifetimeMS>560</LifetimeMS>
+			<ArmorPiercing/>
+		</Projectile>
+		<FameBonus>8</FameBonus>
+		<Valiant id="Omniscience"/>
+		<Origin>Cosmic Capsule</Origin>
+	</Object>
+	<Object type="0x69e7" id="VDrinker Shot">
+		<Class>Projectile</Class>
+		<Texture>
+			<File>ValiantWeaponsProjectiles</File>
+			<Index>0x43</Index>
+		</Texture>
+		<AngleCorrection>1</AngleCorrection>
+	</Object>
+	<Object type="0x42b7" id="Hoargloom">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ValiantWeapons</File>
+			<Index>0x44</Index>
+		</Texture>
+		<SlotType>2</SlotType>
+		<TierType>Valiant</TierType>
+		<Description>A Dagger that appeared in a grave, frozen in place on a winter night of impenetrable fog. After the item was found they had said the grave wasn't opened, but indeed empty.</Description>
+		<ActivateOnEquip stat="20" amount="5">IncrementStat</ActivateOnEquip> // ATK
+		<ActivateOnEquip stat="22" amount="5">IncrementStat</ActivateOnEquip> // SPD
+		<RateOfFire>1.15</RateOfFire>
+		<Sound>weapon/newsounds/lightdagger</Sound>
+		<OldSound>weapon/newsounds/lightdaggerswing</OldSound>
+		<Projectile>
+			<ObjectId>Hgloom Shot</ObjectId>
+			<Speed>100</Speed>
+			<MinDamage>320</MinDamage>
+			<MaxDamage>420</MaxDamage>
+			<LifetimeMS>620</LifetimeMS>
+			<MultiHit/>
+		</Projectile>
+		<FameBonus>8</FameBonus>
+		<Valiant id="Nyctophobia"/>
+		<Origin>Cosmic Capsule</Origin>
+	</Object>
+	<Object type="0x42b6" id="Hgloom Shot">
+		<Class>Projectile</Class>
+		<Texture>
+			<File>ValiantWeaponsProjectiles</File>
+			<Index>0x44</Index>
+		</Texture>
+		<AngleCorrection>1</AngleCorrection>
+	</Object>
+	<Object type="0x42f8" id="Feintfang">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ValiantWeapons</File>
+			<Index>0x45</Index>
+		</Texture>
+		<SlotType>2</SlotType>
+		<TierType>Valiant</TierType>
+		<Description>Those who live with no thought of tomorrow, get the best of today.</Description>
+		<ActivateOnEquip stat="20" amount="5">IncrementStat</ActivateOnEquip> // ATK
+		<ActivateOnEquip stat="21" amount="-8">IncrementStat</ActivateOnEquip> // DEF
+		<ActivateOnEquip stat="22" amount="4">IncrementStat</ActivateOnEquip> // SPD
+		<ActivateOnEquip stat="28" amount="6">IncrementStat</ActivateOnEquip> // DEX
+		<ActivateOnEquip stat="121" amount="25">IncrementStat</ActivateOnEquip> // RES
+		<RateOfFire>0.95</RateOfFire>
+		<Sound>weapon/newsounds/lightdagger</Sound>
+		<OldSound>weapon/newsounds/lightdaggerswing</OldSound>
+		<NumProjectiles>3</NumProjectiles>
+		<Projectile>
+			<ObjectId>Ffang Shot</ObjectId>
+			<Speed>100</Speed>
+			<MinDamage>135</MinDamage>
+			<MaxDamage>190</MaxDamage>
+			<LifetimeMS>500</LifetimeMS>
+			<ArmorPiercing/>
+		</Projectile>
+		<FameBonus>8</FameBonus>
+		<Valiant id="Thrillseeker's Onslaught"/>
+		<Origin>Cosmic Capsule</Origin>
+	</Object>
+	<Object type="0x42f7" id="Ffang Shot">
+		<Class>Projectile</Class>
+		<Texture>
+			<File>ValiantWeaponsProjectiles</File>
+			<Index>0x45</Index>
+		</Texture>
+		<AngleCorrection>1</AngleCorrection>
+	</Object>
+	<!-- #endregion -->
+	<!-- #region --> // Wands
+	<Object type="0x61db" id="Mage General's Wand">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ValiantWeapons</File>
+			<Index>0x60</Index>
+		</Texture>
+		<SlotType>8</SlotType>
+		<TierType>Valiant</TierType>
+		<Description>The mage general, who led many, aquired quite the odd wand, the wand must have been what made the general so resilient. What about this item is so unique to empower the user with this much power?</Description>
+		<ActivateOnEquip stat="121" amount="15">IncrementStat</ActivateOnEquip> // RES
+		<Steal type="life" amount="1"/>
+		<Sound>weapon/newsounds/lightwand</Sound>
+		<OldSound>weapon/newsounds/lightwandshoot</OldSound>
+		<RateOfFire>0.85</RateOfFire>
+		<NumProjectiles>3</NumProjectiles>
+		<Projectile>
+			<ObjectId>MGeneral's Shot</ObjectId>
+			<Speed>100</Speed>
+			<LifetimeMS>600</LifetimeMS>
+			<MinDamage>150</MinDamage>
+			<MaxDamage>205</MaxDamage>
+		</Projectile>
+		<FameBonus>8</FameBonus>
+		<Valiant id="Breather"/>
+		<Origin>Cosmic Capsule</Origin>
+	</Object>
+	<Object type="0x42b3" id="MGeneral's Shot">
+		<Class>Projectile</Class>
+		<Texture>
+			<File>ValiantWeapons</File>
+			<Index>0x60</Index>
+		</Texture>
+		<AngleCorrection>1</AngleCorrection>
+	</Object>
+	<Object type="0x42fc" id="Ephemeral Conductor">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ValiantWeapons</File>
+			<Index>0x61</Index>
+		</Texture>
+		<SlotType>8</SlotType>
+		<TierType>Valiant</TierType>
+		<Description>A wand carrying a very volatile energy inside, be very careful with it.</Description>
+		<ActivateOnEquip stat="3" amount="100">IncrementStat</ActivateOnEquip> // MP
+		<ActivateOnEquip stat="27" amount="15">IncrementStat</ActivateOnEquip> // WIS
+		<Steal type="mana" amount="2"/>
+		<Sound>weapon/newsounds/lightwand</Sound>
+		<OldSound>weapon/newsounds/lightwandshoot</OldSound>
+		<RateOfFire>0.95</RateOfFire>
+		<Projectile>
+			<ObjectId>EConductor Shot</ObjectId>
+			<Speed>100</Speed>
+			<LifetimeMS>680</LifetimeMS>
+			<MinDamage>210</MinDamage>
+			<MaxDamage>250</MaxDamage>
+		</Projectile>
+		<FameBonus>8</FameBonus>
+		<Valiant id="Overcharge"/>
+		<Origin>Cosmic Capsule</Origin>
+	</Object>
+	<Object type="0x42fb" id="EConductor Shot">
+		<Class>Projectile</Class>
+		<Texture>
+			<File>ValiantWeaponsProjectiles</File>
+			<Index>0x61</Index>
+		</Texture>
+		<AngleCorrection>1</AngleCorrection>
+	</Object>
+	<Object type="0x61dc" id="Comet Caller">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ValiantWeapons</File>
+			<Index>0x62</Index>
+		</Texture>
+		<SlotType>8</SlotType>
+		<TierType>Valiant</TierType>
+		<Description>The laying of a mortals hand upon this magnificent wand surges the knowledge of the universe throughout them, but at what cost?</Description>
+		<Sound>weapon/newsounds/lightwand</Sound>
+		<OldSound>weapon/newsounds/lightwandshoot</OldSound>
+		<RateOfFire>0.95</RateOfFire>
+		<NumProjectiles>2</NumProjectiles>
+		<Projectile>
+			<ObjectId>CCaller Shot</ObjectId>
+			<Speed>100</Speed>
+			<MinDamage>375</MinDamage>
+			<MaxDamage>525</MaxDamage>
+			<LifetimeMS>1000</LifetimeMS>
+			<ArmorPiercing/>
+			<Boomerang/>
+		</Projectile>
+		<FameBonus>8</FameBonus>
+		<Valiant id="Lunar Surge"/>
+		<Origin>Cosmic Capsule</Origin>
+	</Object>
+	<Object type="0x6201" id="CCaller Shot">
+		<Class>Projectile</Class>
+		<Texture>
+			<File>ValiantWeaponsProjectiles</File>
+			<Index>0x62</Index>
+		</Texture>
+		<AngleCorrection>1</AngleCorrection>
+	</Object>
+	<!-- #endregion -->
+	<!-- #region --> // Staves
+	<Object type="0x5482" id="Corrupting Command">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ValiantWeapons</File>
+			<Index>0x80</Index>
+		</Texture>
+		<SlotType>8</SlotType>
+		<TierType>Valiant</TierType>
+		<Description>An uncontained power, ravaging everything around it, if only it could find unity.</Description>
+		<Sound>weapon/newsounds/lightstaff</Sound>
+		<OldSound>weapon/newsounds/lightstaffshoot</OldSound>
+		<RateOfFire>0.80</RateOfFire>
+		<NumProjectiles>4</NumProjectiles>
+		<Projectile>
+			<ObjectId>CCommand Shot</ObjectId>
+			<Size>100</Size>
+			<Speed>100</Speed>
+			<MinDamage>145</MinDamage>
+			<MaxDamage>160</MaxDamage>
+			<LifetimeMS>720</LifetimeMS>
+		</Projectile>
+		<FameBonus>8</FameBonus>
+		<Valiant id="Spiritual Destruction"/>
+		<Origin>Cosmic Capsule</Origin>
+	</Object>
+	<Object type="0x5485" id="CCommand Shot">
+		<Class>Projectile</Class>
+		<Texture>
+			<File>ValiantWeaponsProjectiles</File>
+			<Index>0x80</Index>
+		</Texture>
+		<AngleCorrection>1</AngleCorrection>
+	</Object>
+	<Object type="0x69c3" id="Limbo's Judge">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ValiantWeapons</File>
+			<Index>0x81</Index>
+		</Texture>
+		<SlotType>8</SlotType>
+		<TierType>Valiant</TierType>
+		<Description>Hope all you want, the verdict never changes.</Description>
+		<ActivateOnEquip stat="20" amount="10">IncrementStat</ActivateOnEquip> // ATK
+		<ActivateOnEquip stat="28" amount="5">IncrementStat</ActivateOnEquip> // DEX
+		<Sound>weapon/newsounds/lightstaff</Sound>
+		<OldSound>weapon/newsounds/lightstaffshoot</OldSound>
+		<RateOfFire>0.86</RateOfFire>
+		<NumProjectiles>2</NumProjectiles>
+		<Projectile>
+			<ObjectId>LJudge Shot</ObjectId>
+			<Speed>100</Speed>
+			<MinDamage>250</MinDamage>
+			<MaxDamage>270</MaxDamage>
+			<LifetimeMS>750</LifetimeMS>
+		</Projectile>
+		<FameBonus>8</FameBonus>
+		<Valiant id="Hellstorm"/>
+		<Origin>Cosmic Capsule</Origin>
+	</Object>
+	<Object type="0x221b" id="LJudge Shot">
+		// New Object
+		<Class>Projectile</Class>
+		<Texture>
+			<File>ValiantWeaponsProjectiles</File>
+			<Index>0x81</Index>
+		</Texture>
+		<AngleCorrection>1</AngleCorrection>
+	</Object>
+	<Object type="0x46f2" id="Gloomy Truth">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ValiantWeapons</File>
+			<Index>0x82</Index>
+		</Texture>
+		<SlotType>8</SlotType>
+		<TierType>Valiant</TierType>
+		<Description>Staff bathed in the void, molded by the souls of it's previous weavers.</Description>
+		<Sound>weapon/newsounds/lightstaff</Sound>
+		<OldSound>weapon/newsounds/lightstaffshoot</OldSound>
+		<RateOfFire>1</RateOfFire>
+		<NumProjectiles>2</NumProjectiles>
+		<Projectile>
+			<ObjectId>GTruth Shot</ObjectId>
+			<Speed>100</Speed>
+			<MinDamage>180</MinDamage>
+			<MaxDamage>280</MaxDamage>
+			<LifetimeMS>820</LifetimeMS>
+			<PassesCover/>
+		</Projectile>
+		<FameBonus>8</FameBonus>
+		<Valiant id="Opportunist"/>
+		<Origin>Cosmic Capsule</Origin>
+	</Object>
+	<Object type="0x46f1" id="GTruth Shot">
+		<Class>Projectile</Class>
+		<Texture>
+			<File>ValiantWeaponsProjectiles</File>
+			<Index>0x82</Index>
+		</Texture>
+		<AngleCorrection>1</AngleCorrection>
+	</Object>
+	<Object type="0x42c5" id="Wrath's Antiquity">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ValiantWeapons</File>
+			<Index>0x83</Index>
+		</Texture>
+		<SlotType>8</SlotType>
+		<TierType>Valiant</TierType>
+		<Description>An odd looking mythril staff, constructed by a guild of conspirators, in an attempt to overthrow a weakened king. It seems to hold an immense hatred towards all living beings.</Description>
+		<Sound>weapon/newsounds/lightstaff</Sound>
+		<OldSound>weapon/newsounds/lightstaffshoot</OldSound>
+		<RateOfFire>0.45</RateOfFire>
+		<Projectile>
+			<ObjectId>WAntiquity Shot</ObjectId>
+			<Speed>100</Speed>
+			<MinDamage>450</MinDamage>
+			<MaxDamage>1450</MaxDamage>
+			<LifetimeMS>800</LifetimeMS>
+			<MultiHit/>
+			<PassesCover/>
+			<ParticleTrail>0xff00ff</ParticleTrail>
+		</Projectile>
+		<FameBonus>8</FameBonus>
+		<Valiant id="Growing Rage"/>
+		<Origin>Cosmic Capsule</Origin>
+	</Object>
+	<Object type="0x42c4" id="WAntiquity Shot">
+		<Class>Projectile</Class>
+		<Texture>
+			<File>ValiantWeaponsProjectiles</File>
+			<Index>0x83</Index>
+		</Texture>
+		<AngleCorrection>1</AngleCorrection>
+	</Object>
+	<Object type="0x69dc" id="Gleaming Hope">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ValiantWeapons</File>
+			<Index>0x84</Index>
+		</Texture>
+		<SlotType>8</SlotType>
+		<TierType>Valiant</TierType>
+		<Description>They say that hope can be grasped by light, when caught, the colour of hope shows itself painted in purple, thus the staff was revered by many.</Description>
+		<Sound>weapon/newsounds/lightstaff</Sound>
+		<OldSound>weapon/newsounds/lightstaffshoot</OldSound>
+		<RateOfFire>0.95</RateOfFire>
+		<NumProjectiles>4</NumProjectiles>
+		<Projectile>
+			<ObjectId>GHope Shot</ObjectId>
+			<Speed>100</Speed>
+			<MinDamage>110</MinDamage>
+			<MaxDamage>160</MaxDamage>
+			<LifetimeMS>760</LifetimeMS>
+		</Projectile>
+		<FameBonus>8</FameBonus>
+		<Valiant id="Inspiration Drive"/>
+		<Origin>Cosmic Capsule</Origin>
+	</Object>
+	<Object type="0x69dd" id="GHope Shot">
+		<Class>Projectile</Class>
+		<Texture>
+			<File>ValiantWeaponsProjectiles</File>
+			<Index>0x84</Index>
+		</Texture>
+		<AngleCorrection>1</AngleCorrection>
+	</Object>
+	<!-- #endregion -->
+	<!-- #region --> // Katanas
+	<Object type="0x61cd" id="Shogun's Honor">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ValiantWeapons</File>
+			<Index>0xa0</Index>
+		</Texture>
+		<SlotType>24</SlotType>
+		<TierType>Valiant</TierType>
+		<Description>An odachi forged with painstaking care, it's believed to cleave through 7 men at once.</Description>
+		<ActivateOnEquip stat="112" amount="30">IncrementStat</ActivateOnEquip> // MGT
+		<ActivateOnEquip stat="114" amount="30">IncrementStat</ActivateOnEquip> // LCK
+		<RateOfFire>1</RateOfFire>
+		<Sound>weapon/newsounds/lightkatana</Sound>
+		<OldSound>weapon/newsounds/lightkatana</OldSound>
+		<Projectile>
+			<ObjectId>SHonor Shot</ObjectId>
+			<Speed>100</Speed>
+			<LifetimeMS>700</LifetimeMS>
+			<MinDamage>420</MinDamage>
+			<MaxDamage>500</MaxDamage>
+			<ArmorPiercing/>
+		</Projectile>
+		<FameBonus>8</FameBonus>
+		<Valiant id="Self Assurance"/>
+		<Origin>Cosmic Capsule</Origin>
+	</Object>
+	<Object type="0x61d6" id="SHonor Shot">
+		<Class>Projectile</Class>
+		<Texture>
+			<File>ValiantWeaponsProjectiles</File>
+			<Index>0xa0</Index>
+		</Texture>
+		<AngleCorrection>1</AngleCorrection>
+	</Object>
+	<Object type="0x53de" id="Flawless">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ValiantWeapons</File>
+			<Index>0xa1</Index>
+		</Texture>
+		<SlotType>24</SlotType>
+		<TierType>Valiant</TierType>
+		<Description>I danced between flurries of blades, unscathed, but alas I became fragile enough to shatter upon a single scratch.</Description>
+		<ActivateOnEquip stat="22" amount="10">IncrementStat</ActivateOnEquip> // SPD
+		<Sound>weapon/newsounds/lightkatana</Sound>
+		<OldSound>weapon/newsounds/lightkatana</OldSound>
+		<RateOfFire>0.9</RateOfFire>
+		<Projectile>
+			<ObjectId>Flawless Shot</ObjectId>
+			<Speed>100</Speed>
+			<Damage>260</Damage>
+			<LifetimeMS>680</LifetimeMS>
+		</Projectile>
+		<FameBonus>8</FameBonus>
+		<Valiant id="Untouchable"/>
+		<Origin>Cosmic Capsule</Origin>
+	</Object>
+	<Object type="0x53df" id="Flawless Shot">
+		<Class>Projectile</Class>
+		<Texture>
+			<File>ValiantWeaponsProjectiles</File>
+			<Index>0xa1</Index>
+		</Texture>
+		<AngleCorrection>1</AngleCorrection>
+	</Object>
+	<Object type="0x43a4" id="Blind Onslaught">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ValiantWeapons</File>
+			<Index>0xa2</Index>
+		</Texture>
+		<SlotType>24</SlotType>
+		<TierType>Valiant</TierType>
+		<Description>The blade of a beheaded oni, it reeks of unjust slaughter fueld by rage.</Description>
+		<Sound>weapon/newsounds/lightkatana</Sound>
+		<OldSound>weapon/newsounds/lightkatana</OldSound>
+		<RateOfFire>1.05</RateOfFire>
+		<NumProjectiles>2</NumProjectiles>
+		<Projectile>
+			<ObjectId>BOnslaught Shot</ObjectId>
+			<Speed>100</Speed>
+			<MinDamage>200</MinDamage>
+			<MaxDamage>240</MaxDamage>
+			<LifetimeMS>520</LifetimeMS>
+			<Size>100</Size>
+		</Projectile>
+		<FameBonus>8</FameBonus>
+		<Valiant id="Payback"/>
+		<Origin>Cosmic Capsule</Origin>
+	</Object>
+	<Object type="0x43a3" id="BOnslaught Shot">
+		<Class>Projectile</Class>
+		<Texture>
+			<File>ValiantWeaponsProjectiles</File>
+			<Index>0xa2</Index>
+		</Texture>
+		<AngleCorrection>1</AngleCorrection>
+	</Object>
+	<!-- #endregion -->
+	<!-- #region --> // Lances
+	<Object type="0x61cf" id="World Shaper">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ValiantWeapons</File>
+			<Index>0xc0</Index>
+		</Texture>
+		<SlotType>29</SlotType>
+		<TierType>Valiant</TierType>
+		<Description>Never intended to be a weapon, but a tool to right all cosmic wrongs... but time takes its toll on all.</Description>
+		<ActivateOnEquip stat="21" amount="15">IncrementStat</ActivateOnEquip> // DEF
+		<ActivateOnEquip stat="26" amount="15">IncrementStat</ActivateOnEquip> // VIT
+		<Sound>weapon/newsounds/lightlance</Sound>
+		<OldSound>weapon/newsounds/lightlance</OldSound>
+		<RateOfFire>0.83</RateOfFire>
+		<NumProjectiles>2</NumProjectiles>
+		<Projectile>
+			<ObjectId>WShaper Shot</ObjectId>
+			<Speed>100</Speed>
+			<MinDamage>220</MinDamage>
+			<MaxDamage>320</MaxDamage>
+			<LifetimeMS>540</LifetimeMS>
+			<CondChance effect="Deficient" chance="3" duration="4"/>
+		</Projectile>
+		<FameBonus>8</FameBonus>
+		<Valiant id="Piece by Piece"/>
+		<Origin>Cosmic Capsule</Origin>
+	</Object>
+	<Object type="0x61d1" id="WShaper Shot">
+		<Class>Projectile</Class>
+		<Texture>
+			<File>ValiantWeaponsProjectiles</File>
+			<Index>0xc0</Index>
+		</Texture>
+		<AngleCorrection>1</AngleCorrection>
+	</Object>
+	<Object type="0x69e5" id="Defender's Defiance">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ValiantWeapons</File>
+			<Index>0xc1</Index>
+		</Texture>
+		<SlotType>29</SlotType>
+		<TierType>Valiant</TierType>
+		<Description>This lance was forged with high spirit, they say the blacksmith was a woman of holy power.</Description>
+		<ActivateOnEquip stat="122" amount="25" isPerc="true">IncrementStat</ActivateOnEquip> // PRT
+		<Sound>weapon/newsounds/lightlance</Sound>
+		<OldSound>weapon/newsounds/lightlance</OldSound>
+		<RateOfFire>1</RateOfFire>
+		<NumProjectiles>4</NumProjectiles>
+		<Projectile>
+			<ObjectId>DDefiance Shot</ObjectId>
+			<Speed>100</Speed>
+			<MinDamage>95</MinDamage>
+			<MaxDamage>100</MaxDamage>
+			<LifetimeMS>600</LifetimeMS>
+		</Projectile>
+		<FameBonus>8</FameBonus>
+		<Valiant id="Warmed Up"/>
+		<Origin>Cosmic Capsule</Origin>
+	</Object>
+	<Object type="0x600e" id="DDefiance Shot">
+		// New Object
+		<Class>Projectile</Class>
+		<Texture>
+			<File>ValiantWeaponsProjectiles</File>
+			<Index>0xc1</Index>
+		</Texture>
+		<AngleCorrection>1</AngleCorrection>
+	</Object>
+	<Object type="0x69d6" id="Conqueror's Prowess">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ValiantWeapons</File>
+			<Index>0xc2</Index>
+		</Texture>
+		<SlotType>29</SlotType>
+		<TierType>Valiant</TierType>
+		<Description>We are the legion, we eat the mountains, we drink the seas!</Description>
+		<ActivateOnEquip stat="3" amount="100">IncrementStat</ActivateOnEquip> // MP
+		<Sound>weapon/newsounds/lightlance</Sound>
+		<OldSound>weapon/newsounds/lightlance</OldSound>
+		<RateOfFire>0.75</RateOfFire>
+		<Projectile>
+			<ObjectId>CProwess Shot</ObjectId>
+			<Speed>100</Speed>
+			<MinDamage>550</MinDamage>
+			<MaxDamage>620</MaxDamage>
+			<LifetimeMS>420</LifetimeMS>
+			<MultiHit/>
+			<ArmorPiercing/>
+		</Projectile>
+		<FameBonus>8</FameBonus>
+		<Valiant id="Stalwart"/>
+		<Origin>Cosmic Capsule</Origin>
+	</Object>
+	<Object type="0x69d7" id="CProwess Shot">
+		<Class>Projectile</Class>
+		<Texture>
+			<File>ValiantWeaponsProjectiles</File>
+			<Index>0xc2</Index>
+		</Texture>
+		<AngleCorrection>1</AngleCorrection>
+	</Object>
+	<!-- #endregion -->
+	<!-- #region --> // Blades
+	<Object type="0x63d1" id="Thousand Cuts">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ValiantWeapons</File>
+			<Index>0xe0</Index>
+		</Texture>
+		<SlotType>34</SlotType>
+		<TierType>Valiant</TierType>
+		<Description>Take me dear bearer, let me grant you claws sharper than yours ever could be.</Description>
+		<Sound>weapon/newsounds/lightblades</Sound>
+		<OldSound>weapon/newsounds/lightblades</OldSound>
+		<RateOfFire>1.10</RateOfFire>
+		<NumProjectiles>3</NumProjectiles>
+		<Projectile>
+			<ObjectId>TCuts Shots</ObjectId>
+			<Speed>100</Speed>
+			<MinDamage>145</MinDamage>
+			<MaxDamage>165</MaxDamage>
+			<LifetimeMS>530</LifetimeMS>
+			<CondChance effect="Hemorrhage" chance="5" duration="6"/>
+		</Projectile>
+		<FameBonus>8</FameBonus>
+		<Valiant id="Blood Sacrifice"/>
+		<Origin>Cosmic Capsule</Origin>
+	</Object>
+	<Object type="0x63d2" id="TCuts Shots">
+		<Class>Projectile</Class>
+		<RandomTexture>
+			<Texture>
+				<File>ValiantWeaponsProjectiles</File>
+				<Index>0xe0</Index>
+			</Texture>
+			<Texture>
+				<File>ValiantWeaponsProjectiles</File>
+				<Index>0xe1</Index>
+			</Texture>
+		</RandomTexture>
+		<AngleCorrection>1</AngleCorrection>
+	</Object>
+	<Object type="0x6163" id="Equinox">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ValiantWeapons</File>
+			<Index>0xe1</Index>
+		</Texture>
+		<SlotType>34</SlotType>
+		<TierType>Valiant</TierType>
+		<Description>An elegant dance between dark and light, fragile, yet balanced.</Description>
+		<Sound>weapon/newsounds/lightblades</Sound>
+		<OldSound>weapon/newsounds/lightblades</OldSound>
+		<RateOfFire>1</RateOfFire>
+		<NumProjectiles>2</NumProjectiles>
+		<Projectile>
+			<ObjectId>Equinox Shots</ObjectId>
+			<Speed>100</Speed>
+			<MinDamage>200</MinDamage>
+			<MaxDamage>225</MaxDamage>
+			<LifetimeMS>500</LifetimeMS>
+		</Projectile>
+		<FameBonus>8</FameBonus>
+		<Valiant id="Karma's Honor"/>
+		<Origin>Cosmic Capsule</Origin>
+	</Object>
+	<Object type="0x6162" id="Equinox Shots">
+		<Class>Projectile</Class>
+		<RandomTexture>
+			<Texture>
+				<File>ValiantWeaponsProjectiles</File>
+				<Index>0xe2</Index>
+			</Texture>
+			<Texture>
+				<File>ValiantWeaponsProjectiles</File>
+				<Index>0xe3</Index>
+			</Texture>
+		</RandomTexture>
+		<AngleCorrection>1</AngleCorrection>
+	</Object>
+	<Object type="0x6706" id="Horde Horn">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ValiantWeapons</File>
+			<Index>0xe2</Index>
+		</Texture>
+		<SlotType>34</SlotType>
+		<TierType>Valiant</TierType>
+		<Description>A necromancer once sought to wake an army full of dead, cavalries, footsoldiers, dragonriders, and all... These two horns are all that were left.</Description>
+		<Sound>weapon/newsounds/lightblades</Sound>
+		<OldSound>weapon/newsounds/lightblades</OldSound>
+		<RateOfFire>1</RateOfFire>
+		<NumProjectiles>2</NumProjectiles>
+		<ArcGap>8</ArcGap>
+		<Projectile>
+			<ObjectId>HHorn Shot</ObjectId>
+			<Speed>100</Speed>
+			<MinDamage>235</MinDamage>
+			<MaxDamage>250</MaxDamage>
+			<LifetimeMS>460</LifetimeMS>
+			<Size>100</Size>
+		</Projectile>
+		<FameBonus>8</FameBonus>
+		<Valiant id="Shadow Assault"/>
+		<Origin>Cosmic Capsule</Origin>
+	</Object>
+	<Object type="0x6707" id="HHorn Shot">
+		<Class>Projectile</Class>
+		<RandomTexture>
+			<Texture>
+				<File>ValiantWeaponsProjectiles</File>
+				<Index>0xe4</Index>
+			</Texture>
+			<Texture>
+				<File>ValiantWeaponsProjectiles</File>
+				<Index>0xe5</Index>
+			</Texture>
+		</RandomTexture>
+		<AngleCorrection>1</AngleCorrection>
+	</Object>
+	<!-- #endregion -->
+	<!-- #region --> // Cloaks
+	<Object type="0x179c" id="Carnivorous Cloak">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ValiantAbilities</File>
+			<Index>0x00</Index>
+		</Texture>
+		<SlotType>13</SlotType>
+		<TierType>Valiant</TierType>
+		<Description>Demon hunters used these wolf pelt cloaks on their hunts, nothing could ever see them coming.</Description>
+		<ActivateOnEquip stat="22" amount="15" isPerc="true">IncrementStat</ActivateOnEquip> // SPD
+		<Sound>ability/ability_use</Sound>
+		<OldSound>ability/ability_use</OldSound>
+		<Usable/>
+		<MpCost>125</MpCost>
+		<Cooldown>6</Cooldown>
+		<Activate effect="Invisible" duration="6">ConditionEffectSelf</Activate>
+		<Activate effect="Sluggish" duration="2">ConditionEffectSelf</Activate>
+		<FameBonus>8</FameBonus>
+		<Valiant id="Flesh-rending Determination"/>
+		<Origin>Cosmic Capsule</Origin>
+	</Object>
+	<Object type="0x49b2" id="Basilisk Leather Cloak">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ValiantAbilities</File>
+			<Index>0x01</Index>
+		</Texture>
+		<SlotType>13</SlotType>
+		<TierType>Valiant</TierType>
+		<Description>Leather gathered from the legendary basilisk, not much leather can be harvested from the beast, in fact, there is not much gear in this galaxy made from it.</Description>
+		<ActivateOnEquip stat="22" amount="7">IncrementStat</ActivateOnEquip> // SPD
+		<ActivateOnEquip stat="112" amount="15">IncrementStat</ActivateOnEquip> // MGT
+		<ActivateOnEquip stat="114" amount="30">IncrementStat</ActivateOnEquip> // LCK
+		<Sound>ability/ability_use</Sound>
+		<OldSound>ability/ability_use</OldSound>
+		<Usable/>
+		<MpCost>115</MpCost>
+		<Cooldown>6</Cooldown>
+		<Activate effect="Invisible" duration="5.5">ConditionEffectSelf</Activate>
+		<Activate maxDistance="20">Teleport</Activate>
+		<FameBonus>8</FameBonus>
+		<Valiant id="Structural Reinforcement"/>
+		<Origin>Cosmic Capsule</Origin>
+	</Object>
+	<!-- #endregion -->
+	<!-- #region --> // Quivers
+	<Object type="0x5467" id="Sky-Eater">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ValiantAbilities</File>
+			<Index>0x20</Index>
+		</Texture>
+		<SlotType>15</SlotType>
+		<TierType>Valiant</TierType>
+		<Description>The arrow tips inside smell of foul intention, whenever shot, they leave a black void in their path.</Description>
+		<ActivateOnEquip stat="28" amount="15">IncrementStat</ActivateOnEquip> // DEX
+		<Sound>ability/ability_use</Sound>
+		<OldSound>ability/ability_use</OldSound>
+		<Usable/>
+		<Activate>Shoot</Activate>
+		<MpCost>130</MpCost>
+		<Cooldown>2</Cooldown>
+		<Activate effect="Strengthen" duration="3.5">ConditionEffectSelf</Activate>
+		<ArcGap>5</ArcGap>
+		<NumProjectiles>4</NumProjectiles>
+		<Projectile>
+			<ObjectId>SEater Shot</ObjectId>
+			<Speed>100</Speed>
+			<MinDamage>600</MinDamage>
+			<MaxDamage>1200</MaxDamage>
+			<LifetimeMS>750</LifetimeMS>
+			<Size>120</Size>
+			<MultiHit/>
+			<ParticleTrail>0x161616</ParticleTrail> // BLACK
+			<ParticleTrail>0x9800FF</ParticleTrail> // PURPLE
+			<ConditionEffect duration="2.5">Vulnerable</ConditionEffect>
+			<ConditionEffect duration="2">Bind</ConditionEffect>
+		</Projectile>
+		<FameBonus>8</FameBonus>
+		<Valiant id="Last Resort"/>
+		<Origin>Cosmic Capsule</Origin>
+	</Object>
+	<Object type="0x502d" id="SEater Shot">
+		// New Object
+		<Class>Projectile</Class>
+		<Texture>
+			<File>ValiantAbilityProjectiles</File>
+			<Index>0x00</Index>
+		</Texture>
+		<AngleCorrection>1</AngleCorrection>
+	</Object>
+	<Object type="0x1399" id="Marksman's Redemption">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ValiantAbilities</File>
+			<Index>0x21</Index>
+		</Texture>
+		<SlotType>15</SlotType>
+		<TierType>Valiant</TierType>
+		<Description>A wartorn quiver with one arrow left in it... Make it count.</Description>
+		<ActivateOnEquip stat="20" amount="10">IncrementStat</ActivateOnEquip> // ATK
+		<Sound>ability/ability_use</Sound>
+		<OldSound>ability/ability_use</OldSound>
+		<Usable/>
+		<MpCost>200</MpCost>
+		<FameBonus>8</FameBonus>
+		<Valiant id="Inescapable"/>
+		<Origin>Cosmic Capsule</Origin>
+	</Object>
+	<!-- #endregion -->
+	<!-- #region --> // Spells
+	<Object type="0x47ca" id="Voidling's Curse">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ValiantAbilities</File>
+			<Index>0x40</Index>
+		</Texture>
+		<SlotType>11</SlotType>
+		<TierType>Valiant</TierType>
+		<Description>Born of a malignant state of existence between life and death, it's only wish is to tear apart reality itself.</Description>
+		<ActivateOnEquip stat="20" amount="10">IncrementStat</ActivateOnEquip> // ATK
+		<ActivateOnEquip stat="22" amount="6">IncrementStat</ActivateOnEquip> // SPD
+		<ActivateOnEquip stat="121" amount="10">IncrementStat</ActivateOnEquip> // RES
+		<Sound>ability/ability_use</Sound>
+		<OldSound>ability/ability_use</OldSound>
+		<Usable/>
+		<MpCost>120</MpCost>
+		<Cooldown>1</Cooldown>
+		<Activate center="mouse">BulletNova</Activate>
+		<Activate effect="Fury" duration="5.5">ConditionEffectSelf</Activate>
+		<Projectile>
+			<ObjectId>VCurse Shot</ObjectId>
+			<Speed>100</Speed>
+			<MinDamage>350</MinDamage>
+			<MaxDamage>400</MaxDamage>
+			<LifetimeMS>600</LifetimeMS>
+			<MultiHit/>
+		</Projectile>
+		<FameBonus>8</FameBonus>
+		<Valiant id="Cataclysm"/>
+		<Origin>Cosmic Capsule</Origin>
+	</Object>
+	<Object type="0x47c9" id="VCurse Shot">
+		<Class>Projectile</Class>
+		<Texture>
+			<File>ValiantAbilityProjectiles</File>
+			<Index>0x20</Index>
+		</Texture>
+		<AngleCorrection>1</AngleCorrection>
+	</Object>
+	<Object type="0x69e9" id="Murderous Spirit">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ValiantAbilities</File>
+			<Index>0x41</Index>
+		</Texture>
+		<SlotType>11</SlotType>
+		<TierType>Valiant</TierType>
+		<Description>Possessed by a blood-thirsty spirit, many knew to stay away, but were entranced by it's power.</Description>
+		<ActivateOnEquip stat="112" amount="25">IncrementStat</ActivateOnEquip> // MGT
+		<ActivateOnEquip stat="114" amount="40">IncrementStat</ActivateOnEquip> // LCK
+		<Sound>ability/ability_use</Sound>
+		<OldSound>ability/ability_use</OldSound>
+		<Usable/>
+		<MpCost>115</MpCost>
+		<Cooldown>1</Cooldown>
+		<Activate center="mouse">BulletNova</Activate>
+		<Projectile>
+			<ObjectId>MSpirit Shot</ObjectId>
+			<Speed>100</Speed>
+			<MinDamage>275</MinDamage>
+			<MaxDamage>365</MaxDamage>
+			<LifetimeMS>600</LifetimeMS>
+			<ArmorPiercing/>
+			<Boomerang/>
+		</Projectile>
+		<FameBonus>8</FameBonus>
+		<Valiant id="Perfect Execution"/>
+		<Origin>Cosmic Capsule</Origin>
+	</Object>
+	<Object type="0x69ea" id="MSpirit Shot">
+		<Class>Projectile</Class>
+		<Texture>
+			<File>ValiantAbilityProjectiles</File>
+			<Index>0x21</Index>
+		</Texture>
+		<AngleCorrection>1</AngleCorrection>
+	</Object>
+	<Object type="0x48fd" id="Wisdom's Eye">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ValiantAbilities</File>
+			<Index>0x42</Index>
+		</Texture>
+		<SlotType>11</SlotType>
+		<TierType>Valiant</TierType>
+		<Description>Can you see it? The true meaning of our adversity...</Description>
+		<ActivateOnEquip stat="0" amount="75">IncrementStat</ActivateOnEquip> // HP
+		<ActivateOnEquip stat="3" amount="75">IncrementStat</ActivateOnEquip> // MP
+		<ActivateOnEquip stat="20" amount="5">IncrementStat</ActivateOnEquip> // ATK
+		<ActivateOnEquip stat="28" amount="5">IncrementStat</ActivateOnEquip> // DEX
+		<Sound>ability/ability_use</Sound>
+		<OldSound>ability/ability_use</OldSound>
+		<Usable/>
+		<MpCost>125</MpCost>
+		<Cooldown>2</Cooldown>
+		<Activate center="mouse">BulletNova</Activate>
+		<Projectile>
+			<ObjectId>WEye Shot</ObjectId>
+			<Speed>100</Speed>
+			<Damage>300</Damage>
+			<LifetimeMS>600</LifetimeMS>
+			<MultiHit/>
+			<PassesCover/>
+			<Parametric/>
+		</Projectile>
+		<FameBonus>8</FameBonus>
+		<Valiant id="Unbreakable Focus"/>
+		<Origin>Cosmic Capsule</Origin>
+	</Object>
+	<Object type="0x1678" id="WEye Shot">
+		<Class>Projectile</Class>
+		<Texture>
+			<File>ValiantAbilityProjectiles</File>
+			<Index>0x22</Index>
+		</Texture>
+		<AngleCorrection>1</AngleCorrection>
+	</Object>
+	<Object type="0x69ec" id="Orc's Ignition">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ValiantAbilities</File>
+			<Index>0x43</Index>
+		</Texture>
+		<SlotType>11</SlotType>
+		<TierType>Valiant</TierType>
+		<Description>The orc's soul burns within the spell, enchanting the spell to consume mana efficiently and effectively.</Description>
+		<ActivateOnEquip stat="3" amount="100">IncrementStat</ActivateOnEquip> // MP
+		<ActivateOnEquip stat="27" amount="5">IncrementStat</ActivateOnEquip> // WIS
+		<Sound>ability/ability_use</Sound>
+		<OldSound>ability/ability_use</OldSound>
+		<Usable/>
+		<MpCost>125</MpCost>
+		<Cooldown>0.5</Cooldown>
+		<Activate center="mouse">BulletNova</Activate>
+		<Activate effect="Strengthen" duration="5">ConditionEffectSelf</Activate>
+		<Projectile>
+			<ObjectId>OIgnition Shot</ObjectId>
+			<Speed>100</Speed>
+			<MinDamage>355</MinDamage>
+			<MaxDamage>430</MaxDamage>
+			<LifetimeMS>600</LifetimeMS>
+			<MultiHit/>
+			<PassesCover/>
+			<Boomerang/>
+		</Projectile>
+		<FameBonus>8</FameBonus>
+		<Valiant id="Mana Hunger"/>
+		<Origin>Cosmic Capsule</Origin>
+	</Object>
+	<Object type="0x7921" id="OIgnition Shot">
+		<Class>Projectile</Class>
+		<Texture>
+			<File>ValiantAbilityProjectiles</File>
+			<Index>0x23</Index>
+		</Texture>
+		<AngleCorrection>1</AngleCorrection>
+	</Object>
+	<!-- #endregion -->
+	<!-- #region --> // Tomes
+	<Object type="0x61d2" id="Guardian's Guidance">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ValiantAbilities</File>
+			<Index>0x60</Index>
+		</Texture>
+		<SlotType>4</SlotType>
+		<TierType>Valiant</TierType>
+		<Description>This psalm is protected by it's previous owner, they were the guard for the famous fountains of knowledge and is a legend across the galaxy, known for their miraculous power.</Description>
+		<ActivateOnEquip stat="3" amount="60">IncrementStat</ActivateOnEquip> // MP
+		<ActivateOnEquip stat="27" amount="10">IncrementStat</ActivateOnEquip> // WIS
+		<Sound>ability/ability_use</Sound>
+		<OldSound>ability/ability_use</OldSound>
+		<Usable/>
+		<MpCost>110</MpCost>
+		<Cooldown>4.5</Cooldown>
+		<Activate effect="Strengthen" duration="2" range="6" useWisMod="false">ConditionEffectAura</Activate>
+		<Activate effect="Precision" duration="1.5" range="6" useWisMod="false">ConditionEffectAura</Activate>
+		<Activate effect="Harden" duration="3" useWisMod="false">ConditionEffectSelf</Activate>
+		<Activate range="10" amount="750" useWisMod="false">HealNova</Activate>
+		<FameBonus>8</FameBonus>
+		<Valiant id="Tenacity"/>
+		<Origin>Cosmic Capsule</Origin>
+	</Object>
+	<Object type="0x47f8" id="Runic Knowledge">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ValiantAbilities</File>
+			<Index>0x61</Index>
+		</Texture>
+		<SlotType>4</SlotType>
+		<TierType>Valiant</TierType>
+		<Description>Information about the text is lost in history, declaring this tome indecipherable.</Description>
+		<ActivateOnEquip stat="26" amount="10">IncrementStat</ActivateOnEquip> // VIT
+		<Steal type="mana" amount="1"/>
+		<Sound>ability/ability_use</Sound>
+		<OldSound>ability/ability_use</OldSound>
+		<Usable/>
+		<MpCost>140</MpCost>
+		<Cooldown>1</Cooldown>
+		<Activate effect="Invulnerable" duration="0.5" useWisMod="false">ConditionEffectSelf</Activate>
+		<Activate effect="Disorient" duration="1.5" useWisMod="false">ConditionEffectSelf</Activate>
+		<Activate effect="Bind" duration="1" range="6" color="0xFFFF00" target="enemy" center="player" visualEffect="0" useWisMod="false">GenericActivate</Activate>
+		<FameBonus>8</FameBonus>
+		<Valiant id="Oddity"/>
+		<Origin>Cosmic Capsule</Origin>
+	</Object>
+	<Object type="0x61b5" id="Presence of Mind">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ValiantAbilities</File>
+			<Index>0x62</Index>
+		</Texture>
+		<SlotType>4</SlotType>
+		<TierType>Valiant</TierType>
+		<Description>Scrape your mind clear of all the obscurities and immorality.</Description>
+		<ActivateOnEquip stat="3" amount="150">IncrementStat</ActivateOnEquip> // MP
+		<Sound>ability/ability_use</Sound>
+		<OldSound>ability/ability_use</OldSound>
+		<Usable/>
+		<MpCost>150</MpCost>
+		<Cooldown>1.5</Cooldown>
+		<Activate effect="Strengthen" duration="1.5" useWisMod="false">ConditionEffectSelf</Activate>
+		<Activate effect="Nausea" duration="3" useWisMod="false">ConditionEffectSelf</Activate>
+		<Activate stat="21" amount="15" duration="3" range="14" noStack="true" useWisMod="false">StatBoostAura</Activate>
+		<Activate range="14" amount="600" useWisMod="false">HealNova</Activate>
+		<Activate range="14">RemoveNegativeConditions</Activate>
+		<Activate effect="Exhaust" duration="3" range="14" target="enemy" center="player" visualEffect="0" useWisMod="false">GenericActivate</Activate>
+		<FameBonus>8</FameBonus>
+		<Valiant id="Mind Scratch"/>
+		<Origin>Cosmic Capsule</Origin>
+	</Object>
+	<!-- #endregion -->
+	<!-- #region --> // Helms
+	<Object type="0x69ed" id="Legend Experience">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ValiantAbilities</File>
+			<Index>0x80</Index>
+		</Texture>
+		<SlotType>16</SlotType>
+		<TierType>Valiant</TierType>
+		<Description>Inspire those around you with great dexterity, they will be in awe and proud to include you in their journey.</Description>
+		<ActivateOnEquip stat="26" amount="10">IncrementStat</ActivateOnEquip> // VIT
+		<ActivateOnEquip stat="121" amount="10">IncrementStat</ActivateOnEquip> // RES
+		<Sound>ability/ability_use</Sound>
+		<OldSound>ability/ability_use</OldSound>
+		<Usable/>
+		<MpCost>110</MpCost>
+		<Cooldown>2</Cooldown>
+		<Activate effect="Strengthen" duration="6">ConditionEffectSelf</Activate>
+		<Activate effect="Swift" duration="3">ConditionEffectSelf</Activate>
+		<Activate effect="Fury" duration="3" range="6">ConditionEffectAura</Activate>
+		<FameBonus>8</FameBonus>
+		<Valiant id="Fighting Will"/>
+		<Origin>Cosmic Capsule</Origin>
+	</Object>
+	<Object type="0x48fe" id="King's Prey">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ValiantAbilities</File>
+			<Index>0x81</Index>
+		</Texture>
+		<SlotType>16</SlotType>
+		<TierType>Valiant</TierType>
+		<Description>A long lost helmet, once owned by a king, the text engraved into the helmet says: Lock onto your target and exterminate them with every fibre in your being.</Description>
+		<ActivateOnEquip stat="0" amount="120">IncrementStat</ActivateOnEquip> // HP
+		<ActivateOnEquip stat="21" amount="5">IncrementStat</ActivateOnEquip> // DEF
+		<ActivateOnEquip stat="26" amount="15">IncrementStat</ActivateOnEquip> // VIT
+		<Sound>ability/ability_use</Sound>
+		<OldSound>ability/ability_use</OldSound>
+		<Usable/>
+		<MpCost>125</MpCost>
+		<Cooldown>7</Cooldown>
+		<Activate effect="Bind" duration="3">ConditionEffectSelf</Activate>
+		<Activate effect="Fragile" duration="5.5" range="8" color="0xFF0000" target="enemy" center="player" visualEffect="0" useWisMod="false">GenericActivate</Activate>
+		<Activate effect="Bind" duration="5.5" range="8" target="enemy" center="player" visualEffect="0" useWisMod="false">GenericActivate</Activate>
+		<FameBonus>8</FameBonus>
+		<Valiant id="Checkmate"/>
+		<Origin>Cosmic Capsule</Origin>
+	</Object>
+	<Object type="0x42f6" id="Royal Howl">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ValiantAbilities</File>
+			<Index>0x82</Index>
+		</Texture>
+		<SlotType>16</SlotType>
+		<TierType>Valiant</TierType>
+		<Description>It is strongly advised against opposing the tsar... Unless you mean to face dire consequences.</Description>
+		<ActivateOnEquip stat="0" amount="100">IncrementStat</ActivateOnEquip> // HP
+		<Sound>ability/ability_use</Sound>
+		<OldSound>ability/ability_use</OldSound>
+		<Usable/>
+		<MpCost>140</MpCost>
+		<Cooldown>7</Cooldown>
+		<Activate effect="Strengthen" duration="5">ConditionEffectSelf</Activate>
+		<Activate effect="Regenerate" duration="4" range="6">ConditionEffectAura</Activate>
+		<Activate stat="0" amount="350" duration="4" noStack="true" useWisMod="false">StatBoostSelf</Activate> // HP
+		<FameBonus>8</FameBonus>
+		<Valiant id="As One!"/>
+		<Origin>Cosmic Capsule</Origin>
+	</Object>
+	<Object type="0x69de" id="Vigor's Conduit">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ValiantAbilities</File>
+			<Index>0x83</Index>
+		</Texture>
+		<SlotType>16</SlotType>
+		<TierType>Valiant</TierType>
+		<Description>Bathe in the glory of vitality, strengthen yourself to endure powerful foes.</Description>
+		<ActivateOnEquip stat="20" amount="10">IncrementStat</ActivateOnEquip> // ATK
+		<Sound>ability/ability_use</Sound>
+		<OldSound>ability/ability_use</OldSound>
+		<Usable/>
+		<MpCost>125</MpCost>
+		<Cooldown>1</Cooldown>
+		<Activate effect="Fury" duration="4" range="6">ConditionEffectAura</Activate>
+		<Activate stat="26" amount="50" duration="6" noStack="true" useWisMod="false">StatBoostSelf</Activate> // VIT
+		<FameBonus>8</FameBonus>
+		<Valiant id="Health Ridden"/>
+		<Origin>Cosmic Capsule</Origin>
+	</Object>
+	<!-- #endregion -->
+	<!-- #region --> // Shields
+	<Object type="0x1571" id="Adrenaline Barricade">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ValiantAbilities</File>
+			<Index>0xa0</Index>
+		</Texture>
+		<SlotType>52</SlotType>
+		<TierType>Valiant</TierType>
+		<Description>Even the most renown knights weren't able to hold this incredibly resistant shield.</Description>
+		<ActivateOnEquip stat="0" amount="60">IncrementStat</ActivateOnEquip> // HP
+		<ActivateOnEquip stat="20" amount="5">IncrementStat</ActivateOnEquip> // ATK
+		<ActivateOnEquip stat="28" amount="8">IncrementStat</ActivateOnEquip> // DEX
+		<Sound>ability/ability_use</Sound>
+		<OldSound>ability/ability_use</OldSound>
+		<Usable/>
+		<Activate>Shoot</Activate>
+		<MpCost>120</MpCost>
+		<Cooldown>0.5</Cooldown>
+		<NumProjectiles>5</NumProjectiles>
+		<Projectile>
+			<ObjectId>ABarricade Shot</ObjectId>
+			<Speed>100</Speed>
+			<MinDamage>450</MinDamage>
+			<MaxDamage>750</MaxDamage>
+			<LifetimeMS>430</LifetimeMS>
+			<Size>120</Size>
+			<ConditionEffect duration="3.7">Stunned</ConditionEffect>
+			<ConditionEffect duration="2">Fragile</ConditionEffect>
+			<ConditionEffect duration="1">Vulnerable</ConditionEffect>
+			<MultiHit/>
+			<PassesCover/>
+			<ParticleTrail>0x9800FF</ParticleTrail> // PURPLE
+			<ParticleTrail>0xFF0000</ParticleTrail> // RED
+		</Projectile>
+		<FameBonus>8</FameBonus>
+		<Valiant id="Moral Boost"/>
+		<Origin>Cosmic Capsule</Origin>
+	</Object>
+	<Object type="0x6088" id="ABarricade Shot">
+		// New Object
+		<Class>Projectile</Class>
+		<Texture>
+			<File>ValiantAbilityProjectiles</File>
+			<Index>0x40</Index>
+		</Texture>
+		<AngleCorrection>2</AngleCorrection>
+	</Object>
+	<Object type="0x63a7" id="Gates of Hell">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ValiantAbilities</File>
+			<Index>0xa1</Index>
+		</Texture>
+		<SlotType>52</SlotType>
+		<TierType>Valiant</TierType>
+		<Description>Even if Cerberus would fall, the impenetrable gates remain shut, damning every soul to their place.</Description>
+		<ActivateOnEquip stat="0" amount="200">IncrementStat</ActivateOnEquip> // HP
+		<Steal type="life" amount="1"/>
+		<Sound>ability/ability_use</Sound>
+		<OldSound>ability/ability_use</OldSound>
+		<Usable/>
+		<Activate>Shoot</Activate>
+		<MpCost>125</MpCost>
+		<Cooldown>1</Cooldown>
+		<NumProjectiles>8</NumProjectiles>
+		<Projectile>
+			<ObjectId>GOHell Shot</ObjectId>
+			<Speed>100</Speed>
+			<MinDamage>650</MinDamage>
+			<MaxDamage>650</MaxDamage>
+			<LifetimeMS>320</LifetimeMS>
+			<Size>120</Size>
+			<ConditionEffect duration="3">Stunned</ConditionEffect>
+			<ConditionEffect duration="2">Bind</ConditionEffect>
+			<MultiHit/>
+			<PassesCover/>
+			<ParticleTrail>0xFFFF00</ParticleTrail> // RED
+		</Projectile>
+		<FameBonus>8</FameBonus>
+		<Valiant id="Cerberus' Parting Gift"/>
+		<Origin>Cosmic Capsule</Origin>
+	</Object>
+	<Object type="0x301b" id="GOHell Shot">
+		// New Object
+		<Class>Projectile</Class>
+		<Texture>
+			<File>ValiantAbilityProjectiles</File>
+			<Index>0x41</Index>
+		</Texture>
+		<AngleCorrection>1</AngleCorrection>
+	</Object>
+	<!-- #endregion -->
+	<!-- #region --> // Seals
+	<Object type="0x5477" id="Fox's Protection">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ValiantAbilities</File>
+			<Index>0xc0</Index>
+		</Texture>
+		<SlotType>12</SlotType>
+		<TierType>Valiant</TierType>
+		<Description>In the middle is the pendant of a legendary shrine maiden from the east, her benevolence protects your allies.</Description>
+		<ActivateOnEquip stat="26" amount="-20">IncrementStat</ActivateOnEquip> // VIT
+		<ActivateOnEquip stat="27" amount="15">IncrementStat</ActivateOnEquip> // WIS
+		<Sound>ability/ability_use</Sound>
+		<OldSound>ability/ability_use</OldSound>
+		<Usable/>
+		<MpCost>125</MpCost>
+		<Cooldown>5</Cooldown>
+		<Activate effect="Harden" duration="5" range="3.5">ConditionEffectAura</Activate>
+		<Activate effect="Strengthen" duration="3.5" range="3.5">ConditionEffectAura</Activate>
+		<Activate effect="Regenerate" duration="2.5" range="3.5">ConditionEffectAura</Activate>
+		<Activate stat="20" amount="25" duration="3.5" noStack="true" useWisMod="false">StatBoostSelf</Activate> // ATK
+		<Activate effect="Exhaust" duration="3" range="3.5" target="enemy" center="player" visualEffect="0" useWisMod="false">GenericActivate</Activate>
+		<FameBonus>8</FameBonus>
+		<Valiant id="Indomitable Reinforcement"/>
+		<Origin>Cosmic Capsule</Origin>
+	</Object>
+	<Object type="0x47be" id="Leader's Encouragement">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ValiantAbilities</File>
+			<Index>0xc1</Index>
+		</Texture>
+		<SlotType>12</SlotType>
+		<TierType>Valiant</TierType>
+		<Description>One is war, multiple is unity.</Description>
+		<ActivateOnEquip stat="0" amount="125">IncrementStat</ActivateOnEquip> // HP
+		<ActivateOnEquip stat="21" amount="4">IncrementStat</ActivateOnEquip> // DEF
+		<ActivateOnEquip stat="26" amount="-10">IncrementStat</ActivateOnEquip> // VIT
+		<ActivateOnEquip stat="121" amount="-15">IncrementStat</ActivateOnEquip> // RES
+		<Steal type="mana" amount="2"/>
+		<Sound>ability/ability_use</Sound>
+		<OldSound>ability/ability_use</OldSound>
+		<Usable/>
+		<MpCost>150</MpCost>
+		<Cooldown>4</Cooldown>
+		<Activate effect="Invulnerable" duration="1">ConditionEffectSelf</Activate>
+		<Activate effect="Precision" duration="3" range="5.5">ConditionEffectAura</Activate>
+		<Activate stat="0" amount="150" duration="5" range="3" noStack="true" useWisMod="false">StatBoostAura</Activate>
+		<FameBonus>8</FameBonus>
+		<Valiant id="Power in Numbers"/>
+		<Origin>Cosmic Capsule</Origin>
+	</Object>
+	<Object type="0x1688" id="Bind of Vitality">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ValiantAbilities</File>
+			<Index>0xc2</Index>
+		</Texture>
+		<SlotType>12</SlotType>
+		<TierType>Valiant</TierType>
+		<Description>Forged from an enormous shackle used to silence the lifepower of giants, the old power empowers you in combat.</Description>
+		<ActivateOnEquip stat="0" amount="150">IncrementStat</ActivateOnEquip> // HP
+		<ActivateOnEquip stat="20" amount="5">IncrementStat</ActivateOnEquip> // ATK
+		<Steal type="life" amount="1"/>
+		<Sound>ability/ability_use</Sound>
+		<OldSound>ability/ability_use</OldSound>
+		<Usable/>
+		<MpCost>90</MpCost>
+		<Cooldown>4</Cooldown>
+		<Activate effect="Fury" duration="3.5">ConditionEffectSelf</Activate>
+		<Activate effect="Swift" duration="3">ConditionEffectSelf</Activate>
+		<Activate stat="0" amount="100" duration="3.5" range="4.5" noStack="true" useWisMod="false">StatBoostAura</Activate>
+		<Activate stat="26" amount="20" duration="3.5" range="4.5" noStack="true" useWisMod="false">StatBoostAura</Activate>
+		<FameBonus>8</FameBonus>
+		<Valiant id="Vigor Bound"/>
+		<Origin>Cosmic Capsule</Origin>
+	</Object>
+	<!-- #endregion -->
+	<!-- #region --> // Poisons
+	<Object type="0x791c" id="Lich Blood">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ValiantAbilities</File>
+			<Index>0xe0</Index>
+		</Texture>
+		<SlotType>18</SlotType>
+		<TierType>Valiant</TierType>
+		<Description>A gilded vial holding a purple liquid, it chills to the touch.</Description>
+		<ActivateOnEquip stat="3" amount="50">IncrementStat</ActivateOnEquip> // MP
+		<Steal type="life" amount="1"/>
+		<Sound>ability/ability_use</Sound>
+		<OldSound>ability/ability_use</OldSound>
+		<Usable/>
+		<MpCost>135</MpCost>
+		<Cooldown>1</Cooldown>
+		<Activate useWisMod="false" radius="6" totalDamage="2800" duration="4" impactDamage="1000" throwTime="3" condEffect="Sluggish" condDuration="1.5">PoisonGrenade</Activate>
+		<FameBonus>8</FameBonus>
+		<Valiant id="Hexing Gaze"/>
+		<Origin>Cosmic Capsule</Origin>
+	</Object>
+	<!-- #endregion -->
+	<!-- #region --> // Skulls
+	<Object type="0x5479" id="Martyr's Cranium">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ValiantAbilities</File>
+			<Index>0x100</Index>
+		</Texture>
+		<SlotType>19</SlotType>
+		<TierType>Valiant</TierType>
+		<Description>The world is rotten, spoiled, corrupted, and cruel, but for one to blame themselves for all this...</Description>
+		<Sound>ability/ability_use</Sound>
+		<OldSound>ability/ability_use</OldSound>
+		<Usable/>
+		<MpCost>120</MpCost>
+		<Cooldown>0.5</Cooldown>
+		<Activate effect="Strengthen" duration="2">ConditionEffectSelf</Activate>
+		<Activate effect="Precision" duration="2">ConditionEffectSelf</Activate>
+		<Activate effect="Fury" duration="2">ConditionEffectSelf</Activate>
+		<FameBonus>8</FameBonus>
+		<Valiant id="Self-Loathing"/>
+		<Origin>Cosmic Capsule</Origin>
+	</Object>
+	<Object type="0x57b9" id="Sight for Sore Eyes">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ValiantAbilities</File>
+			<Index>0x101</Index>
+		</Texture>
+		<SlotType>19</SlotType>
+		<TierType>Valiant</TierType>
+		<Description>"Take drought to their bodies, leave but their bones." - Racxen Duality's Councillor</Description>
+		<ActivateOnEquip stat="20" amount="10">IncrementStat</ActivateOnEquip> // ATK
+		<ActivateOnEquip stat="28" amount="15">IncrementStat</ActivateOnEquip> // DEX
+		<ActivateOnEquip stat="112" amount="40">IncrementStat</ActivateOnEquip> // MGT
+		<ActivateOnEquip stat="114" amount="25">IncrementStat</ActivateOnEquip> // LCK
+		<ActivateOnEquip stat="121" amount="30">IncrementStat</ActivateOnEquip> // RES
+		<Sound>ability/ability_use</Sound>
+		<OldSound>ability/ability_use</OldSound>
+		<Usable/>
+		<MpCost>100</MpCost>
+		<Cooldown>1.5</Cooldown>
+		<Activate radius="7" totalDamage="600">VampireBlast</Activate>
+		<Activate effect="Bind" duration="3" range="3" target="enemy" center="mouse" visualEffect="0" useWisMod="false">GenericActivate</Activate>
+		<FameBonus>8</FameBonus>
+		<Valiant id="Sadistic"/>
+		<Origin>Cosmic Capsule</Origin>
+	</Object>
+	<Object type="0x585b" id="Raven's Blight">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ValiantAbilities</File>
+			<Index>0x102</Index>
+		</Texture>
+		<SlotType>19</SlotType>
+		<TierType>Valiant</TierType>
+		<Description>Black wings conquer the skies as the very harbingers of death, heralding war and incurable suffering.</Description>
+		<ActivateOnEquip stat="0" amount="200">IncrementStat</ActivateOnEquip> // HP
+		<ActivateOnEquip stat="20" amount="7">IncrementStat</ActivateOnEquip> // ATK
+		<ActivateOnEquip stat="26" amount="20">IncrementStat</ActivateOnEquip> // DEX
+		<Sound>ability/ability_use</Sound>
+		<OldSound>ability/ability_use</OldSound>
+		<Usable/>
+		<MpCost>125</MpCost>
+		<Cooldown>1.5</Cooldown>
+		<Activate radius="6.5" totalDamage="500">VampireBlast</Activate>
+		<Activate effect="Regenerate" duration="4" range="6">ConditionEffectAura</Activate>
+		<Activate effect="Fragile" duration="2" range="5" color="0xFF0000" target="enemy" center="mouse" visualEffect="0" useWisMod="false">GenericActivate</Activate>
+		<Activate effect="Hemorrhage" duration="3" range="5" target="enemy" center="mouse" visualEffect="0" useWisMod="false">GenericActivate</Activate>
+		<FameBonus>8</FameBonus>
+		<Valiant id="Unapproachable"/>
+		<Origin>Cosmic Capsule</Origin>
+	</Object>
+	<!-- #endregion -->
+	<!-- #region --> // Traps
+	<Object type="0x1633" id="Gaia's Fury">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ValiantAbilities</File>
+			<Index>0x120</Index>
+		</Texture>
+		<SlotType>46</SlotType>
+		<TierType>Valiant</TierType>
+		<Description>At the inmost depths of the ancient forest, you can see vines stretching for thousands of meters, with barbs the size of greatswords, this is the true face of Gaia.</Description>
+		<ActivateOnEquip stat="20" amount="15">IncrementStat</ActivateOnEquip> // ATK
+		<ActivateOnEquip stat="28" amount="10">IncrementStat</ActivateOnEquip> // DEX
+		<ActivateOnEquip stat="121" amount="40">IncrementStat</ActivateOnEquip> // RES
+		<Sound>ability/ability_use</Sound>
+		<OldSound>ability/ability_use</OldSound>
+		<Usable/>
+		<MpCost>140</MpCost>
+		<Cooldown>1</Cooldown>
+		<Activate radius="6" totalDamage="3600" condEffect="Bind" condDuration="3">Trap</Activate>
+		<Activate radius="4" totalDamage="4200" condEffect="Vulnerable" condDuration="2">Trap</Activate>
+		<Activate effect="Fury" duration="2.5">ConditionEffectSelf</Activate>
+		<FameBonus>8</FameBonus>
+		<Valiant id="Thornheart"/>
+		<Origin>Cosmic Capsule</Origin>
+	</Object>
+	<Object type="0x7919" id="Risk for Reward">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ValiantAbilities</File>
+			<Index>0x121</Index>
+		</Texture>
+		<SlotType>46</SlotType>
+		<TierType>Valiant</TierType>
+		<Description>At the inmost depths of the ancient forest, you can see vines stretching for thousands of meters, with barbs the size of greatswords, this is the true face of Gaia.</Description>
+		<ActivateOnEquip stat="0" amount="150">IncrementStat</ActivateOnEquip> // HP
+		<Sound>ability/ability_use</Sound>
+		<OldSound>ability/ability_use</OldSound>
+		<Usable/>
+		<MpCost>180</MpCost>
+		<Cooldown>2</Cooldown>
+		<Activate radius="6" totalDamage="5000" condEffect="Sluggish" condDuration="5">Trap</Activate>
+		<Activate radius="6" totalDamage="7500" condEffect="Bind" condDuration="2">Trap</Activate>
+		<Activate effect="Strengthen" duration="2">ConditionEffectSelf</Activate>
+		<FameBonus>8</FameBonus>
+		<Valiant id="Ambush"/>
+		<Origin>Cosmic Capsule</Origin>
+	</Object>
+	<!-- #endregion -->
+	<!-- #region --> // Orbs
+	<Object type="0x46d8" id="Solar Eclipse">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ValiantAbilities</File>
+			<Index>0x140</Index>
+		</Texture>
+		<SlotType>21</SlotType>
+		<TierType>Valiant</TierType>
+		<Description>Neath the black, the sky looks dead.</Description>
+		<ActivateOnEquip stat="20" amount="10">IncrementStat</ActivateOnEquip> // ATK
+		<ActivateOnEquip stat="22" amount="-6">IncrementStat</ActivateOnEquip> // SPD
+		<Sound>ability/ability_use</Sound>
+		<OldSound>ability/ability_use</OldSound>
+		<Usable/>
+		<MpCost>135</MpCost>
+		<Cooldown>5</Cooldown>
+		<Activate duration="5" range="5">StasisBlast</Activate>
+		<Activate effect="Precision" duration="2" useWisMod="false">ConditionEffectSelf</Activate>
+		<Activate effect="Strengthen" duration="3" useWisMod="false">ConditionEffectSelf</Activate>
+		<Activate effect="Fragile" duration="4" range="4" color="0xFF0000" target="enemy" center="mouse" visualEffect="5" useWisMod="false">GenericActivate</Activate>
+		<FameBonus>8</FameBonus>
+		<Valiant id="Needed Compromise"/>
+		<Origin>Cosmic Capsule</Origin>
+	</Object>
+	<!-- #endregion -->
+	<!-- #region --> // Prisms
+	<Object type="0x1483" id="Fractured Alliance">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ValiantAbilities</File>
+			<Index>0x160</Index>
+		</Texture>
+		<SlotType>22</SlotType>
+		<TierType>Valiant</TierType>
+		<Description>A cracked artifact that held an amy of ghosts in itself... Now it's power is barely enough to call forth one of it's oathsworn allies.</Description>
+		<ActivateOnEquip stat="20" amount="10">IncrementStat</ActivateOnEquip> // ATK
+		<ActivateOnEquip stat="26" amount="7">IncrementStat</ActivateOnEquip> // VIT
+		<Sound>ability/ability_use</Sound>
+		<OldSound>ability/ability_use</OldSound>
+		<Usable/>
+		<MpCost>125</MpCost>
+		<Cooldown>2.5</Cooldown>
+		<Activate duration="4" objType="0x7918" center="player">Decoy</Activate>
+		<Activate effect="Fury" duration="3">ConditionEffectSelf</Activate>
+		<Activate effect="Strengthen" duration="3">ConditionEffectSelf</Activate>
+		<Activate effect="Fragile" duration="4" range="4" color="0xFF0000" target="enemy" center="player" visualEffect="0" useWisMod="false">GenericActivate</Activate>
+		<FameBonus>8</FameBonus>
+		<Valiant id="One for the Team"/>
+		<Origin>Cosmic Capsule</Origin>
+	</Object>
+	<Object type="0x7918" id="FAlliance Decoy">
+		<Class>Ally</Class>
+		<Ally/>
+		<AnimatedTexture>
+			<File>players</File>
+			<Index>11</Index>
+		</AnimatedTexture>
+		<NoMiniMap/>
+		<Size>100</Size>
+		<ShadowSize>100</ShadowSize>
+		<MaxHitPoints>0</MaxHitPoints>
+	</Object>
+	<Object type="0x511a" id="Accursed Jewel">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ValiantAbilities</File>
+			<Index>0x161</Index>
+		</Texture>
+		<SlotType>22</SlotType>
+		<TierType>Valiant</TierType>
+		<Description>Part of an old crown, fitted with a curse, when worn it would tear the bearer from this plane into a space between realms.</Description>
+		<ActivateOnEquip stat="0" amount="125">IncrementStat</ActivateOnEquip> // HP
+		<ActivateOnEquip stat="22" amount="6">IncrementStat</ActivateOnEquip> // SPD
+		<Steal type="mana" amount="1"/>
+		<Sound>ability/ability_use</Sound>
+		<OldSound>ability/ability_use</OldSound>
+		<Usable/>
+		<MpCost>130</MpCost>
+		<Cooldown>6.5</Cooldown>
+		<Activate duration="6" objType="0x9000" center="player">Decoy</Activate>
+		<Activate maxDistance="20">Teleport</Activate>
+		<Activate effect="Invulnerable" duration="2.4">ConditionEffectSelf</Activate>
+		<Activate stat="114" amount="20" isPerc="true" duration="2.4" noStack="true" useWisMod="false">StatBoostSelf</Activate>
+		<FameBonus>8</FameBonus>
+		<Origin>Cosmic Capsule</Origin>
+		<Valiant id="King's Unseen Hand"/>
+	</Object>
+	<Object type="0x9000" id="AJewel Decoy">
+		<Class>Ally</Class>
+		<Ally/>
+		<AnimatedTexture>
+			<File>players</File>
+			<Index>11</Index>
+		</AnimatedTexture>
+		<NoMiniMap/>
+		<Size>100</Size>
+		<ShadowSize>100</ShadowSize>
+		<MaxHitPoints>0</MaxHitPoints>
+		<NumProjectiles>31</NumProjectiles>
+		<Projectile id="0">
+			<ObjectId>AJewel Blast</ObjectId>
+			<Speed>100</Speed>
+			<MinDamage>180</MinDamage>
+			<MaxDamage>220</MaxDamage>
+			<LifetimeMS>650</LifetimeMS>
+			<Size>80</Size>
+		</Projectile>
+	</Object>
+	<Object type="0x9001" id="AJewel Blast">
+		<Class>Projectile</Class>
+		<Texture>
+			<File>ValiantAbilityProjectiles</File>
+			<Index>0x61</Index>
+		</Texture>
+		<AngleCorrection>1</AngleCorrection>
+	</Object>
+	<!-- #endregion -->
+	<!-- #region --> // Scepters
+	<Object type="0x45ef" id="Void's Consumption">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ValiantAbilities</File>
+			<Index>0x180</Index>
+		</Texture>
+		<SlotType>23</SlotType>
+		<TierType>Valiant</TierType>
+		<Description>Consume all that exists, there is none that can stand in the way.</Description>
+		<ActivateOnEquip stat="0" amount="80">IncrementStat</ActivateOnEquip> // HP
+		<ActivateOnEquip stat="20" amount="10">IncrementStat</ActivateOnEquip> // ATK
+		<Sound>ability/ability_use</Sound>
+		<OldSound>ability/ability_use</OldSound>
+		<Usable/>
+		<MpCost>90</MpCost>
+		<Cooldown>0.5</Cooldown>
+		<Activate useWisMod="true" totalDamage="950" maxTargets="10">Lightning</Activate>
+		<Activate effect="Precision" duration="2.5">ConditionEffectSelf</Activate>
+		<FameBonus>8</FameBonus>
+		<Valiant id="Mind Leech"/>
+		<Origin>Cosmic Capsule</Origin>
+	</Object>
+	<Object type="0x61da" id="Poseidon's Dexterity">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ValiantAbilities</File>
+			<Index>0x181</Index>
+		</Texture>
+		<SlotType>23</SlotType>
+		<TierType>Valiant</TierType>
+		<Description>The tide of the water can crush even the most fortified fortress.</Description>
+		<Sound>ability/ability_use</Sound>
+		<OldSound>ability/ability_use</OldSound>
+		<Usable/>
+		<MpCost>100</MpCost>
+		<Cooldown>0.5</Cooldown>
+		<Activate useWisMod="true" totalDamage="2100" maxTargets="6" condEffect="Vulnerable" condDuration="2" color="0x9800FF">Lightning</Activate>
+		<Activate effect="Strengthen" duration="3.5" useWisMod="true">ConditionEffectSelf</Activate>
+		<FameBonus>8</FameBonus>
+		<Valiant id="Tsunami's Fury"/>
+		<Origin>Cosmic Capsule</Origin>
+	</Object>
+	<Object type="0x55b8" id="Power's Embrace">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ValiantAbilities</File>
+			<Index>0x182</Index>
+		</Texture>
+		<SlotType>23</SlotType>
+		<TierType>Valiant</TierType>
+		<Description>Immense power spills into your body as you equip the scepter, foes cannot comprehend the power amidst.</Description>
+		<ActivateOnEquip stat="28" amount="8">IncrementStat</ActivateOnEquip> // DEX
+		<Sound>ability/ability_use</Sound>
+		<OldSound>ability/ability_use</OldSound>
+		<Usable/>
+		<MpCost>110</MpCost>
+		<Cooldown>0.5</Cooldown>
+		<Activate useWisMod="true" totalDamage="900" maxTargets="6" condEffect="Terrify" condDuration="2">Lightning</Activate>
+		<Activate stat="0" amount="250" duration="0.5" noStack="true" useWisMod="false">StatBoostSelf</Activate>
+		<FameBonus>8</FameBonus>
+		<Valiant id="Enduring Spirit"/>
+		<Origin>Cosmic Capsule</Origin>
+	</Object>
+	<!-- #endregion -->
+	<!-- #region --> // Shurikens
+	<Object type="0x47f5" id="Karma's Sacrifice">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ValiantAbilities</File>
+			<Index>0x1a0</Index>
+		</Texture>
+		<SlotType>25</SlotType>
+		<TierType>Valiant</TierType>
+		<Description>Tip the scale of balance, end up on it's heaviest side and you'll reap the consequences.</Description>
+		<ActivateOnEquip stat="0" amount="70">IncrementStat</ActivateOnEquip> // HP
+		<ActivateOnEquip stat="20" amount="13">IncrementStat</ActivateOnEquip> // ATK
+		<Sound>ability/ability_use</Sound>
+		<OldSound>ability/ability_use</OldSound>
+		<Usable/>
+		<MpCost>115</MpCost>
+		<Cooldown>0.5</Cooldown>
+		<MultiPhase/>
+		<Activate>ShurikenAbility</Activate>
+		<Activate effect="Fury" duration="4">ConditionEffectSelf</Activate>
+		<Projectile>
+			<ObjectId>KSacrifice Shot</ObjectId>
+			<Speed>100</Speed>
+			<MinDamage>2000</MinDamage>
+			<MaxDamage>3200</MaxDamage>
+			<LifetimeMS>1650</LifetimeMS>
+			<Size>120</Size>
+			<ConditionEffect duration="3">Fragile</ConditionEffect>
+			<ArmorPiercing/>
+			<MultiHit/>
+		</Projectile>
+		<FameBonus>8</FameBonus>
+		<Valiant id="Shared Suffering"/>
+		<Origin>Cosmic Capsule</Origin>
+	</Object>
+	<Object type="0x47f4" id="KSacrifice Shot">
+		<Class>Projectile</Class>
+		<Texture>
+			<File>ValiantAbilities</File>
+			<Index>0x1a0</Index>
+		</Texture>
+		<Rotation>80</Rotation>
+		<AngleCorrection>1</AngleCorrection>
+	</Object>
+	<!-- #endregion -->
+	<!-- #region --> // Sheaths
+	<!-- #endregion -->
+	<!-- #region --> // Banners
+	<!-- #endregion -->
+	<!-- #region --> // Siphons
+	<!-- #endregion -->
+	<!-- #region --> // Charms
+	<Object type="0x6202" id="The Last Ace">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ValiantAbilities</File>
+			<Index>0x220</Index>
+		</Texture>
+		<SlotType>32</SlotType>
+		<TierType>Valiant</TierType>
+		<Description>A card taken from the poker deck of death himself.</Description>
+		<ActivateOnEquip stat="20" amount="15">IncrementStat</ActivateOnEquip> // ATK
+		<ActivateOnEquip stat="28" amount="7">IncrementStat</ActivateOnEquip> // DEX
+		<ActivateOnEquip stat="114" amount="-20">IncrementStat</ActivateOnEquip> // LCK
+		<ActivateOnEquip stat="121" amount="10">IncrementStat</ActivateOnEquip> // RES
+		<Sound>ability/ability_use</Sound>
+		<OldSound>ability/ability_use</OldSound>
+		<Usable/>
+		<MpCost>125</MpCost>
+		<Cooldown>5</Cooldown>
+		<Activate range="4" amount="5" players="false" duration="2" effect="Stunned" color="0xFFFF00" objType="0x791b">Torii</Activate>
+		<Activate effect="Fury" duration="2">ConditionEffectSelf</Activate>
+		<Activate effect="Strengthen" duration="2">ConditionEffectSelf</Activate>
+		<FameBonus>8</FameBonus>
+		<Valiant id="Shifty Hands"/>
+		<Origin>Cosmic Capsule</Origin>
+	</Object>
+	<Object type="0x791b" id="TLAce Torii">
+		// New Object
+		<Class>Character</Class>
+		<Texture>
+			<File>ValiantAbilityEntities16x16</File>
+			<Index>0x00</Index>
+		</Texture>
+		<Size>120</Size>
+		<ShadowSize>50</ShadowSize>
+		<MaxHitPoints>0</MaxHitPoints>
+	</Object>
+	<!-- #endregion -->
+	<!-- #region --> // Dice
+	<Object type="0x61d5" id="Death's Venture">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ValiantAbilities</File>
+			<Index>0x240</Index>
+		</Texture>
+		<SlotType>33</SlotType>
+		<TierType>Valiant</TierType>
+		<Description>When thrown, it acts on it's own merit.</Description>
+		<ActivateOnEquip stat="112" amount="40">IncrementStat</ActivateOnEquip> // MGT
+		<ActivateOnEquip stat="114" amount="70">IncrementStat</ActivateOnEquip> // LCK
+		<Sound>ability/ability_use</Sound>
+		<OldSound>ability/ability_use</OldSound>
+		<Usable/>
+		<MpCost>70</MpCost>
+		<Cooldown>2</Cooldown>
+		<Activate duration="5" randVals="Fury, Nausea, Strengthen">DiceActivate</Activate>
+		<Activate effect="Precision" duration="4">ConditionEffectSelf</Activate>
+		<FameBonus>8</FameBonus>
+		<Valiant id="Winning Streak"/>
+		<Origin>Cosmic Capsule</Origin>
+	</Object>
+	<!-- #endregion -->
+	<!-- #region --> // Jackets
+	<Object type="0x621b" id="Warlord's Sacrifice">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ValiantAbilities</File>
+			<Index>0x260</Index>
+		</Texture>
+		<SlotType>35</SlotType>
+		<TierType>Valiant</TierType>
+		<Description>Mountains of bodies, many enemies were felled by the original wearer of this jacket, it was their sacrifice...</Description>
+		<ExtraTooltipData>
+			<EffectInfo name="Offensive Stance" description=""/>
+			<EffectInfo name="" description="+25 Attack"/>
+			<EffectInfo name="Defensive Stance" description=""/>
+			<EffectInfo name="" description="+25 Damage Resistance"/>
+		</ExtraTooltipData>
+		<ActivateOnEquip stat="0" amount="250">IncrementStat</ActivateOnEquip> // HP
+		<Sound>ability/ability_use</Sound>
+		<OldSound>ability/ability_use</OldSound>
+		<Usable/>
+		<MpCost>110</MpCost>
+		<Cooldown>3</Cooldown>
+		<Activate stat="20" amount="25" noStack="false">JacketAbility</Activate>
+		<Activate stat="21" amount="25" noStack="false">JacketAbility2</Activate>
+		<Activate effect="Immortal" duration="1">ConditionEffectSelf</Activate>
+		<Projectile>
+			<ObjectId>WSacrifice Shot</ObjectId>
+			<Speed>100</Speed>
+			<MinDamage>325</MinDamage>
+			<MaxDamage>400</MaxDamage>
+			<LifetimeMS>450</LifetimeMS>
+			<Size>100</Size>
+			<ArmorPiercing/>
+			<MultiHit/>
+			<Boomerang/>
+		</Projectile>
+		<FameBonus>8</FameBonus>
+		<Valiant id="Merciless Finish"/>
+		<Origin>Cosmic Capsule</Origin>
+	</Object>
+	<Object type="0x302f" id="WSacrifice Shot">
+		// New Object
+		<Class>Projectile</Class>
+		<Texture>
+			<File>ValiantAbilityProjectiles</File>
+			<Index>0xa0</Index>
+		</Texture>
+		<Rotation>50</Rotation>
+	</Object>
+	<!-- #endregion -->
+	<!-- #region --> // Talismans
+	<Object type="0x672c" id="Dracula's Promise">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ValiantAbilities</File>
+			<Index>0x280</Index>
+		</Texture>
+		<SlotType>36</SlotType>
+		<TierType>Valiant</TierType>
+		<Description>The talisman is drawn to blood, dracula had encrusted this talisman with the blood of a very special bat.</Description>
+		<ExtraTooltipData>
+			<EffectInfo name="Spawns a bat to aid you in combat." description=""/>
+			<EffectInfo name="Damage" description="1500"/>
+			<EffectInfo name="Lifetime" description="5"/>
+			<EffectInfo name="Effect" description="Armor Break for 4 secs"/>
+		</ExtraTooltipData>
+		<ActivateOnEquip stat="28" amount="10">IncrementStat</ActivateOnEquip> // DEX
+		<ActivateOnEquip stat="112" amount="35">IncrementStat</ActivateOnEquip> // MGT
+		<Sound>ability/ability_use</Sound>
+		<OldSound>ability/ability_use</OldSound>
+		<Usable/>
+		<MpCost>120</MpCost>
+		<Cooldown>4.5</Cooldown>
+		<Activate duration="5" objType="0x672d">TalismanAbility</Activate>
+		<Activate effect="Fury" duration="5">ConditionEffectSelf</Activate>
+		<FameBonus>8</FameBonus>
+		<Valiant id="Self-Assured"/>
+		<Origin>Cosmic Capsule</Origin>
+	</Object>
+	<Object type="0x672d" id="DPromise Bat">
+		<Class>Ally</Class>
+		<Ally/>
+		<AnimatedTexture>
+			<File>ValiantAbilityCharacters</File>
+			<Index>0</Index>
+		</AnimatedTexture>
+		<NoMiniMap/>
+		<Flying/>
+		<Z>0.2</Z>
+		<Size>120</Size>
+		<BindImmune/>
+		<CrippleImmune/>
+		<DazedImmune/>
+		<VulnerableImmune/>
+		<SluggishImmune/>
+		<ShadowSize>50</ShadowSize>
+		<MaxHitPoints>0</MaxHitPoints>
+	</Object>
+	<!-- #endregion -->
+	<!-- #region --> // Rings
+	<Object type="0x5472" id="Centurion's Ring">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ValiantAccessories</File>
+			<Index>0x00</Index>
+		</Texture>
+		<SlotType>9</SlotType>
+		<TierType>Valiant</TierType>
+		<Description>A historic gem from a very old war, it was thought to be lost in time.</Description>
+		<ActivateOnEquip stat="0" amount="150">IncrementStat</ActivateOnEquip> // HP
+		<ActivateOnEquip stat="21" amount="14">IncrementStat</ActivateOnEquip> // DEF
+		<ActivateOnEquip stat="26" amount="15">IncrementStat</ActivateOnEquip> // VIT
+		<ActivateOnEquip stat="122" amount="200">IncrementStat</ActivateOnEquip> // PROT
+		<FameBonus>8</FameBonus>
+		<Valiant id="Reinforced Observation"/>
+		<Origin>Cosmic Capsule</Origin>
+	</Object>
+	<Object type="0x69e8" id="War-General's Keen Eye">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ValiantAccessories</File>
+			<Index>0x01</Index>
+		</Texture>
+		<SlotType>9</SlotType>
+		<TierType>Valiant</TierType>
+		<Description>Cities became wartorn over an obscure eye, the eye had brought cataclysm to kingdoms surrounding the general who implemented it into his face.</Description>
+		<ActivateOnEquip stat="3" amount="100">IncrementStat</ActivateOnEquip> // MP
+		<ActivateOnEquip stat="21" amount="5">IncrementStat</ActivateOnEquip> // DEF
+		<ActivateOnEquip stat="122" amount="700">IncrementStat</ActivateOnEquip> // PROT
+		<Steal type="mana" amount="1"/>
+		<FameBonus>8</FameBonus>
+		<Valiant id="Take Cover"/>
+		<Origin>Cosmic Capsule</Origin>
+	</Object>
+	<Object type="0x49e3" id="Great Sage's Watch">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ValiantAccessories</File>
+			<Index>0x02</Index>
+		</Texture>
+		<SlotType>9</SlotType>
+		<TierType>Valiant</TierType>
+		<Description>Time is of the essence.</Description>
+		<ActivateOnEquip stat="3" amount="100">IncrementStat</ActivateOnEquip> // MP
+		<ActivateOnEquip stat="26" amount="25">IncrementStat</ActivateOnEquip> // VIT
+		<ActivateOnEquip stat="27" amount="150">IncrementStat</ActivateOnEquip> // WIS
+		<ActivateOnEquip stat="122" amount="100">IncrementStat</ActivateOnEquip> // PRT
+		<FameBonus>8</FameBonus>
+		<Valiant id="Corrupted Surge"/>
+		<Origin>Cosmic Capsule</Origin>
+	</Object>
+	<Object type="0x5471" id="Athena's Blessing">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ValiantAccessories</File>
+			<Index>0x03</Index>
+		</Texture>
+		<SlotType>9</SlotType>
+		<TierType>Valiant</TierType>
+		<Description>A holy aura surrounds this trinket, use it wisely or die trying.</Description>
+		<ActivateOnEquip stat="21" amount="5">IncrementStat</ActivateOnEquip> // DEF
+		<ActivateOnEquip stat="22" amount="20">IncrementStat</ActivateOnEquip> // SPD
+		<ActivateOnEquip stat="28" amount="35">IncrementStat</ActivateOnEquip> // DEX
+		<ActivateOnEquip stat="122" amount="150">IncrementStat</ActivateOnEquip> // PRT
+		<FameBonus>8</FameBonus>
+		<Valiant id="Force of Will"/>
+		<Origin>Cosmic Capsule</Origin>
+	</Object>
+	<Object type="0x5839" id="Main Prize">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ValiantAccessories</File>
+			<Index>0x04</Index>
+		</Texture>
+		<SlotType>9</SlotType>
+		<TierType>Valiant</TierType>
+		<Description>I can already smell the profit.</Description>
+		<ActivateOnEquip stat="102" amount="30">IncrementStat</ActivateOnEquip> // FRT
+		<ActivateOnEquip stat="112" amount="100">IncrementStat</ActivateOnEquip> // MGT
+		<ActivateOnEquip stat="114" amount="80">IncrementStat</ActivateOnEquip> // LCK
+		<FameBonus>8</FameBonus>
+		<Valiant id="Dumb Luck"/>
+		<Origin>Cosmic Capsule</Origin>
+	</Object>
+	<Object type="0x52df" id="Scorched Earth">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ValiantAccessories</File>
+			<Index>0x05</Index>
+		</Texture>
+		<SlotType>9</SlotType>
+		<TierType>Valiant</TierType>
+		<Description>"Burn the trees, salt the fields, we tilt into hell itself!"</Description>
+		<ActivateOnEquip stat="20" amount="10">IncrementStat</ActivateOnEquip> // ATK
+		<ActivateOnEquip stat="28" amount="15">IncrementStat</ActivateOnEquip> // DEX
+		<ActivateOnEquip stat="112" amount="45">IncrementStat</ActivateOnEquip> // MGT
+		<ActivateOnEquip stat="112" amount="50">IncrementStat</ActivateOnEquip> // PRT
+		<FameBonus>8</FameBonus>
+		<Valiant id="Inquisition"/>
+		<Origin>Cosmic Capsule</Origin>
+	</Object>
+	<Object type="0x61b6" id="Ring of Maddening Truth">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ValiantAccessories</File>
+			<Index>0x06</Index>
+		</Texture>
+		<SlotType>9</SlotType>
+		<TierType>Valiant</TierType>
+		<Description>"Do you really want to know just how insignificant you are?"</Description>
+		<ActivateOnEquip stat="0" amount="300">IncrementStat</ActivateOnEquip> // HP
+		<ActivateOnEquip stat="26" amount="130">IncrementStat</ActivateOnEquip> // VIT
+		<ActivateOnEquip stat="121" amount="40">IncrementStat</ActivateOnEquip> // RES
+		<ActivateOnEquip stat="122" amount="100">IncrementStat</ActivateOnEquip> // PRT
+		<FameBonus>8</FameBonus>
+		<Valiant id="Eldritch Aid"/>
+		<Origin>Cosmic Capsule</Origin>
+	</Object>
+	<Object type="0x69cd" id="Siegebreaker">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ValiantAccessories</File>
+			<Index>0x07</Index>
+		</Texture>
+		<SlotType>9</SlotType>
+		<TierType>Valiant</TierType>
+		<Description>"Some well done preps, the machines ready; let's tear it down."</Description>
+		<ActivateOnEquip stat="0" amount="100">IncrementStat</ActivateOnEquip> // HP
+		<ActivateOnEquip stat="3" amount="200">IncrementStat</ActivateOnEquip> // MP
+		<ActivateOnEquip stat="20" amount="10">IncrementStat</ActivateOnEquip> // ATK
+		<ActivateOnEquip stat="21" amount="5">IncrementStat</ActivateOnEquip> // DEF
+		<ActivateOnEquip stat="27" amount="20">IncrementStat</ActivateOnEquip> // WIS
+		<ActivateOnEquip stat="28" amount="5">IncrementStat</ActivateOnEquip> // DEX
+		<EffectEquip effect="Harden" delay="18"/>
+		<FameBonus>8</FameBonus>
+		<Valiant id="Reckless Charge"/>
+		<Origin>Cosmic Capsule</Origin>
+	</Object>
+	<Object type="0x54b6" id="Prayers Intact">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ValiantAccessories</File>
+			<Index>0x08</Index>
+		</Texture>
+		<SlotType>9</SlotType>
+		<TierType>Valiant</TierType>
+		<Description>A ring carved out of an odd cultist shrine, the shrine was fortified for many years, but in recent years the shrine has been showing weakness, some say a section of the pillar had fallen during a protest.</Description>
+		<ActivateOnEquip stat="0" amount="25" isPerc="true">IncrementStat</ActivateOnEquip> // HP
+		<ActivateOnEquip stat="21" amount="7">IncrementStat</ActivateOnEquip> // DEF
+		<ActivateOnEquip stat="28" amount="10">IncrementStat</ActivateOnEquip> // DEX
+		<Steal type="life" amount="2"/>
+		<FameBonus>8</FameBonus>
+		<Valiant id="Just a Scratch"/>
+		<Origin>Cosmic Capsule</Origin>
+	</Object>
+	<Object type="0x69db" id="Heart of the Machine">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ValiantAccessories</File>
+			<Index>0x09</Index>
+		</Texture>
+		<SlotType>9</SlotType>
+		<TierType>Valiant</TierType>
+		<Description>An otherworldly artifact that seems to predict a certain unknown happening with clockwork precision.</Description>
+		<ActivateOnEquip stat="0" amount="150">IncrementStat</ActivateOnEquip> // HP
+		<ActivateOnEquip stat="3" amount="50">IncrementStat</ActivateOnEquip> // MP
+		<ActivateOnEquip stat="20" amount="10">IncrementStat</ActivateOnEquip> // ATK
+		<ActivateOnEquip stat="26" amount="10">IncrementStat</ActivateOnEquip> // VIT
+		<ActivateOnEquip stat="27" amount="10">IncrementStat</ActivateOnEquip> // WIS
+		<ActivateOnEquip stat="121" amount="10">IncrementStat</ActivateOnEquip> // RES
+		<FameBonus>8</FameBonus>
+		<Valiant id="Gear Turner"/>
+		<Origin>Cosmic Capsule</Origin>
+	</Object>
+	<Object type="0x5469" id="Echo of the Aether">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ValiantAccessories</File>
+			<Index>0x0a</Index>
+		</Texture>
+		<SlotType>9</SlotType>
+		<TierType>Valiant</TierType>
+		<Description>A shard broken down from the philosopher's stone, molded into a unique texture in order to create a fabric substance, they shaped this material into a scroll of some sort, the power still lingers.</Description>
+		<ActivateOnEquip stat="20" amount="10">IncrementStat</ActivateOnEquip> // ATK
+		<ActivateOnEquip stat="28" amount="10">IncrementStat</ActivateOnEquip> // DEX
+		<ActivateOnEquip stat="112" amount="40">IncrementStat</ActivateOnEquip> // MGT
+		<ActivateOnEquip stat="114" amount="40">IncrementStat</ActivateOnEquip> // LCK
+		<FameBonus>8</FameBonus>
+		<Valiant id="Unbroken"/>
+		<Origin>Cosmic Capsule</Origin>
+	</Object>
+	<!-- #endregion -->
+
+	////<RandomTexture>
+	//	//<Texture>
+	//		//<File>ValiantWeaponsProjectiles</File>
+	//		//<Index>0x01</Index>
+	//		//
+	//	</Texture>
+	//	//<Texture>
+	//		//<File>lofiObj</File>
+	//		//<Index>0xba</Index>
+	//		//
+	//	</Texture>
+	//	//<Texture>
+	//		//<File>lofiObj</File>
+	//		//<Index>0x8a</Index>
+	//		//
+	//	</Texture>
+	//	//
+	//</RandomTexture>
+</Objects>

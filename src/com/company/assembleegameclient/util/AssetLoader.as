@@ -45,6 +45,7 @@ public class AssetLoader {
         AssetLibrary.addImageSet("StatusIcons16x16", new EmbeddedAssets.StatusIcons16x16().bitmapData, 16, 16);
         AssetLibrary.addImageSet("StatusIcons18x18", new EmbeddedAssets.StatusIcons18x18().bitmapData, 16, 16);
         // Environment
+        AssetLibrary.addImageSet("cobj16x16", new EmbeddedAssets.customobjects16x16().bitmapData, 16, 16);
         AssetLibrary.addImageSet("Foundry_Environment8x8", new EmbeddedAssets.Foundry_Environment8x8().bitmapData, 8, 8);
         AssetLibrary.addImageSet("Foundry_Environment16x16", new EmbeddedAssets.Foundry_Environment16x16().bitmapData, 16, 16);
         AssetLibrary.addImageSet("Foundry_Environment32x32", new EmbeddedAssets.Foundry_Environment32x32().bitmapData, 32, 32);
@@ -73,9 +74,35 @@ public class AssetLoader {
         AssetLibrary.addImageSet("Overworld_Environment_Nidavellir16x8", new EmbeddedAssets.Overworld_Environment_Nidavellir16x8().bitmapData, 8, 16);
         AssetLibrary.addImageSet("Overworld_Environment_Nidavellir16x16", new EmbeddedAssets.Overworld_Environment_Nidavellir16x16().bitmapData, 16, 16);
         // Equipment
+        AssetLibrary.addImageSet("lofiGodSlayerAccessories", new EmbeddedAssets.GodSlayerAccessories().bitmapData, 8, 8);
+        AssetLibrary.addImageSet("lofiGodSlayerArmor", new EmbeddedAssets.GodSlayerArmor().bitmapData, 8, 8);
+        AssetLibrary.addImageSet("lofiGodSlayerAbilities", new EmbeddedAssets.GodSlayerAbilities().bitmapData, 8, 8);
+        AssetLibrary.addImageSet("lofiGodSlayerProjectiles", new EmbeddedAssets.GodSlayerProjectiles().bitmapData, 8, 8);
+        AssetLibrary.addImageSet("lofiGodSlayerWeapons", new EmbeddedAssets.GodSlayerWeapons().bitmapData, 8, 8);
+
+        AssetLibrary.addImageSet("lofiGodlyAccessories", new EmbeddedAssets.GodlyAccessories().bitmapData, 8, 8);
+        AssetLibrary.addImageSet("lofiGodlyArmor", new EmbeddedAssets.GodlyArmor().bitmapData, 8, 8);
+        AssetLibrary.addImageSet("lofiGodlyAbilities", new EmbeddedAssets.GodlyAbilities().bitmapData, 8, 8);
+        AssetLibrary.addImageSet("lofiGodlyProjectiles", new EmbeddedAssets.GodlyProjectiles().bitmapData, 8, 8);
+        AssetLibrary.addImageSet("lofiGodlyWeapons", new EmbeddedAssets.GodlyWeapons().bitmapData, 8, 8);
+        AssetLibrary.addImageSet("lofiGodlyMiscellaneous", new EmbeddedAssets.GodlyMiscellaneous().bitmapData, 8, 8);
+
+        AssetLibrary.addImageSet("lofiLegendaryAccessories", new EmbeddedAssets.LegendaryAccessories().bitmapData, 8, 8);
+        AssetLibrary.addImageSet("lofiLegendaryArmor", new EmbeddedAssets.LegendaryArmor().bitmapData, 8, 8);
+        AssetLibrary.addImageSet("lofiLegendaryAbilities", new EmbeddedAssets.LegendaryAbilities().bitmapData, 8, 8);
+        AssetLibrary.addImageSet("lofiLegendaryProjectiles", new EmbeddedAssets.LegendaryProjectiles().bitmapData, 8, 8);
+        AssetLibrary.addImageSet("lofiLegendaryWeapons", new EmbeddedAssets.LegendaryWeapons().bitmapData, 8, 8);
+
+        AssetLibrary.addImageSet("lofiSacredAccessories", new EmbeddedAssets.SacredAccessories().bitmapData, 8, 8);
+        AssetLibrary.addImageSet("lofiSacredArmor", new EmbeddedAssets.SacredArmor().bitmapData, 8, 8);
+        AssetLibrary.addImageSet("lofiSacredAbilities", new EmbeddedAssets.SacredAbilities().bitmapData, 8, 8);
+        AssetLibrary.addImageSet("lofiSacredProjectiles", new EmbeddedAssets.SacredProjectiles().bitmapData, 8, 8);
+        AssetLibrary.addImageSet("lofiSacredWeapons", new EmbeddedAssets.SacredWeapons().bitmapData, 8, 8);
+
         AssetLibrary.addImageSet("StarterGear", new EmbeddedAssets.StarterGear().bitmapData, 8, 8);
 
         AssetLibrary.addImageSet("ArtifactAbilities", new EmbeddedAssets.ArtifactAbilities().bitmapData, 8, 8);
+
         AssetLibrary.addImageSet("ArtifactAbilityEntities", new EmbeddedAssets.ArtifactAbilityEntities().bitmapData, 16, 16);
         AssetLibrary.addImageSet("ArtifactAbilityEntities16x16", new EmbeddedAssets.ArtifactAbilityEntities16x16().bitmapData, 16, 16);
         AssetLibrary.addImageSet("ArtifactAbilityProjectiles", new EmbeddedAssets.ArtifactAbilityProjectiles().bitmapData, 8, 8);
@@ -133,7 +160,10 @@ public class AssetLoader {
     private function addAnimatedCharacters():void {
         AnimatedChars.add("players", new EmbeddedAssets.Players().bitmapData, new EmbeddedAssets.playersMask().bitmapData, 16, 16, 112, 48, AnimatedChar.RIGHT);
         AnimatedChars.add("playerskins", new EmbeddedAssets.playersSkins().bitmapData, new EmbeddedAssets.playersSkinsMask().bitmapData, 8, 8, 56, 24, AnimatedChar.RIGHT);
-        AnimatedChars.add("Pets16x16", new EmbeddedAssets.Pets16x16().bitmapData, null, 16, 16, 112, 304, AnimatedChar.DOWN);
+        AnimatedChars.add("Pets16x16", new EmbeddedAssets.Pets16x16().bitmapData, null, 16, 16, 112, 16, AnimatedChar.DOWN);
+        AnimatedChars.add("ValiantAbilityCharacters", new EmbeddedAssets.ValiantAbilityCharacters().bitmapData, null,8, 8, 56, 8, AnimatedChar.RIGHT);
+        AnimatedChars.add("ArtifactAbilityCharacters8x8", new EmbeddedAssets.ArtifactAbilityCharacters8x8().bitmapData, null,8, 8, 56, 8, AnimatedChar.RIGHT);
+        AnimatedChars.add("ArtifactAbilityCharacters16x16", new EmbeddedAssets.ArtifactAbilityCharacters16x16().bitmapData, null,16, 16, 112, 16, AnimatedChar.RIGHT);
     }
 
     private function addSoundEffects():void {

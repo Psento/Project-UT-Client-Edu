@@ -48,7 +48,7 @@ public class AssetLibrary {
     public static function addSound(name:String, soundClass:Class):void {
         var a:Array = sounds_[name];
         if (a == null) {
-            sounds_[name] = new Array();
+            sounds_[name] = [];
         }
         sounds_[name].push(soundClass);
     }

@@ -1,0 +1,2945 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Objects>
+	<!-- #region --> // Light
+	<Object type="0x7063" id="Gilded Gown">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ArtifactArmor</File>
+			<Index>00</Index>
+		</Texture>
+		<SlotType>14</SlotType>
+		<TierType>Artifact</TierType>
+		<Description>A malevolent robe furnished from golden velvet, usually found on dead cultists after their hideout was discovered</Description>
+		<ActivateOnEquip stat="0" amount="50">IncrementStat</ActivateOnEquip> // HP
+		<ActivateOnEquip stat="20" amount="10">IncrementStat</ActivateOnEquip> // ATT
+		<ActivateOnEquip stat="21" amount="3">IncrementStat</ActivateOnEquip> // DEF
+		<ActivateOnEquip stat="22" amount="10">IncrementStat</ActivateOnEquip> // SPD
+		<ActivateOnEquip stat="28" amount="5">IncrementStat</ActivateOnEquip> // DEX
+		<FameBonus>6</FameBonus>
+		<Origin>Tarnished Robe</Origin>
+	</Object>
+	<Object type="0x7062" id="Guarding Cloth">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ArtifactArmor</File>
+			<Index>0x01</Index>
+		</Texture>
+		<SlotType>14</SlotType>
+		<TierType>Artifact</TierType>
+		<Description>Worn by the high ranking council members of the ancients, ensuring their survival even in case of the most serious catastrophes.</Description>
+		<ActivateOnEquip stat="0" amount="150">IncrementStat</ActivateOnEquip> // HP
+		<ActivateOnEquip stat="20" amount="7">IncrementStat</ActivateOnEquip> // ATT
+		<ActivateOnEquip stat="21" amount="3">IncrementStat</ActivateOnEquip> // DEF
+		<ActivateOnEquip stat="22" amount="10">IncrementStat</ActivateOnEquip> // SPD
+		<ActivateOnEquip stat="26" amount="15">IncrementStat</ActivateOnEquip> // VIT
+		<Steal type="life" amount="1"/>
+		<FameBonus>6</FameBonus>
+		<Origin>Tarnished Robe</Origin>
+	</Object>
+	<Object type="0x7064" id="Beetle Carapace">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ArtifactArmor</File>
+			<Index>0x02</Index>
+		</Texture>
+		<SlotType>14</SlotType>
+		<TierType>Artifact</TierType>
+		<Description>A garment crafted from ancient skeletal remains, the beast it originated from no longer exists, making this piece one in a billion.</Description>
+		<ActivateOnEquip stat="3" amount="175">IncrementStat</ActivateOnEquip> // MP
+		<ActivateOnEquip stat="20" amount="7">IncrementStat</ActivateOnEquip> // ATT
+		<ActivateOnEquip stat="21" amount="3">IncrementStat</ActivateOnEquip> // DEF
+		<ActivateOnEquip stat="22" amount="10">IncrementStat</ActivateOnEquip> // SPD
+		<ActivateOnEquip stat="27" amount="30">IncrementStat</ActivateOnEquip> // WIS
+		<Steal type="mana" amount="2"/>
+		<FameBonus>6</FameBonus>
+		<Origin>Tarnished Robe</Origin>
+	</Object>
+	<!-- #endregion -->
+	<!-- #region --> // Medium
+	<Object type="0x7133" id="Platinum Aegis">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ArtifactArmor</File>
+			<Index>0x20</Index>
+		</Texture>
+		<SlotType>6</SlotType>
+		<TierType>Artifact</TierType>
+		<Description>A Rigid body armor forged from an utterly expensive metal, it protects the wearer against all physical harm.</Description>
+		<ActivateOnEquip stat="0" amount="175">IncrementStat</ActivateOnEquip> // HP
+		<ActivateOnEquip stat="20" amount="10">IncrementStat</ActivateOnEquip> // ATT
+		<ActivateOnEquip stat="21" amount="7">IncrementStat</ActivateOnEquip> // DEF
+		<ActivateOnEquip stat="22" amount="7">IncrementStat</ActivateOnEquip> // SPD
+		<ActivateOnEquip stat="26" amount="10">IncrementStat</ActivateOnEquip> // VIT
+		<ActivateOnEquip stat="121" amount="10">IncrementStat</ActivateOnEquip> // RES
+		<FameBonus>6</FameBonus>
+		<Origin>Tarnished Leather Hide</Origin>
+	</Object>
+	<Object type="0x7132" id="Relic Infusion">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ArtifactArmor</File>
+			<Index>0x21</Index>
+		</Texture>
+		<SlotType>6</SlotType>
+		<TierType>Artifact</TierType>
+		<Description>A light armor with a lost relic carved from of an unmelting icicle found in the tundras of the realm.</Description>
+		<ActivateOnEquip stat="0" amount="75">IncrementStat</ActivateOnEquip> // HP
+		<ActivateOnEquip stat="20" amount="7">IncrementStat</ActivateOnEquip> // ATK
+		<ActivateOnEquip stat="21" amount="7">IncrementStat</ActivateOnEquip> // DEF
+		<ActivateOnEquip stat="22" amount="7">IncrementStat</ActivateOnEquip> // SPD
+		<ActivateOnEquip stat="112" amount="20">IncrementStat</ActivateOnEquip> // MGT
+		<ActivateOnEquip stat="114" amount="40">IncrementStat</ActivateOnEquip> // LCK
+		<FameBonus>6</FameBonus>
+		<Origin>Tarnished Leather Hide</Origin>
+	</Object>
+	<Object type="0x7134" id="Nature's Blessing">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ArtifactArmor</File>
+			<Index>0x22</Index>
+		</Texture>
+		<SlotType>6</SlotType>
+		<TierType>Artifact</TierType>
+		<Description>Gaia's children wore these before venturing out to the realm.</Description>
+		<ActivateOnEquip stat="0" amount="50">IncrementStat</ActivateOnEquip> // HP
+		<ActivateOnEquip stat="3" amount="50">IncrementStat</ActivateOnEquip> // MP
+		<ActivateOnEquip stat="20" amount="5">IncrementStat</ActivateOnEquip> // ATK
+		<ActivateOnEquip stat="21" amount="7">IncrementStat</ActivateOnEquip> // DEF
+		<ActivateOnEquip stat="22" amount="7">IncrementStat</ActivateOnEquip> // SPD
+		<ActivateOnEquip stat="26" amount="15">IncrementStat</ActivateOnEquip> // VIT
+		<ActivateOnEquip stat="27" amount="15">IncrementStat</ActivateOnEquip> // WIS
+		<ActivateOnEquip stat="28" amount="5">IncrementStat</ActivateOnEquip> // DEX
+		<Steal type="mana" amount="2"/>
+		<FameBonus>6</FameBonus>
+		<Origin>Tarnished Leather Hide</Origin>
+	</Object>
+	<!-- #endregion -->
+	<!-- #region --> // Heavy
+	<Object type="0x7065" id="The Keep's Platemail">
+		<Class>Equipment</Class>
+		<Item/>
+		<Description>Armor scavenged from a corrupted keep, it's understood to be related to an outfit, worn by their soldiers back in it's generation.</Description>
+		<Texture>
+			<File>ArtifactArmor</File>
+			<Index>0x40</Index>
+		</Texture>
+		<SlotType>7</SlotType>
+		<TierType>Artifact</TierType>
+		<ActivateOnEquip stat="3" amount="175">IncrementStat</ActivateOnEquip>// MP
+		<ActivateOnEquip stat="20" amount="5">IncrementStat</ActivateOnEquip> // ATK
+		<ActivateOnEquip stat="21" amount="13">IncrementStat</ActivateOnEquip> // DEF
+		<ActivateOnEquip stat="22" amount="4">IncrementStat</ActivateOnEquip> // SPD
+		<ActivateOnEquip stat="27" amount="15">IncrementStat</ActivateOnEquip> // WIS
+		<FameBonus>6</FameBonus>
+		<Origin>Tarnished Platemail</Origin>
+	</Object>
+	<Object type="0x7883" id="Dunestrider">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ArtifactArmor</File>
+			<Index>0x41</Index>
+		</Texture>
+		<SlotType>7</SlotType>
+		<TierType>Artifact</TierType>
+		<Description>Made to endure in the roughest environments, this armor grants unparalleled protection.</Description>
+		<ActivateOnEquip stat="0" amount="175">IncrementStat</ActivateOnEquip> // HP
+		<ActivateOnEquip stat="3" amount="175">IncrementStat</ActivateOnEquip> // MP
+		<ActivateOnEquip stat="21" amount="13">IncrementStat</ActivateOnEquip> // DEF
+		<ActivateOnEquip stat="22" amount="4">IncrementStat</ActivateOnEquip> // SPD
+		<Steal type="life" amount="1"/>
+		<Steal type="mana" amount="1"/>
+		<FameBonus>6</FameBonus>
+		<Origin>Tarnished Platemail</Origin>
+	</Object>
+	<Object type="0x7067" id="Heaven's Guidance">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ArtifactArmor</File>
+			<Index>0x42</Index>
+		</Texture>
+		<SlotType>7</SlotType>
+		<TierType>Artifact</TierType>
+		<Description>Sometimes it's aid, sometimes it's fury, but one thing never changes... The reason.</Description>
+		<ActivateOnEquip stat="0" amount="175">IncrementStat</ActivateOnEquip> // HP
+		<ActivateOnEquip stat="20" amount="8">IncrementStat</ActivateOnEquip> // ATK
+		<ActivateOnEquip stat="21" amount="13">IncrementStat</ActivateOnEquip> // DEF
+		<ActivateOnEquip stat="22" amount="4">IncrementStat</ActivateOnEquip> // SPD
+		<ActivateOnEquip stat="26" amount="30">IncrementStat</ActivateOnEquip> // VIT
+		<FameBonus>6</FameBonus>
+		<Origin>Tarnished Platemail</Origin>
+	</Object>
+	<Object type="0x7131" id="Bulwark of Blood">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ArtifactArmor</File>
+			<Index>0x43</Index>
+		</Texture>
+		<SlotType>7</SlotType>
+		<TierType>Artifact</TierType>
+		<Description>Absorbs all the blood that touches its surface, it grows stronger with each drop.</Description>
+		<ActivateOnEquip stat="0" amount="100">IncrementStat</ActivateOnEquip> // HP
+		<ActivateOnEquip stat="21" amount="20">IncrementStat</ActivateOnEquip> // DEF
+		<ActivateOnEquip stat="22" amount="-10">IncrementStat</ActivateOnEquip> // SPD
+		<ActivateOnEquip stat="26" amount="40">IncrementStat</ActivateOnEquip> // VIT
+		<ActivateOnEquip stat="28" amount="-6">IncrementStat</ActivateOnEquip> // DEX
+		<ActivateOnEquip stat="122" amount="40">IncrementStat</ActivateOnEquip> // PRT
+		<FameBonus>6</FameBonus>
+		<Origin>Tarnished Platemail</Origin>
+	</Object>
+	<!-- #endregion -->
+	<!-- #region --> // Swords
+	<Object type="0x7130" id="Temple Breaker">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ArtifactWeapons</File>
+			<Index>0x00</Index>
+		</Texture>
+		<SlotType>1</SlotType>
+		<TierType>Artifact</TierType>
+		<Description>Made by the finest blacksmith of the bronze age, it's strength was enough to rival weapons made of the strongest steels.</Description>
+		<ActivateOnEquip stat="26" amount="10">IncrementStat</ActivateOnEquip> // VIT
+		<RateOfFire>0.44</RateOfFire>
+		<Sound>weapon/newsounds/longsword</Sound>
+		<OldSound>weapon/newsounds/longswordswing</OldSound>
+		<Projectile>
+			<ObjectId>TBreaker Slash</ObjectId>
+			<Speed>100</Speed>
+			<MinDamage>320</MinDamage>
+			<MaxDamage>1000</MaxDamage>
+			<LifetimeMS>600</LifetimeMS>
+		</Projectile>
+		<FameBonus>6</FameBonus>
+		<Origin>Tarnished Sword</Origin>
+	</Object>
+	<Object type="0x7160" id="TBreaker Slash">
+		<Class>Projectile</Class>
+		<Texture>
+			<File>ArtifactWeaponsProjectiles</File>
+			<Index>0x00</Index>
+		</Texture>
+		<AngleCorrection>1</AngleCorrection>
+	</Object>
+	<Object type="0x7128" id="Hell's Wail">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ArtifactWeapons</File>
+			<Index>0x01</Index>
+		</Texture>
+		<SlotType>1</SlotType>
+		<TierType>Artifact</TierType>
+		<Description>A battleaxe said to be cried for even by the demons of hell.</Description>
+		<Steal type="life" amount="1"/>
+		<RateOfFire>1.15</RateOfFire>
+		<Sound>weapon/newsounds/longsword</Sound>
+		<OldSound>weapon/newsounds/longswordswing</OldSound>
+		<Projectile>
+			<ObjectId>HWail Shot</ObjectId>
+			<Speed>100</Speed>
+			<MinDamage>240</MinDamage>
+			<MaxDamage>275</MaxDamage>
+			<LifetimeMS>380</LifetimeMS>
+			<MultiHit/>
+		</Projectile>
+		<FameBonus>6</FameBonus>
+		<Origin>Tarnished Sword</Origin>
+	</Object>
+	<Object type="0x7140" id="HWail Shot">
+		<Class>Projectile</Class>
+		<Texture>
+			<File>ArtifactWeaponsProjectiles</File>
+			<Index>0x01</Index>
+		</Texture>
+		<AngleCorrection>1</AngleCorrection>
+	</Object>
+	<Object type="0x7129" id="Age of Ragnarok">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ArtifactWeapons</File>
+			<Index>0x02</Index>
+		</Texture>
+		<SlotType>1</SlotType>
+		<TierType>Artifact</TierType>
+		<Description>A giant hunk of steel, once used to free the world of torment, its wielder could still see the remnants of its glory.</Description>
+		<ActivateOnEquip stat="21" amount="10">IncrementStat</ActivateOnEquip>// DEF
+		<RateOfFire>0.75</RateOfFire>
+		<Sound>weapon/newsounds/longsword</Sound>
+		<OldSound>weapon/newsounds/longswordswing</OldSound>
+		<NumProjectiles>3</NumProjectiles>
+		<Projectile>
+			<ObjectId>ARagnarok Shot</ObjectId>
+			<Speed>100</Speed>
+			<MinDamage>145</MinDamage>
+			<MaxDamage>160</MaxDamage>
+			<LifetimeMS>450</LifetimeMS>
+			<MultiHit/>
+		</Projectile>
+		<FameBonus>6</FameBonus>
+		<Origin>Tarnished Sword</Origin>
+	</Object>
+	<Object type="0x7159" id="ARagnarok Shot">
+		<Class>Projectile</Class>
+		<Texture>
+			<File>ArtifactWeaponsProjectiles</File>
+			<Index>0x02</Index>
+		</Texture>
+		<AngleCorrection>1</AngleCorrection>
+	</Object>
+	<Object type="0x47bd" id="Serpent's Tongue">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ArtifactWeapons</File>
+			<Index>0x03</Index>
+		</Texture>
+		<SlotType>1</SlotType>
+		<TierType>Artifact</TierType>
+		<Description>This is a Living Segment of the world serpent, requires immense caution when using, as the snake's tongue is forked, and its words have split meaning.</Description>
+		<Steal type="mana" amount="1"/>
+		<RateOfFire>1.2</RateOfFire>
+		<Sound>weapon/newsounds/longsword</Sound>
+		<OldSound>weapon/newsounds/longswordswing</OldSound>
+		<NumProjectiles>2</NumProjectiles>
+		<Projectile>
+			<ObjectId>STongue Shot</ObjectId>
+			<Speed>100</Speed>
+			<MinDamage>90</MinDamage>
+			<MaxDamage>140</MaxDamage>
+			<LifetimeMS>420</LifetimeMS>
+			<ArmorPiercing/>
+		</Projectile>
+		<FameBonus>6</FameBonus>
+		<Origin>Tarnished Sword</Origin>
+	</Object>
+	<Object type="0x47bc" id="STongue Shot">
+		<Class>Projectile</Class>
+		<Texture>
+			<File>ArtifactWeaponsProjectiles</File>
+			<Index>0x03</Index>
+		</Texture>
+		<AngleCorrection>1</AngleCorrection>
+	</Object>
+	<Object type="0x64aa" id="Fatesealer">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ArtifactWeapons</File>
+			<Index>0x04</Index>
+		</Texture>
+		<SlotType>1</SlotType>
+		<TierType>Artifact</TierType>
+		<Description>Bathe in the lucent glory of faith and knowledge, judgement always arrives.</Description>
+		<ActivateOnEquip stat="0" amount="50">IncrementStat</ActivateOnEquip> // HP
+		<ActivateOnEquip stat="3" amount="50">IncrementStat</ActivateOnEquip> // MP
+		<RateOfFire>0.68</RateOfFire>
+		<Sound>weapon/newsounds/longsword</Sound>
+		<OldSound>weapon/newsounds/longswordswing</OldSound>
+		<Projectile>
+			<ObjectId>Fatesealer Shot</ObjectId>
+			<Speed>100</Speed>
+			<MinDamage>390</MinDamage>
+			<MaxDamage>480</MaxDamage>
+			<LifetimeMS>930</LifetimeMS>
+			<Boomerang/>
+		</Projectile>
+		<FameBonus>6</FameBonus>
+		<Origin>Tarnished Sword</Origin>
+	</Object>
+	<Object type="0x64ab" id="Fatesealer Shot">
+		<Class>Projectile</Class>
+		<Texture>
+			<File>ArtifactWeaponsProjectiles</File>
+			<Index>0x04</Index>
+		</Texture>
+		<AngleCorrection>1</AngleCorrection>
+	</Object>
+	<!-- #endregion -->
+	<!-- #region --> // Bows
+	<Object type="0x7417" id="Soulpiercer">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ArtifactWeapons</File>
+			<Index>0x20</Index>
+		</Texture>
+		<SlotType>3</SlotType>
+		<TierType>Artifact</TierType>
+		<Description>A bow firing spectral arrows capable of tearing apart the spirit of it's foes.</Description>
+		<RateOfFire>1.2</RateOfFire>
+		<Sound>weapon/newsounds/lightbow</Sound>
+		<OldSound>weapon/newsounds/lightbowshoot</OldSound>
+		<Projectile>
+			<ObjectId>Soulpiercer Shot</ObjectId>
+			<Speed>300</Speed>
+			<Damage>250</Damage>
+			<LifetimeMS>200</LifetimeMS>
+		</Projectile>
+		<FameBonus>6</FameBonus>
+		<Origin>Tarnished Bow</Origin>
+	</Object>
+	<Object type="0x7419" id="Soulpiercer Shot">
+		<Class>Projectile</Class>
+		<Texture>
+			<File>ArtifactWeaponsProjectiles</File>
+			<Index>0x20</Index>
+		</Texture>
+		<AngleCorrection>1</AngleCorrection>
+	</Object>
+	<Object type="0x7416" id="Time Loop">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ArtifactWeapons</File>
+			<Index>0x21</Index>
+		</Texture>
+		<SlotType>3</SlotType>
+		<TierType>Artifact</TierType>
+		<Description>“The sooner the later” - A very wise man</Description>
+		<ActivateOnEquip stat="112" amount="10">IncrementStat</ActivateOnEquip> // MGT
+		<ActivateOnEquip stat="114" amount="20">IncrementStat</ActivateOnEquip> // LCK
+		<RateOfFire>0.8</RateOfFire>
+		<Sound>weapon/newsounds/lightbow</Sound>
+		<OldSound>weapon/newsounds/lightbowshoot</OldSound>
+		<Projectile>
+			<ObjectId>TLoop Shot</ObjectId>
+			<Speed>100</Speed>
+			<MinDamage>200</MinDamage>
+			<MaxDamage>450</MaxDamage>
+			<LifetimeMS>750</LifetimeMS>
+			<ArmorPiercing/>
+			<Boomerang/>
+		</Projectile>
+		<FameBonus>6</FameBonus>
+		<Origin>Tarnished Bow</Origin>
+	</Object>
+	<Object type="0x7418" id="TLoop Shot">
+		<Class>Projectile</Class>
+		<Texture>
+			<File>ArtifactWeaponsProjectiles</File>
+			<Index>0x21</Index>
+		</Texture>
+		<AngleCorrection>1</AngleCorrection>
+	</Object>
+	<Object type="0x7101" id="Wrath of the Hive">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ArtifactWeapons</File>
+			<Index>0x22</Index>
+		</Texture>
+		<SlotType>3</SlotType>
+		<TierType>Artifact</TierType>
+		<Description>This might sting a bit.</Description>
+		<ActivateOnEquip stat="20" amount="5">IncrementStat</ActivateOnEquip> // ATK
+		<RateOfFire>0.75</RateOfFire>
+		<Sound>weapon/newsounds/lightbow</Sound>
+		<OldSound>weapon/newsounds/lightbowshoot</OldSound>
+		<Projectile>
+			<ObjectId>WHive Shot</ObjectId>
+			<Speed>100</Speed>
+			<MinDamage>370</MinDamage>
+			<MaxDamage>450</MaxDamage>
+			<LifetimeMS>700</LifetimeMS>
+		</Projectile>
+		<FameBonus>6</FameBonus>
+		<Origin>Tarnished Bow</Origin>
+	</Object>
+	<Object type="0x7118" id="WHive Shot">
+		<Class>Projectile</Class>
+		<Texture>
+			<File>ArtifactWeaponsProjectiles</File>
+			<Index>0x22</Index>
+		</Texture>
+		<AngleCorrection>1</AngleCorrection>
+	</Object>
+	<Object type="0x7100" id="Silverstring">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ArtifactWeapons</File>
+			<Index>0x23</Index>
+		</Texture>
+		<SlotType>3</SlotType>
+		<TierType>Artifact</TierType>
+		<Description>An elven longbow designed from the branch of an erdtree, it still pulsates with life.</Description>
+		<ActivateOnEquip stat="22" amount="10">IncrementStat</ActivateOnEquip>// SPD
+		<ActivateOnEquip stat="26" amount="5">IncrementStat</ActivateOnEquip>// VIT
+		<ActivateOnEquip stat="27" amount="5">IncrementStat</ActivateOnEquip>// WIS
+		<RateOfFire>0.83</RateOfFire>
+		<Sound>weapon/newsounds/lightbow</Sound>
+		<OldSound>weapon/newsounds/lightbowshoot</OldSound>
+		<NumProjectiles>2</NumProjectiles>
+		<Projectile>
+			<ObjectId>Silverstring Shot</ObjectId>
+			<Speed>100</Speed>
+			<MinDamage>140</MinDamage>
+			<MaxDamage>170</MaxDamage>
+			<LifetimeMS>610</LifetimeMS>
+			<ArmorPiercing/>
+		</Projectile>
+		<FameBonus>6</FameBonus>
+		<Origin>Tarnished Bow</Origin>
+	</Object>
+	<Object type="0x7117" id="Silverstring Shot">
+		<Class>Projectile</Class>
+		<Texture>
+			<File>ArtifactWeaponsProjectiles</File>
+			<Index>0x23</Index>
+		</Texture>
+		<AngleCorrection>1</AngleCorrection>
+	</Object>
+	<Object type="0x7099" id="Starcrusher">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ArtifactWeapons</File>
+			<Index>0x24</Index>
+		</Texture>
+		<SlotType>3</SlotType>
+		<TierType>Artifact</TierType>
+		<Description>Originally a mining applicance, turns out it's much more effective in other fields.</Description>
+		<RateOfFire>0.6</RateOfFire>
+		<Sound>weapon/newsounds/lightbow</Sound>
+		<OldSound>weapon/newsounds/lightbow</OldSound>
+		<Projectile>
+			<ObjectId>Starcrusher Shot</ObjectId>
+			<Speed>100</Speed>
+			<Damage>500</Damage>
+			<LifetimeMS>520</LifetimeMS>
+		</Projectile>
+		<FameBonus>6</FameBonus>
+		<Origin>Tarnished Bow</Origin>
+	</Object>
+	<Object type="0x7116" id="Starcrusher Shot">
+		<Class>Projectile</Class>
+		<Texture>
+			<File>ArtifactWeaponsProjectiles</File>
+			<Index>0x24</Index>
+		</Texture>
+		<AngleCorrection>1</AngleCorrection>
+	</Object>
+	<!-- #endregion -->
+	<!-- #region --> // Daggers
+	<Object type="0x7178" id="Forest's Whisper">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ArtifactWeapons</File>
+			<Index>0x40</Index>
+		</Texture>
+		<SlotType>2</SlotType>
+		<TierType>Artifact</TierType>
+		<Description>A faint glow guides your path under the roof of leaves.</Description>
+		<RateOfFire>1</RateOfFire>
+		<Sound>weapon/newsounds/lightdagger</Sound>
+		<OldSound>weapon/newsounds/lightdaggerswing</OldSound>
+		<Projectile>
+			<ObjectId>FWhisper Shot</ObjectId>
+			<Speed>100</Speed>
+			<MinDamage>240</MinDamage>
+			<MaxDamage>320</MaxDamage>
+			<LifetimeMS>660</LifetimeMS>
+			<ArmorPiercing/>
+		</Projectile>
+		<FameBonus>6</FameBonus>
+		<Origin>Tarnished Dagger</Origin>
+	</Object>
+	<Object type="0x7161" id="FWhisper Shot">
+		<Class>Projectile</Class>
+		<Texture>
+			<File>ArtifactWeaponsProjectiles</File>
+			<Index>0x40</Index>
+		</Texture>
+		<AngleCorrection>1</AngleCorrection>
+	</Object>
+	<Object type="0x7043" id="Wraith's Sorrow">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ArtifactWeapons</File>
+			<Index>0x41</Index>
+		</Texture>
+		<SlotType>2</SlotType>
+		<TierType>Artifact</TierType>
+		<Description>An ethereal shackle of a banshee, sometimes faint murmurs can be heard from it.</Description>
+		<ActivateOnEquip stat="0" amount="75">IncrementStat</ActivateOnEquip> // HP
+		<RateOfFire>1.27</RateOfFire>
+		<Sound>weapon/newsounds/lightdagger</Sound>
+		<OldSound>weapon/newsounds/lightdaggerswing</OldSound>
+		<NumProjectiles>2</NumProjectiles>
+		<Projectile>
+			<ObjectId>WSorrow Shot</ObjectId>
+			<Speed>100</Speed>
+			<MinDamage>120</MinDamage>
+			<MaxDamage>1140</MaxDamage>
+			<LifetimeMS>500</LifetimeMS>
+			<CondChance effect="Deficient" chance="3" duration="3"/>
+		</Projectile>
+		<FameBonus>6</FameBonus>
+		<Origin>Tarnished Dagger</Origin>
+	</Object>
+	<Object type="0x7163" id="WSorrow Shot">
+		<Class>Projectile</Class>
+		<Texture>
+			<File>ArtifactWeaponsProjectiles</File>
+			<Index>0x41</Index>
+		</Texture>
+		<AngleCorrection>1</AngleCorrection>
+	</Object>
+	<Object type="0x7042" id="Venomous Blade">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ArtifactWeapons</File>
+			<Index>0x42</Index>
+		</Texture>
+		<SlotType>2</SlotType>
+		<TierType>Artifact</TierType>
+		<Description>The blade is magically imbued with venom, the method they used to infuse the blade must be why the blade is leaking.</Description>
+		<ActivateOnEquip stat="28" amount="10">IncrementStat</ActivateOnEquip> // DEX
+		<RateOfFire>1.05</RateOfFire>
+		<Sound>weapon/newsounds/lightdagger</Sound>
+		<OldSound>weapon/newsounds/lightdaggerswing</OldSound>
+		<Projectile>
+			<ObjectId>VBlade Shot</ObjectId>
+			<Speed>100</Speed>
+			<MinDamage>240</MinDamage>
+			<MaxDamage>330</MaxDamage>
+			<LifetimeMS>700</LifetimeMS>
+		</Projectile>
+		<FameBonus>6</FameBonus>
+		<Origin>Tarnished Dagger</Origin>
+	</Object>
+	<Object type="0x7162" id="VBlade Shot">
+		<Class>Projectile</Class>
+		<Texture>
+			<File>ArtifactWeaponsProjectiles</File>
+			<Index>0x42</Index>
+		</Texture>
+		<AngleCorrection>1</AngleCorrection>
+	</Object>
+	<Object type="0x7249" id="Spinal Scourge">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ArtifactWeapons</File>
+			<Index>0x43</Index>
+		</Texture>
+		<SlotType>2</SlotType>
+		<TierType>Artifact</TierType>
+		<Description>Fashioned out of various vertebra, every strike feels unnerving to the bone.</Description>
+		<ActivateOnEquip stat="0" amount="100">IncrementStat</ActivateOnEquip> // HP
+		<ActivateOnEquip stat="26" amount="5">IncrementStat</ActivateOnEquip> // VIT
+		<Steal type="life" amount="2"/>
+		<RateOfFire>1.15</RateOfFire>
+		<Sound>weapon/newsounds/lightdagger</Sound>
+		<OldSound>weapon/newsounds/lightdaggerswing</OldSound>
+		<Projectile>
+			<ObjectId>SScourge Shot</ObjectId>
+			<Speed>100</Speed>
+			<Damage>230</Damage>
+			<LifetimeMS>530</LifetimeMS>
+			<MultiHit/>
+		</Projectile>
+		<FameBonus>6</FameBonus>
+		<Origin>Tarnished Dagger</Origin>
+	</Object>
+	<Object type="0x61df" id="SScourge Shot">
+		<Class>Projectile</Class>
+		<Texture>
+			<File>ArtifactWeaponsProjectiles</File>
+			<Index>0x43</Index>
+		</Texture>
+		<AngleCorrection>1</AngleCorrection>
+	</Object>
+	<!-- #endregion -->
+	<!-- #region --> // Wands
+	<Object type="0x7717" id="Salamander's Catalyst">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ArtifactWeapons</File>
+			<Index>0x60</Index>
+		</Texture>
+		<SlotType>8</SlotType>
+		<TierType>Artifact</TierType>
+		<Description>There's two sides to being a firebreather, the added risk and the added benefit</Description>
+		<ActivateOnEquip stat="26" amount="10">IncrementStat</ActivateOnEquip> // VIT
+		<Steal type="life" amount="1"/>
+		<Sound>weapon/newsounds/lightwand</Sound>
+		<OldSound>weapon/newsounds/lightwandshoot</OldSound>
+		<RateOfFire>0.72</RateOfFire>
+		<NumProjectiles>3</NumProjectiles>
+		<Projectile>
+			<ObjectId>SCatalyst Shot</ObjectId>
+			<Speed>100</Speed>
+			<LifetimeMS>550</LifetimeMS>
+			<MinDamage>90</MinDamage>
+			<MaxDamage>200</MaxDamage>
+		</Projectile>
+		<FameBonus>6</FameBonus>
+		<Origin>Tarnished Wand</Origin>
+	</Object>
+	<Object type="0x7718" id="SCatalyst Shot">
+		<Class>Projectile</Class>
+		<Texture>
+			<File>ArtifactWeapons</File>
+			<Index>0x60</Index>
+		</Texture>
+		<AngleCorrection>1</AngleCorrection>
+	</Object>
+	<Object type="0x7105" id="Barkweaver">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ArtifactWeapons</File>
+			<Index>0x61</Index>
+		</Texture>
+		<SlotType>8</SlotType>
+		<TierType>Artifact</TierType>
+		<Description>Immense wisdom flows through this cane, it grants its user power mortals couldn't comprehend.</Description>
+		<ActivateOnEquip stat="3" amount="100">IncrementStat</ActivateOnEquip> // MP
+		<Sound>weapon/newsounds/lightwand</Sound>
+		<OldSound>weapon/newsounds/lightwandshoot</OldSound>
+		<RateOfFire>1</RateOfFire>
+		<Projectile>
+			<ObjectId>Bweaver Shot</ObjectId>
+			<Speed>100</Speed>
+			<LifetimeMS>630</LifetimeMS>
+			<MinDamage>275</MinDamage>
+			<MaxDamage>300</MaxDamage>
+			<MultiHit/>
+		</Projectile>
+		<FameBonus>6</FameBonus>
+		<Origin>Tarnished Wand</Origin>
+	</Object>
+	<Object type="0x7122" id="Bweaver Shot">
+		<Class>Projectile</Class>
+		<Texture>
+			<File>ArtifactWeaponsProjectiles</File>
+			<Index>0x61</Index>
+		</Texture>
+		<AngleCorrection>1</AngleCorrection>
+	</Object>
+	<Object type="0x7107" id="Hidden Revelation">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ArtifactWeapons</File>
+			<Index>0x62</Index>
+		</Texture>
+		<SlotType>8</SlotType>
+		<TierType>Artifact</TierType>
+		<Description>A wand given to the high ranking archmages of the Shrouded Archives.</Description>
+		<Sound>weapon/newsounds/lightwand</Sound>
+		<OldSound>weapon/newsounds/lightwandshoot</OldSound>
+		<RateOfFire>0.85</RateOfFire>
+		<Projectile>
+			<ObjectId>HRevelation Shot</ObjectId>
+			<Speed>100</Speed>
+			<MinDamage>300</MinDamage>
+			<MaxDamage>420</MaxDamage>
+			<LifetimeMS>630</LifetimeMS>
+		</Projectile>
+		<FameBonus>6</FameBonus>
+		<Origin>Tarnished Wand</Origin>
+	</Object>
+	<Object type="0x7124" id="HRevelation Shot">
+		<Class>Projectile</Class>
+		<Texture>
+			<File>ArtifactWeaponsProjectiles</File>
+			<Index>0x62</Index>
+		</Texture>
+		<AngleCorrection>1</AngleCorrection>
+	</Object>
+	<Object type="0x7106" id="Scholar Wand">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ArtifactWeapons</File>
+			<Index>0x63</Index>
+		</Texture>
+		<SlotType>8</SlotType>
+		<TierType>Artifact</TierType>
+		<Description>Usually given to young students as a magic catalyst to learn with, but is nonetheless quite powerful.</Description>
+		<Sound>weapon/newsounds/lightwand</Sound>
+		<OldSound>weapon/newsounds/lightwandshoot</OldSound>
+		<RateOfFire>0.75</RateOfFire>
+		<Projectile>
+			<ObjectId>Scholar Shot</ObjectId>
+			<Speed>100</Speed>
+			<Damage>185</Damage>
+			<LifetimeMS>800</LifetimeMS>
+			<ArmorPiercing/>
+		</Projectile>
+		<FameBonus>6</FameBonus>
+		<Origin>Tarnished Wand</Origin>
+	</Object>
+	<Object type="0x7123" id="Scholar Shot">
+		<Class>Projectile</Class>
+		<Texture>
+			<File>ArtifactWeaponsProjectiles</File>
+			<Index>0x63</Index>
+		</Texture>
+		<AngleCorrection>1</AngleCorrection>
+	</Object>
+	<Object type="0x46d7" id="Wildfire">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ArtifactWeapons</File>
+			<Index>0x64</Index>
+		</Texture>
+		<SlotType>8</SlotType>
+		<TierType>Artifact</TierType>
+		<Description>The unstoppable hunger of nature itself.</Description>
+		<ActivateOnEquip stat="26" amount="10">IncrementStat</ActivateOnEquip> // ATK
+		<ActivateOnEquip stat="27" amount="10">IncrementStat</ActivateOnEquip> // DEX
+		<Sound>weapon/newsounds/lightwand</Sound>
+		<OldSound>weapon/newsounds/lightwandshoot</OldSound>
+		<RateOfFire>1.55</RateOfFire>
+		<Projectile>
+			<ObjectId>Wildfire Shot</ObjectId>
+			<Speed>100</Speed>
+			<MinDamage>125</MinDamage>
+			<MaxDamage>235</MaxDamage>
+			<LifetimeMS>660</LifetimeMS>
+		</Projectile>
+		<FameBonus>6</FameBonus>
+		<Origin>Tarnished Wand</Origin>
+	</Object>
+	<Object type="0x46d6" id="Wildfire Shot">
+		<Class>Projectile</Class>
+		<Texture>
+			<File>ArtifactWeaponsProjectiles</File>
+			<Index>0x64</Index>
+		</Texture>
+		<AngleCorrection>1</AngleCorrection>
+	</Object>
+	<!-- #endregion -->
+	<!-- #region --> // Staves
+	<Object type="0x45d3" id="Staff of Radiant Power">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ArtifactWeapons</File>
+			<Index>0x80</Index>
+		</Texture>
+		<SlotType>8</SlotType>
+		<TierType>Artifact</TierType>
+		<Description>Unleashes a magical force field that shreds even the toughest of cuirasses.</Description>
+		<Sound>weapon/newsounds/lightstaff</Sound>
+		<OldSound>weapon/newsounds/lightstaffshoot</OldSound>
+		<RateOfFire>1</RateOfFire>
+		<NumProjectiles>2</NumProjectiles>
+		<Projectile>
+			<ObjectId>SRPower Shot</ObjectId>
+			<Size>100</Size>
+			<Speed>100</Speed>
+			<MinDamage>140</MinDamage>
+			<MaxDamage>150</MaxDamage>
+			<LifetimeMS>680</LifetimeMS>
+			<ArmorPiercing/>
+		</Projectile>
+		<FameBonus>6</FameBonus>
+		<Origin>Tarnished Staff</Origin>
+	</Object>
+	<Object type="0x45d2" id="SRPower Shot">
+		<Class>Projectile</Class>
+		<Texture>
+			<File>ArtifactWeaponsProjectiles</File>
+			<Index>0x80</Index>
+		</Texture>
+		<AngleCorrection>1</AngleCorrection>
+	</Object>
+	<Object type="0x7103" id="Necrotic Touch">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ArtifactWeapons</File>
+			<Index>0x81</Index>
+		</Texture>
+		<SlotType>8</SlotType>
+		<TierType>Artifact</TierType>
+		<Description>A single contact, that's all it takes to wither even the mightiest of foes.</Description>
+		<Sound>weapon/newsounds/lightstaff</Sound>
+		<OldSound>weapon/newsounds/lightstaffshoot</OldSound>
+		<RateOfFire>0.49</RateOfFire>
+		<Projectile>
+			<ObjectId>NTouch Shot</ObjectId>
+			<Speed>100</Speed>
+			<MinDamage>400</MinDamage>
+			<MaxDamage>800</MaxDamage>
+			<LifetimeMS>650</LifetimeMS>
+		</Projectile>
+		<FameBonus>6</FameBonus>
+		<Origin>Tarnished Staff</Origin>
+	</Object>
+	<Object type="0x7120" id="NTouch Shot">
+		<Class>Projectile</Class>
+		<Texture>
+			<File>ArtifactWeaponsProjectiles</File>
+			<Index>0x81</Index>
+		</Texture>
+		<AngleCorrection>1</AngleCorrection>
+	</Object>
+	<Object type="0x7102" id="Permanence">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ArtifactWeapons</File>
+			<Index>0x82</Index>
+		</Texture>
+		<SlotType>8</SlotType>
+		<TierType>Artifact</TierType>
+		<Description>"In eternity, may we find reason" - Lareth ancestor of the void.</Description>
+		<Sound>weapon/newsounds/lightstaff</Sound>
+		<OldSound>weapon/newsounds/lightstaffshoot</OldSound>
+		<RateOfFire>0.93</RateOfFire>
+		<NumProjectiles>4</NumProjectiles>
+		<Projectile>
+			<ObjectId>Permanence Shot</ObjectId>
+			<Speed>100</Speed>
+			<Damage>100</Damage>
+			<LifetimeMS>670</LifetimeMS>
+		</Projectile>
+		<FameBonus>6</FameBonus>
+		<Origin>Tarnished Staff</Origin>
+	</Object>
+	<Object type="0x7119" id="Permanence Shot">
+		<Class>Projectile</Class>
+		<Texture>
+			<File>ArtifactWeaponsProjectiles</File>
+			<Index>0x82</Index>
+		</Texture>
+		<AngleCorrection>1</AngleCorrection>
+	</Object>
+	<Object type="0x47f3" id="Jungle's Fury">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ArtifactWeapons</File>
+			<Index>0x83</Index>
+		</Texture>
+		<SlotType>8</SlotType>
+		<TierType>Artifact</TierType>
+		<Description>The vines bend and shift, the trees stretch their roots, the animals roar of war. Beware, mother has had enough.</Description>
+		<ActivateOnEquip stat="3" amount="100">IncrementStat</ActivateOnEquip> // MP
+		<Steal type="mana" amount="1"/>
+		<Sound>weapon/newsounds/lightstaff</Sound>
+		<OldSound>weapon/newsounds/lightstaffshoot</OldSound>
+		<RateOfFire>0.78</RateOfFire>
+		<Projectile>
+			<ObjectId>JFury Shot</ObjectId>
+			<Speed>100</Speed>
+			<MinDamage>120</MinDamage>
+			<MaxDamage>245</MaxDamage>
+			<LifetimeMS>620</LifetimeMS>
+		</Projectile>
+		<FameBonus>6</FameBonus>
+		<Origin>Tarnished Staff</Origin>
+	</Object>
+	<Object type="0x47f2" id="JFury Shot">
+		<Class>Projectile</Class>
+		<Texture>
+			<File>ArtifactWeaponsProjectiles</File>
+			<Index>0x83</Index>
+		</Texture>
+		<AngleCorrection>1</AngleCorrection>
+	</Object>
+	<Object type="0x7104" id="Dragon's Gold n Sapphire">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ArtifactWeapons</File>
+			<Index>0x84</Index>
+		</Texture>
+		<SlotType>8</SlotType>
+		<TierType>Artifact</TierType>
+		<Description>This very beautiful sapphire plated with gold was stowed away, deep in the dragon caverns, hidden away inside a gold plated chest.</Description>
+		<Sound>weapon/newsounds/lightstaff</Sound>
+		<OldSound>weapon/newsounds/lightstaffshoot</OldSound>
+		<RateOfFire>1.05</RateOfFire>
+		<Projectile>
+			<ObjectId>DGSapphire Shot</ObjectId>
+			<Speed>100</Speed>
+			<MinDamage>285</MinDamage>
+			<MaxDamage>290</MaxDamage>
+			<LifetimeMS>720</LifetimeMS>
+		</Projectile>
+		<FameBonus>6</FameBonus>
+		<Origin>Tarnished Staff</Origin>
+	</Object>
+	<Object type="0x7121" id="DGSapphire Shot">
+		<Class>Projectile</Class>
+		<Texture>
+			<File>ArtifactWeaponsProjectiles</File>
+			<Index>0x84</Index>
+		</Texture>
+		<AngleCorrection>1</AngleCorrection>
+	</Object>
+	<Object type="0x7248" id="Mistpiercer">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ArtifactWeapons</File>
+			<Index>0x85</Index>
+		</Texture>
+		<SlotType>8</SlotType>
+		<TierType>Artifact</TierType>
+		<Description>Be it the darkest of nights, the thickest of fogs, the eeriest of corridors. This light can always be seen.</Description>
+		<Sound>weapon/newsounds/lightstaff</Sound>
+		<OldSound>weapon/newsounds/lightstaffshoot</OldSound>
+		<RateOfFire>1</RateOfFire>
+		<NumProjectiles>3</NumProjectiles>
+		<Projectile>
+			<ObjectId>MPiercer Shot</ObjectId>
+			<Speed>100</Speed>
+			<Damage>95</Damage>
+			<LifetimeMS>560</LifetimeMS>
+		</Projectile>
+		<FameBonus>6</FameBonus>
+		<Origin>Tarnished Staff</Origin>
+	</Object>
+	<Object type="0x703c" id="MPiercer Shot">
+		<Class>Projectile</Class>
+		<Texture>
+			<File>ArtifactWeaponsProjectiles</File>
+			<Index>0x85</Index>
+		</Texture>
+		<AngleCorrection>1</AngleCorrection>
+	</Object>
+	<!-- #endregion -->
+	<!-- #region --> // Katanas
+	<Object type="0x7110" id="Honor's Legacy">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ArtifactWeapons</File>
+			<Index>0xa0</Index>
+		</Texture>
+		<SlotType>24</SlotType>
+		<TierType>Artifact</TierType>
+		<Description>Once wielded by a lonely wanderer, once by a revered ronin, once by a noble lord. All of whom had the same last wish, "Return the blade, to its rightful place among the mountains.".</Description>
+		<RateOfFire>0.9</RateOfFire>
+		<Sound>weapon/newsounds/lightkatana</Sound>
+		<OldSound>weapon/newsounds/lightkatana</OldSound>
+		<Projectile>
+			<ObjectId>HLegacy Shot</ObjectId>
+			<Speed>100</Speed>
+			<LifetimeMS>620</LifetimeMS>
+			<MinDamage>295</MinDamage>
+			<MaxDamage>370</MaxDamage>
+		</Projectile>
+		<FameBonus>6</FameBonus>
+		<Origin>Tarnished Katana</Origin>
+	</Object>
+	<Object type="0x7127" id="HLegacy Shot">
+		<Class>Projectile</Class>
+		<Texture>
+			<File>ArtifactWeaponsProjectiles</File>
+			<Index>0xa0</Index>
+		</Texture>
+		<AngleCorrection>1</AngleCorrection>
+	</Object>
+	<Object type="0x7108" id="Wanderlust">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ArtifactWeapons</File>
+			<Index>0xa1</Index>
+		</Texture>
+		<SlotType>24</SlotType>
+		<TierType>Artifact</TierType>
+		<Description>The sharpened fang of a sandworm fitted into an elderoak handle with nordic inscriptions in it. a relic of many places focused into one purpose.</Description>
+		<ActivateOnEquip stat="22" amount="5">IncrementStat</ActivateOnEquip> // SPD
+		<RateOfFire>1.55</RateOfFire>
+		<Sound>weapon/newsounds/lightkatana</Sound>
+		<OldSound>weapon/newsounds/lightkatana</OldSound>
+		<Projectile>
+			<ObjectId>Wanderlust Shot</ObjectId>
+			<Speed>100</Speed>
+			<LifetimeMS>620</LifetimeMS>
+			<MinDamage>160</MinDamage>
+			<MaxDamage>250</MaxDamage>
+		</Projectile>
+		<FameBonus>6</FameBonus>
+		<Origin>Tarnished Katana</Origin>
+	</Object>
+	<Object type="0x7125" id="Wanderlust Shot">
+		<Class>Projectile</Class>
+		<Texture>
+			<File>ArtifactWeaponsProjectiles</File>
+			<Index>0xa1</Index>
+		</Texture>
+		<AngleCorrection>1</AngleCorrection>
+	</Object>
+	<Object type="0x7109" id="Oath of the Underworld">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ArtifactWeapons</File>
+			<Index>0xa2</Index>
+		</Texture>
+		<SlotType>24</SlotType>
+		<TierType>Artifact</TierType>
+		<Description>A concept so wicked, so blasphemous to the core that it has materialized itself in a physical form.</Description>
+		<RateOfFire>0.95</RateOfFire>
+		<Sound>weapon/newsounds/lightkatana</Sound>
+		<OldSound>weapon/newsounds/lightkatana</OldSound>
+		<Projectile>
+			<ObjectId>OUnderworld Shot</ObjectId>
+			<Speed>100</Speed>
+			<LifetimeMS>720</LifetimeMS>
+			<MinDamage>280</MinDamage>
+			<MaxDamage>380</MaxDamage>
+			<Boomerang/>
+		</Projectile>
+		<FameBonus>6</FameBonus>
+		<Origin>Tarnished Katana</Origin>
+	</Object>
+	<Object type="0x7126" id="OUnderworld Shot">
+		<Class>Projectile</Class>
+		<Texture>
+			<File>ArtifactWeaponsProjectiles</File>
+			<Index>0xa2</Index>
+		</Texture>
+		<AngleCorrection>1</AngleCorrection>
+	</Object>
+	<Object type="0x521c" id="Ravager">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ArtifactWeapons</File>
+			<Index>0xa3</Index>
+		</Texture>
+		<SlotType>24</SlotType>
+		<TierType>Artifact</TierType>
+		<Description>Bathed in blood, treated in void-oil, sharpened on obsidian, ready for war.</Description>
+		<Steal type="life" amount="1"/>
+		<Sound>weapon/newsounds/lightkatana</Sound>
+		<OldSound>weapon/newsounds/lightkatana</OldSound>
+		<RateOfFire>1</RateOfFire>
+		<NumProjectiles>4</NumProjectiles>
+		<Projectile>
+			<ObjectId>Ravager Shot</ObjectId>
+			<Speed>100</Speed>
+			<MinDamage>85</MinDamage>
+			<MaxDamage>95</MaxDamage>
+			<LifetimeMS>400</LifetimeMS>
+		</Projectile>
+		<FameBonus>6</FameBonus>
+		<Origin>Tarnished Katana</Origin>
+	</Object>
+	<Object type="0x521d" id="Ravager Shot">
+		<Class>Projectile</Class>
+		<Texture>
+			<File>ArtifactWeaponsProjectiles</File>
+			<Index>0xa3</Index>
+		</Texture>
+		<AngleCorrection>1</AngleCorrection>
+	</Object>
+	<Object type="0x69d1" id="Soulmarch">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ArtifactWeapons</File>
+			<Index>0xa4</Index>
+		</Texture>
+		<SlotType>24</SlotType>
+		<TierType>Artifact</TierType>
+		<Description>The reaper calls for the lost souls of the night, this weapon serves as their beacon.</Description>
+		<ActivateOnEquip stat="0" amount="100">IncrementStat</ActivateOnEquip> // HP
+		<ActivateOnEquip stat="26" amount="5">IncrementStat</ActivateOnEquip> // VIT
+		<Sound>weapon/newsounds/lightkatana</Sound>
+		<OldSound>weapon/newsounds/lightkatana</OldSound>
+		<RateOfFire>1</RateOfFire>
+		<Projectile>
+			<ObjectId>SMarch Shot</ObjectId>
+			<Speed>100</Speed>
+			<MinDamage>275</MinDamage>
+			<MaxDamage>325</MaxDamage>
+			<LifetimeMS>500</LifetimeMS>
+			<MultiHit/>
+			<Size>100</Size>
+			<CondChance effect="Fragile" chance="1.8" duration="2.5"/>
+		</Projectile>
+		<FameBonus>6</FameBonus>
+		<Origin>Tarnished Katana</Origin>
+	</Object>
+	<Object type="0x69d2" id="SMarch Shot">
+		<Class>Projectile</Class>
+		<Texture>
+			<File>ArtifactWeaponsProjectiles</File>
+			<Index>0xa4</Index>
+		</Texture>
+		<AngleCorrection>1</AngleCorrection>
+	</Object>
+	<!-- #endregion -->
+	<!-- #region --> // Lances
+	<Object type="0x7082" id="Gilded Trident">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ArtifactWeapons</File>
+			<Index>0xc0</Index>
+		</Texture>
+		<SlotType>29</SlotType>
+		<TierType>Artifact</TierType>
+		<Description>A traditional weapon, once wielded by the mermen in the sea battle of the great gods.</Description>
+		<Sound>weapon/newsounds/lightlance</Sound>
+		<OldSound>weapon/newsounds/lightlance</OldSound>
+		<RateOfFire>0.9</RateOfFire>
+		<NumProjectiles>2</NumProjectiles>
+		<Projectile>
+			<ObjectId>GTrident Shot</ObjectId>
+			<Speed>100</Speed>
+			<MinDamage>140</MinDamage>
+			<MaxDamage>220</MaxDamage>
+			<LifetimeMS>560</LifetimeMS>
+		</Projectile>
+		<FameBonus>6</FameBonus>
+		<Origin>Tarnished Lance</Origin>
+	</Object>
+	<Object type="0x7112" id="GTrident Shot">
+		<Class>Projectile</Class>
+		<Texture>
+			<File>ArtifactWeaponsProjectiles</File>
+			<Index>0xc0</Index>
+		</Texture>
+		<AngleCorrection>1</AngleCorrection>
+	</Object>
+	<Object type="0x7083" id="Vibranium Piercer">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ArtifactWeapons</File>
+			<Index>0xc1</Index>
+		</Texture>
+		<SlotType>29</SlotType>
+		<TierType>Artifact</TierType>
+		<Description>Made of an ancient reinforced metal, unable to be broken, relish in it's strength.</Description>
+		<Sound>weapon/newsounds/lightlance</Sound>
+		<OldSound>weapon/newsounds/lightlance</OldSound>
+		<RateOfFire>1</RateOfFire>
+		<Projectile>
+			<ObjectId>VPiercer Shot</ObjectId>
+			<Speed>100</Speed>
+			<MinDamage>285</MinDamage>
+			<MaxDamage>300</MaxDamage>
+			<LifetimeMS>440</LifetimeMS>
+			<ArmorPiercing/>
+		</Projectile>
+		<FameBonus>6</FameBonus>
+		<Origin>Tarnished Lance</Origin>
+	</Object>
+	<Object type="0x7113" id="VPiercer Shot">
+		<Class>Projectile</Class>
+		<Texture>
+			<File>ArtifactWeaponsProjectiles</File>
+			<Index>0xc1</Index>
+		</Texture>
+		<AngleCorrection>1</AngleCorrection>
+	</Object>
+	<Object type="0x7081" id="Pins And Needles">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ArtifactWeapons</File>
+			<Index>0xc2</Index>
+		</Texture>
+		<SlotType>29</SlotType>
+		<TierType>Artifact</TierType>
+		<Description>A prick you cannot remove the feeling of.</Description>
+		<Sound>weapon/newsounds/lightlance</Sound>
+		<OldSound>weapon/newsounds/lightlance</OldSound>
+		<RateOfFire>0.87</RateOfFire>
+		<Projectile>
+			<ObjectId>PNeedles Shot</ObjectId>
+			<Speed>100</Speed>
+			<MinDamage>300</MinDamage>
+			<MaxDamage>400</MaxDamage>
+			<LifetimeMS>480</LifetimeMS>
+		</Projectile>
+		<FameBonus>6</FameBonus>
+		<Origin>Tarnished Lance</Origin>
+	</Object>
+	<Object type="0x7111" id="PNeedles Shot">
+		<Class>Projectile</Class>
+		<Texture>
+			<File>ArtifactWeaponsProjectiles</File>
+			<Index>0xc2</Index>
+		</Texture>
+	</Object>
+	<!-- #endregion -->
+	<!-- #region --> // Blades
+	<Object type="0x7179" id="Calamity N Cataclysm">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ArtifactWeapons</File>
+			<Index>0xe0</Index>
+		</Texture>
+		<TierType>Artifact</TierType>
+		<SlotType>34</SlotType>
+		<Description>Brothers inseparable, in their wake the world is left in ruin.</Description>
+		<Sound>weapon/newsounds/lightblades</Sound>
+		<OldSound>weapon/newsounds/lightblades</OldSound>
+		<RateOfFire>0.97</RateOfFire>
+		<NumProjectiles>2</NumProjectiles>
+		<Projectile>
+			<ObjectId>CCataclysm Shots</ObjectId>
+			<Speed>100</Speed>
+			<Damage>170</Damage>
+			<LifetimeMS>550</LifetimeMS>
+		</Projectile>
+		<FameBonus>6</FameBonus>
+		<Origin>Tarnished Blades</Origin>
+	</Object>
+	<Object type="0x7166" id="CCataclysm Shots">
+		<Class>Projectile</Class>
+		<RandomTexture>
+			<Texture>
+				<File>ArtifactWeaponsProjectiles</File>
+				<Index>0xe0</Index>
+			</Texture>
+			<Texture>
+				<File>ArtifactWeaponsProjectiles</File>
+				<Index>0xe1</Index>
+			</Texture>
+		</RandomTexture>
+		<AngleCorrection>1</AngleCorrection>
+	</Object>
+	<Object type="0x7045" id="Bloodstained Antiquities">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ArtifactWeapons</File>
+			<Index>0xe1</Index>
+		</Texture>
+		<SlotType>34</SlotType>
+		<TierType>Artifact</TierType>
+		<Description>These blades may be old, but not yet outdated.</Description>
+		<Sound>weapon/newsounds/lightblades</Sound>
+		<OldSound>weapon/newsounds/lightblades</OldSound>
+		<RateOfFire>1.2</RateOfFire>
+		<Projectile>
+			<ObjectId>BAntiques Shots</ObjectId>
+			<MinDamage>225</MinDamage>
+			<MaxDamage>295</MaxDamage>
+			<Speed>100</Speed>
+			<LifetimeMS>550</LifetimeMS>
+		</Projectile>
+		<FameBonus>6</FameBonus>
+		<Origin>Tarnished Blades</Origin>
+	</Object>
+	<Object type="0x7165" id="BAntiques Shots">
+		<Class>Projectile</Class>
+		<Texture>
+			<File>ArtifactWeaponsProjectiles</File>
+			<Index>0xe2</Index>
+		</Texture>
+		<AngleCorrection>1</AngleCorrection>
+	</Object>
+	<Object type="0x7044" id="Fan of Flames">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ArtifactWeapons</File>
+			<Index>0xe2</Index>
+		</Texture>
+		<SlotType>34</SlotType>
+		<TierType>Artifact</TierType>
+		<Description>Made of phoenix feathers, every swing incinerates everything in sight.</Description>
+		<Sound>weapon/newsounds/lightblades</Sound>
+		<OldSound>weapon/newsounds/lightblades</OldSound>
+		<RateOfFire>1</RateOfFire>
+		<NumProjectiles>3</NumProjectiles>
+		<Projectile>
+			<ObjectId>FFlames Shot</ObjectId>
+			<Speed>100</Speed>
+			<Damage>115</Damage>
+			<LifetimeMS>550</LifetimeMS>
+			<Size>100</Size>
+		</Projectile>
+		<FameBonus>6</FameBonus>
+		<Origin>Tarnished Blades</Origin>
+	</Object>
+	<Object type="0x7164" id="FFlames Shot">
+		<Class>Projectile</Class>
+		<Texture>
+			<File>ArtifactWeaponsProjectiles</File>
+			<Index>0xe3</Index>
+		</Texture>
+		<AngleCorrection>1</AngleCorrection>
+	</Object>
+	<!-- #endregion -->
+	<!-- #region --> // Cloaks
+	<Object type="0x7095" id="Twilight's Embrace">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ArtifactAbilities</File>
+			<Index>0x00</Index>
+		</Texture>
+		<SlotType>13</SlotType>
+		<TierType>Artifact</TierType>
+		<Description>"Hearest thou the bell? It tolls the end of thy fate."</Description>
+		<ActivateOnEquip stat="27" amount="10">IncrementStat</ActivateOnEquip> // WIS
+		<Sound>ability/ability_use</Sound>
+		<OldSound>ability/ability_use</OldSound>
+		<Usable/>
+		<MpCost>130</MpCost>
+		<Cooldown>4.5</Cooldown>
+		<Activate effect="Fury" duration="1.5">ConditionEffectSelf</Activate>
+		<Activate effect="Strengthen" duration="2.5">ConditionEffectSelf</Activate>
+		<Activate effect="Invisible" duration="4">ConditionEffectSelf</Activate>
+		<FameBonus>6</FameBonus>
+		<Origin>Tarnished Cloak</Origin>
+	</Object>
+	<Object type="0x7094" id="Faithful Gowns">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ArtifactAbilities</File>
+			<Index>0x01</Index>
+		</Texture>
+		<SlotType>13</SlotType>
+		<TierType>Artifact</TierType>
+		<Description>"You simply have to believe in it, like this... see? or rather, not see?"</Description>
+		<ActivateOnEquip stat="22" amount="15">IncrementStat</ActivateOnEquip> // SPD
+		<Sound>ability/ability_use</Sound>
+		<OldSound>ability/ability_use</OldSound>
+		<Usable/>
+		<MpCost>115</MpCost>
+		<Cooldown>5.5</Cooldown>
+		<Activate effect="Invisible" duration="5">ConditionEffectSelf</Activate>
+		<Activate effect="Fury" duration="2">ConditionEffectSelf</Activate>
+		<Activate effect="Swift" duration="3">ConditionEffectSelf</Activate>
+		<FameBonus>6</FameBonus>
+		<Origin>Tarnished Cloak</Origin>
+	</Object>
+	<!-- #endregion -->
+	<!-- #region --> // Quivers
+	<Object type="0x7185" id="Royal Puncturer">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ArtifactAbilities</File>
+			<Index>0x20</Index>
+		</Texture>
+		<SlotType>15</SlotType>
+		<TierType>Artifact</TierType>
+		<Description>A grand quiver equipped by the noble prince who was known for his great marksmanship.</Description>
+		<Sound>ability/ability_use</Sound>
+		<OldSound>ability/ability_use</OldSound>
+		<Usable/>
+		<Activate>Shoot</Activate>
+		<MpCost>135</MpCost>
+		<Cooldown>1.5</Cooldown>
+		<Activate effect="Fury" duration="3.5">ConditionEffectSelf</Activate>
+		<NumProjectiles>8</NumProjectiles>
+		<Projectile>
+			<ObjectId>RPuncturer Shot</ObjectId>
+			<Speed>100</Speed>
+			<MinDamage>200</MinDamage>
+			<MaxDamage>350</MaxDamage>
+			<LifetimeMS>1000</LifetimeMS>
+			<Size>120</Size>
+			<ConditionEffect duration="2.5">Stunned</ConditionEffect>
+			<MultiHit/>
+			<PassesCover/>
+			<Boomerang/>
+		</Projectile>
+		<FameBonus>6</FameBonus>
+		<Origin>Tarnished Quiver</Origin>
+	</Object>
+	<Object type="0x7169" id="RPuncturer Shot">
+		<Class>Projectile</Class>
+		<Texture>
+			<File>ArtifactAbilityProjectiles</File>
+			<Index>0x00</Index>
+		</Texture>
+		<AngleCorrection>1</AngleCorrection>
+	</Object>
+	<Object type="0x7186" id="Reptilius Quiver">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ArtifactAbilities</File>
+			<Index>0x21</Index>
+		</Texture>
+		<SlotType>15</SlotType>
+		<TierType>Artifact</TierType>
+		<Description>A venomous quiver holding deadly arrows, often equipped among the reptilian soldiers.</Description>
+		<ActivateOnEquip stat="20" amount="5">IncrementStat</ActivateOnEquip> // ATK
+		<ActivateOnEquip stat="121" amount="25">IncrementStat</ActivateOnEquip> // RES
+		<Sound>ability/ability_use</Sound>
+		<OldSound>ability/ability_use</OldSound>
+		<Usable/>
+		<MpCost>125</MpCost>
+		<Cooldown>4.5</Cooldown>
+		<NumProjectiles>4</NumProjectiles>
+		<Projectile>
+			<ObjectId>RQuiver Shot</ObjectId>
+			<Speed>100</Speed>
+			<MinDamage>450</MinDamage>
+			<MaxDamage>550</MaxDamage>
+			<LifetimeMS>1400</LifetimeMS>
+			<Size>150</Size>
+			<ConditionEffect duration="3">Vulnerable</ConditionEffect>
+			<ConditionEffect duration="4.5">Fragile</ConditionEffect>
+			<ConditionEffect duration="3">Exhaust</ConditionEffect>
+			<MultiHit/>
+			<PassesCover/>
+		</Projectile>
+		<Activate>Shoot</Activate>
+		<FameBonus>6</FameBonus>
+		<Origin>Tarnished Quiver</Origin>
+	</Object>
+	<Object type="0x7170" id="RQuiver Shot">
+		<Class>Projectile</Class>
+		<Texture>
+			<File>ArtifactAbilityProjectiles</File>
+			<Index>0x01</Index>
+		</Texture>
+		<AngleCorrection>1</AngleCorrection>
+	</Object>
+	<!-- #endregion -->
+	<!-- #region --> // Spells
+	<Object type="0x7182" id="Imbued Fury">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ArtifactAbilities</File>
+			<Index>0x40</Index>
+		</Texture>
+		<SlotType>11</SlotType>
+		<TierType>Artifact</TierType>
+		<Description>An ancient scroll contained by hatred, once you see what's inside, it consumes you within it.</Description>
+		<ActivateOnEquip stat="112" amount="15">IncrementStat</ActivateOnEquip> // MGT
+		<ActivateOnEquip stat="114" amount="15">IncrementStat</ActivateOnEquip> // LCK
+		<Sound>ability/ability_use</Sound>
+		<OldSound>ability/ability_use</OldSound>
+		<Usable/>
+		<MpCost>110</MpCost>
+		<Cooldown>2.5</Cooldown>
+		<Activate center="mouse">BulletNova</Activate>
+		<Activate effect="Strengthen" duration="2">ConditionEffectSelf</Activate>
+		<Projectile>
+			<ObjectId>IFury Shot</ObjectId>
+			<Speed>100</Speed>
+			<MinDamage>290</MinDamage>
+			<MaxDamage>350</MaxDamage>
+			<LifetimeMS>600</LifetimeMS>
+		</Projectile>
+		<FameBonus>6</FameBonus>
+		<Origin>Tarnished Spell</Origin>
+	</Object>
+	<Object type="0x7167" id="IFury Shot">
+		<Class>Projectile</Class>
+		<Texture>
+			<File>ArtifactAbilityProjectiles</File>
+			<Index>0x20</Index>
+		</Texture>
+		<AngleCorrection>1</AngleCorrection>
+	</Object>
+	<Object type="0x7050" id="Blood's Recall">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ArtifactAbilities</File>
+			<Index>0x41</Index>
+		</Texture>
+		<SlotType>11</SlotType>
+		<TierType>Artifact</TierType>
+		<Description>The more blood the caster drains, the harder it becomes to resist the urge to seek out more victims, risking falling into darkness and losing control.</Description>
+		<ActivateOnEquip stat="0" amount="75">IncrementStat</ActivateOnEquip> // HP
+		<ActivateOnEquip stat="26" amount="10">IncrementStat</ActivateOnEquip> // VIT
+		<Sound>ability/ability_use</Sound>
+		<OldSound>ability/ability_use</OldSound>
+		<Usable/>
+		<MpCost>100</MpCost>
+		<Cooldown>3.5</Cooldown>
+		<Activate effect="Regenerate" duration="2.5" useWisMod="false">ConditionEffectSelf</Activate>
+		<Activate center="mouse">BulletNova</Activate>
+		<Projectile>
+			<ObjectId>BRecall Shot</ObjectId>
+			<Speed>100</Speed>
+			<MinDamage>220</MinDamage>
+			<MaxDamage>300</MaxDamage>
+			<LifetimeMS>600</LifetimeMS>
+		</Projectile>
+		<FameBonus>6</FameBonus>
+		<Origin>Tarnished Spell</Origin>
+	</Object>
+	<Object type="0x7168" id="BRecall Shot">
+		<Class>Projectile</Class>
+		<Texture>
+			<File>ArtifactAbilityProjectiles</File>
+			<Index>0x21</Index>
+		</Texture>
+		<AngleCorrection>1</AngleCorrection>
+	</Object>
+	<!-- #endregion -->
+	<!-- #region --> // Tomes
+	<Object type="0x7192" id="Sticks and Stones">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ArtifactAbilities</File>
+			<Index>0x60</Index>
+		</Texture>
+		<SlotType>4</SlotType>
+		<TierType>Artifact</TierType>
+		<Description>A powerful healing tome that radiates a benevolent aura, empowering and rejuvenating those who are deemed worthy.</Description>
+		<ActivateOnEquip stat="22" amount="5">IncrementStat</ActivateOnEquip> // SPD
+		<ActivateOnEquip stat="27" amount="5">IncrementStat</ActivateOnEquip> // WIS
+		<Sound>ability/ability_use</Sound>
+		<OldSound>ability/ability_use</OldSound>
+		<Usable/>
+		<MpCost>125</MpCost>
+		<Cooldown>0.5</Cooldown>
+		<Activate effect="Harden" duration="2" range="3" useWisMod="false">ConditionEffectAura</Activate>
+		<Activate effect="Regenerate" duration="5" range="5" useWisMod="false">ConditionEffectAura</Activate>
+		<Activate effect="Swift" duration="6" useWisMod="false">ConditionEffectSelf</Activate>
+		<Activate range="8" amount="700" useWisMod="false">HealNova</Activate>
+		<FameBonus>6</FameBonus>
+		<Origin>Tarnished Tome</Origin>
+	</Object>
+	<Object type="0x7191" id="Tome of Tales">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ArtifactAbilities</File>
+			<Index>0x61</Index>
+		</Texture>
+		<SlotType>4</SlotType>
+		<TierType>Artifact</TierType>
+		<Description>Immense power resides, capable of unleashing devastating curses upon the enemy while granting the wielder enhanced abilities.</Description>
+		<Sound>ability/ability_use</Sound>
+		<OldSound>ability/ability_use</OldSound>
+		<Usable/>
+		<HpCost>110</HpCost>
+		<Cooldown>0.5</Cooldown>
+		<Activate range="10" color="0xff0000" totalDamage="300">AOEDamage</Activate>
+		<Activate range="3" color="0xff0000" totalDamage="500">AOEDamage</Activate>
+		<Activate effect="Fury" duration="2" useWisMod="false">ConditionEffectSelf</Activate>
+		<Activate effect="Fragile" duration="3" range="4" color="0xFFFF00" target="enemy" center="player" visualEffect="0" useWisMod="false">GenericActivate</Activate>
+		<FameBonus>6</FameBonus>
+		<Origin>Tarnished Tome</Origin>
+	</Object>
+	<!-- #endregion -->
+	<!-- #region --> // Helms
+	<Object type="0x7091" id="Further Beyond">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ArtifactAbilities</File>
+			<Index>0x80</Index>
+		</Texture>
+		<SlotType>16</SlotType>
+		<TierType>Artifact</TierType>
+		<Description>This helmet radiates with an aura of raw power. It is said to have been forged by the gods themselves, imbued with their blessings to empower the wearer and enhance their abilities beyond mortal limits.</Description>
+		<ActivateOnEquip stat="20" amount="5">IncrementStat</ActivateOnEquip> // ATK
+		<ActivateOnEquip stat="114" amount="20">IncrementStat</ActivateOnEquip> // LCK
+		<Sound>ability/ability_use</Sound>
+		<OldSound>ability/ability_use</OldSound>
+		<Usable/>
+		<MpCost>115</MpCost>
+		<Cooldown>6.5</Cooldown>
+		<Activate effect="Precision" duration="4">ConditionEffectSelf</Activate>
+		<Activate effect="Fury" duration="5" range="5">ConditionEffectAura</Activate>
+		<FameBonus>6</FameBonus>
+		<Origin>Tarnished Helmet</Origin>
+	</Object>
+	<Object type="0x7138" id="Strength of Platinum">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ArtifactAbilities</File>
+			<Index>0x81</Index>
+		</Texture>
+		<SlotType>16</SlotType>
+		<TierType>Artifact</TierType>
+		<Description>This is a legendary symbol of healing and strength, a divine relic that empowers the wearer to become a beacon of hope on the battlefield.</Description>
+		<ActivateOnEquip stat="0" amount="55">IncrementStat</ActivateOnEquip> // HP
+		<ActivateOnEquip stat="26" amount="10">IncrementStat</ActivateOnEquip> // VIT
+		<Sound>ability/ability_use</Sound>
+		<OldSound>ability/ability_use</OldSound>
+		<Usable/>
+		<MpCost>90</MpCost>
+		<Cooldown>5</Cooldown>
+		<Activate effect="Strengthen" duration="3">ConditionEffectSelf</Activate>
+		<Activate effect="Regenerate" duration="3" range="6">ConditionEffectAura</Activate>
+		<FameBonus>6</FameBonus>
+		<Origin>Tarnished Helmet</Origin>
+	</Object>
+	<!-- #endregion -->
+	<!-- #region --> // Shields
+	<Object type="0x7199" id="Splinter's Torment">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ArtifactAbilities</File>
+			<Index>0xa0</Index>
+		</Texture>
+		<SlotType>52</SlotType>
+		<TierType>Artifact</TierType>
+		<Description>The shield's enchantments sap the strength and resolve of foes, making their attacks less effective and their defenses more vulnerable.</Description>
+		<ActivateOnEquip stat="28" amount="8">IncrementStat</ActivateOnEquip> // DEX
+		<Sound>ability/ability_use</Sound>
+		<OldSound>ability/ability_use</OldSound>
+		<Usable/>
+		<Activate>Shoot</Activate>
+		<MpCost>110</MpCost>
+		<Cooldown>4</Cooldown>
+		<NumProjectiles>6</NumProjectiles>
+		<Projectile>
+			<ObjectId>STorment Shot</ObjectId>
+			<Speed>100</Speed>
+			<MinDamage>700</MinDamage>
+			<MaxDamage>700</MaxDamage>
+			<LifetimeMS>400</LifetimeMS>
+			<Size>120</Size>
+			<ConditionEffect duration="5">Stunned</ConditionEffect>
+			<ConditionEffect duration="3">Deficient</ConditionEffect>
+			<MultiHit/>
+			<PassesCover/>
+		</Projectile>
+		<FameBonus>6</FameBonus>
+		<Origin>Tarnished Shield</Origin>
+	</Object>
+	<Object type="0x7202" id="STorment Shot">
+		<Class>Projectile</Class>
+		<Texture>
+			<File>ArtifactAbilityProjectiles</File>
+			<Index>0x40</Index>
+		</Texture>
+		<AngleCorrection>1</AngleCorrection>
+	</Object>
+	<Object type="0x7089" id="Will's Defense">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ArtifactAbilities</File>
+			<Index>0xa1</Index>
+		</Texture>
+		<SlotType>52</SlotType>
+		<TierType>Artifact</TierType>
+		<Description>A Treasure among knights, a tool of fortitude, and a legacy that will endure throughout the ages.</Description>
+		<ActivateOnEquip stat="0" amount="130">IncrementStat</ActivateOnEquip> // HP
+		<Steal type="life" amount="1"/>
+		<Sound>ability/ability_use</Sound>
+		<OldSound>ability/ability_use</OldSound>
+		<Usable/>
+		<Activate>Shoot</Activate>
+		<MpCost>120</MpCost>
+		<Cooldown>6</Cooldown>
+		<Activate stat="0" amount="220" duration="3" noStack="true" useWisMod="false">StatBoostSelf</Activate>
+		<NumProjectiles>7</NumProjectiles>
+		<Projectile>
+			<ObjectId>WDefense Shot</ObjectId>
+			<Speed>100</Speed>
+			<MinDamage>400</MinDamage>
+			<MaxDamage>800</MaxDamage>
+			<LifetimeMS>400</LifetimeMS>
+			<Size>120</Size>
+			<ConditionEffect duration="4">Stunned</ConditionEffect>
+			<MultiHit/>
+			<PassesCover/>
+			<Boomerang/>
+		</Projectile>
+		<FameBonus>6</FameBonus>
+		<Origin>Tarnished Shield</Origin>
+	</Object>
+	<Object type="0x7114" id="WDefense Shot">
+		<Class>Projectile</Class>
+		<Texture>
+			<File>ArtifactAbilityProjectiles</File>
+			<Index>0x41</Index>
+		</Texture>
+		<AngleCorrection>1</AngleCorrection>
+	</Object>
+	<!-- #endregion -->
+	<!-- #region --> // Seals
+	<Object type="0x7086" id="Seal of Told Stories">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ArtifactAbilities</File>
+			<Index>0xc0</Index>
+		</Texture>
+		<SlotType>12</SlotType>
+		<TierType>Artifact</TierType>
+		<Description>Ancient inscriptions tell of a hero who never let down a single ally... has an aura of deja vu.</Description>
+		<ActivateOnEquip stat="22" amount="-5">IncrementStat</ActivateOnEquip> // SPD
+		<ActivateOnEquip stat="114" amount="5" isPerc="true">IncrementStat</ActivateOnEquip> // LCK
+		<Steal type="life" amount="1"/>
+		<Steal type="mana" amount="1"/>
+		<Sound>ability/ability_use</Sound>
+		<OldSound>ability/ability_use</OldSound>
+		<Usable/>
+		<MpCost>110</MpCost>
+		<Cooldown>4.5</Cooldown>
+		<Activate effect="Precision" duration="1">ConditionEffectSelf</Activate>
+		<Activate effect="Strengthen" duration="3.5" range="5">ConditionEffectAura</Activate>
+		<Activate effect="Regenerate" duration="5" range="3.5">ConditionEffectAura</Activate>
+		<Activate stat="0" amount="180" duration="3.5" range="5" noStack="true" useWisMod="false">StatBoostAura</Activate>
+		<Activate stat="3" amount="180" duration="3.5" range="5" noStack="true" useWisMod="false">StatBoostAura</Activate>
+		<FameBonus>6</FameBonus>
+		<Origin>Tarnished Seal</Origin>
+	</Object>
+	<Object type="0x7087" id="Seal of Intoxication">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ArtifactAbilities</File>
+			<Index>0xc1</Index>
+		</Texture>
+		<SlotType>12</SlotType>
+		<TierType>Artifact</TierType>
+		<Description>Crafted by ancient alchemists using rare and exotic ingredients, this seal is known for its unique and potent effects.</Description>
+		<Sound>ability/ability_use</Sound>
+		<OldSound>ability/ability_use</OldSound>
+		<Usable/>
+		<MpCost>105</MpCost>
+		<Cooldown>5</Cooldown>
+		<Activate effect="Nausea" duration="2">ConditionEffectSelf</Activate>
+		<Activate stat="20" amount="10" duration="3" noStack="true" useWisMod="false">StatBoostSelf</Activate>
+		<Activate stat="28" amount="10" duration="3" noStack="true" useWisMod="false">StatBoostSelf</Activate>
+		<Activate effect="Strengthen" duration="5.5" range="6">ConditionEffectAura</Activate>
+		<Activate stat="0" amount="170" duration="4.5" range="6" noStack="true" useWisMod="false">StatBoostAura</Activate>
+		<Activate effect="Deficient" duration="5" range="4.5" target="enemy" center="player" visualEffect="0" useWisMod="false">GenericActivate</Activate>
+		<FameBonus>6</FameBonus>
+		<Origin>Tarnished Seal</Origin>
+	</Object>
+	<!-- #endregion -->
+	<!-- #region --> // Poisons
+	<Object type="0x7096" id="Abyssal Concoction">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ArtifactAbilities</File>
+			<Index>0xe0</Index>
+		</Texture>
+		<SlotType>18</SlotType>
+		<TierType>Artifact</TierType>
+		<Description>Inside is a mixture of foul ambition, dissolving anything that dares oppose it.</Description>
+		<ActivateOnEquip stat="27" amount="10">IncrementStat</ActivateOnEquip> // WIS
+		<Steal type="mana" amount="1"/>
+		<Sound>ability/ability_use</Sound>
+		<OldSound>ability/ability_use</OldSound>
+		<Usable/>
+		<MpCost>110</MpCost>
+		<Cooldown>1.3</Cooldown>
+		<Activate useWisMod="true" radius="8" totalDamage="4000" duration="4" impactDamage="1200" throwTime="2">PoisonGrenade</Activate>
+		<Activate effect="Deficient" duration="5" range="4.5" color="0x0000FF" target="enemy" center="mouse" visualEffect="5" useWisMod="false">GenericActivate</Activate>
+		<FameBonus>6</FameBonus>
+		<Origin>Tarnished Poison</Origin>
+	</Object>
+	<Object type="0x7139" id="Depth's Shower">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ArtifactAbilities</File>
+			<Index>0xe1</Index>
+		</Texture>
+		<SlotType>18</SlotType>
+		<TierType>Artifact</TierType>
+		<Description>The bleeding caused by this poison is intense and relentless, causing the enemy to lose significant amounts of blood rapidly.</Description>
+		<Sound>ability/ability_use</Sound>
+		<OldSound>ability/ability_use</OldSound>
+		<Usable/>
+		<MpCost>140</MpCost>
+		<Cooldown>1</Cooldown>
+		<Activate useWisMod="true" radius="4" totalDamage="7000" duration="8" impactDamage="2200" throwTime="2.5">PoisonGrenade</Activate>
+		<Activate effect="Hemorrhage" duration="2" range="5" color="0xff0000" target="enemy" center="mouse" visualEffect="5" useWisMod="false">GenericActivate</Activate>
+		<FameBonus>6</FameBonus>
+		<Origin>Tarnished Poison</Origin>
+	</Object>
+	<!-- #endregion -->
+	<!-- #region --> // Skulls
+	<Object type="0x7234" id="Breach Skull">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ArtifactAbilities</File>
+			<Index>0x100</Index>
+		</Texture>
+		<SlotType>19</SlotType>
+		<TierType>Artifact</TierType>
+		<Description>Despite its dark reputation, it remains a tantalizing enigma for those who seek forbidden knowledge and untold power.</Description>
+		<ActivateOnEquip stat="20" amount="5">IncrementStat</ActivateOnEquip> // ATK
+		<ActivateOnEquip stat="28" amount="5">IncrementStat</ActivateOnEquip> // DEX
+		<Sound>ability/ability_use</Sound>
+		<OldSound>ability/ability_use</OldSound>
+		<Usable/>
+		<MpCost>100</MpCost>
+		<Cooldown>0.5</Cooldown>
+		<Activate radius="6" totalDamage="250">VampireBlast</Activate>
+		<Activate effect="Fury" duration="3">ConditionEffectSelf</Activate>
+		<Activate effect="Vulnerable" duration="3" range="6" color="0x9800FF" target="enemy" center="mouse" visualEffect="0" useWisMod="false">GenericActivate</Activate>
+		<Activate effect="Sluggish" duration="4" range="6" color="0xFF0000" target="enemy" center="mouse" visualEffect="0" useWisMod="false">GenericActivate</Activate>
+		<FameBonus>6</FameBonus>
+		<Origin>Tarnished Skull</Origin>
+	</Object>
+	<Object type="0x7235" id="Liches Siphon">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ArtifactAbilities</File>
+			<Index>0x101</Index>
+		</Texture>
+		<SlotType>19</SlotType>
+		<TierType>Artifact</TierType>
+		<Description>It is said to have been created by a lich, a wicked undead sorcerer who sought immortality through the foulest of means.</Description>
+		<ActivateOnEquip stat="20" amount="5">IncrementStat</ActivateOnEquip> // ATK
+		<Steal type="life" amount="1"/>
+		<Sound>ability/ability_use</Sound>
+		<OldSound>ability/ability_use</OldSound>
+		<Usable/>
+		<MpCost>125</MpCost>
+		<Cooldown>1</Cooldown>
+		<Activate radius="5.5" totalDamage="350">VampireBlast</Activate>
+		<Activate effect="Strengthen" duration="2">ConditionEffectSelf</Activate>
+		<Activate effect="Regenerate" duration="1.5">ConditionEffectSelf</Activate>
+		<FameBonus>6</FameBonus>
+		<Origin>Tarnished Skull</Origin>
+	</Object>
+	<!-- #endregion -->
+	<!-- #region --> // Traps
+	<Object type="0x7187" id="Spiteful Light">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ArtifactAbilities</File>
+			<Index>0x120</Index>
+		</Texture>
+		<SlotType>46</SlotType>
+		<TierType>Artifact</TierType>
+		<Description>Used to hunt banshees, being caught in its trap would immediately dematerialize the prey by thousands of rays of judgemental light.</Description>
+		<ActivateOnEquip stat="20" amount="5">IncrementStat</ActivateOnEquip> // ATK
+		<ActivateOnEquip stat="28" amount="5">IncrementStat</ActivateOnEquip> // DEX
+		<Sound>ability/ability_use</Sound>
+		<OldSound>ability/ability_use</OldSound>
+		<Usable/>
+		<MpCost>135</MpCost>
+		<Cooldown>1.5</Cooldown>
+		<Activate radius="8" totalDamage="8000" condEffect="Hemorrhage" condDuration="4">Trap</Activate>
+		<Activate effect="Swift" duration="3">ConditionEffectSelf</Activate>
+		<FameBonus>6</FameBonus>
+		<Origin>Tarnished Trap</Origin>
+	</Object>
+	<Object type="0x7188" id="Void's Gaze">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ArtifactAbilities</File>
+			<Index>0x121</Index>
+		</Texture>
+		<SlotType>46</SlotType>
+		<TierType>Artifact</TierType>
+		<Description>The abyss returns, even the boldest gaze.</Description>
+		<Sound>ability/ability_use</Sound>
+		<OldSound>ability/ability_use</OldSound>
+		<Usable/>
+		<MpCost>135</MpCost>
+		<Cooldown>4</Cooldown>
+		<Activate radius="4" totalDamage="3500" condEffect="Stunned" condDuration="1">Trap</Activate>
+		<Activate radius="6" totalDamage="2000" condEffect="Bind" condDuration="2">Trap</Activate>
+		<Activate radius="8" totalDamage="1000" condEffect="Vulnerable" condDuration="3">Trap</Activate>
+		<FameBonus>6</FameBonus>
+		<Origin>Tarnished Trap</Origin>
+	</Object>
+	<!-- #endregion -->
+	<!-- #region --> // Orbs
+	<Object type="0x7092" id="Unknown's Sacrilege">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ArtifactAbilities</File>
+			<Index>0x140</Index>
+		</Texture>
+		<SlotType>21</SlotType>
+		<TierType>Artifact</TierType>
+		<Description>It sees your every action.</Description>
+		<ActivateOnEquip stat="22" amount="2">IncrementStat</ActivateOnEquip> // DEF
+		<ActivateOnEquip stat="28" amount="4">IncrementStat</ActivateOnEquip> // DEX
+		<Sound>ability/ability_use</Sound>
+		<OldSound>ability/ability_use</OldSound>
+		<Usable/>
+		<MpCost>125</MpCost>
+		<Cooldown>4</Cooldown>
+		<Activate duration="3" range="3">StasisBlast</Activate>
+		<Activate effect="Harden" duration="3" useWisMod="false">ConditionEffectSelf</Activate>
+		<Activate effect="Swift" duration="2" useWisMod="false">ConditionEffectSelf</Activate>
+		<Activate effect="Exhaust" duration="2" range="6" color="0xFFFF00" target="enemy" center="mouse" visualEffect="5" useWisMod="false">GenericActivate</Activate>
+		<Activate effect="Deficient" duration="3" range="4" color="0x0000FF" target="enemy" center="mouse" visualEffect="5" useWisMod="false">GenericActivate</Activate>
+		<FameBonus>6</FameBonus>
+		<Origin>Tarnished Orb</Origin>
+	</Object>
+	<Object type="0x7093" id="Depth's Vision">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ArtifactAbilities</File>
+			<Index>0x141</Index>
+		</Texture>
+		<SlotType>21</SlotType>
+		<TierType>Artifact</TierType>
+		<Description>A pearl of an abyssinian clam, inside it, the fate of the whole world can be seen.</Description>
+		<Sound>ability/ability_use</Sound>
+		<OldSound>ability/ability_use</OldSound>
+		<Usable/>
+		<MpCost>120</MpCost>
+		<Cooldown>3.5</Cooldown>
+		<Activate duration="3" range="3">StasisBlast</Activate>
+		<Activate effect="Fury" duration="2.5" useWisMod="false">ConditionEffectSelf</Activate>
+		<Activate effect="Fragile" duration="3" range="5" color="0xFF0000" target="enemy" center="mouse" visualEffect="5" useWisMod="false">GenericActivate</Activate>
+		<FameBonus>6</FameBonus>
+		<Origin>Tarnished Orb</Origin>
+	</Object>
+	<!-- #endregion -->
+	<!-- #region --> // Prisms
+	<Object type="0x7741" id="Oceanic Defender">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ArtifactAbilities</File>
+			<Index>0x160</Index>
+		</Texture>
+		<SlotType>22</SlotType>
+		<TierType>Artifact</TierType>
+		<Description>Inside, a dream of endless peace. Outside, the means of achieving it.</Description>
+		<ExtraTooltipData>
+			<EffectInfo name="Stationary Decoy:" description=""/>
+			<EffectInfo name="" description="200 - 250 Damage"/>
+			<EffectInfo name="" description="31 Shots"/>
+		</ExtraTooltipData>
+		<ActivateOnEquip stat="3" amount="50">IncrementStat</ActivateOnEquip> // MP
+		<ActivateOnEquip stat="20" amount="5">IncrementStat</ActivateOnEquip> // ATK
+		<Sound>ability/ability_use</Sound>
+		<OldSound>ability/ability_use</OldSound>
+		<Usable/>
+		<MpCost>110</MpCost>
+		<Cooldown>3</Cooldown>
+		<Activate duration="2" objType="0x7743" center="mouse">Decoy</Activate>
+		<Activate effect="Strengthen" duration="2">ConditionEffectSelf</Activate>
+		<FameBonus>6</FameBonus>
+		<Origin>Tarnished Prism</Origin>
+	</Object>
+	<Object type="0x7743" id="ODefender Decoy">
+		<Class>Ally</Class>
+		<Ally/>
+		<AnimatedTexture>
+			<File>players</File>
+			<Index>11</Index>
+		</AnimatedTexture>
+		<NoMiniMap/>
+		<Size>100</Size>
+		<ShadowSize>100</ShadowSize>
+		<MaxHitPoints>0</MaxHitPoints>
+		<NumProjectiles>30</NumProjectiles>
+		<Projectile id="0">
+			<ObjectId>ODDecoy Blast</ObjectId>
+			<Speed>100</Speed>
+			<MinDamage>200</MinDamage>
+			<MaxDamage>250</MaxDamage>
+			<LifetimeMS>750</LifetimeMS>
+			<Size>80</Size>
+		</Projectile>
+	</Object>
+	<Object type="0x7742" id="ODDecoy Blast">
+		<Class>Projectile</Class>
+		<Texture>
+			<File>ArtifactAbilityProjectiles</File>
+			<Index>0x60</Index>
+		</Texture>
+		<AngleCorrection>1</AngleCorrection>
+	</Object>
+	<Object type="0x7739" id="Infantries March">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ArtifactAbilities</File>
+			<Index>0x161</Index>
+		</Texture>
+		<SlotType>22</SlotType>
+		<TierType>Artifact</TierType>
+		<Description>A stunning amethyst prism cut with painstaking precision, allowing it to hide entire legions.</Description>
+		<ExtraTooltipData>
+			<EffectInfo name="Moving Decoy:" description=""/>
+			<EffectInfo name="" description="180 - 220 Damage"/>
+			<EffectInfo name="" description="50 Shots"/>
+		</ExtraTooltipData>
+		<ActivateOnEquip stat="0" amount="50">IncrementStat</ActivateOnEquip> // HP
+		<ActivateOnEquip stat="28" amount="5">IncrementStat</ActivateOnEquip> // DEX
+		<Sound>ability/ability_use</Sound>
+		<OldSound>ability/ability_use</OldSound>
+		<Usable/>
+		<MpCost>115</MpCost>
+		<Cooldown>6</Cooldown>
+		<Activate duration="3.5" objType="0x9316" center="player">Decoy</Activate>
+		<Activate maxDistance="20">Teleport</Activate>
+		<Activate effect="Invisible" duration="5">ConditionEffectSelf</Activate>
+		<FameBonus>6</FameBonus>
+		<Origin>Tarnished Prism</Origin>
+	</Object>
+	<Object type="0x9316" id="IMarch Decoy">
+		<Class>Ally</Class>
+		<Ally/>
+		<AnimatedTexture>
+			<File>players</File>
+			<Index>11</Index>
+		</AnimatedTexture>
+		<NoMiniMap/>
+		<Size>100</Size>
+		<ShadowSize>100</ShadowSize>
+		<MaxHitPoints>0</MaxHitPoints>
+		<NumProjectiles>50</NumProjectiles>
+		<Projectile id="0">
+			<ObjectId>IMarch Blast</ObjectId>
+			<Speed>100</Speed>
+			<MinDamage>180</MinDamage>
+			<MaxDamage>220</MaxDamage>
+			<LifetimeMS>650</LifetimeMS>
+			<Size>80</Size>
+		</Projectile>
+	</Object>
+	<Object type="0x7740" id="IMarch Blast">
+		<Class>Projectile</Class>
+		<Texture>
+			<File>ArtifactAbilityProjectiles</File>
+			<Index>0x61</Index>
+		</Texture>
+		<AngleCorrection>1</AngleCorrection>
+	</Object>
+	<!-- #endregion -->
+	<!-- #region --> // Scepters
+	<Object type="0x7180" id="Poised Venom">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ArtifactAbilities</File>
+			<Index>0x180</Index>
+		</Texture>
+		<SlotType>23</SlotType>
+		<TierType>Artifact</TierType>
+		<Description>Consume all that exists, there is none that can stand in the way.</Description>
+		<ActivateOnEquip stat="3" amount="70">IncrementStat</ActivateOnEquip> // MP
+		<Sound>ability/ability_use</Sound>
+		<OldSound>ability/ability_use</OldSound>
+		<Usable/>
+		<MpCost>120</MpCost>
+		<Cooldown>2</Cooldown>
+		<Activate useWisMod="true" totalDamage="1000" maxTargets="8" condEffect="Deficient" condDuration="2" color="0xFFFFFF">Lightning</Activate>
+		<Activate effect="Fury" duration="1.5">ConditionEffectSelf</Activate>
+		<Activate effect="Nausea" duration="2">ConditionEffectSelf</Activate>
+		<FameBonus>6</FameBonus>
+		<Origin>Tarnished Scepter</Origin>
+	</Object>
+	<Object type="0x7181" id="Shock Therapy">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ArtifactAbilities</File>
+			<Index>0x181</Index>
+		</Texture>
+		<SlotType>23</SlotType>
+		<TierType>Artifact</TierType>
+		<Description>Bzzt!</Description>
+		<ActivateOnEquip stat="3" amount="55">IncrementStat</ActivateOnEquip> // MP
+		<Sound>ability/ability_use</Sound>
+		<OldSound>ability/ability_use</OldSound>
+		<Usable/>
+		<MpCost>120</MpCost>
+		<Cooldown>4</Cooldown>
+		<Activate useWisMod="true" totalDamage="1100" maxTargets="15" condEffect="Bind" condDuration="1" color="0x9800FF">Lightning</Activate>
+		<Activate effect="Strengthen" duration="2.5">ConditionEffectSelf</Activate>
+		<FameBonus>6</FameBonus>
+		<Origin>Tarnished Scepter</Origin>
+	</Object>
+	<!-- #endregion -->
+	<!-- #region --> // Shurikens
+	<Object type="0x7174" id="Night-Watch">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ArtifactAbilities</File>
+			<Index>0x1a0</Index>
+		</Texture>
+		<SlotType>25</SlotType>
+		<TierType>Artifact</TierType>
+		<Description>A silent lullaby of darkness's solace only broken by a sharp pain, before returning to eternal rest.</Description>
+		<ActivateOnEquip stat="112" amount="10">IncrementStat</ActivateOnEquip> // MGT
+		<ActivateOnEquip stat="114" amount="20">IncrementStat</ActivateOnEquip> // LCK
+		<Sound>ability/ability_use</Sound>
+		<OldSound>ability/ability_use</OldSound>
+		<Usable/>
+		<MpCost>95</MpCost>
+		<Cooldown>2</Cooldown>
+		<MultiPhase/>
+		<Activate>ShurikenAbility</Activate>
+		<Activate effect="Precision" duration="2">ConditionEffectSelf</Activate>
+		<Projectile>
+			<ObjectId>NWatch Shot</ObjectId>
+			<Speed>100</Speed>
+			<MinDamage>1250</MinDamage>
+			<MaxDamage>1550</MaxDamage>
+			<LifetimeMS>1000</LifetimeMS>
+			<Size>120</Size>
+			<MultiHit/>
+			<ArmorPiercing/>
+		</Projectile>
+		<FameBonus>6</FameBonus>
+		<Origin>Tarnished Shuriken</Origin>
+	</Object>
+	<Object type="0x7175" id="NWatch Shot">
+		<Class>Projectile</Class>
+		<Texture>
+			<File>ArtifactAbilityProjectiles</File>
+			<Index>0x80</Index>
+		</Texture>
+		<AngleCorrection>1</AngleCorrection>
+	</Object>
+	<Object type="0x7176" id="Sharp Influence">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ArtifactAbilities</File>
+			<Index>0x1a1</Index>
+		</Texture>
+		<SlotType>25</SlotType>
+		<TierType>Artifact</TierType>
+		<Description>An axehead honed for a northern warchief among the flames of Ragnärök.</Description>
+		<ActivateOnEquip stat="0" amount="50">IncrementStat</ActivateOnEquip> // HP
+		<ActivateOnEquip stat="26" amount="7">IncrementStat</ActivateOnEquip> // VIT
+		<Sound>ability/ability_use</Sound>
+		<OldSound>ability/ability_use</OldSound>
+		<Usable/>
+		<MpCost>100</MpCost>
+		<Cooldown>2</Cooldown>
+		<MultiPhase/>
+		<Activate>ShurikenAbility</Activate>
+		<Activate effect="Strengthen" duration="2">ConditionEffectSelf</Activate>
+		<Projectile>
+			<ObjectId>SInfluence Shot</ObjectId>
+			<Speed>100</Speed>
+			<MinDamage>4000</MinDamage>
+			<MaxDamage>5500</MaxDamage>
+			<LifetimeMS>700</LifetimeMS>
+			<Size>120</Size>
+		</Projectile>
+		<FameBonus>6</FameBonus>
+		<Origin>Tarnished Shuriken</Origin>
+	</Object>
+	<Object type="0x7177" id="SInfluence Shot">
+		<Class>Projectile</Class>
+		<Texture>
+			<File>ArtifactAbilityProjectiles</File>
+			<Index>0x81</Index>
+		</Texture>
+		<AngleCorrection>1</AngleCorrection>
+	</Object>
+	<Object type="0x7250" id="Glacial Icicle">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ArtifactAbilities</File>
+			<Index>0x1a2</Index>
+		</Texture>
+		<SlotType>25</SlotType>
+		<TierType>Artifact</TierType>
+		<Description>This Chilling blade was harvested from the mighty snow mountains, that is known to house many abominations due to its intense temperature.</Description>
+		<ActivateOnEquip stat="20" amount="5">IncrementStat</ActivateOnEquip> // ATK
+		<ActivateOnEquip stat="28" amount="5">IncrementStat</ActivateOnEquip> // DEX
+		<Sound>ability/ability_use</Sound>
+		<OldSound>ability/ability_use</OldSound>
+		<Usable/>
+		<MpCost>80</MpCost>
+		<Cooldown>2</Cooldown>
+		<MultiPhase/>
+		<Activate>ShurikenAbility</Activate>
+		<Activate effect="Fury" duration="2">ConditionEffectSelf</Activate>
+		<Activate effect="Strengthen" duration="2">ConditionEffectSelf</Activate>
+		<Projectile>
+			<ObjectId>GIcicle Shot</ObjectId>
+			<Speed>100</Speed>
+			<MinDamage>200</MinDamage>
+			<MaxDamage>4700</MaxDamage>
+			<LifetimeMS>1140</LifetimeMS>
+			<Size>120</Size>
+			<ConditionEffect duration="3">Fragile</ConditionEffect>
+			<MultiHit/>
+		</Projectile>
+		<FameBonus>6</FameBonus>
+		<Origin>Tarnished Shuriken</Origin>
+	</Object>
+	<Object type="0x7251" id="GIcicle Shot">
+		<Class>Projectile</Class>
+		<Texture>
+			<File>ArtifactAbilityProjectiles</File>
+			<Index>0x82</Index>
+		</Texture>
+		<AngleCorrection>1</AngleCorrection>
+	</Object>
+	<!-- #endregion -->
+	<!-- #region --> // Sheaths
+	<Object type="0x7239" id="Tribe's Warcry">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ArtifactAbilities</File>
+			<Index>0x1c0</Index>
+		</Texture>
+		<SlotType>27</SlotType>
+		<TierType>Artifact</TierType>
+		<Description>An undying wish was left behind, in the rock hard snow, many moons had went by before this sheath was discovered covered in snow and ice.</Description>
+		<ActivateOnEquip stat="3" amount="100">IncrementStat</ActivateOnEquip> // MP
+		<ActivateOnEquip stat="27" amount="15">IncrementStat</ActivateOnEquip> // WIS
+		<Activate effect="Harden" duration="4">ConditionEffectSelf</Activate>
+		<Activate effect="Intelligence" duration="3" range="4.5">ConditionEffectAura</Activate>
+		<Activate effect="Strengthen" duration="3" range="4.5">ConditionEffectAura</Activate>
+		<Sound>ability/ability_use</Sound>
+		<OldSound>ability/ability_use</OldSound>
+		<Usable/>
+		<MpCost>80</MpCost>
+		<Cooldown>0.5</Cooldown>
+		<MultiPhase/>
+		<Activate range="7" color="0xa14e00" totalDamage="2300" useAtkMod="true">TribesWarcry</Activate>
+		<FameBonus>6</FameBonus>
+		<Origin>Tarnished Sheath</Origin>
+	</Object>
+	<Object type="0x7238" id="Frozen Resolve">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ArtifactAbilities</File>
+			<Index>0x1c1</Index>
+		</Texture>
+		<SlotType>27</SlotType>
+		<TierType>Artifact</TierType>
+		<Description>An undying wish was left behind, in the rock hard snow, many moons had went by before this sheath was discovered covered in snow and ice.</Description>
+		<ActivateOnEquip stat="0" amount="80">IncrementStat</ActivateOnEquip> // HP
+		<ActivateOnEquip stat="26" amount="10">IncrementStat</ActivateOnEquip> // VIT
+		<ActivateOnEquip stat="121" amount="20">IncrementStat</ActivateOnEquip> // RES
+		<Steal type="life" amount="1"/>
+		<Activate effect="Fury" duration="3.5" range="6">ConditionEffectAura</Activate>
+		<Sound>ability/ability_use</Sound>
+		<OldSound>ability/ability_use</OldSound>
+		<Usable/>
+		<MpCost>100</MpCost>
+		<Cooldown>2</Cooldown>
+		<MultiPhase/>
+		<Activate range="4.5" color="0xa14e00" totalDamage="6000" useAtkMod="false">FrozenResolve</Activate>
+		<FameBonus>6</FameBonus>
+		<Origin>Tarnished Sheath</Origin>
+	</Object>
+	<!-- #endregion -->
+	<!-- #region --> // Banners
+	<Object type="0x7084" id="Faith's Empowerment">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ArtifactAbilities</File>
+			<Index>0x1e0</Index>
+		</Texture>
+		<SlotType>28</SlotType>
+		<TierType>Artifact</TierType>
+		<Description>The flag has a golden cross embroided, the cross represents the faith of those who follow it, the gold represents hope and optimism, those who saw the flag felt a sense of hope and faith that they can overcome any obstacle.</Description>
+		<ActivateOnEquip stat="0" amount="80">IncrementStat</ActivateOnEquip> // HP
+		<ActivateOnEquip stat="21" amount="10">IncrementStat</ActivateOnEquip> // DEF
+		<ActivateOnEquip stat="121" amount="20">IncrementStat</ActivateOnEquip> // RES
+		<Sound>ability/ability_use</Sound>
+		<OldSound>ability/ability_use</OldSound>
+		<Usable/>
+		<Cooldown>5.5</Cooldown>
+		<MpCost>100</MpCost>
+		<Activate range="5" amount="5" duration="5">Banner</Activate>
+		<Activate effect="Fury" duration="4.5" range="6">ConditionEffectAura</Activate>
+		<Activate effect="Strengthen" duration="4.5" range="6">ConditionEffectAura</Activate>
+		<Activate effect="Exhaust" duration="2.5" range="4" target="enemy" center="player" useWisMod="false">GenericActivate</Activate>
+		<FameBonus>6</FameBonus>
+		<Origin>Tarnished Banner</Origin>
+	</Object>
+	<Object type="0x7197" id="Banner of the Fearless">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ArtifactAbilities</File>
+			<Index>0x1e1</Index>
+		</Texture>
+		<SlotType>28</SlotType>
+		<Description>An emblem designed and held by warmongers, they would chant obscenities, watching the faces of their enemies scrunch in disgust.</Description>
+		<TierType>Artifact</TierType>
+		<ActivateOnEquip stat="26" amount="15">IncrementStat</ActivateOnEquip> // VIT
+		<Sound>ability/ability_use</Sound>
+		<OldSound>ability/ability_use</OldSound>
+		<Usable/>
+		<Cooldown>4</Cooldown>
+		<MpCost>105</MpCost>
+		<Activate range="7" amount="3" duration="4.5">Banner</Activate>
+		<Activate effect="Precision" duration="1">ConditionEffectSelf</Activate>
+		<Activate effect="Fury" duration="3" range="7">ConditionEffectAura</Activate>
+		<Activate effect="Strengthen" duration="3" range="7">ConditionEffectAura</Activate>
+		<Activate effect="Deficient" duration="3" range="5" color="0xffffff" target="enemy" center="player" visualEffect="4" useWisMod="false">GenericActivate</Activate>
+		<FameBonus>6</FameBonus>
+		<Origin>Tarnished Banner</Origin>
+	</Object>
+	<!-- #endregion -->
+	<!-- #region --> // Siphons
+	<!-- #endregion -->
+	<!-- #region --> // Charms
+	<Object type="0x7194" id="Charm of Eastern Winds">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ArtifactAbilities</File>
+			<Index>0x220</Index>
+		</Texture>
+		<SlotType>32</SlotType>
+		<TierType>Artifact</TierType>
+		<Description>The smell of sakura flowers, the feel of brisk winds, the air in the mountains. All of it under this sacred gate of unity.</Description>
+		<ActivateOnEquip stat="20" amount="5">IncrementStat</ActivateOnEquip> // ATK
+		<Sound>ability/ability_use</Sound>
+		<OldSound>ability/ability_use</OldSound>
+		<Usable/>
+		<MpCost>100</MpCost>
+		<Cooldown>6</Cooldown>
+		<Activate range="4" amount="5" players="false" duration="4" effect="Vulnerable" color="0x9800FF" objType="0x7195">Torii</Activate>
+		<Activate range="4" amount="5" duration="3" effect="Strengthen" objType="0x7241">Torii</Activate>
+		<FameBonus>6</FameBonus>
+		<Origin>Tarnished Charm</Origin>
+	</Object>
+	<Object type="0x7195" id="CEW Torii">
+		<Class>Character</Class>
+		<Texture>
+			<File>ArtifactAbilityEntities16x16</File>
+			<Index>0x00</Index>
+		</Texture>
+		<Size>120</Size>
+		<ShadowSize>50</ShadowSize>
+		<MaxHitPoints>0</MaxHitPoints>
+	</Object>
+	<Object type="0x7241" id="CEW Torii Invis">
+		<Class>Character</Class>
+		<Texture>
+			<File>cobj16x16</File>
+			<Index>0x06</Index>
+		</Texture>
+		<Size>0</Size>
+		<MaxHitPoints>0</MaxHitPoints>
+	</Object>
+	<Object type="0x7193" id="Frostburn Charm">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ArtifactAbilities</File>
+			<Index>0x221</Index>
+		</Texture>
+		<SlotType>32</SlotType>
+		<TierType>Artifact</TierType>
+		<Description>Fashioned from unbroken black ice, enfeeble your enemies' defense, gain confidence and encourage your teammates with frigid protection   from their attacks.</Description>
+		<ActivateOnEquip stat="20" amount="4">IncrementStat</ActivateOnEquip> // ATK
+		<ActivateOnEquip stat="28" amount="7">IncrementStat</ActivateOnEquip> // DEX
+		<Sound>ability/ability_use</Sound>
+		<OldSound>ability/ability_use</OldSound>
+		<Usable/>
+		<MpCost>100</MpCost>
+		<Cooldown>6</Cooldown>
+		<Activate range="4" amount="5" players="false" duration="4" effect="Vulnerable" color="0x9800FF" objType="0x7196">Torii</Activate>
+		<Activate range="4" amount="5" duration="3" effect="Harden" color="0xa14e00" objType="0x7196">Torii</Activate>
+		<Activate effect="Fury" duration="3">ConditionEffectSelf</Activate>
+		<FameBonus>6</FameBonus>
+		<Origin>Tarnished Charm</Origin>
+	</Object>
+	<Object type="0x7196" id="FB Torii">
+		<Class>Character</Class>
+		<Texture>
+			<File>ArtifactAbilityEntities16x16</File>
+			<Index>0x01</Index>
+		</Texture>
+		<Size>120</Size>
+		<ShadowSize>50</ShadowSize>
+		<MaxHitPoints>0</MaxHitPoints>
+	</Object>
+	<!-- #endregion -->
+	<!-- #region --> // Dice
+	<Object type="0x7184" id="Raven's Die">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ArtifactAbilities</File>
+			<Index>0x240</Index>
+		</Texture>
+		<SlotType>33</SlotType>
+		<TierType>Artifact</TierType>
+		<Description>Black feathers lay on the table... Do you dare tempt fate?</Description>
+		<ExtraTooltipData>
+			<EffectInfo name="" description="Invulnerable applies for 2 seconds instead of 4."/>
+		</ExtraTooltipData>
+		<ActivateOnEquip stat="112" amount="20">IncrementStat</ActivateOnEquip> // MGT
+		<ActivateOnEquip stat="114" amount="50">IncrementStat</ActivateOnEquip> // LCK
+		<Sound>ability/ability_use</Sound>
+		<OldSound>ability/ability_use</OldSound>
+		<Usable/>
+		<MpCost>120</MpCost>
+		<Cooldown>5</Cooldown>
+		<Activate duration="4" randVals="Fury, Harden, Invulnerable">DiceActivate</Activate>
+		<Activate effect="Regenerate" duration="2">ConditionEffectSelf</Activate>
+		<FameBonus>6</FameBonus>
+		<Origin>Tarnished Dice</Origin>
+	</Object>
+	<Object type="0x7183" id="Lethal Bet">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ArtifactAbilities</File>
+			<Index>0x241</Index>
+		</Texture>
+		<SlotType>33</SlotType>
+		<TierType>Artifact</TierType>
+		<Description>A popular accessory for assassins, it lets you empower your first strike... Or it leaves you out in the light.</Description>
+		<ActivateOnEquip stat="28" amount="5">IncrementStat</ActivateOnEquip> // DEX
+		<ActivateOnEquip stat="112" amount="20">IncrementStat</ActivateOnEquip> // MGT
+		<ActivateOnEquip stat="114" amount="50">IncrementStat</ActivateOnEquip> // LCK
+		<Sound>ability/ability_use</Sound>
+		<OldSound>ability/ability_use</OldSound>
+		<Usable/>
+		<MpCost>115</MpCost>
+		<Cooldown>5</Cooldown>
+		<Activate duration="3" randVals="Fury, Vulnerable, Strengthen">DiceActivate</Activate>
+		<Activate effect="Precision" duration="1.5">ConditionEffectSelf</Activate>
+		<FameBonus>6</FameBonus>
+		<Origin>Tarnished Dice</Origin>
+	</Object>
+	<!-- #endregion -->
+	<!-- #region --> // Jackets
+	<Object type="0x7236" id="Stormfiend's Jacket">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ArtifactAbilities</File>
+			<Index>0x260</Index>
+		</Texture>
+		<SlotType>35</SlotType>
+		<TierType>Artifact</TierType>
+		<Description>Increase your physical ability twofold, it's unsure if it's efficient to do so.</Description>
+		<ExtraTooltipData>
+			<EffectInfo name="Offensive Stance" description=""/>
+			<EffectInfo name="" description="+20 Attack"/>
+			<EffectInfo name="Defensive Stance" description=""/>
+			<EffectInfo name="" description="+20 Dexterity"/>
+		</ExtraTooltipData>
+		<ActivateOnEquip stat="20" amount="10">IncrementStat</ActivateOnEquip> // ATK
+		<ActivateOnEquip stat="22" amount="-10">IncrementStat</ActivateOnEquip> // SPD
+		<ActivateOnEquip stat="28" amount="10">IncrementStat</ActivateOnEquip> // DEX
+		<Sound>ability/ability_use</Sound>
+		<OldSound>ability/ability_use</OldSound>
+		<Usable/>
+		<MpCost>120</MpCost>
+		<Cooldown>2</Cooldown>
+		<Activate stat="20" amount="20" noStack="false">JacketAbility</Activate>
+		<Activate stat="28" amount="20" noStack="false">JacketAbility2</Activate>
+		<Activate effect="Fury" duration="2">ConditionEffectSelf</Activate>
+		<Activate effect="Strengthen" duration="2">ConditionEffectSelf</Activate>
+		<Projectile>
+			<ObjectId>SFJacket Shot</ObjectId>
+			<Speed>100</Speed>
+			<MinDamage>80</MinDamage>
+			<MaxDamage>150</MaxDamage>
+			<LifetimeMS>450</LifetimeMS>
+			<Size>100</Size>
+			<ArmorPiercing/>
+			<Boomerang/>
+			<ConditionEffect duration="2">Stunned</ConditionEffect>
+		</Projectile>
+		<FameBonus>6</FameBonus>
+		<Origin>Tarnished Jacket</Origin>
+	</Object>
+	<Object type="0x7237" id="SFJacket Shot">
+		// New Object
+		<Class>Projectile</Class>
+		<Texture>
+			<File>ArtifactAbilityProjectiles</File>
+			<Index>0xc0</Index>
+		</Texture>
+		<AngleCorrection>1</AngleCorrection>
+	</Object>
+	<Object type="0x7098" id="Sundered Jacket">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ArtifactAbilities</File>
+			<Index>0x261</Index>
+		</Texture>
+		<SlotType>35</SlotType>
+		<TierType>Artifact</TierType>
+		<Description>Instill yourself with strength or resilience, there is no inbetween.</Description>
+		<ExtraTooltipData>
+			<EffectInfo name="Offensive Stance" description=""/>
+			<EffectInfo name="" description="+50 Attack, -200 Health"/>
+			<EffectInfo name="Defensive Stance" description=""/>
+			<EffectInfo name="" description="+15 Defense, +350 Health, -20 Attack"/>
+		</ExtraTooltipData>
+		<ActivateOnEquip stat="0" amount="100">IncrementStat</ActivateOnEquip> // HP
+		<ActivateOnEquip stat="20" amount="10">IncrementStat</ActivateOnEquip> // ATT
+		<Sound>ability/ability_use</Sound>
+		<OldSound>ability/ability_use</OldSound>
+		<Usable/>
+		<MpCost>110</MpCost>
+		<Cooldown>3</Cooldown>
+		<Activate stat="0" amount="-200" stat2="20" amount2="50" noStack="false">JacketAbility</Activate>
+		<Activate stat="0" amount="350" stat2="20" amount2="-20" stat3="21" amount3="15" noStack="false">JacketAbility2</Activate>
+		<Projectile>
+			<ObjectId>SJacket Shot</ObjectId>
+			<Speed>100</Speed>
+			<MinDamage>300</MinDamage>
+			<MaxDamage>400</MaxDamage>
+			<LifetimeMS>450</LifetimeMS>
+			<Size>100</Size>
+			<ArmorPiercing/>
+			<Boomerang/>
+			<ConditionEffect duration="3">Exhaust</ConditionEffect>
+			<ConditionEffect duration="1.5">Deficient</ConditionEffect>
+		</Projectile>
+		<FameBonus>6</FameBonus>
+		<Origin>Tarnished Jacket</Origin>
+	</Object>
+	<Object type="0x7115" id="SJacket Shot">
+		<Class>Projectile</Class>
+		<Texture>
+			<File>ArtifactAbilityProjectiles</File>
+			<Index>0xc1</Index>
+		</Texture>
+		<AngleCorrection>1</AngleCorrection>
+	</Object>
+	<!-- #endregion -->
+	<!-- #region --> // Talismans
+	<Object type="0x7189" id="Corrupted Terror">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ArtifactAbilities</File>
+			<Index>0x280</Index>
+		</Texture>
+		<SlotType>36</SlotType>
+		<TierType>Artifact</TierType>
+		<Description>The spirit within this talisman was quite the fearsome warrior, the previous master was the typical shogun, with their widespread skillset, creating a legend for themselves proved to be quite simple.</Description>
+		<ExtraTooltipData>
+			<EffectInfo name="Spawns a spirit to aid you in combat." description=""/>
+			<EffectInfo name="Damage" description="1000"/>
+			<EffectInfo name="Lifetime" description="4"/>
+			<EffectInfo name="Effect" description="Cursed for 2.5 secs"/>
+		</ExtraTooltipData>
+		<ActivateOnEquip stat="20" amount="8">IncrementStat</ActivateOnEquip> // ATK
+		<ActivateOnEquip stat="26" amount="-5">IncrementStat</ActivateOnEquip> // VIT
+		<ActivateOnEquip stat="121" amount="15">IncrementStat</ActivateOnEquip> // RES
+		<Sound>ability/ability_use</Sound>
+		<OldSound>ability/ability_use</OldSound>
+		<Usable/>
+		<MpCost>100</MpCost>
+		<Cooldown>2</Cooldown>
+		<Activate duration="4" objType="0x7171">TalismanAbility</Activate>
+		<Activate effect="Fury" duration="1.5" useWisMod="false">ConditionEffectSelf</Activate>
+		<FameBonus>6</FameBonus>
+		<Origin>Tarnished Talisman</Origin>
+	</Object>
+	<Object type="0x7171" id="CTerror Spirit">
+		<Class>Ally</Class>
+		<Ally/>
+		<AnimatedTexture>
+			<File>ArtifactAbilityCharacters8x8</File>
+			<Index>0</Index>
+		</AnimatedTexture>
+		<NoMiniMap/>
+		<Flying/>
+		<Z>0.2</Z>
+		<BindImmune/>
+		<CrippleImmune/>
+		<DazedImmune/>
+		<VulnerableImmune/>
+		<SluggishImmune/>
+		<Size>120</Size>
+		<ShadowSize>50</ShadowSize>
+		<MaxHitPoints>0</MaxHitPoints>
+	</Object>
+	<Object type="0x7058" id="Protective Spirits">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ArtifactAbilities</File>
+			<Index>0x281</Index>
+		</Texture>
+		<SlotType>36</SlotType>
+		<TierType>Artifact</TierType>
+		<Description>Loyal servants never bat an eye, they march with true passion and intent.</Description>
+		<ExtraTooltipData>
+			<EffectInfo name="Spawns a ghost to aid you in combat." description=""/>
+			<EffectInfo name="Heals" description="60 HP/sec within 4 tiles"/>
+			<EffectInfo name="Lifetime" description="4"/>
+			<EffectInfo name="Spawns a second ghost to aid you in combat." description=""/>
+			<EffectInfo name="Damage" description="200"/>
+			<EffectInfo name="Lifetime" description="3"/>
+			<EffectInfo name="Effect" description="Deficient for 2 seconds"/>
+		</ExtraTooltipData>
+		<ActivateOnEquip stat="27" amount="5">IncrementStat</ActivateOnEquip> // WIS
+		<ActivateOnEquip stat="114" amount="10">IncrementStat</ActivateOnEquip> // LCK
+		<Sound>ability/ability_use</Sound>
+		<OldSound>ability/ability_use</OldSound>
+		<Usable/>
+		<MpCost>115</MpCost>
+		<Cooldown>5</Cooldown>
+		<Activate duration="4" objType="0x7172">TalismanAbility</Activate>
+		<Activate duration="3" objType="0x7173">TalismanAbility</Activate>
+		<Activate effect="Regenerate" duration="2" useWisMod="false">ConditionEffectSelf</Activate>
+		<Activate effect="Charge" duration="2" useWisMod="false">ConditionEffectSelf</Activate>
+		<FameBonus>6</FameBonus>
+		<Origin>Tarnished Talisman</Origin>
+	</Object>
+	<Object type="0x7172" id="PSpirits Ghost1">
+		<Class>Ally</Class>
+		<Ally/>
+		<AnimatedTexture>
+			<File>ArtifactAbilityCharacters16x16</File>
+			<Index>0</Index>
+		</AnimatedTexture>
+		<NoMiniMap/>
+		<Flying/>
+		<Z>0.2</Z>
+		<BindImmune/>
+		<CrippleImmune/>
+		<DazedImmune/>
+		<VulnerableImmune/>
+		<SluggishImmune/>
+		<Size>120</Size>
+		<ShadowSize>50</ShadowSize>
+		<MaxHitPoints>0</MaxHitPoints>
+	</Object>
+	<Object type="0x7173" id="PSpirits Ghost2">
+		<Class>Ally</Class>
+		<Ally/>
+		<AnimatedTexture>
+			<File>ArtifactAbilityCharacters16x16</File>
+			<Index>0</Index>
+		</AnimatedTexture>
+		<NoMiniMap/>
+		<Flying/>
+		<Z>0.2</Z>
+		<BindImmune/>
+		<CrippleImmune/>
+		<DazedImmune/>
+		<VulnerableImmune/>
+		<SluggishImmune/>
+		<Size>120</Size>
+		<ShadowSize>50</ShadowSize>
+		<MaxHitPoints>0</MaxHitPoints>
+	</Object>
+	<!-- #endregion -->
+	<!-- #region --> // Accessories
+	<Object type="0x7075" id="Shoes of Toughness">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ArtifactAccessories</File>
+			<Index>0x00</Index>
+		</Texture>
+		<SlotType>9</SlotType>
+		<TierType>Artifact</TierType>
+		<Description>The first pair of shoes to be modified for adventurers, I guess steelcaps weren't protective enough.</Description>
+		<ActivateOnEquip stat="0" amount="100">IncrementStat</ActivateOnEquip> // HP
+		<ActivateOnEquip stat="21" amount="9">IncrementStat</ActivateOnEquip> // DEF
+		<ActivateOnEquip stat="122" amount="100">IncrementStat</ActivateOnEquip> // PRT
+		<FameBonus>6</FameBonus>
+		<Origin>Tarnished Accessory</Origin>
+	</Object>
+	<Object type="0x7071" id="Protector's Gemstone">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ArtifactAccessories</File>
+			<Index>0x01</Index>
+		</Texture>
+		<SlotType>9</SlotType>
+		<TierType>Artifact</TierType>
+		<Description>Wearers of the ring were granted resilience unlike no other, during the time the ring was found, it was profound to even joke about  obtaining this much defensive power, after many studies they have made new equipment with similar attributes.</Description>
+		<ActivateOnEquip stat="21" amount="3">IncrementStat</ActivateOnEquip> // DEF
+		<ActivateOnEquip stat="26" amount="10">IncrementStat</ActivateOnEquip> // VIT
+		<ActivateOnEquip stat="122" amount="450">IncrementStat</ActivateOnEquip> // PRT
+		<FameBonus>6</FameBonus>
+		<Origin>Tarnished Accessory</Origin>
+	</Object>
+	<Object type="0x7135" id="Lich-King's Lost Treasure">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ArtifactAccessories</File>
+			<Index>0x02</Index>
+		</Texture>
+		<SlotType>9</SlotType>
+		<TierType>Artifact</TierType>
+		<Description>Comprised of an unspeakable substance, manifested in the remains of a tortoise, who knew the intestines of a turtle could procure such a fine gem.</Description>
+		<ActivateOnEquip stat="3" amount="150">IncrementStat</ActivateOnEquip> // MP
+		<ActivateOnEquip stat="27" amount="60">IncrementStat</ActivateOnEquip> // WIS
+		<ActivateOnEquip stat="122" amount="100">IncrementStat</ActivateOnEquip> // PRT
+		<FameBonus>6</FameBonus>
+		<Origin>Tarnished Accessory</Origin>
+	</Object>
+	<Object type="0x7072" id="Sacrificial Momentum">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ArtifactAccessories</File>
+			<Index>0x03</Index>
+		</Texture>
+		<SlotType>9</SlotType>
+		<TierType>Artifact</TierType>
+		<Description>Sacrifice some blood to reap horror into your enemies eyes.</Description>
+		<ActivateOnEquip stat="20" amount="5">IncrementStat</ActivateOnEquip> // HP
+		<ActivateOnEquip stat="22" amount="10">IncrementStat</ActivateOnEquip> // SPD
+		<ActivateOnEquip stat="28" amount="15">IncrementStat</ActivateOnEquip> // DEX
+		<ActivateOnEquip stat="122" amount="75">IncrementStat</ActivateOnEquip> // PRT
+		<FameBonus>6</FameBonus>
+		<Origin>Tarnished Accessory</Origin>
+	</Object>
+	<Object type="0x7077" id="Hamsa Necklace">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ArtifactAccessories</File>
+			<Index>0x04</Index>
+		</Texture>
+		<SlotType>9</SlotType>
+		<TierType>Artifact</TierType>
+		<Description>An item known to be imbued with luck and fortune, many attempt to get their hands on this delicate piece.</Description>
+		<ActivateOnEquip stat="102" amount="10">IncrementStat</ActivateOnEquip> // FRT
+		<ActivateOnEquip stat="112" amount="45">IncrementStat</ActivateOnEquip> // MGT
+		<ActivateOnEquip stat="114" amount="55">IncrementStat</ActivateOnEquip> // LCK
+		<ActivateOnEquip stat="122" amount="50">IncrementStat</ActivateOnEquip> // PRT
+		<FameBonus>6</FameBonus>
+		<Origin>Tarnished Accessory</Origin>
+	</Object>
+	<Object type="0x7198" id="Fractal Pendant">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ArtifactAccessories</File>
+			<Index>0x05</Index>
+		</Texture>
+		<SlotType>9</SlotType>
+		<TierType>Artifact</TierType>
+		<Description>A mighty pendant feared by many, those who knew about it were slain, without many to identify it's origin, the craftsman will never be   known.</Description>
+		<ActivateOnEquip stat="0" amount="-50">IncrementStat</ActivateOnEquip> // HP
+		<ActivateOnEquip stat="20" amount="30">IncrementStat</ActivateOnEquip> // ATK
+		<ActivateOnEquip stat="28" amount="5">IncrementStat</ActivateOnEquip> // DEX
+		<FameBonus>6</FameBonus>
+		<Origin>Tarnished Accessory</Origin>
+	</Object>
+	<Object type="0x7080" id="Effervescent Rosebud">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ArtifactAccessories</File>
+			<Index>0x06</Index>
+		</Texture>
+		<SlotType>9</SlotType>
+		<TierType>Artifact</TierType>
+		<Description>A flowerbud plucked from the middle of the everstretching rose gardens of Evelyn.</Description>
+		<ActivateOnEquip stat="0" amount="175">IncrementStat</ActivateOnEquip> // HP
+		<ActivateOnEquip stat="20" amount="5">IncrementStat</ActivateOnEquip> // ATK
+		<ActivateOnEquip stat="26" amount="75">IncrementStat</ActivateOnEquip> // VIT
+		<ActivateOnEquip stat="122" amount="50">IncrementStat</ActivateOnEquip> // PRT
+		<FameBonus>6</FameBonus>
+		<Origin>Tarnished Accessory</Origin>
+	</Object>
+	<Object type="0x7136" id="Stories Untold">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ArtifactAccessories</File>
+			<Index>0x07</Index>
+		</Texture>
+		<SlotType>9</SlotType>
+		<TierType>Artifact</TierType>
+		<Description>The longing memories this ring had experienced is shown in the craftsmanship, and the miniscule scratches embezzled in the gem.</Description>
+		<ActivateOnEquip stat="3" amount="100">IncrementStat</ActivateOnEquip> // MP
+		<ActivateOnEquip stat="114" amount="200">IncrementStat</ActivateOnEquip> // LCK
+		<ActivateOnEquip stat="122" amount="50">IncrementStat</ActivateOnEquip> // PRT
+		<FameBonus>6</FameBonus>
+		<Origin>Tarnished Accessory</Origin>
+	</Object>
+	<Object type="0x7074" id="Bracelet of the First Sunrise">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ArtifactAccessories</File>
+			<Index>0x08</Index>
+		</Texture>
+		<SlotType>9</SlotType>
+		<TierType>Artifact</TierType>
+		<Description>Fills the wearer with a sense of inner peace and balance.</Description>
+		<ActivateOnEquip stat="0" amount="50">IncrementStat</ActivateOnEquip> // HP
+		<ActivateOnEquip stat="3" amount="50">IncrementStat</ActivateOnEquip> // MP
+		<ActivateOnEquip stat="20" amount="5">IncrementStat</ActivateOnEquip> // ATK
+		<ActivateOnEquip stat="21" amount="5">IncrementStat</ActivateOnEquip> // DEF
+		<ActivateOnEquip stat="22" amount="5">IncrementStat</ActivateOnEquip> // SPD
+		<ActivateOnEquip stat="26" amount="5">IncrementStat</ActivateOnEquip> // VIT
+		<ActivateOnEquip stat="27" amount="5">IncrementStat</ActivateOnEquip> // WIS
+		<ActivateOnEquip stat="28" amount="5">IncrementStat</ActivateOnEquip> // DEX
+		<ActivateOnEquip stat="112" amount="20">IncrementStat</ActivateOnEquip> // MGT
+		<ActivateOnEquip stat="114" amount="20">IncrementStat</ActivateOnEquip> // LCK
+		<ActivateOnEquip stat="121" amount="5">IncrementStat</ActivateOnEquip> // RES
+		<Steal type="life" amount="1"/>
+		<Steal type="mana" amount="1"/>
+		<FameBonus>6</FameBonus>
+		<Origin>Tarnished Accessory</Origin>
+	</Object>
+	<Object type="0x7400" id="Gemstone of Ambition">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ArtifactAccessories</File>
+			<Index>0x09</Index>
+		</Texture>
+		<SlotType>9</SlotType>
+		<TierType>Artifact</TierType>
+		<Description>A burning scarlet diamond held as the treasure of the volcano manor.</Description>
+		<ActivateOnEquip stat="0" amount="150">IncrementStat</ActivateOnEquip> // HP
+		<ActivateOnEquip stat="21" amount="6">IncrementStat</ActivateOnEquip> // DEF
+		<ActivateOnEquip stat="26" amount="25">IncrementStat</ActivateOnEquip> // VIT
+		<ActivateOnEquip stat="121" amount="50">IncrementStat</ActivateOnEquip> // RES
+		<ActivateOnEquip stat="122" amount="150">IncrementStat</ActivateOnEquip> // PRT
+		<FameBonus>6</FameBonus>
+		<Origin>Tarnished Accessory</Origin>
+	</Object>
+	<Object type="0x7137" id="Uplifting Trinket">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>ArtifactAccessories</File>
+			<Index>0x0a</Index>
+		</Texture>
+		<SlotType>9</SlotType>
+		<TierType>Artifact</TierType>
+		<Description>Ascension comes at a cost, a physical expense...</Description>
+		<ActivateOnEquip stat="0" amount="-175">IncrementStat</ActivateOnEquip> // HP
+		<ActivateOnEquip stat="20" amount="40">IncrementStat</ActivateOnEquip> // ATK
+		<ActivateOnEquip stat="28" amount="10">IncrementStat</ActivateOnEquip> // DEX
+		<FameBonus>6</FameBonus>
+		<Origin>Tarnished Accessory</Origin>
+	</Object>
+	<!-- #endregion -->
+</Objects>

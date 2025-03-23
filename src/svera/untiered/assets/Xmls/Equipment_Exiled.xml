@@ -1,0 +1,250 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Objects>
+	<!-- #region --> // Light Armors
+	<!-- #endregion -->
+	<!-- #region --> // Medium Armors
+	<!-- #endregion -->
+	<!-- #region --> // Heavy Armors
+	<Object type="0x7925" id="Drannol's Redemption">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>lofiGodSlayerArmor</File>
+			<Index>0x00</Index>
+		</Texture>
+		<SlotType>7</SlotType>
+		<TierType>Exiled</TierType>
+		<Description>Indestructible magical armor made for the elite stoneborn champions of the eastern citadels.</Description>
+		<ActivateOnEquip stat="0" amount="2500">IncrementStat</ActivateOnEquip> // HP
+		<ActivateOnEquip stat="20" amount="-20">IncrementStat</ActivateOnEquip> // ATK
+		<ActivateOnEquip stat="28" amount="-10">IncrementStat</ActivateOnEquip> // DEX
+		<FameBonus>8</FameBonus>
+		<Origin>Relic Sword</Origin>
+	</Object>
+	<!-- #endregion -->
+	<!-- #region --> // Swords
+	<Object type="0x7265" id="Revenant Claw">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>lofiGodSlayerWeapons</File>
+			<Index>0x02</Index>
+		</Texture>
+		<SlotType>1</SlotType>
+		<TierType>Exiled</TierType>
+		<Description>A sword thought to have been long lost for centuries, it pulls all power it can gain. It's unstable power is rumored to corrupt even the purest of souls, consuming them to absolute darkness.</Description>
+		<ActivateOnEquip stat="3" amount="150">IncrementStat</ActivateOnEquip> // MP
+		<ActivateOnEquip stat="121" amount="60">IncrementStat</ActivateOnEquip> // RES
+		<Sound>weapon/newsounds/heavysword</Sound>
+		<OldSound>weapon/newsounds/heavyswordshoot</OldSound>
+		<RateOfFire>1.2</RateOfFire>
+		<NumProjectiles>1</NumProjectiles>
+		<Projectile>
+			<ObjectId>Revenant Claw Bolt</ObjectId>
+			<Speed>100</Speed>
+			<MinDamage>500</MinDamage>
+			<MaxDamage>612</MaxDamage>
+			<LifetimeMS>400</LifetimeMS>
+			<ArmorPiercing/>
+			<MultiHit/>
+			<Wavy/>
+			<ConditionEffect duration="1.0">Deficient</ConditionEffect>
+		</Projectile>
+		<FameBonus>14</FameBonus>
+		<Origin>Relic Sword</Origin>
+	</Object>
+	<Object type="0x48fc" id="Revenant Claw Bolt">
+		<Class>Projectile</Class>
+		<RandomTexture>
+			<Texture>
+				<File>lofiGodlyProjectiles</File>
+				<Index>0x02</Index>
+			</Texture>
+			<Texture>
+				<File>lofiGodlyProjectiles</File>
+				<Index>0x03</Index>
+			</Texture>
+		</RandomTexture>
+		<AngleCorrection>1</AngleCorrection>
+	</Object>
+	<!-- #endregion -->
+	<!-- #region --> // Bows
+	<Object type="0x5868" id="Shade of the Phoenix">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>lofiGodSlayerWeapons</File>
+			<Index>0x01</Index>
+		</Texture>
+		<SlotType>3</SlotType>
+		<TierType>Exiled</TierType>
+		<Description>The power within this bow, has been Replicated by the power of the Godly Remnant. The power of the previous owner resides within...</Description>
+		<ActivateOnEquip stat="26" amount="20">IncrementStat</ActivateOnEquip> // VIT
+		<Sound>weapon/newsounds/heavybow</Sound>
+		<OldSound>weapon/newsounds/heavybowshoot</OldSound>
+		<RateOfFire>1.3</RateOfFire>
+		<NumProjectiles>3</NumProjectiles>
+		<ArcGap>8</ArcGap>
+		<Projectile>
+			<ObjectId>SOTP</ObjectId>
+			<Speed>185</Speed>
+			<MinDamage>150</MinDamage>
+			<MaxDamage>188</MaxDamage>
+			<LifetimeMS>420</LifetimeMS>
+			<ArmorPiercing/>
+			<MultiHit/>
+		</Projectile>
+		<FameBonus>10</FameBonus>
+		<Origin>Relic Bow</Origin>
+	</Object>
+	<Object type="0x5869" id="SOTP">
+		<Class>Projectile</Class>
+		<RandomTexture>
+			<Texture>
+				<File>lofiGodSlayerProjectiles</File>
+				<Index>0x01</Index>
+			</Texture>
+			<Texture>
+				<File>lofiGodSlayerProjectiles</File>
+				<Index>0x02</Index>
+			</Texture>
+		</RandomTexture>
+		<AngleCorrection>1</AngleCorrection>
+	</Object>
+	<!-- #endregion -->
+	<!-- #region --> // Daggers
+	<Object type="0x5870" id="Blade of the Angel's Honor">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>lofiGodSlayerWeapons</File>
+			<Index>0x00</Index>
+		</Texture>
+		<SlotType>2</SlotType>
+		<TierType>Exiled</TierType>
+		<Description>The Treasure within has a Awakened, This item makes you Feel Unstoppable, it's as if you've aquired the power to destroy a thousand men.</Description>
+		<ActivateOnEquip stat="20" amount="8">IncrementStat</ActivateOnEquip> // ATK
+		<ActivateOnEquip stat="22" amount="10">IncrementStat</ActivateOnEquip> // SPD
+		<ActivateOnEquip stat="28" amount="8">IncrementStat</ActivateOnEquip> // DEX
+		<Sound>weapon/newsounds/heavydagger</Sound>
+		<OldSound>weapon/newsounds/heavydaggershoot</OldSound>
+		<RateOfFire>1.25</RateOfFire>
+		<Projectile>
+			<ObjectId>BOTAH</ObjectId>
+			<Speed>200</Speed>
+			<MinDamage>420</MinDamage>
+			<MaxDamage>420</MaxDamage>
+			<LifetimeMS>350</LifetimeMS>
+			<PassesCover/>
+			<Wavy/>
+			<ArmorPiercing/>
+		</Projectile>
+		<FameBonus>10</FameBonus>
+		<Origin>Relic Dagger</Origin>
+	</Object>
+	<Object type="0x5871" id="BOTAH">
+		<Class>Projectile</Class>
+		<Texture>
+			<File>lofiGodSlayerProjectiles</File>
+			<Index>0x00</Index>
+		</Texture>
+		<AngleCorrection>1</AngleCorrection>
+	</Object>
+	<!-- #endregion -->
+	<!-- #region --> // Wands
+	<!-- #endregion -->
+	<!-- #region --> // Staves
+	<Object type="0x7953" id="Olden Fear">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>lofiObj7</File>
+			<Index>0xcf</Index>
+		</Texture>
+		<SlotType>8</SlotType>
+		<TierType>Exiled</TierType>
+		<Description>Many cities crumbled at the hand of this masterpiece, some terrified, most feared.</Description>
+		<Sound>weapon/newsounds/heavystaff</Sound>
+		<OldSound>weapon/newsounds/heavystaffshoot</OldSound>
+		<RateOfFire>0.3</RateOfFire>
+		<NumProjectiles>2</NumProjectiles>
+		<ArcGap>8</ArcGap>
+		<Projectile>
+			<ObjectId>OFear Shot</ObjectId>
+			<Speed>100</Speed>
+			<MinDamage>550</MinDamage>
+			<MaxDamage>800</MaxDamage>
+			<LifetimeMS>840</LifetimeMS>
+			<Amplitude>0.26</Amplitude>
+			<Frequency>0.71</Frequency>
+			<Size>120</Size>
+			<MultiHit/>
+			<ArmorPiercing/>
+		</Projectile>
+		<FameBonus>8</FameBonus>
+		<Origin>Relic Staff</Origin>
+	</Object>
+	<Object type="0x7956" id="OFear Shot">
+		<Class>Projectile</Class>
+		<Texture>
+			<File>lofiObj7</File>
+			<Index>0xde</Index>
+		</Texture>
+		<Size>150</Size>
+		<AngleCorrection>1</AngleCorrection>
+	</Object>
+	<!-- #endregion -->
+	<!-- #region --> // Katanas
+	<!-- #endregion -->
+	<!-- #region --> // Lances
+	<!-- #endregion -->
+	<!-- #region --> // Blades
+	<!-- #endregion -->
+	<!-- #region --> // Accessories
+	<Object type="0x5872" id="Poseidon's Gauntlet">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>lofiGodSlayerAccessories</File>
+			<Index>0x00</Index>
+		</Texture>
+		<SlotType>9</SlotType>
+		<TierType>Exiled</TierType>
+		<Description>Poseidon's very own gauntlet, using the godly remnant had seemed to cause the ring to morph into a Gauntlet radiating with power.</Description>
+		<ActivateOnEquip stat="0" amount="200">IncrementStat</ActivateOnEquip> // HP
+		<ActivateOnEquip stat="3" amount="200">IncrementStat</ActivateOnEquip> // MP
+		<ActivateOnEquip stat="28" amount="12">IncrementStat</ActivateOnEquip> // DEX
+		<ActivateOnEquip stat="20" amount="12">IncrementStat</ActivateOnEquip> // ATK
+		<Steal type="mana" amount="6"/>
+		<ItemEffect>Equilibrium</ItemEffect>
+		<Exiled id="Equilibrium"/>
+		<FameBonus>10</FameBonus>
+		<Origin>Relic Accessory</Origin>
+	</Object>
+	<Object type="0x5470" id="Omnipotence Ring">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>lostHallsObjects8x8</File>
+			<Index>0xab</Index>
+		</Texture>
+		<SlotType>9</SlotType>
+		<TierType>Exiled</TierType>
+		<Description>An unfathomable amount of strength pulses through this ring. Only the most righteous mortals can touch this ring and live.</Description>
+		<ActivateOnEquip stat="0" amount="140">IncrementStat</ActivateOnEquip> // HP
+		<ActivateOnEquip stat="3" amount="140">IncrementStat</ActivateOnEquip> // MP
+		<ActivateOnEquip stat="20" amount="14">IncrementStat</ActivateOnEquip> // ATT
+		<ActivateOnEquip stat="21" amount="14">IncrementStat</ActivateOnEquip> // DEF
+		<ActivateOnEquip stat="22" amount="14">IncrementStat</ActivateOnEquip> // SPD
+		<ActivateOnEquip stat="28" amount="14">IncrementStat</ActivateOnEquip> // DEX
+		<ActivateOnEquip stat="26" amount="14">IncrementStat</ActivateOnEquip> // VIG
+		<ActivateOnEquip stat="27" amount="14">IncrementStat</ActivateOnEquip> // INT
+		<Steal type="life" amount="2"/>
+		<Steal type="mana" amount="2"/>
+		<ItemEffect>Equilibrium</ItemEffect>
+		<Exiled id="Equilibrium"/>
+		<FameBonus>10</FameBonus>
+		<Origin>Relic Accessory</Origin>
+	</Object>
+	<!-- #endregion -->
+</Objects>

@@ -122,6 +122,7 @@ import svera.untiered.messaging.impl.outgoing.Hello;
 import svera.untiered.messaging.impl.outgoing.InvDrop;
 import svera.untiered.messaging.impl.outgoing.InvSwap;
 import svera.untiered.messaging.impl.outgoing.JoinGuild;
+import svera.untiered.messaging.impl.outgoing.LaunchRaid;
 import svera.untiered.messaging.impl.outgoing.Load;
 import svera.untiered.messaging.impl.outgoing.Move;
 import svera.untiered.messaging.impl.outgoing.PlayerHit;
@@ -134,6 +135,7 @@ import svera.untiered.messaging.impl.outgoing.StorageRequest;
 import svera.untiered.messaging.impl.outgoing.StorageUpgrade;
 import svera.untiered.messaging.impl.outgoing.Teleport;
 import svera.untiered.messaging.impl.outgoing.TradeRequest;
+import svera.untiered.messaging.impl.outgoing.UnboxRequest;
 import svera.untiered.messaging.impl.outgoing.UseItem;
 import svera.untiered.messaging.impl.outgoing.UsePortal;
 import svera.untiered.minimap.control.UpdateGameObjectTileSignal;
@@ -211,6 +213,9 @@ public class GameServerConnection {
     public static const VAULTSLOTUPDATE:int = 60;
     public static const VAULTREQUEST:int = 61;
     public static const VAULTUPGRADE:int = 62;
+    public static const LAUNCH_RAID:int = 88;
+    public static const UNBOXREQUEST:int = 92;
+    public static const UNBOXRESULT:int = 93;// add 94
 
     public static var instance:GameServerConnection;
 
@@ -359,6 +364,9 @@ public class GameServerConnection {
         messages.map(VAULTSLOTUPDATE).toMessage(StorageSlotUpdate).toMethod(this.storageSlotUpdate);
         messages.map(VAULTREQUEST).toMessage(StorageRequest);
         messages.map(VAULTUPGRADE).toMessage(StorageUpgrade);
+        messages.map(UNBOXREQUEST).toMessage(UnboxRequest);
+        messages.map(LAUNCH_RAID).toMessage(LaunchRaid);
+
     }
 
     private function unmapMessages():void {

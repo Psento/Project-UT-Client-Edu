@@ -137,6 +137,11 @@ public class Player extends Character {
     private var breathFill_:GraphicsSolidFill = null;
     private var breathPath_:GraphicsPath = null;
     private var hallucinatingMaskedImage_:MaskedImage = null;
+    public var goldLootbox_:int = 0;
+    public var eliteLootbox_:int = 0;
+    public var premiumLootbox_:int = 0;
+    public var legendaryLootbox_:int = 0;
+    public var eventLootbox_:int = 0;
 
     public function Player(objectXML:XML) {
         this.ip_ = new IntPoint();

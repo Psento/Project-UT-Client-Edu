@@ -25,6 +25,8 @@ import svera.untiered.constants.GeneralConstants;
 import svera.untiered.core.model.MapModel;
 import svera.untiered.core.model.PlayerModel;
 import svera.untiered.game.view.CurrencyDisplay;
+import svera.untiered.game.view.LootboxModalButton;
+import svera.untiered.game.view.RaidLauncherButton;
 import svera.untiered.messaging.impl.GameServerConnection;
 import svera.untiered.messaging.impl.incoming.MapInfo;
 import svera.untiered.stage3D.Renderer;
@@ -53,6 +55,8 @@ public class GameSprite extends Sprite {
     private var focus:GameObject;
     private var isGameStarted:Boolean;
     private var displaysPosY:uint = 4;
+
+
 
     public function GameSprite(gameId:int, createCharacter:Boolean, charId:int, model:PlayerModel, mapJSON:String, traits:Array) {
         this.camera_ = new Camera();

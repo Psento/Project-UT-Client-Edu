@@ -1,5 +1,6 @@
 package svera.untiered.messaging.impl.outgoing {
 import flash.utils.ByteArray;
+import flash.utils.IDataOutput;
 
 public class LaunchRaid extends OutgoingMessage {
 
@@ -10,7 +11,7 @@ public class LaunchRaid extends OutgoingMessage {
     public var raidId_:int;
 
 
-    override public function writeToOutput(_arg1:ByteArray):void {
+    override public function writeToOutput(_arg1:IDataOutput):void {
         _arg1.writeInt(this.raidId_);
 
     }

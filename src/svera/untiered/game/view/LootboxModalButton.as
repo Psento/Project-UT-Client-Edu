@@ -10,21 +10,16 @@ import flash.display.BitmapData;
 import flash.display.Sprite;
 import flash.events.MouseEvent;
 
-import kabam.rotmg.core.StaticInjectorContext;
-import kabam.rotmg.core.signals.HideTooltipsSignal;
-import kabam.rotmg.core.signals.ShowTooltipSignal;
-import kabam.rotmg.dialogs.control.OpenDialogSignal;
-import kabam.rotmg.lootBoxes.LootboxModal;
-import kabam.rotmg.tooltips.HoverTooltipDelegate;
-import kabam.rotmg.tooltips.TooltipAble;
-import kabam.rotmg.ui.UIUtils;
+import svera.untiered.core.StaticInjectorContext;
+import svera.untiered.dialogs.control.OpenDialogSignal;
+import svera.untiered.lootBoxes.LootboxModal;
+import svera.untiered.ui.UIUtils;
 
-public class LootboxModalButton extends Sprite implements TooltipAble {
+public class LootboxModalButton extends Sprite {
 
     public static const IMAGE_NAME:String = "lofiCharBig";
     public static const IMAGE_ID:int = 101;
 
-    public var hoverTooltipDelegate:HoverTooltipDelegate;
     private var bitmap:Bitmap;
     private var background:Sprite;
     private var lootBoxTexture:BitmapData;
@@ -32,7 +27,6 @@ public class LootboxModalButton extends Sprite implements TooltipAble {
     public var gs_:GameSprite;
 
     public function LootboxModalButton() {
-        this.hoverTooltipDelegate = new HoverTooltipDelegate();
         this.tooltip = new TextToolTip(0x363636, 0x000000, null, "Unbox the latest Lootboxes you've earned.", 200);
         super();
         mouseChildren = false;
@@ -41,26 +35,8 @@ public class LootboxModalButton extends Sprite implements TooltipAble {
         this.bitmap = new Bitmap(this.lootBoxTexture);
         this.bitmap.x = -9;
         this.bitmap.y = -9;
-        this.hoverTooltipDelegate.setDisplayObject(this);
-        this.hoverTooltipDelegate.tooltip = this.tooltip;
         this.drawAsOpen();
         addEventListener(MouseEvent.CLICK, this.onClick);
-    }
-
-    public function setShowToolTipSignal(_arg_1:ShowTooltipSignal):void {
-        this.hoverTooltipDelegate.setShowToolTipSignal(_arg_1);
-    }
-
-    public function getShowToolTip():ShowTooltipSignal {
-        return (this.hoverTooltipDelegate.getShowToolTip());
-    }
-
-    public function setHideToolTipsSignal(_arg_1:HideTooltipsSignal):void {
-        this.hoverTooltipDelegate.setHideToolTipsSignal(_arg_1);
-    }
-
-    public function getHideToolTips():HideTooltipsSignal {
-        return (this.hoverTooltipDelegate.getHideToolTips());
     }
 
     public function drawAsOpen():void {

@@ -1,7 +1,7 @@
 package svera.untiered.game.view {
 
-import kabam.rotmg.account.core.Account;
-import kabam.rotmg.game.signals.UpdateLootboxButtonSignal;
+import svera.untiered.account.core.Account;
+import svera.untiered.game.signals.UpdateLootboxButtonSignal;
 
 public class LootboxMediator {
 

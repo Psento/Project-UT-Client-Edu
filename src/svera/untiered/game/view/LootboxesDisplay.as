@@ -25,7 +25,6 @@ public class LootboxesDisplay extends Sprite {
     private static const FONT_SIZE:int = 18;
     public static const IMAGE_NAME:String = "legendaries8x8Embed";
     public static const IMAGE_ID:int = 16;
-    public static const waiter:SignalWaiter = new SignalWaiter();
 
     public var lootbox2Text:SimpleText;
     public var lootbox3Text:SimpleText;
@@ -45,7 +44,6 @@ public class LootboxesDisplay extends Sprite {
         this.gs = _arg_1;
 
             this.lootbox2Text = this.makeTextField();
-            waiter.push(this.lootbox2Text.textChanged);
             addChild(this.lootbox2Text);
         var _local_6:BitmapData = AssetLibrary.getImageFromSet(IMAGE_NAME, 459);
         _local_6 = TextureRedrawer.redraw(_local_6, 40, true, 0);
@@ -53,7 +51,6 @@ public class LootboxesDisplay extends Sprite {
             addChild(this.lootbox2Icon);
 
         this.lootbox3Text = this.makeTextField();
-        waiter.push(this.lootbox3Text.textChanged);
         addChild(this.lootbox3Text);
         var _local_7:BitmapData = AssetLibrary.getImageFromSet(IMAGE_NAME, 18);
         _local_7 = TextureRedrawer.redraw(_local_7, 40, true, 0);
@@ -61,7 +58,6 @@ public class LootboxesDisplay extends Sprite {
         addChild(this.lootbox3Icon);
 
         this.lootbox4Text = this.makeTextField();
-        waiter.push(this.lootbox4Text.textChanged);
         addChild(this.lootbox4Text);
         var _local_8:BitmapData = AssetLibrary.getImageFromSet(IMAGE_NAME, 19);
         _local_8 = TextureRedrawer.redraw(_local_8, 40, true, 0);
@@ -73,13 +69,6 @@ public class LootboxesDisplay extends Sprite {
         mouseEnabled = true;
         doubleClickEnabled = true;
         addEventListener(MouseEvent.DOUBLE_CLICK, this.onDoubleClick, false, 0, true);
-        waiter.complete.add(this.onAlignHorizontal);
-    }
-
-    private function onAlignHorizontal():void {
-
-
-
     }
 
     private function onDoubleClick(_arg_1:MouseEvent):void {
@@ -101,9 +90,6 @@ public class LootboxesDisplay extends Sprite {
         this.lootbox2Text.setText(this.lootBox2_.toString());
         this.lootbox3Text.setText(this.lootBox3_.toString());
         this.lootbox4Text.setText(this.lootBox4_.toString());
-        if (waiter.isEmpty()) {
-            this.onAlignHorizontal();
-        }
     }
 
 

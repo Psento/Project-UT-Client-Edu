@@ -18,7 +18,7 @@ public class ItemConstants {
     public static const ROBE_TYPE:int = 14;
     public static const GUN_TYPE:int = 15;
     public static const HELM_TYPE:int = 16;
-    public static const CLAWS_GAUNTLET_TYPE = 17;
+    public static const CLAWS_GAUNTLET_TYPE:int = 17;
     public static const POISON_TYPE:int = 18;
     public static const SKULL_TYPE:int = 19;
     public static const TRAP_OLD_TYPE:int = 20;

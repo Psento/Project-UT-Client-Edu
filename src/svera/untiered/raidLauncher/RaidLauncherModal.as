@@ -3,6 +3,7 @@ import com.company.assembleegameclient.sound.SoundEffectLibrary;
 import com.company.assembleegameclient.ui.TextButton;
 import com.company.ui.SimpleText;
 
+import flash.display.Bitmap;
 import flash.display.DisplayObject;
 import flash.display.Sprite;
 import flash.events.Event;
@@ -20,10 +21,14 @@ public class RaidLauncherModal extends EmptyFrame {
     public static const MODAL_WIDTH:int = 440;
     public static const MODAL_HEIGHT:int = 500;
 
-    public static var backgroundImageEmbed:Class = RaidLauncher_backgroundImageEmbed;
-    public static var raid1launchFlagEmbed:Class = Raid1_launchFlag;
-    public static var raid2launchFlagEmbed:Class = Raid2_launchFlag;
-    public static var raid3launchFlagEmbed:Class = Raid3_launchFlag;
+    [Embed(source="RaidLauncher_backgroundImageEmbed.png")]
+    public static var backgroundImageEmbed:Class;
+    [Embed(source="Raid1_launchFlag.png")]
+    public static var raid1launchFlagEmbed:Class;
+    [Embed(source="Raid2_launchFlag.png")]
+    public static var raid2launchFlagEmbed:Class;
+    [Embed(source="Raid3_launchFlag.png")]
+    public static var raid3launchFlagEmbed:Class;
     public static var modalWidth:int = MODAL_WIDTH;
     public static var modalHeight:int = MODAL_HEIGHT;
 
@@ -69,22 +74,22 @@ public class RaidLauncherModal extends EmptyFrame {
 
     override protected function makeModalBackground():Sprite {
         var _local1:Sprite = new Sprite();
-        var _local2:DisplayObject = new backgroundImageEmbed();
+        var _local2:DisplayObject = new Bitmap(new backgroundImageEmbed().bitmapData);
         _local2.width = (modalWidth + 1);
         _local2.height = (modalHeight - 25);
         _local2.y = 27;
         _local2.alpha = 1.00;
-        var _local3:DisplayObject = new raid1launchFlagEmbed();
+        var _local3:DisplayObject = new Bitmap(new raid1launchFlagEmbed().bitmapData);
         _local3.width = 440;
         _local3.height = 80;
         _local3.y = 30;
         _local3.alpha = 1.00;
-        var _local5:DisplayObject = new raid2launchFlagEmbed();
+        var _local5:DisplayObject = new Bitmap(new raid2launchFlagEmbed().bitmapData);
         _local5.width = 440;
         _local5.height = 80;
         _local5.y = 150;
         _local5.alpha = 1;
-        var _local6:DisplayObject = new raid3launchFlagEmbed();
+        var _local6:DisplayObject = new Bitmap(new raid3launchFlagEmbed().bitmapData);
         _local6.width = 330;
         _local6.height = 80;
         _local6.y = 270;

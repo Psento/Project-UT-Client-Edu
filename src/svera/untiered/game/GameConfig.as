@@ -38,6 +38,8 @@ import svera.untiered.game.signals.UsePotionSignal;
 import svera.untiered.game.view.CurrencyDisplay;
 import svera.untiered.game.view.CurrencyDisplayMediator;
 import svera.untiered.game.view.GameSpriteMediator;
+import svera.untiered.game.view.LootboxMediator;
+import svera.untiered.game.view.LootboxModalButton;
 import svera.untiered.game.view.MapOverlayMediator;
 import svera.untiered.game.view.PortalPanelMediator;
 import svera.untiered.game.view.SellableObjectPanel;
@@ -47,6 +49,8 @@ import svera.untiered.game.view.components.StatMediator;
 import svera.untiered.game.view.components.StatView;
 import svera.untiered.game.view.components.StatsMediator;
 import svera.untiered.game.view.components.StatsView;
+import svera.untiered.lootBoxes.LootboxModal;
+import svera.untiered.lootBoxes.LootboxModalMediator;
 
 public class GameConfig implements IConfig {
 
@@ -90,6 +94,7 @@ public class GameConfig implements IConfig {
         this.mediatorMap.map(TextBox).toMediator(TextBoxMediator);
         this.mediatorMap.map(MapOverlay).toMediator(MapOverlayMediator);
         this.mediatorMap.map(Map).toMediator(MapMediator);
+        this.mediatorMap.map(LootboxModal).toMediator(LootboxModalMediator);
         this.mediatorMap.map(StatView).toMediator(StatMediator);
         this.mediatorMap.map(StatsView).toMediator(StatsMediator);
         this.commandMap.map(UsePotionSignal).toCommand(UsePotionCommand);
@@ -101,6 +106,8 @@ public class GameConfig implements IConfig {
         this.mediatorMap.map(GameSprite).toMediator(GameSpriteMediator);
         this.mediatorMap.map(CurrencyDisplay).toMediator(CurrencyDisplayMediator);
         this.mediatorMap.map(SellableObjectPanel).toMediator(SellableObjectPanelMediator);
+        this.mediatorMap.map(LootboxModalButton).toMediator(LootboxMediator);
+
     }
 }
 }

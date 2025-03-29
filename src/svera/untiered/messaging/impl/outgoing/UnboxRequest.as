@@ -1,5 +1,5 @@
 package svera.untiered.messaging.impl.outgoing {
-import flash.utils.ByteArray;
+import flash.utils.IDataOutput;
 
 public class UnboxRequest extends OutgoingMessage {
 
@@ -9,7 +9,7 @@ public class UnboxRequest extends OutgoingMessage {
         super(_arg1, _arg2);
     }
 
-    override public function writeToOutput(_arg1:ByteArray):void {
+    override public function writeToOutput(_arg1:IDataOutput):void {
         _arg1.writeInt(this.lootboxType_);
     }
 

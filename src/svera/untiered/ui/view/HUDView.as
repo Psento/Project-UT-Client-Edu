@@ -11,12 +11,17 @@ import flash.display.Sprite;
 import flash.events.Event;
 import flash.geom.Point;
 
+import svera.untiered.game.view.LootboxModalButton;
+
+import svera.untiered.game.view.RaidLauncherButton;
+
 import svera.untiered.game.view.components.StatsView;
 import svera.untiered.hud.HUD_Overlay;
 import svera.untiered.messaging.impl.incoming.TradeAccepted;
 import svera.untiered.messaging.impl.incoming.TradeChanged;
 import svera.untiered.messaging.impl.incoming.TradeStart;
 import svera.untiered.minimap.view.MiniMap;
+import svera.untiered.ui.UIUtils;
 
 public class HUDView extends Sprite {
     private const MAP_POSITION:Point = new Point(204, 4);
@@ -42,7 +47,10 @@ public class HUDView extends Sprite {
     public var tradePanel:TradePanel;
 
     public static var instance:HUDView;
+    public var raidLauncherButton:RaidLauncherButton;
+    private var displaysPosY:uint = 4;
 
+    public var lootBoxButton:LootboxModalButton;
 
     public function HUDView() {
         super();
@@ -114,6 +122,8 @@ public class HUDView extends Sprite {
 
         this.interactPanel.x = this.INTERACT_PANEL_POSITION.x;
         this.interactPanel.y = GameClient.StageHeight - interactPanel.height;
+        showRaidLauncher();
+        showLootboxButton();
 
         addChild(this.inventoryGrid);
         addChild(this.equippedGrid);
@@ -192,6 +202,21 @@ public class HUDView extends Sprite {
         if (this.inventoryGrid.visible) {
             this.CloseInventory();
         } else this.OpenInventory();
+    }
+    private function showRaidLauncher():void {
+        this.raidLauncherButton = new RaidLauncherButton();
+        this.raidLauncherButton.x = 6;
+        this.raidLauncherButton.y = (this.displaysPosY + 2);
+        this.displaysPosY = (this.displaysPosY + UIUtils.NOTIFICATION_SPACE);
+        addChild(this.raidLauncherButton);
+    }
+
+
+    private function showLootboxButton():void {
+        this.lootBoxButton = new LootboxModalButton();
+        this.lootBoxButton.x = this.raidLauncherButton.x + 32;
+        this.lootBoxButton.y = this.raidLauncherButton.y;
+        addChild(this.lootBoxButton);
     }
 }
 }

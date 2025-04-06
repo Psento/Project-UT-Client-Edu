@@ -1,7 +1,5 @@
 package svera.untiered.lootBoxes {
 
-import com.company.assembleegameclient.game.GameSprite;
-
 import flash.events.MouseEvent;
 
 import org.swiftsuspenders.Injector;
@@ -9,9 +7,7 @@ import org.swiftsuspenders.Injector;
 import robotlegs.bender.bundles.mvcs.Mediator;
 
 import svera.lib.net.api.MessageProvider;
-
 import svera.lib.net.impl.SocketServer;
-
 import svera.untiered.dialogs.control.CloseDialogsSignal;
 import svera.untiered.dialogs.control.OpenDialogSignal;
 import svera.untiered.game.signals.AddTextLineSignal;

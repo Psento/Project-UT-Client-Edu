@@ -12,9 +12,7 @@ import flash.events.Event;
 import flash.geom.Point;
 
 import svera.untiered.game.view.LootboxModalButton;
-
 import svera.untiered.game.view.RaidLauncherButton;
-
 import svera.untiered.game.view.components.StatsView;
 import svera.untiered.hud.HUD_Overlay;
 import svera.untiered.messaging.impl.incoming.TradeAccepted;

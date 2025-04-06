@@ -4,9 +4,8 @@ import flash.display.JointStyle;
 import flash.display.LineScaleMode;
 import flash.display.Sprite;
 
-import svera.untiered.util.graphics.GraphicsHelper;
-
 import svera.untiered.util.graphics.BevelRect;
+import svera.untiered.util.graphics.GraphicsHelper;
 
 public class PopupWindowBackground extends Sprite {
 

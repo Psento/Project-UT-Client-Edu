@@ -11,14 +11,7 @@ import flash.display.Sprite;
 import flash.events.MouseEvent;
 import flash.filters.DropShadowFilter;
 
-import kabam.rotmg.assets.services.IconFactory;
-import kabam.rotmg.text.view.SimpleText;
-import kabam.rotmg.text.view.stringBuilder.StaticStringBuilder;
-import kabam.rotmg.ui.view.SignalWaiter;
-
 import org.osflash.signals.Signal;
-
-import svera.untiered.ui.view.SignalWaiter;
 
 public class LootboxesDisplay extends Sprite {
 

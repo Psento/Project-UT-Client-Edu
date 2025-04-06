@@ -1,7 +1,6 @@
 package svera.untiered.lootBoxes {
 import com.company.assembleegameclient.objects.Player;
 import com.company.assembleegameclient.sound.SoundEffectLibrary;
-import com.company.assembleegameclient.ui.IconButton;
 import com.company.assembleegameclient.ui.TextButton;
 import com.company.assembleegameclient.util.Currency;
 import com.company.ui.SimpleText;
@@ -21,7 +20,6 @@ import svera.untiered.core.StaticInjectorContext;
 import svera.untiered.dialogs.control.CloseDialogsSignal;
 import svera.untiered.game.model.GameModel;
 import svera.untiered.game.view.LootboxesDisplay;
-import svera.untiered.messaging.impl.incoming.Text;
 import svera.untiered.util.components.LegacyBuyButton;
 
 public class LootboxModal extends EmptyFrame {

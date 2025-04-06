@@ -1,5 +1,4 @@
 package svera.untiered.messaging.impl.outgoing {
-import flash.utils.ByteArray;
 import flash.utils.IDataOutput;
 
 public class LaunchRaid extends OutgoingMessage {

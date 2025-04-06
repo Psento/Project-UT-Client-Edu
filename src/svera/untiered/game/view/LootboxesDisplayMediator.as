@@ -1,7 +1,4 @@
 ﻿package svera.untiered.game.view {
-import kabam.rotmg.account.core.signals.OpenMoneyWindowSignal;
-import kabam.rotmg.core.model.PlayerModel;
-
 import robotlegs.bender.bundles.mvcs.Mediator;
 
 public class LootboxesDisplayMediator extends Mediator {

@@ -11,8 +11,6 @@ import flash.text.TextFormatAlign;
 
 import org.osflash.signals.Signal;
 
-import svera.untiered.ui.view.CharacterWindowBackground;
-
 public class EmptyFrame extends Sprite {
     public static const TEXT_MARGIN:int = 20;
 

@@ -188,6 +188,7 @@ public class StatData {
     public static const PartySummoner:int = 182;
     public static const CosmeticPetType:int = 183;
     public static const HasCosmeticPet:int = 184;
+
     
     public static const FireFragments:int = 185;
     public static const WaterFragments:int = 186;
@@ -231,6 +232,9 @@ public class StatData {
     public static const MiningTier:int = 220;
     public static const LumberTier:int = 221;
     public static const ForageTier:int = 222;
+
+    public static const SURGE:int= 110;
+
 
     public var statType_:uint = 0;
 

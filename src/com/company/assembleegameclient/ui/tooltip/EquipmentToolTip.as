@@ -24,7 +24,7 @@ public class EquipmentToolTip extends ToolTip {
 
     private var icon_:Bitmap;
     private var titleText_:SimpleText;
-    private var tierText_:SimpleText;
+    private var tierText:SimpleText;
     private var descText_:SimpleText;
     private var line1_:LineBreakDesign;
     private var effectsText_:SimpleText;
@@ -112,19 +112,65 @@ public class EquipmentToolTip extends ToolTip {
     }
 
     private function addTierText():void {
-        this.tierText_ = new SimpleText(16, 16777215, false, 30, 0);
-        this.tierText_.setBold(true);
-        this.tierText_.y = this.icon_.height / 2 - this.titleText_.actualHeight_ / 2;
-        this.tierText_.x = MAX_WIDTH - 30;
-        if (this.objectXML_.hasOwnProperty("Consumable") == false && this.isPet() == false) {
+        this.tierText = new SimpleText(16, 16777215, false, 30, 0);
+        this.tierText.setBold(true);
+        this.tierText.y = this.icon_.height / 2 - this.titleText_.actualHeight_ / 2;
+        this.tierText.x = MAX_WIDTH - 30;
+        if (!this.objectXML_.hasOwnProperty("Consumable") && !this.isPet()) {
             if (this.objectXML_.hasOwnProperty("Tier")) {
-                this.tierText_.text = "T" + this.objectXML_.Tier;
-            } else {
-                this.tierText_.setColor(9055202);
-                this.tierText_.text = "UT";
+                this.tierText.text = "T" + this.objectXML_.Tier;
+
             }
-            this.tierText_.updateMetrics();
-            addChild(this.tierText_);
+            else if (objectXML_.hasOwnProperty("TierType")) {
+                switch (objectXML_.TierType) {
+                    case "Celestial":
+                        tierText.setColor(TooltipHelper.CELESTIAL_COLOR);
+                        tierText.text = "CL";
+                        break;
+                    case "Exiled":
+                        tierText.setColor(TooltipHelper.EXILED_COLOR);
+                        tierText.text = "EX";
+                        break;
+                    case "Relic":
+                        tierText.setColor(TooltipHelper.RELIC_COLOR);
+                        tierText.text = "R";
+                        break;
+                    case "Valiant":
+                        tierText.setColor(TooltipHelper.VALIANT_COLOR);
+                        tierText.text = "VL";
+                        break;
+                    case "Ancestral":
+                        tierText.setColor(TooltipHelper.ANCESTRAL_COLOR);
+                        tierText.text = "AN";
+                        break;
+                    case "Artifact":
+                        tierText.setColor(TooltipHelper.ARTIFACT_COLOR);
+                        tierText.text = "A";
+                        break;
+                    case "Tarnished":
+                        tierText.setColor(TooltipHelper.TARNISHED_COLOR);
+                        tierText.text = "T";
+                        break;
+                    case "Uncommon":
+                        tierText.setColor(TooltipHelper.UNCOMMON_COLOR);
+                        tierText.text = "UC";
+                        break;
+                    case "Stat":
+                        tierText.setColor(16777215);
+                        tierText.text = "S";
+                        break;
+                    case "Common":
+                        tierText.setColor(TooltipHelper.COMMON_COLOR);
+                        tierText.text = "C";
+                        break;
+                }
+            }
+            else {
+                this.tierText.setColor(9055202);
+                this.tierText.text = "UT";
+            }
+            this.tierText.updateMetrics();
+            addChild(this.tierText);
         }
     }
 
@@ -354,9 +400,6 @@ public class EquipmentToolTip extends ToolTip {
                         val = "+" + amt + " " + StatData.statToName(stat);
                     }
                     this.effects.push(new Effect("", val));
-                    continue;
-                default:
-
             }
         }
     }

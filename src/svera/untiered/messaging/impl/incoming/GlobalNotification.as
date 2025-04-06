@@ -1,5 +1,7 @@
 ﻿package svera.untiered.messaging.impl.incoming {
 import flash.utils.ByteArray;
+import flash.utils.IDataInput;
+import flash.utils.IDataOutput;
 
 public class GlobalNotification extends IncomingMessage
 {
@@ -12,7 +14,7 @@ public class GlobalNotification extends IncomingMessage
         super(param1,param2);
     }
 
-    override public function parseFromInput(param1:ByteArray) : void
+    override public function parseFromInput(param1:IDataInput) : void
     {
         this.text = param1.readUTF();
     }

@@ -1,4 +1,5 @@
 package svera.untiered.messaging.impl {
+import com.company.assembleegameclient.account.ui.unboxing.UnboxResultBox;
 import com.company.assembleegameclient.game.GameSprite;
 import com.company.assembleegameclient.game.events.GuildResultEvent;
 import com.company.assembleegameclient.game.events.ReconnectEvent;
@@ -105,6 +106,7 @@ import svera.untiered.messaging.impl.incoming.TradeChanged;
 import svera.untiered.messaging.impl.incoming.TradeDone;
 import svera.untiered.messaging.impl.incoming.TradeRequested;
 import svera.untiered.messaging.impl.incoming.TradeStart;
+import svera.untiered.messaging.impl.incoming.UnboxResultPacket;
 import svera.untiered.messaging.impl.incoming.Update;
 import svera.untiered.messaging.impl.outgoing.AcceptTrade;
 import svera.untiered.messaging.impl.outgoing.AoeAck;
@@ -376,6 +378,8 @@ public class GameServerConnection {
         messages.map(VAULTREQUEST).toMessage(StorageRequest);
         messages.map(VAULTUPGRADE).toMessage(StorageUpgrade);
         messages.map(UNBOXREQUEST).toMessage(UnboxRequest);
+        messages.map(UNBOXRESULT).toMessage(UnboxResultPacket).toMethod(unboxResult);
+
         messages.map(LAUNCH_RAID).toMessage(LaunchRaid);
 
     }
@@ -477,7 +481,9 @@ public class GameServerConnection {
         load.charId_ = this.charId_;
         this.serverConnection.sendMessage(load);
     }
-
+    private function unboxResult(_arg1:UnboxResultPacket):void {
+        StaticInjectorContext.getInjector().getInstance(OpenDialogSignal).dispatch(new UnboxResultBox(this.gs_, _arg1.items_));
+    }
     public function vaultUpgrade(objectId:int):void {
         var upgrade:StorageUpgrade = this.messages.require(VAULTUPGRADE) as StorageUpgrade;
         upgrade.objectId_ = objectId;
@@ -885,7 +891,7 @@ public class GameServerConnection {
     }
 
     private function onUpdate(update:Update):void {
-        var i:int = 0;
+        var i:int;
         var tile:GroundTileData = null;
         for (i = 0; i < update.tiles_.length; i++) {
             tile = update.tiles_[i];
@@ -1049,7 +1055,6 @@ public class GameServerConnection {
     private function updateGameObject(go:GameObject, stats:Vector.<StatData>, isMyObject:Boolean):void {
         var stat:StatData = null;
         var value:int = 0;
-        var index:int = 0;
         var player:Player = go as Player;
         var merchant:Merchant = go as Merchant;
         for each(stat in stats) {
@@ -1321,7 +1326,6 @@ public class GameServerConnection {
                     continue;
                 default:
                     trace("unhandled stat: " + stat.statType_);
-                    continue;
             }
         }
     }
@@ -1337,7 +1341,6 @@ public class GameServerConnection {
         var pLevel:int = -1;
         var pExp:int = -1;
         var pFame:int = -1;
-        var type:CharacterClass = null;
         var map:Map = this.gs_.map;
         var go:GameObject = map.goDict_[objectStatus.objectId_];
         if (go == null) {

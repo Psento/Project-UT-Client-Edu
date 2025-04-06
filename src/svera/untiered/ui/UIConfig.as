@@ -1,4 +1,6 @@
 package svera.untiered.ui {
+import com.company.assembleegameclient.account.ui.unboxing.UnboxResultBox;
+import com.company.assembleegameclient.account.ui.unboxing.UnboxResultBoxMediator;
 import com.company.assembleegameclient.mapeditor.MapEditor;
 import com.company.assembleegameclient.screens.AccountScreen;
 import com.company.assembleegameclient.screens.CharacterSelectionAndNewsScreen;
@@ -127,6 +129,8 @@ public class UIConfig implements IConfig {
         this.mediatorMap.map(HUDView).toMediator(HUDMediator);
         this.mediatorMap.map(PotionSlotView).toMediator(PotionSlotMediator);
         this.mediatorMap.map(VaultWindow).toMediator(VaultWindowMediator);
+        this.mediatorMap.map(UnboxResultBox).toMediator(UnboxResultBoxMediator);
+
         this.setupCharacterWindow();
         this.startup.addSignal(ShowLoadingUISignal, -1);
         this.startup.addTask(LoadAccountTask);

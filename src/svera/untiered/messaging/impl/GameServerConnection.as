@@ -55,6 +55,7 @@ import robotlegs.bender.framework.api.ILogger;
 import svera.lib.net.api.MessageMap;
 import svera.lib.net.api.MessageProvider;
 import svera.lib.net.impl.SocketServer;
+import svera.lib.util.GIF;
 import svera.untiered.account.core.Account;
 import svera.untiered.classes.model.CharacterClass;
 import svera.untiered.classes.model.ClassesModel;
@@ -82,6 +83,7 @@ import svera.untiered.messaging.impl.incoming.Damage;
 import svera.untiered.messaging.impl.incoming.Death;
 import svera.untiered.messaging.impl.incoming.EnemyShoot;
 import svera.untiered.messaging.impl.incoming.Failure;
+import svera.untiered.messaging.impl.incoming.GlobalNotification;
 import svera.untiered.messaging.impl.incoming.Goto;
 import svera.untiered.messaging.impl.incoming.GuildResult;
 import svera.untiered.messaging.impl.incoming.InvResult;
@@ -148,6 +150,12 @@ import svera.untiered.storage.signals.VaultSlotUpdateSignal;
 import svera.untiered.storage.signals.VaultUpdateSignal;
 import svera.untiered.ui.model.UpdateGameObjectTileVO;
 import svera.untiered.ui.view.MessageCloseDialog;
+import svera.untiered.ui.view.tiernotifications.CelestialPopup;
+import svera.untiered.ui.view.tiernotifications.ExiledPopup;
+import svera.untiered.ui.view.tiernotifications.RelicPopup;
+import svera.untiered.ui.view.tiernotifications.TarnishedPopup;
+import svera.untiered.ui.view.tiernotifications.UncommonPopup;
+import svera.untiered.ui.view.tiernotifications.ValiantPopup;
 
 public class GameServerConnection {
     public static const FAILURE:int = 0;
@@ -213,6 +221,8 @@ public class GameServerConnection {
     public static const VAULTSLOTUPDATE:int = 60;
     public static const VAULTREQUEST:int = 61;
     public static const VAULTUPGRADE:int = 62;
+    public static const GLOBAL_NOTIFICATION:int = 69;
+
     public static const LAUNCH_RAID:int = 88;
     public static const UNBOXREQUEST:int = 92;
     public static const UNBOXRESULT:int = 93;// add 94
@@ -249,7 +259,6 @@ public class GameServerConnection {
     private var playerModel:PlayerModel;
     private var injector:Injector;
     private var model:GameModel;
-
 
     public function GameServerConnection(gs:GameSprite, gameId:int, createCharacter:Boolean, charId:int, mapJSON:String, traits:Array) {
         super();
@@ -337,6 +346,8 @@ public class GameServerConnection {
         messages.map(DAMAGE).toMessage(Damage).toMethod(this.onDamage);
         messages.map(UPDATE).toMessage(Update).toMethod(this.onUpdate);
         messages.map(NOTIFICATION).toMessage(Notification).toMethod(this.onNotification);
+        messages.map(GLOBAL_NOTIFICATION).toMessage(GlobalNotification).toMethod(this.onGlobalNotification);
+
         messages.map(NEWTICK).toMessage(NewTick).toMethod(this.onNewTick);
         messages.map(SHOWEFFECT).toMessage(ShowEffect).toMethod(this.onShowEffect);
         messages.map(GOTO).toMessage(Goto).toMethod(this.onGoto);
@@ -1520,7 +1531,48 @@ public class GameServerConnection {
     private function onError(error:String):void {
         this.addTextLine.dispatch(new AddTextLineVO(Parameters.ERROR_CHAT_NAME, error));
     }
+    private function onGlobalNotification(globalNotification:GlobalNotification):void {
+        switch (globalNotification.text) {
+            case "beginnersPackage":
+                return;
+            case "Uncommon":
+                Popup(UncommonPopup);
+                return;
+            case "Tarnished":
+                Popup(TarnishedPopup);
+                return;
+                //case "Artifact":
+                //    Popup(ArtifactPopup, artifactPopup);
+                //    return;
+                //case "Ancestral":
+                //    Popup(AncestralPopup, ancestralPopup);
+                //    return;
+            case "Valiant":
+                Popup(ValiantPopup);
+                return;
+            case "Relic":
+                Popup(RelicPopup);
+                return;
+            case "Exiled":
+                Popup(ExiledPopup);
+                return;
+            case "Celestial":
+                Popup(CelestialPopup);
+                return;
+        }
+    }
 
+    private function Popup(_arg1:Class):void
+    {
+        var gif:GIF = new _arg1();
+        if(gs_.contains(gif))
+            gs_.removeChild(gif);
+        gif.x = gif.y = + 6;
+        gif.scaleX = 2;
+        gif.scaleY = 2;
+        gif.play();
+        gs_.addChild(gif);
+    }
     private function onFailure(event:Failure):void {
         switch (event.errorId_) {
             case Failure.INCORRECT_VERSION:

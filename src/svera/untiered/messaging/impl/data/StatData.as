@@ -1,4 +1,5 @@
 package svera.untiered.messaging.impl.data {
+import flash.utils.ByteArray;
 import flash.utils.IDataInput;
 import flash.utils.IDataOutput;
 
@@ -244,6 +245,8 @@ public class StatData {
 
     public var uintStatValue:uint;
 
+    public var byteArrayValue:ByteArray;
+
     public function StatData() {
         super();
     }
@@ -283,10 +286,22 @@ public class StatData {
         }
     }
 
+    public function isByteArrayStat(): Boolean {
+        return this.statType_ >= ITEMDATA_0_STAT && this.statType_ <= ITEMDATA_36_STAT;
+    }
+
     public function parseFromInput(data:IDataInput):void {
         this.statType_ = data.readUnsignedByte();
         if (this.isStringStat()) {
             this.strStatValue_ = data.readUTF();
+        } else if (this.isByteArrayStat()){
+            var len:Number = data.readShort();
+            this.byteArrayValue = new ByteArray();
+            for(var i:Number = 0; i < len; i++) {
+                this.byteArrayValue.writeByte(data.readUnsignedByte());
+            }
+            this.byteArrayValue.endian = "littleEndian";
+            this.byteArrayValue.position = 0;
         } else {
             this.statValue_ = data.readInt();
         }
@@ -296,7 +311,6 @@ public class StatData {
         data.writeByte(this.statType_);
         if (this.isStringStat()) {
             data.writeUTF(this.strStatValue_);
-
         } else {
             data.writeInt(this.statValue_);
         }

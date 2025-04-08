@@ -70,6 +70,7 @@ import svera.untiered.game.model.AddTextLineVO;
 import svera.untiered.game.model.GameModel;
 import svera.untiered.game.signals.AddSpeechBalloonSignal;
 import svera.untiered.game.signals.AddTextLineSignal;
+import svera.untiered.itemdata.NewItemData;
 import svera.untiered.messaging.impl.data.GroundTileData;
 import svera.untiered.messaging.impl.data.ObjectData;
 import svera.untiered.messaging.impl.data.ObjectDropData;
@@ -1322,7 +1323,7 @@ public class GameServerConnection {
                 case StatData.ITEMDATA_34_STAT:
                 case StatData.ITEMDATA_35_STAT:
                 case StatData.ITEMDATA_36_STAT:
-                    go.itemDatas_[stat.statType_ - StatData.ITEMDATA_0_STAT] = value;
+                    NewItemData.NewTickUpdate(go.itemDatas_[stat.statType_ - StatData.ITEMDATA_0_STAT], stat.byteArrayValue);
                     continue;
                 default:
                     trace("unhandled stat: " + stat.statType_);

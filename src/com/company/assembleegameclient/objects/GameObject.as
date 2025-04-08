@@ -41,6 +41,8 @@ import flash.utils.Dictionary;
 import flash.utils.getQualifiedClassName;
 import flash.utils.getTimer;
 
+import svera.untiered.itemdata.NewItemData;
+
 import svera.untiered.messaging.impl.data.WorldPosData;
 import svera.untiered.stage3D.GraphicsFillExtra;
 import svera.untiered.stage3D.Object3D.Object3DStage3D;
@@ -77,7 +79,7 @@ public class GameObject extends BasicObject {
     public var armor_:int = 0;
     public var slotTypes_:Vector.<int> = null;
     public var equipment_:Vector.<int> = null;
-    public var itemDatas_:Vector.<int> = null;
+    public var itemDatas_:Vector.<NewItemData> = null;
     public var condition_:uint = 0;
     protected var tex1Id_:int = 0;
     protected var tex2Id_:int = 0;
@@ -160,10 +162,10 @@ public class GameObject extends BasicObject {
         if (objectXML.hasOwnProperty("SlotTypes")) {
             this.slotTypes_ = ConversionUtil.toIntVector(objectXML.SlotTypes);
             this.equipment_ = new Vector.<int>(this.slotTypes_.length);
-            this.itemDatas_ = new Vector.<int>(this.slotTypes_.length);
+            this.itemDatas_ = new Vector.<NewItemData>(this.slotTypes_.length);
             for (i = 0; i < this.equipment_.length; i++) {
                 this.equipment_[i] = -1;
-                this.itemDatas_[i] = -1;
+                this.itemDatas_[i] = null;
             }
         }
         if (objectXML.hasOwnProperty("Tex1")) {

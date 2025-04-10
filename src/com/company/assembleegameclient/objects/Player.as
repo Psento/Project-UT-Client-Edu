@@ -778,7 +778,7 @@ public class Player extends Character {
         var angle:Number = Parameters.data_.cameraAngle + Math.atan2(y, x);
         var itemType:int = equipment_[slotId];
         var itemData:int = itemDatas_[slotId];
-        if (itemType == -1) {
+        if (itemType == 0) {
             return false;
         }
         var objectXML:XML = ObjectLibrary.xmlLibrary_[itemType];
@@ -858,7 +858,7 @@ public class Player extends Character {
         }
         var weaponType:int = equipment_[0];
         var itemData:int = itemDatas_[0];
-        if (weaponType == -1) {
+        if (weaponType == 0) {
             //this.addTextLine.dispatch(new AddTextLineVO(Parameters.ERROR_CHAT_NAME,"You do not have a weapon equipped!"));
             return;
         }

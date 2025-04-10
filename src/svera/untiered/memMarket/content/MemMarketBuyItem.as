@@ -12,14 +12,10 @@ import flash.events.Event;
 import flash.events.MouseEvent;
 import flash.system.System;
 import flash.text.TextFieldAutoSize;
+import svera.untiered.assets.services.IconFactory;
 
-import kabam.rotmg.assets.services.IconFactory;
-
-import kabam.rotmg.memMarket.tabs.MemMarketBuyTab;
-import kabam.rotmg.memMarket.utils.DialogUtils;
-import kabam.rotmg.memMarket.utils.IconUtils;
-
-import kabam.rotmg.messaging.impl.data.MarketData;
+import svera.untiered.memMarket.utils.DialogUtils;
+import svera.untiered.messaging.impl.data.MarketData;
 
 public class MemMarketBuyItem extends MemMarketItem
 {

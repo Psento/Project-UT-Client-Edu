@@ -140,7 +140,7 @@ import flash.display.Sprite;
 import flash.filters.DropShadowFilter;
 import flash.text.TextFormat;
 
-class Stat extends Sprite {
+class  Stat extends Sprite {
 
 
     public var fullName_:String;

@@ -20,9 +20,9 @@ import io.decagames.rotmg.ui.defaults.DefaultLabelFormat;
 
 import io.decagames.rotmg.ui.labels.UILabel;
 
-import kabam.rotmg.assets.services.IconFactory;
+import svera.untiered.assets.services.IconFactory;
 
-import kabam.rotmg.messaging.impl.data.MarketData;
+import svera.untiered.messaging.impl.data.MarketData;
 
 
 public class MemMarketItem extends Sprite

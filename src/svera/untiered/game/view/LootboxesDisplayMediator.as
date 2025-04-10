@@ -54,4 +54,4 @@ public class LootboxesDisplayMediator extends Mediator {
 
 
 }
-}//package kabam.rotmg.game.view
+}//package svera.untiered.game.view

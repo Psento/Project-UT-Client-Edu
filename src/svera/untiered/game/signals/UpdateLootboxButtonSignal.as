@@ -5,4 +5,4 @@ public class UpdateLootboxButtonSignal extends Signal {
 
 
 }
-}//package kabam.rotmg.game.signals
+}//package svera.untiered.game.signals

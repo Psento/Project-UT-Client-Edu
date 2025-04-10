@@ -415,7 +415,7 @@ public class MapUserInput {
 
     private function UseAbility(player:Player, slotId:int):void {
         var itemType:int = player.equipment_[slotId];
-        if (itemType == -1) {
+        if (itemType == 0) {
             return;
         }
         var objectXML:XML = ObjectLibrary.xmlLibrary_[itemType];

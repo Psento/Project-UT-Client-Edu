@@ -3,13 +3,10 @@ import com.company.assembleegameclient.game.GameSprite;
 
 import flash.events.MouseEvent;
 
-import kabam.rotmg.memMarket.utils.ItemUtils;
-
-import kabam.rotmg.memMarket.utils.TintUtils;
-
-import kabam.rotmg.messaging.impl.data.MarketData;
-
 import link.ItemData;
+
+import svera.untiered.memMarket.utils.ItemUtils;
+import svera.untiered.memMarket.utils.TintUtils;
 
 public class MemMarketInventoryItem extends MemMarketItem
 {
@@ -22,7 +19,7 @@ public class MemMarketInventoryItem extends MemMarketItem
 
         this.slot_ = slot;
 
-        if (this.itemType_ != -1)
+        if (this.itemType_ != 0)
         {
             if (ItemUtils.isBanned(this.itemType_)) /* Apply red tint on banned items */
             {

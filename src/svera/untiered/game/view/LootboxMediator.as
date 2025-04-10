@@ -33,4 +33,4 @@ public class LootboxMediator {
 
 
 }
-}//package kabam.rotmg.game.view
+}//package svera.untiered.game.view

@@ -425,7 +425,7 @@ public class EquipmentToolTip extends ToolTip {
             stats[stat] = stats[stat] + amount;
         }
 
-        if (this.itemData_ != -1) {
+        if (this.itemData_ != 0) {
             var k:int = -1;
             if ((k = ItemData.getStat(this.itemData_, ItemData.MAX_HP_BIT, 5)) != 0) {
                 stats[0] = (stats[0] || 0) + k;

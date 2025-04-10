@@ -70,6 +70,11 @@ import svera.untiered.game.model.AddTextLineVO;
 import svera.untiered.game.model.GameModel;
 import svera.untiered.game.signals.AddSpeechBalloonSignal;
 import svera.untiered.game.signals.AddTextLineSignal;
+import svera.untiered.memMarket.signals.MemMarketAddSignal;
+import svera.untiered.memMarket.signals.MemMarketBuySignal;
+import svera.untiered.memMarket.signals.MemMarketMyOffersSignal;
+import svera.untiered.memMarket.signals.MemMarketRemoveSignal;
+import svera.untiered.memMarket.signals.MemMarketSearchSignal;
 import svera.untiered.messaging.impl.data.GroundTileData;
 import svera.untiered.messaging.impl.data.ObjectData;
 import svera.untiered.messaging.impl.data.ObjectDropData;
@@ -108,6 +113,11 @@ import svera.untiered.messaging.impl.incoming.TradeRequested;
 import svera.untiered.messaging.impl.incoming.TradeStart;
 import svera.untiered.messaging.impl.incoming.UnboxResultPacket;
 import svera.untiered.messaging.impl.incoming.Update;
+import svera.untiered.messaging.impl.incoming.market.MarketAddResult;
+import svera.untiered.messaging.impl.incoming.market.MarketBuyResult;
+import svera.untiered.messaging.impl.incoming.market.MarketMyOffersResult;
+import svera.untiered.messaging.impl.incoming.market.MarketRemoveResult;
+import svera.untiered.messaging.impl.incoming.market.MarketSearchResult;
 import svera.untiered.messaging.impl.outgoing.AcceptTrade;
 import svera.untiered.messaging.impl.outgoing.AoeAck;
 import svera.untiered.messaging.impl.outgoing.Buy;
@@ -142,6 +152,11 @@ import svera.untiered.messaging.impl.outgoing.TradeRequest;
 import svera.untiered.messaging.impl.outgoing.UnboxRequest;
 import svera.untiered.messaging.impl.outgoing.UseItem;
 import svera.untiered.messaging.impl.outgoing.UsePortal;
+import svera.untiered.messaging.impl.outgoing.market.MarketAdd;
+import svera.untiered.messaging.impl.outgoing.market.MarketBuy;
+import svera.untiered.messaging.impl.outgoing.market.MarketMyOffers;
+import svera.untiered.messaging.impl.outgoing.market.MarketRemove;
+import svera.untiered.messaging.impl.outgoing.market.MarketSearch;
 import svera.untiered.minimap.control.UpdateGameObjectTileSignal;
 import svera.untiered.minimap.control.UpdateGroundTileSignal;
 import svera.untiered.minimap.model.UpdateGroundTileVO;
@@ -228,6 +243,17 @@ public class GameServerConnection {
     public static const LAUNCH_RAID:int = 88;
     public static const UNBOXREQUEST:int = 92;
     public static const UNBOXRESULT:int = 93;// add 94
+
+    public static const MARKET_SEARCH:int = 106;
+    public static const MARKET_SEARCH_RESULT:int = 107;
+    public static const MARKET_BUY:int = 108;
+    public static const MARKET_BUY_RESULT:int = 109;
+    public static const MARKET_ADD:int = 110;
+    public static const MARKET_ADD_RESULT:int = 111;
+    public static const MARKET_REMOVE:int = 112;
+    public static const MARKET_REMOVE_RESULT:int = 113;
+    public static const MARKET_MY_OFFERS:int = 114;
+    public static const MARKET_MY_OFFERS_RESULT:int = 115;
 
     public static var instance:GameServerConnection;
 
@@ -379,9 +405,17 @@ public class GameServerConnection {
         messages.map(VAULTUPGRADE).toMessage(StorageUpgrade);
         messages.map(UNBOXREQUEST).toMessage(UnboxRequest);
         messages.map(UNBOXRESULT).toMessage(UnboxResultPacket).toMethod(unboxResult);
-
+        messages.map(MARKET_SEARCH).toMessage(MarketSearch);
+        messages.map(MARKET_SEARCH_RESULT).toMessage(MarketSearchResult).toMethod(this.onMarketSearchResult);
+        messages.map(MARKET_BUY).toMessage(MarketBuy);
+        messages.map(MARKET_BUY_RESULT).toMessage(MarketBuyResult).toMethod(this.onMarketBuyResult);
+        messages.map(MARKET_ADD).toMessage(MarketAdd);
+        messages.map(MARKET_ADD_RESULT).toMessage(MarketAddResult).toMethod(this.onMarketAddResult);
+        messages.map(MARKET_REMOVE).toMessage(MarketRemove);
+        messages.map(MARKET_REMOVE_RESULT).toMessage(MarketRemoveResult).toMethod(this.onMarketRemoveResult);
+        messages.map(MARKET_MY_OFFERS).toMessage(MarketMyOffers);
+        messages.map(MARKET_MY_OFFERS_RESULT).toMessage(MarketMyOffersResult).toMethod(this.onMarketMyOffersResult);
         messages.map(LAUNCH_RAID).toMessage(LaunchRaid);
-
     }
 
     private function unmapMessages():void {
@@ -648,8 +682,8 @@ public class GameServerConnection {
         var invDrop:InvDrop = this.messages.require(INVDROP) as InvDrop;
         invDrop.slotId_ = slotId;
         this.serverConnection.sendMessage(invDrop);
-        object.equipment_[slotId] = -1;
-        object.itemDatas_[slotId] = -1;
+        object.equipment_[slotId] = 0;
+        object.itemDatas_[slotId] = 0;
     }
 
     public function useItem(time:int, objectId:int, slotId:int, posX:Number, posY:Number):void {
@@ -683,8 +717,8 @@ public class GameServerConnection {
         useItem.itemUsePos_.y_ = 0;
         this.serverConnection.sendMessage(useItem);
         if (itemData.hasOwnProperty("Consumable")) {
-            owner.equipment_[slotId] = -1;
-            owner.itemDatas_[slotId] = -1;
+            owner.equipment_[slotId] = 0;
+            owner.itemDatas_[slotId] = 0;
         }
     }
 
@@ -800,6 +834,75 @@ public class GameServerConnection {
         if (target != null) {
             target.damage(damage.damageAmount_, damage.effects_, null);
         }
+    }
+    /* Market */
+    public function onMarketSearchResult(searchResult:MarketSearchResult) : void
+    {
+        MemMarketSearchSignal.instance.dispatch(searchResult);
+    }
+
+    /* Market */
+    public function onMarketBuyResult(buyResult:MarketBuyResult) : void
+    {
+        MemMarketBuySignal.instance.dispatch(buyResult);
+    }
+
+    /* Market */
+    public function onMarketAddResult(addResult:MarketAddResult) : void
+    {
+        MemMarketAddSignal.instance.dispatch(addResult);
+    }
+
+    /* Market */
+    public function onMarketRemoveResult(removeResult:MarketRemoveResult) : void
+    {
+        MemMarketRemoveSignal.instance.dispatch(removeResult);
+    }
+
+    /* Market */
+    public function onMarketMyOffersResult(myOffersResult:MarketMyOffersResult) : void
+    {
+        MemMarketMyOffersSignal.instance.dispatch(myOffersResult);
+    }
+    public function marketSearch(itemType:int) : void
+    {
+        var search:MarketSearch = this.messages.require(MARKET_SEARCH) as MarketSearch;
+        search.itemType_ = itemType;
+        this.serverConnection.sendMessage(search);
+    }
+
+    /* Market */
+    public function marketRemove(id:int) : void
+    {
+        var remove:MarketRemove = this.messages.require(MARKET_REMOVE) as MarketRemove;
+        remove.id_ = id;
+        this.serverConnection.sendMessage(remove);
+    }
+
+    /* Market */
+    public function marketMyOffers() : void
+    {
+        var myOffers:MarketMyOffers = this.messages.require(MARKET_MY_OFFERS) as MarketMyOffers;
+        this.serverConnection.sendMessage(myOffers);
+    }
+
+    /* Market */
+    public function marketBuy(id:int) : void
+    {
+        var buy:MarketBuy = this.messages.require(MARKET_BUY) as MarketBuy;
+        buy.id_ = id;
+        this.serverConnection.sendMessage(buy);
+    }
+
+    /* Market */
+    public function marketAdd(items:Vector.<int>, price:int, currency:int, hours:int) : void
+    {
+        var add:MarketAdd = this.messages.require(MARKET_ADD)  as MarketAdd;
+        add.slots_= items;
+        add.price_ = price;
+        add.currency_ = currency;
+        add.hours_ = hours;
+        this.serverConnection.sendMessage(add);
     }
 
     private function onServerPlayerShoot(serverPlayerShoot:ServerPlayerShoot):void {
@@ -1126,36 +1229,12 @@ public class GameServerConnection {
                 case StatData.CONDITION_STAT:
                     go.condition_ = value;
                     continue;
-                case StatData.INVENTORY_0_STAT:
-                case StatData.INVENTORY_1_STAT:
-                case StatData.INVENTORY_2_STAT:
-                case StatData.INVENTORY_3_STAT:
-                case StatData.INVENTORY_4_STAT:
-                case StatData.INVENTORY_5_STAT:
-                case StatData.INVENTORY_6_STAT:
-                case StatData.INVENTORY_7_STAT:
-                case StatData.INVENTORY_8_STAT:
-                case StatData.INVENTORY_9_STAT:
-                case StatData.INVENTORY_10_STAT:
-                case StatData.INVENTORY_11_STAT:
-                case StatData.INVENTORY_12_STAT:
-                case StatData.INVENTORY_13_STAT:
-                case StatData.INVENTORY_14_STAT:
-                case StatData.INVENTORY_15_STAT:
-                case StatData.INVENTORY_16_STAT:
-                case StatData.INVENTORY_17_STAT:
-                case StatData.INVENTORY_18_STAT:
-                case StatData.INVENTORY_19_STAT:
-                case StatData.INVENTORY_20_STAT:
-                case StatData.INVENTORY_21_STAT:
-                case StatData.INVENTORY_22_STAT:
-                case StatData.INVENTORY_23_STAT:
-                case StatData.INVENTORY_24_STAT:
-                case StatData.INVENTORY_25_STAT:
-                case StatData.INVENTORY_26_STAT:
-                case StatData.INVENTORY_27_STAT:
-                case StatData.INVENTORY_28_STAT:
-                    go.equipment_[stat.statType_ - StatData.INVENTORY_0_STAT] = value;
+                case StatData.INVENTORY:
+                    var itemarray:Vector.<int> = stat.statValueObj as Vector.<int>;
+                    for (var i:int = 0; i < itemarray.length; i += 2) {
+                        go.equipment_[i / 2] = itemarray[i];
+                        go.itemDatas_[i / 2] = itemarray[i + 1];
+                    }
                     continue;
                 case StatData.NUM_STARS_STAT:
                     player.numStars_ = value;
@@ -1284,45 +1363,6 @@ public class GameServerConnection {
                     continue;
                 case StatData.TEXTURE_STAT:
                     player.skinId != value && this.setPlayerSkinTemplate(player, value);
-                    continue;
-                case StatData.ITEMDATA_0_STAT:
-                case StatData.ITEMDATA_1_STAT:
-                case StatData.ITEMDATA_2_STAT:
-                case StatData.ITEMDATA_3_STAT:
-                case StatData.ITEMDATA_4_STAT:
-                case StatData.ITEMDATA_5_STAT:
-                case StatData.ITEMDATA_6_STAT:
-                case StatData.ITEMDATA_7_STAT:
-                case StatData.ITEMDATA_8_STAT:
-                case StatData.ITEMDATA_9_STAT:
-                case StatData.ITEMDATA_10_STAT:
-                case StatData.ITEMDATA_11_STAT:
-                case StatData.ITEMDATA_12_STAT:
-                case StatData.ITEMDATA_13_STAT:
-                case StatData.ITEMDATA_14_STAT:
-                case StatData.ITEMDATA_15_STAT:
-                case StatData.ITEMDATA_16_STAT:
-                case StatData.ITEMDATA_17_STAT:
-                case StatData.ITEMDATA_18_STAT:
-                case StatData.ITEMDATA_19_STAT:
-                case StatData.ITEMDATA_20_STAT:
-                case StatData.ITEMDATA_21_STAT:
-                case StatData.ITEMDATA_22_STAT:
-                case StatData.ITEMDATA_23_STAT:
-                case StatData.ITEMDATA_24_STAT:
-                case StatData.ITEMDATA_25_STAT:
-                case StatData.ITEMDATA_26_STAT:
-                case StatData.ITEMDATA_27_STAT:
-                case StatData.ITEMDATA_28_STAT:
-                case StatData.ITEMDATA_29_STAT:
-                case StatData.ITEMDATA_30_STAT:
-                case StatData.ITEMDATA_31_STAT:
-                case StatData.ITEMDATA_32_STAT:
-                case StatData.ITEMDATA_33_STAT:
-                case StatData.ITEMDATA_34_STAT:
-                case StatData.ITEMDATA_35_STAT:
-                case StatData.ITEMDATA_36_STAT:
-                    go.itemDatas_[stat.statType_ - StatData.ITEMDATA_0_STAT] = value;
                     continue;
                 default:
                     trace("unhandled stat: " + stat.statType_);

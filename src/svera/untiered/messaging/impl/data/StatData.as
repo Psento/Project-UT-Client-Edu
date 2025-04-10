@@ -18,35 +18,7 @@ public class StatData {
     public static const BACKGROUND_STAT:int = 12;
     public static const STATPOINTS_STAT:int = 13;
     public static const ASCENSIONPOINTS_STAT:int = 14;
-    public static const INVENTORY_0_STAT:int = 15;
-    public static const INVENTORY_1_STAT:int = 16;
-    public static const INVENTORY_2_STAT:int = 17;
-    public static const INVENTORY_3_STAT:int = 18;
-    public static const INVENTORY_4_STAT:int = 19;
-    public static const INVENTORY_5_STAT:int = 20;
-    public static const INVENTORY_6_STAT:int = 21;
-    public static const INVENTORY_7_STAT:int = 22;
-    public static const INVENTORY_8_STAT:int = 23;
-    public static const INVENTORY_9_STAT:int = 24;
-    public static const INVENTORY_10_STAT:int = 25;
-    public static const INVENTORY_11_STAT:int = 26;
-    public static const INVENTORY_12_STAT:int = 27;
-    public static const INVENTORY_13_STAT:int = 28;
-    public static const INVENTORY_14_STAT:int = 29;
-    public static const INVENTORY_15_STAT:int = 30;
-    public static const INVENTORY_16_STAT:int = 31;
-    public static const INVENTORY_17_STAT:int = 32;
-    public static const INVENTORY_18_STAT:int = 33;
-    public static const INVENTORY_19_STAT:int = 34;
-    public static const INVENTORY_20_STAT:int = 35;
-    public static const INVENTORY_21_STAT:int = 36;
-    public static const INVENTORY_22_STAT:int = 37;
-    public static const INVENTORY_23_STAT:int = 38;
-    public static const INVENTORY_24_STAT:int = 39;
-    public static const INVENTORY_25_STAT:int = 40;
-    public static const INVENTORY_26_STAT:int = 41;
-    public static const INVENTORY_27_STAT:int = 42;
-    public static const INVENTORY_28_STAT:int = 43;
+    public static const INVENTORY:int = 15;
     public static const ATTACK_STAT:int = 44;
     public static const ARMOR_STAT:int = 45;
     public static const SPEED_STAT:int = 46;
@@ -92,43 +64,6 @@ public class StatData {
     public static const HEALTH_POTION_STACK_STAT:int = 86;
     public static const MAGIC_POTION_STACK_STAT:int = 87;
     public static const TEXTURE_STAT:int = 88;
-    public static const ITEMDATA_0_STAT:int = 89;
-    public static const ITEMDATA_1_STAT:int = 90;
-    public static const ITEMDATA_2_STAT:int = 91;
-    public static const ITEMDATA_3_STAT:int = 92;
-    public static const ITEMDATA_4_STAT:int = 93;
-    public static const ITEMDATA_5_STAT:int = 94;
-    public static const ITEMDATA_6_STAT:int = 95;
-    public static const ITEMDATA_7_STAT:int = 96;
-    public static const ITEMDATA_8_STAT:int = 97;
-    public static const ITEMDATA_9_STAT:int = 98;
-    public static const ITEMDATA_10_STAT:int = 99;
-    public static const ITEMDATA_11_STAT:int = 100;
-    public static const ITEMDATA_12_STAT:int = 101;
-    public static const ITEMDATA_13_STAT:int = 102;
-    public static const ITEMDATA_14_STAT:int = 103;
-    public static const ITEMDATA_15_STAT:int = 104;
-    public static const ITEMDATA_16_STAT:int = 105;
-    public static const ITEMDATA_17_STAT:int = 106;
-    public static const ITEMDATA_18_STAT:int = 107;
-    public static const ITEMDATA_19_STAT:int = 108;
-    public static const ITEMDATA_20_STAT:int = 109;
-    public static const ITEMDATA_21_STAT:int = 110;
-    public static const ITEMDATA_22_STAT:int = 111;
-    public static const ITEMDATA_23_STAT:int = 112;
-    public static const ITEMDATA_24_STAT:int = 113;
-    public static const ITEMDATA_25_STAT:int = 114;
-    public static const ITEMDATA_26_STAT:int = 115;
-    public static const ITEMDATA_27_STAT:int = 116;
-    public static const ITEMDATA_28_STAT:int = 117;
-    public static const ITEMDATA_29_STAT:int = 118;
-    public static const ITEMDATA_30_STAT:int = 119;
-    public static const ITEMDATA_31_STAT:int = 120;
-    public static const ITEMDATA_32_STAT:int = 121;
-    public static const ITEMDATA_33_STAT:int = 122;
-    public static const ITEMDATA_34_STAT:int = 123;
-    public static const ITEMDATA_35_STAT:int = 124;
-    public static const ITEMDATA_36_STAT:int = 125;
     public static const OWNER_ACCOUNT_ID_STAT:int = 126;
     public static const PetId:int = 127;
     public static const PetSkin:int = 128;
@@ -243,6 +178,8 @@ public class StatData {
     public var strStatValue_:String;
 
     public var uintStatValue:uint;
+    public var statValueObj:Object;
+
 
     public function StatData() {
         super();
@@ -287,10 +224,18 @@ public class StatData {
         this.statType_ = data.readUnsignedByte();
         if (this.isStringStat()) {
             this.strStatValue_ = data.readUTF();
+        }else if (statType_ == INVENTORY) {
+            var len:uint = data.readUnsignedShort();
+            statValueObj = new Vector.<int>(len);
+            for (var i:int = 0; i < len; i += 2) {
+                statValueObj[i] = data.readInt();
+                statValueObj[i + 1] = data.readInt();
+            }
         } else {
             this.statValue_ = data.readInt();
         }
     }
+
 
     public function writeToOutput(data:IDataOutput):void {
         data.writeByte(this.statType_);

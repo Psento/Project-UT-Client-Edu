@@ -1,5 +1,5 @@
 package svera.untiered.memMarket.signals {
-import kabam.rotmg.messaging.impl.incoming.market.MarketRemoveResult;
+import svera.untiered.messaging.impl.incoming.market.MarketRemoveResult;
 
 import org.osflash.signals.Signal;
 

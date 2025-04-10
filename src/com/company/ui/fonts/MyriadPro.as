@@ -9,4 +9,4 @@ public class MyriadPro extends FontAsset {
 
     }
 }
-}//package kabam.rotmg.text.model
+}//package svera.untiered.text.model

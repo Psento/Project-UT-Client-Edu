@@ -98,7 +98,7 @@ public class ItemData {
         this.loadFromItem(oType);
     }
 
-    public static function loadFromData(data:ByteArray): ItemData {
+    public static function loadFromData(data:IDataInput): ItemData {
         var item:ItemData = new ItemData();
         item.updateData(data);
         return item;
@@ -112,7 +112,7 @@ public class ItemData {
         ActivateEffects.length = 0;
     }
 
-    public function updateData(data:ByteArray, slot:int = -1): void {
+    public function updateData(data:IDataInput, slot:int = -1): void {
         var oType:Number = data.readUnsignedShort();
         if (oType == 0) {
             this.clear();
@@ -210,7 +210,7 @@ public class ItemData {
         TransmogData = item.TransmogData;
     }
 
-    private function parseData(data:ByteArray, slot:int): void {
+    private function parseData(data:IDataInput, slot:int): void {
         var count:int = data.readUnsignedByte();
         if(count == 0) return;
 

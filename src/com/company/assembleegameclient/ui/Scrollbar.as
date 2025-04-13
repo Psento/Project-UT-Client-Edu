@@ -98,11 +98,11 @@ public class Scrollbar extends Sprite {
     }
 
     public function jumpUp(mult:Number):void {
-        this.setPos(this.pos() - (this.jumpDist_ * mult));
+        this.setPos(this.pos() - this.jumpDist_ * mult);
     }
 
     public function jumpDown(mult:Number):void {
-        this.setPos(this.pos() + (this.jumpDist_ * mult));
+        this.setPos(this.pos() + this.jumpDist_ * mult);
     }
 
     private function getSprite(downFunction:Function):Sprite {

@@ -10,7 +10,7 @@ public class DateFormatterReplacement {
         var ret:String = this.formatString;
         ret = ret.replace("D", date.date);
         ret = ret.replace("YYYY", date.fullYear);
-        return (ret.replace("MMMM", this.months[date.month]));
+        return ret.replace("MMMM", this.months[date.month]);
     }
 
 

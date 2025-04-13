@@ -910,7 +910,7 @@ public class GameServerConnection {
         for (var i:int = 0; i < serverPlayerShoot.damageList_.length; i++) {
             var proj:Projectile = FreeList.newObject(Projectile) as Projectile;
             var bulletId:int = serverPlayerShoot.ownerId_ == this.playerId_ ? serverPlayerShoot.bulletId_ + i : 0;
-            proj.reset(serverPlayerShoot.containerType_, 0, serverPlayerShoot.ownerId_, bulletId, serverPlayerShoot.angle_ + (serverPlayerShoot.angleInc_ * i), this.gs_.lastUpdate_);
+            proj.reset(serverPlayerShoot.containerType_, 0, serverPlayerShoot.ownerId_, bulletId, serverPlayerShoot.angle_ + serverPlayerShoot.angleInc_ * i, this.gs_.lastUpdate_);
             proj.setDamage(serverPlayerShoot.damageList_[i]);
             this.gs_.map.addObj(proj, serverPlayerShoot.startingPos_.x_, serverPlayerShoot.startingPos_.y_);
         }
@@ -1534,7 +1534,7 @@ public class GameServerConnection {
         var effects:Vector.<uint> = null;
         var e:AOEEffect = new AOEEffect(aoe.pos_.toPoint(), aoe.radius_, aoe.color_);
         this.gs_.map.addObj(e, aoe.pos_.x_, aoe.pos_.y_);
-        if (this.player.isInvincible()) {
+        if (this.player.isImmortal()) {
             this.aoeAck(this.gs_.lastUpdate_, this.player.x_, this.player.y_);
             return;
         }

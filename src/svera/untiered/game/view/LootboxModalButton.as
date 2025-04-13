@@ -51,10 +51,10 @@ public class LootboxModalButton extends Sprite {
     }
 
     public function drawAsClosed():void {
-        if (((this.background) && ((this.background.parent == this)))) {
+        if (this.background && this.background.parent == this) {
             removeChild(this.background);
         }
-        if (((this.bitmap) && ((this.bitmap.parent == this)))) {
+        if (this.bitmap && this.bitmap.parent == this) {
             removeChild(this.bitmap);
         }
     }

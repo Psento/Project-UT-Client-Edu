@@ -133,8 +133,8 @@ public class SimpleText extends TextField {
     }
 
     public function useTextDimensions():void {
-        width = this.inputWidth_ == 0 ? (textWidth + 4) : (this.inputWidth_);
-        height = this.inputHeight_ == 0 ? (textHeight + 4) : (this.inputHeight_);
+        width = this.inputWidth_ == 0 ? textWidth + 4 : this.inputWidth_;
+        height = this.inputHeight_ == 0 ? textHeight + 4 : this.inputHeight_;
     }
 
     /*override public function set x(newValue:Number) : void

@@ -17,7 +17,7 @@ import flash.utils.Dictionary;
 public class TextureRedrawer {
 
     public static const magic:int = 12;
-    public static const minSize:int = (2 * magic);//24
+    public static const minSize:int = 2 * magic;//24
     private static const BORDER:int = 4;
     public static const OUTLINE_FILTER:GlowFilter = new GlowFilter(0, 0.8, 1.4, 1.4, 0xFF, BitmapFilterQuality.LOW, false, false);
 
@@ -26,7 +26,7 @@ public class TextureRedrawer {
     private static var redrawCaches:Dictionary = new Dictionary();
     public static var sharedTexture_:BitmapData = null;
     private static var textureShaderEmbed_:Class = TextureRedrawer_textureShaderEmbed_;
-    private static var textureShaderData_:ByteArray = (new textureShaderEmbed_() as ByteArray);
+    private static var textureShaderData_:ByteArray = new textureShaderEmbed_() as ByteArray;
     private static var colorTexture1:BitmapData = new BitmapDataSpy(1, 1, false);
     private static var colorTexture2:BitmapData = new BitmapDataSpy(1, 1, false);
 
@@ -45,7 +45,7 @@ public class TextureRedrawer {
     }
 
     private static function getHash(size:int, padBottom:Boolean, glowColor:uint, sMult:Number):* {
-        var h:int = (padBottom ? (1 << 27) : 0) | (size * sMult);
+        var h:int = (padBottom ? 1 << 27 : 0) | size * sMult;
         if (glowColor == 0) {
             return h;
         }
@@ -141,7 +141,7 @@ public class TextureRedrawer {
 
     private static function getTexture(op:int, bmp:BitmapData):BitmapData {
         var ret:BitmapData;
-        var type:int = (op >> 24) & 0xFF;
+        var type:int = op >> 24 & 0xFF;
         var value:uint = op & 0xFFFFFF; // could mean color or sprite index
         switch (type) {
             case 0:

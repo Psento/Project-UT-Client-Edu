@@ -148,7 +148,7 @@ public class GameSprite extends Sprite {
             //}
             //this.hudView.x = (800 - (200 * this.hudView.scaleX));
             if (this.currencyDisplay_ != null) {
-                this.currencyDisplay_.x = (this.hudView.x - (6 * this.currencyDisplay_.scaleX));
+                this.currencyDisplay_.x = this.hudView.x - (6 * this.currencyDisplay_.scaleX);
             }
         }
         if (this.textBox_ != null) {
@@ -159,7 +159,7 @@ public class GameSprite extends Sprite {
             } else {
                 this.textBox_.scaleX = sWidth;
                 this.textBox_.scaleY = sHeight;
-                this.textBox_.y = (600 * (1 - sHeight));
+                this.textBox_.y = 600 * (1 - sHeight);
             }
             //trace("resize",chatBox_.y,chatBox_.list.y)
         }
@@ -171,8 +171,8 @@ public class GameSprite extends Sprite {
                 this.rankText_.scaleX = sWidth;
                 this.rankText_.scaleY = sHeight;
             }
-            this.rankText_.x = (8 * this.rankText_.scaleX);
-            this.rankText_.y = (2 * this.rankText_.scaleY);
+            this.rankText_.x = 8 * this.rankText_.scaleX;
+            this.rankText_.y = 2 * this.rankText_.scaleY;
         }
         if (this.guildText_ != null) {
             if (uiscale) {
@@ -182,8 +182,8 @@ public class GameSprite extends Sprite {
                 this.guildText_.scaleX = sWidth;
                 this.guildText_.scaleY = sHeight;
             }
-            this.guildText_.x = (64 * this.guildText_.scaleX);
-            this.guildText_.y = (2 * this.guildText_.scaleY);
+            this.guildText_.x = 64 * this.guildText_.scaleX;
+            this.guildText_.y = 2 * this.guildText_.scaleY;
         }
         if (this.currencyDisplay_ != null) {
             if (uiscale) {

@@ -25,7 +25,7 @@ public class ItemResultBox extends Frame2 {
         super("You unboxed a " + ObjectLibrary.typeToDisplayId_[this.itemType_], "", 288);
         XButton.addEventListener(MouseEvent.CLICK, this.onClose);
         var _local3:BitmapData = ObjectLibrary.getRedrawnTextureFromType(this.itemType_, 60, true, true, 5);
-        _local3 = BitmapUtil.cropToBitmapData(_local3, 4, 4, (_local3.width - 8), (_local3.height - 8));
+        _local3 = BitmapUtil.cropToBitmapData(_local3, 4, 4, _local3.width - 8, _local3.height - 8);
         this.itemBitmap_ = new Bitmap(_local3);
         addEventListener(Event.ENTER_FRAME, showInventory_);
         this.itemBitmap_.scaleX = this.itemBitmap_.scaleY = 3;

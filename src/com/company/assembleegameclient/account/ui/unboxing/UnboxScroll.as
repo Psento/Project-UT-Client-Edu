@@ -60,7 +60,7 @@ public class UnboxScroll extends Sprite {
         this.unboxSquares_ = new Vector.<UnboxSquare>();
         for(var i:int=0;i<itemTypes_.length;i++) {
             var _local1:UnboxSquare = new UnboxSquare(this.itemTypes_[i], i);
-            _local1.x = (i * (75 + 15)) - (75 / 2);
+            _local1.x = i * (75 + 15) - 75 / 2;
             _local1.y = 0;
             this.unboxSquares_.push(_local1);
             this.unboxSquareHolder_.addChild(_local1);
@@ -84,7 +84,7 @@ public class UnboxScroll extends Sprite {
             this.currentBox_++;
             SoundEffectLibrary.play("inventory_move_item");
         }
-        this.currentScrollSpeed_ -= (1 / this.scrollSpeed_);
+        this.currentScrollSpeed_ -= 1 / this.scrollSpeed_;
         if(this.currentScrollSpeed_ <= 0) {
             this.currentScrollSpeed_ = 0;
             dispatchEvent(new Event(Event.COMPLETE));

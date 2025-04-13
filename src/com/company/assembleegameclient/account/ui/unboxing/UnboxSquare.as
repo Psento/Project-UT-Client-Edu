@@ -77,10 +77,10 @@ public class UnboxSquare extends Sprite {
         this.background.addChild(new EmbedUnboxSquare());
         addChild(this.background);
         var _local3:BitmapData = ObjectLibrary.getRedrawnTextureFromType(this.itemType_, 60, true, true, _local2);
-        _local3 = BitmapUtil.cropToBitmapData(_local3, 4, 4, (_local3.width - 8), (_local3.height - 8));
+        _local3 = BitmapUtil.cropToBitmapData(_local3, 4, 4, _local3.width - 8, _local3.height - 8);
         this.itemBitmap_ = new Bitmap(_local3);
-        this.itemBitmap_.x = (75 / 2) - (this.itemBitmap_.width / 2);
-        this.itemBitmap_.y = (50 / 2) - (this.itemBitmap_.height / 2);
+        this.itemBitmap_.x = 75 / 2 - this.itemBitmap_.width / 2;
+        this.itemBitmap_.y = 50 / 2 - this.itemBitmap_.height / 2;
         addChild(this.itemBitmap_);
         this.itemName_ = new SimpleText(10, 0x000000, false, 77, 0);
         this.itemName_.setBold(true);
@@ -88,7 +88,7 @@ public class UnboxSquare extends Sprite {
         this.itemName_.text = ObjectLibrary.typeToDisplayId_[this.itemType_];
         this.itemName_.wordWrap = true;
         this.itemName_.updateMetrics();
-        this.itemName_.y = (25 / 2 + 50) - (this.itemName_.textHeight / 2) - 3;
+        this.itemName_.y = (25 / 2 + 50) - this.itemName_.textHeight / 2 - 3;
         this.itemName_.x = -1;
         addChild(this.itemName_);
     }

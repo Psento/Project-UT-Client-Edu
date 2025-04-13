@@ -25,10 +25,10 @@ public class PopupWindowBackground extends Sprite {
         if (_arg3 == TYPE_TRANSPARENT_WITH_HEADER) {
             graphics.lineStyle(1, 0x131313, 1, false, LineScaleMode.NORMAL, CapsStyle.NONE, JointStyle.ROUND, 3);
             graphics.beginFill(0x131313, 1);
-            _local5.drawBevelRect(1, 1, new BevelRect((_arg1 - 2), 29, BEVEL), graphics);
+            _local5.drawBevelRect(1, 1, new BevelRect(_arg1 - 2, 29, BEVEL), graphics);
             graphics.endFill();
             graphics.beginFill(0x131313, 1);
-            graphics.drawRect(1, 15, (_arg1 - 2), 15);
+            graphics.drawRect(1, 15, _arg1 - 2, 15);
             graphics.endFill();
             graphics.lineStyle(2, 0x131313, 1, false, LineScaleMode.NORMAL, CapsStyle.NONE, JointStyle.ROUND, 3);
             graphics.beginFill(0x131313, 0);
@@ -75,14 +75,14 @@ public class PopupWindowBackground extends Sprite {
         graphics.endFill();
         graphics.moveTo(1, _arg1);
         graphics.beginFill(0x666666, 1);
-        graphics.drawRect(1, _arg1, (width - 2), 2);
+        graphics.drawRect(1, _arg1, width - 2, 2);
     }
 
     private function divideVertically(_arg1:int):void {
         graphics.lineStyle();
         graphics.moveTo(_arg1, 1);
         graphics.lineStyle(2, 0x666666);
-        graphics.lineTo(_arg1, (height - 1));
+        graphics.lineTo(_arg1, height - 1);
     }
 
 

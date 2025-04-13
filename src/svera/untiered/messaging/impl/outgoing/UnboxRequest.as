@@ -14,7 +14,7 @@ public class UnboxRequest extends OutgoingMessage {
     }
 
     override public function toString():String {
-        return (formatToString("UNBOXREQUEST", "lootboxType_"));
+        return formatToString("UNBOXREQUEST", "lootboxType_");
     }
 
 

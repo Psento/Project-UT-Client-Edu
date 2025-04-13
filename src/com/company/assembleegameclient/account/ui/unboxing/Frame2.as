@@ -47,11 +47,11 @@ public class Frame2 extends Sprite
         this.Button1 = new ClickableText(18, true, button1Text);
         if (button1Text != "") {
             this.Button1.buttonMode = true;
-            this.Button1.x = (this.w_ / 2) - (Button1.width / 2);
+            this.Button1.x = this.w_ / 2 - Button1.width / 2;
             addChild(this.Button1);
         }
         this.XButton = new TextButton(12, "X");
-        this.XButton.x = ((this.w_ - this.XButton.width) - 15);
+        this.XButton.x = (this.w_ - this.XButton.width) - 15;
         addChild(this.XButton);
         filters = [new DropShadowFilter(0, 0, 0, 0.5, 12, 12)];
         addEventListener(Event.ADDED_TO_STAGE, this.onAddedToStage);
@@ -77,17 +77,17 @@ public class Frame2 extends Sprite
     {
         this.frameTextButtons_.push(_arg1);
         addChild(_arg1);
-        _arg1.y = (this.h_ - 66);
+        _arg1.y = this.h_ - 66;
         _arg1.x = 17;
-        this.h_ = (this.h_ + 20);
+        this.h_ = this.h_ + 20;
     }
 
     public function addDisplayObject(_arg1:DisplayObject, _arg2:int = 8):void
     {
         addChild(_arg1);
-        _arg1.y = (this.h_ - 66);
+        _arg1.y = this.h_ - 66;
         _arg1.x = _arg2;
-        this.h_ = (this.h_ + _arg1.height);
+        this.h_ = this.h_ + _arg1.height;
     }
 
     public function addLabel(_arg1:String):void
@@ -98,9 +98,9 @@ public class Frame2 extends Sprite
         _local2.updateMetrics();
         _local2.filters = [new DropShadowFilter(0, 0, 0)];
         addChild(_local2);
-        _local2.y = (this.h_ - 66);
+        _local2.y = this.h_ - 66;
         _local2.x = 17;
-        this.h_ = (this.h_ + 20);
+        this.h_ = this.h_ + 20;
     }
 
     public function addHeaderText(_arg1:String):void {
@@ -110,15 +110,15 @@ public class Frame2 extends Sprite
         _local2.updateMetrics();
         _local2.filters = [new DropShadowFilter(0, 0, 0, 0.5, 12, 12)];
         addChild(_local2);
-        _local2.y = (this.h_ - 60);
+        _local2.y = this.h_ - 60;
         _local2.x = 15;
-        this.h_ = (this.h_ + 40);
+        this.h_ = this.h_ + 40;
     }
 
 
     public function offsetH(_arg1:int):void
     {
-        this.h_ = (this.h_ + _arg1);
+        this.h_ = this.h_ + _arg1;
     }
 
     public function setAllButtonsGray():void {
@@ -150,19 +150,19 @@ public class Frame2 extends Sprite
     public function draw():void {
         this.graphics.clear();
         GraphicsUtil.clearPath(this.path1_);
-        GraphicsUtil.drawUI(-6, -6, this.w_, (20 + 12), 4, [1, 1, 0, 0], this.path1_);
+        GraphicsUtil.drawUI(-6, -6, this.w_, 20 + 12, 4, [1, 1, 0, 0], this.path1_);
         GraphicsUtil.clearPath(this.path2_);
         GraphicsUtil.drawUI(-6, -6, this.w_, this.h_, 4, [1, 1, 1, 1], this.path2_);
-        (this.Button1.y = (this.h_ - 48));
+        this.Button1.y = this.h_ - 48;
         this.graphics.drawGraphicsData(this.graphicsData_);
     }
 
     public function onAddedToStage(_arg1:Event):void {
         this.draw();
-        this.x = (400 - ((this.w_ - 6) / 2));
-        this.y = (300 - (h_ / 2)); //was height
+        this.x = 400 - ((this.w_ - 6) / 2);
+        this.y = 300 - (h_ / 2); //was height
         if (this.frameTextInputBoxes.length > 0) {
-            (stage.focus = this.frameTextInputBoxes[0].inputText_);
+            stage.focus = this.frameTextInputBoxes[0].inputText_;
         }
     }
 

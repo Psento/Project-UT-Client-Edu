@@ -521,7 +521,7 @@ public class Player extends Character {
             this.moveMultiplier_ = square.props_.speed_;
         }
 
-        if (square.props_.damage_ > 0 && !isInvincible()) {
+        if (square.props_.damage_ > 0 && !isImmortal()) {
             if (square_.obj_ == null || !square_.obj_.props_.protectFromGroundDamage_) {
                 damage(square.props_.damage_, null, null);
             }
@@ -618,7 +618,7 @@ public class Player extends Character {
     }
 
     public function attackFrequency():Number {
-        if (isDazed()) {
+        if (isExhaust()) {
             return MIN_ATTACK_FREQ;
         }
         var attFreq:Number = MIN_ATTACK_FREQ + this.dexterity_ / 75 * (MAX_ATTACK_FREQ - MIN_ATTACK_FREQ);
@@ -638,7 +638,39 @@ public class Player extends Character {
         }
         return attMult;
     }
-
+    public function hasBlackPlague():Boolean{
+        return ObjectLibrary.typeToDisplayId_[this.equipment_[0]] == "Pestilential Agony";
+    }
+    private function hasSacrificialDisaster():Boolean{
+        return ObjectLibrary.typeToDisplayId_[this.equipment_[0]] == "The Devil's Ante" && hp_ >= maxHP_ * 0.7;
+    }
+    public function hasOpportunist():Boolean{
+        return ObjectLibrary.typeToDisplayId_[this.equipment_[0]] == "Gloomy Truth";
+    }
+    private function hasInspirationDrive():Boolean{
+        return ObjectLibrary.typeToDisplayId_[this.equipment_[0]] == "Gleaming Hope" && rp_ <= maxRP_ * 0.4;
+    }
+    private function hasCheckmate():Boolean{
+        return ObjectLibrary.typeToDisplayId_[this.equipment_[1]] == "King's Prey" && this.isBound();
+    }
+    private function hasVigorBound():Boolean{
+        return ObjectLibrary.typeToDisplayId_[this.equipment_[1]] == "Bind of Vitality";
+    }
+    public function hasSadistic():Boolean{
+        return ObjectLibrary.typeToDisplayId_[this.equipment_[1]] == "Sight for Sore Eyes";
+    }
+    public function hasSharedSuffering():Boolean{
+        return ObjectLibrary.typeToDisplayId_[this.equipment_[1]] == "Karma's Sacrifice" && this.isFragile();
+    }
+    public function hasMercilessFinish():Boolean{
+        return ObjectLibrary.typeToDisplayId_[this.equipment_[1]] == "Warlord's Sacrifice";
+    }
+    public function hasSelfAssured():Boolean{
+        return ObjectLibrary.typeToDisplayId_[this.equipment_[1]] == "Dracula's Promise" && sp_ >= this.maxSP_;
+    }
+    public function hasInquisition():Boolean{
+        return ObjectLibrary.typeToDisplayId_[this.equipment_[3]] == "Scorched Earth" && this.hp_ >= this.hp_ * 0.8;
+    }
     private function makeSkinTexture():void {
         var image:MaskedImage = this.skin.imageFromAngle(0, AnimatedChar.STAND, 0);
         animatedChar_ = this.skin;
@@ -734,7 +766,7 @@ public class Player extends Character {
             filteredTexture = GlowRedrawer.outlineGlow(texture, this.legendaryRank_ == -1 ? 0 : 16711680);
             texturingCache_[texture] = filteredTexture;
         }
-        if (isStasis()) {
+        if (isFragile()) {
             filteredTexture = CachingColorTransformer.filterBitmapData(filteredTexture, PAUSED_FILTER);
         } else if (isInvisible()) {
             filteredTexture = CachingColorTransformer.alphaBitmapData(filteredTexture, 40);
@@ -801,14 +833,14 @@ public class Player extends Character {
 
         if (checkPoint) {
             point = map_.pSTopW(x, y);
-            if (point == null || (validatePoint && !this.isValidPosition(point.x, point.y))) {
+            if (point == null || validatePoint && !this.isValidPosition(point.x, point.y)) {
                 SoundEffectLibrary.play("error");
                 return false;
             }
         }
 
         var toGrid:Number = Math.sqrt(x * x + y * y) * 0.02;
-        point = new Point(x_ + toGrid * Math.cos(angle), y_ + toGrid * Math.sin((angle)));
+        point = new Point(x_ + toGrid * Math.cos(angle), y_ + toGrid * Math.sin(angle));
         if (validatePoint && !this.isValidPosition(point.x, point.y)) {
             point = map_.pSTopW(x, y);
         }

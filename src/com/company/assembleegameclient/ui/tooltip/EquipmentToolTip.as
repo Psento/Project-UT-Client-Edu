@@ -262,7 +262,7 @@ public class EquipmentToolTip extends ToolTip {
         var cooldownMod:Number = ItemData.getStat(this.itemData_, ItemData.COOLDOWN_BIT, ItemData.COOLDOWN_MULTIPLIER);
         if (this.objectXML_.hasOwnProperty("Cooldown") || cooldownMod != 0) {
             var cooldown:Number = this.objectXML_.hasOwnProperty("Cooldown") ? Number(this.objectXML_.Cooldown) : 0.2;
-            var cooldownString:String = TooltipHelper.getFormattedString((cooldown - (cooldown * cooldownMod))) + "s";
+            var cooldownString:String = TooltipHelper.getFormattedString(cooldown - cooldown * cooldownMod) + "s";
             if (cooldownMod != 0) {
                 cooldownString += " (-" + int(cooldownMod * 100) + "%)";
                 cooldownString = TooltipHelper.wrapInFontTag(cooldownString, ItemData.getColorString(this.itemData_));
@@ -308,7 +308,7 @@ public class EquipmentToolTip extends ToolTip {
             var rateOfFire:Number = this.objectXML_.hasOwnProperty("RateOfFire") ? Number(this.objectXML_.RateOfFire) : 1.0;
             var rateOfFireDataValue:Number = ItemData.RATE_OF_FIRE_MULTIPLIER * rateOfFire;
             var rateOfFireData:Number = ItemData.getStat(this.itemData_, ItemData.RATE_OF_FIRE_BIT, rateOfFireDataValue);
-            var rateOfFireString:String = (int(rateOfFire * 100) + int(rateOfFireData * 100)) + "%";
+            var rateOfFireString:String = int(rateOfFire * 100) + int(rateOfFireData * 100) + "%";
             if (rateOfFireData != 0) {
                 rateOfFireString += " (+" + int(rateOfFireData * 100) + "%)";
                 rateOfFireString = TooltipHelper.wrapInFontTag(rateOfFireString, color);

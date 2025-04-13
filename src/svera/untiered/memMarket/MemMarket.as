@@ -95,7 +95,7 @@ public class MemMarket extends Sprite
     /* Change tab */
     private function onTab(event:MouseEvent) : void
     {
-        var tab:OptionsTabTitle = (event.currentTarget as OptionsTabTitle);
+        var tab:OptionsTabTitle = event.currentTarget as OptionsTabTitle;
         this.setTab(tab);
     }
 

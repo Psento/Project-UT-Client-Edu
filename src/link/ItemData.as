@@ -3,6 +3,7 @@ import com.company.assembleegameclient.objects.ObjectLibrary;
 import com.company.assembleegameclient.util.ConditionEffect;
 
 import flash.utils.ByteArray;
+import flash.utils.IDataInput;
 
 import svera.lib.json.Base64Decoder;
 
@@ -489,7 +490,8 @@ public class ItemData {
                 case 67:
                     Transmog = data.readShort();
                     if (slot != -1)
-                        //HUDView.redrawSlotSignal.dispatch(slot); //TODO: fix
+                        //HUDView.instance..dispatch(slot); //TODO: fix
+                    break;
                     break;
                 case 68:
                     HasKillTracker = true;

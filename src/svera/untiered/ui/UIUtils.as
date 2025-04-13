@@ -18,19 +18,19 @@ public class UIUtils {
     public static function makeStaticHUDBackground():Sprite {
         var _local1:Number = NOTIFICATION_BACKGROUND_WIDTH;
         var _local2:Number = NOTIFICATION_BACKGROUND_HEIGHT;
-        return (makeHUDBackground(_local1, _local2));
+        return makeHUDBackground(_local1, _local2);
     }
 
     public static function makeHUDBackground(_arg1:Number, _arg2:Number):Sprite {
         var _local3:Sprite = new Sprite();
-        return (drawHUDBackground(_local3, _arg1, _arg2));
+        return drawHUDBackground(_local3, _arg1, _arg2);
     }
 
     private static function drawHUDBackground(_arg1:Sprite, _arg2:Number, _arg3:Number):Sprite {
         _arg1.graphics.beginFill(NOTIFICATION_BACKGROUND_COLOR, NOTIFICATION_BACKGROUND_ALPHA);
         _arg1.graphics.drawRoundRect(0, 0, _arg2, _arg3, 12, 12);
         _arg1.graphics.endFill();
-        return (_arg1);
+        return _arg1;
     }
     public function UIUtils() {
         super();

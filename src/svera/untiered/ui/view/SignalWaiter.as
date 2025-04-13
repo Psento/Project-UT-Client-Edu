@@ -19,7 +19,7 @@ public class SignalWaiter {
     public function push(_arg1:Signal):SignalWaiter {
         this.texts[_arg1] = true;
         this.listenTo(_arg1);
-        return (this);
+        return this;
     }
 
     public function pushArgs(..._args):SignalWaiter {
@@ -27,7 +27,7 @@ public class SignalWaiter {
         for each (_local2 in _args) {
             this.push(_local2);
         }
-        return (this);
+        return this;
     }
 
     private function listenTo(value:Signal):void {
@@ -46,7 +46,7 @@ public class SignalWaiter {
     }
 
     public function isEmpty():Boolean {
-        return ((DictionaryUtil.getKeys(this.texts).length == 0));
+        return DictionaryUtil.getKeys(this.texts).length == 0;
     }
 
 

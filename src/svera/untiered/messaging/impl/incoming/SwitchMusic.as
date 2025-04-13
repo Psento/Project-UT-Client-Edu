@@ -14,7 +14,7 @@ public class SwitchMusic extends IncomingMessage {
     }
 
     override public function toString():String {
-        return (formatToString("SWITCHMUSIC", "music_"));
+        return formatToString("SWITCHMUSIC", "music_");
     }
 
 

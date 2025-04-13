@@ -107,7 +107,7 @@ public class Projectile extends BasicObject {
         } else {
             player = map.goDict_[this.ownerId_] as Player;
             if (player != null && player.sinkLevel_ > 0) {
-                z_ = (0.5 - (0.4 * (player.sinkLevel_ / Parameters.MAX_SINK_LEVEL)));
+                z_ = 0.5 - (0.4 * (player.sinkLevel_ / Parameters.MAX_SINK_LEVEL));
             }
         }
         return true;
@@ -146,14 +146,14 @@ public class Projectile extends BasicObject {
 
         var speed:Number = this.projProps_.speed_;
         if (this.projProps_.accelerate_) {
-            speed *= (Number(elapsed) / this.projProps_.lifetime_);
+            speed *= Number(elapsed) / this.projProps_.lifetime_;
         }
 
         if (this.projProps_.decelerate_) {
-            speed *= 2 - (Number(elapsed) / this.projProps_.lifetime_);
+            speed *= 2 - Number(elapsed) / this.projProps_.lifetime_;
         }
 
-        var dist:Number = (elapsed * (speed / 10000));
+        var dist:Number = elapsed * (speed / 10000);
         var phase:Number = this.bulletId_ % 2 == 0 ? Number(0) : Number(Math.PI);
         if (this.projProps_.wavy_) {
             periodFactor = 6 * Math.PI;

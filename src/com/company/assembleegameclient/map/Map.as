@@ -320,7 +320,7 @@ public class Map extends Sprite {
         var clipWidth:Number = (-clipRect.x - clipRect.width / 2) / 50;
         var clipHeight:Number = (-clipRect.y - clipRect.height / 2) / 50;
         var clipSqrt:Number = Math.sqrt(clipWidth * clipWidth + clipHeight * clipHeight);
-        var clipAngle:Number = camera.angleRad_ - (Math.PI / 2) - Math.atan2(clipWidth, clipHeight);
+        var clipAngle:Number = camera.angleRad_ - Math.PI / 2 - Math.atan2(clipWidth, clipHeight);
         return new Point(camera.x_ + clipSqrt * Math.cos(clipAngle), camera.y_ + clipSqrt * Math.sin(clipAngle));
     }
 

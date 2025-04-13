@@ -853,7 +853,7 @@
             <EffectInfo name="Spawns a ghost to aid you in combat." description=""/>
             <EffectInfo name="Damage" description="520"/>
             <EffectInfo name="Lifetime" description="4"/>
-            <EffectInfo name="Effect" description="Dazed for 1 secs"/>
+            <EffectInfo name="Effect" description="Exhaust for 1 secs"/>
         </ExtraTooltipData>
         <ActivateOnEquip stat="122" amount="10">IncrementStat</ActivateOnEquip>
         <ActivateOnEquip stat="21" amount="2">IncrementStat</ActivateOnEquip>

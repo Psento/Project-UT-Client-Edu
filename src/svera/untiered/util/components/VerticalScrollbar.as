@@ -93,7 +93,7 @@ public class VerticalScrollbar extends Sprite implements Scrollbar {
     }
 
     public function scrollPosition(value:Number):void {
-        var position:Number = (this.position + value);
+        var position:Number = this.position + value;
         this.setPosition(position);
     }
 

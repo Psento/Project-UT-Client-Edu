@@ -78,7 +78,7 @@ public class GameObject extends BasicObject {
     public var slotTypes_:Vector.<int> = null;
     public var equipment_:Vector.<int> = null;
     public var itemDatas_:Vector.<int> = null;
-    public var condition_:uint = 0;
+    public var condition_:Vector.<uint>;
     protected var tex1Id_:int = 0;
     protected var tex2Id_:int = 0;
     public var isInteractive_:Boolean = false;
@@ -104,7 +104,13 @@ public class GameObject extends BasicObject {
     private var iconPaths_:Vector.<GraphicsPath> = null;
     protected var shadowGradientFill_:GraphicsGradientFill = null;
     protected var shadowPath_:GraphicsPath = null;
-
+    // Immunities
+    private var isStunImmune_:Boolean = false;
+    private var isDeficientImmune_:Boolean = false;
+    private var isHemorrhageImmune_:Boolean = false;
+    private var isBindImmune_:Boolean = false;
+    private var isExhaustImmune_:Boolean = false;
+    //
     private var hpbarBackFill_:GraphicsSolidFill = null;
     private var hpbarBackPath_:GraphicsPath = null;
     private var hpbarFill_:GraphicsSolidFill = null;
@@ -175,19 +181,83 @@ public class GameObject extends BasicObject {
         this.props_.loadSounds();
     }
 
-    public static function damageWithDefense(origDamage:int, targetDefense:int, armorPiercing:Boolean, targetCondition:int):int {
-        var def:int = targetDefense;
-        if (armorPiercing || (targetCondition & ConditionEffect.ARMORBROKEN_BIT) != 0) {
-            def = 0;
-        } else if ((targetCondition & ConditionEffect.ARMORED_BIT) != 0) {
-            def = def * 2;
+    public static function damageWithDefense(dmg:int, defense:int, isPiercing:Boolean, condition:Vector.<uint>):int {
+        var def:int = defense <= 60 ? defense : 60;
+
+        if (!((condition[ConditionEffect.CE_FIRST_BATCH] & ConditionEffect.VULNERABLE_BIT) == 0) || isPiercing) {
+            def = def / 4;
         }
-        var min:int = origDamage * 3 / 20;
-        var d:int = Math.max(min, origDamage - def);
-        if ((targetCondition & ConditionEffect.INVULNERABLE_BIT) != 0) {
-            d = 0;
+        else {
+            if ((condition[ConditionEffect.CE_FIRST_BATCH] & ConditionEffect.HARDEN_BIT || condition[ConditionEffect.CE_THIRD_BATCH] & ConditionEffect.FROZENRESOLVE_BIT) != 0) {
+                def = def * 2;
+            }
         }
-        return d;
+        var floor:Number = dmg * 0.4;
+        var ret:Number;
+        if(dmg * ((100 - def) * 0.01) < floor)
+            ret = floor;
+        else
+            ret = dmg * ((100 - def) * 0.01);
+        if ((condition[ConditionEffect.CE_SECOND_BATCH] & ConditionEffect.TERRIFY_BIT) != 0) {
+            ret = ret * 0.9;
+        }
+        if ((condition[ConditionEffect.CE_SECOND_BATCH] & ConditionEffect.FRAGILE_BIT) != 0) {
+            ret = ret * 1.20;
+        }
+        if ((condition[ConditionEffect.CE_THIRD_BATCH] & ConditionEffect.ONEFORTHETEAM_BIT) != 0) {
+            ret = ret * 0.95;
+        }
+        if ((condition[ConditionEffect.CE_FIRST_BATCH] & ConditionEffect.INVULNERABLE_BIT || condition[ConditionEffect.CE_FIRST_BATCH] & ConditionEffect.IMMORTAL_BIT) != 0) {
+            ret = 0;
+        }
+        return ret;
+    }
+
+    public static function damageWithDefenseEnemy(_arg1:int, _arg2:int, _arg3:Boolean, _arg4:Vector.<uint>, player:Player):int { //player concerned
+        var _local5:int = _arg2;
+
+        if(_arg3){
+            _local5 = _local5 / 4;
+        }
+        if (!((_arg4[ConditionEffect.CE_FIRST_BATCH] & ConditionEffect.VULNERABLE_BIT) == 0)) {
+            _local5 = _local5 / 4;
+        }
+        else {
+            if ((_arg4[ConditionEffect.CE_FIRST_BATCH] & ConditionEffect.HARDEN_BIT || _arg4[ConditionEffect.CE_THIRD_BATCH] & ConditionEffect.FROZENRESOLVE_BIT) != 0) {
+                _local5 = _local5 * 2;
+            }
+        }
+        var _local6:int = _arg1 * 3 / 20 ;
+        var _local7:int = Math.max(_local6, _arg1 - _local5);
+        if ((_arg4[ConditionEffect.CE_FIRST_BATCH] & ConditionEffect.INVULNERABLE_BIT) != 0) {
+            _local7 = 0;
+        }
+        if ((_arg4[ConditionEffect.CE_FIRST_BATCH] & ConditionEffect.HEMORRHAGE_BIT) != 0 && player.hasBlackPlague()) {
+            _local7 = _local7 * 1.08;
+        }
+        if ((_arg4[ConditionEffect.CE_FIRST_BATCH] & ConditionEffect.BIND_BIT) != 0 && player.hasOpportunist()) {
+            _local7 = _local7 * 1.1;
+        }
+        if ((_arg4[ConditionEffect.CE_FIRST_BATCH] & ConditionEffect.SLUGGISH_BIT ||
+                _arg4[ConditionEffect.CE_SECOND_BATCH] & ConditionEffect.BIND_BIT ||
+                _arg4[ConditionEffect.CE_FIRST_BATCH] & ConditionEffect.DEFICIENT_BIT ||
+                _arg4[ConditionEffect.CE_FIRST_BATCH] & ConditionEffect.STUNNED_BIT ||
+                _arg4[ConditionEffect.CE_FIRST_BATCH] & ConditionEffect.DISORIENT_BIT ||
+                _arg4[ConditionEffect.CE_FIRST_BATCH] & ConditionEffect.VULNERABLE_BIT ||
+                _arg4[ConditionEffect.CE_FIRST_BATCH] & ConditionEffect.HEMORRHAGE_BIT ||
+                _arg4[ConditionEffect.CE_FIRST_BATCH] & ConditionEffect.EXHAUST_BIT ||
+                _arg4[ConditionEffect.CE_FIRST_BATCH] & ConditionEffect.NAUSEA_BIT ||
+                _arg4[ConditionEffect.CE_FIRST_BATCH] & ConditionEffect.CONCUSS_BIT ||
+                _arg4[ConditionEffect.CE_SECOND_BATCH] & ConditionEffect.FRAGILE_BIT) != 0 && player.hasSadistic()) {
+            _local7 = _local7 * 1.05;
+        }
+        if ((_arg4[ConditionEffect.CE_SECOND_BATCH] & ConditionEffect.TERRIFY_BIT) != 0) {
+            _local7 = _local7 * 0.9;
+        }
+        if ((_arg4[ConditionEffect.CE_SECOND_BATCH] & ConditionEffect.FRAGILE_BIT) != 0) {
+            _local7 = _local7 * 1.25;
+        }
+        return _local7;
     }
 
     public function setObjectId(objectId:int):void {
@@ -325,96 +395,224 @@ public class GameObject extends BasicObject {
         }
     }
 
-    public function isQuiet():Boolean {
-        return (this.condition_ & ConditionEffect.QUIET_BIT) != 0;
+    public function isMuted():Boolean {
+        return !((this.condition_[ConditionEffect.CE_FIRST_BATCH] & ConditionEffect.MUTE_BIT) == 0);
     }
 
-    public function isWeak():Boolean {
-        return (this.condition_ & ConditionEffect.WEAK_BIT) != 0;
+    public function isDeficient():Boolean {
+        return !((this.condition_[ConditionEffect.CE_FIRST_BATCH] & ConditionEffect.DEFICIENT_BIT) == 0);
     }
 
-    public function isSlowed():Boolean {
-        return (this.condition_ & ConditionEffect.SLOWED_BIT) != 0;
+    public function isSluggish():Boolean {
+        return !((this.condition_[ConditionEffect.CE_FIRST_BATCH] & ConditionEffect.SLUGGISH_BIT) == 0);
     }
 
-    public function isSick():Boolean {
-        return (this.condition_ & ConditionEffect.SICK_BIT) != 0;
+    public function hasNausea():Boolean {
+        return !((this.condition_[ConditionEffect.CE_FIRST_BATCH] & ConditionEffect.NAUSEA_BIT) == 0);
     }
 
-    public function isDazed():Boolean {
-        return (this.condition_ & ConditionEffect.DAZED_BIT) != 0;
+    public function isExausted():Boolean {
+        return !((this.condition_[ConditionEffect.CE_FIRST_BATCH] & ConditionEffect.EXHAUST_BIT) == 0);
     }
 
     public function isStunned():Boolean {
-        return (this.condition_ & ConditionEffect.STUNNED_BIT) != 0;
+        return !((this.condition_[ConditionEffect.CE_FIRST_BATCH] & ConditionEffect.STUNNED_BIT) == 0);
     }
 
     public function isBlind():Boolean {
-        return (this.condition_ & ConditionEffect.BLIND_BIT) != 0;
+        return !((this.condition_[ConditionEffect.CE_FIRST_BATCH] & ConditionEffect.BLIND_BIT) == 0);
     }
 
     public function isDrunk():Boolean {
-        return (this.condition_ & ConditionEffect.DRUNK_BIT) != 0;
+        return !((this.condition_[ConditionEffect.CE_FIRST_BATCH] & ConditionEffect.DRUNK_BIT) == 0);
     }
 
-    public function isConfused():Boolean {
-        return (this.condition_ & ConditionEffect.CONFUSED_BIT) != 0;
+    public function isDisoriented():Boolean {
+        return !((this.condition_[ConditionEffect.CE_FIRST_BATCH] & ConditionEffect.DISORIENT_BIT) == 0);
     }
 
     public function isStunImmune():Boolean {
-        return (this.condition_ & ConditionEffect.STUN_IMMUNE_BIT) != 0;
+        return !(((this.condition_[ConditionEffect.CE_FIRST_BATCH] & ConditionEffect.STUN_IMMUNE_BIT) == 0)) || this.isStunImmune_;
+    }
+
+    public function isDeficientImmune():Boolean {
+        return !(((this.condition_[ConditionEffect.CE_THIRD_BATCH] & ConditionEffect.DEFICIENT_IMMUNE_BIT) == 0)) || this.isDeficientImmune_;
+    }
+
+    public function isHemorrhageImmune():Boolean {
+        return !(((this.condition_[ConditionEffect.CE_THIRD_BATCH] & ConditionEffect.HEMORRHAGE_IMMUNE_BIT) == 0)) || this.isHemorrhageImmune_;
     }
 
     public function isInvisible():Boolean {
-        return (this.condition_ & ConditionEffect.INVISIBLE_BIT) != 0;
+        return !((this.condition_[ConditionEffect.CE_FIRST_BATCH] & ConditionEffect.INVISIBLE_BIT) == 0);
     }
 
-    public function isParalyzed():Boolean {
-        return (this.condition_ & ConditionEffect.PARALYZED_BIT) != 0;
+    public function isBound():Boolean {
+        return !((this.condition_[ConditionEffect.CE_FIRST_BATCH] & ConditionEffect.BIND_BIT) == 0);
     }
 
-    public function isSpeedy():Boolean {
-        return (this.condition_ & ConditionEffect.SPEEDY_BIT) != 0;
+    public function isSwift():Boolean {
+        return !((this.condition_[ConditionEffect.CE_FIRST_BATCH] & ConditionEffect.SWIFT_BIT) == 0);
+    }
+
+    public function isNinjaSpeedy():Boolean {
+        return !((this.condition_[ConditionEffect.CE_FIRST_BATCH] & ConditionEffect.NINJA_SPEEDY_BIT) == 0);
     }
 
     public function isHallucinating():Boolean {
-        return (this.condition_ & ConditionEffect.HALLUCINATING_BIT) != 0;
+        return !((this.condition_[ConditionEffect.CE_FIRST_BATCH] & ConditionEffect.HALLUCINATING_BIT) == 0);
     }
 
-    public function isHealing():Boolean {
-        return (this.condition_ & ConditionEffect.HEALING_BIT) != 0;
+    public function isRegenerating():Boolean {
+        return !((this.condition_[ConditionEffect.CE_FIRST_BATCH] & ConditionEffect.REGENERATE_BIT) == 0);
     }
 
-    public function isDamaging():Boolean {
-        return (this.condition_ & ConditionEffect.DAMAGING_BIT) != 0;
+    public function isIntelligent():Boolean {
+        return !((this.condition_[ConditionEffect.CE_SECOND_BATCH] & ConditionEffect.INTELLIGENCE_BIT) == 0);
     }
 
-    public function isBerserk():Boolean {
-        return (this.condition_ & ConditionEffect.BERSERK_BIT) != 0;
+    public function isStrengthened():Boolean {
+        return !((this.condition_[ConditionEffect.CE_FIRST_BATCH] & ConditionEffect.STRENGTHEN_BIT) == 0);
     }
 
-    public function isStasis():Boolean {
-        return (this.condition_ & ConditionEffect.STASIS_BIT) != 0;
+    public function isFurious():Boolean {
+        return !((this.condition_[ConditionEffect.CE_FIRST_BATCH] & ConditionEffect.FURY_BIT) == 0);
     }
 
-    public function isInvincible():Boolean {
-        return (this.condition_ & ConditionEffect.INVINCIBLE_BIT) != 0;
+    public function isPaused():Boolean {
+        return !((this.condition_[ConditionEffect.CE_FIRST_BATCH] & ConditionEffect.PAUSED_BIT) == 0);
+    }
+
+    public function isCrippled():Boolean {
+        return !((this.condition_[ConditionEffect.CE_FIRST_BATCH] & ConditionEffect.CRIPPLE_BIT) == 0);
+    }
+
+    public function isImmortal():Boolean {
+        return !((this.condition_[ConditionEffect.CE_FIRST_BATCH] & ConditionEffect.IMMORTAL_BIT) == 0);
     }
 
     public function isInvulnerable():Boolean {
-        return (this.condition_ & ConditionEffect.INVULNERABLE_BIT) != 0;
+        return !((this.condition_[ConditionEffect.CE_FIRST_BATCH] & ConditionEffect.INVULNERABLE_BIT) == 0);
     }
 
-    public function isArmored():Boolean {
-        return (this.condition_ & ConditionEffect.ARMORED_BIT) != 0;
+    public function isHardened():Boolean {
+        return !((this.condition_[ConditionEffect.CE_FIRST_BATCH] & ConditionEffect.HARDEN_BIT) == 0);
     }
 
-    public function isArmorBroken():Boolean {
-        return (this.condition_ & ConditionEffect.ARMORBROKEN_BIT) != 0;
+    public function isVulnerable():Boolean {
+        return !((this.condition_[ConditionEffect.CE_FIRST_BATCH] & ConditionEffect.VULNERABLE_BIT) == 0);
     }
 
-    public function isTargetable():Boolean {
-        return !(isInvincible() || isStasis());
+    public function isVulnerableImmune():Boolean {
+        return !((this.condition_[ConditionEffect.CE_FIRST_BATCH] & ConditionEffect.VULNERABLE_IMMUNE_BIT) == 0);
+    }
+
+    public function isSluggishImmune():Boolean {
+        return !((this.condition_[ConditionEffect.CE_SECOND_BATCH] & ConditionEffect.SLUGGISH_IMMUNE_BIT) == 0);
+    }
+
+    public function isConcussed():Boolean {
+        return !((this.condition_[ConditionEffect.CE_FIRST_BATCH] & ConditionEffect.CONCUSS_BIT) == 0);
+    }
+
+    public function isSwiftness():Boolean {
+        return !((this.condition_[ConditionEffect.CE_SECOND_BATCH] & ConditionEffect.SWIFTNESS_BIT) == 0);
+    }
+
+    public function isNearsighted():Boolean {
+        return !((this.condition_[ConditionEffect.CE_FIRST_BATCH] & ConditionEffect.NEARSIGHT_BIT) == 0);
+    }
+
+    public function isBindImmune():Boolean {
+        return this.isBindImmune_ || !(((this.condition_[ConditionEffect.CE_SECOND_BATCH] & ConditionEffect.BIND_IMMUNE_BIT) == 0));
+    }
+
+    public function isExhaustImmune():Boolean {
+        return this.isExhaustImmune_ || !(((this.condition_[ConditionEffect.CE_SECOND_BATCH] & ConditionEffect.EXHAUST_IMMUNE_BIT) == 0));
+    }
+
+    public function isTerrified():Boolean {
+        return !((this.condition_[ConditionEffect.CE_SECOND_BATCH] & ConditionEffect.TERRIFY_BIT) == 0);
+    }
+
+    public function isTerrifyImmune():Boolean {
+        return !((this.condition_[ConditionEffect.CE_SECOND_BATCH] & ConditionEffect.TERRIFY_IMMUNE_BIT) == 0);
+    }
+
+    public function isFragile():Boolean {
+        return !((this.condition_[ConditionEffect.CE_SECOND_BATCH] & ConditionEffect.FRAGILE_BIT) == 0);
+    }
+
+    public function isFragileImmune():Boolean {
+        return !((this.condition_[ConditionEffect.CE_SECOND_BATCH] & ConditionEffect.FRAGILE_IMMUNE_BIT) == 0);
+    }
+
+    public function isHidden() : Boolean
+    {
+        return (this.condition_[ConditionEffect.CE_SECOND_BATCH] & ConditionEffect.HIDDEN_BIT) != 0;
+    }
+
+    public function isSamuraiBerserk():Boolean {
+        return !((this.condition_[ConditionEffect.CE_SECOND_BATCH] & ConditionEffect.SAMURAIBERSERK_BIT) == 0);
+    }
+
+    public function isTribesWarcry():Boolean {
+        return !((this.condition_[ConditionEffect.CE_SECOND_BATCH] & ConditionEffect.TRIBESWARCRY_BIT) == 0);
+    }
+
+    public function isFrozenResolve():Boolean {
+        return !((this.condition_[ConditionEffect.CE_THIRD_BATCH] & ConditionEffect.FROZENRESOLVE_BIT) == 0);
+    }
+
+    public function hasBMEffect():Boolean {
+        return !((this.condition_[ConditionEffect.CE_THIRD_BATCH] & ConditionEffect.BMEFFECT_BIT) == 0);
+    }
+
+    public function isRelentless():Boolean {
+        return !((this.condition_[ConditionEffect.CE_SECOND_BATCH] & ConditionEffect.RELENTLESS_BIT) == 0);
+    }
+
+    public function isVengeance():Boolean {
+        return !((this.condition_[ConditionEffect.CE_SECOND_BATCH] & ConditionEffect.VENGEANCE_BIT) == 0);
+    }
+
+    public function isAlliance():Boolean {
+        return !((this.condition_[ConditionEffect.CE_THIRD_BATCH] & ConditionEffect.ALLIANCE_BIT) == 0);
+    }
+
+    public function isGrasp():Boolean {
+        return !((this.condition_[ConditionEffect.CE_SECOND_BATCH] & ConditionEffect.GRASPOFZOL_BIT) == 0);
+    }
+
+    public function isPrecision():Boolean {
+        return !((this.condition_[ConditionEffect.CE_SECOND_BATCH] & ConditionEffect.PRECISION_BIT) == 0);
+    }
+
+    public function isUntargetable() :Boolean {
+        return isImmortal() || isPaused() || isCrippled() || hp_ < 1;
+    }
+
+    public function isAAmbition():Boolean {
+        return !((this.condition_[ConditionEffect.CE_THIRD_BATCH] & ConditionEffect.AAMBITION_BIT) == 0);
+    }
+
+    public function isUntouchable():Boolean {
+        return !((this.condition_[ConditionEffect.CE_THIRD_BATCH] & ConditionEffect.UNTOUCHABLE_BIT) == 0);
+    }
+
+    public function isWarmedUp():Boolean {
+        return !((this.condition_[ConditionEffect.CE_THIRD_BATCH] & ConditionEffect.WARMEDUP_BIT) == 0);
+    }
+
+    public function hasKarmasHonor():Boolean {
+        return !((this.condition_[ConditionEffect.CE_THIRD_BATCH] & ConditionEffect.KARMASHONOR_BIT) == 0);
+    }
+
+    public function hasTsunamisFury():Boolean {
+        return !((this.condition_[ConditionEffect.CE_THIRD_BATCH] & ConditionEffect.TSUNAMISFURY_BIT) == 0);
+    }
+    public function isDowned():Boolean {
+        return !((this.condition_[ConditionEffect.CE_THIRD_BATCH] & ConditionEffect.DOWNED_BIT) == 0);
     }
 
     public function isSafe(size:int = 20):Boolean {
@@ -509,20 +707,20 @@ public class GameObject extends BasicObject {
         var ny:Number = NaN;
         var moving:Boolean = false;
         if (this.direction_.x != 0 || this.direction_.y != 0) {
-            dx = (direction_.x * dt);
-            dy = (direction_.y * dt);
+            dx = direction_.x * dt;
+            dy = direction_.y * dt;
 
             nx = x_ + dx;
             ny = y_ + dy;
 
-            if ((direction_.x > 0 && nx > targetPosition_.x) ||
-                    (direction_.x < 0 && nx < targetPosition_.x)) {
+            if (direction_.x > 0 && nx > targetPosition_.x ||
+                    direction_.x < 0 && nx < targetPosition_.x) {
                 nx = targetPosition_.x;
                 direction_.x = 0;
             }
 
-            if ((direction_.y > 0 && ny > targetPosition_.y) ||
-                    (direction_.y < 0 && ny < targetPosition_.y)) {
+            if (direction_.y > 0 && ny > targetPosition_.y ||
+                    direction_.y < 0 && ny < targetPosition_.y) {
                 ny = targetPosition_.y;
                 direction_.y = 0;
             }
@@ -573,23 +771,7 @@ public class GameObject extends BasicObject {
                 switch (conditionEffect) {
                     case ConditionEffect.NOTHING:
                         break;
-                    case ConditionEffect.QUIET:
-                    case ConditionEffect.WEAK:
-                    case ConditionEffect.SLOWED:
-                    case ConditionEffect.SICK:
-                    case ConditionEffect.DAZED:
-                    case ConditionEffect.BLIND:
-                    case ConditionEffect.HALLUCINATING:
-                    case ConditionEffect.DRUNK:
-                    case ConditionEffect.CONFUSED:
-                    case ConditionEffect.STUN_IMMUNE:
-                    case ConditionEffect.INVISIBLE:
-                    case ConditionEffect.PARALYZED:
-                    case ConditionEffect.SPEEDY:
-                    case ConditionEffect.BLEEDING:
-                    case ConditionEffect.STASIS:
-                    case ConditionEffect.STASIS_IMMUNE:
-                    case ConditionEffect.ARMORBROKEN:
+                    case ConditionEffect.DISORIENT:
                         ce = ConditionEffect.effects_[conditionEffect];
                         break;
                     case ConditionEffect.STUNNED:
@@ -618,7 +800,7 @@ public class GameObject extends BasicObject {
             }
         }
         if (damageAmount > 0) {
-            pierced = this.isArmorBroken() || proj != null && proj.projProps_.armorPiercing_;
+            pierced = this.isVulnerable() || proj != null && proj.projProps_.armorPiercing_;
             map_.mapOverlay_.addStatusText(new CharacterStatusText(this, "-" + damageAmount, pierced ? 9437439 : 16711680, 1000));
         }
     }
@@ -715,7 +897,7 @@ public class GameObject extends BasicObject {
             mask = null;
             size = this.size_ * Math.min(1.5, w / texture.width);
         }
-        if (this.isStasis()) {
+        if (this.isFragile()) {
             texture = CachingColorTransformer.filterBitmapData(texture, PAUSED_FILTER);
         }
         if (this.tex1Id_ == 0 && this.tex2Id_ == 0) {
@@ -773,7 +955,7 @@ public class GameObject extends BasicObject {
         }
 
         var sw:int = size_ / 4;
-        var w:int = isPlayer ? DEFAULT_HP_BAR_WIDTH : (sw < 25) ? 25 : sw;
+        var w:int = isPlayer ? DEFAULT_HP_BAR_WIDTH : sw < 25 ? 25 : sw;
         var h:int = isPlayer ? DEFAULT_HP_BAR_HEIGHT : 3;
         this.hpbarBackPath_.data.length = 0;
         this.hpbarBackPath_.data.push(posS_[0] - w, posS_[1] + yOffset, posS_[0] + w, posS_[1] + yOffset, posS_[0] + w, posS_[1] + yOffset + h, posS_[0] - w, posS_[1] + yOffset + h);
@@ -834,7 +1016,7 @@ public class GameObject extends BasicObject {
         }
         if (Parameters.GPURenderFrame) {
             if (h2 != 0) {
-                GraphicsFillExtra.setSinkLevel(this.bitmapFill_, Math.max(((h2 / h) * 1.65) - 0.02, 0));
+                GraphicsFillExtra.setSinkLevel(this.bitmapFill_, Math.max((h2 / h) * 1.65 - 0.02, 0));
                 h2 = -h2 + 0.02;
             } else if (h2 == 0 && GraphicsFillExtra.getSinkLevel(this.bitmapFill_) != 0) {
                 GraphicsFillExtra.clearSink(this.bitmapFill_);
@@ -871,7 +1053,7 @@ public class GameObject extends BasicObject {
         }
 
         if (Parameters.data_.hpBars) {
-            var bDrawHpBar:Boolean = this.props_ && (this.props_.isEnemy_ || this.props_.isPlayer_) && !this.isInvincible() && (this.props_.isPlayer_ || !this.isInvulnerable()) && !this.props_.noMiniMap_;
+            var bDrawHpBar:Boolean = this.props_ && (this.props_.isEnemy_ || this.props_.isPlayer_) && !this.isImmortal() && (this.props_.isPlayer_ || !this.isInvulnerable()) && !this.props_.noMiniMap_;
 
             if (bDrawHpBar) {
                 this.drawHpBar(graphicsData,

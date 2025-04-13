@@ -145,7 +145,7 @@ public class ObjectLibrary {
     }
     public static function isMarketBanned(_arg1:int):Boolean {
         var xml:XML = xmlLibrary_[_arg1];
-        return (!(xml == null) && (xml.TierType == "Stat" || xml.TierType == "Common" ||  xml.hasOwnProperty("Soulbound")));
+        return !(xml == null) && (xml.TierType == "Stat" || xml.TierType == "Common" ||  xml.hasOwnProperty("Soulbound"));
     }
     public static function getRedrawnTextureFromType(objectType:int, size:int, includeBottom:Boolean, useCaching:Boolean = true, scaleValue:int = 5):BitmapData {
         var textureData:TextureData = typeToTextureData_[objectType];

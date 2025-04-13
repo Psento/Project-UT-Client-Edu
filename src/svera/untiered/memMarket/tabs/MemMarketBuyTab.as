@@ -249,7 +249,7 @@ public class MemMarketBuyTab extends MemMarketTab
             this.searchScroll = null;
         }
 
-        if ((!StringUtil.trim(this.searchField_.text()) && !first) && !StringUtil.trim(this.searchField_.text()) == "") /* Clear results if empty */
+        if (!StringUtil.trim(this.searchField_.text()) && !first && !StringUtil.trim(this.searchField_.text()) == "") /* Clear results if empty */
         {
             this.clearPreviousResults(false);
             return;

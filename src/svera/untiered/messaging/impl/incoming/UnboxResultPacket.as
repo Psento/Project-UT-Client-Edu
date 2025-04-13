@@ -28,7 +28,7 @@ public class UnboxResultPacket extends IncomingMessage
 
     override public function toString():String
     {
-        return (formatToString("UNBOXRESULT", "items_"));
+        return formatToString("UNBOXRESULT", "items_");
     }
 
 }

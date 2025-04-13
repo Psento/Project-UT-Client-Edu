@@ -158,13 +158,13 @@ public class StatusBar extends Sprite {
 
     private static function NumberFormat(number:int):String {
         var suffix:Array = ["K", "M", "B", "T"];
-        var size:int = (number != 0) ? logx(number) : 0;
+        var size:int = number != 0 ? logx(number) : 0;
         if (size >= 3) {
             while (size % 3 != 0)
                 size = size - 1;
         }
         var notation:Number = Math.pow(10, size);
-        var result:* = (size >= 3) ? +(Math.round((number / notation) * 100) / 100.0) + suffix[(size / 3) - 1] : +number + "";
+        var result:* = size >= 3 ? +(Math.round((number / notation) * 100) / 100.0) + suffix[size / 3 - 1] : +number + "";
         return result;
     }
 

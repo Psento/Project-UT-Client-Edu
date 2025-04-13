@@ -11,8 +11,8 @@
         <Player/>
         <BloodProb>1.0</BloodProb>
         <SlotTypes>24, 26, 27, 28, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
-        <Equipment>-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
-            -1, -1, -1, -1
+        <Equipment>0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0
         </Equipment>
         <MaxHitPoints max="720">150</MaxHitPoints>
         <MaxShieldPoints max="0">0</MaxShieldPoints>
@@ -36,8 +36,8 @@
         <Player/>
         <BloodProb>1.0</BloodProb>
         <SlotTypes>17, 29, 30, 31, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
-        <Equipment>-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
-            -1, -1, -1, -1
+        <Equipment>0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0
         </Equipment>
         <MaxHitPoints max="720">150</MaxHitPoints>
         <MaxShieldPoints max="0">0</MaxShieldPoints>
@@ -61,8 +61,8 @@
         <Player/>
         <BloodProb>1.0</BloodProb>
         <SlotTypes>3, 32, 33, 34, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
-        <Equipment>-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
-            -1, -1, -1, -1
+        <Equipment>0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0
         </Equipment>
         <MaxHitPoints max="720">150</MaxHitPoints>
         <MaxShieldPoints max="0">0</MaxShieldPoints>
@@ -86,8 +86,8 @@
         <Player/>
         <BloodProb>1.0</BloodProb>
         <SlotTypes>24, 35, 36, 37, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
-        <Equipment>-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
-            -1, -1, -1, -1
+        <Equipment>0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0
         </Equipment>
         <MaxHitPoints max="720">150</MaxHitPoints>
         <MaxShieldPoints max="0">0</MaxShieldPoints>
@@ -111,8 +111,8 @@
         <Player/>
         <BloodProb>1.0</BloodProb>
         <SlotTypes>25, 38, 39, 40, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
-        <Equipment>-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
-            -1, -1, -1, -1
+        <Equipment>0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0
         </Equipment>
         <MaxHitPoints max="720">150</MaxHitPoints>
         <MaxShieldPoints max="0">0</MaxShieldPoints>
@@ -136,8 +136,8 @@
         <Player/>
         <BloodProb>1.0</BloodProb>
         <SlotTypes>3, 41, 42, 43, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
-        <Equipment>-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
-            -1, -1, -1, -1
+        <Equipment>0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0
         </Equipment>
         <MaxHitPoints max="720">150</MaxHitPoints>
         <MaxShieldPoints max="0">0</MaxShieldPoints>
@@ -161,8 +161,8 @@
         <Player/>
         <BloodProb>1.0</BloodProb>
         <SlotTypes>3, 44, 45, 46, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
-        <Equipment>-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
-            -1, -1, -1, -1
+        <Equipment>0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0
         </Equipment>
         <MaxHitPoints max="720">150</MaxHitPoints>
         <MaxShieldPoints max="0">0</MaxShieldPoints>
@@ -186,8 +186,8 @@
         <Player/>
         <BloodProb>1.0</BloodProb>
         <SlotTypes>1, 47, 48, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
-        <Equipment>-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
-            -1, -1, -1, -1
+        <Equipment>0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0
         </Equipment>
         <MaxHitPoints max="720">150</MaxHitPoints>
         <MaxShieldPoints max="0">0</MaxShieldPoints>
@@ -211,8 +211,8 @@
         <Player/>
         <BloodProb>1.0</BloodProb>
         <SlotTypes>4, 50, 51, 52, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
-        <Equipment>-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
-            -1, -1, -1, -1
+        <Equipment>0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0
         </Equipment>
         <MaxHitPoints max="720">150</MaxHitPoints>
         <MaxShieldPoints max="0">0</MaxShieldPoints>
@@ -236,8 +236,8 @@
         <Player/>
         <BloodProb>1.0</BloodProb>
         <SlotTypes>17, 53, 54, 55, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
-        <Equipment>-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
-            -1, -1, -1, -1
+        <Equipment>0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0
         </Equipment>
         <MaxHitPoints max="720">150</MaxHitPoints>
         <MaxShieldPoints max="0">0</MaxShieldPoints>
@@ -261,8 +261,8 @@
         <Player/>
         <BloodProb>1.0</BloodProb>
         <SlotTypes>2, 0, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
-        <Equipment>-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
-            -1, -1, -1, -1
+        <Equipment>0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0
         </Equipment>
         <MaxHitPoints max="720">150</MaxHitPoints>
         <MaxShieldPoints max="0">0</MaxShieldPoints>
@@ -286,8 +286,8 @@
         <Player/>
         <BloodProb>1.0</BloodProb>
         <SlotTypes>8, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
-        <Equipment>-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
-            -1, -1, -1, -1
+        <Equipment>0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0
         </Equipment>
         <MaxHitPoints max="720">150</MaxHitPoints>
         <MaxShieldPoints max="0">0</MaxShieldPoints>
@@ -311,8 +311,8 @@
         <Player/>
         <BloodProb>1.0</BloodProb>
         <SlotTypes>8, 0, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
-        <Equipment>-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
-            -1, -1, -1, -1
+        <Equipment>0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0
         </Equipment>
         <MaxHitPoints max="720">150</MaxHitPoints>
         <MaxShieldPoints max="0">0</MaxShieldPoints>
@@ -336,8 +336,8 @@
         <Player/>
         <BloodProb>1.0</BloodProb>
         <SlotTypes>3, 0, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
-        <Equipment>-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
-            -1, -1, -1, -1
+        <Equipment>0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0
         </Equipment>
         <MaxHitPoints max="720">150</MaxHitPoints>
         <MaxShieldPoints max="0">0</MaxShieldPoints>
@@ -361,8 +361,8 @@
         <Player/>
         <BloodProb>1.0</BloodProb>
         <SlotTypes>25, 0, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
-        <Equipment>-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
-            -1, -1, -1, -1
+        <Equipment>0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0
         </Equipment>
         <MaxHitPoints max="720">150</MaxHitPoints>
         <MaxShieldPoints max="0">0</MaxShieldPoints>
@@ -386,8 +386,8 @@
         <Player/>
         <BloodProb>1.0</BloodProb>
         <SlotTypes>1, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
-        <Equipment>-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
-            -1, -1, -1, -1
+        <Equipment>0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0
         </Equipment>
         <MaxHitPoints max="720">150</MaxHitPoints>
         <MaxShieldPoints max="0">0</MaxShieldPoints>
@@ -411,8 +411,8 @@
         <Player/>
         <BloodProb>1.0</BloodProb>
         <SlotTypes>1, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
-        <Equipment>-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
-            -1, -1, -1, -1
+        <Equipment>0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0
         </Equipment>
         <MaxHitPoints max="720">150</MaxHitPoints>
         <MaxShieldPoints max="0">0</MaxShieldPoints>
@@ -436,8 +436,8 @@
         <Player/>
         <BloodProb>1.0</BloodProb>
         <SlotTypes>1, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
-        <Equipment>-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
-            -1, -1, -1, -1
+        <Equipment>0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0
         </Equipment>
         <MaxHitPoints max="720">150</MaxHitPoints>
         <MaxShieldPoints max="0">0</MaxShieldPoints>
@@ -461,8 +461,8 @@
         <Player/>
         <BloodProb>1.0</BloodProb>
         <SlotTypes>24, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
-        <Equipment>-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
-            -1, -1, -1, -1
+        <Equipment>0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0
         </Equipment>
         <MaxHitPoints max="720">150</MaxHitPoints>
         <MaxShieldPoints max="0">0</MaxShieldPoints>
@@ -486,8 +486,8 @@
         <Player/>
         <BloodProb>1.0</BloodProb>
         <SlotTypes>15, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
-        <Equipment>-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
-            -1, -1, -1, -1
+        <Equipment>0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0
         </Equipment>
         <MaxHitPoints max="720">150</MaxHitPoints>
         <MaxShieldPoints max="0">0</MaxShieldPoints>
@@ -511,8 +511,8 @@
         <Player/>
         <BloodProb>1.0</BloodProb>
         <SlotTypes>17, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
-        <Equipment>-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
-            -1, -1, -1, -1
+        <Equipment>0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0
         </Equipment>
         <MaxHitPoints max="720">150</MaxHitPoints>
         <MaxShieldPoints max="0">0</MaxShieldPoints>
@@ -536,8 +536,8 @@
         <Player/>
         <BloodProb>1.0</BloodProb>
         <SlotTypes>4, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
-        <Equipment>-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
-            -1, -1, -1, -1
+        <Equipment>0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0
         </Equipment>
         <MaxHitPoints max="720">150</MaxHitPoints>
         <MaxShieldPoints max="0">0</MaxShieldPoints>
@@ -561,8 +561,8 @@
         <Player/>
         <BloodProb>1.0</BloodProb>
         <SlotTypes>25, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
-        <Equipment>-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
-            -1, -1, -1, -1
+        <Equipment>0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0
         </Equipment>
         <MaxHitPoints max="720">150</MaxHitPoints>
         <MaxShieldPoints max="0">0</MaxShieldPoints>
@@ -586,8 +586,8 @@
         <Player/>
         <BloodProb>1.0</BloodProb>
         <SlotTypes>15, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
-        <Equipment>-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
-            -1, -1, -1, -1
+        <Equipment>0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0
         </Equipment>
         <MaxHitPoints max="720">150</MaxHitPoints>
         <MaxShieldPoints max="0">0</MaxShieldPoints>
@@ -611,8 +611,8 @@
         <Player/>
         <BloodProb>1.0</BloodProb>
         <SlotTypes>8, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
-        <Equipment>-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
-            -1, -1, -1, -1
+        <Equipment>0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0
         </Equipment>
         <MaxHitPoints max="720">150</MaxHitPoints>
         <MaxShieldPoints max="0">0</MaxShieldPoints>
@@ -636,8 +636,8 @@
         <Player/>
         <BloodProb>1.0</BloodProb>
         <SlotTypes>24, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
-        <Equipment>-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
-            -1, -1, -1, -1
+        <Equipment>0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0
         </Equipment>
         <MaxHitPoints max="720">150</MaxHitPoints>
         <MaxShieldPoints max="0">0</MaxShieldPoints>
@@ -661,8 +661,8 @@
         <Player/>
         <BloodProb>1.0</BloodProb>
         <SlotTypes>17, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
-        <Equipment>-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
-            -1, -1, -1, -1
+        <Equipment>0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0
         </Equipment>
         <MaxHitPoints max="720">150</MaxHitPoints>
         <MaxShieldPoints max="0">0</MaxShieldPoints>
@@ -686,8 +686,8 @@
         <Player/>
         <BloodProb>1.0</BloodProb>
         <SlotTypes>2, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
-        <Equipment>-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
-            -1, -1, -1, -1
+        <Equipment>0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0
         </Equipment>
         <MaxHitPoints max="720">150</MaxHitPoints>
         <MaxShieldPoints max="0">0</MaxShieldPoints>
@@ -711,8 +711,8 @@
         <Player/>
         <BloodProb>1.0</BloodProb>
         <SlotTypes>21, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
-        <Equipment>-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
-            -1, -1, -1, -1
+        <Equipment>0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0
         </Equipment>
         <MaxHitPoints max="720">150</MaxHitPoints>
         <MaxShieldPoints max="0">0</MaxShieldPoints>
@@ -736,8 +736,8 @@
         <Player/>
         <BloodProb>1.0</BloodProb>
         <SlotTypes>4, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
-        <Equipment>-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
-            -1, -1, -1, -1
+        <Equipment>0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0
         </Equipment>
         <MaxHitPoints max="720">150</MaxHitPoints>
         <MaxShieldPoints max="0">0</MaxShieldPoints>
@@ -761,8 +761,8 @@
         <Player/>
         <BloodProb>1.0</BloodProb>
         <SlotTypes>21, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
-        <Equipment>-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
-            -1, -1, -1, -1
+        <Equipment>0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0
         </Equipment>
         <MaxHitPoints max="720">150</MaxHitPoints>
         <MaxShieldPoints max="0">0</MaxShieldPoints>
@@ -786,8 +786,8 @@
         <Player/>
         <BloodProb>1.0</BloodProb>
         <SlotTypes>4, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
-        <Equipment>-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
-            -1, -1, -1, -1
+        <Equipment>0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0
         </Equipment>
         <MaxHitPoints max="720">150</MaxHitPoints>
         <MaxShieldPoints max="0">0</MaxShieldPoints>
@@ -811,8 +811,8 @@
         <Player/>
         <BloodProb>1.0</BloodProb>
         <SlotTypes>24, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
-        <Equipment>-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
-            -1, -1, -1, -1
+        <Equipment>0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0
         </Equipment>
         <MaxHitPoints max="720">150</MaxHitPoints>
         <MaxShieldPoints max="0">0</MaxShieldPoints>
@@ -836,8 +836,8 @@
         <Player/>
         <BloodProb>1.0</BloodProb>
         <SlotTypes>1, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
-        <Equipment>-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
-            -1, -1, -1, -1
+        <Equipment>0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0
         </Equipment>
         <MaxHitPoints max="720">150</MaxHitPoints>
         <MaxShieldPoints max="0">0</MaxShieldPoints>
@@ -861,8 +861,8 @@
         <Player/>
         <BloodProb>1.0</BloodProb>
         <SlotTypes>25, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
-        <Equipment>-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
-            -1, -1, -1, -1
+        <Equipment>0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0
         </Equipment>
         <MaxHitPoints max="720">150</MaxHitPoints>
         <MaxShieldPoints max="0">0</MaxShieldPoints>
@@ -886,8 +886,8 @@
         <Player/>
         <BloodProb>1.0</BloodProb>
         <SlotTypes>4, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
-        <Equipment>-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
-            -1, -1, -1, -1
+        <Equipment>0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0
         </Equipment>
         <MaxHitPoints max="720">150</MaxHitPoints>
         <MaxShieldPoints max="0">0</MaxShieldPoints>
@@ -911,8 +911,8 @@
         <Player/>
         <BloodProb>1.0</BloodProb>
         <SlotTypes>3, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
-        <Equipment>-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
-            -1, -1, -1, -1
+        <Equipment>0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0
         </Equipment>
         <MaxHitPoints max="720">150</MaxHitPoints>
         <MaxShieldPoints max="0">0</MaxShieldPoints>
@@ -936,8 +936,8 @@
         <Player/>
         <BloodProb>1.0</BloodProb>
         <SlotTypes>17, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
-        <Equipment>-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
-            -1, -1, -1, -1
+        <Equipment>0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0
         </Equipment>
         <MaxHitPoints max="720">150</MaxHitPoints>
         <MaxShieldPoints max="0">0</MaxShieldPoints>
@@ -961,8 +961,8 @@
         <Player/>
         <BloodProb>1.0</BloodProb>
         <SlotTypes>21, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
-        <Equipment>-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
-            -1, -1, -1, -1
+        <Equipment>0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0
         </Equipment>
         <MaxHitPoints max="720">150</MaxHitPoints>
         <MaxShieldPoints max="0">0</MaxShieldPoints>
@@ -986,8 +986,8 @@
         <Player/>
         <BloodProb>1.0</BloodProb>
         <SlotTypes>4, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
-        <Equipment>-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
-            -1, -1, -1, -1
+        <Equipment>0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0
         </Equipment>
         <MaxHitPoints max="720">150</MaxHitPoints>
         <MaxShieldPoints max="0">0</MaxShieldPoints>
@@ -1011,8 +1011,8 @@
         <Player/>
         <BloodProb>1.0</BloodProb>
         <SlotTypes>3, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
-        <Equipment>-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
-            -1, -1, -1, -1
+        <Equipment>0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0
         </Equipment>
         <MaxHitPoints max="720">150</MaxHitPoints>
         <MaxShieldPoints max="0">0</MaxShieldPoints>
@@ -1036,8 +1036,8 @@
         <Player/>
         <BloodProb>1.0</BloodProb>
         <SlotTypes>15, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
-        <Equipment>-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
-            -1, -1, -1, -1
+        <Equipment>0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0
         </Equipment>
         <MaxHitPoints max="720">150</MaxHitPoints>
         <MaxShieldPoints max="0">0</MaxShieldPoints>
@@ -1061,8 +1061,8 @@
         <Player/>
         <BloodProb>1.0</BloodProb>
         <SlotTypes>17, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
-        <Equipment>-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
-            -1, -1, -1, -1
+        <Equipment>0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0
         </Equipment>
         <MaxHitPoints max="720">150</MaxHitPoints>
         <MaxShieldPoints max="0">0</MaxShieldPoints>
@@ -1086,8 +1086,8 @@
         <Player/>
         <BloodProb>1.0</BloodProb>
         <SlotTypes>8, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
-        <Equipment>-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
-            -1, -1, -1, -1
+        <Equipment>0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0
         </Equipment>
         <MaxHitPoints max="720">150</MaxHitPoints>
         <MaxShieldPoints max="0">0</MaxShieldPoints>
@@ -1111,8 +1111,8 @@
         <Player/>
         <BloodProb>1.0</BloodProb>
         <SlotTypes>2, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
-        <Equipment>-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
-            -1, -1, -1, -1
+        <Equipment>0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0
         </Equipment>
         <MaxHitPoints max="720">150</MaxHitPoints>
         <MaxShieldPoints max="0">0</MaxShieldPoints>
@@ -1136,8 +1136,8 @@
         <Player/>
         <BloodProb>1.0</BloodProb>
         <SlotTypes>24, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
-        <Equipment>-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
-            -1, -1, -1, -1
+        <Equipment>0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0
         </Equipment>
         <MaxHitPoints max="720">150</MaxHitPoints>
         <MaxShieldPoints max="0">0</MaxShieldPoints>
@@ -1161,8 +1161,8 @@
         <Player/>
         <BloodProb>1.0</BloodProb>
         <SlotTypes>8, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
-        <Equipment>-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
-            -1, -1, -1, -1
+        <Equipment>0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0
         </Equipment>
         <MaxHitPoints max="720">150</MaxHitPoints>
         <MaxShieldPoints max="0">0</MaxShieldPoints>
@@ -1186,8 +1186,8 @@
         <Player/>
         <BloodProb>1.0</BloodProb>
         <SlotTypes>1, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
-        <Equipment>-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
-            -1, -1, -1, -1
+        <Equipment>0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0
         </Equipment>
         <MaxHitPoints max="720">150</MaxHitPoints>
         <MaxShieldPoints max="0">0</MaxShieldPoints>
@@ -1211,8 +1211,8 @@
         <Player/>
         <BloodProb>1.0</BloodProb>
         <SlotTypes>8, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
-        <Equipment>-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
-            -1, -1, -1, -1
+        <Equipment>0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0
         </Equipment>
         <MaxHitPoints max="720">150</MaxHitPoints>
         <MaxShieldPoints max="0">0</MaxShieldPoints>
@@ -1236,8 +1236,8 @@
         <Player/>
         <BloodProb>1.0</BloodProb>
         <SlotTypes>2, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
-        <Equipment>-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
-            -1, -1, -1, -1
+        <Equipment>0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0
         </Equipment>
         <MaxHitPoints max="720">150</MaxHitPoints>
         <MaxShieldPoints max="0">0</MaxShieldPoints>
@@ -1261,8 +1261,8 @@
         <Player/>
         <BloodProb>1.0</BloodProb>
         <SlotTypes>4, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
-        <Equipment>-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
-            -1, -1, -1, -1
+        <Equipment>0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0
         </Equipment>
         <MaxHitPoints max="720">150</MaxHitPoints>
         <MaxShieldPoints max="0">0</MaxShieldPoints>
@@ -1286,8 +1286,8 @@
         <Player/>
         <BloodProb>1.0</BloodProb>
         <SlotTypes>8, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
-        <Equipment>-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
-            -1, -1, -1, -1
+        <Equipment>0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0
         </Equipment>
         <MaxHitPoints max="720">150</MaxHitPoints>
         <MaxShieldPoints max="0">0</MaxShieldPoints>

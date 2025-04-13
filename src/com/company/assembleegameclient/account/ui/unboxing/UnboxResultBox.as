@@ -19,8 +19,8 @@ public class UnboxResultBox extends FrameuBox {
     public function UnboxResultBox(_gs:GameSprite, _items:Vector.<int>) {
         super("Unboxing...", "", 300);
         this.gameSprite = _gs;
-        this.unboxScroll_ = new UnboxScroll(444 + (Math.random() * 8), _items);
-        this.unboxScroll_.x = (this.w_ / 2) - (UnboxScroll.WIDTH / 2) - 4;
+        this.unboxScroll_ = new UnboxScroll(444 + Math.random() * 8, _items);
+        this.unboxScroll_.x = this.w_ / 2 - UnboxScroll.WIDTH / 2 - 4;
         this.unboxScroll_.y = this.h_ - 66;
         addChild(this.unboxScroll_);
         this.offsetH(UnboxScroll.HEIGHT);

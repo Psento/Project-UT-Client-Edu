@@ -2928,7 +2928,7 @@
         <Z>0.2</Z>
         <BindImmune/>
         <CrippleImmune/>
-        <DazedImmune/>
+        <ExhaustImmune/>
         <VulnerableImmune/>
         <SluggishImmune/>
         <Size>120</Size>
@@ -2982,7 +2982,7 @@
         <Z>0.2</Z>
         <BindImmune/>
         <CrippleImmune/>
-        <DazedImmune/>
+        <ExhaustImmune/>
         <VulnerableImmune/>
         <SluggishImmune/>
         <Size>120</Size>
@@ -3001,7 +3001,7 @@
         <Z>0.2</Z>
         <BindImmune/>
         <CrippleImmune/>
-        <DazedImmune/>
+        <ExhaustImmune/>
         <VulnerableImmune/>
         <SluggishImmune/>
         <Size>120</Size>

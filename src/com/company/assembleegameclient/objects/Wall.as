@@ -65,7 +65,7 @@ public class Wall extends GameObject {
             if (sq != null && sq.obj_ is Wall) {
                 face.visible_ = false;
             } else {
-                face.setTexture((sq == null || sq.texture_ == null) ? black : texture);
+                face.setTexture(sq == null || sq.texture_ == null ? black : texture);
                 face.visible_ = true;
                 /*if(animations_ != null)
                 {

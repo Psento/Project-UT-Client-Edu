@@ -82,7 +82,7 @@ public class TitleView extends Sprite {
 
     private function positionButtons(e:Event):void {
         this.playButton.x = GameClient.STAGE.width / 2 - this.playButton.width / 2;
-        this.playButton.y = GameClient.STAGE.height / 2 + (this.playButton.height * 2);
+        this.playButton.y = GameClient.STAGE.height / 2 + this.playButton.height * 2;
         this.legendsButton.x = GameClient.STAGE.width / 2 - this.legendsButton.width / 2;
         this.legendsButton.y = this.playButton.y + this.legendsButton.height + 18;
         this.editorButton.x = GameClient.STAGE.width / 2 - this.editorButton.width / 2;

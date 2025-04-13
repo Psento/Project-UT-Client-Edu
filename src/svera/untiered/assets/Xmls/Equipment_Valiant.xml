@@ -3018,7 +3018,7 @@
         <Size>120</Size>
         <BindImmune/>
         <CrippleImmune/>
-        <DazedImmune/>
+        <ExhaustImmune/>
         <VulnerableImmune/>
         <SluggishImmune/>
         <ShadowSize>50</ShadowSize>

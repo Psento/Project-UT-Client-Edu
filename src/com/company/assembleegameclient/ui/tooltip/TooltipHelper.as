@@ -44,7 +44,7 @@ public class TooltipHelper {
     }
 
     public static function getFormattedString(value:Number):String {
-        var formatted:Number = int((value) * 1000) / 1000;
+        var formatted:Number = int(value * 1000) / 1000;
         return formatted.toString();
     }
 }

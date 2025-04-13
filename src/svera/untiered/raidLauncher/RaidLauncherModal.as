@@ -48,7 +48,7 @@ public class RaidLauncherModal extends EmptyFrame {
     }
 
     public static function getText(_arg1:String, _arg2:int, _arg3:int, _arg4:Boolean):SimpleText {
-        var _local5:SimpleText = new SimpleText(18, 0xFFFFFF, false, (RaidLauncherModal.modalWidth - (TEXT_MARGIN * 2)) - 10);
+        var _local5:SimpleText = new SimpleText(18, 0xFFFFFF, false, RaidLauncherModal.modalWidth - (TEXT_MARGIN * 2) - 10);
         _local5.setBold(true);
         _local5.setText(_arg1)
         _local5.wordWrap = true;
@@ -58,7 +58,7 @@ public class RaidLauncherModal extends EmptyFrame {
         _local5.filters = [new DropShadowFilter(0, 0, 0)];
         _local5.x = _arg2;
         _local5.y = _arg3;
-        return (_local5);
+        return _local5;
     }
 
     public function onCloseButtonClicked(e:Event):void {
@@ -75,8 +75,8 @@ public class RaidLauncherModal extends EmptyFrame {
     override protected function makeModalBackground():Sprite {
         var _local1:Sprite = new Sprite();
         var _local2:DisplayObject = new Bitmap(new backgroundImageEmbed().bitmapData);
-        _local2.width = (modalWidth + 1);
-        _local2.height = (modalHeight - 25);
+        _local2.width = modalWidth + 1;
+        _local2.height = modalHeight - 25;
         _local2.y = 27;
         _local2.alpha = 1.00;
         var _local3:DisplayObject = new Bitmap(new raid1launchFlagEmbed().bitmapData);
@@ -118,7 +118,7 @@ public class RaidLauncherModal extends EmptyFrame {
         this.launchButton3.x = this.launchButton3.x + 10;
         this.launchButton3.setEnabled(true);
         _local1.addChild(this.launchButton3);
-        return (_local1);
+        return _local1;
     }
 
     private function onMouseClick(e:MouseEvent):void {

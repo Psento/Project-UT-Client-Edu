@@ -65,7 +65,7 @@ public class LootboxesDisplay extends Sprite {
     }
 
     private function onDoubleClick(_arg_1:MouseEvent):void {
-        if ((!(this.gs)) || (this.gs.isNexus_) || Parameters.data_.clickForTsavorite) {
+        if (!(this.gs) || this.gs.isNexus_ || Parameters.data_.clickForTsavorite) {
             this.openAccountDialog.dispatch();
         }
     }
@@ -73,7 +73,7 @@ public class LootboxesDisplay extends Sprite {
     public function makeTextField(_arg_1:uint = 0xFFFFFF):SimpleText {
         var _local_2:SimpleText = new SimpleText(FONT_SIZE, _arg_1,false ,0,16);
         _local_2.filters = [new DropShadowFilter(0, 0, 0, 1, 4, 4, 2)];
-        return (_local_2);
+        return _local_2;
     }
 
     public function draw( _arg_1:int, _arg_2:int, _arg_3:int):void {

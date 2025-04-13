@@ -91,7 +91,7 @@ public class HUDView extends Sprite {
             this.equippedGrid.x = 0 - this.equippedGrid.width * 4;
             this.equippedGrid.y = this.inventoryGrid.y;
 
-            this.statsView.x = this.equippedGrid.x - this.equippedGrid.width - (this.statsView.width);
+            this.statsView.x = this.equippedGrid.x - this.equippedGrid.width - this.statsView.width;
             this.statsView.y = this.inventoryGrid.y;
 
             this.interactPanel.x = this.INTERACT_PANEL_POSITION.x;
@@ -114,7 +114,7 @@ public class HUDView extends Sprite {
         this.equippedGrid.y = this.inventoryGrid.y;
         this.equippedGrid.visible = false;
 
-        this.statsView.x = this.equippedGrid.x - this.equippedGrid.width - (this.statsView.width);
+        this.statsView.x = this.equippedGrid.x - this.equippedGrid.width - this.statsView.width;
         this.statsView.y = this.inventoryGrid.y;
         this.statsView.visible = false;
 
@@ -204,8 +204,8 @@ public class HUDView extends Sprite {
     private function showRaidLauncher():void {
         this.raidLauncherButton = new RaidLauncherButton();
         this.raidLauncherButton.x = 6;
-        this.raidLauncherButton.y = (this.displaysPosY + 2);
-        this.displaysPosY = (this.displaysPosY + UIUtils.NOTIFICATION_SPACE);
+        this.raidLauncherButton.y = this.displaysPosY + 2;
+        this.displaysPosY = this.displaysPosY + UIUtils.NOTIFICATION_SPACE;
         addChild(this.raidLauncherButton);
     }
 

@@ -25,7 +25,7 @@ import svera.untiered.util.components.LegacyBuyButton;
 public class LootboxModal extends EmptyFrame {
     public static const MODAL_WIDTH:int = 490;
     public static const MODAL_HEIGHT:int = 540;
-    private static const OVER_COLOR_TRANSFORM:ColorTransform = new ColorTransform(1, (220 / 0xFF), (133 / 0xFF));
+    private static const OVER_COLOR_TRANSFORM:ColorTransform = new ColorTransform(1, 220 / 0xFF, 133 / 0xFF);
     private static const DROP_SHADOW_FILTER:DropShadowFilter = new DropShadowFilter(0, 0, 0);
     private static const GLOW_FILTER:GlowFilter = new GlowFilter(0xFF0000, 1, 11, 5);
     private static const filterWithGlow:Array = [DROP_SHADOW_FILTER, GLOW_FILTER];
@@ -107,8 +107,8 @@ public class LootboxModal extends EmptyFrame {
     override protected function makeModalBackground():Sprite {
         var _local1:Sprite = new Sprite();
         var _local2:DisplayObject = new backgroundImageEmbed();
-        _local2.width = (modalWidth + 1);
-        _local2.height = (modalHeight - 25);
+        _local2.width = modalWidth + 1;
+        _local2.height = modalHeight - 25;
         _local2.y = 27;
         _local2.alpha = 1.00;
         var additive:int = 89;
@@ -241,7 +241,7 @@ public class LootboxModal extends EmptyFrame {
             this.lootboxDisplay_.draw(_local_3.eventLootbox_, _local_3.goldLootbox_, _local_3.eliteLootbox_);
         }
         //_local1.addChild(_local5);
-        return (_local1);
+        return _local1;
     }
 
     private function onMouseClick(e:MouseEvent):void {

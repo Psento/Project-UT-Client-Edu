@@ -46,11 +46,11 @@ public class GraphicsUtil {
         if(up) {
             data.moveTo(x + width, y + height);
             data.lineTo(x, y + height);
-            data.lineTo(x + (width/2), y);
+            data.lineTo(x + width/2, y);
         } else {
             data.moveTo(x, y);
             data.lineTo(x + width, y);
-            data.lineTo(x + (width/2), y + height);
+            data.lineTo(x + width/2, y + height);
         }
     }
     public static function drawRect(x:int, y:int, width:int, height:int, path:GraphicsPath):void {
@@ -120,31 +120,31 @@ public class GraphicsUtil {
     }
     public static function drawUI(x:int, y:int, width:int, height:int, cornerRadius:int, corner:Array, data:GraphicsPath):void {
         if (corner[0] != 0) {
-            data.moveTo(x, (y + cornerRadius));
-            data.lineTo((x + cornerRadius), y);
+            data.moveTo(x, y + cornerRadius);
+            data.lineTo(x + cornerRadius, y);
         } else {
             data.moveTo(x, y);
         }
         if (corner[1] != 0) {
-            data.lineTo(((x + width) - cornerRadius), y);
-            data.lineTo((x + width), (y + cornerRadius));
+            data.lineTo((x + width) - cornerRadius, y);
+            data.lineTo(x + width, y + cornerRadius);
         } else {
-            data.lineTo((x + width), y);
+            data.lineTo(x + width, y);
         }
         if (corner[2] != 0) {
-            data.lineTo((x + width), ((y + height) - cornerRadius));
-            data.lineTo(((x + width) - cornerRadius), (y + height));
+            data.lineTo(x + width, (y + height) - cornerRadius);
+            data.lineTo((x + width) - cornerRadius, y + height);
         } else {
-            data.lineTo((x + width), (y + height));
+            data.lineTo(x + width, y + height);
         }
         if (corner[3] != 0) {
-            data.lineTo((x + cornerRadius), (y + height));
-            data.lineTo(x, ((y + height) - cornerRadius));
+            data.lineTo(x + cornerRadius, y + height);
+            data.lineTo(x, (y + height) - cornerRadius);
         } else {
-            data.lineTo(x, (y + height));
+            data.lineTo(x, y + height);
         }
         if (corner[0] != 0) {
-            data.lineTo(x, (y + cornerRadius));
+            data.lineTo(x, y + cornerRadius);
         } else {
             data.lineTo(x, y);
         }

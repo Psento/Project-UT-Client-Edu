@@ -232,6 +232,7 @@ public class MapUserInput {
             case KeyCodes.F4:
             case KeyCodes.F5: //Reset mscale
                 Parameters.data_.mScale = 1;
+                break;
             case KeyCodes.F6:
             case KeyCodes.F7:
             case KeyCodes.F8:

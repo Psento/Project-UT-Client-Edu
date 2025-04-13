@@ -27,8 +27,8 @@ public class EmptyFrame extends Sprite {
     public function EmptyFrame(_arg1:int = 288, _arg2:int = 150, _arg3:String = "") {
         this.modalWidth = _arg1;
         this.modalHeight = _arg2;
-        x = (400 - (this.modalWidth / 2));
-        y = (300 - (this.modalHeight / 2));
+        x = 400 - (this.modalWidth / 2);
+        y = 300 - (this.modalHeight / 2);
         if (_arg3 != "") {
             this.setTitle(_arg3, true);
         }
@@ -51,7 +51,7 @@ public class EmptyFrame extends Sprite {
     }
 
     public function setTitle(_arg1:String, _arg2:Boolean):void {
-        if (((!((this.title == null))) && (!((this.title.parent == null))))) {
+        if (!(this.title == null) && !(this.title.parent == null)) {
             removeChild(this.title);
         }
         if (_arg1 != null) {
@@ -64,7 +64,7 @@ public class EmptyFrame extends Sprite {
 
     public function setDesc(_arg1:String, _arg2:Boolean):void {
         if (_arg1 != null) {
-            if (((!((this.desc == null))) && (!((this.desc.parent == null))))) {
+            if (!(this.desc == null) && !(this.desc.parent == null)) {
                 removeChild(this.desc);
             }
             this.desc = this.getText(_arg1, TEXT_MARGIN, 50, _arg2);
@@ -73,13 +73,13 @@ public class EmptyFrame extends Sprite {
     }
 
     public function setCloseButton(_arg1:Boolean):void {
-        if ((((this.closeButton == null)) && (_arg1))) {
+        if (this.closeButton == null && _arg1) {
             this.closeButton = new TextButton(24,"X",modalWidth);
             this.closeButton.addEventListener(MouseEvent.CLICK, this.onCloseClick);
             addEventListener(Event.REMOVED_FROM_STAGE, this.onRemovedFromStage);
             addChild(this.closeButton);
         } else {
-            if (((!((this.closeButton == null))) && (!(_arg1)))) {
+            if (!((this.closeButton == null)) && !(_arg1)) {
                 removeChild(this.closeButton);
                 this.closeButton = null;
             }
@@ -87,7 +87,7 @@ public class EmptyFrame extends Sprite {
     }
 
     protected function getText(_arg1:String, _arg2:int, _arg3:int, _arg4:Boolean):SimpleText {
-        var _local5:SimpleText = new SimpleText(18, 0xFFFFFF, ((modalWidth - (TEXT_MARGIN * 2)) - 10));
+        var _local5:SimpleText = new SimpleText(18, 0xFFFFFF, modalWidth - (TEXT_MARGIN * 2) - 10);
 
         _local5.setBold(true);
         _local5.setText(_arg1);
@@ -99,19 +99,19 @@ public class EmptyFrame extends Sprite {
         _local5.filters = [new DropShadowFilter(0, 0, 0)];
         _local5.x = _arg2;
         _local5.y = _arg3;
-        return (_local5);
+        return _local5;
     }
 
     protected function makeModalBackground():Sprite {
-        x = (400 - (this.modalWidth / 2));
-        y = (300 - (this.modalHeight / 2));
+        x = 400 - (this.modalWidth / 2);
+        y = 300 - (this.modalHeight / 2);
         var bg:Sprite = new Sprite();
         bg.graphics.beginFill(3552822);
         bg.graphics.drawRect(0, 0, modalWidth, modalHeight);
 /*        if (this.title != null) {
             _local1.divide(PopupWindowBackground.HORIZONTAL_DIVISION, 30);
         }*/
-        return (bg);
+        return bg;
     }
 
     public function onCloseClick(_arg1:MouseEvent):void {

@@ -33,7 +33,7 @@ public class StatMetersView extends Sprite {
         this.levelMask.graphics.endFill();
 
         this.content.mask = this.levelMask;
-        this.content.addChild((this.levelMask));
+        this.content.addChild(this.levelMask);
 
         super();
         this.expBar_ = new StatusBar(72, 20, 5931045, 5526612, "Lvl X");
@@ -47,7 +47,7 @@ public class StatMetersView extends Sprite {
         this.spBar_.y = this.hpBar_.y;
         this.rpBar_.x = this.spBar_.x;
         this.rpBar_.y = 21;
-        this.expBar_.x -= 55 + (this.expBar_.width * 2);
+        this.expBar_.x -= 55 + this.expBar_.width * 2;
         this.expBar_.y = this.rpBar_.y;
         this.spBar_.visible = false;
         this.expBar_.visible = true;

@@ -20,6 +20,7 @@ import svera.untiered.core.model.MapModel;
 import svera.untiered.core.model.PlayerModel;
 import svera.untiered.core.signals.ShowTooltipSignal;
 import svera.untiered.game.model.PotionInventoryModel;
+import svera.untiered.itemdata.NewItemData;
 import svera.untiered.messaging.impl.GameServerConnection;
 import svera.untiered.ui.model.HUDModel;
 
@@ -81,7 +82,7 @@ public class ItemGridMediator extends Mediator {
             slot = sourceTile.ownerGrid.curPlayer.nextAvailableInventorySlot();
             if (slot != -1) {
                 GameServerConnection.instance.invSwap(this.view.curPlayer, sourceTile.ownerGrid.owner, sourceTile.tileId, this.view.curPlayer, slot);
-                sourceTile.setItem(-1, -1);
+                sourceTile.setItem(-1, null);
                 sourceTile.updateUseability(this.view.curPlayer);
             }
         }
@@ -153,7 +154,7 @@ public class ItemGridMediator extends Mediator {
                 GameServerConnection.instance.invDrop(this.view.owner, itemTile.tileId);
             }
         }
-        itemTile.setItem(-1, -1);
+        itemTile.setItem(-1, null);
     }
 
     private function swapItemTiles(sourceTile:ItemTile, destTile:ItemTile):Boolean {
@@ -162,7 +163,7 @@ public class ItemGridMediator extends Mediator {
         }
         GameServerConnection.instance.invSwap(this.view.curPlayer, this.view.owner, sourceTile.tileId, destTile.ownerGrid.owner, destTile.tileId);
         var tempItemId:int = sourceTile.getItemId();
-        var tempItemData:int = sourceTile.getItemData();
+        var tempItemData:NewItemData = sourceTile.getItemData();
         sourceTile.setItem(destTile.getItemId(), destTile.getItemData());
         destTile.setItem(tempItemId, tempItemData);
         sourceTile.updateUseability(this.view.curPlayer);
@@ -175,7 +176,7 @@ public class ItemGridMediator extends Mediator {
             return;
         }
         GameServerConnection.instance.invSwap(this.view.curPlayer, this.view.owner, sourceTile.tileId, container, containerIndex);
-        sourceTile.setItem(-1, -1);
+        sourceTile.setItem(-1, null);
     }
 
     private function onShiftClick(e:ItemTileEvent):void {

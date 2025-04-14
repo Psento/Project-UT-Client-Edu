@@ -9,6 +9,7 @@ import com.company.util.IIterator;
 import flash.events.MouseEvent;
 
 import svera.lib.util.VectorAS3Util;
+import svera.untiered.itemdata.NewItemData;
 
 public class EquippedGrid extends ItemGrid {
 
@@ -41,7 +42,7 @@ public class EquippedGrid extends ItemGrid {
         return new ArrayIterator(VectorAS3Util.toArray(this.tiles));
     }
 
-    override public function setItems(items:Vector.<int>, datas:Vector.<int>, itemIndexOffset:int = 0):void {
+    override public function setItems(items:Vector.<int>, datas:Vector.<NewItemData>, itemIndexOffset:int = 0):void {
         var numItems:int = 0;
         var i:int = 0;
         var refresh:Boolean = false;
@@ -53,7 +54,7 @@ public class EquippedGrid extends ItemGrid {
                         refresh = true;
                     }
                 } else {
-                    if (this.tiles[i].setItem(-1, -1)) {
+                    if (this.tiles[i].setItem(-1, null)) {
                         refresh = true;
                     }
                 }

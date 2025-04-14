@@ -9,6 +9,8 @@ import com.company.util.SpriteUtil;
 
 import flash.display.Sprite;
 
+import svera.untiered.itemdata.NewItemData;
+
 import svera.untiered.messaging.impl.GameServerConnection;
 import svera.untiered.messaging.impl.data.StorageSlotUpdateData;
 import svera.untiered.storage.components.StorageSortTab;
@@ -47,7 +49,7 @@ public class VaultContent extends Sprite {
         this.vaultGrid_ = new ContainerGrid(this.owner_, this.player_, size, 8, true);
 
         var inventory:Vector.<int> = new Vector.<int>();
-        var itemDatas:Vector.<int> = new Vector.<int>();
+        var itemDatas:Vector.<NewItemData> = new Vector.<NewItemData>();
 
         for (var i:int = 0; i < size; i++) {
             inventory[i] = this.content_[i].itemType_;
@@ -62,7 +64,7 @@ public class VaultContent extends Sprite {
         SpriteUtil.safeAddChild(this, this.vaultGrid_);
     }
 
-    public function updateSlot(slot:int, inventory:int, itemData:int):void {
+    public function updateSlot(slot:int, inventory:int, itemData:NewItemData):void {
         this.vaultGrid_.setItem(slot, inventory, itemData);
     }
 

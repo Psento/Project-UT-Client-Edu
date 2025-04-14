@@ -17,6 +17,7 @@ import flash.events.MouseEvent;
 import org.osflash.signals.Signal;
 
 import svera.untiered.constants.ItemConstants;
+import svera.untiered.itemdata.NewItemData;
 
 public class ItemGrid extends Panel {
 
@@ -126,7 +127,7 @@ public class ItemGrid extends Panel {
         SpriteUtil.safeRemoveChild(this, tile);
     }
 
-    public function setItems(items:Vector.<int>, datas:Vector.<int>, itemIndexOffset:int = 0):void {
+    public function setItems(items:Vector.<int>, datas:Vector.<NewItemData>, itemIndexOffset:int = 0):void {
 
     }
 

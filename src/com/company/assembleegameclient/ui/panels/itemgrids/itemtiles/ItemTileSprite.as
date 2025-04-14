@@ -10,6 +10,7 @@ import flash.filters.ColorMatrixFilter;
 import flash.geom.Matrix;
 
 import svera.untiered.constants.ItemConstants;
+import svera.untiered.itemdata.NewItemData;
 
 public class ItemTileSprite extends Sprite {
 
@@ -23,7 +24,7 @@ public class ItemTileSprite extends Sprite {
 
 
     public var itemId:int;
-    public var itemData:int;
+    public var itemData:NewItemData;
     public var tierText:SimpleText;
 
     public var itemBitmap:Bitmap;
@@ -41,7 +42,7 @@ public class ItemTileSprite extends Sprite {
         filters = dim ? DIM_FILTER : null;
     }
 
-    public function setType(displayedItemType:int, displayedItemData:int):void {
+    public function setType(displayedItemType:int, displayedItemData:NewItemData):void {
         var texture:BitmapData = null;
         var eqXML:XML = null;
         var tempText:SimpleText = null;

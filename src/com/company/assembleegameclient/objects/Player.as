@@ -43,6 +43,7 @@ import svera.untiered.core.StaticInjectorContext;
 import svera.untiered.game.model.AddTextLineVO;
 import svera.untiered.game.model.PotionInventoryModel;
 import svera.untiered.game.signals.AddTextLineSignal;
+import svera.untiered.itemdata.NewItemData;
 import svera.untiered.stage3D.GraphicsFillExtra;
 
 public class Player extends Character {
@@ -174,7 +175,7 @@ public class Player extends Character {
         player.ascensionPoints_ = int(playerXML.AscensionPoints);
         player.statPoints_ = int(playerXML.StatPoints);
         player.equipment_ = ConversionUtil.toIntVector(playerXML.Equipment);
-        player.itemDatas_ = ConversionUtil.toIntVector(playerXML.ItemDatas);
+        player.itemDatas_ = NewItemData.fromPlayerXML(playerXML.ItemDatas);
         player.maxHP_ = int(playerXML.MaxHitPoints);
         player.hp_ = int(playerXML.HitPoints);
         player.maxSP_ = int(playerXML.MaxShieldPoints);
@@ -777,7 +778,7 @@ public class Player extends Character {
         var cooldown:int = 0;
         var angle:Number = Parameters.data_.cameraAngle + Math.atan2(y, x);
         var itemType:int = equipment_[slotId];
-        var itemData:int = itemDatas_[slotId];
+        var itemData:NewItemData = itemDatas_[slotId];
         if (itemType == -1) {
             return false;
         }
@@ -824,7 +825,7 @@ public class Player extends Character {
             return false;
         }
 
-        var cooldownMod:Number = 1 - ItemData.getStat(itemData, ItemData.COOLDOWN_BIT, ItemData.COOLDOWN_MULTIPLIER);
+        var cooldownMod:Number = 1;// 1 - ItemData.getStat(itemData, ItemData.COOLDOWN_BIT, ItemData.COOLDOWN_MULTIPLIER);
         cooldown = 200;
         if (objectXML.hasOwnProperty("Cooldown")) {
             cooldown = Number(objectXML.Cooldown) * 1000;
@@ -857,14 +858,14 @@ public class Player extends Character {
             return;
         }
         var weaponType:int = equipment_[0];
-        var itemData:int = itemDatas_[0];
+        var itemData:NewItemData = itemDatas_[0];
         if (weaponType == -1) {
             //this.addTextLine.dispatch(new AddTextLineVO(Parameters.ERROR_CHAT_NAME,"You do not have a weapon equipped!"));
             return;
         }
         var weaponXML:XML = ObjectLibrary.xmlLibrary_[weaponType];
         var time:int = map_.gs_.lastUpdate_;
-        var rateOfFireMod:Number = ItemData.getStat(itemData, ItemData.RATE_OF_FIRE_BIT, ItemData.RATE_OF_FIRE_MULTIPLIER);
+        var rateOfFireMod:Number = 0;//ItemData.getStat(itemData, ItemData.RATE_OF_FIRE_BIT, ItemData.RATE_OF_FIRE_MULTIPLIER);
         var rateOfFire:Number = Number(weaponXML.RateOfFire);
         rateOfFire *= 1 + rateOfFireMod;
         this.attackPeriod_ = 1 / this.attackFrequency() * (1 / rateOfFire);
@@ -876,7 +877,7 @@ public class Player extends Character {
         this.doShoot(attackStart_, weaponType, itemData, weaponXML, attackAngle_, false);
     }
 
-    private function doShoot(time:int, weaponType:int, itemData:int, weaponXML:XML, attackAngle:Number, isAbility:Boolean):void {
+    private function doShoot(time:int, weaponType:int, itemData:NewItemData, weaponXML:XML, attackAngle:Number, isAbility:Boolean):void {
         var proj:Projectile = null;
         var minDamage:int = 0;
         var maxDamage:int = 0;
@@ -886,7 +887,7 @@ public class Player extends Character {
         var totalArc:Number = arcGap * (numShots - 1);
         var angle:Number = attackAngle - totalArc / 2;
         var startId:int = map_.nextProjectileId_;
-        var dmgMod:Number = ItemData.getStat(itemData, ItemData.DAMAGE_BIT, ItemData.DAMAGE_MULTIPLIER);
+        var dmgMod:Number = 1;//ItemData.getStat(itemData, ItemData.DAMAGE_BIT, ItemData.DAMAGE_MULTIPLIER);
         map_.nextProjectileId_ -= numShots;
         for (var i:int = 0; i < numShots; i++) {
             proj = FreeList.newObject(Projectile) as Projectile;

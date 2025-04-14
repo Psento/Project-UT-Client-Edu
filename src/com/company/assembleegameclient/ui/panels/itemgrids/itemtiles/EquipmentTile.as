@@ -10,6 +10,7 @@ import flash.display.BitmapData;
 import flash.filters.ColorMatrixFilter;
 
 import svera.untiered.constants.ItemConstants;
+import svera.untiered.itemdata.NewItemData;
 
 public class EquipmentTile extends InteractiveItemTile {
 
@@ -122,7 +123,7 @@ public class EquipmentTile extends InteractiveItemTile {
         this.itemType = itemType_;
     }
 
-    override public function setItem(itemId:int, itemData:int):Boolean {
+    override public function setItem(itemId:int, itemData:NewItemData):Boolean {
         var itemChanged:Boolean = super.setItem(itemId, itemData);
         if (itemChanged) {
             this.backgroundDetail.visible = itemSprite.itemId <= 0;

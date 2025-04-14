@@ -204,6 +204,7 @@ public class TextBox extends Sprite {
 //         yPos = yPos + Math.max(MIN_LINE_HEIGHT,textLine.height);
 //         blockSprite.addChild(textLine);
 
+
         while (textLine = textBlock.createTextLine(textLine, yPos == 0 ? Number(this.w_ - 4) : Number(this.w_ - 4 - INDENT))) {
             textLine.x = yPos == 0 ? Number(0) : Number(INDENT);
             textLine.y = textLine.ascent + yPos;

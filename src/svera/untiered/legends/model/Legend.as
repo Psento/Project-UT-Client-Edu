@@ -2,6 +2,7 @@ package svera.untiered.legends.model {
 import flash.display.BitmapData;
 
 import svera.untiered.fame.model.FameVO;
+import svera.untiered.itemdata.NewItemData;
 
 public class Legend implements FameVO {
 
@@ -22,7 +23,7 @@ public class Legend implements FameVO {
 
     public var equipment:Vector.<int>;
 
-    public var itemDatas:Vector.<int>;
+    public var itemDatas:Vector.<NewItemData>;
 
     public var character:BitmapData;
 

@@ -76,6 +76,7 @@ import svera.untiered.messaging.impl.data.ObjectData;
 import svera.untiered.messaging.impl.data.ObjectDropData;
 import svera.untiered.messaging.impl.data.ObjectStatusData;
 import svera.untiered.messaging.impl.data.StatData;
+import svera.untiered.messaging.impl.data.StatType;
 import svera.untiered.messaging.impl.incoming.AccountList;
 import svera.untiered.messaging.impl.incoming.AllyShoot;
 import svera.untiered.messaging.impl.incoming.Aoe;
@@ -605,7 +606,7 @@ public class GameServerConnection {
         this.serverConnection.sendMessage(invSwap);
 
         var tempItem:int = sourceObj.equipment_[slotId1];
-        var tempData:int = sourceObj.itemDatas_[slotId1];
+        var tempData:NewItemData = sourceObj.itemDatas_[slotId1];
         sourceObj.equipment_[slotId1] = targetObj.equipment_[slotId2];
         sourceObj.itemDatas_[slotId1] = targetObj.itemDatas_[slotId2];
         targetObj.equipment_[slotId2] = tempItem;
@@ -650,7 +651,7 @@ public class GameServerConnection {
         invDrop.slotId_ = slotId;
         this.serverConnection.sendMessage(invDrop);
         object.equipment_[slotId] = -1;
-        object.itemDatas_[slotId] = -1;
+        object.itemDatas_[slotId] = null;
     }
 
     public function useItem(time:int, objectId:int, slotId:int, posX:Number, posY:Number):void {
@@ -685,7 +686,7 @@ public class GameServerConnection {
         this.serverConnection.sendMessage(useItem);
         if (itemData.hasOwnProperty("Consumable")) {
             owner.equipment_[slotId] = -1;
-            owner.itemDatas_[slotId] = -1;
+            owner.itemDatas_[slotId] = null;
         }
     }
 
@@ -1061,269 +1062,207 @@ public class GameServerConnection {
         for each(stat in stats) {
             value = stat.statValue_;
             switch (stat.statType_) {
-                case StatData.SIZE_STAT:
+                case StatType.Size:
                     go.size_ = value;
                     continue;
-                case StatData.MAX_HP_STAT:
+                case StatType.MaxHp:
                     go.maxHP_ = value;
                     continue;
-                case StatData.HP_STAT:
+                case StatType.Hp:
                     go.hp_ = value;
                     continue;
-                case StatData.MAX_SP_STAT:
+                case StatType.MaxSp:
                     player.maxSP_ = value;
                     continue;
-                case StatData.SP_STAT:
+                case StatType.Sp:
                     player.sp_ = value;
                     continue;
-                case StatData.MAX_RP_STAT:
+                case StatType.MaxRp:
                     player.maxRP_ = value;
                     continue;
-                case StatData.RP_STAT:
+                case StatType.Rp:
                     player.rp_ = value;
                     continue;
-                case StatData.NEXT_LEVEL_EXP_STAT:
+                case StatType.NextLevelExp:
                     player.nextLevelExp_ = value;
                     continue;
-                case StatData.EXP_STAT:
+                case StatType.Exp:
                     player.exp_ = value;
                     continue;
-                case StatData.LEVEL_STAT:
+                case StatType.Level:
                     go.level_ = value;
                     continue;
-                case StatData.AWAKENING_STAT:
+                case StatType.Awakening:
                     player.awakening_ = value;
                     continue;
-                case StatData.RELIC_STAT:
+                case StatType.Relic:
                     player.relic_ = value;
                     continue;
-                case StatData.BACKGROUND_STAT:
+                case StatType.Background:
                     player.background_ = value;
                     continue;
-                case StatData.STATPOINTS_STAT:
+                case StatType.StatPoints:
                     player.statPoints_ = value;
                     continue;
-                case StatData.ASCENSIONPOINTS_STAT:
+                case StatType.AscensionPoints:
                     player.ascensionPoints_ = value;
                     continue;
-                case StatData.ATTACK_STAT:
+                case StatType.Attack:
                     player.attack_ = value;
                     continue;
-                case StatData.ARMOR_STAT:
+                case StatType.Armor:
                     go.armor_ = value;
                     continue;
-                case StatData.SPEED_STAT:
+                case StatType.Speed:
                     player.speed_ = value;
                     continue;
-                case StatData.DEXTERITY_STAT:
+                case StatType.Dexterity:
                     player.dexterity_ = value;
                     continue;
-                case StatData.VIGOR_STAT:
+                case StatType.Vigor:
                     player.vigor_ = value;
                     continue;
-                case StatData.WISDOM_STAT:
+                case StatType.Intelligence:
                     player.intelligence_ = value;
                     continue;
-                case StatData.CONDITION_STAT:
+                case StatType.Condition:
                     go.condition_ = value;
                     continue;
-                case StatData.INVENTORY_0_STAT:
-                case StatData.INVENTORY_1_STAT:
-                case StatData.INVENTORY_2_STAT:
-                case StatData.INVENTORY_3_STAT:
-                case StatData.INVENTORY_4_STAT:
-                case StatData.INVENTORY_5_STAT:
-                case StatData.INVENTORY_6_STAT:
-                case StatData.INVENTORY_7_STAT:
-                case StatData.INVENTORY_8_STAT:
-                case StatData.INVENTORY_9_STAT:
-                case StatData.INVENTORY_10_STAT:
-                case StatData.INVENTORY_11_STAT:
-                case StatData.INVENTORY_12_STAT:
-                case StatData.INVENTORY_13_STAT:
-                case StatData.INVENTORY_14_STAT:
-                case StatData.INVENTORY_15_STAT:
-                case StatData.INVENTORY_16_STAT:
-                case StatData.INVENTORY_17_STAT:
-                case StatData.INVENTORY_18_STAT:
-                case StatData.INVENTORY_19_STAT:
-                case StatData.INVENTORY_20_STAT:
-                case StatData.INVENTORY_21_STAT:
-                case StatData.INVENTORY_22_STAT:
-                case StatData.INVENTORY_23_STAT:
-                case StatData.INVENTORY_24_STAT:
-                case StatData.INVENTORY_25_STAT:
-                case StatData.INVENTORY_26_STAT:
-                case StatData.INVENTORY_27_STAT:
-                case StatData.INVENTORY_28_STAT:
-                    go.equipment_[stat.statType_ - StatData.INVENTORY_0_STAT] = value;
+                case StatType.Inventory:
+                    go.equipment_[stat.slotStatValue] = value;
                     continue;
-                case StatData.NUM_STARS_STAT:
+                case StatType.NumStars:
                     player.numStars_ = value;
                     continue;
-                case StatData.NAME_STAT:
+                case StatType.Name:
                     if (go.name_ != stat.strStatValue_) {
                         go.name_ = stat.strStatValue_;
                         go.nameBitmapData_ = null;
                     }
                     continue;
-                case StatData.TEX1_STAT:
+                case StatType.Tex1:
                     go.setTex1(value);
                     continue;
-                case StatData.TEX2_STAT:
+                case StatType.Tex2:
                     go.setTex2(value);
                     continue;
-                case StatData.MERCHANDISE_TYPE_STAT:
+                case StatType.MerchandiseType:
                     merchant.setMerchandiseType(value);
                     continue;
-                case StatData.TSAVORITE_STAT:
+                case StatType.Tsavorite:
                     player.setTsavorite(value);
                     continue;
-                case StatData.MEDALLIONS_STAT:
+                case StatType.Medallions:
                     player.setMedallions(value);
                     continue;
-                case StatData.HONOR_STAT:
+                case StatType.Honor:
                     player.setHonor(value);
                     continue;
-                case StatData.MERCHANDISE_PRICE_STAT:
+                case StatType.MerchandisePrice:
                     (go as SellableObject).setPrice(value);
                     continue;
-                case StatData.ACTIVE_STAT:
+                case StatType.Active:
                     (go as Portal).active_ = value != 0;
                     continue;
-                case StatData.ACCOUNT_ID_STAT:
+                case StatType.AccountId:
                     player.accountId_ = value;
                     continue;
-                case StatData.FAME_STAT:
+                case StatType.Fame:
                     player.fame_ = value;
                     continue;
-                case StatData.MERCHANDISE_CURRENCY_STAT:
+                case StatType.MerchandiseCurrency:
                     (go as SellableObject).setCurrency(value);
                     continue;
-                case StatData.CONNECT_STAT:
+                case StatType.Connect:
                     go.connectType_ = value;
                     continue;
-                case StatData.MERCHANDISE_COUNT_STAT:
+                case StatType.MerchandiseCount:
                     merchant.count_ = value;
                     merchant.untilNextMessage_ = 0;
                     continue;
-                case StatData.MERCHANDISE_MINS_LEFT_STAT:
+                case StatType.MerchandiseMinsLeft:
                     merchant.minsLeft_ = value;
                     merchant.untilNextMessage_ = 0;
                     continue;
-                case StatData.MERCHANDISE_DISCOUNT_STAT:
+                case StatType.MerchandiseDiscount:
                     merchant.discount_ = value;
                     merchant.untilNextMessage_ = 0;
                     continue;
-                case StatData.MERCHANDISE_RANK_REQ_STAT:
+                case StatType.MerchandiseRankReq:
                     (go as SellableObject).setRankReq(value);
                     continue;
-                case StatData.MAX_HP_BOOST_STAT:
+                case StatType.MaxHpBoost:
                     player.maxHPBoost_ = value;
                     continue;
-                case StatData.MAX_SP_BOOST_STAT:
+                case StatType.MaxSpBoost:
                     player.maxSPBoost_ = value;
                     continue;
-                case StatData.MAX_RP_BOOST_STAT:
+                case StatType.MaxRpBoost:
                     player.maxRPBoost_ = value;
                     continue;
-                case StatData.ATTACK_BOOST_STAT:
+                case StatType.AttackBoost:
                     player.attackBoost_ = value;
                     continue;
-                case StatData.ARMOR_BOOST_STAT:
+                case StatType.ArmorBoost:
                     player.armorBoost_ = value;
                     continue;
-                case StatData.SPEED_BOOST_STAT:
+                case StatType.SpeedBoost:
                     player.speedBoost_ = value;
                     continue;
-                case StatData.VIGOR_BOOST_STAT:
+                case StatType.VigorBoost:
                     player.vigorBoost_ = value;
                     continue;
-                case StatData.INTELLIGENCE_BOOST_STAT:
+                case StatType.IntelligenceBoost:
                     player.intelligenceBoost_ = value;
                     continue;
-                case StatData.DEXTERITY_BOOST_STAT:
+                case StatType.DexterityBoost:
                     player.dexterityBoost_ = value;
                     continue;
-                case StatData.OWNER_ACCOUNT_ID_STAT:
+                case StatType.OwnerAccountId:
                     if (go is Container) {
                         (go as Container).setOwnerId(value);
                     }
                     continue;
-                case StatData.CHAR_FAME_STAT:
+                case StatType.CharFame:
                     player.charFame_ = value;
                     continue;
-                case StatData.NEXT_CLASS_QUEST_FAME_STAT:
+                case StatType.NextClassQuestFame:
                     player.nextClassQuestFame_ = value;
                     continue;
-                case StatData.LEGENDARY_RANK_STAT:
+                case StatType.LegendaryRank:
                     player.legendaryRank_ = value;
                     continue;
-                case StatData.SINK_LEVEL_STAT:
+                case StatType.SinkLevel:
                     if (!isMyObject) {
                         player.sinkLevel_ = value;
                     }
                     continue;
-                case StatData.ALT_TEXTURE_STAT:
+                case StatType.AltTexture:
                     go.setAltTexture(value);
                     continue;
-                case StatData.GUILD_NAME_STAT:
+                case StatType.GuildName:
                     player.setGuildName(stat.strStatValue_);
                     continue;
-                case StatData.GUILD_RANK_STAT:
+                case StatType.GuildRank:
                     player.guildRank_ = value;
                     continue;
-                case StatData.BREATH_STAT:
+                case StatType.Breath:
                     player.breath_ = value;
                     continue;
-
-                case StatData.HEALTH_POTION_STACK_STAT:
+                case StatType.HealthPotionStack:
                     player.healthPotionCount_ = value;
                     continue;
-                case StatData.MAGIC_POTION_STACK_STAT:
+                case StatType.MagicPotionStack:
                     player.magicPotionCount_ = value;
                     continue;
-                case StatData.TEXTURE_STAT:
+                case StatType.Texture:
                     player.skinId != value && this.setPlayerSkinTemplate(player, value);
                     continue;
-                case StatData.ITEMDATA_0_STAT:
-                case StatData.ITEMDATA_1_STAT:
-                case StatData.ITEMDATA_2_STAT:
-                case StatData.ITEMDATA_3_STAT:
-                case StatData.ITEMDATA_4_STAT:
-                case StatData.ITEMDATA_5_STAT:
-                case StatData.ITEMDATA_6_STAT:
-                case StatData.ITEMDATA_7_STAT:
-                case StatData.ITEMDATA_8_STAT:
-                case StatData.ITEMDATA_9_STAT:
-                case StatData.ITEMDATA_10_STAT:
-                case StatData.ITEMDATA_11_STAT:
-                case StatData.ITEMDATA_12_STAT:
-                case StatData.ITEMDATA_13_STAT:
-                case StatData.ITEMDATA_14_STAT:
-                case StatData.ITEMDATA_15_STAT:
-                case StatData.ITEMDATA_16_STAT:
-                case StatData.ITEMDATA_17_STAT:
-                case StatData.ITEMDATA_18_STAT:
-                case StatData.ITEMDATA_19_STAT:
-                case StatData.ITEMDATA_20_STAT:
-                case StatData.ITEMDATA_21_STAT:
-                case StatData.ITEMDATA_22_STAT:
-                case StatData.ITEMDATA_23_STAT:
-                case StatData.ITEMDATA_24_STAT:
-                case StatData.ITEMDATA_25_STAT:
-                case StatData.ITEMDATA_26_STAT:
-                case StatData.ITEMDATA_27_STAT:
-                case StatData.ITEMDATA_28_STAT:
-                case StatData.ITEMDATA_29_STAT:
-                case StatData.ITEMDATA_30_STAT:
-                case StatData.ITEMDATA_31_STAT:
-                case StatData.ITEMDATA_32_STAT:
-                case StatData.ITEMDATA_33_STAT:
-                case StatData.ITEMDATA_34_STAT:
-                case StatData.ITEMDATA_35_STAT:
-                case StatData.ITEMDATA_36_STAT:
-                    NewItemData.NewTickUpdate(go.itemDatas_[stat.statType_ - StatData.ITEMDATA_0_STAT], stat.byteArrayValue);
+                case StatType.ItemData:
+                    NewItemData.NewTickUpdate(go.itemDatas_[stat.slotStatValue], stat.byteArrayValue);
+                    continue;
+                case StatType.ItemDataChange:
+                    NewItemData.NewTickUpdate(go.itemDatas_[stat.slotStatValue], stat.byteArrayValue);
                     continue;
                 default:
                     trace("unhandled stat: " + stat.statType_);

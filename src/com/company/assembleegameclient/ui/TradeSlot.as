@@ -18,6 +18,8 @@ import flash.display.Shape;
 import flash.geom.Matrix;
 import flash.geom.Point;
 
+import svera.untiered.itemdata.NewItemData;
+
 public class TradeSlot extends Slot {
 
     private static const DOSE_MATRIX:Matrix = function ():Matrix {
@@ -31,7 +33,7 @@ public class TradeSlot extends Slot {
 
     public var itemType_:int;
 
-    public var itemData_:int;
+    public var itemData_:NewItemData;
 
     public var tradeable_:Boolean;
 
@@ -49,7 +51,7 @@ public class TradeSlot extends Slot {
 
     private var graphicsData_:Vector.<IGraphicsData>;
 
-    public function TradeSlot(itemType:int, itemData:int, tradeable:Boolean, included:Boolean, type:int, hotkey:int, cuts:Array, id:uint) {
+    public function TradeSlot(itemType:int, itemData:NewItemData, tradeable:Boolean, included:Boolean, type:int, hotkey:int, cuts:Array, id:uint) {
         var texture:BitmapData = null;
         var eqXML:XML = null;
         var offset:Point = null;

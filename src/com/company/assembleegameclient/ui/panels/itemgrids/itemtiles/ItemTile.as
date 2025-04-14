@@ -12,6 +12,7 @@ import flash.display.Shape;
 import flash.display.Sprite;
 
 import svera.untiered.constants.ItemConstants;
+import svera.untiered.itemdata.NewItemData;
 
 public class ItemTile extends Sprite {
 
@@ -63,7 +64,7 @@ public class ItemTile extends Sprite {
         this.restrictedUseIndicator.visible = false;
     }
 
-    public function setItem(itemId:int, itemData:int):Boolean {
+    public function setItem(itemId:int, itemData:NewItemData):Boolean {
         if (itemId == this.itemSprite.itemId && itemData == this.itemSprite.itemData) {
             return false;
         }
@@ -99,7 +100,7 @@ public class ItemTile extends Sprite {
         return this.itemSprite.itemId;
     }
 
-    public function getItemData():int {
+    public function getItemData():NewItemData {
         return this.itemSprite.itemData;
     }
 

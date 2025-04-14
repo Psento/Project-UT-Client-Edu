@@ -16,6 +16,7 @@ import flash.text.StyleSheet;
 import flash.utils.Dictionary;
 
 import svera.untiered.constants.ActivationType;
+import svera.untiered.itemdata.NewItemData;
 import svera.untiered.messaging.impl.data.StatData;
 
 public class EquipmentToolTip extends ToolTip {
@@ -31,7 +32,7 @@ public class EquipmentToolTip extends ToolTip {
     private var line2_:LineBreakDesign;
     private var restrictionsText_:SimpleText;
     private var player_:Player;
-    private var itemData_:int;
+    private var itemData_:NewItemData;
     private var isEquippable_:Boolean = false;
     private var objectType_:int;
     private var objectXML_:XML = null;
@@ -45,7 +46,7 @@ public class EquipmentToolTip extends ToolTip {
     private var isInventoryFull:Boolean;
     private var yOffset:int;
 
-    public function EquipmentToolTip(objectType:int, itemData:int, player:Player, invType:int, inventoryOwnerType:String, inventorySlotID:uint = 1.0) {
+    public function EquipmentToolTip(objectType:int, itemData:NewItemData, player:Player, invType:int, inventoryOwnerType:String, inventorySlotID:uint = 1.0) {
         this.player_ = player;
         this.itemData_ = itemData;
         this.inventoryOwnerType = inventoryOwnerType;
@@ -182,7 +183,7 @@ public class EquipmentToolTip extends ToolTip {
 
     private function addTitle():void {
         //var prefix:String = ItemData.getPrefix(this.itemData_);
-        var color:int = ItemData.getColor(this.itemData_);
+        var color:int = -1;//ItemData.getColor(this.itemData_);
         if (color == -1) {
             color = this.playerCanUse || this.player_ == null ? int(16777215) : int(16549442);
         }
@@ -240,14 +241,14 @@ public class EquipmentToolTip extends ToolTip {
     }
 
     private function addFameBonusTagToEffectsList():void {
-        var fameBonusMod:Number = ItemData.getStat(this.itemData_, ItemData.FAME_BONUS_BIT, 1);
+        var fameBonusMod:Number = 0;//ItemData.getStat(this.itemData_, ItemData.FAME_BONUS_BIT, 1);
         if (this.objectXML_.hasOwnProperty("FameBonus") || fameBonusMod != 0) {
             var fameBonus:int = this.objectXML_.hasOwnProperty("FameBonus") ? int(this.objectXML_.FameBonus) : 0;
             var fameBonusString:String = (fameBonus + fameBonusMod).toString() + "%";
-            if (fameBonusMod != 0) {
-                fameBonusString += " (+" + fameBonusMod + "%)";
-                fameBonusString = TooltipHelper.wrapInFontTag(fameBonusString, ItemData.getColorString(this.itemData_));
-            }
+            //if (fameBonusMod != 0) {
+            //    fameBonusString += " (+" + fameBonusMod + "%)";
+            //    fameBonusString = TooltipHelper.wrapInFontTag(fameBonusString, ItemData.getColorString(this.itemData_));
+            //}
             this.effects.push(new Effect("Fame Bonus", fameBonusString));
         }
     }
@@ -259,14 +260,14 @@ public class EquipmentToolTip extends ToolTip {
     }
 
     private function addCooldownTagToEffectsList():void {
-        var cooldownMod:Number = ItemData.getStat(this.itemData_, ItemData.COOLDOWN_BIT, ItemData.COOLDOWN_MULTIPLIER);
+        var cooldownMod:Number = 0;//ItemData.getStat(this.itemData_, ItemData.COOLDOWN_BIT, ItemData.COOLDOWN_MULTIPLIER);
         if (this.objectXML_.hasOwnProperty("Cooldown") || cooldownMod != 0) {
             var cooldown:Number = this.objectXML_.hasOwnProperty("Cooldown") ? Number(this.objectXML_.Cooldown) : 0.2;
             var cooldownString:String = TooltipHelper.getFormattedString((cooldown - (cooldown * cooldownMod))) + "s";
-            if (cooldownMod != 0) {
-                cooldownString += " (-" + int(cooldownMod * 100) + "%)";
-                cooldownString = TooltipHelper.wrapInFontTag(cooldownString, ItemData.getColorString(this.itemData_));
-            }
+            //if (cooldownMod != 0) {
+            //    cooldownString += " (-" + int(cooldownMod * 100) + "%)";
+            //    cooldownString = TooltipHelper.wrapInFontTag(cooldownString, ItemData.getColorString(this.itemData_));
+            //}
             this.effects.push(new Effect("Cooldown", cooldownString));
         }
     }
@@ -281,12 +282,12 @@ public class EquipmentToolTip extends ToolTip {
         var projXML:XML = null;
         var range:Number = NaN;
         var condEffectXML:XML = null;
-        var color:String = ItemData.getColorString(this.itemData_);
+        var color:String = "";//ItemData.getColorString(this.itemData_);
         if (this.objectXML_.hasOwnProperty("Projectile")) {
             projXML = XML(this.objectXML_.Projectile);
             var minDmg:int = int(projXML.MinDamage);
             var maxDmg:int = int(projXML.MaxDamage);
-            var dmgMod:Number = ItemData.getStat(this.itemData_, ItemData.DAMAGE_BIT, ItemData.DAMAGE_MULTIPLIER);
+            var dmgMod:Number = 1;//ItemData.getStat(this.itemData_, ItemData.DAMAGE_BIT, ItemData.DAMAGE_MULTIPLIER);
             minDmg += int(minDmg * dmgMod);
             maxDmg += int(maxDmg * dmgMod);
             var dmgString:String = (minDmg == maxDmg ? minDmg : minDmg + " - " + maxDmg).toString();
@@ -307,7 +308,7 @@ public class EquipmentToolTip extends ToolTip {
 
             var rateOfFire:Number = this.objectXML_.hasOwnProperty("RateOfFire") ? Number(this.objectXML_.RateOfFire) : 1.0;
             var rateOfFireDataValue:Number = ItemData.RATE_OF_FIRE_MULTIPLIER * rateOfFire;
-            var rateOfFireData:Number = ItemData.getStat(this.itemData_, ItemData.RATE_OF_FIRE_BIT, rateOfFireDataValue);
+            var rateOfFireData:Number = 0;//ItemData.getStat(this.itemData_, ItemData.RATE_OF_FIRE_BIT, rateOfFireDataValue);
             var rateOfFireString:String = (int(rateOfFire * 100) + int(rateOfFireData * 100)) + "%";
             if (rateOfFireData != 0) {
                 rateOfFireString += " (+" + int(rateOfFireData * 100) + "%)";
@@ -425,7 +426,7 @@ public class EquipmentToolTip extends ToolTip {
             stats[stat] = stats[stat] + amount;
         }
 
-        if (this.itemData_ != -1) {
+        /*if (this.itemData_ != null) {
             var k:int = -1;
             if ((k = ItemData.getStat(this.itemData_, ItemData.MAX_HP_BIT, 5)) != 0) {
                 stats[0] = (stats[0] || 0) + k;
@@ -463,7 +464,7 @@ public class EquipmentToolTip extends ToolTip {
                 stats[8] = (stats[8] || 0) + k;
                 datas[8] = (datas[8] || 0) + k;
             }
-        }
+        }*/
 
         var isEmpty:Boolean = true;
         var s:Object;
@@ -499,8 +500,9 @@ public class EquipmentToolTip extends ToolTip {
         }
 
         if (data > 0) {
-            dataString = " (+" + data + ")";
-            textColor = ItemData.getColorString(this.itemData_);
+            dataString = "";
+            //dataString = " (+" + data + ")";
+            //textColor = ItemData.getColorString(this.itemData_);
         } else {
             dataString = "";
         }

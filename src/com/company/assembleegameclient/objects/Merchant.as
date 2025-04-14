@@ -16,6 +16,7 @@ import flash.geom.Matrix;
 import svera.untiered.core.StaticInjectorContext;
 import svera.untiered.game.model.AddSpeechBalloonVO;
 import svera.untiered.game.signals.AddSpeechBalloonSignal;
+import svera.untiered.itemdata.NewItemData;
 
 public class Merchant extends SellableObject implements IInteractiveObject {
 
@@ -185,7 +186,7 @@ public class Merchant extends SellableObject implements IInteractiveObject {
     }
 
     override public function getTooltip():ToolTip {
-        var toolTip:ToolTip = new EquipmentToolTip(this.merchandiseType_, -1, map_.player_, -1, InventoryOwnerTypes.NPC);
+        var toolTip:ToolTip = new EquipmentToolTip(this.merchandiseType_, new NewItemData(), map_.player_, -1, InventoryOwnerTypes.NPC);
         return toolTip;
     }
 

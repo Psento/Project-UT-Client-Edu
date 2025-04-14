@@ -3,6 +3,8 @@ import com.company.assembleegameclient.objects.GameObject;
 import com.company.assembleegameclient.objects.Player;
 import com.company.assembleegameclient.ui.panels.itemgrids.itemtiles.InteractiveItemTile;
 
+import svera.untiered.itemdata.NewItemData;
+
 public class ContainerGrid extends ItemGrid {
     private var tiles:Vector.<InteractiveItemTile>;
 
@@ -41,7 +43,7 @@ public class ContainerGrid extends ItemGrid {
         this.tiles = newTiles;
     }
 
-    override public function setItems(items:Vector.<int>, datas:Vector.<int>, itemIndexOffset:int = 0):void {
+    override public function setItems(items:Vector.<int>, datas:Vector.<NewItemData>, itemIndexOffset:int = 0):void {
         var numItems:int = 0;
         var i:int = 0;
         var refresh:Boolean = false;
@@ -53,7 +55,7 @@ public class ContainerGrid extends ItemGrid {
                         refresh = true;
                     }
                 } else {
-                    if (this.tiles[i].setItem(-1, -1)) {
+                    if (this.tiles[i].setItem(-1, null)) {
                         refresh = true;
                     }
                 }
@@ -64,7 +66,7 @@ public class ContainerGrid extends ItemGrid {
         }
     }
 
-    public function setItem(slot:int, itemId:int, itemData:int):void {
+    public function setItem(slot:int, itemId:int, itemData:NewItemData):void {
         if (slot >= this.tiles.length || slot < 0) {
             return;
         }

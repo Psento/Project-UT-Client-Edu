@@ -34,6 +34,8 @@ public class NewItemData {
             var key:uint = data.readUnsignedShort();
 
             switch (key) {
+                case ItemDataKey.Uuid:
+                    break;
                 case ItemDataKey.Transmog:
                     item.Transmog = data.readUnsignedShort();
                     break;

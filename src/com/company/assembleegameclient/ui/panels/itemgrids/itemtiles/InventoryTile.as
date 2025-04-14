@@ -5,6 +5,8 @@ import com.company.ui.SimpleText;
 import flash.display.Bitmap;
 import flash.display.BitmapData;
 
+import svera.untiered.itemdata.NewItemData;
+
 public class InventoryTile extends InteractiveItemTile {
 
 
@@ -39,7 +41,7 @@ public class InventoryTile extends InteractiveItemTile {
         newItemSprite.setDim(false);
     }
 
-    override public function setItem(itemId:int, itemData:int):Boolean {
+    override public function setItem(itemId:int, itemData:NewItemData):Boolean {
         var changed:Boolean = super.setItem(itemId, itemData);
         if (changed) {
             this.hotKeyBMP.visible = itemSprite.itemId <= 0;

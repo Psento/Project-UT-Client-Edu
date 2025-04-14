@@ -32,6 +32,7 @@ import svera.untiered.fame.FameConfig;
 import svera.untiered.game.GameConfig;
 import svera.untiered.hud.HUDConfig;
 import svera.untiered.legends.LegendsConfig;
+import svera.untiered.messaging.impl.data.StatType;
 import svera.untiered.minimap.MiniMapConfig;
 import svera.untiered.stage3D.Renderer;
 import svera.untiered.stage3D.Stage3DConfig;

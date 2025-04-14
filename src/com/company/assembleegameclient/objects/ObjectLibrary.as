@@ -12,6 +12,7 @@ import flash.utils.getDefinitionByName;
 import svera.untiered.constants.GeneralConstants;
 import svera.untiered.constants.ItemConstants;
 import svera.untiered.messaging.impl.data.StatData;
+import svera.untiered.messaging.impl.data.StatType;
 
 public class ObjectLibrary {
     public static var playerChars_:Vector.<XML> = new Vector.<XML>();
@@ -280,31 +281,31 @@ public class ObjectLibrary {
         if (reqXML.toString() == "Stat") {
             val = int(reqXML.@value);
             switch (int(reqXML.@stat)) {
-                case StatData.MAX_HP_STAT:
+                case StatType.MaxHp:
                     return p.maxHP_ >= val;
-                case StatData.MAX_SP_STAT:
+                case StatType.MaxSp:
                     return p.maxSP_ >= val;
-                case StatData.MAX_RP_STAT:
+                case StatType.MaxRp:
                     return p.maxRP_ >= val;
-                case StatData.LEVEL_STAT:
+                case StatType.Level:
                     return p.level_ >= val;
-                case StatData.AWAKENING_STAT:
+                case StatType.Awakening:
                     return p.awakening_ >= val;
-                case StatData.RELIC_STAT:
+                case StatType.Relic:
                     return p.relic_ >= val;
-                case StatData.BACKGROUND_STAT:
+                case StatType.Background:
                     return p.background_ >= val;
-                case StatData.ATTACK_STAT:
+                case StatType.Attack:
                     return p.attack_ >= val;
-                case StatData.ARMOR_STAT:
+                case StatType.Armor:
                     return p.armor_ >= val;
-                case StatData.SPEED_STAT:
+                case StatType.Speed:
                     return p.speed_ >= val;
-                case StatData.VIGOR_STAT:
+                case StatType.Vigor:
                     return p.vigor_ >= val;
-                case StatData.WISDOM_STAT:
+                case StatType.Intelligence:
                     return p.intelligence_ >= val;
-                case StatData.DEXTERITY_STAT:
+                case StatType.Dexterity:
                     return p.dexterity_ >= val;
             }
         }

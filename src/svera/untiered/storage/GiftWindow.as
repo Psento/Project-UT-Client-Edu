@@ -5,6 +5,8 @@ import com.company.assembleegameclient.objects.Player;
 import flash.display.Sprite;
 import flash.events.MouseEvent;
 
+import svera.untiered.itemdata.NewItemData;
+
 import svera.untiered.messaging.impl.data.StorageSlotUpdateData;
 import svera.untiered.storage.components.StorageSortTab;
 
@@ -46,7 +48,7 @@ public class GiftWindow extends Sprite {
         this.contentView_.initialize(size, slots);
     }
 
-    public function updateSlot(slot:int, inventory:int, itemData:int):void {
+    public function updateSlot(slot:int, inventory:int, itemData:NewItemData):void {
         this.owner_.equipment_[slot] = inventory;
         this.owner_.itemDatas_[slot] = itemData;
         this.contentView_.updateSlot(slot, inventory, itemData);

@@ -51,7 +51,7 @@ public class Frame2 extends Sprite
             addChild(this.Button1);
         }
         this.XButton = new TextButton(12, "X");
-        this.XButton.x = (this.w_ - this.XButton.width) - 15;
+        this.XButton.x = this.w_ - this.XButton.width - 15;
         addChild(this.XButton);
         filters = [new DropShadowFilter(0, 0, 0, 0.5, 12, 12)];
         addEventListener(Event.ADDED_TO_STAGE, this.onAddedToStage);
@@ -159,8 +159,8 @@ public class Frame2 extends Sprite
 
     public function onAddedToStage(_arg1:Event):void {
         this.draw();
-        this.x = 400 - ((this.w_ - 6) / 2);
-        this.y = 300 - (h_ / 2); //was height
+        this.x = 400 - (this.w_ - 6) / 2;
+        this.y = 300 - h_ / 2; //was height
         if (this.frameTextInputBoxes.length > 0) {
             stage.focus = this.frameTextInputBoxes[0].inputText_;
         }

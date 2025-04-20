@@ -48,7 +48,7 @@ public class RaidLauncherModal extends EmptyFrame {
     }
 
     public static function getText(_arg1:String, _arg2:int, _arg3:int, _arg4:Boolean):SimpleText {
-        var _local5:SimpleText = new SimpleText(18, 0xFFFFFF, false, RaidLauncherModal.modalWidth - (TEXT_MARGIN * 2) - 10);
+        var _local5:SimpleText = new SimpleText(18, 0xFFFFFF, false, RaidLauncherModal.modalWidth - TEXT_MARGIN * 2 - 10);
         _local5.setBold(true);
         _local5.setText(_arg1)
         _local5.wordWrap = true;

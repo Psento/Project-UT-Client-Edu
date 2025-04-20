@@ -65,7 +65,7 @@ public class LootboxesDisplay extends Sprite {
     }
 
     private function onDoubleClick(_arg_1:MouseEvent):void {
-        if (!(this.gs) || this.gs.isNexus_ || Parameters.data_.clickForTsavorite) {
+        if (!this.gs || this.gs.isNexus_ || Parameters.data_.clickForTsavorite) {
             this.openAccountDialog.dispatch();
         }
     }

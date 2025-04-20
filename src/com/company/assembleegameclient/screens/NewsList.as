@@ -19,7 +19,7 @@ public class NewsList extends Sprite {
     }
 
     public function addLine(newsLine:NewsLine):void {
-        newsLine.y = 4 + (this.lines_.length * (NewsLine.HEIGHT + 4));
+        newsLine.y = 4 + this.lines_.length * (NewsLine.HEIGHT + 4);
         this.lines_.push(newsLine);
         addChild(newsLine);
     }

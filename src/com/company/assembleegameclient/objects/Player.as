@@ -200,7 +200,7 @@ public class Player extends Character {
         this.rotate_ = rotate;
         this.relMoveVec_.x = relMoveVecX;
         this.relMoveVec_.y = relMoveVecY;
-        if (isConfused()) {
+        if (isDisoriented()) {
             temp = this.relMoveVec_.x;
             this.relMoveVec_.x = -this.relMoveVec_.y;
             this.relMoveVec_.y = -temp;
@@ -333,7 +333,7 @@ public class Player extends Character {
     }
 
     public function modifyMove(x:Number, y:Number, newP:Point):void {
-        if (isParalyzed()) {
+        if (isBound()) {
             newP.x = x_;
             newP.y = y_;
             return;
@@ -476,7 +476,7 @@ public class Player extends Character {
         var moveVecAngle:Number = NaN;
         var d:int = 0;
 
-        if (isHealing() && Parameters.data_.particles) {
+        if (isRegenerating() && Parameters.data_.particles) {
             if (this.healingEffect_ == null) {
                 this.healingEffect_ = new HealingEffect(this);
                 map_.addObj(this.healingEffect_, x_, y_);
@@ -595,11 +595,11 @@ public class Player extends Character {
     }
 
     private function getMoveSpeed():Number {
-        if (isSlowed()) {
+        if (isSluggish()) {
             return MIN_MOVE_SPEED * this.moveMultiplier_;
         }
         var moveSpeed:Number = MIN_MOVE_SPEED + this.speed_ / 75 * (MAX_MOVE_SPEED - MIN_MOVE_SPEED);
-        if (isSpeedy()) {
+        if (isSwift()) {
             moveSpeed *= 1.5;
         }
         switch (awakening_) {
@@ -618,22 +618,22 @@ public class Player extends Character {
     }
 
     public function attackFrequency():Number {
-        if (isExhaust()) {
+        if (isExausted()) {
             return MIN_ATTACK_FREQ;
         }
         var attFreq:Number = MIN_ATTACK_FREQ + this.dexterity_ / 75 * (MAX_ATTACK_FREQ - MIN_ATTACK_FREQ);
-        if (isBerserk()) {
+        if (isFurious()) {
             attFreq = attFreq * 1.5;
         }
         return attFreq;
     }
 
     private function attackMultiplier():Number {
-        if (isWeak()) {
+        if (isDeficient()) {
             return MIN_ATTACK_MULT;
         }
         var attMult:Number = MIN_ATTACK_MULT + this.attack_ / 75 * (MAX_ATTACK_MULT - MIN_ATTACK_MULT);
-        if (isDamaging()) {
+        if (isStrengthened()) {
             attMult = attMult * 1.5;
         }
         return attMult;
@@ -937,9 +937,8 @@ public class Player extends Character {
     }
 
     public function isHexed():Boolean {
-        return (condition_ & ConditionEffect.HEXED_BIT) != 0;
+        return !((condition_[ConditionEffect.CE_FIRST_BATCH] & ConditionEffect.HEXED_BIT) == 0);
     }
-
     public function isInventoryFull():Boolean {
         var len:int = equipment_.length;
         for (var i:uint = 5; i < len; i++) {

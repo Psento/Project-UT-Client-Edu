@@ -148,7 +148,7 @@ public class GameSprite extends Sprite {
             //}
             //this.hudView.x = (800 - (200 * this.hudView.scaleX));
             if (this.currencyDisplay_ != null) {
-                this.currencyDisplay_.x = this.hudView.x - (6 * this.currencyDisplay_.scaleX);
+                this.currencyDisplay_.x = this.hudView.x - 6 * this.currencyDisplay_.scaleX;
             }
         }
         if (this.textBox_ != null) {

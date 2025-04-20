@@ -107,7 +107,7 @@ public class Projectile extends BasicObject {
         } else {
             player = map.goDict_[this.ownerId_] as Player;
             if (player != null && player.sinkLevel_ > 0) {
-                z_ = 0.5 - (0.4 * (player.sinkLevel_ / Parameters.MAX_SINK_LEVEL));
+                z_ = 0.5 - 0.4 * (player.sinkLevel_ / Parameters.MAX_SINK_LEVEL);
             }
         }
         return true;

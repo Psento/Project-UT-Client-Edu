@@ -186,15 +186,14 @@ public class GameObject extends BasicObject {
 
         if (!((condition[ConditionEffect.CE_FIRST_BATCH] & ConditionEffect.VULNERABLE_BIT) == 0) || isPiercing) {
             def = def / 4;
-        }
-        else {
+        } else {
             if ((condition[ConditionEffect.CE_FIRST_BATCH] & ConditionEffect.HARDEN_BIT || condition[ConditionEffect.CE_THIRD_BATCH] & ConditionEffect.FROZENRESOLVE_BIT) != 0) {
                 def = def * 2;
             }
         }
         var floor:Number = dmg * 0.4;
         var ret:Number;
-        if(dmg * ((100 - def) * 0.01) < floor)
+        if (dmg * ((100 - def) * 0.01) < floor)
             ret = floor;
         else
             ret = dmg * ((100 - def) * 0.01);
@@ -216,18 +215,17 @@ public class GameObject extends BasicObject {
     public static function damageWithDefenseEnemy(_arg1:int, _arg2:int, _arg3:Boolean, _arg4:Vector.<uint>, player:Player):int { //player concerned
         var _local5:int = _arg2;
 
-        if(_arg3){
+        if (_arg3) {
             _local5 = _local5 / 4;
         }
         if (!((_arg4[ConditionEffect.CE_FIRST_BATCH] & ConditionEffect.VULNERABLE_BIT) == 0)) {
             _local5 = _local5 / 4;
-        }
-        else {
+        } else {
             if ((_arg4[ConditionEffect.CE_FIRST_BATCH] & ConditionEffect.HARDEN_BIT || _arg4[ConditionEffect.CE_THIRD_BATCH] & ConditionEffect.FROZENRESOLVE_BIT) != 0) {
                 _local5 = _local5 * 2;
             }
         }
-        var _local6:int = _arg1 * 3 / 20 ;
+        var _local6:int = _arg1 * 3 / 20;
         var _local7:int = Math.max(_local6, _arg1 - _local5);
         if ((_arg4[ConditionEffect.CE_FIRST_BATCH] & ConditionEffect.INVULNERABLE_BIT) != 0) {
             _local7 = 0;
@@ -260,6 +258,77 @@ public class GameObject extends BasicObject {
         return _local7;
     }
 
+    public function criticalDamage(_arg_1:int, _arg_2:int, _arg_3:Vector.<uint>, _arg_4:Boolean, _arg_5:Projectile, multi:Number):void {
+        var _local_7:int;
+        var _local_8:uint;
+        var _local_9:ConditionEffect;
+        var _local_10:CharacterStatusText;
+        var _local_13:String;
+        var _local_14:Vector.<uint>;
+        var _local_15:Boolean;
+        var _local_6:Boolean;
+        /*        if (_arg_4) {
+                    this.dead_ = true;
+                }
+                else {*/
+        if (_arg_3 != null) {
+            _local_7 = 0;
+            for each (_local_8 in _arg_3) {
+                _local_9 = null;
+                switch (_local_8) {
+                    case ConditionEffect.NOTHING:
+                        break;
+                    case ConditionEffect.DISORIENT:
+                        _local_9 = ConditionEffect.effects_[_local_8];
+                        break;
+                    case ConditionEffect.GROUND_DAMAGE:
+                        _local_6 = true;
+                        break;
+                }
+                if (_local_9 != null) {
+                    if (_local_8 < ConditionEffect.FIRST_BATCH_THREASHOLD) {
+                        if ((this.condition_[ConditionEffect.CE_FIRST_BATCH] | _local_9.bit_) == this.condition_[ConditionEffect.CE_FIRST_BATCH]) continue;
+                        this.condition_[ConditionEffect.CE_FIRST_BATCH] = this.condition_[ConditionEffect.CE_FIRST_BATCH] | _local_9.bit_;
+                    } else if (_local_8 < ConditionEffect.SECOND_BATCH_THREASHOLD) {
+                        if ((this.condition_[ConditionEffect.CE_SECOND_BATCH] | _local_9.bit_) == this.condition_[ConditionEffect.CE_SECOND_BATCH]) continue;
+                        this.condition_[ConditionEffect.CE_SECOND_BATCH] = this.condition_[ConditionEffect.CE_SECOND_BATCH] | _local_9.bit_;
+                    } else if (_local_8 < ConditionEffect.THIRD_BATCH_THREASHOLD) {
+                        if ((this.condition_[ConditionEffect.CE_THIRD_BATCH] | _local_9.bit_) == this.condition_[ConditionEffect.CE_THIRD_BATCH]) continue;
+                        this.condition_[ConditionEffect.CE_THIRD_BATCH] = this.condition_[ConditionEffect.CE_THIRD_BATCH] | _local_9.bit_;
+                    }
+                    _local_13 = _local_9.localizationKey_;
+                    showConditionEffect(_local_7, _local_13);
+                    _local_7 = _local_7 + 500;
+                }
+            }
+        }
+        // }
+        if (!(this.props_.isEnemy_ && Parameters.data_.disableEnemyParticles)) {
+            _local_14 = BloodComposition.getBloodComposition(this.objectType_, this.texture_, this.props_.bloodProb_, this.props_.bloodColor_);
+            if (hp_ < 1) {
+                map_.addObj(new ExplosionEffect(_local_14, this.size_, 30), x_, y_);
+            } else {
+                if (_arg_5 != null) {
+                    map_.addObj(new HitEffect(_local_14, this.size_, 10, _arg_5.angle_, _arg_5.projProps_.speed_), x_, y_);
+                } else {
+                    map_.addObj(new ExplosionEffect(_local_14, this.size_, 10), x_, y_);
+                }
+            }
+        }
+        if (!_arg_4
+                && (Parameters.data_.noEnemyDamage && (_arg_5 == null || this.props_.isEnemy_ && _arg_5.ownerId_ != map_.player_.objectId_)
+                        || Parameters.data_.noAllyDamage && this.props_.isPlayer_ && this != map_.player_)) {
+            return;
+        }
+        if (_arg_2 > 0) {
+            _local_15 = this.isVulnerable() || !(_arg_5 == null) && _arg_5.projProps_.armorPiercing_ || _local_6;
+            this.showDamageText2(_arg_2, _local_15, multi);
+        }
+    }
+    public function showConditionEffect(timeOffset:int, text:String):void {
+        var _local3:CharacterStatusText = new CharacterStatusText(this, text, 0xFF0000, 3000, timeOffset);
+        map_.mapOverlay_.addStatusText(_local3);
+    }
     public function setObjectId(objectId:int):void {
         var textureData:TextureData = null;
         objectId_ = objectId;
@@ -299,7 +368,11 @@ public class GameObject extends BasicObject {
             }
         }
     }
-
+    public function showDamageText2(dmg:int, crit:Boolean, multi:Number):void {
+        var text:String = "-" + dmg + " (" + multi + "x)";
+        var statusText:CharacterStatusText = new CharacterStatusText(this, text,crit ? 0xFF4500 : 0xFFFF00, 1000);
+        map_.mapOverlay_.addStatusText(statusText);
+    }
     public function setTex1(tex1Id:int):void {
         if (tex1Id == this.tex1Id_) {
             return;
@@ -394,6 +467,9 @@ public class GameObject extends BasicObject {
             this.hpbarPath_ = null;
         }
     }
+    public function isTargetable() :Boolean {
+        return !isImmortal() && !isPaused() && !isCrippled() && hp_ > 0;
+    }
 
     public function isMuted():Boolean {
         return !((this.condition_[ConditionEffect.CE_FIRST_BATCH] & ConditionEffect.MUTE_BIT) == 0);
@@ -432,15 +508,15 @@ public class GameObject extends BasicObject {
     }
 
     public function isStunImmune():Boolean {
-        return !(((this.condition_[ConditionEffect.CE_FIRST_BATCH] & ConditionEffect.STUN_IMMUNE_BIT) == 0)) || this.isStunImmune_;
+        return !((this.condition_[ConditionEffect.CE_FIRST_BATCH] & ConditionEffect.STUN_IMMUNE_BIT) == 0) || this.isStunImmune_;
     }
 
     public function isDeficientImmune():Boolean {
-        return !(((this.condition_[ConditionEffect.CE_THIRD_BATCH] & ConditionEffect.DEFICIENT_IMMUNE_BIT) == 0)) || this.isDeficientImmune_;
+        return !((this.condition_[ConditionEffect.CE_THIRD_BATCH] & ConditionEffect.DEFICIENT_IMMUNE_BIT) == 0) || this.isDeficientImmune_;
     }
 
     public function isHemorrhageImmune():Boolean {
-        return !(((this.condition_[ConditionEffect.CE_THIRD_BATCH] & ConditionEffect.HEMORRHAGE_IMMUNE_BIT) == 0)) || this.isHemorrhageImmune_;
+        return !((this.condition_[ConditionEffect.CE_THIRD_BATCH] & ConditionEffect.HEMORRHAGE_IMMUNE_BIT) == 0) || this.isHemorrhageImmune_;
     }
 
     public function isInvisible():Boolean {
@@ -524,11 +600,11 @@ public class GameObject extends BasicObject {
     }
 
     public function isBindImmune():Boolean {
-        return this.isBindImmune_ || !(((this.condition_[ConditionEffect.CE_SECOND_BATCH] & ConditionEffect.BIND_IMMUNE_BIT) == 0));
+        return this.isBindImmune_ || !((this.condition_[ConditionEffect.CE_SECOND_BATCH] & ConditionEffect.BIND_IMMUNE_BIT) == 0);
     }
 
     public function isExhaustImmune():Boolean {
-        return this.isExhaustImmune_ || !(((this.condition_[ConditionEffect.CE_SECOND_BATCH] & ConditionEffect.EXHAUST_IMMUNE_BIT) == 0));
+        return this.isExhaustImmune_ || !((this.condition_[ConditionEffect.CE_SECOND_BATCH] & ConditionEffect.EXHAUST_IMMUNE_BIT) == 0);
     }
 
     public function isTerrified():Boolean {
@@ -547,8 +623,7 @@ public class GameObject extends BasicObject {
         return !((this.condition_[ConditionEffect.CE_SECOND_BATCH] & ConditionEffect.FRAGILE_IMMUNE_BIT) == 0);
     }
 
-    public function isHidden() : Boolean
-    {
+    public function isHidden():Boolean {
         return (this.condition_[ConditionEffect.CE_SECOND_BATCH] & ConditionEffect.HIDDEN_BIT) != 0;
     }
 
@@ -588,7 +663,7 @@ public class GameObject extends BasicObject {
         return !((this.condition_[ConditionEffect.CE_SECOND_BATCH] & ConditionEffect.PRECISION_BIT) == 0);
     }
 
-    public function isUntargetable() :Boolean {
+    public function isUntargetable():Boolean {
         return isImmortal() || isPaused() || isCrippled() || hp_ < 1;
     }
 
@@ -611,6 +686,7 @@ public class GameObject extends BasicObject {
     public function hasTsunamisFury():Boolean {
         return !((this.condition_[ConditionEffect.CE_THIRD_BATCH] & ConditionEffect.TSUNAMISFURY_BIT) == 0);
     }
+
     public function isDowned():Boolean {
         return !((this.condition_[ConditionEffect.CE_THIRD_BATCH] & ConditionEffect.DOWNED_BIT) == 0);
     }
@@ -1076,7 +1152,9 @@ public class GameObject extends BasicObject {
         }
         this.icons_.length = 0;
         var index:int = time / 500;
-        ConditionEffect.getConditionEffectIcons(this.condition_, this.icons_, index);
+        ConditionEffect.getConditionEffectIcons(this.condition_[ConditionEffect.CE_FIRST_BATCH], this.icons_, index);
+        ConditionEffect.getConditionEffectIcons2(this.condition_[ConditionEffect.CE_SECOND_BATCH], this.icons_, index);
+        ConditionEffect.getConditionEffectIcons3(this.condition_[ConditionEffect.CE_THIRD_BATCH], this.icons_, index);
         var centerX:Number = posS_[3];
         var centerY:Number = this.vS_[1];
         var len:int = this.icons_.length;

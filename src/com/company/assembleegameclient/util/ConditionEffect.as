@@ -89,6 +89,7 @@ public class ConditionEffect {
     public static const DOWNED:uint = 77;
 
     public static const GROUND_DAMAGE:uint = 99;
+    public static const SIZE:uint = 100;
 
 // batch 1
     public static const DEAD_BIT:uint = 1 << DEAD - 1;
@@ -315,7 +316,35 @@ public class ConditionEffect {
         }
     }
 
-    private static function getIconsFromBit(_arg1:uint):Vector.<BitmapData> {
+    public static function getConditionEffectIcons2(condition:uint, icons:Vector.<BitmapData>, index:int):void {
+        var newCondition:uint;
+        var bit:uint;
+        var iconList:Vector.<BitmapData>;
+        while (condition != 0) {
+            newCondition = condition & condition - 1;
+            bit = condition ^ newCondition;
+            iconList = getIconsFromBit2(bit);
+            if (iconList != null) {
+                icons.push(iconList[(index % iconList.length)]);
+            }
+            condition = newCondition;
+        }
+    }
+    public static function getConditionEffectIcons3(condition:uint, icons:Vector.<BitmapData>, index:int):void {
+        var newCondition:uint;
+        var bit:uint;
+        var iconList:Vector.<BitmapData>;
+        while (condition != 0) {
+            newCondition = condition & condition - 1;
+            bit = condition ^ newCondition;
+            iconList = getIconsFromBit3(bit);
+            if (iconList != null) {
+                icons.push(iconList[(index % iconList.length)]);
+            }
+            condition = newCondition;
+        }
+    }
+    private static function getIconsFromBit(bit:uint):Vector.<BitmapData> {
         var drawMatrix:Matrix;
         var ce:uint;
         var icons:Vector.<BitmapData>;
@@ -350,10 +379,10 @@ public class ConditionEffect {
                 bitToIcon_[effects_[ce].bit_] = icons;
             }
         }
-        return bitToIcon_[_arg1];
+        return bitToIcon_[bit];
     }
 
-    private static function getIconsFromBit2(_arg1:uint):Vector.<BitmapData> {
+    private static function getIconsFromBit2(bit:uint):Vector.<BitmapData> {
         var icons:Vector.<BitmapData>;
         var ce:BitmapData;
         var drawMatrix:Matrix;
@@ -395,13 +424,13 @@ public class ConditionEffect {
                 icon++;
             }
         }
-        if (bitToIcon2_ != null && bitToIcon2_[_arg1] != null) {
-            return bitToIcon2_[_arg1];
+        if (bitToIcon2_ != null && bitToIcon2_[bit] != null) {
+            return bitToIcon2_[bit];
         }
         return null;
     }
 
-    private static function getIconsFromBit3(_arg1:uint):Vector.<BitmapData> {
+    private static function getIconsFromBit3(bit:uint):Vector.<BitmapData> {
         var drawMatrix:Vector.<BitmapData>;
         var ce:BitmapData;
         var icons:Matrix;
@@ -443,8 +472,8 @@ public class ConditionEffect {
                 icon++;
             }
         }
-        if (!(bitToIcon3_ == null) && !(bitToIcon3_[_arg1] == null)) {
-            return bitToIcon3_[_arg1];
+        if (!(bitToIcon3_ == null) && !(bitToIcon3_[bit] == null)) {
+            return bitToIcon3_[bit];
         }
         return null;
     }

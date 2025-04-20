@@ -27,8 +27,8 @@ public class EmptyFrame extends Sprite {
     public function EmptyFrame(_arg1:int = 288, _arg2:int = 150, _arg3:String = "") {
         this.modalWidth = _arg1;
         this.modalHeight = _arg2;
-        x = 400 - (this.modalWidth / 2);
-        y = 300 - (this.modalHeight / 2);
+        x = 400 - this.modalWidth / 2;
+        y = 300 - this.modalHeight / 2;
         if (_arg3 != "") {
             this.setTitle(_arg3, true);
         }
@@ -79,7 +79,7 @@ public class EmptyFrame extends Sprite {
             addEventListener(Event.REMOVED_FROM_STAGE, this.onRemovedFromStage);
             addChild(this.closeButton);
         } else {
-            if (!((this.closeButton == null)) && !(_arg1)) {
+            if (!(this.closeButton == null) && !_arg1) {
                 removeChild(this.closeButton);
                 this.closeButton = null;
             }
@@ -87,7 +87,7 @@ public class EmptyFrame extends Sprite {
     }
 
     protected function getText(_arg1:String, _arg2:int, _arg3:int, _arg4:Boolean):SimpleText {
-        var _local5:SimpleText = new SimpleText(18, 0xFFFFFF, modalWidth - (TEXT_MARGIN * 2) - 10);
+        var _local5:SimpleText = new SimpleText(18, 0xFFFFFF, modalWidth - TEXT_MARGIN * 2 - 10);
 
         _local5.setBold(true);
         _local5.setText(_arg1);
@@ -103,8 +103,8 @@ public class EmptyFrame extends Sprite {
     }
 
     protected function makeModalBackground():Sprite {
-        x = 400 - (this.modalWidth / 2);
-        y = 300 - (this.modalHeight / 2);
+        x = 400 - this.modalWidth / 2;
+        y = 300 - this.modalHeight / 2;
         var bg:Sprite = new Sprite();
         bg.graphics.beginFill(3552822);
         bg.graphics.drawRect(0, 0, modalWidth, modalHeight);

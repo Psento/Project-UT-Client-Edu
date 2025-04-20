@@ -38,6 +38,7 @@ import com.company.assembleegameclient.sound.SoundEffectLibrary;
 import com.company.assembleegameclient.ui.dialogs.Dialog;
 import com.company.assembleegameclient.ui.panels.GuildInvitePanel;
 import com.company.assembleegameclient.ui.panels.TradeRequestPanel;
+import com.company.assembleegameclient.util.ConditionEffect;
 import com.company.assembleegameclient.util.Currency;
 import com.company.assembleegameclient.util.FreeList;
 import com.company.util.Random;
@@ -1227,8 +1228,8 @@ public class GameServerConnection {
                     player.intelligence_ = value;
                     continue;
                 case StatData.CONDITION_STAT:
-                    go.condition_ = value;
-                    continue;
+                    go.condition_[ConditionEffect.CE_FIRST_BATCH] = value;
+                    break;
                 case StatData.INVENTORY:
                     var itemarray:Vector.<int> = stat.statValueObj as Vector.<int>;
                     for (var i:int = 0; i < itemarray.length; i += 2) {

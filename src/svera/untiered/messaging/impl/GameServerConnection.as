@@ -1230,6 +1230,12 @@ public class GameServerConnection {
                 case StatData.CONDITION_STAT:
                     go.condition_[ConditionEffect.CE_FIRST_BATCH] = value;
                     break;
+                case StatData.Effects2:
+                    go.condition_[ConditionEffect.CE_SECOND_BATCH] = value;
+                    break;
+                case StatData.Effects3:
+                    go.condition_[ConditionEffect.CE_THIRD_BATCH] = value;
+                    break;
                 case StatData.INVENTORY:
                     var itemarray:Vector.<int> = stat.statValueObj as Vector.<int>;
                     for (var i:int = 0; i < itemarray.length; i += 2) {

@@ -112,31 +112,36 @@ public class LootboxModal extends EmptyFrame {
         _local2.y = 27;
         _local2.alpha = 1.00;
         var additive:int = 89;
-        this.Lootbox_Image1 = new LockerLootbox_ImageEmbed().bitmapData;
+
+        this.Lootbox_Image1 = new Bitmap(new LockerLootbox_ImageEmbed().bitmapData);
         this.Lootbox_Image1.y = 100;
         this.Lootbox_Image1.x = 22;
         Lootbox_Image1.width = 21 * 4;
         Lootbox_Image1.height = 18 * 4;
         Lootbox_Image1.filters = [new DropShadowFilter(0, 0, 0xFF0044, 1, 12, 12, 1.5)]; // Locker LootBox
-        this.Lootbox_Image2 = new EventLootbox_ImageEmbed().bitmapData;
+
+        this.Lootbox_Image2 = new Bitmap(new EventLootbox_ImageEmbed().bitmapData);
         this.Lootbox_Image2.y = 100;
         this.Lootbox_Image2.x = this.Lootbox_Image1.x + additive;
         Lootbox_Image2.width = 21 * 4;
         Lootbox_Image2.height = 18 * 4;
         Lootbox_Image2.filters = [new DropShadowFilter(0, 0, 0x00FF21, 1, 12, 12, 1.5)]; // Event LootBox
-        this.Lootbox_Image3 = new GoldLootbox_ImageEmbed().bitmapData;
+
+        this.Lootbox_Image3 = new Bitmap(new GoldLootbox_ImageEmbed().bitmapData);
         this.Lootbox_Image3.y = 100;
         this.Lootbox_Image3.x = this.Lootbox_Image2.x + additive;
         Lootbox_Image3.width = 21 * 4;
         Lootbox_Image3.height = 18 * 4;
         Lootbox_Image3.filters = [new DropShadowFilter(0, 0, 0xF7AA22, 1, 12, 12, 1.5)]; // Gold LootBox
-        this.Lootbox_Image4 = new EliteLootbox_ImageEmbed().bitmapData;
+
+        this.Lootbox_Image4 = new Bitmap(new EliteLootbox_ImageEmbed().bitmapData);
         this.Lootbox_Image4.y = 100;
         this.Lootbox_Image4.x = this.Lootbox_Image3.x + additive;
         Lootbox_Image4.width = 21 * 4;
         Lootbox_Image4.height = 18 * 4;
         Lootbox_Image4.filters = [new DropShadowFilter(0, 0, 0xA80013, 1, 12, 12, 1.5)]; // Elite LootBox
-        this.Lootbox_Image5 = new PremiumLootbox_ImageEmbed().bitmapData;
+
+        this.Lootbox_Image5 = new Bitmap(new PremiumLootbox_ImageEmbed().bitmapData);
         this.Lootbox_Image5.y = 100;
         this.Lootbox_Image5.x = this.Lootbox_Image4.x + additive;
         Lootbox_Image5.width = 21 * 4;

@@ -121,6 +121,7 @@ public class GameObject extends BasicObject {
         this.props_ = ObjectLibrary.defaultProps_;
         this.targetPosition_ = new Point();
         this.direction_ = new Point();
+        condition_ = new Vector.<uint>(3, true);
         this.bitmapFill_ = new GraphicsBitmapFill(null, null, false, false);
         this.path_ = new GraphicsPath(GraphicsUtil.QUAD_COMMANDS, null);
         this.vS_ = new Vector.<Number>();

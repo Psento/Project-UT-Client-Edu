@@ -38,76 +38,76 @@ public class EquipmentTile extends InteractiveItemTile {
             case ItemConstants.ALL_TYPE:
                 break;
             case ItemConstants.SWORD_AXE_TYPE:
-                bd = AssetLibrary.getImageFromSet("lofiObj5", 48);
+                bd = AssetLibrary.getImageFromSet("StarterGear", 0x42);
                 break;
             case ItemConstants.DAGGER_TYPE:
-                bd = AssetLibrary.getImageFromSet("StarterGear", 0x03);
+                bd = AssetLibrary.getImageFromSet("StarterGear", 0x04);
                 break;
             case ItemConstants.BOW_CROSSBOW_TYPE:
-                bd = AssetLibrary.getImageFromSet("lofiObj5", 80);
+                bd = AssetLibrary.getImageFromSet("StarterGear", 0x91);
                 break;
             case ItemConstants.MACE_LANCE_TYPE:
-                bd = AssetLibrary.getImageFromSet("lofiObj6", 80);
+                bd = AssetLibrary.getImageFromSet("StarterGear", 0x05);
                 break;
             case ItemConstants.SHIELD_TYPE:
-                bd = AssetLibrary.getImageFromSet("lofiObj6", 112);
+                bd = AssetLibrary.getImageFromSet("StarterGear", 0x19);
                 break;
             case ItemConstants.LEATHER_TYPE:
                 bd = AssetLibrary.getImageFromSet("StarterGear", 0xae);
                 break;
             case ItemConstants.PLATE_TYPE:
-                bd = AssetLibrary.getImageFromSet("lofiObj5", 32);
+                bd = AssetLibrary.getImageFromSet("StarterGear", 0xaf);
                 break;
             case ItemConstants.STAFF_WAND_TYPE:
-                bd = AssetLibrary.getImageFromSet("lofiObj5", 64);
+                bd = AssetLibrary.getImageFromSet("StarterGear", 0x61);
                 break;
             case ItemConstants.RING_TYPE:
                 bd = AssetLibrary.getImageFromSet("StarterGear", 0x9f);
                 break;
             case ItemConstants.SPELL_TYPE:
-                bd = AssetLibrary.getImageFromSet("lofiObj6", 64);
+                bd = AssetLibrary.getImageFromSet("StarterGear", 0x28);
                 break;
             case ItemConstants.SEAL_TYPE:
-                bd = AssetLibrary.getImageFromSet("lofiObj6", 160);
+                bd = AssetLibrary.getImageFromSet("StarterGear", 0x1b);
                 break;
             case ItemConstants.CLOAK_TYPE:
                 bd = AssetLibrary.getImageFromSet("StarterGear", 0x0a);
                 break;
             case ItemConstants.ROBE_TYPE:
-                bd = AssetLibrary.getImageFromSet("lofiObj5", 16);
+                bd = AssetLibrary.getImageFromSet("StarterGear", 0xad);
                 break;
             case ItemConstants.GUN_TYPE:
-                bd = AssetLibrary.getImageFromSet("lofiObj6", 48);
+                bd = AssetLibrary.getImageFromSet("StarterGear", 0x90);
                 break;
             case ItemConstants.HELM_TYPE:
-                bd = AssetLibrary.getImageFromSet("lofiObj6", 96);
+                bd = AssetLibrary.getImageFromSet("StarterGear", 0x18);
                 break;
             case ItemConstants.CLAWS_GAUNTLET_TYPE:
-                bd = AssetLibrary.getImageFromSet("lofiObj5", 112);
+                bd = AssetLibrary.getImageFromSet("StarterGear", 0);
                 break;
             case ItemConstants.POISON_TYPE:
-                bd = AssetLibrary.getImageFromSet("lofiObj6", 128);
+                bd = AssetLibrary.getImageFromSet("StarterGear", 0x0c);
                 break;
             case ItemConstants.SKULL_TYPE:
-                bd = AssetLibrary.getImageFromSet("lofiObj6", 0);
+                bd = AssetLibrary.getImageFromSet("StarterGear", 0x2a);
                 break;
             case ItemConstants.TRAP_TYPE:
-                bd = AssetLibrary.getImageFromSet("lofiObj6", 16);
+                bd = AssetLibrary.getImageFromSet("StarterGear", 0x39);
                 break;
             case ItemConstants.DUAL_WIELD_TYPE:
-                bd = AssetLibrary.getImageFromSet("lofiObj6", 144);
+                bd = AssetLibrary.getImageFromSet("StarterGear", 2);
                 break;
             case ItemConstants.PRISM_TYPE:
-                bd = AssetLibrary.getImageFromSet("lofiObj6", 176);
+                bd = AssetLibrary.getImageFromSet("StarterGear", 0x0b);
                 break;
             case ItemConstants.SCEPTER_TYPE:
-                bd = AssetLibrary.getImageFromSet("lofiObj6", 192);
+                bd = AssetLibrary.getImageFromSet("StarterGear", 0x3c);
                 break;
             case ItemConstants.KATANA_SCYTHE_TYPE:
-                bd = AssetLibrary.getImageFromSet("lofiObj3", 540);
+                bd = AssetLibrary.getImageFromSet("StarterGear", 0x06);
                 break;
             case ItemConstants.CHAKRAM_TYPE:
-                bd = AssetLibrary.getImageFromSet("lofiObj3", 555);
+                bd = AssetLibrary.getImageFromSet("StarterGear", 0x1d);
                 break;
         }
         if (bd != null) {
@@ -125,7 +125,7 @@ public class EquipmentTile extends InteractiveItemTile {
     override public function setItem(itemId:int, itemData:int):Boolean {
         var itemChanged:Boolean = super.setItem(itemId, itemData);
         if (itemChanged) {
-            this.backgroundDetail.visible = itemSprite.itemId <= 0;
+            backgroundDetail && (backgroundDetail.visible = itemSprite.itemId <= 0);
             this.updateMinMana();
         }
         return itemChanged;

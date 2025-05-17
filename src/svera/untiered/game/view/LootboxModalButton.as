@@ -17,8 +17,8 @@ import svera.untiered.ui.UIUtils;
 
 public class LootboxModalButton extends Sprite {
 
-    public static const IMAGE_NAME:String = "lofiCharBig";
-    public static const IMAGE_ID:int = 101;
+    public static const IMAGE_NAME:String = "Currency_Icons16x16";
+    public static const IMAGE_ID:int = 5;
 
     private var bitmap:Bitmap;
     private var background:Sprite;

@@ -3283,36 +3283,18 @@
     </Object>
     <!-- #endregion -->
 
-    ////
     <RandomTexture>
-        // //
         <Texture>
-            // //
             <File>ValiantWeaponsProjectiles</File>
-            // //
             <Index>0x01</Index>
-            // //
-            //
         </Texture>
-        // //
         <Texture>
-            // //
             <File>lofiObj</File>
-            // //
             <Index>0xba</Index>
-            // //
-            //
         </Texture>
-        // //
         <Texture>
-            // //
             <File>lofiObj</File>
-            // //
             <Index>0x8a</Index>
-            // //
-            //
         </Texture>
-        // //
-        //
     </RandomTexture>
 </Objects>

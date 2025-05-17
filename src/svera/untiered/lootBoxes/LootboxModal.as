@@ -78,7 +78,7 @@ public class LootboxModal extends EmptyFrame {
         closeButton.addEventListener(MouseEvent.CLICK, this.onCloseButtonClicked);
     }
 
-    public function onCloseButtonClicked():void {
+    public function onCloseButtonClicked(e:Event):void {
         var _local1:CloseDialogsSignal = StaticInjectorContext.getInjector().getInstance(CloseDialogsSignal);
         closeButton.removeEventListener(MouseEvent.CLICK, this.onCloseButtonClicked);
         if (this.triggeredOnStartup) {

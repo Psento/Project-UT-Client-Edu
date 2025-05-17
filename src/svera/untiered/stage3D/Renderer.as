@@ -58,9 +58,9 @@ public class Renderer {
     [Inject]
     public var injector:Injector;
 
-    private var tX:Number;
+    public static var tX:Number;
 
-    private var tY:Number;
+    public static var tY:Number;
 
     public var program2:Program3D;
 
@@ -294,7 +294,7 @@ public class Renderer {
                 finalTransform.identity();
                 finalTransform.append(this.graphic3D_.getMatrix3D());
                 finalTransform.appendScale(1 / Stage3DConfig.HALF_WIDTH, 1 / Stage3DConfig.HALF_HEIGHT, 1);
-                finalTransform.appendTranslation(this.tX / Stage3DConfig.WIDTH, this.tY / Stage3DConfig.HEIGHT, 0);
+                finalTransform.appendTranslation(Renderer.tX / Stage3DConfig.WIDTH, Renderer.tY / Stage3DConfig.HEIGHT, 0);
                 this.context3D.setProgramConstantsFromMatrix(Context3DProgramType.VERTEX, 0, finalTransform, true);
                 this.graphic3D_.render(this.context3D);
             }
@@ -303,7 +303,7 @@ public class Renderer {
                 this.graphic3D_.setGradientFill(GraphicsGradientFill(graphicsData), this.context3D, Stage3DConfig.HALF_WIDTH, Stage3DConfig.HALF_HEIGHT);
                 finalTransform.identity();
                 finalTransform.append(this.graphic3D_.getMatrix3D());
-                finalTransform.appendTranslation(this.tX / Stage3DConfig.WIDTH, this.tY / Stage3DConfig.HEIGHT, 0);
+                finalTransform.appendTranslation(Renderer.tX / Stage3DConfig.WIDTH, Renderer.tY / Stage3DConfig.HEIGHT, 0);
                 this.context3D.setProgramConstantsFromMatrix(Context3DProgramType.VERTEX, 0, finalTransform, true);
                 this.context3D.setProgramConstantsFromVector(Context3DProgramType.FRAGMENT, 4, Vector.<Number>([0.5, 0.25, 0, 0]));
                 this.graphic3D_.renderShadow(this.context3D);
@@ -317,7 +317,7 @@ public class Renderer {
                     finalTransform.append(grahpicsData3d[index3d].GetModelMatrix());
                     finalTransform.append(this.cameraMatrix_);
                     finalTransform.append(this._projection);
-                    finalTransform.appendTranslation(this.tX / Stage3DConfig.WIDTH, this.tY / Stage3DConfig.HEIGHT * 11.5, 0);
+                    finalTransform.appendTranslation(Renderer.tX / Stage3DConfig.WIDTH, Renderer.tY / Stage3DConfig.HEIGHT * 11.5, 0);
                     this.context3D.setProgramConstantsFromMatrix(Context3DProgramType.VERTEX, 0, finalTransform, true);
                     this.context3D.setProgramConstantsFromMatrix(Context3DProgramType.VERTEX, 8, grahpicsData3d[index3d].GetModelMatrix(), true);
                     grahpicsData3d[index3d].draw(this.context3D.GetContext3D());
@@ -335,7 +335,7 @@ public class Renderer {
     }
 
     private function setTranslationToTitle():void {
-        this.tX = this.tY = 0;
+        Renderer.tX = Renderer.tY = 0;
     }
 }
 }

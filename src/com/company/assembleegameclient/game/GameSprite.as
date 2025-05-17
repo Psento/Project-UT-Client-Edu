@@ -5,6 +5,7 @@ import com.company.assembleegameclient.objects.GameObject;
 import com.company.assembleegameclient.objects.IInteractiveObject;
 import com.company.assembleegameclient.objects.Player;
 import com.company.assembleegameclient.parameters.Parameters;
+import com.company.assembleegameclient.parameters.Parameters;
 import com.company.assembleegameclient.ui.GuildText;
 import com.company.assembleegameclient.ui.RankText;
 import com.company.assembleegameclient.ui.TextBox;
@@ -78,7 +79,6 @@ public class GameSprite extends Sprite {
 
     public function hudModelInitialized():void {
         this.hudView = new HUDView();
-        this.hudView.x = GameClient.HalfStageWidth;
         addChild(this.hudView);
     }
 
@@ -104,7 +104,7 @@ public class GameSprite extends Sprite {
         var sWidth:Number = 1;
         var sHeight:Number = 1;
         var result:Number = sWidth / sHeight;
-        if (this.map != null) {
+        if (this.map != null && !Parameters.data_.GPURender) {
             this.map.scaleX = sWidth * Parameters.data_.mScale;
             this.map.scaleY = sHeight * Parameters.data_.mScale;
         }

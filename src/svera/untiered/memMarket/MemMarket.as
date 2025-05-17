@@ -38,21 +38,21 @@ public class MemMarket extends Sprite
         /* Draw background */
         graphics.clear();
         graphics.beginFill(2829099,0.8);
-        graphics.drawRect(0,0,800,600);
+        graphics.drawRect(0,0,GameClient.StageWidth,GameClient.StageHeight);
         graphics.endFill();
         graphics.lineStyle(1,6184542);
         graphics.moveTo(0,100);
-        graphics.lineTo(800,100);
+        graphics.lineTo(GameClient.StageWidth,100);
         graphics.lineStyle();
 
         /* Draw title */
-        this.titleText_ = new SimpleText(36, 0xFFFFFF, false, 800, 0);
+        this.titleText_ = new SimpleText(36, 0xFFFFFF, false, GameClient.StageWidth, 0);
         this.titleText_.setBold(true);
         this.titleText_.htmlText = "<p align=\"center\">Market</p>";
         this.titleText_.autoSize = TextFieldAutoSize.CENTER;
         this.titleText_.filters = [new DropShadowFilter(0,0,0)];
         this.titleText_.updateMetrics();
-        this.titleText_.x = 800 / 2 - this.titleText_.width / 2;
+        this.titleText_.x = GameClient.HalfStageWidth - this.titleText_.width / 2;
         this.titleText_.y = 8;
         addChild(this.titleText_);
 

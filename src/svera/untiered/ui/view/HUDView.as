@@ -75,26 +75,26 @@ public class HUDView extends Sprite {
 
     private function positionAssets(e:Event = null):void {
         hudOverlay.parent.mouseEnabled = false;
-        this.hudOverlay.x = -(this.hudOverlay.width * 0.5);
+        this.hudOverlay.x = GameClient.HalfStageWidth - this.hudOverlay.width * 0.5;
         this.hudOverlay.y = GameClient.StageHeight - hudOverlay.height;
-        this.miniMap.x = GameClient.HalfStageWidth - miniMap._width - 2;
+        this.miniMap.x = GameClient.HalfStageWidth - miniMap._width * 0.5 - 2;
         this.miniMap.y = this.MAP_POSITION.y;
-        this.characterDetails.x = -211;
+        this.characterDetails.x = GameClient.HalfStageWidth - 211;
         this.characterDetails.y = GameClient.StageHeight - 90;
-        this.statMeters.x = -176 * 0.5;
+        this.statMeters.x = GameClient.HalfStageWidth -176 * 0.5;
         this.statMeters.y = GameClient.StageHeight - this.statMeters.height;
 
         if (inventoryGrid && equippedGrid && statsView && interactPanel) {
-            this.inventoryGrid.x = this.equippedGrid.width * 3;
+            this.inventoryGrid.x = GameClient.HalfStageWidth - this.equippedGrid.width;
             this.inventoryGrid.y = GameClient.StageHeight - inventoryGrid.height;
 
-            this.equippedGrid.x = 0 - this.equippedGrid.width * 4;
+            this.equippedGrid.x = GameClient.HalfStageWidth - this.equippedGrid.width * 4;
             this.equippedGrid.y = this.inventoryGrid.y;
 
             this.statsView.x = this.equippedGrid.x - this.equippedGrid.width - this.statsView.width;
             this.statsView.y = this.inventoryGrid.y;
 
-            this.interactPanel.x = this.INTERACT_PANEL_POSITION.x;
+            this.interactPanel.x = 0;
             this.interactPanel.y = GameClient.StageHeight - interactPanel.height;
         }
     }

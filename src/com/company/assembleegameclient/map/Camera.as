@@ -64,7 +64,7 @@ public class Camera {
         var mscale:Number = Parameters.data_.mScale;
         var scaleW:Number = GameClient.StageWidth / mscale;
         var scaleH:Number = GameClient.StageHeight / mscale;
-        var p:Number = scaleH / 3.0;
+        var p:Number = scaleH / 3;
         CENTER_SCREEN_RECT = new Rectangle((p - scaleW) / 2, -scaleH * 13 / 24, scaleW, scaleH);
         OFFSET_SCREEN_RECT = new Rectangle((p - scaleW) / 2, -scaleH * 3 / 4, scaleW, scaleH);
     }

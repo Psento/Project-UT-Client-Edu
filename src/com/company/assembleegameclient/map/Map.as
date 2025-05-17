@@ -317,6 +317,7 @@ public class Map extends Sprite {
         var clipRect:Rectangle = camera.clipRect_;
         x = (-clipRect.x * GameClient.StageWidth) / (GameClient.StageWidth / Parameters.data_.mScale);
         y = (-clipRect.y * GameClient.StageHeight) / (GameClient.StageHeight / Parameters.data_.mScale);
+
         var clipWidth:Number = (-clipRect.x - clipRect.width / 2) / 50;
         var clipHeight:Number = (-clipRect.y - clipRect.height / 2) / 50;
         var clipSqrt:Number = Math.sqrt(clipWidth * clipWidth + clipHeight * clipHeight);
@@ -338,6 +339,7 @@ public class Map extends Sprite {
                 map_.graphics.clear();
             }
             signalRenderSwitch.dispatch(wasLastFrameGpu);
+            trace(scaleY);
             wasLastFrameGpu = isGpuRender;
         }
         var filter:uint = 0;
@@ -356,10 +358,9 @@ public class Map extends Sprite {
         var screenRect:Rectangle = camera.clipRect_;
         correctMapView(camera);
         if (this.wasLastFrameGpu) {
-            GameClient.STAGE.stage3Ds[0].x = scaleX;/*400 - Stage3DConfig.HALF_WIDTH * Parameters.data_.mScale;*/
-            GameClient.STAGE.stage3Ds[0].y = scaleY;/*300 - Stage3DConfig.HALF_HEIGHT * Parameters.data_.mScale;*/
+            GameClient.STAGE.stage3Ds[0].x = 0;/*400 - Stage3DConfig.HALF_WIDTH * Parameters.data_.mScale;*/
+            GameClient.STAGE.stage3Ds[0].y = 0;/*300 - Stage3DConfig.HALF_HEIGHT * Parameters.data_.mScale;*/
         }
-        stage.scaleMode = StageScaleMode.NO_SCALE;
         var distW:Number = (-screenRect.y - screenRect.height / 2) / 50;
         var screenCenterW:Point = new Point(camera.x_ + distW * Math.cos(camera.angleRad_ - Math.PI / 2), camera.y_ + distW * Math.sin(camera.angleRad_ - Math.PI / 2));
         if (this.background_ != null) {

@@ -34,7 +34,7 @@ public class InventoryGrid extends ItemGrid {
                         refresh = true;
                     }
                 } else {
-                    if (this.tiles[i].setItem(-1, -1)) {
+                    if (this.tiles[i].setItem(0, 0)) {
                         refresh = true;
                     }
                 }

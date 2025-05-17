@@ -28,7 +28,7 @@ public class ItemData {
     public static const RATE_OF_FIRE_MULTIPLIER:Number = 0.05;
 
     public static function hasStat(data:int, bit:uint):Boolean {
-        if (data == -1) {
+        if (data == 0) {
             return false;
         }
         return (uint(data) & bit) != 0
@@ -47,7 +47,7 @@ public class ItemData {
     }
 
     public static function getRank(data:int):int {
-        if (data == -1) {
+        if (data == 0) {
             return -1;
         }
         if (hasStat(data, T0_BIT)) {

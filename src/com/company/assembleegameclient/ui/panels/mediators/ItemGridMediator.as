@@ -81,7 +81,7 @@ public class ItemGridMediator extends Mediator {
             slot = sourceTile.ownerGrid.curPlayer.nextAvailableInventorySlot();
             if (slot != -1) {
                 GameServerConnection.instance.invSwap(this.view.curPlayer, sourceTile.ownerGrid.owner, sourceTile.tileId, this.view.curPlayer, slot);
-                sourceTile.setItem(-1, -1);
+                sourceTile.setItem(0, 0);
                 sourceTile.updateUseability(this.view.curPlayer);
             }
         }
@@ -153,7 +153,7 @@ public class ItemGridMediator extends Mediator {
                 GameServerConnection.instance.invDrop(this.view.owner, itemTile.tileId);
             }
         }
-        itemTile.setItem(-1, -1);
+        itemTile.setItem(0, 0);
     }
 
     private function swapItemTiles(sourceTile:ItemTile, destTile:ItemTile):Boolean {
@@ -175,7 +175,7 @@ public class ItemGridMediator extends Mediator {
             return;
         }
         GameServerConnection.instance.invSwap(this.view.curPlayer, this.view.owner, sourceTile.tileId, container, containerIndex);
-        sourceTile.setItem(-1, -1);
+        sourceTile.setItem(0, 0);
     }
 
     private function onShiftClick(e:ItemTileEvent):void {

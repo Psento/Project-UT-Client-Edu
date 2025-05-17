@@ -118,7 +118,7 @@ public class TradeInventory extends Sprite {
     public function numEmpty():int {
         var num:int = 0;
         for (var i:int = 4; i < this.slots_.length; i++) {
-            if (this.slots_[i].itemType_ == -1) {
+            if (this.slots_[i].itemType_ == 0) {
                 num++;
             }
         }

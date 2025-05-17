@@ -1,6 +1,6 @@
 package svera.untiered.constants {
 public class ItemConstants {
-    public static const NO_ITEM:int = -1;
+    public static const NO_ITEM:int = 0;
     public static const ALL_TYPE:int = 0;
     public static const SWORD_AXE_TYPE:int = 1;
     public static const DAGGER_TYPE:int = 2;

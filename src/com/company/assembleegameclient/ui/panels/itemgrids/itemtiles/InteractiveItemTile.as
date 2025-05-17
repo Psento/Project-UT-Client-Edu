@@ -72,7 +72,7 @@ public class InteractiveItemTile extends ItemTile {
     }
 
     private function onMouseDown(e:MouseEvent):void {
-        if (getItemId() == -1) {
+        if (getItemId() == 0) {
             return;
         }
         this.beginDragCheck(e);

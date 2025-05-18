@@ -149,7 +149,7 @@ public class GameSprite extends Sprite {
             //this.hudView.x = (800 - (200 * this.hudView.scaleX));
             if (this.currencyDisplay_ != null) {
                 this.currencyDisplay_.x = currencyDisplay_.width;
-                currencyDisplay_.y = rankText_.y + rankText_.height;
+                currencyDisplay_.y = 50;
             }
         }
         if (this.textBox_ != null) {

@@ -12,8 +12,8 @@ import flash.geom.Vector3D;
 public class Camera {
 
     public static const lN_:Vector3D = new Vector3D(0, 0, 1);
-    public static var CENTER_SCREEN_RECT:Rectangle = new Rectangle(-300, -325, 600, 600);
-    public static var OFFSET_SCREEN_RECT:Rectangle = new Rectangle(-300, -450, 600, 600);
+    public static var CENTER_SCREEN_RECT:Rectangle = new Rectangle(-400, -325, 800, 600);
+    public static var OFFSET_SCREEN_RECT:Rectangle = new Rectangle(-400, -450, 800, 600);
 
     public var x_:Number;
     public var y_:Number;

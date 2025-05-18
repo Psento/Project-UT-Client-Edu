@@ -94,8 +94,8 @@ public class HUDView extends Sprite {
             this.statsView.x = this.equippedGrid.x - this.equippedGrid.width - this.statsView.width;
             this.statsView.y = this.inventoryGrid.y;
 
-            this.interactPanel.x = 0;
-            this.interactPanel.y = GameClient.StageHeight - interactPanel.height;
+            this.interactPanel.x = hudOverlay.x - interactPanel.width;
+            this.interactPanel.y = GameClient.StageHeight - interactPanel.height - 30;
         }
     }
 

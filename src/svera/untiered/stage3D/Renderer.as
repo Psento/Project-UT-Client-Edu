@@ -203,7 +203,7 @@ public class Renderer {
 
     private function onRender(graphicsDatas:Vector.<IGraphicsData>, grahpicsData3d:Vector.<Object3DStage3D>, mapWidth:Number, mapHeight:Number, camera:Camera, filterIndex:uint):void {
         GameClient.STAGE.scaleMode = StageScaleMode.NO_SCALE;
-        if (GameClient.STAGE.stageWidth * 3 / 4 != this.stageWidth || GameClient.STAGE.stageHeight != this.stageHeight) {
+        if (GameClient.STAGE.stageWidth != this.stageWidth || GameClient.STAGE.stageHeight != this.stageHeight) {
             this.resizeStage3DBackBuffer();
         }
         if (Renderer.inGame) {
@@ -220,13 +220,13 @@ public class Renderer {
     }
 
     private function resizeStage3DBackBuffer():void {
-        if (GameClient.STAGE.stageWidth * 3 / 4 < 1 || GameClient.STAGE.stageHeight < 1) {
+        if (GameClient.STAGE.stageWidth < 1 || GameClient.STAGE.stageHeight < 1) {
             return;
         }
         var stage3d:Stage3D = GameClient.STAGE.stage3Ds[0];
-        stage3d.context3D.configureBackBuffer(GameClient.StageWidth * 3 / 4, GameClient.StageHeight, 2, true);
-        this.stageWidth = GameClient.StageWidth * 3 / 4;
+        this.stageWidth = GameClient.StageWidth;
         this.stageHeight = GameClient.StageHeight;
+        stage3d.context3D.configureBackBuffer(GameClient.StageWidth, GameClient.StageHeight, 2, true);
     }
 
     private function renderWithPostEffect(graphicsDatas:Vector.<IGraphicsData>, grahpicsData3d:Vector.<Object3DStage3D>, mapWidth:Number, mapHeight:Number, camera:Camera, filterIndex:uint):void {
@@ -330,7 +330,7 @@ public class Renderer {
     }
 
     private function setTranslationToGame():void {
-        tX = -200.0 / Parameters.data_.mScale * (GameClient.StageHeight / 600.0);
+        tX = 0; //-200.0 / Parameters.data_.mScale * (GameClient.StageHeight / 600.0)
         tY = !Parameters.data_.centerOnPlayer ? (Camera.OFFSET_SCREEN_RECT.y + Camera.CENTER_SCREEN_RECT.height * 0.5) * 2 : -50.0 / Parameters.data_.mScale * (GameClient.StageHeight / 600.0);
     }
 

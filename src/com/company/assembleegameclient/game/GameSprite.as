@@ -85,8 +85,8 @@ public class GameSprite extends Sprite {
     public function initialize():void {
         this.map.initialize();
         this.currencyDisplay_ = new CurrencyDisplay(this);
-        this.currencyDisplay_.x = 594;
-        this.currencyDisplay_.y = 0;
+        this.currencyDisplay_.x = 0;
+        this.currencyDisplay_.y = 50;
         addChild(this.currencyDisplay_);
         this.modelInitialized.dispatch();
 
@@ -148,7 +148,8 @@ public class GameSprite extends Sprite {
             //}
             //this.hudView.x = (800 - (200 * this.hudView.scaleX));
             if (this.currencyDisplay_ != null) {
-                this.currencyDisplay_.x = this.hudView.x - 6 * this.currencyDisplay_.scaleX;
+                this.currencyDisplay_.x = currencyDisplay_.width;
+                currencyDisplay_.y = rankText_.y + rankText_.height;
             }
         }
         if (this.textBox_ != null) {

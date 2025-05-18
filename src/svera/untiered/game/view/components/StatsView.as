@@ -38,15 +38,13 @@ public class StatsView extends Sprite {
         super();
         this.w_ = w;
         this.h_ = h;
-        var rows:int = 0;
         for (i = 0; i < statsModel.length; i++) {
             statModel = statsModel[i];
             stat = new StatView(statModel.name, statModel.abbreviation, statModel.description, statModel.redOnZero);
-            stat.x = i % 2 * this.w_ / 2;
-            stat.y = rows * (this.h_ / 3);
+            stat.x = 0;
+            stat.y = i * stat.height;
             this.containerSprite.addChild(stat);
             this.stats_.push(stat);
-            rows = rows + i % 2;
         }
         addChild(this.containerSprite);
     }

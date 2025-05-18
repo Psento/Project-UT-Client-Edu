@@ -159,8 +159,8 @@ public class Frame2 extends Sprite
 
     public function onAddedToStage(_arg1:Event):void {
         this.draw();
-        this.x = 400 - (this.w_ - 6) / 2;
-        this.y = 300 - h_ / 2; //was height
+        this.x = GameClient.HalfStageWidth - (this.w_ - 6) / 2;
+        this.y = GameClient.HalfStageHeight - h_ / 2; //was height
         if (this.frameTextInputBoxes.length > 0) {
             stage.focus = this.frameTextInputBoxes[0].inputText_;
         }

@@ -77,7 +77,7 @@ public class HUDView extends Sprite {
         hudOverlay.parent.mouseEnabled = false;
         this.hudOverlay.x = GameClient.HalfStageWidth - this.hudOverlay.width * 0.5;
         this.hudOverlay.y = GameClient.StageHeight - hudOverlay.height;
-        this.miniMap.x = GameClient.HalfStageWidth - miniMap._width * 0.5 - 2;
+        this.miniMap.x = GameClient.StageWidth - miniMap._width - 2;
         this.miniMap.y = this.MAP_POSITION.y;
         this.characterDetails.x = GameClient.HalfStageWidth - 211;
         this.characterDetails.y = GameClient.StageHeight - 90;
@@ -85,10 +85,10 @@ public class HUDView extends Sprite {
         this.statMeters.y = GameClient.StageHeight - this.statMeters.height;
 
         if (inventoryGrid && equippedGrid && statsView && interactPanel) {
-            this.inventoryGrid.x = GameClient.HalfStageWidth - this.equippedGrid.width;
+            this.inventoryGrid.x = GameClient.HalfStageWidth + 70;
             this.inventoryGrid.y = GameClient.StageHeight - inventoryGrid.height;
 
-            this.equippedGrid.x = GameClient.HalfStageWidth - this.equippedGrid.width * 4;
+            this.equippedGrid.x = inventoryGrid.x - equippedGrid.width * 0.5;
             this.equippedGrid.y = this.inventoryGrid.y;
 
             this.statsView.x = this.equippedGrid.x - this.equippedGrid.width - this.statsView.width;
@@ -101,25 +101,27 @@ public class HUDView extends Sprite {
 
     public function setPlayerDependentAssets(gs:GameSprite):void {
         var player:Player = gs.map.player_;
-        this.inventoryGrid = new InventoryGrid(player, player, 4);
+        this.inventoryGrid = new InventoryGrid(player, player, 5);
         this.equippedGrid = new EquippedGrid(player, player.slotTypes_, player);
-        this.statsView = new StatsView(191, 45);
+        this.statsView = new StatsView(50, 200);
         this.interactPanel = new InteractPanel(gs, player, 200, 100);
 
-        this.inventoryGrid.x = this.equippedGrid.width * 3;
-        this.inventoryGrid.y = GameClient.StageHeight - this.inventoryGrid.height;
-        this.inventoryGrid.visible = false;
+        this.inventoryGrid.x = GameClient.HalfStageWidth + 70;
+        this.inventoryGrid.y = GameClient.StageHeight - inventoryGrid.height;
 
-        this.equippedGrid.x = 0 - this.equippedGrid.width * 4;
+        this.equippedGrid.x = inventoryGrid.x - equippedGrid.width * 0.5;
         this.equippedGrid.y = this.inventoryGrid.y;
-        this.equippedGrid.visible = false;
 
         this.statsView.x = this.equippedGrid.x - this.equippedGrid.width - this.statsView.width;
         this.statsView.y = this.inventoryGrid.y;
+
+        this.interactPanel.x = 0;
+        this.interactPanel.y = GameClient.StageHeight - interactPanel.height;
+
+        this.inventoryGrid.visible = false;
+        this.equippedGrid.visible = false;
         this.statsView.visible = false;
 
-        this.interactPanel.x = this.INTERACT_PANEL_POSITION.x;
-        this.interactPanel.y = GameClient.StageHeight - interactPanel.height;
         showRaidLauncher();
         showLootboxButton();
 
@@ -130,6 +132,7 @@ public class HUDView extends Sprite {
     }
 
     public function draw():void {
+        positionAssets();
         if (this.equippedGrid) {
             this.equippedGrid.draw();
         }
@@ -203,8 +206,8 @@ public class HUDView extends Sprite {
     }
     private function showRaidLauncher():void {
         this.raidLauncherButton = new RaidLauncherButton();
-        this.raidLauncherButton.x = 6;
-        this.raidLauncherButton.y = this.displaysPosY + 2;
+        this.raidLauncherButton.x = 50;
+        this.raidLauncherButton.y = this.displaysPosY;
         this.displaysPosY = this.displaysPosY + UIUtils.NOTIFICATION_SPACE;
         addChild(this.raidLauncherButton);
     }

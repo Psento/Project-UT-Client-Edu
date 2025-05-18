@@ -27,8 +27,8 @@ public class EmptyFrame extends Sprite {
     public function EmptyFrame(_arg1:int = 288, _arg2:int = 150, _arg3:String = "") {
         this.modalWidth = _arg1;
         this.modalHeight = _arg2;
-        x = 400 - this.modalWidth / 2;
-        y = 300 - this.modalHeight / 2;
+        x = GameClient.HalfStageWidth - this.modalWidth / 2;
+        y = GameClient.HalfStageHeight - this.modalHeight / 2;
         if (_arg3 != "") {
             this.setTitle(_arg3, true);
         }
@@ -103,8 +103,8 @@ public class EmptyFrame extends Sprite {
     }
 
     protected function makeModalBackground():Sprite {
-        x = 400 - this.modalWidth / 2;
-        y = 300 - this.modalHeight / 2;
+        x = GameClient.HalfStageWidth - this.modalWidth / 2;
+        y = GameClient.HalfStageHeight - this.modalHeight / 2;
         var bg:Sprite = new Sprite();
         bg.graphics.beginFill(3552822);
         bg.graphics.drawRect(0, 0, modalWidth, modalHeight);

@@ -21,9 +21,10 @@ import svera.untiered.constants.ItemConstants;
 public class ItemGrid extends Panel {
 
     public static const NO_CUT:Array = [0, 0, 0, 0];
+    public static const ALL_CUT:Array = [1, 1, 1, 1];
 
     public static const CutsByNum:Object = {
-        1: [[1, 1, 0, 0], NO_CUT, NO_CUT, NO_CUT, [0, 0, 1, 1]],
+        1: [ALL_CUT, ALL_CUT, ALL_CUT, ALL_CUT, ALL_CUT],
         2: [[1, 0, 0, 1], NO_CUT, NO_CUT, NO_CUT, NO_CUT, NO_CUT, NO_CUT, NO_CUT, NO_CUT, NO_CUT, NO_CUT, NO_CUT, NO_CUT, NO_CUT, NO_CUT, NO_CUT, NO_CUT, NO_CUT, NO_CUT, NO_CUT, [0, 0, 0, 1], NO_CUT, NO_CUT, [0, 0, 1, 0]],
         3: [[1, 0, 0, 0], NO_CUT, NO_CUT, [0, 1, 0, 0], [0, 0, 0, 1], NO_CUT, NO_CUT, [0, 0, 1, 0]],
         6: [[1, 0, 0, 0], NO_CUT, NO_CUT, [0, 1, 0, 0], NO_CUT, NO_CUT, NO_CUT, NO_CUT, NO_CUT, NO_CUT, NO_CUT, NO_CUT, NO_CUT, NO_CUT, NO_CUT, NO_CUT, NO_CUT, NO_CUT, NO_CUT, NO_CUT, [0, 0, 0, 1], NO_CUT, NO_CUT, [0, 0, 1, 0]]

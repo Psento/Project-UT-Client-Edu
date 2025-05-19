@@ -411,7 +411,7 @@
         <Description>A shrowd made to give the wearer a great increase in stealth. A good choice for beginners who want
             to balance their stealth and speed.
         </Description>
-        <ActivateOnEquip stat="22" amount="5">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="4" amount="5">IncrementStat</ActivateOnEquip>
         <Sound>ability/ability_use</Sound>
         <OldSound>ability/ability_use</OldSound>
         <Usable/>
@@ -431,7 +431,7 @@
         <Description>A powerful quiver enchanting arrows stowed within. A good choice for beginners who want to assist
             others and boost their dexterity.
         </Description>
-        <ActivateOnEquip stat="28" amount="5">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="5" amount="5">IncrementStat</ActivateOnEquip>
         <Sound>ability/ability_use</Sound>
         <OldSound>ability/ability_use</OldSound>
         <Usable/>
@@ -508,7 +508,7 @@
         <Description>A sturdy and comfortable helmet that protects the head and enhances the senses. A good choice for
             beginners who want to accel with the dexterity and speed.
         </Description>
-        <ActivateOnEquip stat="21" amount="5">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="3" amount="5">IncrementStat</ActivateOnEquip>
         <Sound>ability/ability_use</Sound>
         <OldSound>ability/ability_use</OldSound>
         <Usable/>
@@ -529,7 +529,7 @@
         <Description>A round shield that can be used to bash enemies, stunning them. A good choice for those who want to
             defend their allies while giving them a huge advantage.
         </Description>
-        <ActivateOnEquip stat="21" amount="5">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="3" amount="5">IncrementStat</ActivateOnEquip>
         <Sound>ability/ability_use</Sound>
         <OldSound>ability/ability_use</OldSound>
         <Usable/>
@@ -746,7 +746,7 @@
         </Texture>
         <SlotType>28</SlotType>
         <TierType>Common</TierType>
-        <ActivateOnEquip stat="20" amount="2">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="2" amount="2">IncrementStat</ActivateOnEquip>
         <Description>A flag that represents a point to gather. It can be used to rally, inspire. A good choice for those
             who want to master their commanding skills.
         </Description>
@@ -816,7 +816,7 @@
             <EffectInfo name="Defensive Stance" description=""/>
             <EffectInfo name="" description="+25 Defense"/>
         </ExtraTooltipData>
-        <ActivateOnEquip stat="22" amount="3">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="4" amount="3">IncrementStat</ActivateOnEquip>
         <Sound>ability/ability_use</Sound>
         <OldSound>ability/ability_use</OldSound>
         <Usable/>
@@ -834,7 +834,7 @@
         <SurgeCost>1</SurgeCost>
         <Cooldown>2</Cooldown>
         <Activate effect="Immortal" duration="0.5">ConditionEffectSelf</Activate>
-        <Activate stat="20" amount="20" noStack="false">BMEffect</Activate>
+        <Activate stat="2" amount="20" noStack="false">BMEffect</Activate>
         <MultiPhase/>
     </Object>
     <Object type="0x670b" id="Beginner Talisman">
@@ -856,7 +856,7 @@
             <EffectInfo name="Effect" description="Exhaust for 1 secs"/>
         </ExtraTooltipData>
         <ActivateOnEquip stat="122" amount="10">IncrementStat</ActivateOnEquip>
-        <ActivateOnEquip stat="21" amount="2">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="3" amount="2">IncrementStat</ActivateOnEquip>
         <Sound>ability/ability_use</Sound>
         <OldSound>ability/ability_use</OldSound>
         <Usable/>
@@ -878,7 +878,7 @@
         <Description>A cloth robe that can protect the wearer from minor injuries. A good choice for beginners who want
             to boost their defense.
         </Description>
-        <ActivateOnEquip stat="21" amount="1">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="3" amount="1">IncrementStat</ActivateOnEquip>
     </Object>
     <Object type="0xad2" id="Beginner Vest">
         <Class>Equipment</Class>
@@ -892,7 +892,7 @@
         <Description>A leather vest that can protect the wearer from minor injuries. A good choice for beginners who
             want to boost their defense.
         </Description>
-        <ActivateOnEquip stat="21" amount="2">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="3" amount="2">IncrementStat</ActivateOnEquip>
     </Object>
     <Object type="0xadf" id="Beginner Platemail">
         <Class>Equipment</Class>
@@ -906,7 +906,7 @@
         <Description>A suit of metal armor that can protect the wearer from physical attacks. A good choice for
             beginners who want to increase their defense and durability.
         </Description>
-        <ActivateOnEquip stat="21" amount="5">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="3" amount="5">IncrementStat</ActivateOnEquip>
     </Object>
     <!-- #endregion -->
     <!-- #region --> // Accessories

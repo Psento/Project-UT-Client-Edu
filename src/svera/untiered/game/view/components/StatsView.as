@@ -21,7 +21,14 @@ public class StatsView extends Sprite {
 
     public static const NUM_STAT:int = 6;
 
-    private static const statsModel:Array = [new StatModel("ATT", "Attack", "This stat increases the amount of damage done.", true), new StatModel("ARM", "Armor", "This stat decreases the amount of damage taken.", false), new StatModel("SPD", "Speed", "This stat increases the speed at which the character moves.", true), new StatModel("DEX", "Dexterity", "This stat increases the speed at which the character attacks.", true), new StatModel("VIG", "Vigor", "This stat increases the speed at which hit points are recovered.", true), new StatModel("INT", "Intelligence", "This stat increases the speed at which resource points are recovered.", true)];
+    private static const statsModel:Array = [new StatModel("ATT", "Attack", "This stat increases the amount of damage done.", true),
+        new StatModel("ARM", "Armor", "This stat decreases the amount of damage taken.", false),
+        new StatModel("SPD", "Speed", "This stat increases the speed at which the character moves.", true),
+        new StatModel("DEX", "Dexterity", "This stat increases the speed at which the character attacks.", true),
+        new StatModel("VIG", "Vigor", "This stat increases the speed at which hit points are recovered.", true),
+        new StatModel("INT", "Intelligence", "This stat increases the speed at which resource points are recovered.", true)
+
+    ];
 
 
     public var w_:int;
@@ -41,8 +48,8 @@ public class StatsView extends Sprite {
         for (i = 0; i < statsModel.length; i++) {
             statModel = statsModel[i];
             stat = new StatView(statModel.name, statModel.abbreviation, statModel.description, statModel.redOnZero);
-            stat.x = 0;
-            stat.y = i * stat.height;
+            stat.x = (i % 2) * (w_ + 4);
+            stat.y = int(i / 2) * stat.height;
             this.containerSprite.addChild(stat);
             this.stats_.push(stat);
         }

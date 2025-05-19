@@ -14,15 +14,15 @@
         <Description>What happens when the unstoppable force meets the immovable object?</Description>
         <ActivateOnEquip stat="0" amount="15" isPerc="true">IncrementStat</ActivateOnEquip>
         // HP
-        <ActivateOnEquip stat="20" amount="7">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="2" amount="7">IncrementStat</ActivateOnEquip>
         // ATT
-        <ActivateOnEquip stat="21" amount="5">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="3" amount="5">IncrementStat</ActivateOnEquip>
         // DEF
-        <ActivateOnEquip stat="22" amount="15">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="4" amount="15">IncrementStat</ActivateOnEquip>
         // SPD
         <ActivateOnEquip stat="26" amount="15">IncrementStat</ActivateOnEquip>
         // VIT
-        <ActivateOnEquip stat="28" amount="5">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="5" amount="5">IncrementStat</ActivateOnEquip>
         // DEX
         <FameBonus>8</FameBonus>
         <Valiant id="Unstoppable Advance"/>
@@ -39,11 +39,11 @@
         <TierType>Valiant</TierType>
         <Description>A jet black silk garment that fills the bearer's soul with a sense of incomprehensible burden.
         </Description>
-        <ActivateOnEquip stat="20" amount="13">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="2" amount="13">IncrementStat</ActivateOnEquip>
         // ATT
-        <ActivateOnEquip stat="22" amount="15">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="4" amount="15">IncrementStat</ActivateOnEquip>
         // SPD
-        <ActivateOnEquip stat="28" amount="7">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="5" amount="7">IncrementStat</ActivateOnEquip>
         // DEX
         <ActivateOnEquip stat="112" amount="50">IncrementStat</ActivateOnEquip>
         // MGT
@@ -68,9 +68,9 @@
         </Description>
         <ActivateOnEquip stat="3" amount="400">IncrementStat</ActivateOnEquip>
         // MP
-        <ActivateOnEquip stat="21" amount="5">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="3" amount="5">IncrementStat</ActivateOnEquip>
         // WIS
-        <ActivateOnEquip stat="22" amount="15">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="4" amount="15">IncrementStat</ActivateOnEquip>
         // SPD
         <ActivateOnEquip stat="27" amount="75">IncrementStat</ActivateOnEquip>
         // WIS
@@ -92,15 +92,15 @@
         </Description>
         <ActivateOnEquip stat="3" amount="100">IncrementStat</ActivateOnEquip>
         // MP
-        <ActivateOnEquip stat="20" amount="20">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="2" amount="20">IncrementStat</ActivateOnEquip>
         // ATT
-        <ActivateOnEquip stat="21" amount="5">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="3" amount="5">IncrementStat</ActivateOnEquip>
         // DEF
-        <ActivateOnEquip stat="22" amount="15">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="4" amount="15">IncrementStat</ActivateOnEquip>
         // SPD
         <ActivateOnEquip stat="27" amount="10">IncrementStat</ActivateOnEquip>
         // WIS
-        <ActivateOnEquip stat="28" amount="10">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="5" amount="10">IncrementStat</ActivateOnEquip>
         // DEX
         <FameBonus>8</FameBonus>
         <Valiant id="Cheapskate"/>
@@ -120,11 +120,11 @@
         // HP
         <ActivateOnEquip stat="3" amount="100">IncrementStat</ActivateOnEquip>
         // MP
-        <ActivateOnEquip stat="21" amount="5">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="3" amount="5">IncrementStat</ActivateOnEquip>
         // DEF
-        <ActivateOnEquip stat="22" amount="25">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="4" amount="25">IncrementStat</ActivateOnEquip>
         // SPD
-        <ActivateOnEquip stat="28" amount="20">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="5" amount="20">IncrementStat</ActivateOnEquip>
         // DEX
         <FameBonus>8</FameBonus>
         <Valiant id="Alchemic Frenzy"/>
@@ -145,15 +145,15 @@
         </Description>
         <ActivateOnEquip stat="0" amount="250">IncrementStat</ActivateOnEquip>
         // HP
-        <ActivateOnEquip stat="20" amount="10">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="2" amount="10">IncrementStat</ActivateOnEquip>
         // ATK
-        <ActivateOnEquip stat="21" amount="14">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="3" amount="14">IncrementStat</ActivateOnEquip>
         // DEF
-        <ActivateOnEquip stat="22" amount="9">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="4" amount="9">IncrementStat</ActivateOnEquip>
         // SPD
         <ActivateOnEquip stat="26" amount="20">IncrementStat</ActivateOnEquip>
         // VIT
-        <ActivateOnEquip stat="28" amount="5">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="5" amount="5">IncrementStat</ActivateOnEquip>
         // DEX
         <FameBonus>8</FameBonus>
         <Valiant id="Getting Serious"/>
@@ -171,11 +171,11 @@
         <Description>A gift given to a shady rogue after completing a deal with the Devil, it makes you feel like you
             aren’t in control of your actions.
         </Description>
-        <ActivateOnEquip stat="20" amount="10">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="2" amount="10">IncrementStat</ActivateOnEquip>
         // ATK
-        <ActivateOnEquip stat="21" amount="10">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="3" amount="10">IncrementStat</ActivateOnEquip>
         // DEF
-        <ActivateOnEquip stat="22" amount="9">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="4" amount="9">IncrementStat</ActivateOnEquip>
         // SPD
         <ActivateOnEquip stat="112" amount="65">IncrementStat</ActivateOnEquip>
         // MGT
@@ -195,15 +195,15 @@
         <SlotType>6</SlotType>
         <TierType>Valiant</TierType>
         <Description>Rage is not a tool, it’s a metric.</Description>
-        <ActivateOnEquip stat="20" amount="12">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="2" amount="12">IncrementStat</ActivateOnEquip>
         // ATK
-        <ActivateOnEquip stat="21" amount="10">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="3" amount="10">IncrementStat</ActivateOnEquip>
         // DEF
-        <ActivateOnEquip stat="22" amount="9">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="4" amount="9">IncrementStat</ActivateOnEquip>
         // SPD
         <ActivateOnEquip stat="27" amount="10">IncrementStat</ActivateOnEquip>
         // WIS
-        <ActivateOnEquip stat="28" amount="18">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="5" amount="18">IncrementStat</ActivateOnEquip>
         // DEX
         <ActivateOnEquip stat="114" amount="40">IncrementStat</ActivateOnEquip>
         // LCK
@@ -223,11 +223,11 @@
         <Description>The ancient guardian held to his duty until the bitter end now his task is in your hands but
             beware, his power brought peril to all who wished to acquire it.
         </Description>
-        <ActivateOnEquip stat="20" amount="60">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="2" amount="60">IncrementStat</ActivateOnEquip>
         // ATK
-        <ActivateOnEquip stat="21" amount="-20">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="3" amount="-20">IncrementStat</ActivateOnEquip>
         // DEF
-        <ActivateOnEquip stat="22" amount="9">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="4" amount="9">IncrementStat</ActivateOnEquip>
         // SPD
         <FameBonus>8</FameBonus>
         <Valiant id="Power of Knowledge"/>
@@ -245,13 +245,13 @@
         <TierType>Valiant</TierType>
         <ActivateOnEquip stat="0" amount="100">IncrementStat</ActivateOnEquip>
         // HP
-        <ActivateOnEquip stat="20" amount="10">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="2" amount="10">IncrementStat</ActivateOnEquip>
         // ATT
-        <ActivateOnEquip stat="21" amount="16">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="3" amount="16">IncrementStat</ActivateOnEquip>
         // DEF
-        <ActivateOnEquip stat="22" amount="20">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="4" amount="20">IncrementStat</ActivateOnEquip>
         // SPD
-        <ActivateOnEquip stat="28" amount="10">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="5" amount="10">IncrementStat</ActivateOnEquip>
         // PRT
         <FameBonus>8</FameBonus>
         <Valiant id="Abyssal Absorption"/>
@@ -273,13 +273,13 @@
         // HP
         <ActivateOnEquip stat="3" amount="-10000">IncrementStat</ActivateOnEquip>
         // MP
-        <ActivateOnEquip stat="20" amount="30" isPerc="true">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="2" amount="30" isPerc="true">IncrementStat</ActivateOnEquip>
         // ATK
-        <ActivateOnEquip stat="21" amount="12">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="3" amount="12">IncrementStat</ActivateOnEquip>
         // DEF
-        <ActivateOnEquip stat="22" amount="12">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="4" amount="12">IncrementStat</ActivateOnEquip>
         // SPD
-        <ActivateOnEquip stat="28" amount="30" isPerc="true">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="5" amount="30" isPerc="true">IncrementStat</ActivateOnEquip>
         // DEX
         <Steal type="life" amount="2"/>
         <FameBonus>8</FameBonus>
@@ -300,9 +300,9 @@
         </Description>
         <ActivateOnEquip stat="3" amount="300">IncrementStat</ActivateOnEquip>
         // MP
-        <ActivateOnEquip stat="21" amount="5">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="3" amount="5">IncrementStat</ActivateOnEquip>
         // DEF
-        <ActivateOnEquip stat="22" amount="12">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="4" amount="12">IncrementStat</ActivateOnEquip>
         // SPD
         <ActivateOnEquip stat="27" amount="55">IncrementStat</ActivateOnEquip>
         // WIS
@@ -325,9 +325,9 @@
         <TierType>Valiant</TierType>
         <ActivateOnEquip stat="0" amount="125">IncrementStat</ActivateOnEquip>// HP
         <ActivateOnEquip stat="3" amount="200">IncrementStat</ActivateOnEquip>// MP
-        <ActivateOnEquip stat="21" amount="16">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="3" amount="16">IncrementStat</ActivateOnEquip>
         // DEF
-        <ActivateOnEquip stat="22" amount="7">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="4" amount="7">IncrementStat</ActivateOnEquip>
         // SPD
         <ActivateOnEquip stat="27" amount="35">IncrementStat</ActivateOnEquip>
         // WIS
@@ -347,13 +347,13 @@
         <SlotType>7</SlotType>
         <TierType>Valiant</TierType>
         <Description>The last stand is where I plant my feet. Not one step more.</Description>
-        <ActivateOnEquip stat="20" amount="15">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="2" amount="15">IncrementStat</ActivateOnEquip>
         // ATK
-        <ActivateOnEquip stat="21" amount="16">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="3" amount="16">IncrementStat</ActivateOnEquip>
         // DEF
-        <ActivateOnEquip stat="22" amount="7">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="4" amount="7">IncrementStat</ActivateOnEquip>
         // SPD
-        <ActivateOnEquip stat="28" amount="10">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="5" amount="10">IncrementStat</ActivateOnEquip>
         // DEX
         <ActivateOnEquip stat="112" amount="50">IncrementStat</ActivateOnEquip>
         // MGT
@@ -375,9 +375,9 @@
         <Description>The closest humans have ever gotten to reaching immortality.</Description>
         <ActivateOnEquip stat="0" amount="400">IncrementStat</ActivateOnEquip>
         // HP
-        <ActivateOnEquip stat="21" amount="16">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="3" amount="16">IncrementStat</ActivateOnEquip>
         // DEF
-        <ActivateOnEquip stat="22" amount="7">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="4" amount="7">IncrementStat</ActivateOnEquip>
         // SPD
         <ActivateOnEquip stat="27" amount="15">IncrementStat</ActivateOnEquip>
         // WIS
@@ -397,9 +397,9 @@
         <Description>In times of war charge through hell and never look back.</Description>
         <ActivateOnEquip stat="0" amount="200">IncrementStat</ActivateOnEquip>
         // HP
-        <ActivateOnEquip stat="21" amount="10">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="3" amount="10">IncrementStat</ActivateOnEquip>
         // DEF
-        <ActivateOnEquip stat="22" amount="50" isPerc="true">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="4" amount="50" isPerc="true">IncrementStat</ActivateOnEquip>
         // SPD
         <FameBonus>8</FameBonus>
         <Valiant id="Retreat Command"/>
@@ -415,16 +415,16 @@
         <SlotType>7</SlotType>
         <TierType>Valiant</TierType>
         <Description>What is hidden in the deep? No man will ever live to tell the tale.</Description>
-        <ActivateOnEquip stat="20" amount="10">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="2" amount="10">IncrementStat</ActivateOnEquip>
         // ATK
-        <ActivateOnEquip stat="21" amount="16">IncrementStat</ActivateOnEquip>// DEF
-        <ActivateOnEquip stat="22" amount="10">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="3" amount="16">IncrementStat</ActivateOnEquip>// DEF
+        <ActivateOnEquip stat="4" amount="10">IncrementStat</ActivateOnEquip>
         // SPD
         <ActivateOnEquip stat="26" amount="10">IncrementStat</ActivateOnEquip>
         // VIT
         <ActivateOnEquip stat="27" amount="10">IncrementStat</ActivateOnEquip>
         // WIS
-        <ActivateOnEquip stat="28" amount="10">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="5" amount="10">IncrementStat</ActivateOnEquip>
         // DEX
         <ActivateOnEquip stat="112" amount="20">IncrementStat</ActivateOnEquip>
         // MGT
@@ -449,13 +449,13 @@
         </Description>
         <ActivateOnEquip stat="3" amount="250">IncrementStat</ActivateOnEquip>
         // MP
-        <ActivateOnEquip stat="20" amount="5">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="2" amount="5">IncrementStat</ActivateOnEquip>
         // ATK
-        <ActivateOnEquip stat="21" amount="16">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="3" amount="16">IncrementStat</ActivateOnEquip>
         // DEF
-        <ActivateOnEquip stat="22" amount="7">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="4" amount="7">IncrementStat</ActivateOnEquip>
         // SPD
-        <ActivateOnEquip stat="28" amount="5">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="5" amount="5">IncrementStat</ActivateOnEquip>
         // DEX
         <ActivateOnEquip stat="121" amount="30">IncrementStat</ActivateOnEquip>
         // RES
@@ -550,10 +550,10 @@
         <SlotType>1</SlotType>
         <TierType>Valiant</TierType>
         <Description>Half of a massive scissor taken from the haunting phantoms dwelling in the asylum.</Description>
-        <ActivateOnEquip stat="20" amount="5">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="2" amount="5">IncrementStat</ActivateOnEquip>
         // ATK
-        <ActivateOnEquip stat="21" amount="10">IncrementStat</ActivateOnEquip>// DEF
-        <ActivateOnEquip stat="28" amount="5">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="3" amount="10">IncrementStat</ActivateOnEquip>// DEF
+        <ActivateOnEquip stat="5" amount="5">IncrementStat</ActivateOnEquip>
         // DEX
         <RateOfFire>0.7</RateOfFire>
         <Sound>weapon/newsounds/longsword</Sound>
@@ -588,7 +588,7 @@
         <SlotType>1</SlotType>
         <TierType>Valiant</TierType>
         <Description>It once cut a sun straight in half.</Description>
-        <ActivateOnEquip stat="20" amount="5">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="2" amount="5">IncrementStat</ActivateOnEquip>
         // ATK
         <RateOfFire>0.5</RateOfFire>
         <Sound>weapon/newsounds/heavysword</Sound>
@@ -635,9 +635,9 @@
         <SlotType>3</SlotType>
         <TierType>Valiant</TierType>
         <Description>Even light, dies eventually.</Description>
-        <ActivateOnEquip stat="22" amount="5">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="4" amount="5">IncrementStat</ActivateOnEquip>
         // SPD
-        <ActivateOnEquip stat="28" amount="5">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="5" amount="5">IncrementStat</ActivateOnEquip>
         // DEX
         <RateOfFire>0.95</RateOfFire>
         <Sound>weapon/newsounds/lightbow</Sound>
@@ -750,7 +750,7 @@
         <Description>They warned us when we could make it right, they warned us when we could stop it, they warned us
             when we could still run... but we never listened.
         </Description>
-        <ActivateOnEquip stat="21" amount="10">IncrementStat</ActivateOnEquip>// DEF
+        <ActivateOnEquip stat="3" amount="10">IncrementStat</ActivateOnEquip>// DEF
         <RateOfFire>0.70</RateOfFire>
         <Sound>weapon/newsounds/heavybow</Sound>
         <OldSound>weapon/newsounds/heavybowshoot</OldSound>
@@ -827,7 +827,7 @@
         <Description>The treasure of the catacombs, lots have sought to grasp it in their hand... the only thing
             remaining is their rotting bones among the swarm of rodents.
         </Description>
-        <ActivateOnEquip stat="20" amount="5">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="2" amount="5">IncrementStat</ActivateOnEquip>
         // ATK
         <ActivateOnEquip stat="121" amount="20">IncrementStat</ActivateOnEquip>
         // RES
@@ -898,9 +898,9 @@
         <SlotType>2</SlotType>
         <TierType>Valiant</TierType>
         <Description>A professional assassin's tool, used for matters other than business.</Description>
-        <ActivateOnEquip stat="22" amount="10">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="4" amount="10">IncrementStat</ActivateOnEquip>
         // SPD
-        <ActivateOnEquip stat="28" amount="5">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="5" amount="5">IncrementStat</ActivateOnEquip>
         // DEX
         <RateOfFire>1</RateOfFire>
         <Sound>weapon/newsounds/lightdagger</Sound>
@@ -974,9 +974,9 @@
         <Description>A Dagger that appeared in a grave, frozen in place on a winter night of impenetrable fog. After the
             item was found they had said the grave wasn't opened, but indeed empty.
         </Description>
-        <ActivateOnEquip stat="20" amount="5">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="2" amount="5">IncrementStat</ActivateOnEquip>
         // ATK
-        <ActivateOnEquip stat="22" amount="5">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="4" amount="5">IncrementStat</ActivateOnEquip>
         // SPD
         <RateOfFire>1.15</RateOfFire>
         <Sound>weapon/newsounds/lightdagger</Sound>
@@ -1011,13 +1011,13 @@
         <SlotType>2</SlotType>
         <TierType>Valiant</TierType>
         <Description>Those who live with no thought of tomorrow, get the best of today.</Description>
-        <ActivateOnEquip stat="20" amount="5">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="2" amount="5">IncrementStat</ActivateOnEquip>
         // ATK
-        <ActivateOnEquip stat="21" amount="-8">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="3" amount="-8">IncrementStat</ActivateOnEquip>
         // DEF
-        <ActivateOnEquip stat="22" amount="4">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="4" amount="4">IncrementStat</ActivateOnEquip>
         // SPD
-        <ActivateOnEquip stat="28" amount="6">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="5" amount="6">IncrementStat</ActivateOnEquip>
         // DEX
         <ActivateOnEquip stat="121" amount="25">IncrementStat</ActivateOnEquip>
         // RES
@@ -1205,9 +1205,9 @@
         <SlotType>8</SlotType>
         <TierType>Valiant</TierType>
         <Description>Hope all you want, the verdict never changes.</Description>
-        <ActivateOnEquip stat="20" amount="10">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="2" amount="10">IncrementStat</ActivateOnEquip>
         // ATK
-        <ActivateOnEquip stat="28" amount="5">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="5" amount="5">IncrementStat</ActivateOnEquip>
         // DEX
         <Sound>weapon/newsounds/lightstaff</Sound>
         <OldSound>weapon/newsounds/lightstaffshoot</OldSound>
@@ -1391,7 +1391,7 @@
         <Description>I danced between flurries of blades, unscathed, but alas I became fragile enough to shatter upon a
             single scratch.
         </Description>
-        <ActivateOnEquip stat="22" amount="10">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="4" amount="10">IncrementStat</ActivateOnEquip>
         // SPD
         <Sound>weapon/newsounds/lightkatana</Sound>
         <OldSound>weapon/newsounds/lightkatana</OldSound>
@@ -1462,7 +1462,7 @@
         <Description>Never intended to be a weapon, but a tool to right all cosmic wrongs... but time takes its toll on
             all.
         </Description>
-        <ActivateOnEquip stat="21" amount="15">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="3" amount="15">IncrementStat</ActivateOnEquip>
         // DEF
         <ActivateOnEquip stat="26" amount="15">IncrementStat</ActivateOnEquip>
         // VIT
@@ -1700,7 +1700,7 @@
         <TierType>Valiant</TierType>
         <Description>Demon hunters used these wolf pelt cloaks on their hunts, nothing could ever see them coming.
         </Description>
-        <ActivateOnEquip stat="22" amount="15" isPerc="true">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="4" amount="15" isPerc="true">IncrementStat</ActivateOnEquip>
         // SPD
         <Sound>ability/ability_use</Sound>
         <OldSound>ability/ability_use</OldSound>
@@ -1725,7 +1725,7 @@
         <Description>Leather gathered from the legendary basilisk, not much leather can be harvested from the beast, in
             fact, there is not much gear in this galaxy made from it.
         </Description>
-        <ActivateOnEquip stat="22" amount="7">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="4" amount="7">IncrementStat</ActivateOnEquip>
         // SPD
         <ActivateOnEquip stat="112" amount="15">IncrementStat</ActivateOnEquip>
         // MGT
@@ -1756,7 +1756,7 @@
         <Description>The arrow tips inside smell of foul intention, whenever shot, they leave a black void in their
             path.
         </Description>
-        <ActivateOnEquip stat="28" amount="15">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="5" amount="15">IncrementStat</ActivateOnEquip>
         // DEX
         <Sound>ability/ability_use</Sound>
         <OldSound>ability/ability_use</OldSound>
@@ -1805,7 +1805,7 @@
         <SlotType>15</SlotType>
         <TierType>Valiant</TierType>
         <Description>A wartorn quiver with one arrow left in it... Make it count.</Description>
-        <ActivateOnEquip stat="20" amount="10">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="2" amount="10">IncrementStat</ActivateOnEquip>
         // ATK
         <Sound>ability/ability_use</Sound>
         <OldSound>ability/ability_use</OldSound>
@@ -1829,9 +1829,9 @@
         <Description>Born of a malignant state of existence between life and death, it's only wish is to tear apart
             reality itself.
         </Description>
-        <ActivateOnEquip stat="20" amount="10">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="2" amount="10">IncrementStat</ActivateOnEquip>
         // ATK
-        <ActivateOnEquip stat="22" amount="6">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="4" amount="6">IncrementStat</ActivateOnEquip>
         // SPD
         <ActivateOnEquip stat="121" amount="10">IncrementStat</ActivateOnEquip>
         // RES
@@ -1918,9 +1918,9 @@
         // HP
         <ActivateOnEquip stat="3" amount="75">IncrementStat</ActivateOnEquip>
         // MP
-        <ActivateOnEquip stat="20" amount="5">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="2" amount="5">IncrementStat</ActivateOnEquip>
         // ATK
-        <ActivateOnEquip stat="28" amount="5">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="5" amount="5">IncrementStat</ActivateOnEquip>
         // DEX
         <Sound>ability/ability_use</Sound>
         <OldSound>ability/ability_use</OldSound>
@@ -2071,7 +2071,7 @@
         <Cooldown>1.5</Cooldown>
         <Activate effect="Strengthen" duration="1.5" useWisMod="false">ConditionEffectSelf</Activate>
         <Activate effect="Nausea" duration="3" useWisMod="false">ConditionEffectSelf</Activate>
-        <Activate stat="21" amount="15" duration="3" range="14" noStack="true" useWisMod="false">StatBoostAura
+        <Activate stat="3" amount="15" duration="3" range="14" noStack="true" useWisMod="false">StatBoostAura
         </Activate>
         <Activate range="14" amount="600" useWisMod="false">HealNova</Activate>
         <Activate range="14">RemoveNegativeConditions</Activate>
@@ -2126,7 +2126,7 @@
         </Description>
         <ActivateOnEquip stat="0" amount="120">IncrementStat</ActivateOnEquip>
         // HP
-        <ActivateOnEquip stat="21" amount="5">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="3" amount="5">IncrementStat</ActivateOnEquip>
         // DEF
         <ActivateOnEquip stat="26" amount="15">IncrementStat</ActivateOnEquip>
         // VIT
@@ -2182,7 +2182,7 @@
         <SlotType>16</SlotType>
         <TierType>Valiant</TierType>
         <Description>Bathe in the glory of vitality, strengthen yourself to endure powerful foes.</Description>
-        <ActivateOnEquip stat="20" amount="10">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="2" amount="10">IncrementStat</ActivateOnEquip>
         // ATK
         <Sound>ability/ability_use</Sound>
         <OldSound>ability/ability_use</OldSound>
@@ -2210,9 +2210,9 @@
         <Description>Even the most renown knights weren't able to hold this incredibly resistant shield.</Description>
         <ActivateOnEquip stat="0" amount="60">IncrementStat</ActivateOnEquip>
         // HP
-        <ActivateOnEquip stat="20" amount="5">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="2" amount="5">IncrementStat</ActivateOnEquip>
         // ATK
-        <ActivateOnEquip stat="28" amount="8">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="5" amount="8">IncrementStat</ActivateOnEquip>
         // DEX
         <Sound>ability/ability_use</Sound>
         <OldSound>ability/ability_use</OldSound>
@@ -2326,7 +2326,7 @@
         <Activate effect="Harden" duration="5" range="3.5">ConditionEffectAura</Activate>
         <Activate effect="Strengthen" duration="3.5" range="3.5">ConditionEffectAura</Activate>
         <Activate effect="Regenerate" duration="2.5" range="3.5">ConditionEffectAura</Activate>
-        <Activate stat="20" amount="25" duration="3.5" noStack="true" useWisMod="false">StatBoostSelf</Activate>
+        <Activate stat="2" amount="25" duration="3.5" noStack="true" useWisMod="false">StatBoostSelf</Activate>
         // ATK
         <Activate effect="Exhaust" duration="3" range="3.5" target="enemy" center="player" visualEffect="0"
                   useWisMod="false">GenericActivate
@@ -2347,7 +2347,7 @@
         <Description>One is war, multiple is unity.</Description>
         <ActivateOnEquip stat="0" amount="125">IncrementStat</ActivateOnEquip>
         // HP
-        <ActivateOnEquip stat="21" amount="4">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="3" amount="4">IncrementStat</ActivateOnEquip>
         // DEF
         <ActivateOnEquip stat="26" amount="-10">IncrementStat</ActivateOnEquip>
         // VIT
@@ -2380,7 +2380,7 @@
         </Description>
         <ActivateOnEquip stat="0" amount="150">IncrementStat</ActivateOnEquip>
         // HP
-        <ActivateOnEquip stat="20" amount="5">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="2" amount="5">IncrementStat</ActivateOnEquip>
         // ATK
         <Steal type="life" amount="1"/>
         <Sound>ability/ability_use</Sound>
@@ -2461,9 +2461,9 @@
         <SlotType>19</SlotType>
         <TierType>Valiant</TierType>
         <Description>"Take drought to their bodies, leave but their bones." - Racxen Duality's Councillor</Description>
-        <ActivateOnEquip stat="20" amount="10">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="2" amount="10">IncrementStat</ActivateOnEquip>
         // ATK
-        <ActivateOnEquip stat="28" amount="15">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="5" amount="15">IncrementStat</ActivateOnEquip>
         // DEX
         <ActivateOnEquip stat="112" amount="40">IncrementStat</ActivateOnEquip>
         // MGT
@@ -2498,7 +2498,7 @@
         </Description>
         <ActivateOnEquip stat="0" amount="200">IncrementStat</ActivateOnEquip>
         // HP
-        <ActivateOnEquip stat="20" amount="7">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="2" amount="7">IncrementStat</ActivateOnEquip>
         // ATK
         <ActivateOnEquip stat="26" amount="20">IncrementStat</ActivateOnEquip>
         // DEX
@@ -2533,9 +2533,9 @@
         <Description>At the inmost depths of the ancient forest, you can see vines stretching for thousands of meters,
             with barbs the size of greatswords, this is the true face of Gaia.
         </Description>
-        <ActivateOnEquip stat="20" amount="15">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="2" amount="15">IncrementStat</ActivateOnEquip>
         // ATK
-        <ActivateOnEquip stat="28" amount="10">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="5" amount="10">IncrementStat</ActivateOnEquip>
         // DEX
         <ActivateOnEquip stat="121" amount="40">IncrementStat</ActivateOnEquip>
         // RES
@@ -2589,9 +2589,9 @@
         <SlotType>21</SlotType>
         <TierType>Valiant</TierType>
         <Description>Neath the black, the sky looks dead.</Description>
-        <ActivateOnEquip stat="20" amount="10">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="2" amount="10">IncrementStat</ActivateOnEquip>
         // ATK
-        <ActivateOnEquip stat="22" amount="-6">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="4" amount="-6">IncrementStat</ActivateOnEquip>
         // SPD
         <Sound>ability/ability_use</Sound>
         <OldSound>ability/ability_use</OldSound>
@@ -2622,7 +2622,7 @@
         <Description>A cracked artifact that held an amy of ghosts in itself... Now it's power is barely enough to call
             forth one of it's oathsworn allies.
         </Description>
-        <ActivateOnEquip stat="20" amount="10">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="2" amount="10">IncrementStat</ActivateOnEquip>
         // ATK
         <ActivateOnEquip stat="26" amount="7">IncrementStat</ActivateOnEquip>
         // VIT
@@ -2667,7 +2667,7 @@
         </Description>
         <ActivateOnEquip stat="0" amount="125">IncrementStat</ActivateOnEquip>
         // HP
-        <ActivateOnEquip stat="22" amount="6">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="4" amount="6">IncrementStat</ActivateOnEquip>
         // SPD
         <Steal type="mana" amount="1"/>
         <Sound>ability/ability_use</Sound>
@@ -2727,7 +2727,7 @@
         <Description>Consume all that exists, there is none that can stand in the way.</Description>
         <ActivateOnEquip stat="0" amount="80">IncrementStat</ActivateOnEquip>
         // HP
-        <ActivateOnEquip stat="20" amount="10">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="2" amount="10">IncrementStat</ActivateOnEquip>
         // ATK
         <Sound>ability/ability_use</Sound>
         <OldSound>ability/ability_use</OldSound>
@@ -2775,7 +2775,7 @@
         <Description>Immense power spills into your body as you equip the scepter, foes cannot comprehend the power
             amidst.
         </Description>
-        <ActivateOnEquip stat="28" amount="8">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="5" amount="8">IncrementStat</ActivateOnEquip>
         // DEX
         <Sound>ability/ability_use</Sound>
         <OldSound>ability/ability_use</OldSound>
@@ -2804,7 +2804,7 @@
         </Description>
         <ActivateOnEquip stat="0" amount="70">IncrementStat</ActivateOnEquip>
         // HP
-        <ActivateOnEquip stat="20" amount="13">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="2" amount="13">IncrementStat</ActivateOnEquip>
         // ATK
         <Sound>ability/ability_use</Sound>
         <OldSound>ability/ability_use</OldSound>
@@ -2856,9 +2856,9 @@
         <SlotType>32</SlotType>
         <TierType>Valiant</TierType>
         <Description>A card taken from the poker deck of death himself.</Description>
-        <ActivateOnEquip stat="20" amount="15">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="2" amount="15">IncrementStat</ActivateOnEquip>
         // ATK
-        <ActivateOnEquip stat="28" amount="7">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="5" amount="7">IncrementStat</ActivateOnEquip>
         // DEX
         <ActivateOnEquip stat="114" amount="-20">IncrementStat</ActivateOnEquip>
         // LCK
@@ -2943,8 +2943,8 @@
         <Usable/>
         <MpCost>110</MpCost>
         <Cooldown>3</Cooldown>
-        <Activate stat="20" amount="25" noStack="false">JacketAbility</Activate>
-        <Activate stat="21" amount="25" noStack="false">JacketAbility2</Activate>
+        <Activate stat="2" amount="25" noStack="false">JacketAbility</Activate>
+        <Activate stat="3" amount="25" noStack="false">JacketAbility2</Activate>
         <Activate effect="Immortal" duration="1">ConditionEffectSelf</Activate>
         <Projectile>
             <ObjectId>WSacrifice Shot</ObjectId>
@@ -2990,7 +2990,7 @@
             <EffectInfo name="Lifetime" description="5"/>
             <EffectInfo name="Effect" description="Armor Break for 4 secs"/>
         </ExtraTooltipData>
-        <ActivateOnEquip stat="28" amount="10">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="5" amount="10">IncrementStat</ActivateOnEquip>
         // DEX
         <ActivateOnEquip stat="112" amount="35">IncrementStat</ActivateOnEquip>
         // MGT
@@ -3038,7 +3038,7 @@
         <Description>A historic gem from a very old war, it was thought to be lost in time.</Description>
         <ActivateOnEquip stat="0" amount="150">IncrementStat</ActivateOnEquip>
         // HP
-        <ActivateOnEquip stat="21" amount="14">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="3" amount="14">IncrementStat</ActivateOnEquip>
         // DEF
         <ActivateOnEquip stat="26" amount="15">IncrementStat</ActivateOnEquip>
         // VIT
@@ -3062,7 +3062,7 @@
         </Description>
         <ActivateOnEquip stat="3" amount="100">IncrementStat</ActivateOnEquip>
         // MP
-        <ActivateOnEquip stat="21" amount="5">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="3" amount="5">IncrementStat</ActivateOnEquip>
         // DEF
         <ActivateOnEquip stat="122" amount="700">IncrementStat</ActivateOnEquip>
         // PROT
@@ -3103,11 +3103,11 @@
         <SlotType>9</SlotType>
         <TierType>Valiant</TierType>
         <Description>A holy aura surrounds this trinket, use it wisely or die trying.</Description>
-        <ActivateOnEquip stat="21" amount="5">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="3" amount="5">IncrementStat</ActivateOnEquip>
         // DEF
-        <ActivateOnEquip stat="22" amount="20">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="4" amount="20">IncrementStat</ActivateOnEquip>
         // SPD
-        <ActivateOnEquip stat="28" amount="35">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="5" amount="35">IncrementStat</ActivateOnEquip>
         // DEX
         <ActivateOnEquip stat="122" amount="150">IncrementStat</ActivateOnEquip>
         // PRT
@@ -3145,9 +3145,9 @@
         <SlotType>9</SlotType>
         <TierType>Valiant</TierType>
         <Description>"Burn the trees, salt the fields, we tilt into hell itself!"</Description>
-        <ActivateOnEquip stat="20" amount="10">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="2" amount="10">IncrementStat</ActivateOnEquip>
         // ATK
-        <ActivateOnEquip stat="28" amount="15">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="5" amount="15">IncrementStat</ActivateOnEquip>
         // DEX
         <ActivateOnEquip stat="112" amount="45">IncrementStat</ActivateOnEquip>
         // MGT
@@ -3193,13 +3193,13 @@
         // HP
         <ActivateOnEquip stat="3" amount="200">IncrementStat</ActivateOnEquip>
         // MP
-        <ActivateOnEquip stat="20" amount="10">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="2" amount="10">IncrementStat</ActivateOnEquip>
         // ATK
-        <ActivateOnEquip stat="21" amount="5">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="3" amount="5">IncrementStat</ActivateOnEquip>
         // DEF
         <ActivateOnEquip stat="27" amount="20">IncrementStat</ActivateOnEquip>
         // WIS
-        <ActivateOnEquip stat="28" amount="5">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="5" amount="5">IncrementStat</ActivateOnEquip>
         // DEX
         <EffectEquip effect="Harden" delay="18"/>
         <FameBonus>8</FameBonus>
@@ -3220,9 +3220,9 @@
         </Description>
         <ActivateOnEquip stat="0" amount="25" isPerc="true">IncrementStat</ActivateOnEquip>
         // HP
-        <ActivateOnEquip stat="21" amount="7">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="3" amount="7">IncrementStat</ActivateOnEquip>
         // DEF
-        <ActivateOnEquip stat="28" amount="10">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="5" amount="10">IncrementStat</ActivateOnEquip>
         // DEX
         <Steal type="life" amount="2"/>
         <FameBonus>8</FameBonus>
@@ -3245,7 +3245,7 @@
         // HP
         <ActivateOnEquip stat="3" amount="50">IncrementStat</ActivateOnEquip>
         // MP
-        <ActivateOnEquip stat="20" amount="10">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="2" amount="10">IncrementStat</ActivateOnEquip>
         // ATK
         <ActivateOnEquip stat="26" amount="10">IncrementStat</ActivateOnEquip>
         // VIT
@@ -3269,9 +3269,9 @@
         <Description>A shard broken down from the philosopher's stone, molded into a unique texture in order to create a
             fabric substance, they shaped this material into a scroll of some sort, the power still lingers.
         </Description>
-        <ActivateOnEquip stat="20" amount="10">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="2" amount="10">IncrementStat</ActivateOnEquip>
         // ATK
-        <ActivateOnEquip stat="28" amount="10">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="5" amount="10">IncrementStat</ActivateOnEquip>
         // DEX
         <ActivateOnEquip stat="112" amount="40">IncrementStat</ActivateOnEquip>
         // MGT

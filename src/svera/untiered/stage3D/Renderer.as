@@ -229,9 +229,9 @@ public class Renderer {
         stage3d.context3D.configureBackBuffer(GameClient.StageWidth, GameClient.StageHeight, 2, true);
     }
 
-    private function renderWithPostEffect(graphicsDatas:Vector.<IGraphicsData>, grahpicsData3d:Vector.<Object3DStage3D>, mapWidth:Number, mapHeight:Number, camera:Camera, filterIndex:uint):void {
+    private function renderWithPostEffect(graphicsDatum:Vector.<IGraphicsData>, graphicsDatum3D:Vector.<Object3DStage3D>, mapWidth:Number, mapHeight:Number, camera:Camera, filterIndex:uint):void {
         this.context3D.GetContext3D().setRenderToTexture(this.sceneTexture_, true);
-        this.renderScene(graphicsDatas, grahpicsData3d, mapWidth, mapHeight, camera);
+        this.renderScene(graphicsDatum, graphicsDatum3D, mapWidth, mapHeight, camera);
         this.context3D.GetContext3D().setRenderToBackBuffer();
         switch (filterIndex) {
             case STAGE3D_FILTER_PAUSE:
@@ -271,7 +271,7 @@ public class Renderer {
         this.context3D.GetContext3D().drawTriangles(this.postFilterIndexBuffer_);
     }
 
-    private function renderScene(graphicsDatas:Vector.<IGraphicsData>, grahpicsData3d:Vector.<Object3DStage3D>, mapWidth:Number, mapHeight:Number, camera:Camera):void {
+    private function renderScene(graphicsDatum:Vector.<IGraphicsData>, graphicsDatum3d:Vector.<Object3DStage3D>, mapWidth:Number, mapHeight:Number, camera:Camera):void {
         var test:GraphicsBitmapFill;
         var graphicsData:IGraphicsData = null;
         this.context3D.clear();
@@ -280,7 +280,7 @@ public class Renderer {
         this.widthOffset_ = -mapWidth / 2;
         this.heightOffset_ = mapHeight / 2;
         this.UpdateCameraMatrix(camera);
-        for each(graphicsData in graphicsDatas) {
+        for each(graphicsData in graphicsDatum) {
             this.context3D.GetContext3D().setCulling(Context3DTriangleFace.NONE);
             if (graphicsData is GraphicsBitmapFill && !GraphicsFillExtra.isSoftwareDraw(GraphicsBitmapFill(graphicsData))) {
                 try {
@@ -308,19 +308,19 @@ public class Renderer {
                 this.context3D.setProgramConstantsFromVector(Context3DProgramType.FRAGMENT, 4, Vector.<Number>([0.5, 0.25, 0, 0]));
                 this.graphic3D_.renderShadow(this.context3D);
             }
-            if (graphicsData == null && grahpicsData3d.length != 0) {
+            if (graphicsData == null && graphicsDatum3d.length != 0) {
                 try {
                     this.context3D.GetContext3D().setProgram(this.program2);
                     this.context3D.GetContext3D().setCulling(Context3DTriangleFace.BACK);
-                    grahpicsData3d[index3d].UpdateModelMatrix(this.widthOffset_, this.heightOffset_);
+                    graphicsDatum3d[index3d].UpdateModelMatrix(this.widthOffset_, this.heightOffset_);
                     finalTransform.identity();
-                    finalTransform.append(grahpicsData3d[index3d].GetModelMatrix());
+                    finalTransform.append(graphicsDatum3d[index3d].GetModelMatrix());
                     finalTransform.append(this.cameraMatrix_);
                     finalTransform.append(this._projection);
                     finalTransform.appendTranslation(Renderer.tX / Stage3DConfig.WIDTH, Renderer.tY / Stage3DConfig.HEIGHT * 11.5, 0);
                     this.context3D.setProgramConstantsFromMatrix(Context3DProgramType.VERTEX, 0, finalTransform, true);
-                    this.context3D.setProgramConstantsFromMatrix(Context3DProgramType.VERTEX, 8, grahpicsData3d[index3d].GetModelMatrix(), true);
-                    grahpicsData3d[index3d].draw(this.context3D.GetContext3D());
+                    this.context3D.setProgramConstantsFromMatrix(Context3DProgramType.VERTEX, 8, graphicsDatum3d[index3d].GetModelMatrix(), true);
+                    graphicsDatum3d[index3d].draw(this.context3D.GetContext3D());
                     index3d++;
                 } catch (e:Error) {
                     trace("ERROR CAUGHT -- Invalid Bitmap Data");

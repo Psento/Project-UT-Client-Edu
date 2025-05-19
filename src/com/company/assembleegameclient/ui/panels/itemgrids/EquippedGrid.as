@@ -32,8 +32,8 @@ public class EquippedGrid extends ItemGrid {
     public override function addToGrid(tile:ItemTile, numRows:uint, tileIndex:uint):void {
         tile.drawBackground(ItemGrid.CutsByNum[numRows][tileIndex]);
         tile.addEventListener(MouseEvent.ROLL_OVER, this.onTileHover);
-        tile.x = int(tileIndex / 5) * (ItemTile.HEIGHT + 4);
-        tile.y = int(tileIndex % 5) * (ItemTile.WIDTH + 4);
+        tile.y = int(tileIndex / 5) * (ItemTile.HEIGHT + 3);
+        tile.x = int(tileIndex % 5) * (ItemTile.WIDTH + 3);
         addChild(tile);
     }
 

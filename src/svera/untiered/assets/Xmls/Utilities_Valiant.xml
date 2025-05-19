@@ -12,7 +12,7 @@
         <Description>A box containing all kinds of mysteries.</Description>
         <Cooldown>10</Cooldown>
         <Activate duration="3" randVals="Nausea, Sluggish, Vulnerable">Dice</Activate>
-        <Activate stat="20" amount="10" duration="5">StatBoostSelf</Activate>
+        <Activate stat="2" amount="10" duration="5">StatBoostSelf</Activate>
         <ReUse/>
         <InvUse/>
     </Object>

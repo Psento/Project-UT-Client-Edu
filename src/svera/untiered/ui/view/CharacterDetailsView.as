@@ -64,8 +64,8 @@ public class CharacterDetailsView extends Sprite {
 
     private function createHotkeysText():void {
         var keyCodeBox:KeyCodeBox = new KeyCodeBox(Parameters.data_["escapeToNexus"])
-        this.recallText_.x = 82;
-        this.recallText_.y = 5;
+        this.recallText_.x = 80;
+        this.recallText_.y = 2;
         this.recallText_.setBold(true);
         this.recallText_.filters = [new DropShadowFilter(0, 0, 0)];
         this.recallText_.text = KeyCodes.CharCodeStrings[keyCodeBox.keyCode_];
@@ -107,8 +107,9 @@ public class CharacterDetailsView extends Sprite {
             this.portrait_.x = this.content.width / 2 - this.portrait_.width / 2 + 5;
             this.portrait_.y = (64 - this.portrait_.height) / 2 - 64 / 2;
             this.content.addChild(this.portrait_);
-            this.content.x = 2;
-            this.content.y = 4;
+
+            this.content.x = 1;
+            this.content.y = 1;
         }
     }
 

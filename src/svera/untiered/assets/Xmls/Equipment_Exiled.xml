@@ -18,9 +18,9 @@
         </Description>
         <ActivateOnEquip stat="0" amount="2500">IncrementStat</ActivateOnEquip>
         // HP
-        <ActivateOnEquip stat="20" amount="-20">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="2" amount="-20">IncrementStat</ActivateOnEquip>
         // ATK
-        <ActivateOnEquip stat="28" amount="-10">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="5" amount="-10">IncrementStat</ActivateOnEquip>
         // DEX
         <FameBonus>8</FameBonus>
         <Origin>Relic Sword</Origin>
@@ -136,11 +136,11 @@
         <Description>The Treasure within has a Awakened, This item makes you Feel Unstoppable, it's as if you've aquired
             the power to destroy a thousand men.
         </Description>
-        <ActivateOnEquip stat="20" amount="8">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="2" amount="8">IncrementStat</ActivateOnEquip>
         // ATK
-        <ActivateOnEquip stat="22" amount="10">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="4" amount="10">IncrementStat</ActivateOnEquip>
         // SPD
-        <ActivateOnEquip stat="28" amount="8">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="5" amount="8">IncrementStat</ActivateOnEquip>
         // DEX
         <Sound>weapon/newsounds/heavydagger</Sound>
         <OldSound>weapon/newsounds/heavydaggershoot</OldSound>
@@ -233,9 +233,9 @@
         // HP
         <ActivateOnEquip stat="3" amount="200">IncrementStat</ActivateOnEquip>
         // MP
-        <ActivateOnEquip stat="28" amount="12">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="5" amount="12">IncrementStat</ActivateOnEquip>
         // DEX
-        <ActivateOnEquip stat="20" amount="12">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="2" amount="12">IncrementStat</ActivateOnEquip>
         // ATK
         <Steal type="mana" amount="6"/>
         <ItemEffect>Equilibrium</ItemEffect>
@@ -259,13 +259,13 @@
         // HP
         <ActivateOnEquip stat="3" amount="140">IncrementStat</ActivateOnEquip>
         // MP
-        <ActivateOnEquip stat="20" amount="14">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="2" amount="14">IncrementStat</ActivateOnEquip>
         // ATT
-        <ActivateOnEquip stat="21" amount="14">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="3" amount="14">IncrementStat</ActivateOnEquip>
         // DEF
-        <ActivateOnEquip stat="22" amount="14">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="4" amount="14">IncrementStat</ActivateOnEquip>
         // SPD
-        <ActivateOnEquip stat="28" amount="14">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="5" amount="14">IncrementStat</ActivateOnEquip>
         // DEX
         <ActivateOnEquip stat="26" amount="14">IncrementStat</ActivateOnEquip>
         // VIG

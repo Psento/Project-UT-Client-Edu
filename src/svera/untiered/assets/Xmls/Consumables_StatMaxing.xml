@@ -163,7 +163,7 @@
                         description="Drag two of the same potion on top of eachother to combine!"/>
         </ExtraTooltipData>
         <Sound>use_potion</Sound>
-        <Activate stat="20" amount="1">IncrementStat</Activate>
+        <Activate stat="2" amount="1">IncrementStat</Activate>
         <Consumable/>
         <Potion/>
         <ContainerType>Stat</ContainerType>
@@ -183,7 +183,7 @@
                         description="Drag two of the same potion on top of eachother to combine!"/>
         </ExtraTooltipData>
         <Sound>use_potion</Sound>
-        <Activate stat="20" amount="4">IncrementStat</Activate>
+        <Activate stat="2" amount="4">IncrementStat</Activate>
         <Consumable/>
         <Potion/>
         <ContainerType>Stat</ContainerType>
@@ -199,7 +199,7 @@
         <TierType>Stat</TierType>
         <Description>A potion that permanently ascends your attack stat by 3.</Description>
         <Sound>use_potion</Sound>
-        <Activate stat="20" amount="3">PowerStat</Activate>
+        <Activate stat="2" amount="3">PowerStat</Activate>
         <Consumable/>
         <Potion/>
         <ContainerType>Stat</ContainerType>
@@ -217,7 +217,7 @@
             maxing their Attack stat.
         </Description>
         <Sound>use_potion</Sound>
-        <Activate stat="20" amount="10">PowerStat</Activate>
+        <Activate stat="2" amount="10">PowerStat</Activate>
         <Consumable/>
         <Potion/>
         <ContainerType>Stat</ContainerType>
@@ -237,7 +237,7 @@
                         description="Drag two of the same potion on top of eachother to combine!"/>
         </ExtraTooltipData>
         <Sound>use_potion</Sound>
-        <Activate stat="21" amount="1">IncrementStat</Activate>
+        <Activate stat="3" amount="1">IncrementStat</Activate>
         <Consumable/>
         <Potion/>
         <ContainerType>Stat</ContainerType>
@@ -257,7 +257,7 @@
                         description="Drag two of the same potion on top of eachother to combine!"/>
         </ExtraTooltipData>
         <Sound>use_potion</Sound>
-        <Activate stat="21" amount="4">IncrementStat</Activate>
+        <Activate stat="3" amount="4">IncrementStat</Activate>
         <Consumable/>
         <Potion/>
         <ContainerType>Stat</ContainerType>
@@ -273,7 +273,7 @@
         <TierType>Stat</TierType>
         <Description>A potion that permanently ascends your defense stat by 3.</Description>
         <Sound>use_potion</Sound>
-        <Activate stat="21" amount="3">PowerStat</Activate>
+        <Activate stat="3" amount="3">PowerStat</Activate>
         <Consumable/>
         <Potion/>
         <ContainerType>Stat</ContainerType>
@@ -291,7 +291,7 @@
             maxing their Defense stat.
         </Description>
         <Sound>use_potion</Sound>
-        <Activate stat="21" amount="10">PowerStat</Activate>
+        <Activate stat="3" amount="10">PowerStat</Activate>
         <Consumable/>
         <Potion/>
         <ContainerType>Stat</ContainerType>
@@ -311,7 +311,7 @@
                         description="Drag two of the same potion on top of eachother to combine!"/>
         </ExtraTooltipData>
         <Sound>use_potion</Sound>
-        <Activate stat="22" amount="1">IncrementStat</Activate>
+        <Activate stat="4" amount="1">IncrementStat</Activate>
         <Consumable/>
         <Potion/>
         <ContainerType>Stat</ContainerType>
@@ -331,7 +331,7 @@
                         description="Drag two of the same potion on top of eachother to combine!"/>
         </ExtraTooltipData>
         <Sound>use_potion</Sound>
-        <Activate stat="22" amount="4">IncrementStat</Activate>
+        <Activate stat="4" amount="4">IncrementStat</Activate>
         <Consumable/>
         <Potion/>
         <ContainerType>Stat</ContainerType>
@@ -347,7 +347,7 @@
         <TierType>Stat</TierType>
         <Description>A potion that permanently ascends your speed stat by 3.</Description>
         <Sound>use_potion</Sound>
-        <Activate stat="22" amount="3">PowerStat</Activate>
+        <Activate stat="4" amount="3">PowerStat</Activate>
         <Consumable/>
         <Potion/>
         <ContainerType>Stat</ContainerType>
@@ -365,7 +365,7 @@
             maxing their Speed stat.
         </Description>
         <Sound>use_potion</Sound>
-        <Activate stat="22" amount="10">PowerStat</Activate>
+        <Activate stat="4" amount="10">PowerStat</Activate>
         <Consumable/>
         <Potion/>
         <ContainerType>Stat</ContainerType>
@@ -385,7 +385,7 @@
                         description="Drag two of the same potion on top of eachother to combine!"/>
         </ExtraTooltipData>
         <Sound>use_potion</Sound>
-        <Activate stat="28" amount="1">IncrementStat</Activate>
+        <Activate stat="5" amount="1">IncrementStat</Activate>
         <Consumable/>
         <Potion/>
         <ContainerType>Stat</ContainerType>
@@ -405,7 +405,7 @@
                         description="Drag two of the same potion on top of eachother to combine!"/>
         </ExtraTooltipData>
         <Sound>use_potion</Sound>
-        <Activate stat="28" amount="4">IncrementStat</Activate>
+        <Activate stat="5" amount="4">IncrementStat</Activate>
         <Consumable/>
         <Potion/>
         <ContainerType>Stat</ContainerType>
@@ -421,7 +421,7 @@
         <TierType>Stat</TierType>
         <Description>A potion that permanently ascends your dexterity stat by 3.</Description>
         <Sound>use_potion</Sound>
-        <Activate stat="28" amount="3">PowerStat</Activate>
+        <Activate stat="5" amount="3">PowerStat</Activate>
         <Consumable/>
         <Potion/>
         <ContainerType>Stat</ContainerType>
@@ -439,7 +439,7 @@
             maxing their Dexterity stat.
         </Description>
         <Sound>use_potion</Sound>
-        <Activate stat="28" amount="10">PowerStat</Activate>
+        <Activate stat="5" amount="10">PowerStat</Activate>
         <Consumable/>
         <Potion/>
         <ContainerType>Stat</ContainerType>

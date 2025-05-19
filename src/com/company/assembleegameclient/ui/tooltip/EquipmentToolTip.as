@@ -15,6 +15,8 @@ import flash.filters.DropShadowFilter;
 import flash.text.StyleSheet;
 import flash.utils.Dictionary;
 
+import link.LinkUtils;
+
 import svera.untiered.constants.ActivationType;
 import svera.untiered.messaging.impl.data.StatData;
 
@@ -395,9 +397,9 @@ public class EquipmentToolTip extends ToolTip {
                     stat = int(activateXML.@stat);
                     amt = int(activateXML.@amount);
                     if (stat != 0 && stat != 1) {
-                        val = "Permanently increases " + StatData.statToName(stat);
+                        val = "Permanently increases " + LinkUtils.statIndexToName(stat);
                     } else {
-                        val = "+" + amt + " " + StatData.statToName(stat);
+                        val = "+" + amt + " " + LinkUtils.statIndexToName(stat);
                     }
                     this.effects.push(new Effect("", val));
             }
@@ -505,7 +507,7 @@ public class EquipmentToolTip extends ToolTip {
             dataString = "";
         }
 
-        return TooltipHelper.wrapInFontTag(amountString + dataString + " " + StatData.statToName(stat), textColor);
+        return TooltipHelper.wrapInFontTag(amountString + dataString + " " + LinkUtils.statIndexToName(stat), textColor);
     }
 
     private function addEquipmentItemRestrictions():void {
@@ -569,7 +571,7 @@ public class EquipmentToolTip extends ToolTip {
             if (reqXML.toString() == "Stat") {
                 stat = int(reqXML.@stat);
                 value = int(reqXML.@value);
-                this.restrictions.push(new Restriction("Requires " + StatData.statToName(stat) + " of " + value, reqMet ? 11776947 : 16549442, reqMet ? Boolean(false) : Boolean(true)));
+                this.restrictions.push(new Restriction("Requires " + LinkUtils.statIndexToName(stat) + " of " + value, reqMet ? 11776947 : 16549442, reqMet ? Boolean(false) : Boolean(true)));
             }
         }
     }

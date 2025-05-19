@@ -162,7 +162,7 @@ public class EquipmentTile extends InteractiveItemTile {
     }
 
     override protected function getBackgroundColor():int {
-        return 4539717;
+        return 0x131126;
     }
 }
 }

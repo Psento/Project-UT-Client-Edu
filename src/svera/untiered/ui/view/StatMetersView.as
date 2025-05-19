@@ -38,16 +38,16 @@ public class StatMetersView extends Sprite {
         super();
         this.expBar_ = new StatusBar(72, 20, 5931045, 5526612, "Lvl X");
         this.fameBar_ = new StatusBar(72, 20, 14835456, 5526612, "Fame");
-        this.hpBar_ = new StatusBar(202, 20, 14693428, 5526612, "HP");
-        this.spBar_ = new StatusBar(202, 20, 16777215, 14693428, "SP");
-        this.rpBar_ = new StatusBar(202, 20, 6325472, 5526612, "RP");
-        this.hpBar_.x -= 48;
+        this.hpBar_ = new StatusBar(245, 20, 14693428, 5526612, "HP");
+        this.spBar_ = new StatusBar(245, 20, 16777215, 14693428, "SP");
+        this.rpBar_ = new StatusBar(245, 20, 6325472, 5526612, "RP");
+        this.hpBar_.x = 0;
         this.hpBar_.y = 0;
         this.spBar_.x = this.hpBar_.x;
         this.spBar_.y = this.hpBar_.y;
         this.rpBar_.x = this.spBar_.x;
         this.rpBar_.y = 21;
-        this.expBar_.x -= 55 + this.expBar_.width * 2;
+        this.expBar_.x = -72 - 1.5; // Idk some magic 2, without it its missaligned
         this.expBar_.y = this.rpBar_.y;
         this.spBar_.visible = false;
         this.expBar_.visible = true;

@@ -29,10 +29,12 @@ public class StatView extends Sprite {
         this.nameText_ = new SimpleText(13, 11776947, false, 0, 0);
         this.nameText_.text = name + " -";
         this.nameText_.updateMetrics();
-        this.nameText_.x = -this.nameText_.width;
+        //nameText_.x = -this.nameText_.width;
         this.nameText_.filters = [new DropShadowFilter(0, 0, 0)];
         addChild(this.nameText_);
         this.valText_ = new SimpleText(13, this.valColor_, false, 0, 0);
+        this.valText_.x = this.nameText_.width;
+
         this.valText_.setBold(true);
         this.valText_.text = "-";
         this.valText_.updateMetrics();

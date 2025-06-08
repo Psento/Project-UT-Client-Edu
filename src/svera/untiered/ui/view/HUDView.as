@@ -3,6 +3,7 @@ import com.company.assembleegameclient.game.GameSprite;
 import com.company.assembleegameclient.objects.Player;
 import com.company.assembleegameclient.ui.TradePanel;
 import com.company.assembleegameclient.ui.panels.InteractPanel;
+import com.company.assembleegameclient.ui.panels.itemgrids.BindGrid;
 import com.company.assembleegameclient.ui.panels.itemgrids.EquippedGrid;
 import com.company.assembleegameclient.ui.panels.itemgrids.InventoryGrid;
 import com.company.util.SpriteUtil;
@@ -29,6 +30,8 @@ public class HUDView extends Sprite {
     private var hudOverlay:HUD_Overlay;
 
     private var miniMap:MiniMap;
+
+    public var bindGrid:BindGrid;
 
     public var equippedGrid:EquippedGrid;
 

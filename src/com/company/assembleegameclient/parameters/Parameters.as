@@ -146,13 +146,27 @@ public class Parameters {
         setDefaultKey("useHealthPotion", KeyCodes.F);
         setDefaultKey("useMagicPotion", KeyCodes.V);
         setDefaultKey("toggleFullscreenMode", KeyCodes.UNSET);
+
+
+
         setDefault("playerObjectType", 782);
+
         setDefault("charIdUseMap", {});
         setDefault("playMusic", true);
         setDefault("playSFX", true);
         setDefault("playPewPew", true);
         setDefault("centerOnPlayer", true);
         setDefault("preferredServer", null);
+
+        setDefault("bindSlot1", 5);
+        setDefault("bindSlot2", 6);
+        setDefault("bindSlot3", 7);
+        setDefault("bindSlot4", 8);
+        setDefault("bindSlot5", 9);
+        setDefault("bindSlot6", 10);
+        setDefault("bindSlot7", 11);
+        setDefault("bindSlot8", 12);
+
         setDefault("cameraAngle", 0);
         setDefault("defaultCameraAngle", 0);
         setDefault("showQuestPortraits", true);

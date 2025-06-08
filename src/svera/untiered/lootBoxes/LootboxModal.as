@@ -36,7 +36,6 @@ public class LootboxModal extends EmptyFrame {
     public static var modalWidth:int = MODAL_WIDTH;//440
     public static var modalHeight:int = MODAL_HEIGHT;//400
 
-    private var triggeredOnStartup:Boolean;
     public var lootboxDisplay_:LootboxesDisplay;
     [Embed(source="LockerLootbox_ImageEmbed.png")]
     private var LockerLootbox_ImageEmbed:Class;
@@ -66,8 +65,7 @@ public class LootboxModal extends EmptyFrame {
     public var Lootbox4Amount:LegacyBuyButton;
     public var Lootbox5Amount:LegacyBuyButton;
 
-    public function LootboxModal(_arg1:Boolean = false) {
-        this.triggeredOnStartup = _arg1;
+    public function LootboxModal() {
         modalWidth = MODAL_WIDTH;
         modalHeight = MODAL_HEIGHT;
         super(modalWidth, modalHeight);
@@ -80,10 +78,8 @@ public class LootboxModal extends EmptyFrame {
 
     public function onCloseButtonClicked(e:Event):void {
         var _local1:CloseDialogsSignal = StaticInjectorContext.getInjector().getInstance(CloseDialogsSignal);
+        _local1.dispatch();
         closeButton.removeEventListener(MouseEvent.CLICK, this.onCloseButtonClicked);
-        if (this.triggeredOnStartup) {
-            _local1.dispatch();
-        }
     }
 
     private function onAdded(_arg1:Event):void {
@@ -148,18 +144,18 @@ public class LootboxModal extends EmptyFrame {
         Lootbox_Image5.height = 18 * 4;
         Lootbox_Image5.filters = [new DropShadowFilter(0, 0, 0x00FFF6, 1, 12, 12, 1.5)]; // Premium LootBox
 
-        this.Lootbox1Title = new SimpleText(10,0xFF0044, false, 20).setBold(true);
+        this.Lootbox1Title = new SimpleText(10, 0xFF0044, false, 0).setBold(true);
         this.Lootbox1Title.setText("Legendary Box");
         this.Lootbox1Title.filters = [new DropShadowFilter(0, 0, 0, 0.5, 12, 12)];
         this.Lootbox1Title.x = this.Lootbox_Image1.x + 2;
         this.Lootbox1Title.y = this.Lootbox_Image1.y - 20;
 
         this.Lootbox1Amount = new LegacyBuyButton("", 12, 750000, Currency.HONOR);
-        this.Lootbox1Amount.x = this.Lootbox_Image1.x + 8;
+        this.Lootbox1Amount.x = this.Lootbox_Image1.x;
         this.Lootbox1Amount.y = this.Lootbox_Image1.y + 80;
         this.Lootbox1Amount.setEnabled(true);
 
-        this.Lootbox2Title = new SimpleText(10,0x00FF21,false, 20).setBold(true);
+        this.Lootbox2Title = new SimpleText(10, 0x00FF21, false, 0).setBold(true);
         this.Lootbox2Title.setText("Event Lootbox");
         this.Lootbox2Title.filters = [new DropShadowFilter(0, 0, 0, 0.5, 12, 12)];
         this.Lootbox2Title.x = this.Lootbox_Image2.x + 5;
@@ -170,7 +166,7 @@ public class LootboxModal extends EmptyFrame {
         this.Lootbox2Amount.y = this.Lootbox1Amount.y;
         this.Lootbox2Amount.setEnabled(true);
 
-        this.Lootbox3Title = new SimpleText(10,0xF7AA22,false, 20).setBold(true);
+        this.Lootbox3Title = new SimpleText(10, 0xF7AA22, false, 0).setBold(true);
         this.Lootbox3Title.setText("Gold Lootbox");
         this.Lootbox3Title.filters = [new DropShadowFilter(0, 0, 0, 0.5, 12, 12)];
         this.Lootbox3Title.x = this.Lootbox_Image3.x + 6;
@@ -181,25 +177,25 @@ public class LootboxModal extends EmptyFrame {
         this.Lootbox3Amount.y = this.Lootbox1Amount.y;
         this.Lootbox3Amount.setEnabled(true);
 
-        this.Lootbox4Title = new SimpleText(10, 0xA80013,false, 20).setBold(true);
+        this.Lootbox4Title = new SimpleText(10, 0xA80013, false, 0).setBold(true);
         this.Lootbox4Title.setText("Elite Lootbox");
         this.Lootbox4Title.filters = [new DropShadowFilter(0, 0, 0, 0.5, 12, 12)];
         this.Lootbox4Title.x = this.Lootbox_Image4.x + 8;
         this.Lootbox4Title.y = this.Lootbox_Image4.y - 20;
 
         this.Lootbox4Amount = new LegacyBuyButton("", 12, 5000, Currency.HONOR);
-        this.Lootbox4Amount.x = this.Lootbox_Image4.x + 10;
+        this.Lootbox4Amount.x = this.Lootbox_Image4.x + 6;
         this.Lootbox4Amount.y = this.Lootbox1Amount.y;
         this.Lootbox4Amount.setEnabled(true);
 
-        this.Lootbox5Title = new SimpleText(10,0x00FFF6, false ,20).setBold(true);
+        this.Lootbox5Title = new SimpleText(10, 0x00FFF6, false, 0).setBold(true);
         this.Lootbox5Title.setText("Premium Lootbox");
         this.Lootbox5Title.filters = [new DropShadowFilter(0, 0, 0, 0.5, 12, 12)];
         this.Lootbox5Title.x = this.Lootbox_Image5.x - 3;
         this.Lootbox5Title.y = this.Lootbox_Image5.y - 20;
 
         this.Lootbox5Amount = new LegacyBuyButton("", 12, 5000, Currency.TSAVORITE);
-        this.Lootbox5Amount.x = this.Lootbox_Image5.x + 15;
+        this.Lootbox5Amount.x = this.Lootbox_Image5.x + 4;
         this.Lootbox5Amount.y = this.Lootbox_Image5.y + 80;
         this.Lootbox5Amount.setEnabled(true);
 

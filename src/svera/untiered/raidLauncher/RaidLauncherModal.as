@@ -35,10 +35,8 @@ public class RaidLauncherModal extends EmptyFrame {
     public var launchButton:TextButton;
     public var launchButton2:TextButton;
     public var launchButton3:TextButton;
-    private var triggeredOnStartup:Boolean;
 
-    public function RaidLauncherModal(_arg1:Boolean = false) {
-        this.triggeredOnStartup = _arg1;
+    public function RaidLauncherModal() {
         modalWidth = MODAL_WIDTH;
         modalHeight = MODAL_HEIGHT;
         super(modalWidth, modalHeight);
@@ -64,9 +62,7 @@ public class RaidLauncherModal extends EmptyFrame {
     public function onCloseButtonClicked(e:Event):void {
         var _local1:CloseDialogsSignal = StaticInjectorContext.getInjector().getInstance(CloseDialogsSignal);
         closeButton.removeEventListener(MouseEvent.CLICK, this.onCloseButtonClicked);
-        if (this.triggeredOnStartup) {
-            _local1.dispatch();
-        }
+        _local1.dispatch();
     }
 
     public function onClick(_arg1:MouseEvent):void {

@@ -14,8 +14,6 @@ import org.osflash.signals.Signal;
 public class EmptyFrame extends Sprite {
     public static const TEXT_MARGIN:int = 20;
 
-    public var register:Signal;
-    public var cancel:Signal;
     protected var modalWidth:Number;
     protected var modalHeight:Number;
     protected var closeButton:TextButton;
@@ -74,32 +72,29 @@ public class EmptyFrame extends Sprite {
 
     public function setCloseButton(_arg1:Boolean):void {
         if (this.closeButton == null && _arg1) {
-            this.closeButton = new TextButton(24,"X",modalWidth);
+            this.closeButton = new TextButton(24,"X",30);
             this.closeButton.addEventListener(MouseEvent.CLICK, this.onCloseClick);
             addEventListener(Event.REMOVED_FROM_STAGE, this.onRemovedFromStage);
             addChild(this.closeButton);
-        } else {
-            if (!(this.closeButton == null) && !_arg1) {
-                removeChild(this.closeButton);
-                this.closeButton = null;
-            }
+        } else if (this.closeButton != null && !_arg1) {
+            removeChild(this.closeButton);
+            this.closeButton = null;
         }
     }
 
-    protected function getText(_arg1:String, _arg2:int, _arg3:int, _arg4:Boolean):SimpleText {
-        var _local5:SimpleText = new SimpleText(18, 0xFFFFFF, modalWidth - TEXT_MARGIN * 2 - 10);
+    protected function getText(text:String, x_:int, y_:int, _arg4:Boolean):SimpleText {
+        var simpleText:SimpleText = new SimpleText(18, 0xFFFFFF, false,modalWidth - TEXT_MARGIN * 2 - 10);
 
-        _local5.setBold(true);
-        _local5.setText(_arg1);
-
-        _local5.wordWrap = true;
-        _local5.multiline = true;
-        _local5.autoSize = TextFieldAutoSize.CENTER;
-        _local5.setAlignment(TextFormatAlign.CENTER);
-        _local5.filters = [new DropShadowFilter(0, 0, 0)];
-        _local5.x = _arg2;
-        _local5.y = _arg3;
-        return _local5;
+        simpleText.setBold(true);
+        simpleText.setText(text);
+        simpleText.wordWrap = true;
+        simpleText.multiline = true;
+        simpleText.autoSize = TextFieldAutoSize.CENTER;
+        simpleText.setAlignment(TextFormatAlign.CENTER);
+        simpleText.filters = [new DropShadowFilter(0, 0, 0)];
+        simpleText.x = x_;
+        simpleText.y = y_;
+        return simpleText;
     }
 
     protected function makeModalBackground():Sprite {
@@ -115,6 +110,7 @@ public class EmptyFrame extends Sprite {
     }
 
     public function onCloseClick(_arg1:MouseEvent):void {
+        parent.removeChild(this);
     }
 }
 }

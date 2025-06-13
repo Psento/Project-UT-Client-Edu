@@ -88,13 +88,14 @@ public class HUDView extends Sprite {
         this.statMeters.y = hudOverlay.y + 45;
 
         if (inventoryGrid && equippedGrid && statsView && interactPanel) {
-            inventoryGrid.x = GameClient.HalfStageWidth + 70;
-            inventoryGrid.y = GameClient.StageHeight - inventoryGrid.height;
-
             equippedGrid.x = hudOverlay.x + 131;
             equippedGrid.y = hudOverlay.y + 2;
+
             bindGrid.x = hudOverlay.x + 347;
             bindGrid.y = hudOverlay.y + 3;
+
+            inventoryGrid.x = bindGrid.x;
+            inventoryGrid.y = GameClient.StageHeight - inventoryGrid.height;
 
             statsView.x = inventoryGrid.x - this.statsView.width * 2;
             statsView.y = inventoryGrid.y;

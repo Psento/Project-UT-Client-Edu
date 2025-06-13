@@ -26,7 +26,7 @@ public class InventoryTile extends InteractiveItemTile {
         tempText.text = String(this.hotKey);
         tempText.setBold(true);
         tempText.updateMetrics();
-        var bmpData:BitmapData = new BitmapData(30, 30, true, 0);
+        var bmpData:BitmapData = new BitmapData(26, 26, true, 0);
         bmpData.draw(tempText);
         this.hotKeyBMP = new Bitmap(bmpData);
         this.hotKeyBMP.x = WIDTH / 2 - tempText.width / 2;
@@ -41,7 +41,7 @@ public class InventoryTile extends InteractiveItemTile {
 
     override public function setItem(itemId:int, itemData:int):Boolean {
         var changed:Boolean = super.setItem(itemId, itemData);
-        if (changed) {
+        if (changed && hotKeyBMP) {
             this.hotKeyBMP.visible = itemSprite.itemId <= 0;
         }
         return changed;

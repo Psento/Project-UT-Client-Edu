@@ -54,7 +54,7 @@ public class ItemTile extends Sprite {
         GraphicsUtil.drawCutEdgeRect(0, 0, WIDTH, HEIGHT, 4, cuts, this.path_);
         graphics.clear();
         graphics.drawGraphicsData(this.graphicsData_);
-        var fill:GraphicsSolidFill = new GraphicsSolidFill(6036765, 1);
+        var fill:GraphicsSolidFill = new GraphicsSolidFill(0x5C1D1D, 1);
         GraphicsUtil.clearPath(this.path_);
         var graphicsData:Vector.<IGraphicsData> = new <IGraphicsData>[fill, this.path_, GraphicsUtil.END_FILL];
         GraphicsUtil.drawCutEdgeRect(0, 0, WIDTH, HEIGHT, 4, cuts, this.path_);

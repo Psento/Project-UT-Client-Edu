@@ -65,7 +65,6 @@ public class Options extends Sprite {
         this.title_.x = GameClient.StageWidth / 2 - this.title_.width / 2;
         this.title_.y = 8;
         addChild(this.title_);
-        addChild(new ScreenGraphic());
         this.continueButton_ = new TitleMenuOption("continue", 36, false);
         this.continueButton_.addEventListener(MouseEvent.CLICK, this.onContinueClick);
         addChild(this.continueButton_);
@@ -75,7 +74,7 @@ public class Options extends Sprite {
         this.homeButton_ = new TitleMenuOption("back to home", 22, false);
         this.homeButton_.addEventListener(MouseEvent.CLICK, this.onHomeClick);
         addChild(this.homeButton_);
-        var xOffset:int = 14;
+        var xOffset:int = 14 + (GameClient.HalfStageWidth - 108 * TABS.length / 2);
         for (var i:int = 0; i < TABS.length; i++) {
             tab = new OptionsTabTitle(TABS[i]);
             tab.x = xOffset;
@@ -152,6 +151,14 @@ public class Options extends Sprite {
         this.resetToDefaultsButton_.y = GameClient.StageHeight - (600 - 532);
         this.homeButton_.x = continueButton_.x + 300;
         this.homeButton_.y = resetToDefaultsButton_.y;
+        var xOffset:int = 14 + (GameClient.HalfStageWidth - 108 * TABS.length / 2);
+        var tab:OptionsTabTitle = null;
+        for (var i:int = 0; i < TABS.length; i++) {
+            tab = tabs_[i];
+            tab.x = xOffset;
+            tab.y = 70;
+            xOffset = xOffset + 108;
+        }
     }
 
     private function onAddedToStage(event:Event):void {
@@ -318,7 +325,7 @@ public class Options extends Sprite {
     }
 
     private function addOption(option:Sprite):void {
-        option.x = this.optionIndex_ % 2 == 0 ? Number(20) : Number(415);
+        option.x = GameClient.HalfStageWidth - (optionIndex_ % 2 == 0 ? -20 : 300) ;
         option.y = int(this.optionIndex_ / 2) * 44 + 122;
         addChild(option);
         option.addEventListener(Event.CHANGE, this.onChange);

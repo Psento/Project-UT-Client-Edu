@@ -31,7 +31,7 @@ public class ItemGrid extends Panel {
     };
 
 
-    private const padding:uint = 4;
+    protected var padding:uint = 4;
     public const addToolTip:Signal = new Signal(ToolTip);
 
     public var owner:GameObject;

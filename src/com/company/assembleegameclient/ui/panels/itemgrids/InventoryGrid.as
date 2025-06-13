@@ -14,11 +14,13 @@ public class InventoryGrid extends ItemGrid {
         var tile:InventoryTile = null;
         super(gridOwner, currentPlayer, itemIndexOffset);
         this.tiles = new Vector.<InventoryTile>(this.NUM_SLOTS);
+        padding = 1;
         for (var i:int = 0; i < this.NUM_SLOTS; i++) {
             tile = new InventoryTile(i + indexOffset, this, interactive);
-            tile.addTileNumber(i + 1);
             addToGrid(tile, 6, i);
             this.tiles[i] = tile;
+            if (i < 8)
+                tile.addTileNumber(i + 1);
         }
     }
 

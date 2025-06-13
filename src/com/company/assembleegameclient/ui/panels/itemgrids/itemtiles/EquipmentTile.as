@@ -13,7 +13,7 @@ import svera.untiered.constants.ItemConstants;
 
 public class EquipmentTile extends InteractiveItemTile {
 
-    private static const greyColorFilter:ColorMatrixFilter = new ColorMatrixFilter(MoreColorUtil.singleColorFilterMatrix(3552822));
+    private static const greyColorFilter:ColorMatrixFilter = new ColorMatrixFilter(MoreColorUtil.singleColorFilterMatrix(0x2d234a));
 
 
     public var backgroundDetail:Bitmap;

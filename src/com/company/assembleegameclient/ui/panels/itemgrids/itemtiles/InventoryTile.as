@@ -1,4 +1,5 @@
 package com.company.assembleegameclient.ui.panels.itemgrids.itemtiles {
+import com.company.assembleegameclient.parameters.Parameters;
 import com.company.assembleegameclient.ui.panels.itemgrids.ItemGrid;
 import com.company.ui.SimpleText;
 
@@ -8,7 +9,7 @@ import flash.display.BitmapData;
 public class InventoryTile extends InteractiveItemTile {
 
 
-    public var hotKey:int;
+    public var hotKey:String;
 
     private var hotKeyBMP:Bitmap;
 
@@ -17,13 +18,13 @@ public class InventoryTile extends InteractiveItemTile {
     }
 
     public function addTileNumber(tileNumber:int):void {
-        this.hotKey = tileNumber;
+        this.hotKey = Parameters.data_["useEquipInvSlot" + String(tileNumber)];
         this.buildHotKeyBMP();
     }
 
     public function buildHotKeyBMP():void {
         var tempText:SimpleText = new SimpleText(26, 0x2d234a, false, 0, 0);
-        tempText.text = String(this.hotKey);
+        tempText.text = hotKey;
         tempText.setBold(true);
         tempText.updateMetrics();
         var bmpData:BitmapData = new BitmapData(26, 26, true, 0);

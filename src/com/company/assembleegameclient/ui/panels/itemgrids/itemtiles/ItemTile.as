@@ -104,7 +104,7 @@ public class ItemTile extends Sprite {
     }
 
     protected function getBackgroundColor():int {
-        return 5526612;
+        return 0x131126;
     }
 }
 }

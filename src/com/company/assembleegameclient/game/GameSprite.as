@@ -105,8 +105,8 @@ public class GameSprite extends Sprite {
         var sHeight:Number = 1;
         var result:Number = sWidth / sHeight;
         if (this.map != null && !Parameters.data_.GPURender) {
-            this.map.scaleX = sWidth * Parameters.data_.mScale;
-            this.map.scaleY = sHeight * Parameters.data_.mScale;
+/*            this.map.scaleX = sWidth * Parameters.data_.mScale;
+            this.map.scaleY = sHeight * Parameters.data_.mScale;*/
         }
         /*         if (this.scaledLayer != null) {
                     if (uiscale) {

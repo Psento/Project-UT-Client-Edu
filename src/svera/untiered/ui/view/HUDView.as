@@ -88,14 +88,16 @@ public class HUDView extends Sprite {
         this.statMeters.y = hudOverlay.y + 45;
 
         if (inventoryGrid && equippedGrid && statsView && interactPanel) {
-            this.inventoryGrid.x = GameClient.HalfStageWidth + 70;
-            this.inventoryGrid.y = GameClient.StageHeight - inventoryGrid.height;
+            inventoryGrid.x = GameClient.HalfStageWidth + 70;
+            inventoryGrid.y = GameClient.StageHeight - inventoryGrid.height;
 
             equippedGrid.x = hudOverlay.x + 131;
             equippedGrid.y = hudOverlay.y + 2;
+            bindGrid.x = hudOverlay.x + 347;
+            bindGrid.y = hudOverlay.y + 3;
 
-            this.statsView.x = inventoryGrid.x - this.statsView.width * 2;
-            this.statsView.y = inventoryGrid.y;
+            statsView.x = inventoryGrid.x - this.statsView.width * 2;
+            statsView.y = inventoryGrid.y;
 
             interactPanel.x = GameClient.HalfStageWidth - interactPanel.width * 0.5;
             interactPanel.y = hudOverlay.y - interactPanel.height - 30;
@@ -106,6 +108,7 @@ public class HUDView extends Sprite {
         var player:Player = gs.map.player_;
         this.inventoryGrid = new InventoryGrid(player, player, 5);
         this.equippedGrid = new EquippedGrid(player, player.slotTypes_, player);
+        bindGrid = new BindGrid(player, player, inventoryGrid);
         this.statsView = new StatsView(50, 200);
         this.interactPanel = new InteractPanel(gs, player, 200, 100);
 
@@ -114,6 +117,8 @@ public class HUDView extends Sprite {
 
         equippedGrid.x = hudOverlay.x + 131;
         equippedGrid.y = hudOverlay.y + 2;
+        bindGrid.x = hudOverlay.x + 347;
+        bindGrid.y = hudOverlay.y + 3;
 
         this.statsView.x = inventoryGrid.x - this.statsView.width;
         this.statsView.y = inventoryGrid.y;
@@ -129,12 +134,16 @@ public class HUDView extends Sprite {
 
         addChild(this.inventoryGrid);
         addChild(this.equippedGrid);
+        addChild(this.bindGrid);
         addChild(this.statsView);
         addChild(this.interactPanel);
     }
 
     public function draw():void {
         positionAssets();
+        if(bindGrid){
+            bindGrid.draw();
+        }
         if (this.equippedGrid) {
             this.equippedGrid.draw();
         }

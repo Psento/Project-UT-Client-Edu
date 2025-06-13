@@ -1077,11 +1077,11 @@ public class GameObject extends BasicObject {
             return;
         }
         if (this.obj3D_ != null) {
-            if (!Parameters.GPURenderFrame) {
-                this.obj3D_.draw(graphicsData, camera, this.props_.color_, texture);
+            if (Parameters.GPURenderFrame) {
+                graphicsData.push(null);
                 return;
             } else {
-                graphicsData.push(null);
+                this.obj3D_.draw(graphicsData, camera, this.props_.color_, texture);
                 return;
             }
         }

@@ -8,7 +8,7 @@ public class InventoryGrid extends ItemGrid {
 
     private const NUM_SLOTS:uint = 24;
 
-    private var tiles:Vector.<InventoryTile>;
+    public var tiles:Vector.<InventoryTile>;
 
     public function InventoryGrid(gridOwner:GameObject, currentPlayer:Player, itemIndexOffset:int = 0) {
         var tile:InventoryTile = null;

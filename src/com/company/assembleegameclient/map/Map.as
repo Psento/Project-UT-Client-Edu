@@ -339,7 +339,6 @@ public class Map extends Sprite {
                 map_.graphics.clear();
             }
             signalRenderSwitch.dispatch(wasLastFrameGpu);
-            trace(scaleY);
             wasLastFrameGpu = isGpuRender;
         }
         var filter:uint = 0;

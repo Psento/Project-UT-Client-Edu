@@ -5,15 +5,13 @@ import com.company.ui.SimpleText;
 import flash.display.Bitmap;
 import flash.display.BitmapData;
 
-public class InventoryTile extends InteractiveItemTile {
-
-
+public class BindTile extends ItemTile {
     public var hotKey:int;
 
     private var hotKeyBMP:Bitmap;
 
-    public function InventoryTile(id:int, parentGrid:ItemGrid, isInteractive:Boolean) {
-        super(id, parentGrid, isInteractive);
+    public function BindTile(id:int, parentGrid:ItemGrid) {
+        super(id, parentGrid);
     }
 
     public function addTileNumber(tileNumber:int):void {
@@ -45,14 +43,6 @@ public class InventoryTile extends InteractiveItemTile {
             this.hotKeyBMP.visible = itemSprite.itemId <= 0;
         }
         return changed;
-    }
-
-    override protected function beginDragCallback():void {
-        this.hotKeyBMP.visible = true;
-    }
-
-    override protected function endDragCallback():void {
-        this.hotKeyBMP.visible = itemSprite.itemId <= 0;
     }
 }
 }

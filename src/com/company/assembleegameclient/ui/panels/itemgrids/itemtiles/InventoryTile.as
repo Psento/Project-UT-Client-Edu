@@ -5,6 +5,7 @@ import com.company.ui.SimpleText;
 
 import flash.display.Bitmap;
 import flash.display.BitmapData;
+import flash.filters.DropShadowFilter;
 
 public class InventoryTile extends InteractiveItemTile {
 
@@ -18,21 +19,22 @@ public class InventoryTile extends InteractiveItemTile {
     }
 
     public function addTileNumber(tileNumber:int):void {
-        this.hotKey = Parameters.data_["useEquipInvSlot" + String(tileNumber)];
+        this.hotKey = String.fromCharCode(Parameters.data_["useEquipInvSlot" + String(tileNumber)]);
         this.buildHotKeyBMP();
     }
 
     public function buildHotKeyBMP():void {
-        var tempText:SimpleText = new SimpleText(26, 0x2d234a, false, 0, 0);
+        var tempText:SimpleText = new SimpleText(12, 0x5b4c96, false, 0, 0);
         tempText.text = hotKey;
         tempText.setBold(true);
         tempText.updateMetrics();
-        var bmpData:BitmapData = new BitmapData(26, 26, true, 0);
+        var bmpData:BitmapData = new BitmapData(20, 20, true, 0);
         bmpData.draw(tempText);
         this.hotKeyBMP = new Bitmap(bmpData);
-        this.hotKeyBMP.x = WIDTH / 2 - tempText.width / 2;
-        this.hotKeyBMP.y = HEIGHT / 2 - 18;
-        addChildAt(this.hotKeyBMP, 0);
+        this.hotKeyBMP.x = 0 - 2;
+        this.hotKeyBMP.y = 0 - 3;
+        hotKeyBMP.filters = [new DropShadowFilter(0, 0, 0, 1.0, 1.5, 1.5, 255)];
+        addChild(hotKeyBMP);
     }
 
     override public function setItemSprite(newItemSprite:ItemTileSprite):void {
@@ -41,19 +43,13 @@ public class InventoryTile extends InteractiveItemTile {
     }
 
     override public function setItem(itemId:int, itemData:int):Boolean {
-        var changed:Boolean = super.setItem(itemId, itemData);
-        if (changed && hotKeyBMP) {
-            this.hotKeyBMP.visible = itemSprite.itemId <= 0;
-        }
-        return changed;
+        return super.setItem(itemId, itemData);
     }
 
     override protected function beginDragCallback():void {
-        this.hotKeyBMP.visible = true;
     }
 
     override protected function endDragCallback():void {
-        this.hotKeyBMP.visible = itemSprite.itemId <= 0;
     }
 }
 }

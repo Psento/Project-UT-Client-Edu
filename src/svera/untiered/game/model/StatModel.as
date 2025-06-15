@@ -10,7 +10,7 @@ public class StatModel {
 
     public var redOnZero:Boolean;
 
-    public function StatModel(name:String, abbreviation:String, description:String, redOnZero:Boolean) {
+    public function StatModel(name:String, abbreviation:String, description:String, redOnZero:Boolean = true) {
         super();
         this.name = name;
         this.abbreviation = abbreviation;

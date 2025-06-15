@@ -26,8 +26,56 @@ public class StatsView extends Sprite {
         new StatModel("SPD", "Speed", "This stat increases the speed at which the character moves.", true),
         new StatModel("DEX", "Dexterity", "This stat increases the speed at which the character attacks.", true),
         new StatModel("VIG", "Vigor", "This stat increases the speed at which hit points are recovered.", true),
-        new StatModel("INT", "Intelligence", "This stat increases the speed at which resource points are recovered.", true)
+        new StatModel("INT", "Intellect", "This stat increases the speed at which resource points are recovered.", true),
+        // Overshield Related
+        new StatModel("OSM", "OvershieldMax",""), // Overshield Capacity
+        new StatModel("OSD", "OvershieldDelay",""), // Delay before overshield recharges
+        new StatModel("OSRR", "OvershieldRechargeRate",""), // How fast overshield recharges
+        // Resistance Related
+        new StatModel("RSL","Resilience", ""), // Physical, Magical, and Elemental Resistance in one. (Only Increased with stat points)
+        new StatModel("PHYR","PhysicalResist", ""), // Physical Resistance
+        new StatModel("MGCR","MagicResist", ""), // Magic Resistance
+        new StatModel("ELMR","ElementalResist", ""), // Elemental Resistance
+        new StatModel("FRER","FireResist", ""), // Fire Damage
+        new StatModel("WTRR","WaterResist", ""), // Water Damage
+        new StatModel("WNDR","WindResist", ""), // Wind Damage
+        new StatModel("ELCR","ElectricResist", ""), // Electric Damage
+        new StatModel("ERTR","EarthResist", ""), // Earth Damage
+        new StatModel("ICER","IceResist", ""), // Ice Damage
+        new StatModel("VDR","VoidResist", ""), // Void Damage
+        new StatModel("LGHR","LightResist", ""), // Light Damage
+        new StatModel("BLSR","BlastResist", ""), // Blast Resistance
 
+        // Damage related
+        new StatModel("STR","Strength", ""), // Physical, Magical, and Elemental Damage in one. (Only Increased with stat points)
+        new StatModel("PHYD","PhysicalDMG", ""), // Physical Damage
+        new StatModel("MGCD","MagicalDMG", ""), // Magical Damage
+        new StatModel("FRD","FireDMG", ""), // Fire Damage
+        new StatModel("WTRD","WaterDMG", ""), // Water Damage
+        new StatModel("WNDD","WindDMG", ""), // Wind Damage
+        new StatModel("ELCD","ElectricDMG", ""), // Electric Damage
+        new StatModel("ERTD","EarthDMG", ""), // Earth Damage
+        new StatModel("ICED","IceDMG", ""), // Ice Damage
+        new StatModel("VDD","VoidDMG", ""), // Void Damage
+        new StatModel("LGHD","LightDMG", ""), // Light Damage
+        new StatModel("BLSD","BlastDMG", ""), // Blast Damage
+        new StatModel("ABLP","AbilityPWR", ""), // Ability Power
+        new StatModel("CRCH","CriticalChance", ""), // Crit Chance
+        new StatModel("CRIT","CriticalDamage", ""), // Crit Damage
+        new StatModel("ABLC","AbilityCritChance", ""), // Ability Crit Chance
+        new StatModel("ABLCD","AbilityCritDamage", ""), // Ability Crit Damage
+
+        // Character Related
+        new StatModel("EVA","Evasion", ""), // Chance to dodge incoming damage
+        new StatModel("LCK","Luck", ""), // Droprate(maybe only modifies higher tier droprate SC+)
+        new StatModel("TEN","Tenacity", ""), // Reduce effectiveness of debuffs
+        new StatModel("ABLCD","AbilityCooldown", ""), // Ability Cooldown
+        new StatModel("DWND","DownDuration", ""), // Characters go down and can be helped up, if they don't get help or are alone they die.
+        new StatModel("PWR","Power", ""), // Characters Calculated Power based on stat maxed.
+
+        // Dash Related
+        new StatModel("DCD","DashCooldown", ""), // Roll Cooldown Reduction
+        new StatModel("DW","DashWindow", "") // Roll Invulnerability Window
     ];
 
 

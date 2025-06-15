@@ -1227,6 +1227,9 @@ public class GameServerConnection {
                 case StatData.WISDOM_STAT:
                     player.intelligence_ = value;
                     continue;
+                case StatData.Effect:
+                    player.setEffect(stat.strStatValue_);
+                    continue;
                 case StatData.CONDITION_STAT:
                     go.condition_[ConditionEffect.CE_FIRST_BATCH] = value;
                     break;

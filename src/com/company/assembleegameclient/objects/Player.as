@@ -2,8 +2,10 @@ package com.company.assembleegameclient.objects {
 import com.company.assembleegameclient.map.Camera;
 import com.company.assembleegameclient.map.Square;
 import com.company.assembleegameclient.map.mapoverlay.CharacterStatusText;
+import com.company.assembleegameclient.objects.particles.EffectProperties;
 import com.company.assembleegameclient.objects.particles.HealingEffect;
 import com.company.assembleegameclient.objects.particles.LevelUpEffect;
+import com.company.assembleegameclient.objects.particles.ParticleEffect;
 import com.company.assembleegameclient.parameters.Parameters;
 import com.company.assembleegameclient.sound.SoundEffectLibrary;
 import com.company.assembleegameclient.util.AnimatedChar;
@@ -142,6 +144,9 @@ public class Player extends Character {
     public var premiumLootbox_:int = 0;
     public var legendaryLootbox_:int = 0;
     public var eventLootbox_:int = 0;
+    private var prevEffect_:String = "";
+    private var effString_:String = "";
+    private var unusualEffects_:Vector.<ParticleEffect> = null;
 
     public function Player(objectXML:XML) {
         this.ip_ = new IntPoint();
@@ -158,6 +163,8 @@ public class Player extends Character {
         this.maxHPMax_ = int(objectXML.MaxHitPoints.@max);
         this.maxSPMax_ = int(objectXML.MaxShieldPoints.@max);
         this.maxRPMax_ = int(objectXML.MaxResourcePoints.@max);
+        unusualEffects_ = new Vector.<ParticleEffect>();
+
         texturingCache_ = new Dictionary();
     }
 
@@ -469,13 +476,49 @@ public class Player extends Character {
         var square:Square = map_.lookupSquare(x, y);
         return square == null || square.tileType_ == 255 || square.obj_ != null && square.obj_.props_.fullOccupy_;
     }
-
+    public function setEffect(_arg1:String):void
+    {
+        this.effString_ = _arg1;
+    }
     override public function update(time:int, dt:int):Boolean {
         var playerAngle:Number = NaN;
         var moveSpeed:Number = NaN;
         var moveVecAngle:Number = NaN;
         var d:int = 0;
 
+        if(prevEffect_ != effString_)
+        {
+            prevEffect_ = effString_;
+            for each(var _effect:ParticleEffect in unusualEffects_)
+            {
+                map_.removeObj(_effect.objectId_);
+            }
+            this.unusualEffects_ = new Vector.<ParticleEffect>();
+            var _effXML:XML = XML(this.effString_);
+            if(_effXML.name() == "Effects")
+            {
+                for each(var _childEff:XML in _effXML.children())
+                {
+                    var child:ParticleEffect = ParticleEffect.fromProps(new EffectProperties(_childEff), this);
+                    if(child != null)
+                    {
+                        this.unusualEffects_.push(child);
+                    }
+                }
+            }
+            else
+            {
+                var _newEff:ParticleEffect = ParticleEffect.fromProps(new EffectProperties(XML(this.effString_)), this);
+                if(_newEff != null)
+                {
+                    this.unusualEffects_.push(_newEff);
+                }
+            }
+            for each(var eff:ParticleEffect in unusualEffects_)
+            {
+                map_.addObj(eff, x_, y_);
+            }
+        }
         if (isRegenerating() && Parameters.data_.particles) {
             if (this.healingEffect_ == null) {
                 this.healingEffect_ = new HealingEffect(this);

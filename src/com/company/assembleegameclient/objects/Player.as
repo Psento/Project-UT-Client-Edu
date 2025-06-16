@@ -98,7 +98,63 @@ public class Player extends Character {
     public var speed_:int = 0;
     public var dexterity_:int = 0;
     public var vigor_:int = 0;
-    public var intelligence_:int = 0;
+    public var intellect:int = 0;
+    // Overshield Related
+    public var OvershieldMax:int = 0; // Overshield Capacity
+    public var OvershieldDelay:int = 0; // Delay before overshield recharges
+    public var OvershieldRechargeRate:int = 0; // How fast overshield recharges
+
+    // Resource Related
+    public var MaxStamina:int = 0; // Resource - 4 bars that recouperate over time, use a bar or more to use an ability.
+    public var MaxRage:int = 0; // Resource - Take damage to gain fury
+    public var MaxFury:int = 0; // Resource - Attack to gain fury
+
+    // Resistance Related
+    public var Resilience:int = 0; // Physical, Magical, and Elemental Resistance in one. (Only Increased with stat points)
+    public var PhysicalResist:int = 0; // Physical Resistance
+    public var MagicResist:int = 0; // Magic Resistance
+    public var ElementalResist:int = 0; // Elemental Resistance
+    public var FireResist:int = 0; // Fire Damage
+    public var WaterResist:int = 0; // Water Damage
+    public var WindResist:int = 0; // Wind Damage
+    public var ElectricResist:int = 0; // Electric Damage
+    public var EarthResist:int = 0; // Earth Damage
+    public var IceResist:int = 0; // Ice Damage
+    public var VoidResist:int = 0; // Void Damage
+    public var LightResist:int = 0; // Light Damage
+    public var BlastResist:int = 0; // Blast Resistance
+
+    // Damage related
+    public var Strength:int = 0; // Physical, Magical, and Elemental Damage in one. (Only Increased with stat points)
+    public var PhysicalDMG:int = 0; // Physical Damage
+    public var MagicalDMG:int = 0; // Magical Damage
+    public var FireDMG:int = 0; // Fire Damage
+    public var WaterDMG:int = 0; // Water Damage
+    public var WindDMG:int = 0; // Wind Damage
+    public var ElectricDMG:int = 0; // Electric Damage
+    public var EarthDMG:int = 0; // Earth Damage
+    public var IceDMG:int = 0; // Ice Damage
+    public var VoidDMG:int = 0; // Void Damage
+    public var LightDMG:int = 0; // Light Damage
+    public var BlastDMG:int = 0; // Blast Damage
+    public var AbilityPWR:int = 0; // Ability Power
+    public var CriticalChance:int = 0; // Crit Chance
+    public var CriticalDamage:int = 0; // Crit Damage
+    public var AbilityCritChance:int = 0; // Ability Crit Chance
+    public var AbilityCritDamage:int = 0; // Ability Crit Damage
+
+    // Character Related
+    public var Evasion:int = 0; // Chance to dodge incoming damage
+    public var Luck:int = 0; // Droprate(maybe only modifies higher tier droprate SC+)
+    public var Tenacity:int = 0; // Reduce effectiveness of debuffs
+    public var AbilityCooldown:int = 0; // Ability Cooldown
+    public var DownDuration:int = 0; // Characters go down and can be helped up, if they don't get help or are alone they die.
+    public var Power:int = 0; // Characters Calculated Power based on stat maxed.
+
+    // Dash Related
+    public var DashCooldown:int = 0; // Roll Cooldown Reduction
+    public var DashWindow:int = 0; // Roll Invulnerability Window
+
     public var maxHPBoost_:int = 0;
     public var maxSPBoost_:int = 0;
     public var maxRPBoost_:int = 0;
@@ -193,7 +249,7 @@ public class Player extends Character {
         player.speed_ = int(playerXML.Speed);
         player.dexterity_ = int(playerXML.Dexterity);
         player.vigor_ = int(playerXML.HpRegen);
-        player.intelligence_ = int(playerXML.MpRegen);
+        player.intellect = int(playerXML.MpRegen);
         player.tex1Id_ = int(playerXML.Tex1);
         player.tex2Id_ = int(playerXML.Tex2);
         return player;
@@ -476,46 +532,38 @@ public class Player extends Character {
         var square:Square = map_.lookupSquare(x, y);
         return square == null || square.tileType_ == 255 || square.obj_ != null && square.obj_.props_.fullOccupy_;
     }
-    public function setEffect(_arg1:String):void
-    {
+
+    public function setEffect(_arg1:String):void {
         this.effString_ = _arg1;
     }
+
     override public function update(time:int, dt:int):Boolean {
         var playerAngle:Number = NaN;
         var moveSpeed:Number = NaN;
         var moveVecAngle:Number = NaN;
         var d:int = 0;
 
-        if(prevEffect_ != effString_)
-        {
+        if (prevEffect_ != effString_) {
             prevEffect_ = effString_;
-            for each(var _effect:ParticleEffect in unusualEffects_)
-            {
+            for each(var _effect:ParticleEffect in unusualEffects_) {
                 map_.removeObj(_effect.objectId_);
             }
             this.unusualEffects_ = new Vector.<ParticleEffect>();
             var _effXML:XML = XML(this.effString_);
-            if(_effXML.name() == "Effects")
-            {
-                for each(var _childEff:XML in _effXML.children())
-                {
+            if (_effXML.name() == "Effects") {
+                for each(var _childEff:XML in _effXML.children()) {
                     var child:ParticleEffect = ParticleEffect.fromProps(new EffectProperties(_childEff), this);
-                    if(child != null)
-                    {
+                    if (child != null) {
                         this.unusualEffects_.push(child);
                     }
                 }
-            }
-            else
-            {
+            } else {
                 var _newEff:ParticleEffect = ParticleEffect.fromProps(new EffectProperties(XML(this.effString_)), this);
-                if(_newEff != null)
-                {
+                if (_newEff != null) {
                     this.unusualEffects_.push(_newEff);
                 }
             }
-            for each(var eff:ParticleEffect in unusualEffects_)
-            {
+            for each(var eff:ParticleEffect in unusualEffects_) {
                 map_.addObj(eff, x_, y_);
             }
         }
@@ -681,39 +729,51 @@ public class Player extends Character {
         }
         return attMult;
     }
-    public function hasBlackPlague():Boolean{
+
+    public function hasBlackPlague():Boolean {
         return ObjectLibrary.typeToDisplayId_[this.equipment_[0]] == "Pestilential Agony";
     }
-    private function hasSacrificialDisaster():Boolean{
+
+    private function hasSacrificialDisaster():Boolean {
         return ObjectLibrary.typeToDisplayId_[this.equipment_[0]] == "The Devil's Ante" && hp_ >= maxHP_ * 0.7;
     }
-    public function hasOpportunist():Boolean{
+
+    public function hasOpportunist():Boolean {
         return ObjectLibrary.typeToDisplayId_[this.equipment_[0]] == "Gloomy Truth";
     }
-    private function hasInspirationDrive():Boolean{
+
+    private function hasInspirationDrive():Boolean {
         return ObjectLibrary.typeToDisplayId_[this.equipment_[0]] == "Gleaming Hope" && rp_ <= maxRP_ * 0.4;
     }
-    private function hasCheckmate():Boolean{
+
+    private function hasCheckmate():Boolean {
         return ObjectLibrary.typeToDisplayId_[this.equipment_[1]] == "King's Prey" && this.isBound();
     }
-    private function hasVigorBound():Boolean{
+
+    private function hasVigorBound():Boolean {
         return ObjectLibrary.typeToDisplayId_[this.equipment_[1]] == "Bind of Vitality";
     }
-    public function hasSadistic():Boolean{
+
+    public function hasSadistic():Boolean {
         return ObjectLibrary.typeToDisplayId_[this.equipment_[1]] == "Sight for Sore Eyes";
     }
-    public function hasSharedSuffering():Boolean{
+
+    public function hasSharedSuffering():Boolean {
         return ObjectLibrary.typeToDisplayId_[this.equipment_[1]] == "Karma's Sacrifice" && this.isFragile();
     }
-    public function hasMercilessFinish():Boolean{
+
+    public function hasMercilessFinish():Boolean {
         return ObjectLibrary.typeToDisplayId_[this.equipment_[1]] == "Warlord's Sacrifice";
     }
-    public function hasSelfAssured():Boolean{
+
+    public function hasSelfAssured():Boolean {
         return ObjectLibrary.typeToDisplayId_[this.equipment_[1]] == "Dracula's Promise" && sp_ >= this.maxSP_;
     }
-    public function hasInquisition():Boolean{
+
+    public function hasInquisition():Boolean {
         return ObjectLibrary.typeToDisplayId_[this.equipment_[3]] == "Scorched Earth" && this.hp_ >= this.hp_ * 0.8;
     }
+
     private function makeSkinTexture():void {
         var image:MaskedImage = this.skin.imageFromAngle(0, AnimatedChar.STAND, 0);
         animatedChar_ = this.skin;
@@ -982,6 +1042,7 @@ public class Player extends Character {
     public function isHexed():Boolean {
         return !((condition_[ConditionEffect.CE_FIRST_BATCH] & ConditionEffect.HEXED_BIT) == 0);
     }
+
     public function isInventoryFull():Boolean {
         var len:int = equipment_.length;
         for (var i:uint = 5; i < len; i++) {

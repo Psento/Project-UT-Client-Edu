@@ -67,33 +67,33 @@ public class LinkUtils {
 
     public static function getStatIndex(stat:int): int {
         switch (stat) {
-            case StatData.MAX_HP_STAT:
+            case StatData.MAXHP:
                 return 0;
-            case StatData.MAX_RP_STAT:
+            case StatData.MAXRP:
                 return 1;
-            case StatData.ATTACK_STAT:
+            case StatData.ATTACK:
                 return 2;
-            case StatData.ARMOR_STAT:
+            case StatData.ARMOR:
                 return 3;
-            case StatData.SPEED_STAT:
+            case StatData.SPEED:
                 return 4;
-            case StatData.DEXTERITY_STAT:
+            case StatData.DEXTERITY:
                 return 5;
-            case StatData.VIGOR_STAT: //TODO: It was vitality
+            case StatData.VIGOR: //TODO: It was vitality
                 return 6;
-            case StatData.WISDOM_STAT:
+            case StatData.INTELLECT:
                 return 7;
-            case StatData.Might:
+            case StatData.MIGHT:
                 return 8;
-            case StatData.Luck:
+            case StatData.LUCK:
                 return 9;
-            case StatData.Restoration:
+            case StatData.RESTORATION:
                 return 10;
-            case StatData.Protection:
+            case StatData.PROTECTION:
                 return 11;
-            case StatData.Fortune:
+            case StatData.FORTUNE:
                 return 14;
-            case StatData.Evasion:
+            case StatData.EVASION:
                 return 15;
             default:
                 return -1;

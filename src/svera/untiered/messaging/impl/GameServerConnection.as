@@ -1164,79 +1164,204 @@ public class GameServerConnection {
         for each(stat in stats) {
             value = stat.statValue_;
             switch (stat.statType_) {
-                case StatData.SIZE_STAT:
+                case StatData.SIZE:
                     go.size_ = value;
                     continue;
-                case StatData.MAX_HP_STAT:
+                case StatData.MAXHP:
                     go.maxHP_ = value;
                     continue;
-                case StatData.HP_STAT:
+                case StatData.HP:
                     go.hp_ = value;
                     continue;
-                case StatData.MAX_SP_STAT:
+                case StatData.MAXSP:
                     player.maxSP_ = value;
                     continue;
-                case StatData.SP_STAT:
+                case StatData.SP:
                     player.sp_ = value;
                     continue;
-                case StatData.MAX_RP_STAT:
+                case StatData.MAXRP:
                     player.maxRP_ = value;
                     continue;
-                case StatData.RP_STAT:
+                case StatData.RP:
                     player.rp_ = value;
                     continue;
-                case StatData.NEXT_LEVEL_EXP_STAT:
+                case StatData.NEXTLEVELEXP:
                     player.nextLevelExp_ = value;
                     continue;
-                case StatData.EXP_STAT:
+                case StatData.EXP:
                     player.exp_ = value;
                     continue;
-                case StatData.LEVEL_STAT:
+                case StatData.LEVEL:
                     go.level_ = value;
                     continue;
-                case StatData.AWAKENING_STAT:
+                case StatData.AWAKENING:
                     player.awakening_ = value;
                     continue;
-                case StatData.RELIC_STAT:
+                case StatData.RELIC:
                     player.relic_ = value;
                     continue;
-                case StatData.BACKGROUND_STAT:
+                case StatData.BACKGROUND:
                     player.background_ = value;
                     continue;
-                case StatData.STATPOINTS_STAT:
+                case StatData.STATPOINTS:
                     player.statPoints_ = value;
                     continue;
-                case StatData.ASCENSIONPOINTS_STAT:
+                case StatData.ASCENSIONPOINTS:
                     player.ascensionPoints_ = value;
                     continue;
-                case StatData.ATTACK_STAT:
+                case StatData.ATTACK:
                     player.attack_ = value;
                     continue;
-                case StatData.ARMOR_STAT:
+                case StatData.ARMOR:
                     go.armor_ = value;
                     continue;
-                case StatData.SPEED_STAT:
+                case StatData.SPEED:
                     player.speed_ = value;
                     continue;
-                case StatData.DEXTERITY_STAT:
+                case StatData.DEXTERITY:
                     player.dexterity_ = value;
                     continue;
-                case StatData.VIGOR_STAT:
+                case StatData.VIGOR:
                     player.vigor_ = value;
                     continue;
-                case StatData.WISDOM_STAT:
-                    player.intelligence_ = value;
+                case StatData.INTELLECT:
+                    player.intellect = value;
                     continue;
-                case StatData.Effect:
+
+                    //NEW STATS
+
+                    // Resistance Related
+
+                case StatData.RESILIENCE:
+                    player.Resilience = value;
+                    continue;
+                case StatData.PHYSICALRESIST:
+                    player.PhysicalResist = value;
+                    continue;
+                case StatData.MAGICRESIST:
+                    player.MagicResist = value;
+                    continue;
+                case StatData.ELEMENTALRESIST:
+                    player.ElementalResist = value;
+                    continue;
+                case StatData.FIRERESIST:
+                    player.FireResist = value;
+                    continue;
+                case StatData.WATERRESIST:
+                    player.WaterResist = value;
+                    continue;
+                case StatData.WINDRESIST:
+                    player.WindResist = value;
+                    continue;
+                case StatData.ELECTRICRESIST:
+                    player.ElectricResist = value;
+                    continue;
+                case StatData.EARTHRESIST:
+                    player.EarthResist = value;
+                    continue;
+                case StatData.ICERESIST:
+                    player.IceResist = value;
+                    continue;
+                case StatData.VOIDRESIST:
+                    player.VoidResist = value;
+                    continue;
+                case StatData.LIGHTRESIST:
+                    player.LightResist = value;
+                    continue;
+                case StatData.BLASTRESIST:
+                    player.BlastResist = value;
+                    continue;
+
+                    // Damage related
+
+                case StatData.STRENGTH:
+                    player.Strength = value;
+                    continue;
+                case StatData.PHYSICALDMG:
+                    player.PhysicalDMG = value;
+                    continue;
+                case StatData.MAGICALDMG:
+                    player.MagicalDMG = value;
+                    continue;
+                case StatData.FIREDMG:
+                    player.FireDMG = value;
+                    continue;
+                case StatData.WATERDMG:
+                    player.WaterDMG = value;
+                    continue;
+                case StatData.WINDDMG:
+                    player.WindDMG = value;
+                    continue;
+                case StatData.ELECTRICDMG:
+                    player.ElectricDMG = value;
+                    continue;
+                case StatData.EARTHDMG:
+                    player.EarthDMG = value;
+                    continue;
+                case StatData.ICEDMG:
+                    player.IceDMG = value;
+                    continue;
+                case StatData.VOIDDMG:
+                    player.VoidDMG = value;
+                    continue;
+                case StatData.LIGHTDMG:
+                    player.LightDMG = value;
+                    continue;
+                case StatData.BLASTDMG:
+                    player.BlastDMG = value;
+                    continue;
+                case StatData.ABILITYPWR:
+                    player.AbilityPWR = value;
+                    continue;
+                case StatData.CRITICALCHANCE:
+                    player.CriticalChance = value;
+                    continue;
+                case StatData.CRITICALDAMAGE:
+                    player.CriticalDamage = value;
+                    continue;
+                case StatData.ABILITYCRITCHANCE:
+                    player.AbilityCritChance = value;
+                    continue;
+                case StatData.ABILITYCRITDAMAGE:
+                    player.AbilityCritDamage = value;
+                    continue;
+
+                case StatData.EVASION:
+                    player.Evasion = value;
+                    continue;
+                case StatData.LUCK:
+                    player.Luck = value;
+                    continue;
+                case StatData.TENACITY:
+                    player.Tenacity = value;
+                    continue;
+                case StatData.ABILITYCOOLDOWN:
+                    player.AbilityCooldown = value;
+                    continue;
+                case StatData.DOWNDURATION:
+                    player.DownDuration = value;
+                    continue;
+                case StatData.POWER:
+                    player.Power = value;
+                    continue;
+
+                case StatData.DASHCOOLDOWN:
+                    player.DashCooldown = value;
+                    continue;
+                case StatData.DASHWINDOW:
+                    player.DashWindow = value;
+                    continue;
+
+                case StatData.EFFECT:
                     player.setEffect(stat.strStatValue_);
                     continue;
-                case StatData.CONDITION_STAT:
+                case StatData.CONDITION:
                     go.condition_[ConditionEffect.CE_FIRST_BATCH] = value;
                     break;
-                case StatData.Effects2:
+                case StatData.EFFECTS2:
                     go.condition_[ConditionEffect.CE_SECOND_BATCH] = value;
                     break;
-                case StatData.Effects3:
+                case StatData.EFFECTS3:
                     go.condition_[ConditionEffect.CE_THIRD_BATCH] = value;
                     break;
                 case StatData.INVENTORY:
@@ -1246,132 +1371,132 @@ public class GameServerConnection {
                         go.itemDatas_[i / 2] = itemarray[i + 1];
                     }
                     continue;
-                case StatData.NUM_STARS_STAT:
+                case StatData.NUMSTARS:
                     player.numStars_ = value;
                     continue;
-                case StatData.NAME_STAT:
+                case StatData.NAME:
                     if (go.name_ != stat.strStatValue_) {
                         go.name_ = stat.strStatValue_;
                         go.nameBitmapData_ = null;
                     }
                     continue;
-                case StatData.TEX1_STAT:
+                case StatData.TEX1:
                     go.setTex1(value);
                     continue;
-                case StatData.TEX2_STAT:
+                case StatData.TEX2:
                     go.setTex2(value);
                     continue;
-                case StatData.MERCHANDISE_TYPE_STAT:
+                case StatData.MERCHANDISETYPE:
                     merchant.setMerchandiseType(value);
                     continue;
-                case StatData.TSAVORITE_STAT:
+                case StatData.TSAVORITE:
                     player.setTsavorite(value);
                     continue;
-                case StatData.MEDALLIONS_STAT:
+                case StatData.MEDALLIONS:
                     player.setMedallions(value);
                     continue;
-                case StatData.HONOR_STAT:
+                case StatData.HONOR:
                     player.setHonor(value);
                     continue;
-                case StatData.MERCHANDISE_PRICE_STAT:
+                case StatData.MERCHANDISEPRICE:
                     (go as SellableObject).setPrice(value);
                     continue;
-                case StatData.ACTIVE_STAT:
+                case StatData.ACTIVE:
                     (go as Portal).active_ = value != 0;
                     continue;
-                case StatData.ACCOUNT_ID_STAT:
+                case StatData.ACCOUNTID:
                     player.accountId_ = value;
                     continue;
-                case StatData.FAME_STAT:
+                case StatData.FAME:
                     player.fame_ = value;
                     continue;
-                case StatData.MERCHANDISE_CURRENCY_STAT:
+                case StatData.MERCHANDISECURRENCY:
                     (go as SellableObject).setCurrency(value);
                     continue;
-                case StatData.CONNECT_STAT:
+                case StatData.CONNECT:
                     go.connectType_ = value;
                     continue;
-                case StatData.MERCHANDISE_COUNT_STAT:
+                case StatData.MERCHANDISECOUNT:
                     merchant.count_ = value;
                     merchant.untilNextMessage_ = 0;
                     continue;
-                case StatData.MERCHANDISE_MINS_LEFT_STAT:
+                case StatData.MERCHANDISEMINSLEFT:
                     merchant.minsLeft_ = value;
                     merchant.untilNextMessage_ = 0;
                     continue;
-                case StatData.MERCHANDISE_DISCOUNT_STAT:
+                case StatData.MERCHANDISEDISCOUNT:
                     merchant.discount_ = value;
                     merchant.untilNextMessage_ = 0;
                     continue;
-                case StatData.MERCHANDISE_RANK_REQ_STAT:
+                case StatData.MERCHANDISERANKREQ:
                     (go as SellableObject).setRankReq(value);
                     continue;
-                case StatData.MAX_HP_BOOST_STAT:
+                case StatData.MAXHPBOOST:
                     player.maxHPBoost_ = value;
                     continue;
-                case StatData.MAX_SP_BOOST_STAT:
+                case StatData.MAXSPBOOST:
                     player.maxSPBoost_ = value;
                     continue;
-                case StatData.MAX_RP_BOOST_STAT:
+                case StatData.MAXRPBOOST:
                     player.maxRPBoost_ = value;
                     continue;
-                case StatData.ATTACK_BOOST_STAT:
+                case StatData.ATTACKBOOST:
                     player.attackBoost_ = value;
                     continue;
-                case StatData.ARMOR_BOOST_STAT:
+                case StatData.ARMORBOOST:
                     player.armorBoost_ = value;
                     continue;
-                case StatData.SPEED_BOOST_STAT:
+                case StatData.SPEEDBOOST:
                     player.speedBoost_ = value;
                     continue;
-                case StatData.VIGOR_BOOST_STAT:
+                case StatData.VIGORBOOST:
                     player.vigorBoost_ = value;
                     continue;
-                case StatData.INTELLIGENCE_BOOST_STAT:
+                case StatData.INTELLECTBOOST:
                     player.intelligenceBoost_ = value;
                     continue;
-                case StatData.DEXTERITY_BOOST_STAT:
+                case StatData.DEXTERITYBOOST:
                     player.dexterityBoost_ = value;
                     continue;
-                case StatData.OWNER_ACCOUNT_ID_STAT:
+                case StatData.OWNERACCOUNTID:
                     if (go is Container) {
                         (go as Container).setOwnerId(value);
                     }
                     continue;
-                case StatData.CHAR_FAME_STAT:
+                case StatData.CHARFAME:
                     player.charFame_ = value;
                     continue;
-                case StatData.NEXT_CLASS_QUEST_FAME_STAT:
+                case StatData.NEXTCLASSQUESTFAME:
                     player.nextClassQuestFame_ = value;
                     continue;
-                case StatData.LEGENDARY_RANK_STAT:
+                case StatData.LEGENDARYRANK:
                     player.legendaryRank_ = value;
                     continue;
-                case StatData.SINK_LEVEL_STAT:
+                case StatData.SINKLEVEL:
                     if (!isMyObject) {
                         player.sinkLevel_ = value;
                     }
                     continue;
-                case StatData.ALT_TEXTURE_STAT:
+                case StatData.ALTTEXTURE:
                     go.setAltTexture(value);
                     continue;
-                case StatData.GUILD_NAME_STAT:
+                case StatData.GUILDNAME:
                     player.setGuildName(stat.strStatValue_);
                     continue;
-                case StatData.GUILD_RANK_STAT:
+                case StatData.GUILDRANK:
                     player.guildRank_ = value;
                     continue;
-                case StatData.BREATH_STAT:
+                case StatData.BREATH:
                     player.breath_ = value;
                     continue;
 
-                case StatData.HEALTH_POTION_STACK_STAT:
+                case StatData.HEALTHPOTIONSTACK:
                     player.healthPotionCount_ = value;
                     continue;
-                case StatData.MAGIC_POTION_STACK_STAT:
+                case StatData.MAGICPOTIONSTACK:
                     player.magicPotionCount_ = value;
                     continue;
-                case StatData.TEXTURE_STAT:
+                case StatData.TEXTURE:
                     player.skinId != value && this.setPlayerSkinTemplate(player, value);
                     continue;
                 default:

@@ -280,31 +280,31 @@ public class ObjectLibrary {
         if (reqXML.toString() == "Stat") {
             val = int(reqXML.@value);
             switch (int(reqXML.@stat)) {
-                case StatData.MAX_HP_STAT:
+                case StatData.MAXHP:
                     return p.maxHP_ >= val;
-                case StatData.MAX_SP_STAT:
+                case StatData.MAXSP:
                     return p.maxSP_ >= val;
-                case StatData.MAX_RP_STAT:
+                case StatData.MAXRP:
                     return p.maxRP_ >= val;
-                case StatData.LEVEL_STAT:
+                case StatData.LEVEL:
                     return p.level_ >= val;
-                case StatData.AWAKENING_STAT:
+                case StatData.AWAKENING:
                     return p.awakening_ >= val;
-                case StatData.RELIC_STAT:
+                case StatData.RELIC:
                     return p.relic_ >= val;
-                case StatData.BACKGROUND_STAT:
+                case StatData.BACKGROUND:
                     return p.background_ >= val;
-                case StatData.ATTACK_STAT:
+                case StatData.ATTACK:
                     return p.attack_ >= val;
-                case StatData.ARMOR_STAT:
+                case StatData.ARMOR:
                     return p.armor_ >= val;
-                case StatData.SPEED_STAT:
+                case StatData.SPEED:
                     return p.speed_ >= val;
-                case StatData.VIGOR_STAT:
+                case StatData.VIGOR:
                     return p.vigor_ >= val;
-                case StatData.WISDOM_STAT:
-                    return p.intelligence_ >= val;
-                case StatData.DEXTERITY_STAT:
+                case StatData.INTELLECT:
+                    return p.intellect >= val;
+                case StatData.DEXTERITY:
                     return p.dexterity_ >= val;
             }
         }

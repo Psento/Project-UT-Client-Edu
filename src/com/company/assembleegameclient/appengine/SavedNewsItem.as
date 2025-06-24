@@ -6,7 +6,7 @@ import flash.display.BitmapData;
 
 public class SavedNewsItem {
 
-    private static const FAME:String = "fame";
+    private static const HONOR:String = "honor";
     private static const ORYX:String = "oryx";
 
 
@@ -34,7 +34,7 @@ public class SavedNewsItem {
         return TextureRedrawer.redraw(bd, 80, true, 0);
     }
 
-    private static function fameIcon():BitmapData {
+    private static function honorIcon():BitmapData {
         var bd:BitmapData = AssetLibrary.getImageFromSet("Currency_Icons16x16", 0);
         return TextureRedrawer.redraw(bd, 80, true, 0);
     }
@@ -46,8 +46,8 @@ public class SavedNewsItem {
 
     public function getIcon():BitmapData {
         switch (this.iconName.toLowerCase()) {
-            case FAME:
-                return fameIcon();
+            case HONOR:
+                return honorIcon();
             case ORYX:
                 return oryxIcon();
         }

@@ -4,7 +4,7 @@ import svera.untiered.messaging.impl.incoming.Death;
 public class DeathModel {
 
 
-    private var isDeathFameViewPending:Boolean;
+    private var isDeathHonorViewPending:Boolean;
 
     private var lastDeath:Death;
 
@@ -14,7 +14,7 @@ public class DeathModel {
 
     public function setLastDeath(death:Death):void {
         this.lastDeath = death;
-        this.isDeathFameViewPending = true;
+        this.isDeathHonorViewPending = true;
     }
 
     public function getLastDeath():Death {
@@ -22,11 +22,11 @@ public class DeathModel {
     }
 
     public function getIsDeathViewPending():Boolean {
-        return this.isDeathFameViewPending;
+        return this.isDeathHonorViewPending;
     }
 
     public function clearPendingDeathView():void {
-        this.isDeathFameViewPending = false;
+        this.isDeathHonorViewPending = false;
     }
 }
 }

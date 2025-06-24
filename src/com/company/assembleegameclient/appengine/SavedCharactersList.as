@@ -20,11 +20,9 @@ public class SavedCharactersList extends Event {
     public var numChars_:int = 0;
     public var savedChars_:Vector.<SavedCharacter>;
     public var charStats_:Object;
-    public var totalFame_:int = 0;
     public var traitOne_:int = -1;
     public var traitTwo_:int = -1;
     public var traitThree_:int = -1;
-    public var fame_:int = 0;
     public var tsavorite_:int = 0;
     public var medallions_:int = 0;
     public var honor_:int = 0;
@@ -56,7 +54,7 @@ public class SavedCharactersList extends Event {
         if (injector) {
             account = injector.getInstance(Account);
             account.reportIntStat("BestLevel", this.bestOverallLevel());
-            account.reportIntStat("BestFame", this.bestOverallFame());
+            account.reportIntStat("BestHonor", this.bestOverallHonor());
             account.reportIntStat("NumStars", this.numStars_);
         }
     }
@@ -74,8 +72,6 @@ public class SavedCharactersList extends Event {
     private function parseUserData(accountXML:XML):void {
         this.accountId_ = accountXML.AccountId;
         this.name_ = accountXML.Name;
-        this.totalFame_ = int(accountXML.Stats.TotalFame);
-        this.fame_ = int(accountXML.Stats.Fame);
         this.tsavorite_ = int(accountXML.Stats.Tsavorite);
         this.medallions_ = int(accountXML.Stats.Medallions);
         this.honor_ = int(accountXML.Stats.Honor);
@@ -138,20 +134,20 @@ public class SavedCharactersList extends Event {
         return bestLevel;
     }
 
-    public function bestFame(objectType:int):int {
+    public function bestHonor(objectType:int):int {
         var charStats:CharacterStats = this.charStats_[objectType];
-        return charStats == null ? int(0) : int(charStats.bestFame());
+        return charStats == null ? int(0) : int(charStats.bestHonor());
     }
 
-    public function bestOverallFame():int {
+    public function bestOverallHonor():int {
         var charStats:CharacterStats = null;
-        var bestFame:int = 0;
+        var bestHonor:int = 0;
         for each(charStats in this.charStats_) {
-            if (charStats.bestFame() > bestFame) {
-                bestFame = charStats.bestFame();
+            if (charStats.bestHonor() > bestHonor) {
+                bestHonor = charStats.bestHonor();
             }
         }
-        return bestFame;
+        return bestHonor;
     }
 
     public function availableCharSlots():int {

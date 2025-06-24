@@ -8,7 +8,7 @@ import flash.display.Sprite;
 import flash.filters.DropShadowFilter;
 import flash.geom.ColorTransform;
 
-public class FameUtil {
+public class HonorUtil {
 
     public static const STARS:Vector.<int> = new <int>[20, 150, 400, 800, 2000];
 
@@ -25,7 +25,7 @@ public class FameUtil {
     public static const COLORS:Vector.<ColorTransform> = new <ColorTransform>[lightBlueCT, darkBlueCT, redCT, orangeCT, yellowCT];
 
 
-    public function FameUtil() {
+    public function HonorUtil() {
         super();
     }
 
@@ -33,16 +33,16 @@ public class FameUtil {
         return ObjectLibrary.playerChars_.length * STARS.length;
     }
 
-    public static function numStars(fame:int):int {
+    public static function numStars(honor:int):int {
         var num:int = 0;
-        while (num < STARS.length && fame >= STARS[num]) {
+        while (num < STARS.length && honor >= STARS[num]) {
             num++;
         }
         return num;
     }
 
-    public static function nextStarFame(bestFame:int, currFame:int):int {
-        var curr:int = Math.max(bestFame, currFame);
+    public static function nextStarHonor(bestHonor:int, currHonor:int):int {
+        var curr:int = Math.max(bestHonor, currHonor);
         for (var i:int = 0; i < STARS.length; i++) {
             if (STARS[i] > curr) {
                 return STARS[i];
@@ -90,9 +90,9 @@ public class FameUtil {
         return sprite;
     }
 
-    public static function getFameIcon():BitmapData {
-        var fameBD:BitmapData = AssetLibrary.getImageFromSet("Currency_Icons16x16", 0);
-        return TextureRedrawer.redraw(fameBD, 40, true, 0);
+    public static function getHonorIcon():BitmapData {
+        var honor:BitmapData = AssetLibrary.getImageFromSet("Currency_Icons16x16", 0);
+        return TextureRedrawer.redraw(honor, 40, true, 0);
     }
 }
 }

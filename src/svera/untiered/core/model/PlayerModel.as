@@ -11,7 +11,6 @@ public class PlayerModel {
     public const tsavoriteChanged:Signal = new Signal(int);
     public const medallionsChanged:Signal = new Signal(int);
     public const honorChanged:Signal = new Signal(int);
-    public const fameChanged:Signal = new Signal(int);
     public var charList:SavedCharactersList;
     public var isInvalidated:Boolean;
     public var currentCharId:int;
@@ -84,22 +83,6 @@ public class PlayerModel {
         }
     }
 
-    public function getFame():int {
-        return this.charList.fame_;
-    }
-
-    public function changeFame(fame:int):void {
-        this.charList.fame_ = this.charList.fame_ + fame;
-        this.fameChanged.dispatch(this.charList.fame_);
-    }
-
-    public function setFame(fame:int):void {
-        if (this.charList.fame_ != fame) {
-            this.charList.fame_ = fame;
-            this.fameChanged.dispatch(fame);
-        }
-    }
-
     public function getCharacterCount():int {
         return this.charList.numChars_;
     }
@@ -135,10 +118,6 @@ public class PlayerModel {
 
     public function getGuildRank():int {
         return this.charList.guildRank_;
-    }
-
-    public function getTotalFame():int {
-        return this.charList.totalFame_;
     }
 
     public function getNextCharId():int {
@@ -187,8 +166,8 @@ public class PlayerModel {
         return this.charList.charStats_;
     }
 
-    public function getBestFame(objectType:int):int {
-        return this.charList.bestFame(objectType);
+    public function getBestHonor(objectType:int):int {
+        return this.charList.bestHonor(objectType);
     }
 
     public function getBestLevel(unlockType:int):int {

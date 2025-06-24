@@ -6,17 +6,17 @@ import svera.lib.tasks.TaskMonitor;
 import svera.untiered.core.model.PlayerModel;
 import svera.untiered.core.signals.TaskErrorSignal;
 import svera.untiered.death.model.DeathModel;
-import svera.untiered.fame.model.FameModel;
+import svera.untiered.honor.model.HonorModel;
 import svera.untiered.legends.service.GetLegendsListTask;
 
-public class RequestFameListCommand {
+public class RequestHonorListCommand {
 
 
     [Inject]
     public var task:GetLegendsListTask;
 
     [Inject]
-    public var update:FameListUpdateSignal;
+    public var update:HonorListUpdateSignal;
 
     [Inject]
     public var error:TaskErrorSignal;
@@ -31,9 +31,9 @@ public class RequestFameListCommand {
     public var death:DeathModel;
 
     [Inject]
-    public var model:FameModel;
+    public var model:HonorModel;
 
-    public function RequestFameListCommand() {
+    public function RequestHonorListCommand() {
         super();
     }
 

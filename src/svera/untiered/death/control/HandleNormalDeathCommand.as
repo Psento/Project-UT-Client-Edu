@@ -6,9 +6,9 @@ import svera.lib.tasks.TaskMonitor;
 import svera.lib.tasks.TaskSequence;
 import svera.untiered.account.core.services.GetCharListTask;
 import svera.untiered.core.model.PlayerModel;
-import svera.untiered.fame.control.ShowFameViewSignal;
-import svera.untiered.fame.model.FameVO;
-import svera.untiered.fame.model.SimpleFameVO;
+import svera.untiered.honor.control.ShowHonorViewSignal;
+import svera.untiered.honor.model.HonorVO;
+import svera.untiered.honor.model.SimpleHonorVO;
 import svera.untiered.game.signals.DisconnectGameSignal;
 import svera.untiered.messaging.impl.incoming.Death;
 
@@ -25,7 +25,7 @@ public class HandleNormalDeathCommand {
     public var task:GetCharListTask;
 
     [Inject]
-    public var showFame:ShowFameViewSignal;
+    public var showHonor:ShowHonorViewSignal;
 
     [Inject]
     public var monitor:TaskMonitor;
@@ -36,29 +36,29 @@ public class HandleNormalDeathCommand {
     [Inject]
     public var logger:ILogger;
 
-    private var fameVO:FameVO;
+    private var honorVO:HonorVO;
 
     public function HandleNormalDeathCommand() {
         super();
     }
 
     public function execute():void {
-        this.fameVO = new SimpleFameVO(this.death.accountId_, this.death.charId_);
-        this.gotoFameView();
+        this.honorVO = new SimpleHonorVO(this.death.accountId_, this.death.charId_);
+        this.gotoHonorView();
     }
 
-    private function gotoFameView():void {
+    private function gotoHonorView():void {
         if (this.player.getAccountId() == -1) {
-            this.gotoFameViewOnceDataIsLoaded();
+            this.gotoHonorViewOnceDataIsLoaded();
         } else {
-            this.showFame.dispatch(this.fameVO);
+            this.showHonor.dispatch(this.honorVO);
         }
     }
 
-    private function gotoFameViewOnceDataIsLoaded():void {
+    private function gotoHonorViewOnceDataIsLoaded():void {
         var sequence:TaskSequence = new TaskSequence();
         sequence.add(this.task);
-        sequence.add(new DispatchSignalTask(this.showFame, this.fameVO));
+        sequence.add(new DispatchSignalTask(this.showHonor, this.honorVO));
         this.monitor.add(sequence);
         sequence.start();
     }

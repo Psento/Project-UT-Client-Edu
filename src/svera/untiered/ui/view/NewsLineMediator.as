@@ -3,8 +3,8 @@ import com.company.assembleegameclient.screens.NewsLine;
 
 import robotlegs.bender.bundles.mvcs.Mediator;
 
-import svera.untiered.fame.control.ShowFameViewSignal;
-import svera.untiered.fame.model.SimpleFameVO;
+import svera.untiered.honor.control.ShowHonorViewSignal;
+import svera.untiered.honor.model.SimpleHonorVO;
 
 public class NewsLineMediator extends Mediator {
 
@@ -13,22 +13,22 @@ public class NewsLineMediator extends Mediator {
     public var view:NewsLine;
 
     [Inject]
-    public var showFameView:ShowFameViewSignal;
+    public var showHonorView:ShowHonorViewSignal;
 
     public function NewsLineMediator() {
         super();
     }
 
     override public function initialize():void {
-        this.view.viewCharacterFame.add(this.onViewFame);
+        this.view.viewCharacterHonor.add(this.onViewHonor);
     }
 
     override public function destroy():void {
-        this.view.viewCharacterFame.remove(this.onViewFame);
+        this.view.viewCharacterHonor.remove(this.onViewHonor);
     }
 
-    private function onViewFame(characterId:int):void {
-        this.showFameView.dispatch(new SimpleFameVO(this.view.accountId, characterId));
+    private function onViewHonor(characterId:int):void {
+        this.showHonorView.dispatch(new SimpleHonorVO(this.view.accountId, characterId));
     }
 }
 }

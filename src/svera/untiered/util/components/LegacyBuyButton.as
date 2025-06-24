@@ -19,8 +19,7 @@ public class LegacyBuyButton extends BuyButton {
     public static const tsavorite:BitmapData = IconFactory.makeTsavorite();
     public static const medallions:BitmapData = IconFactory.makeMedallions();
     public static const honor:BitmapData = IconFactory.makeHonor();
-    public static const fame:BitmapData = IconFactory.makeFame();
-    public static const guildFame:BitmapData = IconFactory.makeGuildFame();
+    public static const guildHonor:BitmapData = IconFactory.makeGuildHonor();
 
     public var prefix:String;
     public var text:SimpleText;
@@ -84,11 +83,8 @@ public class LegacyBuyButton extends BuyButton {
             case Currency.HONOR:
                 this.icon.bitmapData = honor;
                 break;
-            case Currency.FAME:
-                this.icon.bitmapData = fame;
-                break;
             case Currency.GUILD_FAME:
-                this.icon.bitmapData = guildFame;
+                this.icon.bitmapData = guildHonor;
                 break;
             default:
                 this.icon.bitmapData = null;

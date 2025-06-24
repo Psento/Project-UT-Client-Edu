@@ -44,7 +44,7 @@ public class CreateNewCharacterRect extends CharacterRect {
         this.classNameText_.x = this.x + this.width / 2 - this.classNameText_.width / 2;
         this.classNameText_.y = this.y + this.height + this.classNameText_.height;
         selectContainer.addChild(this.classNameText_);
-        /*if(model.getNumStars() != FameUtil.maxStars())
+        /*if(model.getNumStars() != HonorUtil.maxStars())
         {
            this.taglineIcon_ = new StarGraphic();
            this.taglineIcon_.transform.colorTransform = new ColorTransform(179 / 255,179 / 255,179 / 255);
@@ -55,7 +55,7 @@ public class CreateNewCharacterRect extends CharacterRect {
            this.taglineIcon_.filters = [new DropShadowFilter(0,0,0)];
            selectContainer.addChild(this.taglineIcon_);
            this.taglineText_ = new SimpleText(14,11776947,false,0,0);
-           this.taglineText_.text = FameUtil.maxStars() - model.getNumStars() + " Class quests not yet completed";
+           this.taglineText_.text = HonorUtil.maxStars() - model.getNumStars() + " Class quests not yet completed";
            this.taglineText_.updateMetrics();
            this.taglineText_.filters = [new DropShadowFilter(0,0,0,1,8,8)];
            this.taglineText_.x = 58 + this.taglineIcon_.width + 2;

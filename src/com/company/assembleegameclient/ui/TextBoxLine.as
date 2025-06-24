@@ -1,6 +1,6 @@
 package com.company.assembleegameclient.ui {
 import com.company.assembleegameclient.parameters.Parameters;
-import com.company.assembleegameclient.util.FameUtil;
+import com.company.assembleegameclient.util.HonorUtil;
 
 import flash.display.Sprite;
 import flash.text.engine.ContentElement;
@@ -25,7 +25,7 @@ public class TextBoxLine {
         this.time_ = time;
         this.name_ = name;
         if (numStars >= 0) {
-            this.rankIcon_ = FameUtil.numStarsToIcon(numStars);
+            this.rankIcon_ = HonorUtil.numStarsToIcon(numStars);
         }
         this.recipient_ = recipient;
         this.toMe_ = toMe;

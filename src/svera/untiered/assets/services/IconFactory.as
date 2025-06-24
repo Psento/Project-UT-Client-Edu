@@ -29,12 +29,7 @@ public class IconFactory {
         return cropAndGlowIcon(data);
     }
 
-    public static function makeFame():BitmapData {
-        var data:BitmapData = TextureRedrawer.resize(AssetLibrary.getImageFromSet("Currency_Icons16x16", 0), null, 32, true, 0, 0);
-        return cropAndGlowIcon(data);
-    }
-
-    public static function makeGuildFame():BitmapData {
+    public static function makeGuildHonor():BitmapData {
         var data:BitmapData = TextureRedrawer.resize(AssetLibrary.getImageFromSet("Currency_Icons16x16", 0), null, 32, true, 0, 0);
         return cropAndGlowIcon(data);
     }

@@ -1407,9 +1407,6 @@ public class GameServerConnection {
                 case StatData.ACCOUNTID:
                     player.accountId_ = value;
                     continue;
-                case StatData.FAME:
-                    player.fame_ = value;
-                    continue;
                 case StatData.MERCHANDISECURRENCY:
                     (go as SellableObject).setCurrency(value);
                     continue;
@@ -1463,11 +1460,11 @@ public class GameServerConnection {
                         (go as Container).setOwnerId(value);
                     }
                     continue;
-                case StatData.CHARFAME:
-                    player.charFame_ = value;
+                case StatData.CHARHONOR:
+                    player.charHonor = value;
                     continue;
-                case StatData.NEXTCLASSQUESTFAME:
-                    player.nextClassQuestFame_ = value;
+                case StatData.NEXTCLASSQUESTHONOR:
+                    player.nextClassQuestHonor = value;
                     continue;
                 case StatData.LEGENDARYRANK:
                     player.legendaryRank_ = value;
@@ -1515,7 +1512,7 @@ public class GameServerConnection {
     private function processObjectStatus(objectStatus:ObjectStatusData):void {
         var pLevel:int = -1;
         var pExp:int = -1;
-        var pFame:int = -1;
+        var pHonor:int = -1;
         var map:Map = this.gs_.map;
         var go:GameObject = map.goDict_[objectStatus.objectId_];
         if (go == null) {
@@ -1530,7 +1527,7 @@ public class GameServerConnection {
         if (player != null) {
             pLevel = player.level_;
             pExp = player.exp_;
-            pFame = player.charFame_;
+            pHonor = player.charHonor;
         }
         this.updateGameObject(go, objectStatus.stats_, isMyObject);
         if (player != null && pLevel != -1) {
@@ -1542,8 +1539,8 @@ public class GameServerConnection {
                 }
             } else if (player.exp_ > pExp) {
                 player.handleExpUp(player.exp_ - pExp);
-                if (player.charFame_ > pFame) {
-                    player.handleFameUp(player.charFame_ - pFame)
+                if (player.charHonor > pHonor) {
+                    player.handleHonorUp(player.charHonor - pHonor)
                 }
             }
         }
@@ -1626,9 +1623,6 @@ public class GameServerConnection {
         if (buyResult.result_ == BuyResult.SUCCESS_BRID) {
             if (this.outstandingBuy_) {
                 switch (this.outstandingBuy_.currency_) {
-                    case Currency.FAME:
-                        this.playerModel.changeFame(-this.outstandingBuy_.price_);
-                        break;
                     case Currency.TSAVORITE:
                         this.playerModel.changeTsavorite(-this.outstandingBuy_.price_);
                         break;

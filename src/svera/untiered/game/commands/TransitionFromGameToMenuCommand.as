@@ -7,9 +7,9 @@ import svera.untiered.core.signals.SetScreenSignal;
 import svera.untiered.core.signals.SetScreenWithValidDataSignal;
 import svera.untiered.death.model.DeathModel;
 import svera.untiered.dialogs.control.CloseDialogsSignal;
-import svera.untiered.fame.control.ShowFameViewSignal;
-import svera.untiered.fame.model.FameVO;
-import svera.untiered.fame.model.SimpleFameVO;
+import svera.untiered.honor.control.ShowHonorViewSignal;
+import svera.untiered.honor.model.HonorVO;
+import svera.untiered.honor.model.SimpleHonorVO;
 import svera.untiered.messaging.impl.incoming.Death;
 
 public class TransitionFromGameToMenuCommand {
@@ -31,7 +31,7 @@ public class TransitionFromGameToMenuCommand {
     public var setScreenWithValidData:SetScreenWithValidDataSignal;
 
     [Inject]
-    public var showFameView:ShowFameViewSignal;
+    public var showHonorView:ShowHonorViewSignal;
 
     [Inject]
     public var closeDialogsSignal:CloseDialogsSignal;
@@ -52,8 +52,8 @@ public class TransitionFromGameToMenuCommand {
 
     private function showDeathView():void {
         var death:Death = this.model.getLastDeath();
-        var fameVO:FameVO = new SimpleFameVO(this.player.getAccountId(), death.charId_);
-        this.showFameView.dispatch(fameVO);
+        var honorVO:HonorVO = new SimpleHonorVO(this.player.getAccountId(), death.charId_);
+        this.showHonorView.dispatch(honorVO);
     }
 
     private function showCurrentCharacterScreen():void {

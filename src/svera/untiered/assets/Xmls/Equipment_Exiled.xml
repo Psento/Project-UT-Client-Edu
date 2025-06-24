@@ -22,7 +22,7 @@
         // ATK
         <ActivateOnEquip stat="5" amount="-10">IncrementStat</ActivateOnEquip>
         // DEX
-        <FameBonus>8</FameBonus>
+        <HonorBonus>8</HonorBonus>
         <Origin>Relic Sword</Origin>
     </Object>
     <!-- #endregion -->
@@ -58,7 +58,7 @@
             <Wavy/>
             <ConditionEffect duration="1.0">Deficient</ConditionEffect>
         </Projectile>
-        <FameBonus>14</FameBonus>
+        <HonorBonus>14</HonorBonus>
         <Origin>Relic Sword</Origin>
     </Object>
     <Object type="0x48fc" id="Revenant Claw Bolt">
@@ -105,7 +105,7 @@
             <ArmorPiercing/>
             <MultiHit/>
         </Projectile>
-        <FameBonus>10</FameBonus>
+        <HonorBonus>10</HonorBonus>
         <Origin>Relic Bow</Origin>
     </Object>
     <Object type="0x5869" id="SOTP">
@@ -155,7 +155,7 @@
             <Wavy/>
             <ArmorPiercing/>
         </Projectile>
-        <FameBonus>10</FameBonus>
+        <HonorBonus>10</HonorBonus>
         <Origin>Relic Dagger</Origin>
     </Object>
     <Object type="0x5871" id="BOTAH">
@@ -197,7 +197,7 @@
             <MultiHit/>
             <ArmorPiercing/>
         </Projectile>
-        <FameBonus>8</FameBonus>
+        <HonorBonus>8</HonorBonus>
         <Origin>Relic Staff</Origin>
     </Object>
     <Object type="0x7956" id="OFear Shot">
@@ -240,7 +240,7 @@
         <Steal type="mana" amount="6"/>
         <ItemEffect>Equilibrium</ItemEffect>
         <Exiled id="Equilibrium"/>
-        <FameBonus>10</FameBonus>
+        <HonorBonus>10</HonorBonus>
         <Origin>Relic Accessory</Origin>
     </Object>
     <Object type="0x5470" id="Omnipotence Ring">
@@ -275,7 +275,7 @@
         <Steal type="mana" amount="2"/>
         <ItemEffect>Equilibrium</ItemEffect>
         <Exiled id="Equilibrium"/>
-        <FameBonus>10</FameBonus>
+        <HonorBonus>10</HonorBonus>
         <Origin>Relic Accessory</Origin>
     </Object>
     <!-- #endregion -->

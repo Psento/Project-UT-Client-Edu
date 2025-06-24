@@ -102,8 +102,8 @@ public class SavedCharacter {
         return int(this.charXML_.Exp);
     }
 
-    public function fame():int {
-        return int(this.charXML_.CurrentFame);
+    public function honor():int {
+        return int(this.charXML_.CurrentHonor);
     }
 
     public function displayId():String {

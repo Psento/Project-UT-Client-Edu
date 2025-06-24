@@ -34,7 +34,7 @@ public class BuyCharacterRect extends CharacterRect {
         this.classNameText_.x = this.x + this.width / 2 - this.classNameText_.width / 2;
         this.classNameText_.y = this.y + this.height + this.classNameText_.height;
         selectContainer.addChild(this.classNameText_);
-        var currencyBD_:BitmapData = IconFactory.makeFame();
+        var currencyBD_:BitmapData = IconFactory.makeHonor();
         this.currencyIcon_ = new Bitmap(currencyBD_);
         this.currencyIcon_.scaleX = this.currencyIcon_.scaleX * 0.5;
         this.currencyIcon_.scaleY = this.currencyIcon_.scaleY * 0.5;

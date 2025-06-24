@@ -44,7 +44,7 @@ public class NewCharacterScreen extends Sprite {
         this.backButton_.addEventListener(MouseEvent.CLICK, this.onBackClick);
         addChild(this.backButton_);
         this.currencyDisplay_ = new CurrencyDisplay();
-        this.currencyDisplay_.draw(model.getTsavorite(), model.getMedallions(), model.getHonor(), model.getFame());
+        this.currencyDisplay_.draw(model.getTsavorite(), model.getMedallions(), model.getHonor());
         addChild(this.currencyDisplay_);
 
         var stripLen:int = GameClient.StageWidth / 140;
@@ -94,8 +94,8 @@ public class NewCharacterScreen extends Sprite {
         this.selected.dispatch(objectType);
     }
 
-    public function updateCurrencies(tsavorite:int, medallions:int, honor:int, fame:int):void {
-        this.currencyDisplay_.draw(tsavorite, medallions, honor, fame);
+    public function updateCurrencies(tsavorite:int, medallions:int, honor:int):void {
+        this.currencyDisplay_.draw(tsavorite, medallions, honor);
     }
 }
 }

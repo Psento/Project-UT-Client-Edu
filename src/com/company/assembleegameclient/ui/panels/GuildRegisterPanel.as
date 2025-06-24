@@ -53,7 +53,7 @@ public class GuildRegisterPanel extends Panel {
             this.title_.htmlText = "<p align=\"center\">Create a Guild</p>";
             this.title_.y = 0;
             addChild(this.title_);
-            buyButton = new LegacyBuyButton("Create ", 16, Parameters.GUILD_CREATION_PRICE, Currency.FAME);
+            buyButton = new LegacyBuyButton("Create ", 16, Parameters.GUILD_CREATION_PRICE, Currency.HONOR);
             buyButton.addEventListener(MouseEvent.CLICK, this.onCreateClick);
             buyButton.x = WIDTH / 2 - buyButton.width / 2;
             buyButton.y = HEIGHT - buyButton.height / 2 - 31;

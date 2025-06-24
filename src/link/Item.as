@@ -31,7 +31,7 @@ public class Item {
     public var Fragment:Boolean;
     public var Ascended:Boolean;
     public var MultiPhase:Boolean;
-    public var FameBonus:int;
+    public var HonorBonus:int;
     public var NumProjectiles:int;
     public var HalfHPArmored:Boolean;
     public var ArcGap:Number;
@@ -111,7 +111,7 @@ public class Item {
         item.Fragment = LinkUtils.parseElementBool(xml, "Fragment");
         item.Ascended = LinkUtils.parseElementBool(xml, "Ascended");
         item.MultiPhase = LinkUtils.parseElementBool(xml, "MultiPhase");
-        item.FameBonus = LinkUtils.parseElementInt(xml, "FameBonus");
+        item.HonorBonus = LinkUtils.parseElementInt(xml, "HonorBonus");
         item.NumProjectiles = LinkUtils.parseElementInt(xml, "NumProjectiles", 1);
         item.HalfHPArmored = LinkUtils.parseElementBool(xml, "HalfHPArmored");
         item.ArcGap = LinkUtils.parseElementFloat(xml, "ArcGap", 11.25);

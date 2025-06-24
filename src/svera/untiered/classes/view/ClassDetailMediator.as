@@ -1,5 +1,5 @@
 package svera.untiered.classes.view {
-import com.company.assembleegameclient.util.FameUtil;
+import com.company.assembleegameclient.util.HonorUtil;
 
 import flash.events.TimerEvent;
 import flash.utils.Timer;
@@ -60,11 +60,11 @@ public class ClassDetailMediator extends Mediator {
     }
 
     private function setCharacterData():void {
-        var fame:int = this.playerModel.charList.bestFame(this.character.id);
-        var stars:int = FameUtil.numStars(fame);
-        this.view.setData(this.character.name, this.character.description, stars, this.playerModel.charList.bestLevel(this.character.id), fame);
-        var nextStarFame:int = FameUtil.nextStarFame(fame, 0);
-        this.view.setNextGoal(this.character.name, nextStarFame);
+        var honor:int = this.playerModel.charList.bestHonor(this.character.id);
+        var stars:int = HonorUtil.numStars(honor);
+        this.view.setData(this.character.name, this.character.description, stars, this.playerModel.charList.bestLevel(this.character.id), honor);
+        var nextStarHonor:int = HonorUtil.nextStarHonor(honor, 0);
+        this.view.setNextGoal(this.character.name, nextStarHonor);
     }
 
     private function onFocusSet(skin:CharacterSkin = null):void {

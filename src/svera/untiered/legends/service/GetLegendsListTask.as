@@ -33,15 +33,15 @@ public class GetLegendsListTask extends BaseTask {
 
     override protected function startTask():void {
         this.client.complete.addOnce(this.onComplete);
-        this.client.sendRequest("/fame/list", this.makeRequestObject());
+        this.client.sendRequest("/honor/list", this.makeRequestObject());
     }
 
     private function onComplete(isOK:Boolean, data:*):void {
-        isOK && this.updateFameListData(data);
+        isOK && this.updateHonorListData(data);
         completeTask(isOK, data);
     }
 
-    private function updateFameListData(data:String):void {
+    private function updateHonorListData(data:String):void {
         var legends:Vector.<Legend> = this.factory.makeLegends(XML(data));
         this.model.setLegendList(legends);
     }

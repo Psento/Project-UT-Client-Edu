@@ -1,7 +1,7 @@
 package com.company.assembleegameclient.ui.tooltip {
 import com.company.assembleegameclient.objects.ObjectLibrary;
 import com.company.assembleegameclient.ui.LineBreakDesign;
-import com.company.assembleegameclient.util.FameUtil;
+import com.company.assembleegameclient.util.HonorUtil;
 import com.company.ui.SimpleText;
 import com.company.untiered.graphics.StarGraphic;
 
@@ -51,14 +51,14 @@ public class RankToolTip extends ToolTip {
         this.lineBreak_.y = height + 10;
         addChild(this.lineBreak_);
         var yOffset:int = this.lineBreak_.y + 4;
-        for (var i:int = 0; i < FameUtil.COLORS.length; i++) {
-            line = new LegendLine(i * ObjectLibrary.playerChars_.length, (i + 1) * ObjectLibrary.playerChars_.length - 1, FameUtil.COLORS[i]);
+        for (var i:int = 0; i < HonorUtil.COLORS.length; i++) {
+            line = new LegendLine(i * ObjectLibrary.playerChars_.length, (i + 1) * ObjectLibrary.playerChars_.length - 1, HonorUtil.COLORS[i]);
             line.x = 6;
             line.y = yOffset;
             addChild(line);
             yOffset = yOffset + line.height;
         }
-        line = new LegendLine(FameUtil.maxStars(), FameUtil.maxStars(), new ColorTransform());
+        line = new LegendLine(HonorUtil.maxStars(), HonorUtil.maxStars(), new ColorTransform());
         line.x = 6;
         line.y = yOffset;
         addChild(line);

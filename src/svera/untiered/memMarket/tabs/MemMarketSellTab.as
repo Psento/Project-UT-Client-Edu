@@ -1,5 +1,4 @@
 package svera.untiered.memMarket.tabs {
-import com.company.assembleegameclient.account.ui.MarketInput;
 import com.company.assembleegameclient.game.GameSprite;
 import com.company.assembleegameclient.ui.Scrollbar;
 import com.company.assembleegameclient.ui.TextButton;
@@ -36,11 +35,11 @@ public class MemMarketSellTab extends MemMarketTab
     private static const ICON_X:int = 212;
     private static const ICON_Y:int = 356;
 
-    private static const FAME:String = "Fame";
+    private static const HONOR:String = "Honor";
     private static const TSAVORITE:String = "Tsavorite";
     private static const CURRENCY_CHOICES:Vector.<String> = new <String> /* List of available sell currencies */
     [
-        FAME,
+        HONOR,
         TSAVORITE
     ];
 
@@ -61,7 +60,7 @@ public class MemMarketSellTab extends MemMarketTab
     private var inventorySlots_:Vector.<MemMarketInventoryItem>;
     private var priceField_:MarketInput;
     //private var currencyChoice_:DropDown;
-    //private var currencyFame_:Bitmap;
+    //private var currencyHonor_:Bitmap;
     //private var currencyGold_:Bitmap;
     private var uptimeChoice_:DropDown;
     private var sellButton_:TextButton;
@@ -119,11 +118,11 @@ public class MemMarketSellTab extends MemMarketTab
         this.currencyChoice_.addEventListener(Event.CHANGE, this.onCurrencyChanged);
         addChild(this.currencyChoice_);
 
-        this.currencyFame_ = new Bitmap(IconUtils.getFameIcon(68));
-        this.currencyFame_.x = ICON_X;
-        this.currencyFame_.y = ICON_Y;
-        this.currencyFame_.visible = false;
-        addChild(this.currencyFame_);
+        this.currencyHonor_ = new Bitmap(IconUtils.getHonorIcon(68));
+        this.currencyHonor_.x = ICON_X;
+        this.currencyHonor_.y = ICON_Y;
+        this.currencyHonor_.visible = false;
+        addChild(this.currencyHonor_);
 
         this.currencyGold_ = new Bitmap(IconUtils.getCoinIcon(68));
         this.currencyGold_.x = ICON_X;
@@ -204,7 +203,7 @@ public class MemMarketSellTab extends MemMarketTab
         /*switch (CURRENCY_CHOICES[this.currencyChoice_.getIndex()])
         {
             case FAME:
-                this.selectedCurrency_ = Currency.FAME;
+                this.selectedCurrency_ = Currency.HONOR;
                 break;
             case GOLD:
                 this.selectedCurrency_ = Currency.GOLD;
@@ -216,7 +215,7 @@ public class MemMarketSellTab extends MemMarketTab
 
     private function onVerified(event:Event) : void
     {
-        this.gameSprite_.gsc_.marketAdd(this.slots_, this.price_, Currency.FAME, this.uptime_);
+        this.gameSprite_.gsc_.marketAdd(this.slots_, this.price_, Currency.HONOR, this.uptime_);
     }
 
     /*private function onCurrencyChanged(event:Event) : void
@@ -229,11 +228,11 @@ public class MemMarketSellTab extends MemMarketTab
         switch (CURRENCY_CHOICES[this.currencyChoice_.getIndex()])
         {
             case FAME:
-                this.currencyFame_.visible = true;
+                this.currencyHonor_.visible = true;
                 this.currencyGold_.visible = false;
                 break;
             case GOLD:
-                this.currencyFame_.visible = false;
+                this.currencyHonor_.visible = false;
                 this.currencyGold_.visible = true;
                 break;
         }
@@ -356,10 +355,10 @@ public class MemMarketSellTab extends MemMarketTab
                 this.resultItems_.sort(SortUtils.highestToLowest);
                 break;
             /*case SortUtils.FAME_TO_GOLD:
-                this.resultItems_.sort(SortUtils.fameToGold);
+                this.resultItems_.sort(SortUtils.honorToGold);
                 break;
             case SortUtils.GOLD_TO_FAME:
-                this.resultItems_.sort(SortUtils.goldToFame);
+                this.resultItems_.sort(SortUtils.goldToHonor);
                 break; */
             case SortUtils.JUST_ADDED:
                 this.resultItems_.sort(SortUtils.justAdded);
@@ -396,7 +395,7 @@ public class MemMarketSellTab extends MemMarketTab
         this.priceField_ = null;
         /*this.currencyChoice_.removeEventListener(Event.CHANGE, this.onCurrencyChanged);
         this.currencyChoice_ = null;
-        this.currencyFame_ = null;
+        this.currencyHonor_ = null;
         this.currencyGold_ = null; */
         this.uptimeChoice_.removeEventListener(Event.CHANGE, this.onUptimeChanged);
         this.uptimeChoice_ = null;

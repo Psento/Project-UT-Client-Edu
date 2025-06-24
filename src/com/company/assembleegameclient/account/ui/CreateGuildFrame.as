@@ -41,7 +41,7 @@ public class CreateGuildFrame extends Frame {
         this.gs_.removeEventListener(GuildResultEvent.EVENT, this.onResult);
         if (event.success_) {
             dispatchEvent(new Event(Event.COMPLETE));
-            this.gs_.model.changeFame(-1000);
+            this.gs_.model.changeHonor(-1000);
         } else {
             this.name_.setError(event.errorText_);
             enable();

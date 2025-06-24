@@ -24,7 +24,7 @@
         // SPD
         <ActivateOnEquip stat="5" amount="5">IncrementStat</ActivateOnEquip>
         // DEX
-        <FameBonus>6</FameBonus>
+        <HonorBonus>6</HonorBonus>
         <Origin>Tarnished Robe</Origin>
     </Object>
     <Object type="0x7062" id="Guarding Cloth">
@@ -50,7 +50,7 @@
         <ActivateOnEquip stat="26" amount="15">IncrementStat</ActivateOnEquip>
         // VIT
         <Steal type="life" amount="1"/>
-        <FameBonus>6</FameBonus>
+        <HonorBonus>6</HonorBonus>
         <Origin>Tarnished Robe</Origin>
     </Object>
     <Object type="0x7064" id="Beetle Carapace">
@@ -76,7 +76,7 @@
         <ActivateOnEquip stat="27" amount="30">IncrementStat</ActivateOnEquip>
         // WIS
         <Steal type="mana" amount="2"/>
-        <FameBonus>6</FameBonus>
+        <HonorBonus>6</HonorBonus>
         <Origin>Tarnished Robe</Origin>
     </Object>
     <!-- #endregion -->
@@ -105,7 +105,7 @@
         // VIT
         <ActivateOnEquip stat="121" amount="10">IncrementStat</ActivateOnEquip>
         // RES
-        <FameBonus>6</FameBonus>
+        <HonorBonus>6</HonorBonus>
         <Origin>Tarnished Leather Hide</Origin>
     </Object>
     <Object type="0x7132" id="Relic Infusion">
@@ -132,7 +132,7 @@
         // MGT
         <ActivateOnEquip stat="114" amount="40">IncrementStat</ActivateOnEquip>
         // LCK
-        <FameBonus>6</FameBonus>
+        <HonorBonus>6</HonorBonus>
         <Origin>Tarnished Leather Hide</Origin>
     </Object>
     <Object type="0x7134" id="Nature's Blessing">
@@ -162,7 +162,7 @@
         <ActivateOnEquip stat="5" amount="5">IncrementStat</ActivateOnEquip>
         // DEX
         <Steal type="mana" amount="2"/>
-        <FameBonus>6</FameBonus>
+        <HonorBonus>6</HonorBonus>
         <Origin>Tarnished Leather Hide</Origin>
     </Object>
     <!-- #endregion -->
@@ -188,7 +188,7 @@
         // SPD
         <ActivateOnEquip stat="27" amount="15">IncrementStat</ActivateOnEquip>
         // WIS
-        <FameBonus>6</FameBonus>
+        <HonorBonus>6</HonorBonus>
         <Origin>Tarnished Platemail</Origin>
     </Object>
     <Object type="0x7883" id="Dunestrider">
@@ -212,7 +212,7 @@
         // SPD
         <Steal type="life" amount="1"/>
         <Steal type="mana" amount="1"/>
-        <FameBonus>6</FameBonus>
+        <HonorBonus>6</HonorBonus>
         <Origin>Tarnished Platemail</Origin>
     </Object>
     <Object type="0x7067" id="Heaven's Guidance">
@@ -235,7 +235,7 @@
         // SPD
         <ActivateOnEquip stat="26" amount="30">IncrementStat</ActivateOnEquip>
         // VIT
-        <FameBonus>6</FameBonus>
+        <HonorBonus>6</HonorBonus>
         <Origin>Tarnished Platemail</Origin>
     </Object>
     <Object type="0x7131" id="Bulwark of Blood">
@@ -260,7 +260,7 @@
         // DEX
         <ActivateOnEquip stat="122" amount="40">IncrementStat</ActivateOnEquip>
         // PRT
-        <FameBonus>6</FameBonus>
+        <HonorBonus>6</HonorBonus>
         <Origin>Tarnished Platemail</Origin>
     </Object>
     <!-- #endregion -->
@@ -289,7 +289,7 @@
             <MaxDamage>1000</MaxDamage>
             <LifetimeMS>600</LifetimeMS>
         </Projectile>
-        <FameBonus>6</FameBonus>
+        <HonorBonus>6</HonorBonus>
         <Origin>Tarnished Sword</Origin>
     </Object>
     <Object type="0x7160" id="TBreaker Slash">
@@ -322,7 +322,7 @@
             <LifetimeMS>380</LifetimeMS>
             <MultiHit/>
         </Projectile>
-        <FameBonus>6</FameBonus>
+        <HonorBonus>6</HonorBonus>
         <Origin>Tarnished Sword</Origin>
     </Object>
     <Object type="0x7140" id="HWail Shot">
@@ -358,7 +358,7 @@
             <LifetimeMS>450</LifetimeMS>
             <MultiHit/>
         </Projectile>
-        <FameBonus>6</FameBonus>
+        <HonorBonus>6</HonorBonus>
         <Origin>Tarnished Sword</Origin>
     </Object>
     <Object type="0x7159" id="ARagnarok Shot">
@@ -394,7 +394,7 @@
             <LifetimeMS>420</LifetimeMS>
             <ArmorPiercing/>
         </Projectile>
-        <FameBonus>6</FameBonus>
+        <HonorBonus>6</HonorBonus>
         <Origin>Tarnished Sword</Origin>
     </Object>
     <Object type="0x47bc" id="STongue Shot">
@@ -430,7 +430,7 @@
             <LifetimeMS>930</LifetimeMS>
             <Boomerang/>
         </Projectile>
-        <FameBonus>6</FameBonus>
+        <HonorBonus>6</HonorBonus>
         <Origin>Tarnished Sword</Origin>
     </Object>
     <Object type="0x64ab" id="Fatesealer Shot">
@@ -462,7 +462,7 @@
             <Damage>250</Damage>
             <LifetimeMS>200</LifetimeMS>
         </Projectile>
-        <FameBonus>6</FameBonus>
+        <HonorBonus>6</HonorBonus>
         <Origin>Tarnished Bow</Origin>
     </Object>
     <Object type="0x7419" id="Soulpiercer Shot">
@@ -499,7 +499,7 @@
             <ArmorPiercing/>
             <Boomerang/>
         </Projectile>
-        <FameBonus>6</FameBonus>
+        <HonorBonus>6</HonorBonus>
         <Origin>Tarnished Bow</Origin>
     </Object>
     <Object type="0x7418" id="TLoop Shot">
@@ -532,7 +532,7 @@
             <MaxDamage>450</MaxDamage>
             <LifetimeMS>700</LifetimeMS>
         </Projectile>
-        <FameBonus>6</FameBonus>
+        <HonorBonus>6</HonorBonus>
         <Origin>Tarnished Bow</Origin>
     </Object>
     <Object type="0x7118" id="WHive Shot">
@@ -568,7 +568,7 @@
             <LifetimeMS>610</LifetimeMS>
             <ArmorPiercing/>
         </Projectile>
-        <FameBonus>6</FameBonus>
+        <HonorBonus>6</HonorBonus>
         <Origin>Tarnished Bow</Origin>
     </Object>
     <Object type="0x7117" id="Silverstring Shot">
@@ -598,7 +598,7 @@
             <Damage>500</Damage>
             <LifetimeMS>520</LifetimeMS>
         </Projectile>
-        <FameBonus>6</FameBonus>
+        <HonorBonus>6</HonorBonus>
         <Origin>Tarnished Bow</Origin>
     </Object>
     <Object type="0x7116" id="Starcrusher Shot">
@@ -632,7 +632,7 @@
             <LifetimeMS>660</LifetimeMS>
             <ArmorPiercing/>
         </Projectile>
-        <FameBonus>6</FameBonus>
+        <HonorBonus>6</HonorBonus>
         <Origin>Tarnished Dagger</Origin>
     </Object>
     <Object type="0x7161" id="FWhisper Shot">
@@ -667,7 +667,7 @@
             <LifetimeMS>500</LifetimeMS>
             <CondChance effect="Deficient" chance="3" duration="3"/>
         </Projectile>
-        <FameBonus>6</FameBonus>
+        <HonorBonus>6</HonorBonus>
         <Origin>Tarnished Dagger</Origin>
     </Object>
     <Object type="0x7163" id="WSorrow Shot">
@@ -702,7 +702,7 @@
             <MaxDamage>330</MaxDamage>
             <LifetimeMS>700</LifetimeMS>
         </Projectile>
-        <FameBonus>6</FameBonus>
+        <HonorBonus>6</HonorBonus>
         <Origin>Tarnished Dagger</Origin>
     </Object>
     <Object type="0x7162" id="VBlade Shot">
@@ -738,7 +738,7 @@
             <LifetimeMS>530</LifetimeMS>
             <MultiHit/>
         </Projectile>
-        <FameBonus>6</FameBonus>
+        <HonorBonus>6</HonorBonus>
         <Origin>Tarnished Dagger</Origin>
     </Object>
     <Object type="0x61df" id="SScourge Shot">
@@ -775,7 +775,7 @@
             <MinDamage>90</MinDamage>
             <MaxDamage>200</MaxDamage>
         </Projectile>
-        <FameBonus>6</FameBonus>
+        <HonorBonus>6</HonorBonus>
         <Origin>Tarnished Wand</Origin>
     </Object>
     <Object type="0x7718" id="SCatalyst Shot">
@@ -810,7 +810,7 @@
             <MaxDamage>300</MaxDamage>
             <MultiHit/>
         </Projectile>
-        <FameBonus>6</FameBonus>
+        <HonorBonus>6</HonorBonus>
         <Origin>Tarnished Wand</Origin>
     </Object>
     <Object type="0x7122" id="Bweaver Shot">
@@ -841,7 +841,7 @@
             <MaxDamage>420</MaxDamage>
             <LifetimeMS>630</LifetimeMS>
         </Projectile>
-        <FameBonus>6</FameBonus>
+        <HonorBonus>6</HonorBonus>
         <Origin>Tarnished Wand</Origin>
     </Object>
     <Object type="0x7124" id="HRevelation Shot">
@@ -874,7 +874,7 @@
             <LifetimeMS>800</LifetimeMS>
             <ArmorPiercing/>
         </Projectile>
-        <FameBonus>6</FameBonus>
+        <HonorBonus>6</HonorBonus>
         <Origin>Tarnished Wand</Origin>
     </Object>
     <Object type="0x7123" id="Scholar Shot">
@@ -909,7 +909,7 @@
             <MaxDamage>235</MaxDamage>
             <LifetimeMS>660</LifetimeMS>
         </Projectile>
-        <FameBonus>6</FameBonus>
+        <HonorBonus>6</HonorBonus>
         <Origin>Tarnished Wand</Origin>
     </Object>
     <Object type="0x46d6" id="Wildfire Shot">
@@ -945,7 +945,7 @@
             <LifetimeMS>680</LifetimeMS>
             <ArmorPiercing/>
         </Projectile>
-        <FameBonus>6</FameBonus>
+        <HonorBonus>6</HonorBonus>
         <Origin>Tarnished Staff</Origin>
     </Object>
     <Object type="0x45d2" id="SRPower Shot">
@@ -976,7 +976,7 @@
             <MaxDamage>800</MaxDamage>
             <LifetimeMS>650</LifetimeMS>
         </Projectile>
-        <FameBonus>6</FameBonus>
+        <HonorBonus>6</HonorBonus>
         <Origin>Tarnished Staff</Origin>
     </Object>
     <Object type="0x7120" id="NTouch Shot">
@@ -1007,7 +1007,7 @@
             <Damage>100</Damage>
             <LifetimeMS>670</LifetimeMS>
         </Projectile>
-        <FameBonus>6</FameBonus>
+        <HonorBonus>6</HonorBonus>
         <Origin>Tarnished Staff</Origin>
     </Object>
     <Object type="0x7119" id="Permanence Shot">
@@ -1043,7 +1043,7 @@
             <MaxDamage>245</MaxDamage>
             <LifetimeMS>620</LifetimeMS>
         </Projectile>
-        <FameBonus>6</FameBonus>
+        <HonorBonus>6</HonorBonus>
         <Origin>Tarnished Staff</Origin>
     </Object>
     <Object type="0x47f2" id="JFury Shot">
@@ -1076,7 +1076,7 @@
             <MaxDamage>290</MaxDamage>
             <LifetimeMS>720</LifetimeMS>
         </Projectile>
-        <FameBonus>6</FameBonus>
+        <HonorBonus>6</HonorBonus>
         <Origin>Tarnished Staff</Origin>
     </Object>
     <Object type="0x7121" id="DGSapphire Shot">
@@ -1109,7 +1109,7 @@
             <Damage>95</Damage>
             <LifetimeMS>560</LifetimeMS>
         </Projectile>
-        <FameBonus>6</FameBonus>
+        <HonorBonus>6</HonorBonus>
         <Origin>Tarnished Staff</Origin>
     </Object>
     <Object type="0x703c" id="MPiercer Shot">
@@ -1144,7 +1144,7 @@
             <MinDamage>295</MinDamage>
             <MaxDamage>370</MaxDamage>
         </Projectile>
-        <FameBonus>6</FameBonus>
+        <HonorBonus>6</HonorBonus>
         <Origin>Tarnished Katana</Origin>
     </Object>
     <Object type="0x7127" id="HLegacy Shot">
@@ -1179,7 +1179,7 @@
             <MinDamage>160</MinDamage>
             <MaxDamage>250</MaxDamage>
         </Projectile>
-        <FameBonus>6</FameBonus>
+        <HonorBonus>6</HonorBonus>
         <Origin>Tarnished Katana</Origin>
     </Object>
     <Object type="0x7125" id="Wanderlust Shot">
@@ -1213,7 +1213,7 @@
             <MaxDamage>380</MaxDamage>
             <Boomerang/>
         </Projectile>
-        <FameBonus>6</FameBonus>
+        <HonorBonus>6</HonorBonus>
         <Origin>Tarnished Katana</Origin>
     </Object>
     <Object type="0x7126" id="OUnderworld Shot">
@@ -1246,7 +1246,7 @@
             <MaxDamage>95</MaxDamage>
             <LifetimeMS>400</LifetimeMS>
         </Projectile>
-        <FameBonus>6</FameBonus>
+        <HonorBonus>6</HonorBonus>
         <Origin>Tarnished Katana</Origin>
     </Object>
     <Object type="0x521d" id="Ravager Shot">
@@ -1284,7 +1284,7 @@
             <Size>100</Size>
             <CondChance effect="Fragile" chance="1.8" duration="2.5"/>
         </Projectile>
-        <FameBonus>6</FameBonus>
+        <HonorBonus>6</HonorBonus>
         <Origin>Tarnished Katana</Origin>
     </Object>
     <Object type="0x69d2" id="SMarch Shot">
@@ -1318,7 +1318,7 @@
             <MaxDamage>220</MaxDamage>
             <LifetimeMS>560</LifetimeMS>
         </Projectile>
-        <FameBonus>6</FameBonus>
+        <HonorBonus>6</HonorBonus>
         <Origin>Tarnished Lance</Origin>
     </Object>
     <Object type="0x7112" id="GTrident Shot">
@@ -1350,7 +1350,7 @@
             <LifetimeMS>440</LifetimeMS>
             <ArmorPiercing/>
         </Projectile>
-        <FameBonus>6</FameBonus>
+        <HonorBonus>6</HonorBonus>
         <Origin>Tarnished Lance</Origin>
     </Object>
     <Object type="0x7113" id="VPiercer Shot">
@@ -1381,7 +1381,7 @@
             <MaxDamage>400</MaxDamage>
             <LifetimeMS>480</LifetimeMS>
         </Projectile>
-        <FameBonus>6</FameBonus>
+        <HonorBonus>6</HonorBonus>
         <Origin>Tarnished Lance</Origin>
     </Object>
     <Object type="0x7111" id="PNeedles Shot">
@@ -1413,7 +1413,7 @@
             <Damage>170</Damage>
             <LifetimeMS>550</LifetimeMS>
         </Projectile>
-        <FameBonus>6</FameBonus>
+        <HonorBonus>6</HonorBonus>
         <Origin>Tarnished Blades</Origin>
     </Object>
     <Object type="0x7166" id="CCataclysm Shots">
@@ -1450,7 +1450,7 @@
             <Speed>100</Speed>
             <LifetimeMS>550</LifetimeMS>
         </Projectile>
-        <FameBonus>6</FameBonus>
+        <HonorBonus>6</HonorBonus>
         <Origin>Tarnished Blades</Origin>
     </Object>
     <Object type="0x7165" id="BAntiques Shots">
@@ -1482,7 +1482,7 @@
             <LifetimeMS>550</LifetimeMS>
             <Size>100</Size>
         </Projectile>
-        <FameBonus>6</FameBonus>
+        <HonorBonus>6</HonorBonus>
         <Origin>Tarnished Blades</Origin>
     </Object>
     <Object type="0x7164" id="FFlames Shot">
@@ -1515,7 +1515,7 @@
         <Activate effect="Fury" duration="1.5">ConditionEffectSelf</Activate>
         <Activate effect="Strengthen" duration="2.5">ConditionEffectSelf</Activate>
         <Activate effect="Invisible" duration="4">ConditionEffectSelf</Activate>
-        <FameBonus>6</FameBonus>
+        <HonorBonus>6</HonorBonus>
         <Origin>Tarnished Cloak</Origin>
     </Object>
     <Object type="0x7094" id="Faithful Gowns">
@@ -1538,7 +1538,7 @@
         <Activate effect="Invisible" duration="5">ConditionEffectSelf</Activate>
         <Activate effect="Fury" duration="2">ConditionEffectSelf</Activate>
         <Activate effect="Swift" duration="3">ConditionEffectSelf</Activate>
-        <FameBonus>6</FameBonus>
+        <HonorBonus>6</HonorBonus>
         <Origin>Tarnished Cloak</Origin>
     </Object>
     <!-- #endregion -->
@@ -1573,7 +1573,7 @@
             <PassesCover/>
             <Boomerang/>
         </Projectile>
-        <FameBonus>6</FameBonus>
+        <HonorBonus>6</HonorBonus>
         <Origin>Tarnished Quiver</Origin>
     </Object>
     <Object type="0x7169" id="RPuncturer Shot">
@@ -1618,7 +1618,7 @@
             <PassesCover/>
         </Projectile>
         <Activate>Shoot</Activate>
-        <FameBonus>6</FameBonus>
+        <HonorBonus>6</HonorBonus>
         <Origin>Tarnished Quiver</Origin>
     </Object>
     <Object type="0x7170" id="RQuiver Shot">
@@ -1660,7 +1660,7 @@
             <MaxDamage>350</MaxDamage>
             <LifetimeMS>600</LifetimeMS>
         </Projectile>
-        <FameBonus>6</FameBonus>
+        <HonorBonus>6</HonorBonus>
         <Origin>Tarnished Spell</Origin>
     </Object>
     <Object type="0x7167" id="IFury Shot">
@@ -1701,7 +1701,7 @@
             <MaxDamage>300</MaxDamage>
             <LifetimeMS>600</LifetimeMS>
         </Projectile>
-        <FameBonus>6</FameBonus>
+        <HonorBonus>6</HonorBonus>
         <Origin>Tarnished Spell</Origin>
     </Object>
     <Object type="0x7168" id="BRecall Shot">
@@ -1739,7 +1739,7 @@
         <Activate effect="Regenerate" duration="5" range="5" useWisMod="false">ConditionEffectAura</Activate>
         <Activate effect="Swift" duration="6" useWisMod="false">ConditionEffectSelf</Activate>
         <Activate range="8" amount="700" useWisMod="false">HealNova</Activate>
-        <FameBonus>6</FameBonus>
+        <HonorBonus>6</HonorBonus>
         <Origin>Tarnished Tome</Origin>
     </Object>
     <Object type="0x7191" id="Tome of Tales">
@@ -1765,7 +1765,7 @@
         <Activate effect="Fragile" duration="3" range="4" color="0xFFFF00" target="enemy" center="player"
                   visualEffect="0" useWisMod="false">GenericActivate
         </Activate>
-        <FameBonus>6</FameBonus>
+        <HonorBonus>6</HonorBonus>
         <Origin>Tarnished Tome</Origin>
     </Object>
     <!-- #endregion -->
@@ -1794,7 +1794,7 @@
         <Cooldown>6.5</Cooldown>
         <Activate effect="Precision" duration="4">ConditionEffectSelf</Activate>
         <Activate effect="Fury" duration="5" range="5">ConditionEffectAura</Activate>
-        <FameBonus>6</FameBonus>
+        <HonorBonus>6</HonorBonus>
         <Origin>Tarnished Helmet</Origin>
     </Object>
     <Object type="0x7138" id="Strength of Platinum">
@@ -1820,7 +1820,7 @@
         <Cooldown>5</Cooldown>
         <Activate effect="Strengthen" duration="3">ConditionEffectSelf</Activate>
         <Activate effect="Regenerate" duration="3" range="6">ConditionEffectAura</Activate>
-        <FameBonus>6</FameBonus>
+        <HonorBonus>6</HonorBonus>
         <Origin>Tarnished Helmet</Origin>
     </Object>
     <!-- #endregion -->
@@ -1858,7 +1858,7 @@
             <MultiHit/>
             <PassesCover/>
         </Projectile>
-        <FameBonus>6</FameBonus>
+        <HonorBonus>6</HonorBonus>
         <Origin>Tarnished Shield</Origin>
     </Object>
     <Object type="0x7202" id="STorment Shot">
@@ -1903,7 +1903,7 @@
             <PassesCover/>
             <Boomerang/>
         </Projectile>
-        <FameBonus>6</FameBonus>
+        <HonorBonus>6</HonorBonus>
         <Origin>Tarnished Shield</Origin>
     </Object>
     <Object type="0x7114" id="WDefense Shot">
@@ -1945,7 +1945,7 @@
         </Activate>
         <Activate stat="3" amount="180" duration="3.5" range="5" noStack="true" useWisMod="false">StatBoostAura
         </Activate>
-        <FameBonus>6</FameBonus>
+        <HonorBonus>6</HonorBonus>
         <Origin>Tarnished Seal</Origin>
     </Object>
     <Object type="0x7087" id="Seal of Intoxication">
@@ -1974,7 +1974,7 @@
         <Activate effect="Deficient" duration="5" range="4.5" target="enemy" center="player" visualEffect="0"
                   useWisMod="false">GenericActivate
         </Activate>
-        <FameBonus>6</FameBonus>
+        <HonorBonus>6</HonorBonus>
         <Origin>Tarnished Seal</Origin>
     </Object>
     <!-- #endregion -->
@@ -2003,7 +2003,7 @@
         <Activate effect="Deficient" duration="5" range="4.5" color="0x0000FF" target="enemy" center="mouse"
                   visualEffect="5" useWisMod="false">GenericActivate
         </Activate>
-        <FameBonus>6</FameBonus>
+        <HonorBonus>6</HonorBonus>
         <Origin>Tarnished Poison</Origin>
     </Object>
     <Object type="0x7139" id="Depth's Shower">
@@ -2029,7 +2029,7 @@
         <Activate effect="Hemorrhage" duration="2" range="5" color="0xff0000" target="enemy" center="mouse"
                   visualEffect="5" useWisMod="false">GenericActivate
         </Activate>
-        <FameBonus>6</FameBonus>
+        <HonorBonus>6</HonorBonus>
         <Origin>Tarnished Poison</Origin>
     </Object>
     <!-- #endregion -->
@@ -2063,7 +2063,7 @@
         <Activate effect="Sluggish" duration="4" range="6" color="0xFF0000" target="enemy" center="mouse"
                   visualEffect="0" useWisMod="false">GenericActivate
         </Activate>
-        <FameBonus>6</FameBonus>
+        <HonorBonus>6</HonorBonus>
         <Origin>Tarnished Skull</Origin>
     </Object>
     <Object type="0x7235" id="Liches Siphon">
@@ -2089,7 +2089,7 @@
         <Activate radius="5.5" totalDamage="350">VampireBlast</Activate>
         <Activate effect="Strengthen" duration="2">ConditionEffectSelf</Activate>
         <Activate effect="Regenerate" duration="1.5">ConditionEffectSelf</Activate>
-        <FameBonus>6</FameBonus>
+        <HonorBonus>6</HonorBonus>
         <Origin>Tarnished Skull</Origin>
     </Object>
     <!-- #endregion -->
@@ -2117,7 +2117,7 @@
         <Cooldown>1.5</Cooldown>
         <Activate radius="8" totalDamage="8000" condEffect="Hemorrhage" condDuration="4">Trap</Activate>
         <Activate effect="Swift" duration="3">ConditionEffectSelf</Activate>
-        <FameBonus>6</FameBonus>
+        <HonorBonus>6</HonorBonus>
         <Origin>Tarnished Trap</Origin>
     </Object>
     <Object type="0x7188" id="Void's Gaze">
@@ -2138,7 +2138,7 @@
         <Activate radius="4" totalDamage="3500" condEffect="Stunned" condDuration="1">Trap</Activate>
         <Activate radius="6" totalDamage="2000" condEffect="Bind" condDuration="2">Trap</Activate>
         <Activate radius="8" totalDamage="1000" condEffect="Vulnerable" condDuration="3">Trap</Activate>
-        <FameBonus>6</FameBonus>
+        <HonorBonus>6</HonorBonus>
         <Origin>Tarnished Trap</Origin>
     </Object>
     <!-- #endregion -->
@@ -2171,7 +2171,7 @@
         <Activate effect="Deficient" duration="3" range="4" color="0x0000FF" target="enemy" center="mouse"
                   visualEffect="5" useWisMod="false">GenericActivate
         </Activate>
-        <FameBonus>6</FameBonus>
+        <HonorBonus>6</HonorBonus>
         <Origin>Tarnished Orb</Origin>
     </Object>
     <Object type="0x7093" id="Depth's Vision">
@@ -2194,7 +2194,7 @@
         <Activate effect="Fragile" duration="3" range="5" color="0xFF0000" target="enemy" center="mouse"
                   visualEffect="5" useWisMod="false">GenericActivate
         </Activate>
-        <FameBonus>6</FameBonus>
+        <HonorBonus>6</HonorBonus>
         <Origin>Tarnished Orb</Origin>
     </Object>
     <!-- #endregion -->
@@ -2225,7 +2225,7 @@
         <Cooldown>3</Cooldown>
         <Activate duration="2" objType="0x7743" center="mouse">Decoy</Activate>
         <Activate effect="Strengthen" duration="2">ConditionEffectSelf</Activate>
-        <FameBonus>6</FameBonus>
+        <HonorBonus>6</HonorBonus>
         <Origin>Tarnished Prism</Origin>
     </Object>
     <Object type="0x7743" id="ODefender Decoy">
@@ -2285,7 +2285,7 @@
         <Activate duration="3.5" objType="0x9316" center="player">Decoy</Activate>
         <Activate maxDistance="20">Teleport</Activate>
         <Activate effect="Invisible" duration="5">ConditionEffectSelf</Activate>
-        <FameBonus>6</FameBonus>
+        <HonorBonus>6</HonorBonus>
         <Origin>Tarnished Prism</Origin>
     </Object>
     <Object type="0x9316" id="IMarch Decoy">
@@ -2341,7 +2341,7 @@
         </Activate>
         <Activate effect="Fury" duration="1.5">ConditionEffectSelf</Activate>
         <Activate effect="Nausea" duration="2">ConditionEffectSelf</Activate>
-        <FameBonus>6</FameBonus>
+        <HonorBonus>6</HonorBonus>
         <Origin>Tarnished Scepter</Origin>
     </Object>
     <Object type="0x7181" id="Shock Therapy">
@@ -2365,7 +2365,7 @@
                   color="0x9800FF">Lightning
         </Activate>
         <Activate effect="Strengthen" duration="2.5">ConditionEffectSelf</Activate>
-        <FameBonus>6</FameBonus>
+        <HonorBonus>6</HonorBonus>
         <Origin>Tarnished Scepter</Origin>
     </Object>
     <!-- #endregion -->
@@ -2404,7 +2404,7 @@
             <MultiHit/>
             <ArmorPiercing/>
         </Projectile>
-        <FameBonus>6</FameBonus>
+        <HonorBonus>6</HonorBonus>
         <Origin>Tarnished Shuriken</Origin>
     </Object>
     <Object type="0x7175" id="NWatch Shot">
@@ -2445,7 +2445,7 @@
             <LifetimeMS>700</LifetimeMS>
             <Size>120</Size>
         </Projectile>
-        <FameBonus>6</FameBonus>
+        <HonorBonus>6</HonorBonus>
         <Origin>Tarnished Shuriken</Origin>
     </Object>
     <Object type="0x7177" id="SInfluence Shot">
@@ -2491,7 +2491,7 @@
             <ConditionEffect duration="3">Fragile</ConditionEffect>
             <MultiHit/>
         </Projectile>
-        <FameBonus>6</FameBonus>
+        <HonorBonus>6</HonorBonus>
         <Origin>Tarnished Shuriken</Origin>
     </Object>
     <Object type="0x7251" id="GIcicle Shot">
@@ -2530,7 +2530,7 @@
         <Cooldown>0.5</Cooldown>
         <MultiPhase/>
         <Activate range="7" color="0xa14e00" totalDamage="2300" useAtkMod="true">TribesWarcry</Activate>
-        <FameBonus>6</FameBonus>
+        <HonorBonus>6</HonorBonus>
         <Origin>Tarnished Sheath</Origin>
     </Object>
     <Object type="0x7238" id="Frozen Resolve">
@@ -2560,7 +2560,7 @@
         <Cooldown>2</Cooldown>
         <MultiPhase/>
         <Activate range="4.5" color="0xa14e00" totalDamage="6000" useAtkMod="false">FrozenResolve</Activate>
-        <FameBonus>6</FameBonus>
+        <HonorBonus>6</HonorBonus>
         <Origin>Tarnished Sheath</Origin>
     </Object>
     <!-- #endregion -->
@@ -2595,7 +2595,7 @@
         <Activate effect="Exhaust" duration="2.5" range="4" target="enemy" center="player" useWisMod="false">
             GenericActivate
         </Activate>
-        <FameBonus>6</FameBonus>
+        <HonorBonus>6</HonorBonus>
         <Origin>Tarnished Banner</Origin>
     </Object>
     <Object type="0x7197" id="Banner of the Fearless">
@@ -2624,7 +2624,7 @@
         <Activate effect="Deficient" duration="3" range="5" color="0xffffff" target="enemy" center="player"
                   visualEffect="4" useWisMod="false">GenericActivate
         </Activate>
-        <FameBonus>6</FameBonus>
+        <HonorBonus>6</HonorBonus>
         <Origin>Tarnished Banner</Origin>
     </Object>
     <!-- #endregion -->
@@ -2654,7 +2654,7 @@
                   objType="0x7195">Torii
         </Activate>
         <Activate range="4" amount="5" duration="3" effect="Strengthen" objType="0x7241">Torii</Activate>
-        <FameBonus>6</FameBonus>
+        <HonorBonus>6</HonorBonus>
         <Origin>Tarnished Charm</Origin>
     </Object>
     <Object type="0x7195" id="CEW Torii">
@@ -2702,7 +2702,7 @@
         </Activate>
         <Activate range="4" amount="5" duration="3" effect="Harden" color="0xa14e00" objType="0x7196">Torii</Activate>
         <Activate effect="Fury" duration="3">ConditionEffectSelf</Activate>
-        <FameBonus>6</FameBonus>
+        <HonorBonus>6</HonorBonus>
         <Origin>Tarnished Charm</Origin>
     </Object>
     <Object type="0x7196" id="FB Torii">
@@ -2741,7 +2741,7 @@
         <Cooldown>5</Cooldown>
         <Activate duration="4" randVals="Fury, Harden, Invulnerable">DiceActivate</Activate>
         <Activate effect="Regenerate" duration="2">ConditionEffectSelf</Activate>
-        <FameBonus>6</FameBonus>
+        <HonorBonus>6</HonorBonus>
         <Origin>Tarnished Dice</Origin>
     </Object>
     <Object type="0x7183" id="Lethal Bet">
@@ -2769,7 +2769,7 @@
         <Cooldown>5</Cooldown>
         <Activate duration="3" randVals="Fury, Vulnerable, Strengthen">DiceActivate</Activate>
         <Activate effect="Precision" duration="1.5">ConditionEffectSelf</Activate>
-        <FameBonus>6</FameBonus>
+        <HonorBonus>6</HonorBonus>
         <Origin>Tarnished Dice</Origin>
     </Object>
     <!-- #endregion -->
@@ -2816,7 +2816,7 @@
             <Boomerang/>
             <ConditionEffect duration="2">Stunned</ConditionEffect>
         </Projectile>
-        <FameBonus>6</FameBonus>
+        <HonorBonus>6</HonorBonus>
         <Origin>Tarnished Jacket</Origin>
     </Object>
     <Object type="0x7237" id="SFJacket Shot">
@@ -2869,7 +2869,7 @@
             <ConditionEffect duration="3">Exhaust</ConditionEffect>
             <ConditionEffect duration="1.5">Deficient</ConditionEffect>
         </Projectile>
-        <FameBonus>6</FameBonus>
+        <HonorBonus>6</HonorBonus>
         <Origin>Tarnished Jacket</Origin>
     </Object>
     <Object type="0x7115" id="SJacket Shot">
@@ -2913,7 +2913,7 @@
         <Cooldown>2</Cooldown>
         <Activate duration="4" objType="0x7171">TalismanAbility</Activate>
         <Activate effect="Fury" duration="1.5" useWisMod="false">ConditionEffectSelf</Activate>
-        <FameBonus>6</FameBonus>
+        <HonorBonus>6</HonorBonus>
         <Origin>Tarnished Talisman</Origin>
     </Object>
     <Object type="0x7171" id="CTerror Spirit">
@@ -2967,7 +2967,7 @@
         <Activate duration="3" objType="0x7173">TalismanAbility</Activate>
         <Activate effect="Regenerate" duration="2" useWisMod="false">ConditionEffectSelf</Activate>
         <Activate effect="Charge" duration="2" useWisMod="false">ConditionEffectSelf</Activate>
-        <FameBonus>6</FameBonus>
+        <HonorBonus>6</HonorBonus>
         <Origin>Tarnished Talisman</Origin>
     </Object>
     <Object type="0x7172" id="PSpirits Ghost1">
@@ -3028,7 +3028,7 @@
         // DEF
         <ActivateOnEquip stat="122" amount="100">IncrementStat</ActivateOnEquip>
         // PRT
-        <FameBonus>6</FameBonus>
+        <HonorBonus>6</HonorBonus>
         <Origin>Tarnished Accessory</Origin>
     </Object>
     <Object type="0x7071" id="Protector's Gemstone">
@@ -3050,7 +3050,7 @@
         // VIT
         <ActivateOnEquip stat="122" amount="450">IncrementStat</ActivateOnEquip>
         // PRT
-        <FameBonus>6</FameBonus>
+        <HonorBonus>6</HonorBonus>
         <Origin>Tarnished Accessory</Origin>
     </Object>
     <Object type="0x7135" id="Lich-King's Lost Treasure">
@@ -3071,7 +3071,7 @@
         // WIS
         <ActivateOnEquip stat="122" amount="100">IncrementStat</ActivateOnEquip>
         // PRT
-        <FameBonus>6</FameBonus>
+        <HonorBonus>6</HonorBonus>
         <Origin>Tarnished Accessory</Origin>
     </Object>
     <Object type="0x7072" id="Sacrificial Momentum">
@@ -3092,7 +3092,7 @@
         // DEX
         <ActivateOnEquip stat="122" amount="75">IncrementStat</ActivateOnEquip>
         // PRT
-        <FameBonus>6</FameBonus>
+        <HonorBonus>6</HonorBonus>
         <Origin>Tarnished Accessory</Origin>
     </Object>
     <Object type="0x7077" id="Hamsa Necklace">
@@ -3115,7 +3115,7 @@
         // LCK
         <ActivateOnEquip stat="122" amount="50">IncrementStat</ActivateOnEquip>
         // PRT
-        <FameBonus>6</FameBonus>
+        <HonorBonus>6</HonorBonus>
         <Origin>Tarnished Accessory</Origin>
     </Object>
     <Object type="0x7198" id="Fractal Pendant">
@@ -3136,7 +3136,7 @@
         // ATK
         <ActivateOnEquip stat="5" amount="5">IncrementStat</ActivateOnEquip>
         // DEX
-        <FameBonus>6</FameBonus>
+        <HonorBonus>6</HonorBonus>
         <Origin>Tarnished Accessory</Origin>
     </Object>
     <Object type="0x7080" id="Effervescent Rosebud">
@@ -3157,7 +3157,7 @@
         // VIT
         <ActivateOnEquip stat="122" amount="50">IncrementStat</ActivateOnEquip>
         // PRT
-        <FameBonus>6</FameBonus>
+        <HonorBonus>6</HonorBonus>
         <Origin>Tarnished Accessory</Origin>
     </Object>
     <Object type="0x7136" id="Stories Untold">
@@ -3178,7 +3178,7 @@
         // LCK
         <ActivateOnEquip stat="122" amount="50">IncrementStat</ActivateOnEquip>
         // PRT
-        <FameBonus>6</FameBonus>
+        <HonorBonus>6</HonorBonus>
         <Origin>Tarnished Accessory</Origin>
     </Object>
     <Object type="0x7074" id="Bracelet of the First Sunrise">
@@ -3215,7 +3215,7 @@
         // RES
         <Steal type="life" amount="1"/>
         <Steal type="mana" amount="1"/>
-        <FameBonus>6</FameBonus>
+        <HonorBonus>6</HonorBonus>
         <Origin>Tarnished Accessory</Origin>
     </Object>
     <Object type="0x7400" id="Gemstone of Ambition">
@@ -3238,7 +3238,7 @@
         // RES
         <ActivateOnEquip stat="122" amount="150">IncrementStat</ActivateOnEquip>
         // PRT
-        <FameBonus>6</FameBonus>
+        <HonorBonus>6</HonorBonus>
         <Origin>Tarnished Accessory</Origin>
     </Object>
     <Object type="0x7137" id="Uplifting Trinket">
@@ -3257,7 +3257,7 @@
         // ATK
         <ActivateOnEquip stat="5" amount="10">IncrementStat</ActivateOnEquip>
         // DEX
-        <FameBonus>6</FameBonus>
+        <HonorBonus>6</HonorBonus>
         <Origin>Tarnished Accessory</Origin>
     </Object>
     <!-- #endregion -->

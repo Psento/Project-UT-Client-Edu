@@ -1,12 +1,12 @@
-package svera.untiered.fame.model {
-public class SimpleFameVO implements FameVO {
+package svera.untiered.honor.model {
+public class SimpleHonorVO implements HonorVO {
 
 
     private var accountId:int;
 
     private var characterId:int;
 
-    public function SimpleFameVO(accountId:int, characterId:int) {
+    public function SimpleHonorVO(accountId:int, characterId:int) {
         super();
         this.accountId = accountId;
         this.characterId = characterId;

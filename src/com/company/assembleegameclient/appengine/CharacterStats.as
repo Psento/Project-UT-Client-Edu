@@ -1,5 +1,5 @@
 package com.company.assembleegameclient.appengine {
-import com.company.assembleegameclient.util.FameUtil;
+import com.company.assembleegameclient.util.HonorUtil;
 
 public class CharacterStats {
 
@@ -15,12 +15,12 @@ public class CharacterStats {
         return this.charStatsXML_.BestLevel;
     }
 
-    public function bestFame():int {
-        return this.charStatsXML_.BestFame;
+    public function bestHonor():int {
+        return this.charStatsXML_.BestHonor;
     }
 
     public function numStars():int {
-        return FameUtil.numStars(int(this.charStatsXML_.BestFame));
+        return HonorUtil.numStars(int(this.charStatsXML_.BestHonor));
     }
 }
 }

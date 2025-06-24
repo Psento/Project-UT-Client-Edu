@@ -218,10 +218,10 @@ public class MemMarketBuyTab extends MemMarketTab
                 this.resultItems_.sort(SortUtils.highestToLowest);
                 break;
             /*case SortUtils.FAME_TO_GOLD:
-                this.resultItems_.sort(SortUtils.fameToGold);
+                this.resultItems_.sort(SortUtils.honorToGold);
                 break;
             case SortUtils.GOLD_TO_FAME:
-                this.resultItems_.sort(SortUtils.goldToFame);
+                this.resultItems_.sort(SortUtils.goldToHonor);
                 break; */
             case SortUtils.JUST_ADDED:
                 this.resultItems_.sort(SortUtils.justAdded);

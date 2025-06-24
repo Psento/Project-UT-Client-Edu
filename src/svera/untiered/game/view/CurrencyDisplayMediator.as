@@ -20,31 +20,27 @@ public class CurrencyDisplayMediator extends Mediator {
         this.model.tsavoriteChanged.add(this.onTsavoriteChanged);
         this.model.medallionsChanged.add(this.onMedallionsChanged);
         this.model.honorChanged.add(this.onHonorChanged);
-        this.model.fameChanged.add(this.onFameChanged);
-        this.view.draw(this.model.getTsavorite(), this.model.getMedallions(), this.model.getHonor(), this.model.getFame());
+        this.model.honorChanged.add(this.onHonorChanged);
+        this.view.draw(this.model.getTsavorite(), this.model.getMedallions(), this.model.getHonor());
     }
 
     override public function destroy():void {
         this.model.tsavoriteChanged.remove(this.onTsavoriteChanged);
         this.model.medallionsChanged.remove(this.onMedallionsChanged);
         this.model.honorChanged.remove(this.onHonorChanged);
-        this.model.fameChanged.remove(this.onFameChanged);
+        this.model.honorChanged.remove(this.onHonorChanged);
     }
 
     private function onTsavoriteChanged(tsavorite:int):void {
-        this.view.draw(tsavorite, this.model.getMedallions(), this.model.getHonor(), this.model.getFame());
+        this.view.draw(tsavorite, this.model.getMedallions(), this.model.getHonor());
     }
 
     private function onMedallionsChanged(medallions:int):void {
-        this.view.draw(this.model.getTsavorite(), medallions, this.model.getHonor(), this.model.getFame());
+        this.view.draw(this.model.getTsavorite(), medallions, this.model.getHonor());
     }
 
     private function onHonorChanged(honor:int):void {
-        this.view.draw(this.model.getTsavorite(), this.model.getMedallions(), honor, this.model.getFame());
-    }
-
-    private function onFameChanged(fame:int):void {
-        this.view.draw(this.model.getTsavorite(), this.model.getMedallions(), this.model.getHonor(), fame);
+        this.view.draw(this.model.getTsavorite(), this.model.getMedallions(), honor);
     }
 }
 }

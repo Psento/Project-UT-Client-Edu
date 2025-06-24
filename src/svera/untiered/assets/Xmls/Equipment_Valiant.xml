@@ -24,7 +24,7 @@
         // VIT
         <ActivateOnEquip stat="5" amount="5">IncrementStat</ActivateOnEquip>
         // DEX
-        <FameBonus>8</FameBonus>
+        <HonorBonus>8</HonorBonus>
         <Valiant id="Unstoppable Advance"/>
         <Origin>Cosmic Capsule</Origin>
     </Object>
@@ -50,7 +50,7 @@
         <ActivateOnEquip stat="114" amount="75">IncrementStat</ActivateOnEquip>
         // LCK
         <Steal type="life" amount="1"/>
-        <FameBonus>8</FameBonus>
+        <HonorBonus>8</HonorBonus>
         <Valiant id="Hellish Alliance"/>
         <Origin>Cosmic Capsule</Origin>
     </Object>
@@ -75,7 +75,7 @@
         <ActivateOnEquip stat="27" amount="75">IncrementStat</ActivateOnEquip>
         // WIS
         <Steal type="mana" amount="2"/>
-        <FameBonus>8</FameBonus>
+        <HonorBonus>8</HonorBonus>
         <Valiant id="White Noise"/>
         <Origin>Cosmic Capsule</Origin>
     </Object>
@@ -102,7 +102,7 @@
         // WIS
         <ActivateOnEquip stat="5" amount="10">IncrementStat</ActivateOnEquip>
         // DEX
-        <FameBonus>8</FameBonus>
+        <HonorBonus>8</HonorBonus>
         <Valiant id="Cheapskate"/>
         <Origin>Cosmic Capsule</Origin>
     </Object>
@@ -126,7 +126,7 @@
         // SPD
         <ActivateOnEquip stat="5" amount="20">IncrementStat</ActivateOnEquip>
         // DEX
-        <FameBonus>8</FameBonus>
+        <HonorBonus>8</HonorBonus>
         <Valiant id="Alchemic Frenzy"/>
         <Origin>Cosmic Capsule</Origin>
     </Object>
@@ -155,7 +155,7 @@
         // VIT
         <ActivateOnEquip stat="5" amount="5">IncrementStat</ActivateOnEquip>
         // DEX
-        <FameBonus>8</FameBonus>
+        <HonorBonus>8</HonorBonus>
         <Valiant id="Getting Serious"/>
         <Origin>Cosmic Capsule</Origin>
     </Object>
@@ -181,7 +181,7 @@
         // MGT
         <ActivateOnEquip stat="114" amount="90">IncrementStat</ActivateOnEquip>
         // LCK
-        <FameBonus>8</FameBonus>
+        <HonorBonus>8</HonorBonus>
         <Valiant id="Burning Ambition"/>
         <Origin>Cosmic Capsule</Origin>
     </Object>
@@ -207,7 +207,7 @@
         // DEX
         <ActivateOnEquip stat="114" amount="40">IncrementStat</ActivateOnEquip>
         // LCK
-        <FameBonus>8</FameBonus>
+        <HonorBonus>8</HonorBonus>
         <Valiant id="End of Patience"/>
         <Origin>Cosmic Capsule</Origin>
     </Object>
@@ -229,7 +229,7 @@
         // DEF
         <ActivateOnEquip stat="4" amount="9">IncrementStat</ActivateOnEquip>
         // SPD
-        <FameBonus>8</FameBonus>
+        <HonorBonus>8</HonorBonus>
         <Valiant id="Power of Knowledge"/>
         <Origin>Cosmic Capsule</Origin>
     </Object>
@@ -253,7 +253,7 @@
         // SPD
         <ActivateOnEquip stat="5" amount="10">IncrementStat</ActivateOnEquip>
         // PRT
-        <FameBonus>8</FameBonus>
+        <HonorBonus>8</HonorBonus>
         <Valiant id="Abyssal Absorption"/>
         <Origin>Cosmic Capsule</Origin>
     </Object>
@@ -282,7 +282,7 @@
         <ActivateOnEquip stat="5" amount="30" isPerc="true">IncrementStat</ActivateOnEquip>
         // DEX
         <Steal type="life" amount="2"/>
-        <FameBonus>8</FameBonus>
+        <HonorBonus>8</HonorBonus>
         <Valiant id="Perilous Advantage"/>
         <Origin>Cosmic Capsule</Origin>
     </Object>
@@ -306,7 +306,7 @@
         // SPD
         <ActivateOnEquip stat="27" amount="55">IncrementStat</ActivateOnEquip>
         // WIS
-        <FameBonus>8</FameBonus>
+        <HonorBonus>8</HonorBonus>
         <Valiant id="Virulent Buildup"/>
         <Origin>Cosmic Capsule</Origin>
     </Object>
@@ -333,7 +333,7 @@
         // WIS
         <ActivateOnEquip stat="121" amount="25">IncrementStat</ActivateOnEquip>
         // RES
-        <FameBonus>8</FameBonus>
+        <HonorBonus>8</HonorBonus>
         <Valiant id="Holy Blessing"/>
         <Origin>Cosmic Capsule</Origin>
     </Object>
@@ -359,7 +359,7 @@
         // MGT
         <ActivateOnEquip stat="114" amount="50">IncrementStat</ActivateOnEquip>
         // LCK
-        <FameBonus>8</FameBonus>
+        <HonorBonus>8</HonorBonus>
         <Valiant id="Rending Rage"/>
         <Origin>Cosmic Capsule</Origin>
     </Object>
@@ -381,7 +381,7 @@
         // SPD
         <ActivateOnEquip stat="27" amount="15">IncrementStat</ActivateOnEquip>
         // WIS
-        <FameBonus>8</FameBonus>
+        <HonorBonus>8</HonorBonus>
         <Valiant id="Underheld Reserve"/>
         <Origin>Cosmic Capsule</Origin>
     </Object>
@@ -401,7 +401,7 @@
         // DEF
         <ActivateOnEquip stat="4" amount="50" isPerc="true">IncrementStat</ActivateOnEquip>
         // SPD
-        <FameBonus>8</FameBonus>
+        <HonorBonus>8</HonorBonus>
         <Valiant id="Retreat Command"/>
         <Origin>Cosmic Capsule</Origin>
     </Object>
@@ -432,7 +432,7 @@
         // LCK
         <ActivateOnEquip stat="121" amount="10">IncrementStat</ActivateOnEquip>
         // RES
-        <FameBonus>8</FameBonus>
+        <HonorBonus>8</HonorBonus>
         <Valiant id="Allrounder"/>
         <Origin>Cosmic Capsule</Origin>
     </Object>
@@ -460,7 +460,7 @@
         <ActivateOnEquip stat="121" amount="30">IncrementStat</ActivateOnEquip>
         // RES
         <Steal type="mana" amount="3"/>
-        <FameBonus>8</FameBonus>
+        <HonorBonus>8</HonorBonus>
         <Valiant id="Ambrosia"/>
         <Origin>Cosmic Capsule</Origin>
     </Object>
@@ -493,7 +493,7 @@
             <LifetimeMS>430</LifetimeMS>
             <FaceDir/>
         </Projectile>
-        <FameBonus>8</FameBonus>
+        <HonorBonus>8</HonorBonus>
         <Valiant id="Oppressor's Resolve"/>
         <Origin>Cosmic Capsule</Origin>
     </Object>
@@ -528,7 +528,7 @@
             <LifetimeMS>430</LifetimeMS>
             <PassesCover/>
         </Projectile>
-        <FameBonus>8</FameBonus>
+        <HonorBonus>8</HonorBonus>
         <Valiant id="Call of the Deep"/>
         <Origin>Cosmic Capsule</Origin>
     </Object>
@@ -566,7 +566,7 @@
             <MaxDamage>245</MaxDamage>
             <LifetimeMS>320</LifetimeMS>
         </Projectile>
-        <FameBonus>8</FameBonus>
+        <HonorBonus>8</HonorBonus>
         <Valiant id="Blood Drinker"/>
         <Origin>Cosmic Capsule</Origin>
     </Object>
@@ -605,7 +605,7 @@
             <CondChance effect="Bind" chance="0.5" duration="1.5"/>
             <CondChance effect="Sluggish" chance="3" duration="2.0"/>
         </Projectile>
-        <FameBonus>8</FameBonus>
+        <HonorBonus>8</HonorBonus>
         <Valiant id="Blinding Glory"/>
         <Origin>Cosmic Capsule</Origin>
     </Object>
@@ -653,7 +653,7 @@
             <Frequency>0.2</Frequency>
             <MultiHit/>
         </Projectile>
-        <FameBonus>8</FameBonus>
+        <HonorBonus>8</HonorBonus>
         <Valiant id="Supernova"/>
         <Origin>Cosmic Capsule</Origin>
     </Object>
@@ -690,7 +690,7 @@
             <LifetimeMS>680</LifetimeMS>
             <ArmorPiercing/>
         </Projectile>
-        <FameBonus>8</FameBonus>
+        <HonorBonus>8</HonorBonus>
         <Valiant id="Domino Effect"/>
         <Origin>Cosmic Capsule</Origin>
     </Object>
@@ -726,7 +726,7 @@
             <CondChance effect="Stunned" chance="0.8" duration="1.0"/>
             <ArmorPiercing/>
         </Projectile>
-        <FameBonus>8</FameBonus>
+        <HonorBonus>8</HonorBonus>
         <Valiant id="Spiritual Hunt"/>
         <Origin>Cosmic Capsule</Origin>
     </Object>
@@ -764,7 +764,7 @@
             <MultiHit/>
             <PassesCover/>
         </Projectile>
-        <FameBonus>8</FameBonus>
+        <HonorBonus>8</HonorBonus>
         <Valiant id="Accumulating Calamity"/>
         <Origin>Cosmic Capsule</Origin>
     </Object>
@@ -800,7 +800,7 @@
             <LifetimeMS>620</LifetimeMS>
             <ArmorPiercing/>
         </Projectile>
-        <FameBonus>8</FameBonus>
+        <HonorBonus>8</HonorBonus>
         <Valiant id="Hematophobia"/>
         <Origin>Cosmic Capsule</Origin>
     </Object>
@@ -843,7 +843,7 @@
             <LifetimeMS>510</LifetimeMS>
             <CondChance effect="Hemorrhage" chance="4" duration="4"/>
         </Projectile>
-        <FameBonus>8</FameBonus>
+        <HonorBonus>8</HonorBonus>
         <Valiant id="Black Plague"/>
         <Origin>Cosmic Capsule</Origin>
     </Object>
@@ -876,7 +876,7 @@
             <MaxDamage>240</MaxDamage>
             <LifetimeMS>540</LifetimeMS>
         </Projectile>
-        <FameBonus>8</FameBonus>
+        <HonorBonus>8</HonorBonus>
         <Valiant id="Sacrificial Disaster"/>
         <Origin>Cosmic Capsule</Origin>
     </Object>
@@ -912,7 +912,7 @@
             <MaxDamage>450</MaxDamage>
             <LifetimeMS>650</LifetimeMS>
         </Projectile>
-        <FameBonus>8</FameBonus>
+        <HonorBonus>8</HonorBonus>
         <Valiant id="Assassin's Ambition"/>
         <Origin>Cosmic Capsule</Origin>
     </Object>
@@ -950,7 +950,7 @@
             <LifetimeMS>560</LifetimeMS>
             <ArmorPiercing/>
         </Projectile>
-        <FameBonus>8</FameBonus>
+        <HonorBonus>8</HonorBonus>
         <Valiant id="Omniscience"/>
         <Origin>Cosmic Capsule</Origin>
     </Object>
@@ -989,7 +989,7 @@
             <LifetimeMS>620</LifetimeMS>
             <MultiHit/>
         </Projectile>
-        <FameBonus>8</FameBonus>
+        <HonorBonus>8</HonorBonus>
         <Valiant id="Nyctophobia"/>
         <Origin>Cosmic Capsule</Origin>
     </Object>
@@ -1033,7 +1033,7 @@
             <LifetimeMS>500</LifetimeMS>
             <ArmorPiercing/>
         </Projectile>
-        <FameBonus>8</FameBonus>
+        <HonorBonus>8</HonorBonus>
         <Valiant id="Thrillseeker's Onslaught"/>
         <Origin>Cosmic Capsule</Origin>
     </Object>
@@ -1073,7 +1073,7 @@
             <MinDamage>150</MinDamage>
             <MaxDamage>205</MaxDamage>
         </Projectile>
-        <FameBonus>8</FameBonus>
+        <HonorBonus>8</HonorBonus>
         <Valiant id="Breather"/>
         <Origin>Cosmic Capsule</Origin>
     </Object>
@@ -1110,7 +1110,7 @@
             <MinDamage>210</MinDamage>
             <MaxDamage>250</MaxDamage>
         </Projectile>
-        <FameBonus>8</FameBonus>
+        <HonorBonus>8</HonorBonus>
         <Valiant id="Overcharge"/>
         <Origin>Cosmic Capsule</Origin>
     </Object>
@@ -1147,7 +1147,7 @@
             <ArmorPiercing/>
             <Boomerang/>
         </Projectile>
-        <FameBonus>8</FameBonus>
+        <HonorBonus>8</HonorBonus>
         <Valiant id="Lunar Surge"/>
         <Origin>Cosmic Capsule</Origin>
     </Object>
@@ -1183,7 +1183,7 @@
             <MaxDamage>160</MaxDamage>
             <LifetimeMS>720</LifetimeMS>
         </Projectile>
-        <FameBonus>8</FameBonus>
+        <HonorBonus>8</HonorBonus>
         <Valiant id="Spiritual Destruction"/>
         <Origin>Cosmic Capsule</Origin>
     </Object>
@@ -1220,7 +1220,7 @@
             <MaxDamage>270</MaxDamage>
             <LifetimeMS>750</LifetimeMS>
         </Projectile>
-        <FameBonus>8</FameBonus>
+        <HonorBonus>8</HonorBonus>
         <Valiant id="Hellstorm"/>
         <Origin>Cosmic Capsule</Origin>
     </Object>
@@ -1255,7 +1255,7 @@
             <LifetimeMS>820</LifetimeMS>
             <PassesCover/>
         </Projectile>
-        <FameBonus>8</FameBonus>
+        <HonorBonus>8</HonorBonus>
         <Valiant id="Opportunist"/>
         <Origin>Cosmic Capsule</Origin>
     </Object>
@@ -1292,7 +1292,7 @@
             <PassesCover/>
             <ParticleTrail>0xff00ff</ParticleTrail>
         </Projectile>
-        <FameBonus>8</FameBonus>
+        <HonorBonus>8</HonorBonus>
         <Valiant id="Growing Rage"/>
         <Origin>Cosmic Capsule</Origin>
     </Object>
@@ -1327,7 +1327,7 @@
             <MaxDamage>160</MaxDamage>
             <LifetimeMS>760</LifetimeMS>
         </Projectile>
-        <FameBonus>8</FameBonus>
+        <HonorBonus>8</HonorBonus>
         <Valiant id="Inspiration Drive"/>
         <Origin>Cosmic Capsule</Origin>
     </Object>
@@ -1367,7 +1367,7 @@
             <MaxDamage>500</MaxDamage>
             <ArmorPiercing/>
         </Projectile>
-        <FameBonus>8</FameBonus>
+        <HonorBonus>8</HonorBonus>
         <Valiant id="Self Assurance"/>
         <Origin>Cosmic Capsule</Origin>
     </Object>
@@ -1402,7 +1402,7 @@
             <Damage>260</Damage>
             <LifetimeMS>680</LifetimeMS>
         </Projectile>
-        <FameBonus>8</FameBonus>
+        <HonorBonus>8</HonorBonus>
         <Valiant id="Untouchable"/>
         <Origin>Cosmic Capsule</Origin>
     </Object>
@@ -1436,7 +1436,7 @@
             <LifetimeMS>520</LifetimeMS>
             <Size>100</Size>
         </Projectile>
-        <FameBonus>8</FameBonus>
+        <HonorBonus>8</HonorBonus>
         <Valiant id="Payback"/>
         <Origin>Cosmic Capsule</Origin>
     </Object>
@@ -1478,7 +1478,7 @@
             <LifetimeMS>540</LifetimeMS>
             <CondChance effect="Deficient" chance="3" duration="4"/>
         </Projectile>
-        <FameBonus>8</FameBonus>
+        <HonorBonus>8</HonorBonus>
         <Valiant id="Piece by Piece"/>
         <Origin>Cosmic Capsule</Origin>
     </Object>
@@ -1514,7 +1514,7 @@
             <MaxDamage>100</MaxDamage>
             <LifetimeMS>600</LifetimeMS>
         </Projectile>
-        <FameBonus>8</FameBonus>
+        <HonorBonus>8</HonorBonus>
         <Valiant id="Warmed Up"/>
         <Origin>Cosmic Capsule</Origin>
     </Object>
@@ -1551,7 +1551,7 @@
             <MultiHit/>
             <ArmorPiercing/>
         </Projectile>
-        <FameBonus>8</FameBonus>
+        <HonorBonus>8</HonorBonus>
         <Valiant id="Stalwart"/>
         <Origin>Cosmic Capsule</Origin>
     </Object>
@@ -1587,7 +1587,7 @@
             <LifetimeMS>530</LifetimeMS>
             <CondChance effect="Hemorrhage" chance="5" duration="6"/>
         </Projectile>
-        <FameBonus>8</FameBonus>
+        <HonorBonus>8</HonorBonus>
         <Valiant id="Blood Sacrifice"/>
         <Origin>Cosmic Capsule</Origin>
     </Object>
@@ -1626,7 +1626,7 @@
             <MaxDamage>225</MaxDamage>
             <LifetimeMS>500</LifetimeMS>
         </Projectile>
-        <FameBonus>8</FameBonus>
+        <HonorBonus>8</HonorBonus>
         <Valiant id="Karma's Honor"/>
         <Origin>Cosmic Capsule</Origin>
     </Object>
@@ -1669,7 +1669,7 @@
             <LifetimeMS>460</LifetimeMS>
             <Size>100</Size>
         </Projectile>
-        <FameBonus>8</FameBonus>
+        <HonorBonus>8</HonorBonus>
         <Valiant id="Shadow Assault"/>
         <Origin>Cosmic Capsule</Origin>
     </Object>
@@ -1709,7 +1709,7 @@
         <Cooldown>6</Cooldown>
         <Activate effect="Invisible" duration="6">ConditionEffectSelf</Activate>
         <Activate effect="Sluggish" duration="2">ConditionEffectSelf</Activate>
-        <FameBonus>8</FameBonus>
+        <HonorBonus>8</HonorBonus>
         <Valiant id="Flesh-rending Determination"/>
         <Origin>Cosmic Capsule</Origin>
     </Object>
@@ -1738,7 +1738,7 @@
         <Cooldown>6</Cooldown>
         <Activate effect="Invisible" duration="5.5">ConditionEffectSelf</Activate>
         <Activate maxDistance="20">Teleport</Activate>
-        <FameBonus>8</FameBonus>
+        <HonorBonus>8</HonorBonus>
         <Valiant id="Structural Reinforcement"/>
         <Origin>Cosmic Capsule</Origin>
     </Object>
@@ -1782,7 +1782,7 @@
             <ConditionEffect duration="2.5">Vulnerable</ConditionEffect>
             <ConditionEffect duration="2">Bind</ConditionEffect>
         </Projectile>
-        <FameBonus>8</FameBonus>
+        <HonorBonus>8</HonorBonus>
         <Valiant id="Last Resort"/>
         <Origin>Cosmic Capsule</Origin>
     </Object>
@@ -1811,7 +1811,7 @@
         <OldSound>ability/ability_use</OldSound>
         <Usable/>
         <MpCost>200</MpCost>
-        <FameBonus>8</FameBonus>
+        <HonorBonus>8</HonorBonus>
         <Valiant id="Inescapable"/>
         <Origin>Cosmic Capsule</Origin>
     </Object>
@@ -1850,7 +1850,7 @@
             <LifetimeMS>600</LifetimeMS>
             <MultiHit/>
         </Projectile>
-        <FameBonus>8</FameBonus>
+        <HonorBonus>8</HonorBonus>
         <Valiant id="Cataclysm"/>
         <Origin>Cosmic Capsule</Origin>
     </Object>
@@ -1892,7 +1892,7 @@
             <ArmorPiercing/>
             <Boomerang/>
         </Projectile>
-        <FameBonus>8</FameBonus>
+        <HonorBonus>8</HonorBonus>
         <Valiant id="Perfect Execution"/>
         <Origin>Cosmic Capsule</Origin>
     </Object>
@@ -1937,7 +1937,7 @@
             <PassesCover/>
             <Parametric/>
         </Projectile>
-        <FameBonus>8</FameBonus>
+        <HonorBonus>8</HonorBonus>
         <Valiant id="Unbreakable Focus"/>
         <Origin>Cosmic Capsule</Origin>
     </Object>
@@ -1982,7 +1982,7 @@
             <PassesCover/>
             <Boomerang/>
         </Projectile>
-        <FameBonus>8</FameBonus>
+        <HonorBonus>8</HonorBonus>
         <Valiant id="Mana Hunger"/>
         <Origin>Cosmic Capsule</Origin>
     </Object>
@@ -2021,7 +2021,7 @@
         <Activate effect="Precision" duration="1.5" range="6" useWisMod="false">ConditionEffectAura</Activate>
         <Activate effect="Harden" duration="3" useWisMod="false">ConditionEffectSelf</Activate>
         <Activate range="10" amount="750" useWisMod="false">HealNova</Activate>
-        <FameBonus>8</FameBonus>
+        <HonorBonus>8</HonorBonus>
         <Valiant id="Tenacity"/>
         <Origin>Cosmic Capsule</Origin>
     </Object>
@@ -2048,7 +2048,7 @@
         <Activate effect="Bind" duration="1" range="6" color="0xFFFF00" target="enemy" center="player" visualEffect="0"
                   useWisMod="false">GenericActivate
         </Activate>
-        <FameBonus>8</FameBonus>
+        <HonorBonus>8</HonorBonus>
         <Valiant id="Oddity"/>
         <Origin>Cosmic Capsule</Origin>
     </Object>
@@ -2078,7 +2078,7 @@
         <Activate effect="Exhaust" duration="3" range="14" target="enemy" center="player" visualEffect="0"
                   useWisMod="false">GenericActivate
         </Activate>
-        <FameBonus>8</FameBonus>
+        <HonorBonus>8</HonorBonus>
         <Valiant id="Mind Scratch"/>
         <Origin>Cosmic Capsule</Origin>
     </Object>
@@ -2108,7 +2108,7 @@
         <Activate effect="Strengthen" duration="6">ConditionEffectSelf</Activate>
         <Activate effect="Swift" duration="3">ConditionEffectSelf</Activate>
         <Activate effect="Fury" duration="3" range="6">ConditionEffectAura</Activate>
-        <FameBonus>8</FameBonus>
+        <HonorBonus>8</HonorBonus>
         <Valiant id="Fighting Will"/>
         <Origin>Cosmic Capsule</Origin>
     </Object>
@@ -2142,7 +2142,7 @@
         <Activate effect="Bind" duration="5.5" range="8" target="enemy" center="player" visualEffect="0"
                   useWisMod="false">GenericActivate
         </Activate>
-        <FameBonus>8</FameBonus>
+        <HonorBonus>8</HonorBonus>
         <Valiant id="Checkmate"/>
         <Origin>Cosmic Capsule</Origin>
     </Object>
@@ -2168,7 +2168,7 @@
         <Activate effect="Regenerate" duration="4" range="6">ConditionEffectAura</Activate>
         <Activate stat="0" amount="350" duration="4" noStack="true" useWisMod="false">StatBoostSelf</Activate>
         // HP
-        <FameBonus>8</FameBonus>
+        <HonorBonus>8</HonorBonus>
         <Valiant id="As One!"/>
         <Origin>Cosmic Capsule</Origin>
     </Object>
@@ -2192,7 +2192,7 @@
         <Activate effect="Fury" duration="4" range="6">ConditionEffectAura</Activate>
         <Activate stat="26" amount="50" duration="6" noStack="true" useWisMod="false">StatBoostSelf</Activate>
         // VIT
-        <FameBonus>8</FameBonus>
+        <HonorBonus>8</HonorBonus>
         <Valiant id="Health Ridden"/>
         <Origin>Cosmic Capsule</Origin>
     </Object>
@@ -2238,7 +2238,7 @@
             <ParticleTrail>0xFF0000</ParticleTrail>
             // RED
         </Projectile>
-        <FameBonus>8</FameBonus>
+        <HonorBonus>8</HonorBonus>
         <Valiant id="Moral Boost"/>
         <Origin>Cosmic Capsule</Origin>
     </Object>
@@ -2287,7 +2287,7 @@
             <ParticleTrail>0xFFFF00</ParticleTrail>
             // RED
         </Projectile>
-        <FameBonus>8</FameBonus>
+        <HonorBonus>8</HonorBonus>
         <Valiant id="Cerberus' Parting Gift"/>
         <Origin>Cosmic Capsule</Origin>
     </Object>
@@ -2331,7 +2331,7 @@
         <Activate effect="Exhaust" duration="3" range="3.5" target="enemy" center="player" visualEffect="0"
                   useWisMod="false">GenericActivate
         </Activate>
-        <FameBonus>8</FameBonus>
+        <HonorBonus>8</HonorBonus>
         <Valiant id="Indomitable Reinforcement"/>
         <Origin>Cosmic Capsule</Origin>
     </Object>
@@ -2362,7 +2362,7 @@
         <Activate effect="Invulnerable" duration="1">ConditionEffectSelf</Activate>
         <Activate effect="Precision" duration="3" range="5.5">ConditionEffectAura</Activate>
         <Activate stat="0" amount="150" duration="5" range="3" noStack="true" useWisMod="false">StatBoostAura</Activate>
-        <FameBonus>8</FameBonus>
+        <HonorBonus>8</HonorBonus>
         <Valiant id="Power in Numbers"/>
         <Origin>Cosmic Capsule</Origin>
     </Object>
@@ -2394,7 +2394,7 @@
         </Activate>
         <Activate stat="26" amount="20" duration="3.5" range="4.5" noStack="true" useWisMod="false">StatBoostAura
         </Activate>
-        <FameBonus>8</FameBonus>
+        <HonorBonus>8</HonorBonus>
         <Valiant id="Vigor Bound"/>
         <Origin>Cosmic Capsule</Origin>
     </Object>
@@ -2421,7 +2421,7 @@
         <Activate useWisMod="false" radius="6" totalDamage="2800" duration="4" impactDamage="1000" throwTime="3"
                   condEffect="Sluggish" condDuration="1.5">PoisonGrenade
         </Activate>
-        <FameBonus>8</FameBonus>
+        <HonorBonus>8</HonorBonus>
         <Valiant id="Hexing Gaze"/>
         <Origin>Cosmic Capsule</Origin>
     </Object>
@@ -2447,7 +2447,7 @@
         <Activate effect="Strengthen" duration="2">ConditionEffectSelf</Activate>
         <Activate effect="Precision" duration="2">ConditionEffectSelf</Activate>
         <Activate effect="Fury" duration="2">ConditionEffectSelf</Activate>
-        <FameBonus>8</FameBonus>
+        <HonorBonus>8</HonorBonus>
         <Valiant id="Self-Loathing"/>
         <Origin>Cosmic Capsule</Origin>
     </Object>
@@ -2480,7 +2480,7 @@
         <Activate effect="Bind" duration="3" range="3" target="enemy" center="mouse" visualEffect="0" useWisMod="false">
             GenericActivate
         </Activate>
-        <FameBonus>8</FameBonus>
+        <HonorBonus>8</HonorBonus>
         <Valiant id="Sadistic"/>
         <Origin>Cosmic Capsule</Origin>
     </Object>
@@ -2515,7 +2515,7 @@
         <Activate effect="Hemorrhage" duration="3" range="5" target="enemy" center="mouse" visualEffect="0"
                   useWisMod="false">GenericActivate
         </Activate>
-        <FameBonus>8</FameBonus>
+        <HonorBonus>8</HonorBonus>
         <Valiant id="Unapproachable"/>
         <Origin>Cosmic Capsule</Origin>
     </Object>
@@ -2547,7 +2547,7 @@
         <Activate radius="6" totalDamage="3600" condEffect="Bind" condDuration="3">Trap</Activate>
         <Activate radius="4" totalDamage="4200" condEffect="Vulnerable" condDuration="2">Trap</Activate>
         <Activate effect="Fury" duration="2.5">ConditionEffectSelf</Activate>
-        <FameBonus>8</FameBonus>
+        <HonorBonus>8</HonorBonus>
         <Valiant id="Thornheart"/>
         <Origin>Cosmic Capsule</Origin>
     </Object>
@@ -2573,7 +2573,7 @@
         <Activate radius="6" totalDamage="5000" condEffect="Sluggish" condDuration="5">Trap</Activate>
         <Activate radius="6" totalDamage="7500" condEffect="Bind" condDuration="2">Trap</Activate>
         <Activate effect="Strengthen" duration="2">ConditionEffectSelf</Activate>
-        <FameBonus>8</FameBonus>
+        <HonorBonus>8</HonorBonus>
         <Valiant id="Ambush"/>
         <Origin>Cosmic Capsule</Origin>
     </Object>
@@ -2604,7 +2604,7 @@
         <Activate effect="Fragile" duration="4" range="4" color="0xFF0000" target="enemy" center="mouse"
                   visualEffect="5" useWisMod="false">GenericActivate
         </Activate>
-        <FameBonus>8</FameBonus>
+        <HonorBonus>8</HonorBonus>
         <Valiant id="Needed Compromise"/>
         <Origin>Cosmic Capsule</Origin>
     </Object>
@@ -2637,7 +2637,7 @@
         <Activate effect="Fragile" duration="4" range="4" color="0xFF0000" target="enemy" center="player"
                   visualEffect="0" useWisMod="false">GenericActivate
         </Activate>
-        <FameBonus>8</FameBonus>
+        <HonorBonus>8</HonorBonus>
         <Valiant id="One for the Team"/>
         <Origin>Cosmic Capsule</Origin>
     </Object>
@@ -2680,7 +2680,7 @@
         <Activate effect="Invulnerable" duration="2.4">ConditionEffectSelf</Activate>
         <Activate stat="114" amount="20" isPerc="true" duration="2.4" noStack="true" useWisMod="false">StatBoostSelf
         </Activate>
-        <FameBonus>8</FameBonus>
+        <HonorBonus>8</HonorBonus>
         <Origin>Cosmic Capsule</Origin>
         <Valiant id="King's Unseen Hand"/>
     </Object>
@@ -2736,7 +2736,7 @@
         <Cooldown>0.5</Cooldown>
         <Activate useWisMod="true" totalDamage="950" maxTargets="10">Lightning</Activate>
         <Activate effect="Precision" duration="2.5">ConditionEffectSelf</Activate>
-        <FameBonus>8</FameBonus>
+        <HonorBonus>8</HonorBonus>
         <Valiant id="Mind Leech"/>
         <Origin>Cosmic Capsule</Origin>
     </Object>
@@ -2759,7 +2759,7 @@
                   color="0x9800FF">Lightning
         </Activate>
         <Activate effect="Strengthen" duration="3.5" useWisMod="true">ConditionEffectSelf</Activate>
-        <FameBonus>8</FameBonus>
+        <HonorBonus>8</HonorBonus>
         <Valiant id="Tsunami's Fury"/>
         <Origin>Cosmic Capsule</Origin>
     </Object>
@@ -2785,7 +2785,7 @@
         <Activate useWisMod="true" totalDamage="900" maxTargets="6" condEffect="Terrify" condDuration="2">Lightning
         </Activate>
         <Activate stat="0" amount="250" duration="0.5" noStack="true" useWisMod="false">StatBoostSelf</Activate>
-        <FameBonus>8</FameBonus>
+        <HonorBonus>8</HonorBonus>
         <Valiant id="Enduring Spirit"/>
         <Origin>Cosmic Capsule</Origin>
     </Object>
@@ -2825,7 +2825,7 @@
             <ArmorPiercing/>
             <MultiHit/>
         </Projectile>
-        <FameBonus>8</FameBonus>
+        <HonorBonus>8</HonorBonus>
         <Valiant id="Shared Suffering"/>
         <Origin>Cosmic Capsule</Origin>
     </Object>
@@ -2874,7 +2874,7 @@
         </Activate>
         <Activate effect="Fury" duration="2">ConditionEffectSelf</Activate>
         <Activate effect="Strengthen" duration="2">ConditionEffectSelf</Activate>
-        <FameBonus>8</FameBonus>
+        <HonorBonus>8</HonorBonus>
         <Valiant id="Shifty Hands"/>
         <Origin>Cosmic Capsule</Origin>
     </Object>
@@ -2912,7 +2912,7 @@
         <Cooldown>2</Cooldown>
         <Activate duration="5" randVals="Fury, Nausea, Strengthen">DiceActivate</Activate>
         <Activate effect="Precision" duration="4">ConditionEffectSelf</Activate>
-        <FameBonus>8</FameBonus>
+        <HonorBonus>8</HonorBonus>
         <Valiant id="Winning Streak"/>
         <Origin>Cosmic Capsule</Origin>
     </Object>
@@ -2957,7 +2957,7 @@
             <MultiHit/>
             <Boomerang/>
         </Projectile>
-        <FameBonus>8</FameBonus>
+        <HonorBonus>8</HonorBonus>
         <Valiant id="Merciless Finish"/>
         <Origin>Cosmic Capsule</Origin>
     </Object>
@@ -3001,7 +3001,7 @@
         <Cooldown>4.5</Cooldown>
         <Activate duration="5" objType="0x672d">TalismanAbility</Activate>
         <Activate effect="Fury" duration="5">ConditionEffectSelf</Activate>
-        <FameBonus>8</FameBonus>
+        <HonorBonus>8</HonorBonus>
         <Valiant id="Self-Assured"/>
         <Origin>Cosmic Capsule</Origin>
     </Object>
@@ -3044,7 +3044,7 @@
         // VIT
         <ActivateOnEquip stat="122" amount="200">IncrementStat</ActivateOnEquip>
         // PROT
-        <FameBonus>8</FameBonus>
+        <HonorBonus>8</HonorBonus>
         <Valiant id="Reinforced Observation"/>
         <Origin>Cosmic Capsule</Origin>
     </Object>
@@ -3067,7 +3067,7 @@
         <ActivateOnEquip stat="122" amount="700">IncrementStat</ActivateOnEquip>
         // PROT
         <Steal type="mana" amount="1"/>
-        <FameBonus>8</FameBonus>
+        <HonorBonus>8</HonorBonus>
         <Valiant id="Take Cover"/>
         <Origin>Cosmic Capsule</Origin>
     </Object>
@@ -3089,7 +3089,7 @@
         // WIS
         <ActivateOnEquip stat="122" amount="100">IncrementStat</ActivateOnEquip>
         // PRT
-        <FameBonus>8</FameBonus>
+        <HonorBonus>8</HonorBonus>
         <Valiant id="Corrupted Surge"/>
         <Origin>Cosmic Capsule</Origin>
     </Object>
@@ -3111,7 +3111,7 @@
         // DEX
         <ActivateOnEquip stat="122" amount="150">IncrementStat</ActivateOnEquip>
         // PRT
-        <FameBonus>8</FameBonus>
+        <HonorBonus>8</HonorBonus>
         <Valiant id="Force of Will"/>
         <Origin>Cosmic Capsule</Origin>
     </Object>
@@ -3131,7 +3131,7 @@
         // MGT
         <ActivateOnEquip stat="114" amount="80">IncrementStat</ActivateOnEquip>
         // LCK
-        <FameBonus>8</FameBonus>
+        <HonorBonus>8</HonorBonus>
         <Valiant id="Dumb Luck"/>
         <Origin>Cosmic Capsule</Origin>
     </Object>
@@ -3153,7 +3153,7 @@
         // MGT
         <ActivateOnEquip stat="112" amount="50">IncrementStat</ActivateOnEquip>
         // PRT
-        <FameBonus>8</FameBonus>
+        <HonorBonus>8</HonorBonus>
         <Valiant id="Inquisition"/>
         <Origin>Cosmic Capsule</Origin>
     </Object>
@@ -3175,7 +3175,7 @@
         // RES
         <ActivateOnEquip stat="122" amount="100">IncrementStat</ActivateOnEquip>
         // PRT
-        <FameBonus>8</FameBonus>
+        <HonorBonus>8</HonorBonus>
         <Valiant id="Eldritch Aid"/>
         <Origin>Cosmic Capsule</Origin>
     </Object>
@@ -3202,7 +3202,7 @@
         <ActivateOnEquip stat="5" amount="5">IncrementStat</ActivateOnEquip>
         // DEX
         <EffectEquip effect="Harden" delay="18"/>
-        <FameBonus>8</FameBonus>
+        <HonorBonus>8</HonorBonus>
         <Valiant id="Reckless Charge"/>
         <Origin>Cosmic Capsule</Origin>
     </Object>
@@ -3225,7 +3225,7 @@
         <ActivateOnEquip stat="5" amount="10">IncrementStat</ActivateOnEquip>
         // DEX
         <Steal type="life" amount="2"/>
-        <FameBonus>8</FameBonus>
+        <HonorBonus>8</HonorBonus>
         <Valiant id="Just a Scratch"/>
         <Origin>Cosmic Capsule</Origin>
     </Object>
@@ -3253,7 +3253,7 @@
         // WIS
         <ActivateOnEquip stat="121" amount="10">IncrementStat</ActivateOnEquip>
         // RES
-        <FameBonus>8</FameBonus>
+        <HonorBonus>8</HonorBonus>
         <Valiant id="Gear Turner"/>
         <Origin>Cosmic Capsule</Origin>
     </Object>
@@ -3277,7 +3277,7 @@
         // MGT
         <ActivateOnEquip stat="114" amount="40">IncrementStat</ActivateOnEquip>
         // LCK
-        <FameBonus>8</FameBonus>
+        <HonorBonus>8</HonorBonus>
         <Valiant id="Unbroken"/>
         <Origin>Cosmic Capsule</Origin>
     </Object>

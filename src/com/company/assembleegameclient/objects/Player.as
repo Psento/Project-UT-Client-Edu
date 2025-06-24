@@ -10,7 +10,7 @@ import com.company.assembleegameclient.parameters.Parameters;
 import com.company.assembleegameclient.sound.SoundEffectLibrary;
 import com.company.assembleegameclient.util.AnimatedChar;
 import com.company.assembleegameclient.util.ConditionEffect;
-import com.company.assembleegameclient.util.FameUtil;
+import com.company.assembleegameclient.util.HonorUtil;
 import com.company.assembleegameclient.util.FreeList;
 import com.company.assembleegameclient.util.ItemData;
 import com.company.assembleegameclient.util.MaskedImage;
@@ -75,9 +75,8 @@ public class Player extends Character {
     public var medallions_:int = 0;
     public var honor_:int = 0;
     public var numStars_:int = 0;
-    public var fame_:int = 0;
-    public var charFame_:int = 0;
-    public var nextClassQuestFame_:int = -1;
+    public var charHonor:int = 0;
+    public var nextClassQuestHonor:int = -1;
     public var legendaryRank_:int = -1;
     public var guildName_:String = null;
     public var guildRank_:int = -1;
@@ -355,11 +354,11 @@ public class Player extends Character {
         map_.mapOverlay_.addStatusText(new CharacterStatusText(this, "+" + exp + " EXP", 65280, 1000));
     }
 
-    public function handleFameUp(fame:int):void {
+    public function handleHonorUp(honor:int):void {
         if (level_ != 20) {
             return;
         }
-        map_.mapOverlay_.addStatusText(new CharacterStatusText(this, "+" + fame + " Fame", 0xE25F00, 1000));
+        map_.mapOverlay_.addStatusText(new CharacterStatusText(this, "+" + honor + " Honor", 0xE25F00, 1000));
     }
 
     private function getNearbyMerchant():Merchant {
@@ -636,7 +635,7 @@ public class Player extends Character {
         var nameBitmapData:BitmapData = new BitmapData(nameText.width + 20, 64, true, 0);
         nameBitmapData.draw(nameText, NAME_OFFSET_MATRIX);
         nameBitmapData.applyFilter(nameBitmapData, nameBitmapData.rect, PointUtil.ORIGIN, new GlowFilter(0, 1, 3, 3, 2, 1));
-        var rankIcon:Sprite = FameUtil.numStarsToIcon(this.numStars_);
+        var rankIcon:Sprite = HonorUtil.numStarsToIcon(this.numStars_);
         nameBitmapData.draw(rankIcon, RANK_OFFSET_MATRIX);
         return nameBitmapData;
     }

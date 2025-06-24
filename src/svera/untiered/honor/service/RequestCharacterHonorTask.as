@@ -1,4 +1,4 @@
-package svera.untiered.fame.service {
+package svera.untiered.honor.service {
 import com.company.assembleegameclient.ui.dialogs.ErrorDialog;
 import com.company.util.DateFormatterReplacement;
 
@@ -10,7 +10,7 @@ import svera.untiered.classes.model.CharacterSkin;
 import svera.untiered.classes.model.ClassesModel;
 import svera.untiered.dialogs.control.OpenDialogSignal;
 
-public class RequestCharacterFameTask extends BaseTask {
+public class RequestCharacterHonorTask extends BaseTask {
 
 
     [Inject]
@@ -38,7 +38,7 @@ public class RequestCharacterFameTask extends BaseTask {
 
     public var killer:String;
 
-    public var totalFame:int;
+    public var totalHonor:int;
 
     public var template:CharacterTemplate;
 
@@ -46,18 +46,18 @@ public class RequestCharacterFameTask extends BaseTask {
 
     public var texture2:int;
 
-    public function RequestCharacterFameTask() {
+    public function RequestCharacterHonorTask() {
         super();
     }
 
     override protected function startTask():void {
-        this.sendFameRequest();
+        this.sendHonorRequest();
     }
 
-    private function sendFameRequest():void {
+    private function sendHonorRequest():void {
         this.client.setMaxRetries(3);
         this.client.complete.addOnce(this.onComplete);
-        this.client.sendRequest("char/fame", this.getDataPacket());
+        this.client.sendRequest("char/honor", this.getDataPacket());
     }
 
     private function getDataPacket():Object {
@@ -69,13 +69,13 @@ public class RequestCharacterFameTask extends BaseTask {
 
     private function onComplete(isOK:Boolean, data:*):void {
         if (isOK) {
-            this.parseFameData(data);
+            this.parseHonorData(data);
         } else {
-            this.onFameError(data);
+            this.onHonorError(data);
         }
     }
 
-    private function parseFameData(data:String):void {
+    private function parseHonorData(data:String):void {
         this.xml = new XML(data);
         this.parseXML();
         completeTask(true);
@@ -91,7 +91,7 @@ public class RequestCharacterFameTask extends BaseTask {
         this.type = charXml.ObjectType;
         this.deathDate = this.getDeathDate();
         this.killer = this.xml.KilledBy || "";
-        this.totalFame = this.xml.TotalFame;
+        this.totalHonor = this.xml.TotalHonor;
         char = this.classes.getCharacterClass(charXml.ObjectType);
         skin = Boolean(charXml.hasOwnProperty("Texture")) ? char.skins.getSkin(charXml.Texture) : char.skins.getDefaultSkin();
         this.template = skin.template;
@@ -107,7 +107,7 @@ public class RequestCharacterFameTask extends BaseTask {
         return df.format(date);
     }
 
-    private function onFameError(data:String):void {
+    private function onHonorError(data:String):void {
         this.openDialog.dispatch(new ErrorDialog(data));
     }
 }

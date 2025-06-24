@@ -7,9 +7,9 @@ import robotlegs.bender.framework.api.IConfig;
 
 import svera.untiered.legends.control.ExitLegendsCommand;
 import svera.untiered.legends.control.ExitLegendsSignal;
-import svera.untiered.legends.control.FameListUpdateSignal;
-import svera.untiered.legends.control.RequestFameListCommand;
-import svera.untiered.legends.control.RequestFameListSignal;
+import svera.untiered.legends.control.HonorListUpdateSignal;
+import svera.untiered.legends.control.RequestHonorListCommand;
+import svera.untiered.legends.control.RequestHonorListSignal;
 import svera.untiered.legends.model.LegendFactory;
 import svera.untiered.legends.model.LegendsModel;
 import svera.untiered.legends.view.LegendsMediator;
@@ -32,9 +32,9 @@ public class LegendsConfig implements IConfig {
     public function configure():void {
         this.injector.map(LegendFactory).asSingleton();
         this.injector.map(LegendsModel).asSingleton();
-        this.injector.map(FameListUpdateSignal).asSingleton();
+        this.injector.map(HonorListUpdateSignal).asSingleton();
         this.mediatorMap.map(LegendsView).toMediator(LegendsMediator);
-        this.commandMap.map(RequestFameListSignal).toCommand(RequestFameListCommand);
+        this.commandMap.map(RequestHonorListSignal).toCommand(RequestHonorListCommand);
         this.commandMap.map(ExitLegendsSignal).toCommand(ExitLegendsCommand);
     }
 }

@@ -75,7 +75,7 @@ public class EquipmentToolTip extends ToolTip {
         this.addCooldownTagToEffectsList();
         this.addDoseTagsToEffectsList();
         this.addMpCostTagToEffectsList();
-        this.addFameBonusTagToEffectsList();
+        this.addHonorBonusTagToEffectsList();
         this.makeEffectsList();
         this.makeRestrictionList();
         this.makeRestrictionText();
@@ -241,16 +241,16 @@ public class EquipmentToolTip extends ToolTip {
         }
     }
 
-    private function addFameBonusTagToEffectsList():void {
-        var fameBonusMod:Number = ItemData.getStat(this.itemData_, ItemData.FAME_BONUS_BIT, 1);
-        if (this.objectXML_.hasOwnProperty("FameBonus") || fameBonusMod != 0) {
-            var fameBonus:int = this.objectXML_.hasOwnProperty("FameBonus") ? int(this.objectXML_.FameBonus) : 0;
-            var fameBonusString:String = (fameBonus + fameBonusMod).toString() + "%";
-            if (fameBonusMod != 0) {
-                fameBonusString += " (+" + fameBonusMod + "%)";
-                fameBonusString = TooltipHelper.wrapInFontTag(fameBonusString, ItemData.getColorString(this.itemData_));
+    private function addHonorBonusTagToEffectsList():void {
+        var HonorBonusMod:Number = ItemData.getStat(this.itemData_, ItemData.FAME_BONUS_BIT, 1);
+        if (this.objectXML_.hasOwnProperty("HonorBonus") || HonorBonusMod != 0) {
+            var HonorBonus:int = this.objectXML_.hasOwnProperty("HonorBonus") ? int(this.objectXML_.HonorBonus) : 0;
+            var HonorBonusString:String = (HonorBonus + HonorBonusMod).toString() + "%";
+            if (HonorBonusMod != 0) {
+                HonorBonusString += " (+" + HonorBonusMod + "%)";
+                HonorBonusString = TooltipHelper.wrapInFontTag(HonorBonusString, ItemData.getColorString(this.itemData_));
             }
-            this.effects.push(new Effect("Fame Bonus", fameBonusString));
+            this.effects.push(new Effect("Honor Bonus", HonorBonusString));
         }
     }
 

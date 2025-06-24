@@ -38,9 +38,9 @@ public class LegendListItem extends Sprite {
 
     private var inventoryGrid:EquippedGrid;
 
-    private var totalFameText:SimpleText;
+    private var totalHonorText:SimpleText;
 
-    private var fameIcon:Bitmap;
+    private var honorIcon:Bitmap;
 
     private var isOver:Boolean;
 
@@ -54,8 +54,8 @@ public class LegendListItem extends Sprite {
         this.makeCharacterBitmap();
         this.makeNameText();
         this.makeInventory();
-        this.makeTotalFame();
-        this.makeFameIcon();
+        this.makeTotalHonor();
+        this.makeHonorIcon();
         this.addMouseListeners();
         this.draw();
     }
@@ -107,23 +107,23 @@ public class LegendListItem extends Sprite {
         addChild(this.inventoryGrid);
     }
 
-    private function makeTotalFame():void {
-        this.totalFameText = new SimpleText(22, this.getTextColor(), false, 0, 0);
-        this.totalFameText.setBold(true);
-        this.totalFameText.text = this.legend.totalFame.toString();
-        this.totalFameText.useTextDimensions();
-        this.totalFameText.filters = [new DropShadowFilter(0, 0, 0, 1, 8, 8)];
-        this.totalFameText.x = 660 - this.totalFameText.width;
-        this.totalFameText.y = HEIGHT / 2 - this.totalFameText.height / 2;
-        addChild(this.totalFameText);
+    private function makeTotalHonor():void {
+        this.totalHonorText = new SimpleText(22, this.getTextColor(), false, 0, 0);
+        this.totalHonorText.setBold(true);
+        this.totalHonorText.text = this.legend.totalHonor.toString();
+        this.totalHonorText.useTextDimensions();
+        this.totalHonorText.filters = [new DropShadowFilter(0, 0, 0, 1, 8, 8)];
+        this.totalHonorText.x = 660 - this.totalHonorText.width;
+        this.totalHonorText.y = HEIGHT / 2 - this.totalHonorText.height / 2;
+        addChild(this.totalHonorText);
     }
 
-    private function makeFameIcon():void {
-        var fameBD:BitmapData = AssetLibrary.getImageFromSet("Currency_Icons16x16", 0);
-        this.fameIcon = new Bitmap(TextureRedrawer.redraw(fameBD, 40, true, 0));
-        this.fameIcon.x = 652;
-        this.fameIcon.y = HEIGHT / 2 - this.fameIcon.height / 2;
-        addChild(this.fameIcon);
+    private function makeHonorIcon():void {
+        var honorBD:BitmapData = AssetLibrary.getImageFromSet("Currency_Icons16x16", 0);
+        this.honorIcon = new Bitmap(TextureRedrawer.redraw(honorBD, 40, true, 0));
+        this.honorIcon.x = 652;
+        this.honorIcon.y = HEIGHT / 2 - this.honorIcon.height / 2;
+        addChild(this.honorIcon);
     }
 
     private function getTextColor():uint {

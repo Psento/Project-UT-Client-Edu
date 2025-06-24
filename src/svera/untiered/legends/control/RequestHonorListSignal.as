@@ -3,10 +3,10 @@ import org.osflash.signals.Signal;
 
 import svera.untiered.legends.model.Timespan;
 
-public class RequestFameListSignal extends Signal {
+public class RequestHonorListSignal extends Signal {
 
 
-    public function RequestFameListSignal() {
+    public function RequestHonorListSignal() {
         super(Timespan);
     }
 }

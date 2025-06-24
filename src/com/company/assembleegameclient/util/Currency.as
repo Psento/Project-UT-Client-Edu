@@ -7,8 +7,6 @@ public class Currency {
     public static const MEDALLIONS:int = 1;
     public static const HONOR:int = 2;
 
-    public static const FAME:int = 3;
-
     public static const GUILD_FAME:int = 4;
 
 
@@ -24,10 +22,8 @@ public class Currency {
                 return "Medallions";
             case HONOR:
                 return "Honor";
-            case FAME:
-                return "Fame";
             case GUILD_FAME:
-                return "Guild Fame";
+                return "Guild Honor";
             default:
                 return "";
         }

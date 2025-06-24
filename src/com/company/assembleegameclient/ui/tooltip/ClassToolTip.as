@@ -3,7 +3,7 @@ import com.company.assembleegameclient.appengine.CharacterStats;
 import com.company.assembleegameclient.ui.LineBreakDesign;
 import com.company.assembleegameclient.util.AnimatedChar;
 import com.company.assembleegameclient.util.AnimatedChars;
-import com.company.assembleegameclient.util.FameUtil;
+import com.company.assembleegameclient.util.HonorUtil;
 import com.company.assembleegameclient.util.MaskedImage;
 import com.company.assembleegameclient.util.TextureRedrawer;
 import com.company.ui.SimpleText;
@@ -31,7 +31,7 @@ public class ClassToolTip extends ToolTip {
 
     public function ClassToolTip(playerXML:XML, model:PlayerModel, charStats:CharacterStats) {
         var numStars:int = 0;
-        var nextStarFame:int = 0;
+        var nextStarHonor:int = 0;
         super(3552822, 1, 16777215, 1);
         var animatedChar:AnimatedChar = AnimatedChars.getAnimatedChar(String(playerXML.AnimatedTexture.File), int(playerXML.AnimatedTexture.Index));
         var image:MaskedImage = animatedChar.imageFromDir(AnimatedChar.RIGHT, AnimatedChar.STAND, 0);
@@ -65,16 +65,16 @@ public class ClassToolTip extends ToolTip {
 
         numStars = charStats == null ? int(0) : int(charStats.numStars());
         this.bestLevel_ = new SimpleText(14, 6206769, false, 0, 0);
-        this.bestLevel_.text = numStars + " of 5 Class Quests Completed\n" + "Best Level Achieved: " + (charStats != null ? charStats.bestLevel() : 0) + "\n" + "Best Fame Achieved: " + (charStats != null ? charStats.bestFame() : 0);
+        this.bestLevel_.text = numStars + " of 5 Class Quests Completed\n" + "Best Level Achieved: " + (charStats != null ? charStats.bestLevel() : 0) + "\n" + "Best Honor Achieved: " + (charStats != null ? charStats.bestHonor() : 0);
         this.bestLevel_.updateMetrics();
         this.bestLevel_.filters = [new DropShadowFilter(0, 0, 0)];
         this.bestLevel_.x = 8;
         this.bestLevel_.y = height - 2;
         addChild(this.bestLevel_);
-        nextStarFame = FameUtil.nextStarFame(charStats == null ? int(0) : int(charStats.bestFame()), 0);
-        if (nextStarFame > 0) {
+        nextStarHonor = HonorUtil.nextStarHonor(charStats == null ? int(0) : int(charStats.bestHonor()), 0);
+        if (nextStarHonor > 0) {
             this.nextClassQuest_ = new SimpleText(13, 16549442, false, 174, 0);
-            this.nextClassQuest_.text = "Next Goal: Earn " + nextStarFame + " Fame\n" + "  with a " + playerXML.@id;
+            this.nextClassQuest_.text = "Next Goal: Earn " + nextStarHonor + " Honor\n" + "  with a " + playerXML.@id;
             this.nextClassQuest_.updateMetrics();
             this.nextClassQuest_.filters = [new DropShadowFilter(0, 0, 0)];
             this.nextClassQuest_.x = 8;

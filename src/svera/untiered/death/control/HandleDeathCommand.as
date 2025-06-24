@@ -32,7 +32,7 @@ public class HandleDeathCommand {
         Music.load(Music.DEATH_MUSIC);
         this.closeDialogs.dispatch();
         if (this.isDeathPending()) {
-            this.passPreviousDeathToFameView();
+            this.passPreviousDeathToHonorView();
         } else {
             this.updateModelAndHandleDeath();
         }
@@ -42,7 +42,7 @@ public class HandleDeathCommand {
         return this.model.getIsDeathViewPending();
     }
 
-    private function passPreviousDeathToFameView():void {
+    private function passPreviousDeathToHonorView():void {
         this.normal.dispatch(this.model.getLastDeath());
     }
 

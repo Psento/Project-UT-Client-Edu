@@ -22,7 +22,7 @@ public class NewsLine extends Sprite {
     public static const OVER_COLOR:uint = 16762880;
 
 
-    public var viewCharacterFame:Signal;
+    public var viewCharacterHonor:Signal;
 
     public var icon_:Bitmap;
 
@@ -37,7 +37,7 @@ public class NewsLine extends Sprite {
     public var accountId:int;
 
     public function NewsLine(icon:BitmapData, title:String, tagLine:String, link:String, time:int, accountId:int) {
-        this.viewCharacterFame = new Signal(int);
+        this.viewCharacterHonor = new Signal(int);
         super();
         this.link = link;
         this.accountId = accountId;
@@ -88,8 +88,8 @@ public class NewsLine extends Sprite {
     protected function onMouseDown(event:MouseEvent):void {
         var parts:Array = this.link.split(":", 2);
         switch (parts[0]) {
-            case "fame":
-                this.viewCharacterFame.dispatch(int(parts[1]));
+            case "honor":
+                this.viewCharacterHonor.dispatch(int(parts[1]));
                 break;
             case "http":
             case "https":

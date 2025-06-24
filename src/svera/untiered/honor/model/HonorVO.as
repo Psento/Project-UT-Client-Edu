@@ -1,5 +1,5 @@
-package svera.untiered.fame.model {
-public interface FameVO {
+package svera.untiered.honor.model {
+public interface HonorVO {
 
 
     function getAccountId():int;

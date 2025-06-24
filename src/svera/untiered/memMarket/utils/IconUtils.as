@@ -7,18 +7,18 @@ import flash.display.BitmapData;
 
 public class IconUtils
 {
-    /* Draw the fame icon */
-    public static function getFameIcon(size:int = 40) : BitmapData
+    /* Draw the honor icon */
+    public static function getHonorIcon(size:int = 40) : BitmapData
     {
-        var fameBD:BitmapData = AssetLibrary.getImageFromSet("lofiObj3",224);
-        return TextureRedrawer.redraw(fameBD,size,true,0);
+        var honorBD:BitmapData = AssetLibrary.getImageFromSet("lofiObj3",224);
+        return TextureRedrawer.redraw(honorBD,size,true,0);
     }
 
     /* Draw the gold icon */
     public static function getCoinIcon(size:int = 40) : BitmapData
     {
-        var fameBD:BitmapData = AssetLibrary.getImageFromSet("lofiObj3",225);
-        return TextureRedrawer.redraw(fameBD,size,true,0);
+        var honorBD:BitmapData = AssetLibrary.getImageFromSet("lofiObj3",225);
+        return TextureRedrawer.redraw(honorBD,size,true,0);
     }
 }
 }

@@ -7,7 +7,7 @@ import com.company.assembleegameclient.ui.LineBreakDesign;
 import com.company.assembleegameclient.ui.StatusBar;
 import com.company.assembleegameclient.ui.panels.itemgrids.EquippedGrid;
 import com.company.assembleegameclient.ui.panels.itemgrids.InventoryGrid;
-import com.company.assembleegameclient.util.FameUtil;
+import com.company.assembleegameclient.util.HonorUtil;
 import com.company.ui.SimpleText;
 
 import flash.filters.DropShadowFilter;
@@ -82,16 +82,16 @@ public class MyPlayerToolTip extends ToolTip {
         addChild(this.lineBreak_);
         var numStars:int = charStats == null ? int(0) : int(charStats.numStars());
         this.bestLevel_ = new SimpleText(14, 6206769, false, 0, 0);
-        this.bestLevel_.text = numStars + " of 5 Class Quests Completed\n" + "Best Level Achieved: " + (charStats != null ? charStats.bestLevel() : 0).toString() + "\n" + "Best Fame Achieved: " + (charStats != null ? charStats.bestFame() : 0).toString();
+        this.bestLevel_.text = numStars + " of 5 Class Quests Completed\n" + "Best Level Achieved: " + (charStats != null ? charStats.bestLevel() : 0).toString() + "\n" + "Best Honor Achieved: " + (charStats != null ? charStats.bestHonor() : 0).toString();
         this.bestLevel_.updateMetrics();
         this.bestLevel_.filters = [new DropShadowFilter(0, 0, 0)];
         this.bestLevel_.x = 8;
         this.bestLevel_.y = height - 2;
         addChild(this.bestLevel_);
-        var nextStarFame:int = FameUtil.nextStarFame(charStats == null ? int(0) : int(charStats.bestFame()), 0);
-        if (nextStarFame > 0) {
+        var nextStarHonor:int = HonorUtil.nextStarHonor(charStats == null ? int(0) : int(charStats.bestHonor()), 0);
+        if (nextStarHonor > 0) {
             this.nextClassQuest_ = new SimpleText(13, 16549442, false, 174, 0);
-            this.nextClassQuest_.text = "Next Goal: Earn " + nextStarFame + " Fame\n" + "  with a " + playerXML.@id;
+            this.nextClassQuest_.text = "Next Goal: Earn " + nextStarHonor + " Honor\n" + "  with a " + playerXML.@id;
             this.nextClassQuest_.updateMetrics();
             this.nextClassQuest_.filters = [new DropShadowFilter(0, 0, 0)];
             this.nextClassQuest_.x = 8;

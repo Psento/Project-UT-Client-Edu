@@ -30,8 +30,8 @@ public class LegendFactory {
     public function makeLegends(xml:XML):Vector.<Legend> {
         this.ownAccountId = this.playerModel.getAccountId();
         this.legends = new Vector.<Legend>(0);
-        this.makeLegendsFromList(xml.FameListElem, false);
-        //this.makeLegendsFromList(xml.MyFameListElem,true);
+        this.makeLegendsFromList(xml.HonorListElem, false);
+        //this.makeLegendsFromList(xml.MyHonorListElem,true);
         return this.legends;
     }
 
@@ -69,7 +69,7 @@ public class LegendFactory {
         legend.accountId = xml.@accountId;
         legend.charId = xml.@charId;
         legend.name = xml.Name;
-        legend.totalFame = xml.TotalFame;
+        legend.totalHonor = xml.TotalHonor;
         legend.character = this.factory.makeIcon(skin.template, 100, texture1, texture2);
         legend.equipmentSlots = character.slotTypes;
         legend.equipment = ConversionUtil.toIntVector(xml.Equipment);

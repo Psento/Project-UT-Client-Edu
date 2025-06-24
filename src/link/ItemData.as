@@ -39,7 +39,7 @@ public class ItemData {
     public var Fragment:Boolean;
     public var Ascended:Boolean;
     public var MultiPhase:Boolean;
-    public var FameBonus:int;
+    public var HonorBonus:int;
     public var NumProjectiles:int;
     public var HalfHPArmored:Boolean;
     public var ArcGap:Number;
@@ -156,7 +156,7 @@ public class ItemData {
         Fragment = item.Fragment;
         Ascended = item.Ascended;
         MultiPhase = item.MultiPhase;
-        FameBonus = item.FameBonus;
+        HonorBonus = item.HonorBonus;
         NumProjectiles = item.NumProjectiles1;
         HalfHPArmored = item.HalfHPArmored;
         ArcGap = item.ArcGap;
@@ -230,7 +230,7 @@ public class ItemData {
                     HpCost = data.readShort();
                     break;
                 case 3:
-                    FameBonus = data.readByte();
+                    HonorBonus = data.readByte();
                     break;
                 case 4:
                     NumProjectiles = data.readUnsignedByte();

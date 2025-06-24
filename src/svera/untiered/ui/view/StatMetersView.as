@@ -9,7 +9,7 @@ public class StatMetersView extends Sprite {
 
     private var expBar_:StatusBar;
 
-    private var fameBar_:StatusBar;
+    private var honorBar:StatusBar;
 
     private var hpBar_:StatusBar;
 
@@ -37,7 +37,7 @@ public class StatMetersView extends Sprite {
 
         super();
         this.expBar_ = new StatusBar(72, 20, 5931045, 5526612, "Lvl X");
-        this.fameBar_ = new StatusBar(72, 20, 14835456, 5526612, "Fame");
+        this.honorBar = new StatusBar(72, 20, 14835456, 5526612, "Honor");
         this.hpBar_ = new StatusBar(245, 20, 14693428, 5526612, "HP");
         this.spBar_ = new StatusBar(245, 20, 16777215, 14693428, "SP");
         this.rpBar_ = new StatusBar(245, 20, 6325472, 5526612, "RP");
@@ -51,9 +51,9 @@ public class StatMetersView extends Sprite {
         this.expBar_.y = this.rpBar_.y;
         this.spBar_.visible = false;
         this.expBar_.visible = true;
-        this.fameBar_.visible = false;
+        this.honorBar.visible = false;
         addChild(this.expBar_);
-        addChild(this.fameBar_);
+        addChild(this.honorBar);
         addChild(this.hpBar_);
         addChild(this.spBar_);
         addChild(this.rpBar_);
@@ -72,7 +72,7 @@ public class StatMetersView extends Sprite {
         if (player.level_ != 100) {
             if (!this.expBar_.visible) {
                 this.expBar_.visible = true;
-                this.fameBar_.visible = false;
+                this.honorBar.visible = false;
             }
             this.content.y = this.expBar_.y - 3;
             this.content.x = this.expBar_.x - 24;
@@ -82,11 +82,11 @@ public class StatMetersView extends Sprite {
             this.expBar_.boostText_.y = this.expBar_.valueText_.y;
             this.expBar_.draw(player.exp_, player.nextLevelExp_, 0);
         } else {
-            if (!this.fameBar_.visible) {
-                this.fameBar_.visible = true;
+            if (!this.honorBar.visible) {
+                this.honorBar.visible = true;
                 this.expBar_.visible = false;
             }
-            this.fameBar_.draw(player.charFame_, player.nextClassQuestFame_, 0);
+            this.honorBar.draw(player.charHonor, player.nextClassQuestHonor, 0);
         }
         this.spBar_.valueText_.textColor = 16777215;
         this.spBar_.boostText_.textColor = 16777215;

@@ -2,10 +2,10 @@ package svera.untiered.legends.view {
 import robotlegs.bender.bundles.mvcs.Mediator;
 
 import svera.untiered.death.model.DeathModel;
-import svera.untiered.fame.control.ShowFameViewSignal;
+import svera.untiered.honor.control.ShowHonorViewSignal;
 import svera.untiered.legends.control.ExitLegendsSignal;
-import svera.untiered.legends.control.FameListUpdateSignal;
-import svera.untiered.legends.control.RequestFameListSignal;
+import svera.untiered.legends.control.HonorListUpdateSignal;
+import svera.untiered.legends.control.RequestHonorListSignal;
 import svera.untiered.legends.model.Legend;
 import svera.untiered.legends.model.LegendsModel;
 import svera.untiered.legends.model.Timespan;
@@ -23,13 +23,13 @@ public class LegendsMediator extends Mediator {
     public var deathModel:DeathModel;
 
     [Inject]
-    public var showFameDetail:ShowFameViewSignal;
+    public var showHonorDetail:ShowHonorViewSignal;
 
     [Inject]
-    public var requestFameList:RequestFameListSignal;
+    public var requestHonorList:RequestHonorListSignal;
 
     [Inject]
-    public var update:FameListUpdateSignal;
+    public var update:HonorListUpdateSignal;
 
     [Inject]
     public var exit:ExitLegendsSignal;
@@ -64,14 +64,14 @@ public class LegendsMediator extends Mediator {
         if (this.model.hasLegendList()) {
             this.updateLegendList();
         } else {
-            this.showLoadingAndRequestFameList();
+            this.showLoadingAndRequestHonorList();
         }
     }
 
-    private function showLoadingAndRequestFameList():void {
+    private function showLoadingAndRequestHonorList():void {
         this.view.clear();
         this.view.showLoading();
-        this.requestFameList.dispatch(this.model.getTimespan());
+        this.requestHonorList.dispatch(this.model.getTimespan());
     }
 
     private function updateLegendList(timespan:Timespan = null):void {
@@ -81,7 +81,7 @@ public class LegendsMediator extends Mediator {
     }
 
     private function onShowCharacter(legend:Legend):void {
-        this.showFameDetail.dispatch(legend);
+        this.showHonorDetail.dispatch(legend);
     }
 }
 }

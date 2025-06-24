@@ -60,7 +60,7 @@ public class GuildUtil {
         return TextureRedrawer.redraw(icon, size, true, 0, true);
     }
 
-    public static function guildFameIcon(size:int):BitmapData {
+    public static function guildHonorIcon(size:int):BitmapData {
         var icon:BitmapData = AssetLibrary.getImageFromSet("Currency_Icons16x16", 0);
         return TextureRedrawer.redraw(icon, size, true, 0, true);
     }

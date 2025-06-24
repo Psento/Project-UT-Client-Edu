@@ -2,7 +2,7 @@ package svera.untiered.memMarket.content {
 import com.company.assembleegameclient.game.GameSprite;
 import com.company.assembleegameclient.ui.TextButton;
 import com.company.assembleegameclient.util.Currency;
-import com.company.assembleegameclient.util.FameUtil;
+import com.company.assembleegameclient.util.HonorUtil;
 import com.company.ui.SimpleText;
 
 import flash.display.Bitmap;
@@ -78,7 +78,7 @@ public class MemMarketBuyItem extends MemMarketItem
 
     public function updateButton() : void
     {
-        var currencyAmount:int = this.data_.currency_ == Currency.FAME ? this.gameSprite_.map.player_.fame_ : this.gameSprite_.map.player_.honor_;
+        var currencyAmount:int = this.gameSprite_.map.player_.honor_;
         if (currencyAmount >= this.data_.price_) /* Only add this event listener if we can afford the item */
         {
             this.buyButton_.addEventListener(MouseEvent.CLICK, this.onBuyClick);

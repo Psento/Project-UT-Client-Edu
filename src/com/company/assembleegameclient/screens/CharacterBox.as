@@ -4,7 +4,7 @@ import com.company.assembleegameclient.appengine.SavedCharacter;
 import com.company.assembleegameclient.ui.tooltip.ClassToolTip;
 import com.company.assembleegameclient.ui.tooltip.ToolTip;
 import com.company.assembleegameclient.util.AnimatedChar;
-import com.company.assembleegameclient.util.FameUtil;
+import com.company.assembleegameclient.util.HonorUtil;
 import com.company.ui.SimpleText;
 import com.company.untiered.graphics.FullCharBoxGraphic;
 import com.company.untiered.graphics.StarGraphic;
@@ -67,7 +67,7 @@ public class CharacterBox extends Sprite {
         this.classNameText_.updateMetrics();
         this.classNameText_.filters = [new DropShadowFilter(0, 0, 0, 1, 4, 4)];
         this.graphic_.addChild(this.classNameText_);
-        stars = this.getStars(FameUtil.numStars(model.getBestFame(this.objectType())), FameUtil.STARS.length);
+        stars = this.getStars(HonorUtil.numStars(model.getBestHonor(this.objectType())), HonorUtil.STARS.length);
         stars.y = 10;
         stars.x = this.graphic_.width / 2 - stars.width / 2;
         stars.filters = [new DropShadowFilter(0, 0, 0, 1, 4, 4)];

@@ -1,5 +1,5 @@
 package com.company.assembleegameclient.ui {
-import com.company.assembleegameclient.util.FameUtil;
+import com.company.assembleegameclient.util.HonorUtil;
 import com.company.ui.SimpleText;
 
 import flash.display.Sprite;
@@ -51,7 +51,7 @@ public class RankText extends Sprite {
         text.updateMetrics();
         text.filters = [new DropShadowFilter(0, 0, 0, 1, 4, 4, 2)];
         this.sprite_.addChild(text);
-        icon = this.largeText_ ? FameUtil.numStarsToBigImage(this.numStars_) : FameUtil.numStarsToImage(this.numStars_);
+        icon = this.largeText_ ? HonorUtil.numStarsToBigImage(this.numStars_) : HonorUtil.numStarsToImage(this.numStars_);
         icon.x = text.width + 2;
         this.sprite_.addChild(icon);
         icon.y = int(text.height / 2 - icon.height / 2) + 1;

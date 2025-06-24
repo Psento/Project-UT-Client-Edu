@@ -32,9 +32,9 @@ public class GuildPlayerList extends Sprite {
 
     private var titleText_:SimpleText;
 
-    private var guildFameText_:SimpleText;
+    private var guildHonorText_:SimpleText;
 
-    private var guildFameIcon_:Bitmap;
+    private var guildHonorIcon_:Bitmap;
 
     private var lines_:Shape;
 
@@ -106,17 +106,17 @@ public class GuildPlayerList extends Sprite {
         this.titleText_.y = 24;
         this.titleText_.x = stage.stageWidth / 2 - this.titleText_.width / 2;
         addChild(this.titleText_);
-        this.guildFameText_ = new SimpleText(22, 16777215, false, 0, 0);
-        this.guildFameText_.text = guildXML.CurrentFame;
-        this.guildFameText_.useTextDimensions();
-        this.guildFameText_.filters = [new DropShadowFilter(0, 0, 0, 1, 8, 8)];
-        this.guildFameText_.x = 768 - this.guildFameText_.width;
-        this.guildFameText_.y = 32 / 2 - this.guildFameText_.height / 2;
-        addChild(this.guildFameText_);
-        this.guildFameIcon_ = new Bitmap(GuildUtil.guildFameIcon(40));
-        this.guildFameIcon_.x = 760;
-        this.guildFameIcon_.y = 32 / 2 - this.guildFameIcon_.height / 2;
-        addChild(this.guildFameIcon_);
+        this.guildHonorText_ = new SimpleText(22, 16777215, false, 0, 0);
+        this.guildHonorText_.text = guildXML.CurrentHonor;
+        this.guildHonorText_.useTextDimensions();
+        this.guildHonorText_.filters = [new DropShadowFilter(0, 0, 0, 1, 8, 8)];
+        this.guildHonorText_.x = 768 - this.guildHonorText_.width;
+        this.guildHonorText_.y = 32 / 2 - this.guildHonorText_.height / 2;
+        addChild(this.guildHonorText_);
+        this.guildHonorIcon_ = new Bitmap(GuildUtil.guildHonorIcon(40));
+        this.guildHonorIcon_.x = 760;
+        this.guildHonorIcon_.y = 32 / 2 - this.guildHonorIcon_.height / 2;
+        addChild(this.guildHonorIcon_);
         this.lines_ = new Shape();
         g = this.lines_.graphics;
         g.clear();
@@ -141,7 +141,7 @@ public class GuildPlayerList extends Sprite {
         for each(memberXML in guildXML.Member) {
             isMe = this.myName_ == memberXML.Name;
             rank = memberXML.Rank;
-            listLine = new MemberListLine(this.offset_ + id + 1, memberXML.Name, memberXML.Rank, memberXML.Fame, isMe, this.myRank_);
+            listLine = new MemberListLine(this.offset_ + id + 1, memberXML.Name, memberXML.Rank, memberXML.Honor, isMe, this.myRank_);
             listLine.y = id * MemberListLine.HEIGHT;
             this.listSprite_.addChild(listLine);
             id++;

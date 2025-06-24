@@ -28,7 +28,7 @@ import svera.untiered.core.CoreConfig;
 import svera.untiered.core.StaticInjectorContext;
 import svera.untiered.death.DeathConfig;
 import svera.untiered.dialogs.DialogsConfig;
-import svera.untiered.fame.FameConfig;
+import svera.untiered.honor.HonorConfig;
 import svera.untiered.game.GameConfig;
 import svera.untiered.hud.HUDConfig;
 import svera.untiered.legends.LegendsConfig;
@@ -148,7 +148,7 @@ public class GameClient extends Sprite {
                 .configure(UIConfig)
                 .configure(MiniMapConfig)
                 .configure(LegendsConfig)
-                .configure(FameConfig)
+                .configure(HonorConfig)
                 .configure(TooltipsConfig)
                 .configure(ClassesConfig)
                 .configure(Stage3DConfig)

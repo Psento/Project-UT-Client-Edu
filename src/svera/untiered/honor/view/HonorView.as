@@ -1,11 +1,11 @@
-package svera.untiered.fame.view {
+package svera.untiered.honor.view {
 import com.company.assembleegameclient.objects.ObjectLibrary;
 import com.company.assembleegameclient.screens.ScoreTextLine;
 import com.company.assembleegameclient.screens.ScoringBox;
 import com.company.assembleegameclient.screens.TitleMenuOption;
-import com.company.assembleegameclient.util.FameUtil;
+import com.company.assembleegameclient.util.HonorUtil;
 import com.company.ui.SimpleText;
-import com.company.untiered.graphics.FameIconBackgroundDesign;
+import com.company.untiered.graphics.HonorIconBackgroundDesign;
 import com.company.untiered.graphics.ScreenGraphic;
 import com.company.util.BitmapUtil;
 import com.gskinner.motion.GTween;
@@ -23,7 +23,7 @@ import org.osflash.signals.natives.NativeMappedSignal;
 
 import svera.untiered.ui.view.components.ScreenBase;
 
-public class FameView extends Sprite {
+public class HonorView extends Sprite {
     private static const CHARACTER_INFO:String = "${NAME}, Level ${LEVEL} ${TYPE}";
     private static const DEATH_INFO_LONG:String = "killed on ${DATE} by ${KILLER}";
     private static const DEATH_INFO_SHORT:String = "died ${DATE}";
@@ -40,7 +40,7 @@ public class FameView extends Sprite {
     private var isFadeComplete:Boolean;
     private var isDataPopulated:Boolean;
 
-    public function FameView() {
+    public function HonorView() {
         super();
         addChild(new ScreenBase());
         addChild(this.infoContainer = new Sprite());
@@ -96,7 +96,7 @@ public class FameView extends Sprite {
     public function setIcon(icon:BitmapData):void {
         var backgroundDesign:Sprite = null;
         var container:Sprite = new Sprite();
-        backgroundDesign = new FameIconBackgroundDesign();
+        backgroundDesign = new HonorIconBackgroundDesign();
         backgroundDesign.filters = [new DropShadowFilter(0, 0, 0, 0.5, 12, 12)];
         container.addChild(backgroundDesign);
         var bitmap:Bitmap = new Bitmap(icon);
@@ -114,9 +114,9 @@ public class FameView extends Sprite {
         this.scoringBox.y = 316;
         addChild(this.scoringBox);
         this.infoContainer.addChild(this.scoringBox);
-        var fameBD:BitmapData = FameUtil.getFameIcon();
-        fameBD = BitmapUtil.cropToBitmapData(fameBD, 6, 6, fameBD.width - 12, fameBD.height - 12);
-        this.finalLine = new ScoreTextLine(24, 13421772, 16762880, "Total Fame Earned", null, score, "", "", new Bitmap(fameBD));
+        var honorBD:BitmapData = HonorUtil.getHonorIcon();
+        honorBD = BitmapUtil.cropToBitmapData(honorBD, 6, 6, honorBD.width - 12, honorBD.height - 12);
+        this.finalLine = new ScoreTextLine(24, 13421772, 16762880, "Total Honor Earned", null, score, "", "", new Bitmap(honorBD));
         this.finalLine.x = 10;
         this.finalLine.y = 470;
         this.infoContainer.addChild(this.finalLine);

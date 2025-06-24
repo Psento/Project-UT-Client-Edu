@@ -1,4 +1,4 @@
-package svera.untiered.fame.view {
+package svera.untiered.honor.view {
 import flash.display.BitmapData;
 
 import robotlegs.bender.bundles.mvcs.Mediator;
@@ -7,19 +7,19 @@ import svera.untiered.assets.services.CharacterFactory;
 import svera.untiered.core.signals.GotoPreviousScreenSignal;
 import svera.untiered.core.signals.SetScreenSignal;
 import svera.untiered.death.model.DeathModel;
-import svera.untiered.fame.model.FameModel;
-import svera.untiered.fame.service.RequestCharacterFameTask;
+import svera.untiered.honor.model.HonorModel;
+import svera.untiered.honor.service.RequestCharacterHonorTask;
 import svera.untiered.legends.view.LegendsView;
 import svera.untiered.messaging.impl.incoming.Death;
 
-public class FameMediator extends Mediator {
+public class HonorMediator extends Mediator {
 
 
     [Inject]
-    public var view:FameView;
+    public var view:HonorView;
 
     [Inject]
-    public var fameModel:FameModel;
+    public var honorModel:HonorModel;
 
     [Inject]
     public var deathModel:DeathModel;
@@ -31,7 +31,7 @@ public class FameMediator extends Mediator {
     public var gotoPrevious:GotoPreviousScreenSignal;
 
     [Inject]
-    public var task:RequestCharacterFameTask;
+    public var task:RequestCharacterHonorTask;
 
     [Inject]
     public var factory:CharacterFactory;
@@ -40,14 +40,14 @@ public class FameMediator extends Mediator {
 
     private var death:Death;
 
-    public function FameMediator() {
+    public function HonorMediator() {
         super();
     }
 
     override public function initialize():void {
         this.view.closed.add(this.onClosed);
         this.setViewDataFromDeath();
-        this.requestFameData();
+        this.requestHonorData();
     }
 
     override public function destroy():void {
@@ -66,19 +66,19 @@ public class FameMediator extends Mediator {
         }
     }
 
-    private function requestFameData():void {
-        this.task.accountId = this.fameModel.accountId;
-        this.task.charId = this.fameModel.characterId;
-        this.task.finished.addOnce(this.onFameResponse);
+    private function requestHonorData():void {
+        this.task.accountId = this.honorModel.accountId;
+        this.task.charId = this.honorModel.characterId;
+        this.task.finished.addOnce(this.onHonorResponse);
         this.task.start();
     }
 
-    private function onFameResponse(task:RequestCharacterFameTask, isOK:Boolean, error:String = ""):void {
+    private function onHonorResponse(task:RequestCharacterHonorTask, isOK:Boolean, error:String = ""):void {
         var icon:BitmapData = this.makeIcon();
         this.view.setCharacterInfo(task.name, task.level, task.type);
         this.view.setDeathInfo(task.deathDate, task.killer);
         this.view.setIcon(icon);
-        this.view.setScore(task.totalFame, task.xml);
+        this.view.setScore(task.totalHonor, task.xml);
     }
 
     private function makeIcon():BitmapData {

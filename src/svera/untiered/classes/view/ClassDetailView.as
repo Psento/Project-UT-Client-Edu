@@ -1,5 +1,5 @@
 package svera.untiered.classes.view {
-import com.company.assembleegameclient.util.FameUtil;
+import com.company.assembleegameclient.util.HonorUtil;
 import com.company.ui.SimpleText;
 
 import flash.display.Bitmap;
@@ -30,11 +30,11 @@ public class ClassDetailView extends Sprite {
 
     private var levelText:SimpleText;
 
-    private var fameTitleText:SimpleText;
+    private var honorTitleText:SimpleText;
 
-    private var fameText:SimpleText;
+    private var honorText:SimpleText;
 
-    private var fameIcon:Bitmap;
+    private var honorIcon:Bitmap;
 
     private var nextGoalText:SimpleText;
 
@@ -83,19 +83,19 @@ public class ClassDetailView extends Sprite {
         this.levelText.filters = [dropShadowFilter];
         this.levelText.setBold(true);
         addChild(this.levelText);
-        this.fameTitleText = new SimpleText(14, 16777215, false, 0, 0);
-        this.fameTitleText.filters = [dropShadowFilter];
-        this.fameTitleText.text = "Most Fame Achieved";
-        this.fameTitleText.setBold(true);
-        this.fameTitleText.updateMetrics();
-        addChild(this.fameTitleText);
-        this.fameText = new SimpleText(16, 15387756, false, 0, 0);
-        this.fameText.filters = [dropShadowFilter];
-        this.fameText.setBold(true);
-        addChild(this.fameText);
-        this.fameIcon = new Bitmap(FameUtil.getFameIcon());
-        this.fameIcon.filters = [dropShadowFilter];
-        addChild(this.fameIcon);
+        this.honorTitleText = new SimpleText(14, 16777215, false, 0, 0);
+        this.honorTitleText.filters = [dropShadowFilter];
+        this.honorTitleText.text = "Most Honor Achieved";
+        this.honorTitleText.setBold(true);
+        this.honorTitleText.updateMetrics();
+        addChild(this.honorTitleText);
+        this.honorText = new SimpleText(16, 15387756, false, 0, 0);
+        this.honorText.filters = [dropShadowFilter];
+        this.honorText.setBold(true);
+        addChild(this.honorText);
+        this.honorIcon = new Bitmap(HonorUtil.getHonorIcon());
+        this.honorIcon.filters = [dropShadowFilter];
+        addChild(this.honorIcon);
         this.nextGoalText = new SimpleText(14, 16777215, false, 0, 0);
         this.nextGoalText.setBold(true);
         this.nextGoalText.filters = [dropShadowFilter];
@@ -111,14 +111,14 @@ public class ClassDetailView extends Sprite {
         addChild(this.questCompletedStars);
     }
 
-    public function setData(name:String, description:String, stars:int, highestLevel:int, highestFame:int):void {
+    public function setData(name:String, description:String, stars:int, highestLevel:int, highestHonor:int):void {
         this.classNameText.text = name;
         this.classDescriptionText.text = description;
         this.levelText.text = String(highestLevel);
         this.levelText.updateMetrics();
         this.questCompletedStars.setStars(stars);
-        this.fameText.text = String(highestFame);
-        this.fameText.updateMetrics();
+        this.honorText.text = String(highestHonor);
+        this.honorText.updateMetrics();
         this.layout();
     }
 
@@ -126,7 +126,7 @@ public class ClassDetailView extends Sprite {
         this.nextGoalText.visible = nextGoal != -1;
         this.nextGoalDetailText.visible = nextGoal != -1;
         if (nextGoal != -1) {
-            this.nextGoalDetailText.text = "Earn " + String(nextGoal) + " Fame with a " + String(name);
+            this.nextGoalDetailText.text = "Earn " + String(nextGoal) + " Honor with a " + String(name);
             this.nextGoalDetailText.updateMetrics();
             this.nextGoalDetailText.y = this.nextGoalText.y + this.nextGoalText.height;
             this.nextGoalDetailText.x = WIDTH / 2 - this.nextGoalDetailText.width / 2;
@@ -165,13 +165,13 @@ public class ClassDetailView extends Sprite {
         this.levelTitleText.x = RIGHT_JUSTIFICATION_STATS - this.levelTitleText.width;
         this.levelText.y = this.levelTitleText.y;
         this.levelText.x = RIGHT_JUSTIFICATION_STATS + 18;
-        this.fameTitleText.y = this.levelTitleText.y + this.levelTitleText.height + 5;
-        this.fameTitleText.x = RIGHT_JUSTIFICATION_STATS - this.fameTitleText.width;
-        this.fameText.y = this.fameTitleText.y;
-        this.fameText.x = RIGHT_JUSTIFICATION_STATS + 18;
-        this.fameIcon.y = this.fameTitleText.y - 7;
-        this.fameIcon.x = this.fameText.x + this.fameText.textWidth - 3;
-        this.nextGoalText.y = this.fameTitleText.y + this.fameTitleText.height + 17;
+        this.honorTitleText.y = this.levelTitleText.y + this.levelTitleText.height + 5;
+        this.honorTitleText.x = RIGHT_JUSTIFICATION_STATS - this.honorTitleText.width;
+        this.honorText.y = this.honorTitleText.y;
+        this.honorText.x = RIGHT_JUSTIFICATION_STATS + 18;
+        this.honorIcon.y = this.honorTitleText.y - 7;
+        this.honorIcon.x = this.honorText.x + this.honorText.textWidth - 3;
+        this.nextGoalText.y = this.honorTitleText.y + this.honorTitleText.height + 17;
         this.nextGoalText.x = WIDTH / 2 - this.nextGoalText.width / 2;
         this.nextGoalDetailText.y = this.nextGoalText.y + this.nextGoalText.height;
         this.nextGoalDetailText.x = WIDTH / 2 - this.nextGoalDetailText.width / 2;

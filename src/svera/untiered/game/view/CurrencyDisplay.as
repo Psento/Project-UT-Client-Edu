@@ -20,23 +20,17 @@ public class CurrencyDisplay extends Sprite {
 
     private var honorText_:SimpleText;
 
-    private var fameText_:SimpleText;
-
     private var tsavoriteIcon_:Bitmap;
 
     private var medallionsIcon_:Bitmap;
 
     private var honorIcon_:Bitmap;
 
-    private var fameIcon_:Bitmap;
-
     private var tsavorite_:int = -1;
 
     private var medallions_:int = -1;
 
     private var honor_:int = -1;
-
-    private var fame_:int = -1;
 
     private var gs:GameSprite;
 
@@ -64,20 +58,13 @@ public class CurrencyDisplay extends Sprite {
         honorBD = TextureRedrawer.redraw(honorBD, 40, true, 0);
         this.honorIcon_ = new Bitmap(honorBD);
         addChild(this.honorIcon_);
-        this.fameText_ = new SimpleText(FONT_SIZE, 16777215, false, 0, 0);
-        this.fameText_.filters = [new DropShadowFilter(0, 0, 0, 1, 4, 4, 2)];
-        addChild(this.fameText_);
-        var fameBD:BitmapData = AssetLibrary.getImageFromSet("Currency_Icons16x16", 3);
-        fameBD = TextureRedrawer.redraw(fameBD, 40, true, 0);
-        this.fameIcon_ = new Bitmap(fameBD);
-        addChild(this.fameIcon_);
         this.draw(0, 0, 0, 0);
         mouseEnabled = false;
         doubleClickEnabled = false;
     }
 
-    public function draw(tsavorite:int, medallions:int, honor:int, fame:int, compact:Boolean = false):void {
-        if (tsavorite == this.tsavorite_ && medallions == this.medallions_ && honor == this.honor_ && fame == this.fame_) {
+    public function draw(tsavorite:int, medallions:int, honor:int, compact:Boolean = false):void {
+        if (tsavorite == this.tsavorite_ && medallions == this.medallions_ && honor == this.honor_) {
             return;
         }
         this.tsavorite_ = tsavorite;
@@ -99,13 +86,6 @@ public class CurrencyDisplay extends Sprite {
             this.honorIcon_.x = this.tsavoriteText_.x - honorIcon_.width;
             this.honorText_.x = this.tsavoriteText_.x;
             this.honorText_.y = this.honorIcon_.height / 2 - this.honorText_.height / 2 + this.honorIcon_.height;
-
-            this.fame_ = fame;
-            this.fameText_.text = this.fame_.toString();
-            this.fameText_.updateMetrics();
-            this.fameIcon_.x = this.medallionsText_.x - this.fameIcon_.width;
-            this.fameText_.x = this.fameIcon_.x - this.fameText_.width + 8;
-            this.fameText_.y = this.fameIcon_.height / 2 - this.fameText_.height / 2 + this.fameIcon_.height;
         } else {
             this.honor_ = honor;
             this.honorText_.text = this.honor_.toString();
@@ -113,13 +93,6 @@ public class CurrencyDisplay extends Sprite {
             this.honorIcon_.x = this.medallionsText_.x - honorIcon_.width;
             this.honorText_.x = this.honorIcon_.x - this.honorText_.width + 8;
             this.honorText_.y = this.honorIcon_.height / 2 - this.honorText_.height / 2;
-
-            this.fame_ = fame;
-            this.fameText_.text = this.fame_.toString();
-            this.fameText_.updateMetrics();
-            this.fameIcon_.x = this.honorText_.x - this.fameIcon_.width;
-            this.fameText_.x = this.fameIcon_.x - this.fameText_.width + 8;
-            this.fameText_.y = this.fameIcon_.height / 2 - this.fameText_.height / 2;
         }
     }
 }

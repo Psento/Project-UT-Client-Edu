@@ -296,7 +296,7 @@ public class GameSprite extends Sprite {
                 this.map.draw(this.camera_, time);
             }
 
-            this.currencyDisplay_.draw(model.getTsavorite(), model.getMedallions(), model.getHonor(), model.getFame());
+            this.currencyDisplay_.draw(model.getTsavorite(), model.getMedallions(), model.getHonor());
             this.drawCharacterWindow.dispatch(player);
             if (this.map.showDisplays_) {
                 this.rankText_.draw(player.numStars_);

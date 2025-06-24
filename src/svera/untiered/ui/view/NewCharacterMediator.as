@@ -53,7 +53,7 @@ public class NewCharacterMediator extends Mediator {
     }
 
     private function onBuyCharacterPending(objectType:int):void {
-        this.view.updateCurrencies(this.playerModel.getTsavorite(), this.playerModel.getMedallions(), this.playerModel.getHonor(), this.playerModel.getFame());
+        this.view.updateCurrencies(this.playerModel.getTsavorite(), this.playerModel.getMedallions(), this.playerModel.getHonor());
     }
 
     override public function destroy():void {

@@ -1,9 +1,9 @@
 package svera.untiered.legends.model {
 import flash.display.BitmapData;
 
-import svera.untiered.fame.model.FameVO;
+import svera.untiered.honor.model.HonorVO;
 
-public class Legend implements FameVO {
+public class Legend implements HonorVO {
 
 
     public var isOwnLegend:Boolean;
@@ -16,7 +16,7 @@ public class Legend implements FameVO {
 
     public var name:String;
 
-    public var totalFame:int;
+    public var totalHonor:int;
 
     public var equipmentSlots:Vector.<int>;
 

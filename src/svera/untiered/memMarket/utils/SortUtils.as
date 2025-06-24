@@ -9,8 +9,6 @@ public class SortUtils
     /* Sorting options */
     public static const LOWEST_TO_HIGHEST:String = "Lowest -> Highest";
     public static const HIGHEST_TO_LOWEST:String = "Highest -> Lowest";
-    //public static const FAME_TO_GOLD:String = "Fame -> Gold";
-    //public static const GOLD_TO_FAME:String = "Gold -> Fame";
     public static const JUST_ADDED:String = "Just added";
     public static const ENDING_SOON:String = "Ending soon";
 
@@ -175,7 +173,7 @@ public class SortUtils
         else return 0;
     }
 
-    /*public static function fameToGold(itemA:MemMarketItem, itemB:MemMarketItem) : int
+    /*public static function honorToGold(itemA:MemMarketItem, itemB:MemMarketItem) : int
     {
         if (itemA.data_.currency_ < itemB.data_.currency_)
         {
@@ -188,7 +186,7 @@ public class SortUtils
         else return 0;
     }
 
-    public static function goldToFame(itemA:MemMarketItem, itemB:MemMarketItem) : int
+    public static function goldToHonor(itemA:MemMarketItem, itemB:MemMarketItem) : int
     {
         if (itemA.data_.currency_ < itemB.data_.currency_)
         {

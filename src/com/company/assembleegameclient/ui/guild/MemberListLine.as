@@ -30,9 +30,9 @@ public class MemberListLine extends Sprite {
 
     private var nameText_:SimpleText;
 
-    private var guildFameText_:SimpleText;
+    private var guildHonorText_:SimpleText;
 
-    private var guildFameIcon_:Bitmap;
+    private var guildHonorIcon_:Bitmap;
 
     private var rankIcon_:Bitmap;
 
@@ -44,7 +44,7 @@ public class MemberListLine extends Sprite {
 
     private var removeButton_:Sprite;
 
-    function MemberListLine(place:int, name:String, rank:int, fame:int, isMe:Boolean, myRank:int) {
+    function MemberListLine(place:int, name:String, rank:int, honor:int, isMe:Boolean, myRank:int) {
         super();
         this.name_ = name;
         this.rank_ = rank;
@@ -68,17 +68,17 @@ public class MemberListLine extends Sprite {
         this.nameText_.x = 100;
         this.nameText_.y = HEIGHT / 2 - this.nameText_.height / 2;
         addChild(this.nameText_);
-        this.guildFameText_ = new SimpleText(22, textColor, false, 0, 0);
-        this.guildFameText_.text = fame.toString();
-        this.guildFameText_.useTextDimensions();
-        this.guildFameText_.filters = [new DropShadowFilter(0, 0, 0, 1, 8, 8)];
-        this.guildFameText_.x = 408 - this.guildFameText_.width;
-        this.guildFameText_.y = HEIGHT / 2 - this.guildFameText_.height / 2;
-        addChild(this.guildFameText_);
-        this.guildFameIcon_ = new Bitmap(GuildUtil.guildFameIcon(40));
-        this.guildFameIcon_.x = 400;
-        this.guildFameIcon_.y = HEIGHT / 2 - this.guildFameIcon_.height / 2;
-        addChild(this.guildFameIcon_);
+        this.guildHonorText_ = new SimpleText(22, textColor, false, 0, 0);
+        this.guildHonorText_.text = honor.toString();
+        this.guildHonorText_.useTextDimensions();
+        this.guildHonorText_.filters = [new DropShadowFilter(0, 0, 0, 1, 8, 8)];
+        this.guildHonorText_.x = 408 - this.guildHonorText_.width;
+        this.guildHonorText_.y = HEIGHT / 2 - this.guildHonorText_.height / 2;
+        addChild(this.guildHonorText_);
+        this.guildHonorIcon_ = new Bitmap(GuildUtil.guildHonorIcon(40));
+        this.guildHonorIcon_.x = 400;
+        this.guildHonorIcon_.y = HEIGHT / 2 - this.guildHonorIcon_.height / 2;
+        addChild(this.guildHonorIcon_);
         this.rankIcon_ = new Bitmap(GuildUtil.rankToIcon(rank, 20));
         this.rankIcon_.x = 548;
         this.rankIcon_.y = HEIGHT / 2 - this.rankIcon_.height / 2;

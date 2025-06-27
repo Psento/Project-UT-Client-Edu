@@ -22,6 +22,28 @@
         </Texture>
         <ShadowSize>0</ShadowSize>
     </Object>
+    <Object type="0x144" id="Champion's Arena Portal">
+        <Class>Portal</Class>
+        <IntergamePortal />
+        <NexusPortal />
+        <Texture>
+            <File>cobj16x16</File>
+            <Index>0x22</Index>
+        </Texture>
+        <ShadowSize>0</ShadowSize>
+        <DisplayId>Champion's Arena Portal</DisplayId>
+    </Object>
+    <Object type="0x023D" id="Locked Champion's Arena Portal">
+        <Class>Portal</Class>
+        <IntergamePortal />
+        <NexusPortal/>
+        <LockedPortal/>
+        <Texture>
+            <File>cobj16x16</File>
+            <Index>0x22</Index>
+        </Texture>
+        <ShadowSize>0</ShadowSize>
+    </Object>
     <Object type="0x03" id="Guild Hall Portal">
         <Class>GuildHallPortal</Class>
         <IntergamePortal/>

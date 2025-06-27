@@ -92,4 +92,25 @@
     <Region type="0x1f" id="Guild Portal">
         <Color>0x5e3900</Color>
     </Region>
+    <Region type="0x20" id="ZolRaid Portal">
+        <Color>0x00FF00</Color>
+    </Region>
+    <Region type="0x21" id="DrannolRaid Portal">
+        <Color>0x00FF00</Color>
+    </Region>
+    <Region type="0x22" id="MalgorRaid Portal">
+        <Color>0x00FF00</Color>
+    </Region>
+    <Region type="0x26" id="Outside Arena">
+        <Color>0x424445</Color>
+    </Region>
+    <Region type="0x27" id="Item Spawn Point">
+        <Color>0x555555</Color>
+    </Region>
+    <Region type="0x28" id="Arena Central Spawn">
+        <Color>0xFF0000</Color>
+    </Region>
+    <Region type="0x29" id="Arena Edge Spawn">
+        <Color>0xFFF700</Color>
+    </Region>
 </Regions>

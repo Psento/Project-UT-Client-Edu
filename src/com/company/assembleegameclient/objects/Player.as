@@ -12,7 +12,7 @@ import com.company.assembleegameclient.util.AnimatedChar;
 import com.company.assembleegameclient.util.ConditionEffect;
 import com.company.assembleegameclient.util.HonorUtil;
 import com.company.assembleegameclient.util.FreeList;
-import com.company.assembleegameclient.util.ItemData;
+import link.ItemData;
 import com.company.assembleegameclient.util.MaskedImage;
 import com.company.assembleegameclient.util.TextureRedrawer;
 import com.company.assembleegameclient.util.redrawers.GlowRedrawer;
@@ -41,6 +41,7 @@ import org.swiftsuspenders.Injector;
 import svera.untiered.assets.services.CharacterFactory;
 import svera.untiered.constants.ActivationType;
 import svera.untiered.constants.GeneralConstants;
+import svera.untiered.constants.ItemConstants;
 import svera.untiered.core.StaticInjectorContext;
 import svera.untiered.game.model.AddTextLineVO;
 import svera.untiered.game.model.PotionInventoryModel;
@@ -235,8 +236,7 @@ public class Player extends Character {
         player.background_ = int(playerXML.Background);
         player.ascensionPoints_ = int(playerXML.AscensionPoints);
         player.statPoints_ = int(playerXML.StatPoints);
-        player.equipment_ = ConversionUtil.toIntVector(playerXML.Equipment);
-        player.itemDatas_ = ConversionUtil.toIntVector(playerXML.ItemDatas);
+        player.equipment_ = ItemData.fromPlayerXML(playerXML.Equipment);
         player.maxHP_ = int(playerXML.MaxHitPoints);
         player.hp_ = int(playerXML.HitPoints);
         player.maxSP_ = int(playerXML.MaxShieldPoints);
@@ -910,9 +910,8 @@ public class Player extends Character {
         var rpCost:int = 0;
         var cooldown:int = 0;
         var angle:Number = Parameters.data_.cameraAngle + Math.atan2(y, x);
-        var itemType:int = equipment_[slotId];
-        var itemData:int = itemDatas_[slotId];
-        if (itemType == 0) {
+        var itemType:ItemData = equipment_[slotId];
+        if (!itemType && itemType.ObjectType == ItemConstants.NO_ITEM) {
             return false;
         }
         var objectXML:XML = ObjectLibrary.xmlLibrary_[itemType];
@@ -967,7 +966,7 @@ public class Player extends Character {
         this.nextAltAttack_ = now + cooldown;
         map_.gs_.gsc_.useItem(now, objectId_, slotId, point.x, point.y);
         if (objectXML.Activate == ActivationType.SHOOT) {
-            this.doShoot(now, itemType, itemData, objectXML, angle, true);
+            this.doShoot(now, itemType, objectXML, angle, true);
         }
         return true;
     }
@@ -990,9 +989,8 @@ public class Player extends Character {
         if (map_ == null || isStunned()) {
             return;
         }
-        var weaponType:int = equipment_[0];
-        var itemData:int = itemDatas_[0];
-        if (weaponType == 0) {
+        var weaponType:ItemData = equipment_[0];
+        if (!weaponType && weaponType.ObjectType == ItemConstants.NO_ITEM) {
             //this.addTextLine.dispatch(new AddTextLineVO(Parameters.ERROR_CHAT_NAME,"You do not have a weapon equipped!"));
             return;
         }
@@ -1010,7 +1008,7 @@ public class Player extends Character {
         this.doShoot(attackStart_, weaponType, itemData, weaponXML, attackAngle_, false);
     }
 
-    private function doShoot(time:int, weaponType:int, itemData:int, weaponXML:XML, attackAngle:Number, isAbility:Boolean):void {
+    private function doShoot(time:int, weaponType:ItemData, weaponXML:XML, attackAngle:Number, isAbility:Boolean):void {
         var proj:Projectile = null;
         var minDamage:int = 0;
         var maxDamage:int = 0;

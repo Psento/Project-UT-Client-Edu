@@ -9,11 +9,15 @@ import flash.display.BitmapData;
 import flash.utils.Dictionary;
 import flash.utils.getDefinitionByName;
 
+import link.Item;
+
 import svera.untiered.constants.GeneralConstants;
 import svera.untiered.constants.ItemConstants;
 import svera.untiered.messaging.impl.data.StatData;
 
 public class ObjectLibrary {
+    public static const baseItems:Dictionary = new Dictionary();
+
     public static var playerChars_:Vector.<XML> = new Vector.<XML>();
     public static var hexTransforms_:Vector.<XML> = new Vector.<XML>();
     public static var playerClassAbbr_:Dictionary = new Dictionary();
@@ -52,6 +56,7 @@ public class ObjectLibrary {
         "Wall": Wall,
         "Traits": Traits,
         "Vault": VaultChest,
+        "MarketObject":MarketObject,
         "Gift": GiftChest
     };
 
@@ -83,7 +88,12 @@ public class ObjectLibrary {
             xmlLibrary_[objectType] = objectXML;
             idToType_[id] = objectType;
             typeToDisplayId_[objectType] = displayId;
-            if (String(objectXML.Class) == "Player") {
+
+            if (String(xml.Class) == "Equipment")
+            {
+                baseItems[objectType] = Item.parseFromXml(xml);
+            }
+            else if (String(objectXML.Class) == "Player") {
                 playerClassAbbr_[objectType] = String(objectXML.@id).substr(0, 2);
                 found = false;
                 for (i = 0; i < playerChars_.length; i++) {

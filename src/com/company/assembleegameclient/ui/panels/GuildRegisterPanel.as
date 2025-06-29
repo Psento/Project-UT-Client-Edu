@@ -68,8 +68,8 @@ public class GuildRegisterPanel extends Panel {
         }
         var p:Player = gs_.map.player_;
         var renounceDialog:Dialog = new Dialog("Are you sure you want to quit:\n" + p.guildName_, "Renounce Guild", "No, I\'ll stay", "Yes, I\'ll quit");
-        renounceDialog.addEventListener(Dialog.BUTTON1_EVENT, this.onNoRenounce);
-        renounceDialog.addEventListener(Dialog.BUTTON2_EVENT, this.onRenounce);
+        renounceDialog.addEventListener(Dialog.LEFT_BUTTON, this.onNoRenounce);
+        renounceDialog.addEventListener(Dialog.RIGHT_BUTTON, this.onRenounce);
         stage.addChild(renounceDialog);
     }
 

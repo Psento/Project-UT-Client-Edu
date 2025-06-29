@@ -4,24 +4,29 @@ import com.company.assembleegameclient.ui.dialogs.Dialog;
 
 import flash.events.Event;
 
+import svera.untiered.core.StaticInjectorContext;
+import svera.untiered.dialogs.control.OpenDialogSignal;
+
 public class DialogUtils
 {
     /* Creates and adds an error dialog to the overlay */
     public static function makeSimpleDialog(gameSprite:GameSprite, title:String, description:String) : void
     {
-        var dialog:Dialog = new Dialog(title, description, "Close", null, null, true);
+        var dialog:Dialog = new Dialog(title, description, "Close", null);
         dialog.addEventListener(Dialog.LEFT_BUTTON, onDialogClose);
-        gameSprite.mui_.layers.overlay.addChild(dialog);
+        (StaticInjectorContext.injector.getInstance(OpenDialogSignal) as OpenDialogSignal).dispatch(dialog);
+
     }
 
     /* Creates and adds a confirm dialog to the overlay */
     public static function makeCallbackDialog(gameSprite:GameSprite, title:String, description:String, textOne:String, textTwo:String,  callback:Function) : void
     {
-        var dialog:Dialog = new Dialog(title, description, textOne, textTwo, null, true);
+        var dialog:Dialog = new Dialog(title, description, textOne, textTwo);
         dialog.addEventListener(Dialog.LEFT_BUTTON, callback); /* Should probably remove this as it could potentially cause a memory leak if used often */
         dialog.addEventListener(Dialog.LEFT_BUTTON, onDialogClose); /* Add this so we dont have to provide closing callback */
         dialog.addEventListener(Dialog.RIGHT_BUTTON, onDialogClose);
-        gameSprite.mui_.layers.overlay.addChild(dialog);
+        (StaticInjectorContext.injector.getInstance(OpenDialogSignal) as OpenDialogSignal).dispatch(dialog);
+
     }
 
     /* Removes the dialog made by the above two functions */

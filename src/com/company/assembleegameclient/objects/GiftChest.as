@@ -3,6 +3,8 @@ import com.company.assembleegameclient.game.GameSprite;
 import com.company.assembleegameclient.ui.panels.GiftChestPanel;
 import com.company.assembleegameclient.ui.panels.Panel;
 
+import link.ItemData;
+
 import svera.untiered.messaging.impl.data.StorageSlotUpdateData;
 
 public class GiftChest extends GameObject implements IInteractiveObject {
@@ -13,13 +15,11 @@ public class GiftChest extends GameObject implements IInteractiveObject {
     }
 
 
-    public function setContainer(size:int, slots:Vector.<StorageSlotUpdateData>):void {
-        this.equipment_ = new Vector.<int>(size);
-        this.itemDatas_ = new Vector.<int>(size);
+    public function setContainer(size:int, slots:Vector.<ItemData>):void {
+        this.equipment_ = new Vector.<ItemData>(size);
 
         for (var i:int = 0; i < size; i++) {
-            this.equipment_[i] = slots[i].itemType_;
-            this.itemDatas_[i] = slots[i].itemData_;
+            this.equipment_[i] = slots[i];
         }
     }
 

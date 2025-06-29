@@ -62,7 +62,7 @@ public class BindGrid extends ItemGrid {
         }
     }
 
-    public function setItem(slot:int, itemId:int, itemData:int):void {
+    public function setItem(slot:int, itemId:ItemData):void {
         if (slot >= this.tiles.length || slot < 0) {
             return;
         }

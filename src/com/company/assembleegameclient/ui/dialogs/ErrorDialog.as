@@ -9,7 +9,7 @@ public class ErrorDialog extends Dialog {
 
     public function ErrorDialog(errorText:String) {
         super("An error has occured:\n" + errorText, "D\'oh, this isn\'t good", "Ok", null);
-        this.ok = new NativeMappedSignal(this, BUTTON1_EVENT);
+        this.ok = new NativeMappedSignal(this, LEFT_BUTTON);
     }
 }
 }

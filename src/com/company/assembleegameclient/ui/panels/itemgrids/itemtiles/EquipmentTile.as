@@ -122,7 +122,7 @@ public class EquipmentTile extends InteractiveItemTile {
         this.itemType = itemType_;
     }
 
-    override public function setItem(itemId:int, itemData:int):Boolean {
+    override public function setItem(itemId:ItemData):Boolean {
         var itemChanged:Boolean = super.setItem(itemId, itemData);
         if (itemChanged) {
             backgroundDetail && (backgroundDetail.visible = itemSprite.itemId <= 0);

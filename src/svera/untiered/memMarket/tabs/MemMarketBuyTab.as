@@ -11,7 +11,8 @@ import flash.display.Sprite;
 import flash.events.Event;
 import flash.events.KeyboardEvent;
 import flash.events.MouseEvent;
-import flash.utils.Dictionary;
+
+import mx.utils.StringUtil;
 
 import svera.untiered.memMarket.content.MemMarketBuyItem;
 import svera.untiered.memMarket.content.MemMarketItem;
@@ -20,18 +21,14 @@ import svera.untiered.memMarket.signals.MemMarketSearchSignal;
 import svera.untiered.memMarket.utils.DialogUtils;
 import svera.untiered.memMarket.utils.ItemUtils;
 import svera.untiered.memMarket.utils.SortUtils;
-import svera.untiered.messaging.impl.GameServerConnection;
 import svera.untiered.messaging.impl.data.MarketData;
 import svera.untiered.messaging.impl.incoming.market.MarketBuyResult;
 import svera.untiered.messaging.impl.incoming.market.MarketSearchResult;
 
-import mx.utils.StringUtil;
-
 ///TODO fix these
 ///Listing counter gets reset when search items get removed
 
-public class MemMarketBuyTab extends MemMarketTab
-{
+public class MemMarketBuyTab extends MemMarketTab {
     private static const SEARCH_X_OFFSET:int = 4;
     private static const SEARCH_Y_OFFSET:int = 170;
     private static const SEARCH_ITEM_SIZE:int = 50;
@@ -62,8 +59,7 @@ public class MemMarketBuyTab extends MemMarketTab
 
     private var first_:Boolean = true;
 
-    public function MemMarketBuyTab(gameSprite:GameSprite)
-    {
+    public function MemMarketBuyTab(gameSprite:GameSprite) {
         super(gameSprite);
 
         /* Initialize signals */
@@ -135,48 +131,37 @@ public class MemMarketBuyTab extends MemMarketTab
         this.gameSprite_.gsc_.marketAll();
     }
 
-    private function onSortChoicesChanged(event:Event) : void
-    {
+    private function onSortChoicesChanged(event:Event):void {
         this.sortOffers();
     }
 
-    private function onKeyUp(event:KeyboardEvent) : void
-    {
-        if (event.keyCode == KeyCodes.ENTER)
-        {
+    private function onKeyUp(event:KeyboardEvent):void {
+        if (event.keyCode == KeyCodes.ENTER) {
             this.searchItemsFunc();
         }
     }
 
 
-    private function onSearchClick(event:MouseEvent) : void
-    {
+    private function onSearchClick(event:MouseEvent):void {
         var item:MemMarketItem = event.currentTarget as MemMarketItem;
         this.gameSprite_.gsc_.marketSearch(item.itemType_);
     }
 
-    private function onSearchScrollChanged(event:Event) : void
-    {
+    private function onSearchScrollChanged(event:Event):void {
         this.searchBackground.y = -this.searchScroll.pos() * (this.searchBackground.height - 356);
     }
 
     /* Clear previous results */
-    private function clearPreviousResults(result:Boolean) : void
-    {
-        if (result)
-        {
-            for each (var i:MemMarketBuyItem in this.resultItems_)
-            {
+    private function clearPreviousResults(result:Boolean):void {
+        if (result) {
+            for each (var i:MemMarketBuyItem in this.resultItems_) {
                 i.dispose();
                 this.resultBackground_.removeChild(i);
                 i = null;
             }
             this.resultItems_.length = 0;
-        }
-        else
-        {
-            for each (var o:MemMarketItem in this.searchItems)
-            {
+        } else {
+            for each (var o:MemMarketItem in this.searchItems) {
                 o.removeEventListener(MouseEvent.CLICK, this.onSearchClick);
                 o.dispose();
                 this.searchBackground.removeChild(o);
@@ -187,11 +172,9 @@ public class MemMarketBuyTab extends MemMarketTab
     }
 
     /* Removes an offer from resultItems and sorts */
-    private function removeOffer(id:int) : void
-    {
+    private function removeOffer(id:int):void {
         var index:int = 0;
-        for each (var o:MemMarketBuyItem in this.resultItems_)
-        {
+        for each (var o:MemMarketBuyItem in this.resultItems_) {
             if (o.id_ == id) /* Item matched, remove */
             {
                 this.resultItems_.splice(index, 1);
@@ -207,22 +190,20 @@ public class MemMarketBuyTab extends MemMarketTab
     }
 
     /* Sorts and positions offers */
-    private function sortOffers() : void
-    {
-        switch (SortUtils.SORT_CHOICES[this.sortChoices_.getIndex()])
-        {
+    private function sortOffers():void {
+        switch (SortUtils.SORT_CHOICES[this.sortChoices_.getIndex()]) {
             case SortUtils.LOWEST_TO_HIGHEST:
                 this.resultItems_.sort(SortUtils.lowestToHighest);
                 break;
             case SortUtils.HIGHEST_TO_LOWEST:
                 this.resultItems_.sort(SortUtils.highestToLowest);
                 break;
-            /*case SortUtils.FAME_TO_GOLD:
-                this.resultItems_.sort(SortUtils.honorToGold);
-                break;
-            case SortUtils.GOLD_TO_FAME:
-                this.resultItems_.sort(SortUtils.goldToHonor);
-                break; */
+                /*case SortUtils.FAME_TO_GOLD:
+                    this.resultItems_.sort(SortUtils.honorToGold);
+                    break;
+                case SortUtils.GOLD_TO_FAME:
+                    this.resultItems_.sort(SortUtils.goldToHonor);
+                    break; */
             case SortUtils.JUST_ADDED:
                 this.resultItems_.sort(SortUtils.justAdded);
                 break;
@@ -232,18 +213,16 @@ public class MemMarketBuyTab extends MemMarketTab
         }
 
         var index:int = 0;
-        for each (var i:MemMarketBuyItem in this.resultItems_)
-        {
+        for each (var i:MemMarketBuyItem in this.resultItems_) {
             i.x = MemMarketItem.OFFER_WIDTH * int(index % 5) + RESULT_X_OFFSET;
             i.y = MemMarketItem.OFFER_HEIGHT * int(index / 5) + RESULT_Y_OFFSET;
             index++;
         }
     }
-    private function searchItemsFunc(first:Boolean = false) : void
-    {
+
+    private function searchItemsFunc(first:Boolean = false):void {
         /* Remove old scrollbar */
-        if (this.searchScroll != null)
-        {
+        if (this.searchScroll != null) {
             this.searchScroll.removeEventListener(Event.CHANGE, this.onSearchScrollChanged);
             removeChild(this.searchScroll);
             this.searchScroll = null;
@@ -259,75 +238,37 @@ public class MemMarketBuyTab extends MemMarketTab
 
         var index:int = 0;
         var itemType:int
-        if (first)
-        {
-            for each (var w:String in ObjectLibrary.preloadedCustom_)
-            {
-                itemType = ObjectLibrary.idToTypeItems_[w];
+
+        for each (var i:String in ObjectLibrary.idToType_) {
+            if (i.indexOf(this.searchField_.text().toLowerCase()) >= 0) {
+                itemType = ObjectLibrary.idToType_[i];
 
                 if (ItemUtils.isBanned(itemType) || ObjectLibrary.xmlLibrary_[itemType].TierType == "Stat") /* Skip on banned items */
                 {
                     continue;
                 }
 
-                if(!TierSort(ObjectLibrary.xmlLibrary_[itemType]))
-                {
+                if (!TierSort(ObjectLibrary.xmlLibrary_[itemType])) {
                     continue;
                 }
-
                 if (!StatSort(ObjectLibrary.xmlLibrary_[itemType])) {
                     continue;
                 }
 
-                if(!ItemTypeSort(ObjectLibrary.xmlLibrary_[itemType]))
-                {
+                if (!ItemTypeSort(ObjectLibrary.xmlLibrary_[itemType])) {
                     continue;
                 }
-                var preloaded:MemMarketItem = new MemMarketItem(this.gameSprite_, SEARCH_ITEM_SIZE, SEARCH_ITEM_SIZE, 80, ObjectLibrary.idToTypeItems_[w], null);
-                preloaded.x = SEARCH_ITEM_SIZE * int(index % 5) + SEARCH_X_OFFSET;
-                preloaded.y = SEARCH_ITEM_SIZE * int(index / 5) + SEARCH_Y_OFFSET;
-                preloaded.addEventListener(MouseEvent.CLICK, this.onSearchClick);
-                preloaded.CreateLabel();
-                this.searchItems.push(preloaded);
+
+                var item:MemMarketItem = new MemMarketItem(this.gameSprite_, SEARCH_ITEM_SIZE, SEARCH_ITEM_SIZE, 80, ObjectLibrary.idToType_[i], null);
+                item.x = SEARCH_ITEM_SIZE * int(index % 5) + SEARCH_X_OFFSET;
+                item.y = SEARCH_ITEM_SIZE * int(index / 5) + SEARCH_Y_OFFSET;
+                item.addEventListener(MouseEvent.CLICK, this.onSearchClick);
+                item.CreateLabel();
+                this.searchItems.push(item);
                 index++;
             }
         }
-        else
-        {
-            for each (var i:String in ObjectLibrary.typeToIdItems_)
-            {
-                if (i.indexOf(this.searchField_.text().toLowerCase()) >= 0)
-                {
-                    itemType = ObjectLibrary.idToTypeItems_[i];
 
-                    if (ItemUtils.isBanned(itemType) || ObjectLibrary.xmlLibrary_[itemType].TierType == "Stat") /* Skip on banned items */
-                    {
-                        continue;
-                    }
-
-                    if(!TierSort(ObjectLibrary.xmlLibrary_[itemType]))
-                    {
-                        continue;
-                    }
-                    if (!StatSort(ObjectLibrary.xmlLibrary_[itemType])) {
-                        continue;
-                    }
-
-                    if(!ItemTypeSort(ObjectLibrary.xmlLibrary_[itemType]))
-                    {
-                        continue;
-                    }
-
-                    var item:MemMarketItem = new MemMarketItem(this.gameSprite_, SEARCH_ITEM_SIZE, SEARCH_ITEM_SIZE, 80, ObjectLibrary.idToTypeItems_[i], null);
-                    item.x = SEARCH_ITEM_SIZE * int(index % 5) + SEARCH_X_OFFSET;
-                    item.y = SEARCH_ITEM_SIZE * int(index / 5) + SEARCH_Y_OFFSET;
-                    item.addEventListener(MouseEvent.CLICK, this.onSearchClick);
-                    item.CreateLabel();
-                    this.searchItems.push(item);
-                    index++;
-                }
-            }
-        }
 
         for each (var x:MemMarketItem in this.searchItems) /* Draw our results */
         {
@@ -335,8 +276,7 @@ public class MemMarketBuyTab extends MemMarketTab
         }
 
         this.searchBackground.y = 0; /* Reset height */
-        if (this.searchBackground.height > 350)
-        {
+        if (this.searchBackground.height > 350) {
             this.searchScroll = new Scrollbar(6, 350);
             this.searchScroll.x = 258;
             this.searchScroll.y = SEARCH_Y_OFFSET;
@@ -346,9 +286,8 @@ public class MemMarketBuyTab extends MemMarketTab
         }
     }
 
-    private function TierSort(xml:XML): Boolean
-    {
-        if(xml.hasOwnProperty("TierType")) {
+    private function TierSort(xml:XML):Boolean {
+        if (xml.hasOwnProperty("TierType")) {
             switch (SortUtils.TIER_SORT_CHOICES[this.tierSortChoices_.getIndex()]) {
                 case SortUtils.ALLTIERS:
                     return true;
@@ -382,11 +321,9 @@ public class MemMarketBuyTab extends MemMarketTab
         return false;
     }
 
-    private function StatSort(xml:XML): Boolean
-    {
+    private function StatSort(xml:XML):Boolean {
         var value:String = "";
-        if(!xml.hasOwnProperty("ActivateOnEquip"))
-        {
+        if (!xml.hasOwnProperty("ActivateOnEquip")) {
             switch (SortUtils.STAT_SORT_CHOICES[this.statSortChoices_.getIndex()]) {
                 case SortUtils.ALLSTATS:
                     return true;
@@ -466,8 +403,7 @@ public class MemMarketBuyTab extends MemMarketTab
         return false;
     }
 
-    private function ItemTypeSort(xml:XML): Boolean
-    {
+    private function ItemTypeSort(xml:XML):Boolean {
         var value:String = "";
         for each (value in xml.SlotType) {
             switch (SortUtils.ITEMTYPE_SORT_CHOICES[this.itemTypeSortChoices_.getIndex()]) {
@@ -658,18 +594,15 @@ public class MemMarketBuyTab extends MemMarketTab
         return false;
     }
 
-    private function refreshOffers() : void
-    {
-        for each (var o:MemMarketBuyItem in this.resultItems_)
-        {
+    private function refreshOffers():void {
+        for each (var o:MemMarketBuyItem in this.resultItems_) {
             o.updateButton();
         }
     }
+
     /* Buy and refresh offers */
-    private function onBuy(result:MarketBuyResult) : void
-    {
-        if (result.code_ != -1)
-        {
+    private function onBuy(result:MarketBuyResult):void {
+        if (result.code_ != -1) {
             DialogUtils.makeSimpleDialog(this.gameSprite_, "Error", result.description_);
             return;
         }
@@ -681,18 +614,15 @@ public class MemMarketBuyTab extends MemMarketTab
     }
 
     /* Refresh and add found offers */
-    private function onSearch(result:MarketSearchResult) : void
-    {
-        if (result.description_ != "")
-        {
+    private function onSearch(result:MarketSearchResult):void {
+        if (result.description_ != "") {
             this.clearPreviousResults(true);
             DialogUtils.makeSimpleDialog(this.gameSprite_, "Error", result.description_);
             return;
         }
 
         /* Remove old scrollbar */
-        if (this.resultScroll_ != null)
-        {
+        if (this.resultScroll_ != null) {
             this.resultScroll_.removeEventListener(Event.CHANGE, this.onResultScrollChanged);
             removeChild(this.resultScroll_);
             this.resultScroll_ = null;
@@ -700,18 +630,14 @@ public class MemMarketBuyTab extends MemMarketTab
 
         this.clearPreviousResults(true);
 
-        for each (var i:MarketData in result.results_)
-        {
+        for each (var i:MarketData in result.results_) {
             var item:MemMarketBuyItem = new MemMarketBuyItem(this.gameSprite_, i);
             this.resultItems_.push(item);
 
             //could be pretty slow when theres lots of items to loop through
-            if(this.first_)
-            {
-                for each(var marketItem:MemMarketItem in this.searchItems)
-                {
-                    if(marketItem.itemType_ == i.itemType_)
-                    {
+            if (this.first_) {
+                for each(var marketItem:MemMarketItem in this.searchItems) {
+                    if (marketItem.itemType_ == i.itemType_) {
                         marketItem.UpdateCounter();
                     }
                 }
@@ -722,14 +648,12 @@ public class MemMarketBuyTab extends MemMarketTab
         this.sortOffers();
 
 
-        for each (var o:MemMarketBuyItem in this.resultItems_)
-        {
+        for each (var o:MemMarketBuyItem in this.resultItems_) {
             this.resultBackground_.addChild(o);
         }
 
         this.resultBackground_.y = 0; /* Reset height */
-        if (this.resultBackground_.height > 436)
-        {
+        if (this.resultBackground_.height > 436) {
             this.resultScroll_ = new Scrollbar(22, 415);
             this.resultScroll_.x = 774;
             this.resultScroll_.y = RESULT_Y_OFFSET;
@@ -739,14 +663,12 @@ public class MemMarketBuyTab extends MemMarketTab
         }
     }
 
-    private function onResultScrollChanged(event:Event) : void
-    {
+    private function onResultScrollChanged(event:Event):void {
         this.resultBackground_.y = -this.resultScroll_.pos() * (this.resultBackground_.height - 418);
     }
 
     /* Clear */
-    public override function dispose() : void
-    {
+    public override function dispose():void {
         this.buySignal_.remove(this.onBuy);
         this.searchSignal_.remove(this.onSearch);
 
@@ -762,8 +684,7 @@ public class MemMarketBuyTab extends MemMarketTab
         this.searchMask_ = null;
         this.searchBackground = null;
 
-        if (this.searchScroll != null)
-        {
+        if (this.searchScroll != null) {
             this.searchScroll.removeEventListener(Event.CHANGE, this.onSearchScrollChanged);
             this.searchScroll = null;
         }
@@ -775,8 +696,7 @@ public class MemMarketBuyTab extends MemMarketTab
         this.resultMask_ = null;
         this.resultBackground_ = null;
 
-        if (this.resultScroll_ != null)
-        {
+        if (this.resultScroll_ != null) {
             this.resultScroll_.removeEventListener(Event.CHANGE, this.onResultScrollChanged);
             this.resultScroll_ = null;
         }
@@ -796,22 +716,19 @@ public class MemMarketBuyTab extends MemMarketTab
         super.dispose();
     }
 
-    private function onTierChoice(event:Event):void
-    {
+    private function onTierChoice(event:Event):void {
         this.searchItemsFunc();
         //searchItemsFunc(false);
         //tierSort();
     }
 
-    private function onStatChoice(event:Event):void
-    {
+    private function onStatChoice(event:Event):void {
         this.searchItemsFunc();
         //searchItemsFunc(false);
         //tierSort();
     }
 
-    private function onItemTypeChoice(event:Event):void
-    {
+    private function onItemTypeChoice(event:Event):void {
         this.searchItemsFunc();
         //searchItemsFunc(false);
         //tierSort();

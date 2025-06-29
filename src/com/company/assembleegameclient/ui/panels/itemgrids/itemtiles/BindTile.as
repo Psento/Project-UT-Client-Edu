@@ -40,7 +40,7 @@ public class BindTile extends ItemTile {
         newItemSprite.setDim(false);
     }
 
-    override public function setItem(itemId:int, itemData:int):Boolean {
+    override public function setItem(itemId:ItemData):Boolean {
         var changed:Boolean = super.setItem(itemId, itemData);
         return changed;
     }

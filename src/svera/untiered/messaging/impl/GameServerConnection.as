@@ -154,6 +154,7 @@ import svera.untiered.messaging.impl.outgoing.UnboxRequest;
 import svera.untiered.messaging.impl.outgoing.UseItem;
 import svera.untiered.messaging.impl.outgoing.UsePortal;
 import svera.untiered.messaging.impl.outgoing.market.MarketAdd;
+import svera.untiered.messaging.impl.outgoing.market.MarketAll;
 import svera.untiered.messaging.impl.outgoing.market.MarketBuy;
 import svera.untiered.messaging.impl.outgoing.market.MarketMyOffers;
 import svera.untiered.messaging.impl.outgoing.market.MarketRemove;
@@ -245,16 +246,17 @@ public class GameServerConnection {
     public static const UNBOXREQUEST:int = 92;
     public static const UNBOXRESULT:int = 93;// add 94
 
-    public static const MARKET_SEARCH:int = 106;
-    public static const MARKET_SEARCH_RESULT:int = 107;
-    public static const MARKET_BUY:int = 108;
-    public static const MARKET_BUY_RESULT:int = 109;
-    public static const MARKET_ADD:int = 110;
-    public static const MARKET_ADD_RESULT:int = 111;
-    public static const MARKET_REMOVE:int = 112;
-    public static const MARKET_REMOVE_RESULT:int = 113;
-    public static const MARKET_MY_OFFERS:int = 114;
-    public static const MARKET_MY_OFFERS_RESULT:int = 115;
+    public static const MARKET_SEARCH:int = 94;
+    public static const MARKET_SEARCH_RESULT:int = 95;
+    public static const MARKET_BUY:int = 96;
+    public static const MARKET_BUY_RESULT:int = 97;
+    public static const MARKET_ADD:int = 98;
+    public static const MARKET_ADD_RESULT:int = 99;
+    public static const MARKET_REMOVE:int = 100;
+    public static const MARKET_REMOVE_RESULT:int = 101;
+    public static const MARKET_MY_OFFERS:int = 102;
+    public static const MARKET_MY_OFFERS_RESULT:int = 103;
+    public static const MARKET_ALL:int = 104;
 
     public static var instance:GameServerConnection;
 
@@ -904,6 +906,11 @@ public class GameServerConnection {
         add.currency_ = currency;
         add.hours_ = hours;
         this.serverConnection.sendMessage(add);
+    }
+    public function marketAll() : void
+    {
+        var all:MarketAll = this.messages.require(MARKET_ALL) as MarketAll;
+        this.serverConnection.sendMessage(all);
     }
 
     private function onServerPlayerShoot(serverPlayerShoot:ServerPlayerShoot):void {
@@ -1773,7 +1780,7 @@ public class GameServerConnection {
 
     private function handleIncorrectVersionFailure(event:Failure):void {
         var dialog:Dialog = new Dialog("Client version: " + Parameters.BUILD_VERSION + "\nServer version: " + event.errorDescription_, "Client Update Needed", "Ok", null);
-        dialog.addEventListener(Dialog.BUTTON1_EVENT, this.onDoClientUpdate);
+        dialog.addEventListener(Dialog.LEFT_BUTTON, this.onDoClientUpdate);
         this.gs_.stage.addChild(dialog);
     }
 

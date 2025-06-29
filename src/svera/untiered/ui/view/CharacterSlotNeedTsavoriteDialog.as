@@ -28,7 +28,7 @@ public class CharacterSlotNeedTsavoriteDialog extends Sprite {
         this.price = price;
         this.dialog && contains(this.dialog) && removeChild(this.dialog);
         this.makeDialog();
-        this.dialog.addEventListener(Dialog.BUTTON1_EVENT, this.onCancel);
+        this.dialog.addEventListener(Dialog.LEFT_BUTTON, this.onCancel);
     }
 
     private function makeDialog():void {

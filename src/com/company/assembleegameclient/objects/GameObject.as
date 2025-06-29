@@ -41,6 +41,8 @@ import flash.utils.Dictionary;
 import flash.utils.getQualifiedClassName;
 import flash.utils.getTimer;
 
+import link.ItemData;
+
 import svera.untiered.messaging.impl.data.WorldPosData;
 import svera.untiered.stage3D.GraphicsFillExtra;
 import svera.untiered.stage3D.Object3D.Object3DStage3D;
@@ -76,8 +78,7 @@ public class GameObject extends BasicObject {
     public var level_:int = -1;
     public var armor_:int = 0;
     public var slotTypes_:Vector.<int> = null;
-    public var equipment_:Vector.<int> = null;
-    public var itemDatas_:Vector.<int> = null;
+    public var equipment_:Vector.<ItemData> = null;
     public var condition_:Vector.<uint>;
     protected var tex1Id_:int = 0;
     protected var tex2Id_:int = 0;
@@ -166,11 +167,9 @@ public class GameObject extends BasicObject {
         }
         if (objectXML.hasOwnProperty("SlotTypes")) {
             this.slotTypes_ = ConversionUtil.toIntVector(objectXML.SlotTypes);
-            this.equipment_ = new Vector.<int>(this.slotTypes_.length);
-            this.itemDatas_ = new Vector.<int>(this.slotTypes_.length);
+            this.equipment_ = new Vector.<ItemData>(this.slotTypes_.length);
             for (i = 0; i < this.equipment_.length; i++) {
-                this.equipment_[i] = -1;
-                this.itemDatas_[i] = -1;
+                this.equipment_[i] = null;
             }
         }
         if (objectXML.hasOwnProperty("Tex1")) {
@@ -326,10 +325,12 @@ public class GameObject extends BasicObject {
             this.showDamageText2(_arg_2, _local_15, multi);
         }
     }
+
     public function showConditionEffect(timeOffset:int, text:String):void {
         var _local3:CharacterStatusText = new CharacterStatusText(this, text, 0xFF0000, 3000, timeOffset);
         map_.mapOverlay_.addStatusText(_local3);
     }
+
     public function setObjectId(objectId:int):void {
         var textureData:TextureData = null;
         objectId_ = objectId;
@@ -369,11 +370,13 @@ public class GameObject extends BasicObject {
             }
         }
     }
+
     public function showDamageText2(dmg:int, crit:Boolean, multi:Number):void {
         var text:String = "-" + dmg + " (" + multi + "x)";
-        var statusText:CharacterStatusText = new CharacterStatusText(this, text,crit ? 0xFF4500 : 0xFFFF00, 1000);
+        var statusText:CharacterStatusText = new CharacterStatusText(this, text, crit ? 0xFF4500 : 0xFFFF00, 1000);
         map_.mapOverlay_.addStatusText(statusText);
     }
+
     public function setTex1(tex1Id:int):void {
         if (tex1Id == this.tex1Id_) {
             return;
@@ -431,7 +434,6 @@ public class GameObject extends BasicObject {
         }
         this.slotTypes_ = null;
         this.equipment_ = null;
-        this.itemDatas_ = null;
         this.nameText_ = null;
         if (this.nameBitmapData_ != null) {
             this.namePath_.data.length = 0;
@@ -468,7 +470,8 @@ public class GameObject extends BasicObject {
             this.hpbarPath_ = null;
         }
     }
-    public function isTargetable() :Boolean {
+
+    public function isTargetable():Boolean {
         return !isImmortal() && !isPaused() && !isCrippled() && hp_ > 0;
     }
 

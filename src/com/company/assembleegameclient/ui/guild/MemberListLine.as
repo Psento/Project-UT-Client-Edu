@@ -147,8 +147,8 @@ public class MemberListLine extends Sprite {
 
     private function onPromote(event:MouseEvent):void {
         var dialog:Dialog = new Dialog("Are you sure you want to promote " + this.name_ + " to " + GuildUtil.rankToString(GuildUtil.promotedRank(this.rank_)) + "?", "Promote " + this.name_, "Cancel", "Promote");
-        dialog.addEventListener(Dialog.BUTTON1_EVENT, this.onCancelDialog);
-        dialog.addEventListener(Dialog.BUTTON2_EVENT, this.onVerifiedPromote);
+        dialog.addEventListener(Dialog.LEFT_BUTTON, this.onCancelDialog);
+        dialog.addEventListener(Dialog.RIGHT_BUTTON, this.onVerifiedPromote);
         stage.addChild(dialog);
     }
 
@@ -160,8 +160,8 @@ public class MemberListLine extends Sprite {
 
     private function onDemote(event:MouseEvent):void {
         var dialog:Dialog = new Dialog("Are you sure you want to demote " + this.name_ + " to " + GuildUtil.rankToString(GuildUtil.demotedRank(this.rank_)) + "?", "Demote " + this.name_, "Cancel", "Demote");
-        dialog.addEventListener(Dialog.BUTTON1_EVENT, this.onCancelDialog);
-        dialog.addEventListener(Dialog.BUTTON2_EVENT, this.onVerifiedDemote);
+        dialog.addEventListener(Dialog.LEFT_BUTTON, this.onCancelDialog);
+        dialog.addEventListener(Dialog.RIGHT_BUTTON, this.onVerifiedDemote);
         stage.addChild(dialog);
     }
 
@@ -173,8 +173,8 @@ public class MemberListLine extends Sprite {
 
     private function onRemove(event:MouseEvent):void {
         var dialog:Dialog = new Dialog("Are you sure you want to remove " + this.name_ + " from the guild?", "Remove " + this.name_, "Cancel", "Remove");
-        dialog.addEventListener(Dialog.BUTTON1_EVENT, this.onCancelDialog);
-        dialog.addEventListener(Dialog.BUTTON2_EVENT, this.onVerifiedRemove);
+        dialog.addEventListener(Dialog.LEFT_BUTTON, this.onCancelDialog);
+        dialog.addEventListener(Dialog.RIGHT_BUTTON, this.onVerifiedRemove);
         stage.addChild(dialog);
     }
 

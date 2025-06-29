@@ -20,9 +20,9 @@ import flash.text.TextFieldAutoSize;
 
 public class Dialog extends Sprite {
 
-    public static const BUTTON1_EVENT:String = "DIALOG_BUTTON1";
+    public static const LEFT_BUTTON:String = "DIALOG_BUTTON1";
 
-    public static const BUTTON2_EVENT:String = "DIALOG_BUTTON2";
+    public static const RIGHT_BUTTON:String = "DIALOG_BUTTON2";
 
     private static const WIDTH:int = 300;
 
@@ -131,11 +131,11 @@ public class Dialog extends Sprite {
     }
 
     private function onButton1Click(event:MouseEvent):void {
-        dispatchEvent(new Event(BUTTON1_EVENT));
+        dispatchEvent(new Event(LEFT_BUTTON));
     }
 
     private function onButton2Click(event:Event):void {
-        dispatchEvent(new Event(BUTTON2_EVENT));
+        dispatchEvent(new Event(RIGHT_BUTTON));
     }
 
     public function setBaseAlpha(value:Number):void {

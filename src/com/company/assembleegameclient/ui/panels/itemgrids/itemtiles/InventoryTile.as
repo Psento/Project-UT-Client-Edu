@@ -42,7 +42,7 @@ public class InventoryTile extends InteractiveItemTile {
         newItemSprite.setDim(false);
     }
 
-    override public function setItem(itemId:int, itemData:int):Boolean {
+    override public function setItem(itemId:ItemData):Boolean {
         return super.setItem(itemId, itemData);
     }
 

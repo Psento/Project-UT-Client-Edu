@@ -13,8 +13,8 @@ public class RegisterPromptDialog extends Dialog {
 
     public function RegisterPromptDialog(message:String) {
         super(message, "Not Registered", "Cancel", "Register");
-        this.cancel = new NativeMappedSignal(this, BUTTON1_EVENT);
-        this.register = new NativeMappedSignal(this, BUTTON2_EVENT);
+        this.cancel = new NativeMappedSignal(this, LEFT_BUTTON);
+        this.register = new NativeMappedSignal(this, RIGHT_BUTTON);
     }
 }
 }

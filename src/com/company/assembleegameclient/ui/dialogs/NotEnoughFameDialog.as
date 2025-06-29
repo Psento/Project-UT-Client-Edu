@@ -6,7 +6,7 @@ public class NotEnoughHonorDialog extends Dialog {
 
     public function NotEnoughHonorDialog() {
         super("You do not have enough Honor for this item.  " + "You gain Honor when your character dies after having " + "accomplished great things.", "Not Enough Honor", "Ok", null);
-        addEventListener(BUTTON1_EVENT, this.onOk);
+        addEventListener(LEFT_BUTTON, this.onOk);
     }
 
     public function onOk(event:Event):void {

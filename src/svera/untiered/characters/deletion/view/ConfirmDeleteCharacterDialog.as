@@ -11,9 +11,9 @@ public class ConfirmDeleteCharacterDialog extends Sprite {
 
     private const TEXT_TEMPLATE:String = "Are you really sure you want to delete ${NAME} the ${DISPLAYID}?";
 
-    private const CANCEL_EVENT:String = Dialog.BUTTON1_EVENT;
+    private const CANCEL_EVENT:String = Dialog.LEFT_BUTTON;
 
-    private const DELETE_EVENT:String = Dialog.BUTTON2_EVENT;
+    private const DELETE_EVENT:String = Dialog.RIGHT_BUTTON;
 
     public var deleteCharacter:Signal;
 

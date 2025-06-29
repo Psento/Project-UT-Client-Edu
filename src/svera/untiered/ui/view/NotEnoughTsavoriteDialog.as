@@ -18,7 +18,7 @@ public class NotEnoughTsavoriteDialog extends Dialog {
     public function NotEnoughTsavoriteDialog(message:String = "") {
         var text:String = message == "" ? TEXT : message;
         super(text, TITLE, CANCEL, null);
-        this.cancel = new NativeMappedSignal(this, BUTTON1_EVENT);
+        this.cancel = new NativeMappedSignal(this, LEFT_BUTTON);
     }
 }
 }

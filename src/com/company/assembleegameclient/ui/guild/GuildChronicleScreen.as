@@ -82,7 +82,7 @@ public class GuildChronicleScreen extends Sprite {
 
     private function showError(errorText:String):void {
         var dialog:Dialog = new Dialog(errorText, "Error", "Ok", null);
-        dialog.addEventListener(Dialog.BUTTON1_EVENT, this.onErrorTextDone);
+        dialog.addEventListener(Dialog.LEFT_BUTTON, this.onErrorTextDone);
         stage.addChild(dialog);
     }
 

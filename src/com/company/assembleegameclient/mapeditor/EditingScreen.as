@@ -389,8 +389,8 @@ public class EditingScreen extends Sprite {
     private function onBack(event:Event):void {
         var text:String = "Are you sure you want to return to the title screen? This will erase your map data.";
         var confirmBack:Dialog = new Dialog(text, "Go back", "Stay", "Go back");
-        confirmBack.addEventListener(Dialog.BUTTON1_EVENT, this.onCancelBack);
-        confirmBack.addEventListener(Dialog.BUTTON2_EVENT, this.onReturn);
+        confirmBack.addEventListener(Dialog.LEFT_BUTTON, this.onCancelBack);
+        confirmBack.addEventListener(Dialog.RIGHT_BUTTON, this.onReturn);
 
         var openDialog:OpenDialogSignal = StaticInjectorContext.getInjector().getInstance(OpenDialogSignal);
         openDialog.dispatch(confirmBack);

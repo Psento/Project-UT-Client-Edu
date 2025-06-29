@@ -6,7 +6,7 @@ public class DebugDialog extends Dialog {
 
     public function DebugDialog(text:String) {
         super(text, "Debug", "OK", null);
-        addEventListener(Dialog.BUTTON1_EVENT, this.onDialogComplete);
+        addEventListener(Dialog.LEFT_BUTTON, this.onDialogComplete);
     }
 
     private function onDialogComplete(event:Event):void {

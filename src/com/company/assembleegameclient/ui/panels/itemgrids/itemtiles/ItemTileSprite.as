@@ -9,6 +9,8 @@ import flash.display.Sprite;
 import flash.filters.ColorMatrixFilter;
 import flash.geom.Matrix;
 
+import link.ItemData;
+
 import svera.untiered.constants.ItemConstants;
 
 public class ItemTileSprite extends Sprite {
@@ -22,8 +24,7 @@ public class ItemTileSprite extends Sprite {
     }();
 
 
-    public var itemId:int;
-    public var itemData:int;
+    public var itemId:ItemData;
     public var tierText:SimpleText;
 
     public var itemBitmap:Bitmap;
@@ -34,21 +35,20 @@ public class ItemTileSprite extends Sprite {
         tierText = new SimpleText(12, 0xFFFFFF);
         addChild(this.itemBitmap);
         addChild(tierText);
-        this.itemId = -1;
+        this.itemId = null;
     }
 
     public function setDim(dim:Boolean):void {
         filters = dim ? DIM_FILTER : null;
     }
 
-    public function setType(displayedItemType:int, displayedItemData:int):void {
+    public function setType(displayedItemType:ItemData):void {
         var texture:BitmapData = null;
         var eqXML:XML = null;
         var tempText:SimpleText = null;
         this.itemId = displayedItemType;
-        this.itemData = displayedItemData;
-        if (this.itemId != ItemConstants.NO_ITEM) {
-            texture = ObjectLibrary.getRedrawnTextureFromType(this.itemId, 80, true);
+        if (itemId && itemId.ObjectType != ItemConstants.NO_ITEM) {
+            texture = ObjectLibrary.getRedrawnTextureFromType(this.itemId.ObjectType, 80, true);
             eqXML = ObjectLibrary.xmlLibrary_[this.itemId];
             if (eqXML) {
                 if (eqXML.hasOwnProperty("Doses")) {

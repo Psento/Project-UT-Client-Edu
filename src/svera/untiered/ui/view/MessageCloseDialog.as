@@ -12,7 +12,7 @@ public class MessageCloseDialog extends Dialog {
     public function MessageCloseDialog(title:String = "", message:String = "", buttonText:String = "") {
         var text:String = message;
         super(text, title, buttonText == "" ? CLOSE : buttonText, null);
-        this.cancel = new NativeMappedSignal(this, BUTTON1_EVENT);
+        this.cancel = new NativeMappedSignal(this, LEFT_BUTTON);
     }
 }
 }

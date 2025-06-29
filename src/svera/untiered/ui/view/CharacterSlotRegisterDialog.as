@@ -35,8 +35,8 @@ public class CharacterSlotRegisterDialog extends Sprite {
     }
 
     private function makeSignals():void {
-        this.cancel = new NativeMappedSignal(this.dialog, Dialog.BUTTON1_EVENT);
-        this.register = new NativeMappedSignal(this.dialog, Dialog.BUTTON2_EVENT);
+        this.cancel = new NativeMappedSignal(this.dialog, Dialog.LEFT_BUTTON);
+        this.register = new NativeMappedSignal(this.dialog, Dialog.RIGHT_BUTTON);
     }
 }
 }

@@ -3,6 +3,8 @@ import com.company.assembleegameclient.objects.GameObject;
 import com.company.assembleegameclient.objects.Player;
 import com.company.assembleegameclient.ui.panels.itemgrids.itemtiles.InteractiveItemTile;
 
+import link.ItemData;
+
 public class ContainerGrid extends ItemGrid {
     private var tiles:Vector.<InteractiveItemTile>;
 
@@ -64,11 +66,11 @@ public class ContainerGrid extends ItemGrid {
         }
     }
 
-    public function setItem(slot:int, itemId:int, itemData:int):void {
+    public function setItem(slot:int, itemId:ItemData):void {
         if (slot >= this.tiles.length || slot < 0) {
             return;
         }
-        this.tiles[slot].setItem(itemId, itemData);
+        this.tiles[slot].setItem(itemId);
     }
 
     public function get items():Vector.<InteractiveItemTile> {

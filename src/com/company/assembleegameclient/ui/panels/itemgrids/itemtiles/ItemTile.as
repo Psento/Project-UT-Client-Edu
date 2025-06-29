@@ -11,6 +11,8 @@ import flash.display.IGraphicsData;
 import flash.display.Shape;
 import flash.display.Sprite;
 
+import link.ItemData;
+
 import svera.untiered.constants.ItemConstants;
 
 public class ItemTile extends Sprite {
@@ -63,11 +65,11 @@ public class ItemTile extends Sprite {
         this.restrictedUseIndicator.visible = false;
     }
 
-    public function setItem(itemId:int, itemData:int):Boolean {
-        if (itemId == this.itemSprite.itemId && itemData == this.itemSprite.itemData) {
+    public function setItem(itemId:ItemData):Boolean {
+        if (itemId == this.itemSprite.itemId) {
             return false;
         }
-        this.itemSprite.setType(itemId, itemData);
+        this.itemSprite.setType(itemId);
         this.updateUseability(this.ownerGrid.curPlayer);
         return true;
     }
@@ -80,7 +82,7 @@ public class ItemTile extends Sprite {
     }
 
     public function updateUseability(player:Player):void {
-        if (this.itemSprite.itemId != ItemConstants.NO_ITEM) {
+        if (itemSprite.itemId && itemSprite.itemId.ObjectType != ItemConstants.NO_ITEM) {
             this.restrictedUseIndicator.visible = !ObjectLibrary.isUsableByPlayer(this.itemSprite.itemId, player);
         } else {
             this.restrictedUseIndicator.visible = false;
@@ -95,12 +97,8 @@ public class ItemTile extends Sprite {
         this.setItemSprite(this.itemSprite);
     }
 
-    public function getItemId():int {
-        return this.itemSprite.itemId;
-    }
-
-    public function getItemData():int {
-        return this.itemSprite.itemData;
+    public function getItemId():ItemData {
+        return itemSprite.itemId;
     }
 
     protected function getBackgroundColor():int {

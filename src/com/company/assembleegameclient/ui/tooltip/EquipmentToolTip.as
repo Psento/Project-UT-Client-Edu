@@ -4,7 +4,7 @@ import com.company.assembleegameclient.objects.ObjectLibrary;
 import com.company.assembleegameclient.objects.Player;
 import com.company.assembleegameclient.parameters.Parameters;
 import com.company.assembleegameclient.ui.LineBreakDesign;
-import com.company.assembleegameclient.util.ItemData;
+import link.ItemData;
 import com.company.ui.SimpleText;
 import com.company.util.BitmapUtil;
 import com.company.util.KeyCodes;

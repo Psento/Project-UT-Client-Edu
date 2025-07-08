@@ -49,6 +49,8 @@ import flash.events.Event;
 import flash.geom.Point;
 import flash.utils.getTimer;
 
+import link.ItemData;
+
 import org.osflash.signals.Signal;
 import org.swiftsuspenders.Injector;
 
@@ -640,12 +642,9 @@ public class GameServerConnection {
         invSwap.slotObject2_.slotId_ = slotId2;
         this.serverConnection.sendMessage(invSwap);
 
-        var tempItem:int = sourceObj.equipment_[slotId1];
-        var tempData:int = sourceObj.itemDatas_[slotId1];
+        var tempItem:ItemData = sourceObj.equipment_[slotId1];
         sourceObj.equipment_[slotId1] = targetObj.equipment_[slotId2];
-        sourceObj.itemDatas_[slotId1] = targetObj.itemDatas_[slotId2];
         targetObj.equipment_[slotId2] = tempItem;
-        targetObj.itemDatas_[slotId2] = tempData;
 
         SoundEffectLibrary.play("inventory_move_item");
         return true;
@@ -685,8 +684,7 @@ public class GameServerConnection {
         var invDrop:InvDrop = this.messages.require(INVDROP) as InvDrop;
         invDrop.slotId_ = slotId;
         this.serverConnection.sendMessage(invDrop);
-        object.equipment_[slotId] = 0;
-        object.itemDatas_[slotId] = 0;
+        object.equipment_[slotId].clear();
     }
 
     public function useItem(time:int, objectId:int, slotId:int, posX:Number, posY:Number):void {
@@ -700,10 +698,10 @@ public class GameServerConnection {
     }
 
     public function useItem_new(itemOwner:GameObject, slotId:int):Boolean {
-        var itemId:int = itemOwner.equipment_[slotId];
+        var itemId:ItemData = itemOwner.equipment_[slotId];
         var objectXML:XML = ObjectLibrary.xmlLibrary_[itemId];
         if (objectXML && (objectXML.hasOwnProperty("Consumable") || objectXML.hasOwnProperty("InvUse"))) {
-            this.applyUseItem(itemOwner, slotId, itemId, objectXML);
+            this.applyUseItem(itemOwner, slotId, itemId.ObjectType, objectXML);
             SoundEffectLibrary.play("use_potion");
             return true;
         }
@@ -720,8 +718,7 @@ public class GameServerConnection {
         useItem.itemUsePos_.y_ = 0;
         this.serverConnection.sendMessage(useItem);
         if (itemData.hasOwnProperty("Consumable")) {
-            owner.equipment_[slotId] = 0;
-            owner.itemDatas_[slotId] = 0;
+            owner.equipment_[slotId].clear();
         }
     }
 
@@ -1372,10 +1369,9 @@ public class GameServerConnection {
                     go.condition_[ConditionEffect.CE_THIRD_BATCH] = value;
                     break;
                 case StatData.INVENTORY:
-                    var itemarray:Vector.<int> = stat.statValueObj as Vector.<int>;
-                    for (var i:int = 0; i < itemarray.length; i += 2) {
-                        go.equipment_[i / 2] = itemarray[i];
-                        go.itemDatas_[i / 2] = itemarray[i + 1];
+                    var len:int = stat.statByteArray.length;
+                    for (var i:int = 0; i < len; i += 2) {
+                        go.equipment_[i].updateData(stat.statByteArray, i);
                     }
                     continue;
                 case StatData.NUMSTARS:

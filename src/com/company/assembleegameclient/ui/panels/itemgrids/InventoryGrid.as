@@ -3,6 +3,8 @@ import com.company.assembleegameclient.objects.GameObject;
 import com.company.assembleegameclient.objects.Player;
 import com.company.assembleegameclient.ui.panels.itemgrids.itemtiles.InventoryTile;
 
+import link.ItemData;
+
 public class InventoryGrid extends ItemGrid {
 
 
@@ -24,7 +26,7 @@ public class InventoryGrid extends ItemGrid {
         }
     }
 
-    override public function setItems(items:Vector.<int>, datas:Vector.<int>, itemIndexOffset:int = 0):void {
+    override public function setItems(items:Vector.<ItemData>, itemIndexOffset:int = 0):void {
         var numItems:int = 0;
         var i:int = 0;
         var refresh:Boolean = false;
@@ -32,11 +34,11 @@ public class InventoryGrid extends ItemGrid {
             numItems = items.length;
             for (i = 0; i < this.NUM_SLOTS; i++) {
                 if (i + indexOffset < numItems) {
-                    if (this.tiles[i].setItem(items[i + indexOffset], datas[i + indexOffset])) {
+                    if (this.tiles[i].setItem(items[i + indexOffset])) {
                         refresh = true;
                     }
                 } else {
-                    if (this.tiles[i].setItem(0, 0)) {
+                    if (this.tiles[i].setItem(null)) {
                         refresh = true;
                     }
                 }

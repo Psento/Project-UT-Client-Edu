@@ -16,6 +16,7 @@ import flash.text.StyleSheet;
 import flash.utils.Dictionary;
 
 import link.LinkUtils;
+import link.ProjectileData;
 
 import svera.untiered.constants.ActivationType;
 import svera.untiered.messaging.impl.data.StatData;
@@ -33,9 +34,8 @@ public class EquipmentToolTip extends ToolTip {
     private var line2_:LineBreakDesign;
     private var restrictionsText_:SimpleText;
     private var player_:Player;
-    private var itemData_:int;
+    private var item:ItemData;
     private var isEquippable_:Boolean = false;
-    private var objectType_:int;
     private var objectXML_:XML = null;
     private var playerCanUse:Boolean;
     private var restrictions:Vector.<Restriction>;
@@ -46,24 +46,32 @@ public class EquipmentToolTip extends ToolTip {
     private var inventorySlotID:uint;
     private var isInventoryFull:Boolean;
     private var yOffset:int;
+    private var currItem:ItemData;
 
-    public function EquipmentToolTip(objectType:int, itemData:int, player:Player, invType:int, inventoryOwnerType:String, inventorySlotID:uint = 1.0) {
+
+    public function EquipmentToolTip(itemData:ItemData, player:Player, invType:int, inventoryOwnerType:String, inventorySlotID:uint = 1.0) {
         this.player_ = player;
-        this.itemData_ = itemData;
+        this.item = itemData;
         this.inventoryOwnerType = inventoryOwnerType;
         this.inventorySlotID = inventorySlotID;
         this.isInventoryFull = Boolean(player) ? Boolean(player.isInventoryFull()) : Boolean(false);
-        this.playerCanUse = player != null ? Boolean(ObjectLibrary.isUsableByPlayer(objectType, player)) : Boolean(false);
+        this.playerCanUse = player != null ? Boolean(ObjectLibrary.isUsableByPlayer(itemData.ObjectType, player)) : Boolean(false);
         var backgroundColor:uint = this.playerCanUse || this.player_ == null ? 0x363636 : 6036765;
         var outlineColor:uint = this.playerCanUse || player == null ? 0x9B9B9B : 10965039;
         super(backgroundColor, 1, outlineColor, 1, true);
-        this.objectType_ = objectType;
-        this.objectXML_ = ObjectLibrary.xmlLibrary_[objectType];
-        var equipSlotIndex:int = Boolean(this.player_) ? int(ObjectLibrary.getMatchingSlotIndex(this.objectType_, this.player_)) : int(-1);
+        this.objectXML_ = ObjectLibrary.xmlLibrary_[itemData];
+        var equipSlotIndex:int = Boolean(this.player_) ? int(ObjectLibrary.getMatchingSlotIndex(this.item.ObjectType, this.player_)) : int(-1);
         this.isEquippable_ = equipSlotIndex != -1;
         this.effects = new Vector.<Effect>();
         this.invType = invType;
         this.itemSlotTypeId = int(this.objectXML_.SlotType);
+        var slot:int = player ? ObjectLibrary.getMatchingSlotIndex(item.ObjectType, player) : -1;
+        if (player_ == null) {
+            this.currItem = item;
+        } else if (slot != -1 && player_.equipment_[slot].ObjectType != -1) {
+            this.currItem = player_.equipment_[slot];
+        }
+
         this.addIcon();
         this.addTitle();
         this.addTierText();
@@ -102,12 +110,12 @@ public class EquipmentToolTip extends ToolTip {
     }
 
     private function addIcon():void {
-        var eqXML:XML = ObjectLibrary.xmlLibrary_[this.objectType_];
+        var eqXML:XML = ObjectLibrary.xmlLibrary_[this.item.ObjectType];
         var scaleValue:int = 5;
         if (eqXML.hasOwnProperty("ScaleValue")) {
             scaleValue = eqXML.ScaleValue;
         }
-        var texture:BitmapData = ObjectLibrary.getRedrawnTextureFromType(this.objectType_, 60, true, true, scaleValue);
+        var texture:BitmapData = ObjectLibrary.getRedrawnTextureFromType(this.item.ObjectType, 60, true, true, scaleValue);
         texture = BitmapUtil.cropToBitmapData(texture, 4, 4, texture.width - 8, texture.height - 8);
         this.icon_ = new Bitmap(texture);
         addChild(this.icon_);
@@ -184,15 +192,12 @@ public class EquipmentToolTip extends ToolTip {
 
     private function addTitle():void {
         //var prefix:String = ItemData.getPrefix(this.itemData_);
-        var color:int = ItemData.getColor(this.itemData_);
-        if (color == -1) {
-            color = this.playerCanUse || this.player_ == null ? int(16777215) : int(16549442);
-        }
+        var color:int = this.playerCanUse || this.player_ == null ? int(16777215) : int(16549442);
 
         this.titleText_ = new SimpleText(16, color, false, MAX_WIDTH - this.icon_.width - 4 - 30, 0);
         this.titleText_.setBold(true);
         this.titleText_.wordWrap = true;
-        this.titleText_.text = ObjectLibrary.typeToDisplayId_[this.objectType_];
+        this.titleText_.text = ObjectLibrary.typeToDisplayId_[this.item.ObjectType];
         this.titleText_.updateMetrics();
         this.titleText_.filters = [new DropShadowFilter(0, 0, 0, 0.5, 12, 12)];
         this.titleText_.x = this.icon_.width + 4;
@@ -236,22 +241,26 @@ public class EquipmentToolTip extends ToolTip {
     }
 
     private function addNumProjectilesTagsToEffectsList():void {
-        if (this.objectXML_.hasOwnProperty("NumProjectiles")) {
-            this.effects.push(new Effect("Shots", this.objectXML_.NumProjectiles));
+        if (item.NumProjectiles) {
+            this.effects.push(new Effect("Shots", item.NumProjectiles.toString()));
+        }
+        if (item.NumProjectiles1) {
+            this.effects.push(new Effect("Shots", item.NumProjectiles1.toString()));
+        }
+        if (item.NumProjectiles2) {
+            this.effects.push(new Effect("Shots", item.NumProjectiles2.toString()));
         }
     }
 
     private function addHonorBonusTagToEffectsList():void {
-        var HonorBonusMod:Number = ItemData.getStat(this.itemData_, ItemData.FAME_BONUS_BIT, 1);
-        if (this.objectXML_.hasOwnProperty("HonorBonus") || HonorBonusMod != 0) {
-            var HonorBonus:int = this.objectXML_.hasOwnProperty("HonorBonus") ? int(this.objectXML_.HonorBonus) : 0;
-            var HonorBonusString:String = (HonorBonus + HonorBonusMod).toString() + "%";
-            if (HonorBonusMod != 0) {
-                HonorBonusString += " (+" + HonorBonusMod + "%)";
-                HonorBonusString = TooltipHelper.wrapInFontTag(HonorBonusString, ItemData.getColorString(this.itemData_));
-            }
-            this.effects.push(new Effect("Honor Bonus", HonorBonusString));
+        if (this.item.HonorBonus == 0) return;
+
+        var color:uint = this.playerCanUse ? TooltipHelper.BETTER_COLOR : TooltipHelper.NO_DIFF_COLOR;
+        if (this.currItem != null && this.currItem.HonorBonus != 0) {
+            color = TooltipHelper.getTextColor(item.HonorBonus - currItem.HonorBonus);
         }
+        this.effects.push(new Effect("Honor Bonus",  this.item.HonorBonus + "%"));
+
     }
 
     private function addMpCostTagToEffectsList():void {
@@ -261,21 +270,14 @@ public class EquipmentToolTip extends ToolTip {
     }
 
     private function addCooldownTagToEffectsList():void {
-        var cooldownMod:Number = ItemData.getStat(this.itemData_, ItemData.COOLDOWN_BIT, ItemData.COOLDOWN_MULTIPLIER);
-        if (this.objectXML_.hasOwnProperty("Cooldown") || cooldownMod != 0) {
-            var cooldown:Number = this.objectXML_.hasOwnProperty("Cooldown") ? Number(this.objectXML_.Cooldown) : 0.2;
-            var cooldownString:String = TooltipHelper.getFormattedString(cooldown - cooldown * cooldownMod) + "s";
-            if (cooldownMod != 0) {
-                cooldownString += " (-" + int(cooldownMod * 100) + "%)";
-                cooldownString = TooltipHelper.wrapInFontTag(cooldownString, ItemData.getColorString(this.itemData_));
-            }
-            this.effects.push(new Effect("Cooldown", cooldownString));
+        if (this.item.Cooldown != 500) {
+            this.effects.push(new Effect("Cooldown: {cd}", this.item.Cooldown / 1000 + " seconds"));
         }
     }
 
     private function addDoseTagsToEffectsList():void {
-        if (this.objectXML_.hasOwnProperty("Doses")) {
-            this.effects.push(new Effect("Doses", this.objectXML_.Doses));
+        if (item.Doses) {
+            this.effects.push(new Effect("Doses", item.Doses.toString()));
         }
     }
 
@@ -283,19 +285,12 @@ public class EquipmentToolTip extends ToolTip {
         var projXML:XML = null;
         var range:Number = NaN;
         var condEffectXML:XML = null;
-        var color:String = ItemData.getColorString(this.itemData_);
         if (this.objectXML_.hasOwnProperty("Projectile")) {
-            projXML = XML(this.objectXML_.Projectile);
-            var minDmg:int = int(projXML.MinDamage);
-            var maxDmg:int = int(projXML.MaxDamage);
-            var dmgMod:Number = ItemData.getStat(this.itemData_, ItemData.DAMAGE_BIT, ItemData.DAMAGE_MULTIPLIER);
-            minDmg += int(minDmg * dmgMod);
-            maxDmg += int(maxDmg * dmgMod);
-            var dmgString:String = (minDmg == maxDmg ? minDmg : minDmg + " - " + maxDmg).toString();
-            if (dmgMod != 0) {
-                dmgString += " (+" + int(dmgMod * 100) + "%)";
-                dmgString = TooltipHelper.wrapInFontTag(dmgString, color);
-            }
+            var proj:ProjectileData = this.item.Projectiles[0];
+            var minDmg:int = proj.MinDamage;
+            var maxDmg:int = proj.MaxDamage;
+            var dmg:int = proj.Damage;
+            var dmgString:String = dmg > 0 ? dmg.toString() : minDmg == maxDmg ? minDmg.toString() : minDmg + " - " + maxDmg;
             this.effects.push(new Effect("Damage", dmgString));
 
             range = Number(projXML.Speed) * Number(projXML.LifetimeMS) / 10000;
@@ -307,15 +302,9 @@ public class EquipmentToolTip extends ToolTip {
                 this.effects.push(new Effect("", "Shots pass through obstacles"));
             }
 
-            var rateOfFire:Number = this.objectXML_.hasOwnProperty("RateOfFire") ? Number(this.objectXML_.RateOfFire) : 1.0;
-            var rateOfFireDataValue:Number = ItemData.RATE_OF_FIRE_MULTIPLIER * rateOfFire;
-            var rateOfFireData:Number = ItemData.getStat(this.itemData_, ItemData.RATE_OF_FIRE_BIT, rateOfFireDataValue);
-            var rateOfFireString:String = int(rateOfFire * 100) + int(rateOfFireData * 100) + "%";
-            if (rateOfFireData != 0) {
-                rateOfFireString += " (+" + int(rateOfFireData * 100) + "%)";
-                rateOfFireString = TooltipHelper.wrapInFontTag(rateOfFireString, color);
+            if (this.item.RateOfFire != 1.0) {
+                this.effects.push(new Effect("Rate of Fire", Math.round(this.item.RateOfFire * 100) + "%"));
             }
-            this.effects.push(new Effect("Rate of Fire", rateOfFireString));
 
             for each(condEffectXML in projXML.ConditionEffect) {
                 this.effects.push(new Effect("Shot Effect", this.objectXML_.Projectile.ConditionEffect + " for " + this.objectXML_.Projectile.ConditionEffect.@duration + " secs"));
@@ -427,44 +416,8 @@ public class EquipmentToolTip extends ToolTip {
             stats[stat] = stats[stat] + amount;
         }
 
-        if (this.itemData_ != 0) {
-            var k:int = -1;
-            if ((k = ItemData.getStat(this.itemData_, ItemData.MAX_HP_BIT, 5)) != 0) {
-                stats[0] = (stats[0] || 0) + k;
-                datas[0] = (datas[0] || 0) + k;
-            }
-            if ((k = ItemData.getStat(this.itemData_, ItemData.MAX_SP_BIT, 5)) != 0) {
-                stats[1] = (stats[1] || 0) + k;
-                datas[1] = (datas[1] || 0) + k;
-            }
-            if ((k = ItemData.getStat(this.itemData_, ItemData.MAX_RP_BIT, 5)) != 0) {
-                stats[2] = (stats[2] || 0) + k;
-                datas[2] = (datas[2] || 0) + k;
-            }
-            if ((k = ItemData.getStat(this.itemData_, ItemData.ATTACK_BIT, 1)) != 0) {
-                stats[3] = (stats[3] || 0) + k;
-                datas[3] = (datas[3] || 0) + k;
-            }
-            if ((k = ItemData.getStat(this.itemData_, ItemData.ARMOR_BIT, 1)) != 0) {
-                stats[4] = (stats[4] || 0) + k;
-                datas[4] = (datas[4] || 0) + k;
-            }
-            if ((k = ItemData.getStat(this.itemData_, ItemData.SPEED_BIT, 1)) != 0) {
-                stats[5] = (stats[5] || 0) + k;
-                datas[5] = (datas[5] || 0) + k;
-            }
-            if ((k = ItemData.getStat(this.itemData_, ItemData.DEXTERITY_BIT, 1)) != 0) {
-                stats[6] = (stats[6] || 0) + k;
-                datas[6] = (datas[6] || 0) + k;
-            }
-            if ((k = ItemData.getStat(this.itemData_, ItemData.VIGOR_BIT, 1)) != 0) {
-                stats[7] = (stats[7] || 0) + k;
-                datas[7] = (datas[7] || 0) + k;
-            }
-            if ((k = ItemData.getStat(this.itemData_, ItemData.INTELLIGENCE_BIT, 1)) != 0) {
-                stats[8] = (stats[8] || 0) + k;
-                datas[8] = (datas[8] || 0) + k;
-            }
+        if (this.item) {
+
         }
 
         var isEmpty:Boolean = true;
@@ -502,7 +455,6 @@ public class EquipmentToolTip extends ToolTip {
 
         if (data > 0) {
             dataString = " (+" + data + ")";
-            textColor = ItemData.getColorString(this.itemData_);
         } else {
             dataString = "";
         }
@@ -562,7 +514,7 @@ public class EquipmentToolTip extends ToolTip {
         } else if (this.player_ != null) {
             this.restrictions.push(new Restriction("Not usable by " + ObjectLibrary.typeToDisplayId_[this.player_.objectType_], 16549442, true));
         }
-        var usable:Vector.<String> = ObjectLibrary.usableBy(this.objectType_);
+        var usable:Vector.<String> = ObjectLibrary.usableBy(this.item.ObjectType);
         if (usable != null) {
             this.restrictions.push(new Restriction("Usable by: " + usable.join(", "), 11776947, false));
         }
@@ -642,6 +594,7 @@ class Effect {
         this.name_ = name;
         this.value_ = value;
     }
+
 }
 
 class Restriction {

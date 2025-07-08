@@ -37,6 +37,18 @@ public class TooltipHelper {
     public function TooltipHelper() {
         super();
     }
+    public static function getTextColor(val:Number) : uint
+    {
+        if(val < 0)
+        {
+            return WORSE_COLOR;
+        }
+        if(val > 0)
+        {
+            return BETTER_COLOR;
+        }
+        return NO_DIFF_COLOR;
+    }
 
     public static function wrapInFontTag(text:String, color:String):String {
         var tagStr:String = "<font color=\"" + color + "\">" + text + "</font>";

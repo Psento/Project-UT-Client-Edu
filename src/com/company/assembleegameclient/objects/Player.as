@@ -957,12 +957,8 @@ public class Player extends Character {
             return false;
         }
 
-        var cooldownMod:Number = 1 - ItemData.getStat(itemData, ItemData.COOLDOWN_BIT, ItemData.COOLDOWN_MULTIPLIER);
         cooldown = 200;
-        if (objectXML.hasOwnProperty("Cooldown")) {
-            cooldown = Number(objectXML.Cooldown) * 1000;
-        }
-        cooldown = int(cooldown * cooldownMod);
+        cooldown = itemType.Cooldown * 1000;
         this.nextAltAttack_ = now + cooldown;
         map_.gs_.gsc_.useItem(now, objectId_, slotId, point.x, point.y);
         if (objectXML.Activate == ActivationType.SHOOT) {
@@ -996,16 +992,14 @@ public class Player extends Character {
         }
         var weaponXML:XML = ObjectLibrary.xmlLibrary_[weaponType];
         var time:int = map_.gs_.lastUpdate_;
-        var rateOfFireMod:Number = ItemData.getStat(itemData, ItemData.RATE_OF_FIRE_BIT, ItemData.RATE_OF_FIRE_MULTIPLIER);
-        var rateOfFire:Number = Number(weaponXML.RateOfFire);
-        rateOfFire *= 1 + rateOfFireMod;
+        var rateOfFire:Number = weaponType.RateOfFire;
         this.attackPeriod_ = 1 / this.attackFrequency() * (1 / rateOfFire);
         if (time < attackStart_ + this.attackPeriod_) {
             return;
         }
         attackAngle_ = attackAngle;
         attackStart_ = time;
-        this.doShoot(attackStart_, weaponType, itemData, weaponXML, attackAngle_, false);
+        this.doShoot(attackStart_, weaponType, weaponXML, attackAngle_, false);
     }
 
     private function doShoot(time:int, weaponType:ItemData, weaponXML:XML, attackAngle:Number, isAbility:Boolean):void {
@@ -1018,12 +1012,11 @@ public class Player extends Character {
         var totalArc:Number = arcGap * (numShots - 1);
         var angle:Number = attackAngle - totalArc / 2;
         var startId:int = map_.nextProjectileId_;
-        var dmgMod:Number = ItemData.getStat(itemData, ItemData.DAMAGE_BIT, ItemData.DAMAGE_MULTIPLIER);
         map_.nextProjectileId_ -= numShots;
         for (var i:int = 0; i < numShots; i++) {
             proj = FreeList.newObject(Projectile) as Projectile;
             proj.reset(weaponType, 0, objectId_, startId - i, angle, time);
-            minDamage = int(proj.projProps_.minDamage_) + int(proj.projProps_.minDamage_ * dmgMod);
+            minDamage = int(proj.projProps_.minDamage_) + int(proj.projProps_.minDamage_ * weaponType.Projectiles);
             maxDamage = int(proj.projProps_.maxDamage_) + int(proj.projProps_.maxDamage_ * dmgMod);
             damage = map_.gs_.gsc_.getNextDamage(minDamage, maxDamage) * Number(this.attackMultiplier());
             proj.setDamage(damage);

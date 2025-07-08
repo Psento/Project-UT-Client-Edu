@@ -12,7 +12,6 @@ import flash.display.Sprite;
 import link.ItemData;
 
 import svera.untiered.messaging.impl.GameServerConnection;
-import svera.untiered.messaging.impl.data.StorageSlotUpdateData;
 import svera.untiered.storage.components.StorageSortTab;
 
 public class GiftContent extends Sprite {
@@ -40,9 +39,9 @@ public class GiftContent extends Sprite {
     }
 
 
-    private var content_:Vector.<StorageSlotUpdateData>;
+    private var content_:Vector.<ItemData>;
 
-    public function initialize(size:int, content:Vector.<StorageSlotUpdateData>):void {
+    public function initialize(size:int, content:Vector.<ItemData>):void {
         if (this.containerGrid_ != null) {
             SpriteUtil.safeRemoveChild(this, this.containerGrid_);
         }
@@ -50,15 +49,9 @@ public class GiftContent extends Sprite {
         this.content_ = content;
         this.containerGrid_ = new ContainerGrid(this.owner_, this.player_, size, 8, true);
 
-        var inventory:Vector.<int> = new Vector.<int>();
-        var itemDatas:Vector.<int> = new Vector.<int>();
+        var inventory:Vector.<ItemData> = content;
 
-        for (var i:int = 0; i < size; i++) {
-            inventory[i] = this.content_[i].itemType_;
-            itemDatas[i] = this.content_[i].itemData_;
-        }
-
-        this.containerGrid_.setItems(inventory, itemDatas);
+        this.containerGrid_.setItems(inventory);
         this.containerGrid_.x = 10;
         this.containerGrid_.y = 10;
         // add scroll wheel here
@@ -86,7 +79,7 @@ public class GiftContent extends Sprite {
 
         var slotCount:int = 0;
         for each(var tile:InteractiveItemTile in this.containerGrid_.items) {
-            var slotType:int = ObjectLibrary.getSlotTypeFromType(tile.getItemId());
+            var slotType:int = ObjectLibrary.getSlotTypeFromType(tile.getItemId().ObjectType);
 
             if (types.indexOf(slotType) > -1 || types.length == 0) {
                 this.containerGrid_.addToGrid(tile, 8, slotCount);

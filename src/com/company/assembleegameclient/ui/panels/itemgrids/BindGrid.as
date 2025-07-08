@@ -38,7 +38,7 @@ public class BindGrid extends ItemGrid {
         addChild(tile);
     }
 
-    override public function setItems(items:Vector.<int>, datas:Vector.<int>, itemIndexOffset:int = 0):void {
+    override public function setItems(items:Vector.<ItemData>, itemIndexOffset:int = 0):void {
         var numItems:int = 0;
         var i:int = 0;
         var refresh:Boolean = false;

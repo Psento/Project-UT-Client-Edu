@@ -127,7 +127,7 @@ public class ItemGrid extends Panel {
         SpriteUtil.safeRemoveChild(this, tile);
     }
 
-    public function setItems(items:Vector.<int>, datas:Vector.<int>, itemIndexOffset:int = 0):void {
+    public function setItems(items:Vector.<ItemData>, itemIndexOffset:int = 0):void {
 
     }
 

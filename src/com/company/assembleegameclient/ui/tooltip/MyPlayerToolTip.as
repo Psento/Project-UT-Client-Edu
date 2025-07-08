@@ -70,12 +70,12 @@ public class MyPlayerToolTip extends ToolTip {
         this.eGrid.x = 8;
         this.eGrid.y = 88;
         addChild(this.eGrid);
-        this.eGrid.setItems(this.player_.equipment_, this.player_.itemDatas_);
+        this.eGrid.setItems(this.player_.equipment_);
         this.iGrid = new InventoryGrid(null, this.player_, GeneralConstants.NUM_EQUIPMENT_SLOTS);
         this.iGrid.x = 8;
         this.iGrid.y = 132;
         addChild(this.iGrid);
-        this.iGrid.setItems(this.player_.equipment_, this.player_.itemDatas_);
+        this.iGrid.setItems(this.player_.equipment_);
         this.lineBreak_ = new LineBreakDesign(100, 1842204);
         this.lineBreak_.x = 6;
         this.lineBreak_.y = 228;

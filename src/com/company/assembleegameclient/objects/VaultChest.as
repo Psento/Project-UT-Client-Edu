@@ -4,7 +4,7 @@ import com.company.assembleegameclient.game.GameSprite;
 import com.company.assembleegameclient.ui.panels.Panel;
 import com.company.assembleegameclient.ui.panels.VaultChestPanel;
 
-import svera.untiered.messaging.impl.data.StorageSlotUpdateData;
+import link.ItemData;
 
 public class VaultChest extends GameObject implements IInteractiveObject {
 
@@ -13,13 +13,11 @@ public class VaultChest extends GameObject implements IInteractiveObject {
         isInteractive_ = true;
     }
 
-    public function setContainer(size:int, slots:Vector.<StorageSlotUpdateData>):void {
-        this.equipment_ = new Vector.<int>(size);
-        this.itemDatas_ = new Vector.<int>(size);
+    public function setContainer(size:int, slots:Vector.<ItemData>):void {
+        this.equipment_ = new Vector.<ItemData>(size);
 
         for (var i:int = 0; i < size; i++) {
-            this.equipment_[i] = slots[i].itemType_;
-            this.itemDatas_[i] = slots[i].itemData_;
+            this.equipment_[i] = slots[i];
         }
     }
 

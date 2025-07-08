@@ -43,7 +43,7 @@ public class GiftWindow extends Sprite {
         graphics.endFill();
     }
 
-    public function setContent(size:int, slots:Vector.<StorageSlotUpdateData>):void {
+    public function setContent(size:int, slots:Vector.<ItemData>):void {
         this.owner_.setContainer(size, slots);
         this.contentView_.initialize(size, slots);
     }

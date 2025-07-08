@@ -1,4 +1,5 @@
 package svera.untiered.messaging.impl.data {
+import flash.utils.ByteArray;
 import flash.utils.IDataInput;
 import flash.utils.IDataOutput;
 
@@ -212,7 +213,7 @@ public class StatData {
     public var strStatValue_:String;
 
     public var uintStatValue:uint;
-    public var statValueObj:Object;
+    public var statByteArray:ByteArray;
 
 
     public function StatData() {
@@ -260,12 +261,14 @@ public class StatData {
         if (this.isStringStat()) {
             this.strStatValue_ = data.readUTF();
         }else if (statType_ == INVENTORY) {
-            var len:uint = data.readUnsignedShort();
-            statValueObj = new Vector.<int>(len);
-            for (var i:int = 0; i < len; i += 2) {
-                statValueObj[i] = data.readInt();
-                statValueObj[i + 1] = data.readInt();
+            var len:Number = data.readShort();
+            statByteArray = new ByteArray();
+            for(var i:Number = 0; i < len; i++) {
+                this.statByteArray.writeByte(data.readUnsignedByte());
             }
+            this.statByteArray.endian = "littleEndian";
+            this.statByteArray.position = 0;
+            return;
         } else {
             this.statValue_ = data.readInt();
         }

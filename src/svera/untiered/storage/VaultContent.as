@@ -9,6 +9,8 @@ import com.company.util.SpriteUtil;
 
 import flash.display.Sprite;
 
+import link.ItemData;
+
 import svera.untiered.messaging.impl.GameServerConnection;
 import svera.untiered.messaging.impl.data.StorageSlotUpdateData;
 import svera.untiered.storage.components.StorageSortTab;
@@ -36,9 +38,9 @@ public class VaultContent extends Sprite {
         graphics.endFill();
     }
 
-    private var content_:Vector.<StorageSlotUpdateData>;
+    private var content_:Vector.<ItemData>;
 
-    public function initialize(size:int, content:Vector.<StorageSlotUpdateData>):void {
+    public function initialize(size:int, content:Vector.<ItemData>):void {
         if (this.vaultGrid_ != null) {
             SpriteUtil.safeRemoveChild(this, this.vaultGrid_);
         }
@@ -46,15 +48,7 @@ public class VaultContent extends Sprite {
         this.content_ = content;
         this.vaultGrid_ = new ContainerGrid(this.owner_, this.player_, size, 8, true);
 
-        var inventory:Vector.<int> = new Vector.<int>();
-        var itemDatas:Vector.<int> = new Vector.<int>();
-
-        for (var i:int = 0; i < size; i++) {
-            inventory[i] = this.content_[i].itemType_;
-            itemDatas[i] = this.content_[i].itemData_;
-        }
-
-        this.vaultGrid_.setItems(inventory, itemDatas);
+        this.vaultGrid_.setItems(content);
         this.vaultGrid_.x = 10;
         this.vaultGrid_.y = 10;
         // add scroll wheel here
@@ -62,8 +56,8 @@ public class VaultContent extends Sprite {
         SpriteUtil.safeAddChild(this, this.vaultGrid_);
     }
 
-    public function updateSlot(slot:int, inventory:int, itemData:int):void {
-        this.vaultGrid_.setItem(slot, inventory, itemData);
+    public function updateSlot(slot:int, inventory:ItemData):void {
+        this.vaultGrid_.setItem(slot, inventory);
     }
 
     public function sortBy(sort:String):void {
@@ -82,7 +76,7 @@ public class VaultContent extends Sprite {
 
         var slotCount:int = 0;
         for each(var tile:InteractiveItemTile in this.vaultGrid_.items) {
-            var slotType:int = ObjectLibrary.getSlotTypeFromType(tile.getItemId());
+            var slotType:int = ObjectLibrary.getSlotTypeFromType(tile.getItemId().ObjectType);
 
             if (types.indexOf(slotType) > -1 || types.length == 0) {
                 this.vaultGrid_.addToGrid(tile, 8, slotCount);

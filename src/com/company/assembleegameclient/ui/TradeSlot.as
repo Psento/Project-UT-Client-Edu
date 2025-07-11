@@ -18,6 +18,8 @@ import flash.display.Shape;
 import flash.geom.Matrix;
 import flash.geom.Point;
 
+import link.ItemData;
+
 public class TradeSlot extends Slot {
 
     private static const DOSE_MATRIX:Matrix = function ():Matrix {
@@ -29,9 +31,7 @@ public class TradeSlot extends Slot {
 
     public var id:uint;
 
-    public var itemType_:int;
-
-    public var itemData_:int;
+    public var itemType_:ItemData;
 
     public var tradeable_:Boolean;
 
@@ -49,7 +49,7 @@ public class TradeSlot extends Slot {
 
     private var graphicsData_:Vector.<IGraphicsData>;
 
-    public function TradeSlot(itemType:int, itemData:int, tradeable:Boolean, included:Boolean, type:int, hotkey:int, cuts:Array, id:uint) {
+    public function TradeSlot(itemType:ItemData, tradeable:Boolean, included:Boolean, type:int, hotkey:int, cuts:Array, id:uint) {
         var texture:BitmapData = null;
         var eqXML:XML = null;
         var offset:Point = null;
@@ -61,12 +61,11 @@ public class TradeSlot extends Slot {
         super(type, hotkey, cuts);
         this.id = id;
         this.itemType_ = itemType;
-        this.itemData_ = itemData;
         this.tradeable_ = tradeable;
         this.included_ = included;
         if (this.itemType_ != -1) {
             SpriteUtil.safeRemoveChild(this, backgroundImage_);
-            texture = ObjectLibrary.getRedrawnTextureFromType(this.itemType_, 80, true);
+            texture = ObjectLibrary.getRedrawnTextureFromType(this.itemType_.ObjectType, 80, true);
             eqXML = ObjectLibrary.xmlLibrary_[this.itemType_];
             if (eqXML.hasOwnProperty("Doses")) {
                 texture = texture.clone();
@@ -75,7 +74,7 @@ public class TradeSlot extends Slot {
                 tempText.updateMetrics();
                 texture.draw(tempText, DOSE_MATRIX);
             }
-            offset = offsets(this.itemType_, type_, false);
+            offset = offsets(this.itemType_.ObjectType, type_, false);
             this.itemBitmap_ = new Bitmap(texture);
             this.itemBitmap_.x = WIDTH / 2 - this.itemBitmap_.width / 2 + offset.x;
             this.itemBitmap_.y = HEIGHT / 2 - this.itemBitmap_.height / 2 + offset.y;

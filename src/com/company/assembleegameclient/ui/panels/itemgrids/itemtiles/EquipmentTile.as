@@ -9,6 +9,8 @@ import flash.display.Bitmap;
 import flash.display.BitmapData;
 import flash.filters.ColorMatrixFilter;
 
+import link.ItemData;
+
 import svera.untiered.constants.ItemConstants;
 
 public class EquipmentTile extends InteractiveItemTile {
@@ -123,9 +125,9 @@ public class EquipmentTile extends InteractiveItemTile {
     }
 
     override public function setItem(itemId:ItemData):Boolean {
-        var itemChanged:Boolean = super.setItem(itemId, itemData);
+        var itemChanged:Boolean = super.setItem(itemId);
         if (itemChanged) {
-            backgroundDetail && (backgroundDetail.visible = itemSprite.itemId <= 0);
+            backgroundDetail && (backgroundDetail.visible = itemSprite.itemId.ObjectType == ItemConstants.NO_ITEM);
             this.updateMinMana();
         }
         return itemChanged;

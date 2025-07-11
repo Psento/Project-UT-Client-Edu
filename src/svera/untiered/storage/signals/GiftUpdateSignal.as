@@ -1,11 +1,11 @@
 package svera.untiered.storage.signals {
-import org.osflash.signals.Signal;
+import link.ItemData;
 
-import svera.untiered.messaging.impl.data.StorageSlotUpdateData;
+import org.osflash.signals.Signal;
 
 public class GiftUpdateSignal extends Signal {
     public function GiftUpdateSignal() {
-        super(int, Vector.<StorageSlotUpdateData>);
+        super(int, Vector.<ItemData>);
     }
 }
 }

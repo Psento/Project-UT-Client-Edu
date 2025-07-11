@@ -7,6 +7,8 @@ import flash.display.Bitmap;
 import flash.display.BitmapData;
 import flash.filters.DropShadowFilter;
 
+import link.ItemData;
+
 public class BindTile extends ItemTile {
     public var hotKey:String;
 
@@ -41,7 +43,7 @@ public class BindTile extends ItemTile {
     }
 
     override public function setItem(itemId:ItemData):Boolean {
-        var changed:Boolean = super.setItem(itemId, itemData);
+        var changed:Boolean = super.setItem(itemId);
         return changed;
     }
 }

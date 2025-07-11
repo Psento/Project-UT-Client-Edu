@@ -14,6 +14,9 @@ import com.company.assembleegameclient.ui.panels.itemgrids.itemtiles.ItemTileEve
 import com.company.assembleegameclient.ui.tooltip.ToolTip;
 import com.company.assembleegameclient.util.DisplayHierarchy;
 
+import link.Item;
+import link.ItemData;
+
 import robotlegs.bender.bundles.mvcs.Mediator;
 
 import svera.untiered.core.model.MapModel;
@@ -81,7 +84,7 @@ public class ItemGridMediator extends Mediator {
             slot = sourceTile.ownerGrid.curPlayer.nextAvailableInventorySlot();
             if (slot != -1) {
                 GameServerConnection.instance.invSwap(this.view.curPlayer, sourceTile.ownerGrid.owner, sourceTile.tileId, this.view.curPlayer, slot);
-                sourceTile.setItem(0, 0);
+                sourceTile.setItem(new ItemData());
                 sourceTile.updateUseability(this.view.curPlayer);
             }
         }
@@ -115,10 +118,10 @@ public class ItemGridMediator extends Mediator {
     }*/
 
     private function canSwapItems(sourceTile:InteractiveItemTile, targetTile:InteractiveItemTile):Boolean {
-        if (!sourceTile.canHoldItem(targetTile.getItemId())) {
+        if (!sourceTile.canHoldItem(targetTile.getItemId().ObjectType)) {
             return false;
         }
-        if (!targetTile.canHoldItem(sourceTile.getItemId())) {
+        if (!targetTile.canHoldItem(sourceTile.getItemId().ObjectType)) {
             return false;
         }
         if (ItemGrid(targetTile.parent).owner is OneWayContainer) {
@@ -129,10 +132,10 @@ public class ItemGridMediator extends Mediator {
 
     private function dropItem(itemTile:InteractiveItemTile):void {
         var groundContainer:Container = null;
-        var equipment:Vector.<int> = null;
+        var equipment:Vector.<ItemData> = null;
         var equipCount:int = 0;
         var openIndex:int = 0;
-        var isSoulbound:Boolean = ObjectLibrary.isSoulbound(itemTile.itemSprite.itemId);
+        var isSoulbound:Boolean = ObjectLibrary.isSoulbound(itemTile.itemSprite.itemId.ObjectType);
         var container:Container = this.view.owner as Container;
         if (this.view.owner == this.view.curPlayer || container && container.ownerId_ == this.view.curPlayer.accountId_ && !isSoulbound) {
             groundContainer = this.mapModel.currentInteractiveTarget as Container;
@@ -153,7 +156,7 @@ public class ItemGridMediator extends Mediator {
                 GameServerConnection.instance.invDrop(this.view.owner, itemTile.tileId);
             }
         }
-        itemTile.setItem(0, 0);
+        itemTile.setItem(new ItemData());
     }
 
     private function swapItemTiles(sourceTile:ItemTile, destTile:ItemTile):Boolean {
@@ -161,10 +164,9 @@ public class ItemGridMediator extends Mediator {
             return false;
         }
         GameServerConnection.instance.invSwap(this.view.curPlayer, this.view.owner, sourceTile.tileId, destTile.ownerGrid.owner, destTile.tileId);
-        var tempItemId:int = sourceTile.getItemId();
-        var tempItemData:int = sourceTile.getItemData();
-        sourceTile.setItem(destTile.getItemId(), destTile.getItemData());
-        destTile.setItem(tempItemId, tempItemData);
+        var tempItemId:ItemData = sourceTile.getItemId();
+        sourceTile.setItem(destTile.getItemId());
+        destTile.setItem(tempItemId);
         sourceTile.updateUseability(this.view.curPlayer);
         destTile.updateUseability(this.view.curPlayer);
         return true;
@@ -175,7 +177,7 @@ public class ItemGridMediator extends Mediator {
             return;
         }
         GameServerConnection.instance.invSwap(this.view.curPlayer, this.view.owner, sourceTile.tileId, container, containerIndex);
-        sourceTile.setItem(0, 0);
+        sourceTile.setItem(new ItemData());
     }
 
     private function onShiftClick(e:ItemTileEvent):void {
@@ -221,7 +223,7 @@ public class ItemGridMediator extends Mediator {
     private function equipOrUseInventory(tile:InteractiveItemTile):void {
         var tileOwner:GameObject = tile.ownerGrid.owner;
         var player:Player = this.view.curPlayer;
-        var matchingSlotIndex:int = ObjectLibrary.getMatchingSlotIndex(tile.getItemId(), player);
+        var matchingSlotIndex:int = ObjectLibrary.getMatchingSlotIndex(tile.getItemId().ObjectType, player);
         if (matchingSlotIndex != -1) {
             GameServerConnection.instance.invSwap(player, tileOwner, tile.tileId, player, matchingSlotIndex);
         } else {

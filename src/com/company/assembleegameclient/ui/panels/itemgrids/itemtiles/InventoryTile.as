@@ -7,6 +7,8 @@ import flash.display.Bitmap;
 import flash.display.BitmapData;
 import flash.filters.DropShadowFilter;
 
+import link.ItemData;
+
 public class InventoryTile extends InteractiveItemTile {
 
 
@@ -43,7 +45,7 @@ public class InventoryTile extends InteractiveItemTile {
     }
 
     override public function setItem(itemId:ItemData):Boolean {
-        return super.setItem(itemId, itemData);
+        return super.setItem(itemId);
     }
 
     override protected function beginDragCallback():void {

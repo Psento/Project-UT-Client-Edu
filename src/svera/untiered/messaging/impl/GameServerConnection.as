@@ -1390,7 +1390,7 @@ public class GameServerConnection {
                     go.setTex2(value);
                     continue;
                 case StatData.MERCHANDISETYPE:
-                    merchant.setMerchandiseType(value);
+                    merchant.setMerchandiseType(ItemData.loadFromData(stat.statByteArray));
                     continue;
                 case StatData.TSAVORITE:
                     player.setTsavorite(value);

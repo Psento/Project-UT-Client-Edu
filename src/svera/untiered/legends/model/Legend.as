@@ -1,6 +1,8 @@
 package svera.untiered.legends.model {
 import flash.display.BitmapData;
 
+import link.ItemData;
+
 import svera.untiered.honor.model.HonorVO;
 
 public class Legend implements HonorVO {
@@ -20,9 +22,7 @@ public class Legend implements HonorVO {
 
     public var equipmentSlots:Vector.<int>;
 
-    public var equipment:Vector.<int>;
-
-    public var itemDatas:Vector.<int>;
+    public var equipment:Vector.<ItemData>;
 
     public var character:BitmapData;
 

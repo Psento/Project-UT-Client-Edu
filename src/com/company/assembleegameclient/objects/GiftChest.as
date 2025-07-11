@@ -5,7 +5,7 @@ import com.company.assembleegameclient.ui.panels.Panel;
 
 import link.ItemData;
 
-import svera.untiered.messaging.impl.data.StorageSlotUpdateData;
+
 
 public class GiftChest extends GameObject implements IInteractiveObject {
 

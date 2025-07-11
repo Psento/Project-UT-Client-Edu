@@ -22,6 +22,8 @@ import flash.geom.Point;
 import flash.geom.Vector3D;
 import flash.utils.Dictionary;
 
+import link.ProjectileData;
+
 public class Projectile extends BasicObject {
     public static var nextFakeBulletId_:int = 0;
 
@@ -62,6 +64,35 @@ public class Projectile extends BasicObject {
         clear();
         this.containerType_ = containerType;
         this.bulletType_ = bulletType;
+        this.bulletId_ = bulletId;
+        this.ownerId_ = ownerId;
+        this.angle_ = Trig.boundToPI(angle);
+        this.startTime_ = startTime;
+        objectId_ = getNextFakeObjectId();
+        z_ = 0.5;
+        this.containerProps_ = ObjectLibrary.propsLibrary_[this.containerType_];
+        this.projProps_ = this.containerProps_.projectiles_[bulletType];
+        this.props_ = ObjectLibrary.getPropsFromId(this.projProps_.objectId_);
+        hasShadow_ = this.props_.shadowSize_ > 0;
+        var textureData:TextureData = ObjectLibrary.typeToTextureData_[this.props_.type_];
+        this.texture_ = textureData.getTexture(objectId_);
+        this.damagesPlayers_ = this.containerProps_.isEnemy_;
+        this.damagesEnemies_ = !this.damagesPlayers_;
+        this.sound_ = this.containerProps_.oldSound_;
+        this.multiHitDict_ = this.projProps_.multiHit_ ? new Dictionary() : null;
+        if (this.projProps_.size_ >= 0) {
+            size = this.projProps_.size_;
+        } else {
+            size = ObjectLibrary.getSizeFromType(this.containerType_);
+        }
+        this.p_.setSize(8 * (size / 100));
+        this.damage_ = 0;
+    }
+    public function reset2(containerType:int, bulletType:ProjectileData, ownerId:int, bulletId:int, angle:Number, startTime:int):void {
+        var size:Number = NaN;
+        clear();
+        this.containerType_ = containerType;
+        this.bulletType_ = bulletType.BulletType;
         this.bulletId_ = bulletId;
         this.ownerId_ = ownerId;
         this.angle_ = Trig.boundToPI(angle);

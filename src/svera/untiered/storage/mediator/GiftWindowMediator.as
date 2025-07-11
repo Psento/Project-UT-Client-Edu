@@ -1,7 +1,7 @@
 package svera.untiered.storage.mediator {
 import robotlegs.bender.bundles.mvcs.Mediator;
 
-import svera.untiered.messaging.impl.data.StorageSlotUpdateData;
+
 import svera.untiered.storage.GiftWindow;
 import svera.untiered.storage.signals.GiftSlotUpdateSignal;
 import svera.untiered.storage.signals.GiftUpdateSignal;

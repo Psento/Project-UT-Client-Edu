@@ -66,10 +66,10 @@ public class TradeInventory extends Sprite {
         addChild(this.taglineText_);
         for (var i:int = 0; i < GeneralConstants.NUM_EQUIPMENT_SLOTS + GeneralConstants.NUM_INVENTORY_SLOTS; i++) {
             item = items[i];
-            slot = new TradeSlot(item.itemType_, item.itemData_, item.tradeable_, item.included_, item.slotType_, i - 3, cuts[i], i);
+             slot = new TradeSlot(item.itemType_, item.tradeable_, item.included_, item.slotType_, i - 3, cuts[i], i);
             slot.x = int(i % 4) * (Slot.WIDTH + 4);
             slot.y = int(i / 4) * (Slot.HEIGHT + 4) + 46;
-            if (item.itemType_ != -1) {
+            if (item.itemType_ != null) {
                 slot.addEventListener(MouseEvent.MOUSE_OVER, this.onMouseOver);
                 slot.addEventListener(MouseEvent.ROLL_OUT, this.onRollOut);
             }
@@ -118,7 +118,7 @@ public class TradeInventory extends Sprite {
     public function numEmpty():int {
         var num:int = 0;
         for (var i:int = 4; i < this.slots_.length; i++) {
-            if (this.slots_[i].itemType_ == 0) {
+            if (this.slots_[i].itemType_ == null ) {
                 num++;
             }
         }
@@ -159,7 +159,7 @@ public class TradeInventory extends Sprite {
 
     private function onMouseOver(event:Event):void {
         var tradeSlot:TradeSlot = event.currentTarget as TradeSlot;
-        this.setToolTip(new EquipmentToolTip(tradeSlot.itemType_, tradeSlot.itemData_, this.gs_.map.player_, -1, InventoryOwnerTypes.OTHER_PLAYER, tradeSlot.id));
+        this.setToolTip(new EquipmentToolTip(tradeSlot.itemType_, this.gs_.map.player_, -1, InventoryOwnerTypes.OTHER_PLAYER, tradeSlot.id));
     }
 
     private function onRollOut(event:Event):void {

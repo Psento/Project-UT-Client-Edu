@@ -13,6 +13,8 @@ import flash.display.BitmapData;
 import flash.geom.ColorTransform;
 import flash.geom.Matrix;
 
+import link.ItemData;
+
 import svera.untiered.core.StaticInjectorContext;
 import svera.untiered.game.model.AddSpeechBalloonVO;
 import svera.untiered.game.signals.AddSpeechBalloonSignal;
@@ -38,7 +40,7 @@ public class Merchant extends SellableObject implements IInteractiveObject {
     }();
 
 
-    public var merchandiseType_:int = -1;
+    public var merchandiseType_:ItemData = new ItemData();
 
     public var count_:int = -1;
 
@@ -185,18 +187,17 @@ public class Merchant extends SellableObject implements IInteractiveObject {
     }
 
     override public function getTooltip():ToolTip {
-        var toolTip:ToolTip = new EquipmentToolTip(this.merchandiseType_, -1, map_.player_, -1, InventoryOwnerTypes.NPC);
+        var toolTip:ToolTip = new EquipmentToolTip(this.merchandiseType_, map_.player_, -1, InventoryOwnerTypes.NPC);
         return toolTip;
     }
 
     override public function getIcon():BitmapData {
         var tempText:SimpleText = null;
-        var texture:BitmapData = ObjectLibrary.getRedrawnTextureFromType(this.merchandiseType_, 80, true);
-        var eqXML:XML = ObjectLibrary.xmlLibrary_[this.merchandiseType_];
-        if (eqXML.hasOwnProperty("Doses")) {
+        var texture:BitmapData = ObjectLibrary.getRedrawnTextureFromType(this.merchandiseType_.ObjectType, 80, true);
+        if (merchandiseType_.Doses) {
             texture = texture.clone();
             tempText = new SimpleText(12, 16777215, false, 0, 0);
-            tempText.text = String(eqXML.Doses);
+            tempText.text = String(merchandiseType_.Doses);
             tempText.updateMetrics();
             texture.draw(tempText, DOSE_MATRIX);
         }
@@ -229,7 +230,7 @@ public class Merchant extends SellableObject implements IInteractiveObject {
         if (this.alpha_ == 1 && size_ == 100) {
             return this.merchandiseTexture_;
         }
-        var tempTexture:BitmapData = ObjectLibrary.getRedrawnTextureFromType(this.merchandiseType_, size_, false, false);
+        var tempTexture:BitmapData = ObjectLibrary.getRedrawnTextureFromType(this.merchandiseType_.ObjectType, size_, false, false);
         if (this.alpha_ != 1) {
             this.ct_.alphaMultiplier = this.alpha_;
             tempTexture.colorTransform(tempTexture.rect, this.ct_);
@@ -237,9 +238,9 @@ public class Merchant extends SellableObject implements IInteractiveObject {
         return tempTexture;
     }
 
-    public function setMerchandiseType(merchandiseType:int):void {
+    public function setMerchandiseType(merchandiseType:ItemData):void {
         this.merchandiseType_ = merchandiseType;
-        this.merchandiseTexture_ = ObjectLibrary.getRedrawnTextureFromType(this.merchandiseType_, 100, false);
+        this.merchandiseTexture_ = ObjectLibrary.getRedrawnTextureFromType(this.merchandiseType_.ObjectType, 100, false);
     }
 }
 }

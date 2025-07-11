@@ -83,7 +83,7 @@ public class ItemTile extends Sprite {
 
     public function updateUseability(player:Player):void {
         if (itemSprite.itemId && itemSprite.itemId.ObjectType != ItemConstants.NO_ITEM) {
-            this.restrictedUseIndicator.visible = !ObjectLibrary.isUsableByPlayer(this.itemSprite.itemId, player);
+            this.restrictedUseIndicator.visible = !ObjectLibrary.isUsableByPlayer(this.itemSprite.itemId.ObjectType, player);
         } else {
             this.restrictedUseIndicator.visible = false;
         }

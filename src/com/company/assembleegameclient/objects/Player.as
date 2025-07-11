@@ -1015,9 +1015,9 @@ public class Player extends Character {
         map_.nextProjectileId_ -= numShots;
         for (var i:int = 0; i < numShots; i++) {
             proj = FreeList.newObject(Projectile) as Projectile;
-            proj.reset(weaponType, 0, objectId_, startId - i, angle, time);
-            minDamage = int(proj.projProps_.minDamage_) + int(proj.projProps_.minDamage_ * weaponType.Projectiles);
-            maxDamage = int(proj.projProps_.maxDamage_) + int(proj.projProps_.maxDamage_ * dmgMod);
+            proj.reset2(weaponType.ObjectType, weaponType.Projectiles[0], objectId_, startId - i, angle, time);
+            minDamage = int(proj.projProps_.minDamage_) + int(proj.projProps_.minDamage_ * weaponType.Projectiles.length);
+            maxDamage = int(proj.projProps_.maxDamage_) + int(proj.projProps_.maxDamage_);
             damage = map_.gs_.gsc_.getNextDamage(minDamage, maxDamage) * Number(this.attackMultiplier());
             proj.setDamage(damage);
             if (i == 0 && proj.sound_ != null) {

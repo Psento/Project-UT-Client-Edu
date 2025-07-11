@@ -1,16 +1,17 @@
 package svera.untiered.messaging.impl.incoming {
+import flash.utils.ByteArray;
 import flash.utils.IDataInput;
 
-import svera.untiered.messaging.impl.data.StorageSlotUpdateData;
+import link.ItemData;
 
 public class StorageUpdate extends IncomingMessage {
 
     public var type_:int;
     public var size_:int;
-    public var items_:Vector.<StorageSlotUpdateData>;
+    public var items_:Vector.<ItemData>;
 
     public function StorageUpdate(id:uint, callback:Function) {
-        this.items_ = new Vector.<StorageSlotUpdateData>();
+        this.items_ = new Vector.<ItemData>();
         super(id, callback);
     }
 
@@ -20,9 +21,15 @@ public class StorageUpdate extends IncomingMessage {
         this.type_ = data.readByte();
         this.size_ = data.readShort();
         for (var i:int = 0; i < this.size_; i++) {
-            var update:StorageSlotUpdateData = new StorageSlotUpdateData();
-            update.itemType_ = data.readInt();
-            update.itemData_ = data.readInt();
+            var update:ItemData = new ItemData();
+            var len:Number = data.readShort();
+            var statByteArray:ByteArray = new ByteArray();
+            for(var j:Number = 0; i < len; i++) {
+                statByteArray.writeByte(data.readUnsignedByte());
+            }
+            statByteArray.endian = "littleEndian";
+            statByteArray.position = 0;
+            update = ItemData.loadFromData(statByteArray);
             this.items_.push(update);
         }
     }

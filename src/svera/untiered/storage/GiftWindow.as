@@ -7,7 +7,7 @@ import flash.events.MouseEvent;
 
 import link.ItemData;
 
-import svera.untiered.messaging.impl.data.StorageSlotUpdateData;
+
 import svera.untiered.storage.components.StorageSortTab;
 
 public class GiftWindow extends Sprite {

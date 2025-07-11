@@ -6,6 +6,8 @@ import com.company.assembleegameclient.ui.panels.itemgrids.itemtiles.ItemTile;
 
 import flash.events.MouseEvent;
 
+import link.ItemData;
+
 public class BindGrid extends ItemGrid {
     private var tiles:Vector.<BindTile>;
 
@@ -47,11 +49,11 @@ public class BindGrid extends ItemGrid {
             numItems = items.length;
             for (i = 0; i < this.numSlots_; i++) {
                 if (i + indexOffset < numItems) {
-                    if (this.tiles[i].setItem(items[i + indexOffset], datas[i + indexOffset])) {
+                    if (this.tiles[i].setItem(items[i + indexOffset])) {
                         refresh = true;
                     }
                 } else {
-                    if (this.tiles[i].setItem(0, 0)) {
+                    if (this.tiles[i].setItem(new ItemData())) {
                         refresh = true;
                     }
                 }
@@ -66,7 +68,7 @@ public class BindGrid extends ItemGrid {
         if (slot >= this.tiles.length || slot < 0) {
             return;
         }
-        this.tiles[slot].setItem(itemId, itemData);
+        this.tiles[slot].setItem(itemId);
     }
 
     public function get items():Vector.<BindTile> {

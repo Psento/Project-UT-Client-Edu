@@ -89,7 +89,7 @@ public class PlayerToolTip extends ToolTip {
         this.spBar_.draw(this.player_.sp_, this.player_.maxSP_, this.player_.maxSPBoost_);
         this.hpBar_.draw(this.player_.hp_, this.player_.maxHP_, this.player_.maxHPBoost_);
         this.rpBar_.draw(this.player_.rp_, this.player_.maxRP_, this.player_.maxRPBoost_);
-        this.eGrid.setItems(this.player_.equipment_, this.player_.itemDatas_);
+        this.eGrid.setItems(this.player_.equipment_);
         this.rankText_.draw(this.player_.numStars_);
         super.draw();
     }

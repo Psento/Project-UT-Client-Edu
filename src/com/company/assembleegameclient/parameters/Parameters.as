@@ -175,7 +175,7 @@ public class Parameters {
         setDefault("textBubbles", true);
         setDefault("showTradePopup", true);
         setDefault("showGuildInvitePopup", true);
-        setDefault("GPURender", false);
+        setDefault("GPURender", true);
         setDefault("particles", true);
         setDefault("hpBars", true);
         setDefault("quality", true);

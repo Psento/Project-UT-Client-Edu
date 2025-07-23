@@ -1,13 +1,39 @@
 <GroundTypes>
     <!-- #region --> // Not Biome Specific
-    <Ground type="0x100" id="[Overworld:NotSpecific] Deep Water">
+    <Ground type="0x100" id="[Shared] Deep Water">
         <SameTypeEdgeMode/>
         <Texture>
             <File>Overworld_Environment_NotSpecific8x8</File>
             <Index>0x00</Index>
         </Texture>
     </Ground>
-    <Ground type="0x101" id="Road">
+    <Ground type="0xff" id="[Shared] Empty">
+        <Texture>
+            <File>Overworld_Environment_NotSpecific8x8</File>
+            <Index>0x07</Index>
+        </Texture>
+        <NoWalk/>
+        <CompositePriority>-1</CompositePriority>
+    </Ground>
+    <Ground type="0x102" id="[Shared] Space">
+        <Texture>
+            <File>Overworld_Environment_NotSpecific8x8</File>
+            <Index>0x07</Index>
+        </Texture>
+        <NoWalk/>
+        <CompositePriority>-1</CompositePriority>
+    </Ground>
+    <Ground type="0x103" id="[Shared] Composite">
+        <Texture>
+            <File>Overworld_Environment_NotSpecific8x8</File>
+            <Index>0x07</Index>
+        </Texture>
+        <CompositePriority>-1</CompositePriority>
+    </Ground>
+    <!-- #endregion -->
+    <!-- #region --> // Feared Shallows
+    // 105 is Maroon Dye
+    <Ground type="0x101" id="[Overworld:FearedShallows] Road">
         <RandomTexture>
             <Texture>
                 <File>Overworld_Environment_FearedShallows8x8</File>
@@ -40,31 +66,6 @@
         </RandomTexture>
         <Speed>1.2</Speed>
     </Ground>
-    <Ground type="0xff" id="Empty">
-        <Texture>
-            <File>Overworld_Environment_NotSpecific8x8</File>
-            <Index>0x07</Index>
-        </Texture>
-        <NoWalk/>
-        <CompositePriority>-1</CompositePriority>
-    </Ground>
-    <Ground type="0x102" id="Space">
-        <Texture>
-            <File>Overworld_Environment_NotSpecific8x8</File>
-            <Index>0x07</Index>
-        </Texture>
-        <NoWalk/>
-        <CompositePriority>-1</CompositePriority>
-    </Ground>
-    <Ground type="0x103" id="Composite">
-        <Texture>
-            <File>Overworld_Environment_NotSpecific8x8</File>
-            <Index>0x07</Index>
-        </Texture>
-        <CompositePriority>-1</CompositePriority>
-    </Ground>
-    <!-- #endregion -->
-    <!-- #region --> // Ocean
     <Ground type="0x104" id="[Overworld:FearedShallows] Ocean Water">
         <Texture>
             <File>Overworld_Environment_FearedShallows8x8</File>
@@ -73,9 +74,6 @@
         <Sink/>
         <Speed>.666</Speed>
     </Ground>
-    <!-- #endregion -->
-    <!-- #region --> // Feared Shallows
-    // 105 is Maroon Dye
     <Ground type="0x106" id="[Overworld:FearedShallows] Dirt">
         <RandomTexture>
             <Texture>

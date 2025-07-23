@@ -1,6 +1,65 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Objects>
-    <Object type="0x2f9" id="Foundry Dark Wall">
+    <!-- #region --> // Foundry
+    <Object type="0x01" id="[Foundry] Hub Portal">
+        <Class>Portal</Class>
+        <Size>80</Size>
+        <IntergamePortal/>
+        <NexusPortal/>
+        <DungeonName>Realm</DungeonName>
+        <Texture>
+            <File>Foundry_Portals16x16</File>
+            <Index>0x0d</Index>
+        </Texture>
+    </Object>
+    <Object type="0x02" id="[Foundry] Vault Portal">
+        <Class>Portal</Class>
+        <IntergamePortal/>
+        <DungeonName>Vault</DungeonName>
+        <Texture>
+            <File>Foundry_Portals16x16</File>
+            <Index>0x09</Index>
+        </Texture>
+        <ShadowSize>0</ShadowSize>
+    </Object>
+    <Object type="0x03" id="[Foundry] Guild Hall Portal">
+        <Class>GuildHallPortal</Class>
+        <IntergamePortal/>
+        <DungeonName>GuildHall</DungeonName>
+        <Texture>
+            <File>Foundry_Portals16x16</File>
+            <Index>0x0a</Index>
+        </Texture>
+        <ShadowSize>0</ShadowSize>
+    </Object>
+    <Object type="0x04" id="[Foundry] Guild Register">
+        <Class>GuildRegister</Class>
+        <Texture>
+            <File>Foundry_Stations16x16</File>
+            <Index>0x01</Index>
+        </Texture>
+        <OccupySquare/>
+        <ShadowSize>0</ShadowSize>
+        <Size>110</Size>
+        <Static/>
+    </Object>
+    <Object type="0x05" id="[Foundry] Name Changer">
+        <Class>NameChanger</Class>
+        <Texture>
+            <File>Foundry_Stations16x16</File>
+            <Index>0x01</Index>
+        </Texture>
+        <Static/>
+    </Object>
+    <Object type="0x06" id="[Foundry] Tailor">
+        <Class>ReskinVendor</Class>
+        <Texture>
+            <File>Foundry_Stations16x16</File>
+            <Index>0x03</Index>
+        </Texture>
+        <Static/>
+    </Object>
+    <Object type="0x2f9" id="[Foundry] Dark Wall">
         <Class>Wall</Class>
         <RandomTexture>
             <Texture>
@@ -38,7 +97,7 @@
         <EnemyOccupySquare/>
         <BlocksSight/>
     </Object>
-    <Object type="0x2fa" id="Foundry Gold Chest">
+    <Object type="0x2fa" id="[Foundry] Gold Chest">
         <Class>GameObject</Class>
         <Texture>
             <File>Foundry_Environment8x8</File>
@@ -46,7 +105,7 @@
         </Texture>
         <Static/>
     </Object>
-    <Object type="0x2fb" id="Foundry Gold">
+    <Object type="0x2fb" id="[Foundry] Gold">
         <Class>GameObject</Class>
         <Texture>
             <File>Foundry_Environment8x8</File>
@@ -54,7 +113,7 @@
         </Texture>
         <Static/>
     </Object>
-    <Object type="0x2fc" id="Foundry Pot">
+    <Object type="0x2fc" id="[Foundry] Pot">
         <Class>GameObject</Class>
         <Texture>
             <File>Foundry_Environment8x8</File>
@@ -62,7 +121,7 @@
         </Texture>
         <Static/>
     </Object>
-    <Object type="0x2fd" id="Foundry Weapon Rack">
+    <Object type="0x2fd" id="[Foundry] Weapon Rack">
         <Class>GameObject</Class>
         <RandomTexture>
             <Texture>
@@ -84,7 +143,7 @@
         </RandomTexture>
         <Static/>
     </Object>
-    <Object type="0x2fe" id="Foundry Gold Pile">
+    <Object type="0x2fe" id="[Foundry] Gold Pile">
         <Class>GameObject</Class>
         <RandomTexture>
             <Texture>
@@ -102,7 +161,7 @@
         </RandomTexture>
         <Static/>
     </Object>
-    <Object type="0x2ff" id="Foundry Statue Dark">
+    <Object type="0x2ff" id="[Foundry] Statue Dark">
         <Class>GameObject</Class>
         <RandomTexture>
             <Texture>
@@ -128,7 +187,7 @@
         </RandomTexture>
         <Static/>
     </Object>
-    <Object type="0x401" id="Foundry Pillar Dark">
+    <Object type="0x401" id="[Foundry] Pillar Dark">
         <Class>GameObject</Class>
         <RandomTexture>
             <Texture>
@@ -138,7 +197,7 @@
         </RandomTexture>
         <Static/>
     </Object>
-    <Object type="0x402" id="Foundry Pillar Bright">
+    <Object type="0x402" id="[Foundry] Pillar Bright">
         <Class>GameObject</Class>
         <RandomTexture>
             <Texture>
@@ -148,7 +207,7 @@
         </RandomTexture>
         <Static/>
     </Object>
-    <Object type="0x403" id="Foundry Statue Bright">
+    <Object type="0x403" id="[Foundry] Statue Bright">
         <Class>GameObject</Class>
         <RandomTexture>
             <Texture>
@@ -174,4 +233,119 @@
         </RandomTexture>
         <Static/>
     </Object>
+    <!-- #endregion -->
+    <!-- #region --> // Vault
+    <Object type="0x08" id="[Foundry] Personal Chest">
+        <Class>Vault</Class>
+        <Container/>
+        <Texture>
+            <File>Foundry_Stations16x16</File>
+            <Index>0x01</Index>
+        </Texture>
+    </Object>
+    // Probably won't need this once personal chest has proper functionality, as the personal chest will change texture when empty.
+    <Object type="0x09" id="[Foundry] Closed Personal Chest">
+        <Class>ClosedVaultChest</Class>
+        <Texture>
+            <File>Foundry_Stations16x16</File>
+            <Index>0x00</Index>
+        </Texture>
+    </Object>
+    <Object type="0x0a" id="[Foundry] Gift Chest Closed">
+        <Class>ClosedGiftChest</Class>
+        <Texture>
+            <File>Foundry_Stations16x16</File>
+            <Index>0x02</Index>
+        </Texture>
+        <Size>120</Size>
+    </Object>
+    <Object type="0x0b" id="[Foundry] Gift Chest">
+        <Class>Gift</Class>
+        <Container/>
+        <Texture>
+            <File>Foundry_Containers16x16</File>
+            <Index>0x03</Index>
+        </Texture>
+        <Size>120</Size>
+    </Object>
+    <!-- #endregion -->
+    <!-- #region --> // Guild Hall
+    <Object type="0x0c" id="[Foundry] Guild Chronicle">
+        <Class>GuildChronicle</Class>
+        <Texture>
+            <File>Foundry_Stations16x16</File>
+            <Index>0x02</Index>
+        </Texture>
+        <OccupySquare/>
+        <ShadowSize>0</ShadowSize>
+        <Size>120</Size>
+        <Static/>
+    </Object>
+
+    <Object type="0x0d" id="[Foundry] BulletinBoard">
+        <Class>GameObject</Class>
+        <Model>Sign</Model>
+        <Texture>
+            <File>Foundry_Stations16x16</File>
+            <Index>0x00</Index>
+        </Texture>
+        <Static/>
+        <OccupySquare/>
+        <ShadowSize>0</ShadowSize>
+    </Object>
+
+    <Object type="0x0e" id="[Foundry] Guild Board">
+        <Class>GuildBoard</Class>
+        <Model>Sign</Model>
+        <Texture>
+            <File>Foundry_Stations16x16</File>
+            <Index>0x00</Index>
+        </Texture>
+        <Static/>
+        <OccupySquare/>
+        <ShadowSize>75</ShadowSize>
+    </Object>
+    <Object type="0x0f" id="[Foundry] Guild Hall Upgrade 1">
+        <DisplayId>Guild Hall Upgrade</DisplayId>
+        <Class>GuildMerchant</Class>
+        <Price>10000</Price>
+        <GuildItem>GuildHallUpgrade</GuildItem>
+        <GuildItemParam>Guild Hall 2</GuildItemParam>
+        <Description>This will make your Guild Hall larger and more attractive.  Note that this will take effect after the Guild Hall is empty for a few minutes.</Description>
+        <Texture>
+            <File>Foundry_Stations16x16</File>
+            <Index>0x01</Index>
+        </Texture>
+        <OccupySquare/>
+        <Static/>
+    </Object>
+    <Object type="0x10" id="[Foundry] Guild Hall Upgrade 2">
+        <DisplayId>Guild Hall Upgrade</DisplayId>
+        <Class>GuildMerchant</Class>
+        <Price>100000</Price>
+        <GuildItem>GuildHallUpgrade</GuildItem>
+        <GuildItemParam>Guild Hall 3</GuildItemParam>
+        <Description>This will make your Guild Hall larger and more attractive.  Note that this will take effect after the Guild Hall is empty for a few minutes.</Description>
+        <Texture>
+            <File>Foundry_Stations16x16</File>
+            <Index>0x01</Index>
+        </Texture>
+        <OccupySquare/>
+        <Static/>
+    </Object>
+    <Object type="0x11" id="[Foundry] Guild Hall Upgrade 3">
+        <DisplayId>Guild Hall Upgrade</DisplayId>
+        <Class>GuildMerchant</Class>
+        <Price>250000</Price>
+        <GuildItem>GuildHallUpgrade</GuildItem>
+        <GuildItemParam>Guild Hall 4</GuildItemParam>
+        <Description>This will make your Guild Hall larger and more attractive.  Note that this will take effect after the Guild Hall is empty for a few minutes.</Description>
+        <Texture>
+            <File>Foundry_Stations16x16</File>
+            <Index>0x01</Index>
+        </Texture>
+        <OccupySquare/>
+        <Static/>
+    </Object>
+    <!-- #endregion -->
 </Objects>

@@ -1,11 +1,11 @@
 package svera.untiered.assets {
 public class EmbeddedData {
     // Svera System
-    [Embed(source="Xmls/Environment_Ground.xml", mimeType="application/octet-stream")]
+    [Embed(source="Xmls/Tiles_Shared.xml", mimeType="application/octet-stream")]
     private static const Environment_Ground:Class;
-    [Embed(source="Xmls/Environment_Objects.xml", mimeType="application/octet-stream")]
+    [Embed(source="Xmls/Objects_Shared.xml", mimeType="application/octet-stream")]
     private static const Environment_Objects:Class;
-    [Embed(source="Xmls/Tavern_Objects.xml", mimeType="application/octet-stream")]
+    [Embed(source="Xmls/Objects_Tavern.xml", mimeType="application/octet-stream")]
     private static const Tavern_Objects:Class;
     [Embed(source="Xmls/Objects_Foundry.xml", mimeType="application/octet-stream")]
     private static const Objects_Foundry:Class;

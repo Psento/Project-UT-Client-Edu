@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Objects>
-    <Object type="0x40d" id="Tavern Wall">
+    <Object type="0x40d" id="[Tavern] Wall">
         <Class>Wall</Class>
         <RandomTexture>
             <Texture>
@@ -22,7 +22,7 @@
         <EnemyOccupySquare/>
         <BlocksSight/>
     </Object>
-    <Object type="0x40c" id="Tavern Bookcase">
+    <Object type="0x40c" id="[Tavern] Bookcase">
         <Class>Wall</Class>
         <RandomTexture>
             <Texture>
@@ -79,5 +79,26 @@
         <OccupySquare/>
         <EnemyOccupySquare/>
         <BlocksSight/>
+    </Object>
+    <Object type="0x144" id="[Tavern] Elemental Gateway">
+        <Class>Portal</Class>
+        <IntergamePortal />
+        <NexusPortal />
+        <Texture>
+            <File>cobj16x16</File>
+            <Index>0x22</Index>
+        </Texture>
+        <ShadowSize>0</ShadowSize>
+    </Object>
+    <Object type="0x023D" id="[Tavern] Locked Elemental Gateway">
+        <Class>Portal</Class>
+        <IntergamePortal />
+        <NexusPortal/>
+        <LockedPortal/>
+        <Texture>
+            <File>cobj16x16</File>
+            <Index>0x22</Index>
+        </Texture>
+        <ShadowSize>0</ShadowSize>
     </Object>
 </Objects>

@@ -1,56 +1,56 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <GroundTypes>
     <!-- #region --> // Tiles
-    <Ground type="0x304" id="Tavern Plank Tile Vertical TL">
+    <Ground type="0x304" id="[Tavern] Plank Tile Vertical TL">
         <Texture>
             <File>Tavern_Environment8x8</File>
             <Index>0x00</Index>
         </Texture>
         <RandomOffset/>
     </Ground>
-    <Ground type="0x305" id="Tavern Plank Tile Vertical TR">
+    <Ground type="0x305" id="[Tavern] Plank Tile Vertical TR">
         <Texture>
             <File>Tavern_Environment8x8</File>
             <Index>0x01</Index>
         </Texture>
         <RandomOffset/>
     </Ground>
-    <Ground type="0x306" id="Tavern Plank Tile Vertical BL">
+    <Ground type="0x306" id="[Tavern] Plank Tile Vertical BL">
         <Texture>
             <File>Tavern_Environment8x8</File>
             <Index>0x10</Index>
         </Texture>
         <RandomOffset/>
     </Ground>
-    <Ground type="0x307" id="Tavern Plank Tile Vertical BR">
+    <Ground type="0x307" id="[Tavern] Plank Tile Vertical BR">
         <Texture>
             <File>Tavern_Environment8x8</File>
             <Index>0x11</Index>
         </Texture>
         <RandomOffset/>
     </Ground>
-    <Ground type="0x308" id="Tavern Plank Tile Horizontal TL">
+    <Ground type="0x308" id="[Tavern] Plank Tile Horizontal TL">
         <Texture>
             <File>Tavern_Environment8x8</File>
             <Index>0x02</Index>
         </Texture>
         <RandomOffset/>
     </Ground>
-    <Ground type="0x309" id="Tavern Plank Tile Horizontal TR">
+    <Ground type="0x309" id="[Tavern] Plank Tile Horizontal TR">
         <Texture>
             <File>Tavern_Environment8x8</File>
             <Index>0x03</Index>
         </Texture>
         <RandomOffset/>
     </Ground>
-    <Ground type="0x30a" id="Tavern Plank Tile Horizontal BL">
+    <Ground type="0x30a" id="[Tavern] Plank Tile Horizontal BL">
         <Texture>
             <File>Tavern_Environment8x8</File>
             <Index>0x12</Index>
         </Texture>
         <RandomOffset/>
     </Ground>
-    <Ground type="0x30b" id="Tavern Plank Tile Horizontal BR">
+    <Ground type="0x30b" id="[Tavern] Plank Tile Horizontal BR">
         <Texture>
             <File>Tavern_Environment8x8</File>
             <Index>0x13</Index>

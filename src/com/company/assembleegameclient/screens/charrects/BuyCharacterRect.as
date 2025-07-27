@@ -32,7 +32,7 @@ public class BuyCharacterRect extends CharacterRect {
         this.classNameText_.updateMetrics();
         this.classNameText_.filters = [new DropShadowFilter(0, 0, 0, 1, 8, 8)];
         this.classNameText_.x = this.x + this.width / 2 - this.classNameText_.width / 2;
-        this.classNameText_.y = this.y + this.height + this.classNameText_.height;
+        this.classNameText_.y = this.y + this.height - this.classNameText_.height;
         selectContainer.addChild(this.classNameText_);
         var currencyBD_:BitmapData = IconFactory.makeHonor();
         this.currencyIcon_ = new Bitmap(currencyBD_);

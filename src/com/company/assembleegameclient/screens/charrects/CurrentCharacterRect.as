@@ -59,7 +59,7 @@ public class CurrentCharacterRect extends CharacterRect {
         this.classNameText.updateMetrics();
         this.classNameText.filters = [new DropShadowFilter(0, 0, 0, 1, 8, 8)];
         this.classNameText.x = this.width / 2 - this.classNameText.width / 2;
-        this.classNameText.y = this.y + this.height + this.classNameText.height;
+        this.classNameText.y = this.y + this.height - this.classNameText.height;
         selectContainer.addChild(this.classNameText);
     }
 

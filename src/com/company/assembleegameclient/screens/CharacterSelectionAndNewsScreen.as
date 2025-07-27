@@ -135,8 +135,8 @@ public class CharacterSelectionAndNewsScreen extends Sprite {
         this.charactersText.updateMetrics();
         this.charactersText.filters = [this.DROP_SHADOW];
         this.charactersText.setAlignment(TextFormatAlign.LEFT);
-        this.charactersText.x = 10;
-        this.charactersText.y = 79;
+        this.charactersText.x = (GameClient.StageWidth - charactersText.width) / 2;
+        this.charactersText.y = nameText.y + nameText.height;
         addChild(this.charactersText);
     }
 

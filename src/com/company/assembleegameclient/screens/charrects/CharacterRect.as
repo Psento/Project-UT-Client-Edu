@@ -1,4 +1,5 @@
 package com.company.assembleegameclient.screens.charrects {
+import flash.display.Bitmap;
 import flash.display.Graphics;
 import flash.display.Shape;
 import flash.display.Sprite;
@@ -12,14 +13,18 @@ public class CharacterRect extends Sprite {
     private var overColor_:uint;
     private var box_:Shape;
     public var selectContainer:Sprite;
+    [Embed(source="CharacterRectBg.png")]
+    private static var charBg:Class;
+    private var bg:Bitmap = new Bitmap(new charBg().bitmapData);
 
     public function CharacterRect(color:uint, overColor:uint) {
         super();
         this.color_ = color;
         this.overColor_ = overColor;
         this.box_ = new Shape();
-        this.drawBox(false);
-        addChild(this.box_);
+        //this.drawBox(false);
+        addChild(bg);
+        //addChild(this.box_);
         addEventListener(MouseEvent.MOUSE_OVER, this.onMouseOver);
         addEventListener(MouseEvent.ROLL_OUT, this.onRollOut);
     }

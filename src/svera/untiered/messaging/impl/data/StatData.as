@@ -213,7 +213,7 @@ public class StatData {
     public var strStatValue_:String;
 
     public var uintStatValue:uint;
-    public var statByteArray:ByteArray;
+    public var statByteArray:Vector.<ByteArray>;
 
 
     public function StatData() {
@@ -262,13 +262,19 @@ public class StatData {
             this.strStatValue_ = data.readUTF();
         }else if (statType_ == INVENTORY) {
             var len:Number = data.readShort();
-            statByteArray = new ByteArray();
-            for(var i:Number = 0; i < len; i++) {
-                this.statByteArray.writeByte(data.readUnsignedByte());
+            statByteArray = new Vector.<ByteArray>(len);
+            var bytes:ByteArray;
+            var len2:Number = 0;
+            for(var j:int = 0; j < len; j++) {
+                bytes = new ByteArray();
+                len2 = data.readShort();
+
+                for (var i:Number = 0; i < len2; i++) {
+                    bytes.writeByte(data.readUnsignedByte());
+                }
+                bytes.endian = "littleEndian";
+                bytes.position = 0;
             }
-            this.statByteArray.endian = "littleEndian";
-            this.statByteArray.position = 0;
-            return;
         } else {
             this.statValue_ = data.readInt();
         }

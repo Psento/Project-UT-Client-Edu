@@ -33,6 +33,7 @@ public class ScreenBase extends Sprite {
                 break;
             case 2:
                 currBackground = new CharSelectionBackground();
+                    
                 break;
         }
         addChild(currBackground);

@@ -2,6 +2,8 @@ package com.company.assembleegameclient.screens {
 import com.company.assembleegameclient.ui.Scrollbar;
 import com.company.ui.SimpleText;
 
+import flash.display.Bitmap;
+import flash.display.BitmapData;
 import flash.display.DisplayObject;
 import flash.display.Shape;
 import flash.display.Sprite;
@@ -59,6 +61,17 @@ public class CharacterSelectionAndNewsScreen extends Sprite {
 
     public var playGame:Signal;
 
+    [Embed(source="brickLeft.png")]
+    private var brickLeftSource:Class;
+    private var brickLeft:BitmapData = new brickLeftSource().bitmapData;
+    [Embed(source="brickRight.png")]
+    private var brickRightSource:Class;
+    private var brickRight:BitmapData = new brickRightSource().bitmapData;
+    private var brickRightContainer:Sprite = new Sprite();
+    [Embed(source="nameTextSign.png")]
+    private var nameTextSignSource:Class;
+    private var nameTextSign:Bitmap = new Bitmap(new nameTextSignSource().bitmapData);
+
     public function CharacterSelectionAndNewsScreen() {
         this.playButton = new TitleMenuOption("play", 36, true);
         this.backButton = new TitleMenuOption("back", 22, false);
@@ -67,6 +80,20 @@ public class CharacterSelectionAndNewsScreen extends Sprite {
         this.playGame = new Signal();
         super();
         addChild(new ScreenBase(2));
+        var h:Number = 0;
+        var l:Bitmap;
+        var r:Bitmap;
+        while (h < GameClient.STAGE.fullScreenHeight) {
+            l = new Bitmap(brickLeft);
+            r = new Bitmap(brickRight);
+            l.y = h;
+            r.y = h;
+            addChild(l);
+            brickRightContainer.addChild(r);
+            h += l.height;
+        }
+        addChild(nameTextSign);
+        addChild(brickRightContainer);
         addChild(new AccountScreen());
         this.close = new NativeMappedSignal(this.backButton, MouseEvent.CLICK);
         this.showClasses = new NativeMappedSignal(this.classesButton, MouseEvent.CLICK);
@@ -79,6 +106,7 @@ public class CharacterSelectionAndNewsScreen extends Sprite {
         this.isInitialized = true;
         this.model = model;
         this.createDisplayAssets(model);
+        stage.addEventListener(Event.RESIZE, positionButtons);
     }
 
     private function createDisplayAssets(model:PlayerModel):void {
@@ -102,13 +130,16 @@ public class CharacterSelectionAndNewsScreen extends Sprite {
         this.playButton.addEventListener(MouseEvent.CLICK, this.onPlayClick);
     }
 
-    private function positionButtons():void {
-        this.playButton.x = (this.stage.width - this.playButton.width) * 0.5;
+    private function positionButtons(e:Event = null):void {
+        this.playButton.x = (GameClient.StageWidth - this.playButton.width) * 0.5;
         this.playButton.y = GameClient.StageHeight - (600 - 520);
-        this.backButton.x = (this.stage.width - this.backButton.width) * 0.5 - 94;
+        this.backButton.x = (GameClient.StageWidth - this.backButton.width) * 0.5 - 94;
         this.backButton.y = GameClient.StageHeight - (600 - 532);
-        this.classesButton.x = (this.stage.width - this.classesButton.width) * 0.5 + 96;
+        this.classesButton.x = (GameClient.StageWidth - this.classesButton.width) * 0.5 + 96;
         this.classesButton.y = backButton.y;
+        nameTextSign.x = (GameClient.StageWidth - nameTextSign.width) * 0.5;
+        brickRightContainer.x = GameClient.StageWidth - brickRightContainer.width;
+        this.nameText.x = (GameClient.StageWidth - this.nameText.width) * 0.5;
     }
 
     private function createScrollbar():void {
@@ -143,7 +174,7 @@ public class CharacterSelectionAndNewsScreen extends Sprite {
     private function createCurrencyDisplay():void {
         this.currencyDisplay = new CurrencyDisplay();
         this.currencyDisplay.draw(this.model.getTsavorite(), this.model.getMedallions(), this.model.getHonor(), true);
-        this.currencyDisplay.x = this.stage.width;
+        this.currencyDisplay.x = GameClient.StageWidth;
         this.currencyDisplay.y = 20;
         addChild(this.currencyDisplay);
     }
@@ -155,7 +186,6 @@ public class CharacterSelectionAndNewsScreen extends Sprite {
         this.nameText.updateMetrics();
         this.nameText.filters = [this.DROP_SHADOW];
         this.nameText.y = 24 + this.nameText.height;
-        this.nameText.x = (this.stage.width - this.nameText.width) / 2;
         addChild(this.nameText);
     }
 
@@ -172,7 +202,7 @@ public class CharacterSelectionAndNewsScreen extends Sprite {
         this.lines.graphics.clear();
         this.lines.graphics.lineStyle(2, 5526612);
         this.lines.graphics.moveTo(0, 105);
-        this.lines.graphics.lineTo(this.stage.width, 105);
+        this.lines.graphics.lineTo(GameClient.StageWidth, 105);
         this.lines.graphics.moveTo(400, 107);
         this.lines.graphics.lineTo(400, 526);
         this.lines.graphics.lineStyle();
@@ -200,7 +230,7 @@ public class CharacterSelectionAndNewsScreen extends Sprite {
     public function setName(name:String):void {
         this.nameText.text = name;
         this.nameText.updateMetrics();
-        this.nameText.x = (this.stage.width - this.nameText.width) * 0.5;
+        this.nameText.x = (GameClient.StageWidth - this.nameText.width) * 0.5;
     }
 }
 }

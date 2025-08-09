@@ -1370,8 +1370,8 @@ public class GameServerConnection {
                     break;
                 case StatData.INVENTORY:
                     var len:int = stat.statByteArray.length;
-                    for (var i:int = 0; i < len; i += 2) {
-                        go.equipment_[i].updateData(stat.statByteArray, i);
+                    for (var i:int = 0; i < len; i++) {
+                        go.equipment_[i].updateData(stat.statByteArray[i], i);
                     }
                     continue;
                 case StatData.NUMSTARS:
@@ -1390,7 +1390,7 @@ public class GameServerConnection {
                     go.setTex2(value);
                     continue;
                 case StatData.MERCHANDISETYPE:
-                    merchant.setMerchandiseType(ItemData.loadFromData(stat.statByteArray));
+                    merchant.setMerchandiseType(ItemData.loadFromData(stat.statByteArray[0])); //TODO: will need fix
                     continue;
                 case StatData.TSAVORITE:
                     player.setTsavorite(value);

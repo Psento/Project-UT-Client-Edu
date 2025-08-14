@@ -13,8 +13,6 @@ import flash.filters.DropShadowFilter;
 import svera.untiered.core.model.PlayerModel;
 
 public class CreateNewCharacterRect extends CharacterRect {
-
-
     private var bitmap_:Bitmap;
 
     private var classNameText_:SimpleText;

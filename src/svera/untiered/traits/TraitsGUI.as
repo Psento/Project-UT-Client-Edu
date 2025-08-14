@@ -1,5 +1,6 @@
 package svera.untiered.traits {
 
+import com.company.assembleegameclient.background.Background;
 import com.company.assembleegameclient.ui.TextButton;
 import com.company.assembleegameclient.util.TextureRedrawer;
 import com.company.ui.SimpleText;
@@ -28,6 +29,8 @@ public class TraitsGUI extends Sprite {
     public var model:PlayerModel;
     [Inject]
     public var play:PlayGameSignal;
+    [Embed(source="Bricks.png")]
+    private static var bricksSource:Class;
 
     /* initializing the list of assets we're using, there are three buttons to choose from so there's three vars. */
     public var awakeningIcons:Vector.<Bitmap> = new Vector.<Bitmap>;
@@ -54,6 +57,7 @@ public class TraitsGUI extends Sprite {
     private var awakeningText:SimpleText;
     private var relicText:SimpleText;
     private var backgroundText:SimpleText;
+    private var bg:background = new background();
 
     public function TraitsGUI() {
         /* sets the default value of the trait type to zero. */
@@ -61,20 +65,43 @@ public class TraitsGUI extends Sprite {
         this.typeTwo = 0;
         this.typeThree = 0;
 
+        var h:Number = 0;
+        var w:Number = 0;
+        var l:Bitmap;
+        var vertical:Sprite = new Sprite();
+        while (h < GameClient.STAGE.fullScreenHeight) {
+            l = new Bitmap(new bricksSource().bitmapData);
+            l.y = h;
+            vertical.addChild(l);
+            h += l.height;
+        }
+        var bgVert:BitmapData = new BitmapData(vertical.width, vertical.height, false);
+        bgVert.draw(vertical);
+
+        while(w < GameClient.STAGE.fullScreenWidth) {
+            l = new Bitmap(bgVert);
+            l.x = w;
+            addChild(l);
+            w += l.width;
+        }
+
         /* makes a transparent background behind the UI. */
         graphics.clear();
-        graphics.beginFill(2829099, 0.8);
+        graphics.beginFill(0x1a1622, 0.8);
         graphics.drawRect(0, 0, GameClient.StageWidth, GameClient.StageHeight);
         graphics.endFill();
 
         /* a BitmapAsset for the background, the .png has the runes circles, the details on the corners of the screen, the header and the description overlay. */
-        addChild(new background());
+        bg.x = (GameClient.StageWidth - bg.width) / 2;
+        addChild(bg);
 
-        /* creates a line near the top of the screen above the background. */
+/*
+        /!* creates a line near the top of the screen above the background. *!/
         graphics.lineStyle(2, 6184542);
         graphics.moveTo(0, 100);
         graphics.lineTo(GameClient.StageWidth, 100);
         graphics.lineStyle();
+*/
 
         /* adds the containers for the assets on screen */
         addChild(this.container);
@@ -100,7 +127,7 @@ public class TraitsGUI extends Sprite {
         txt2.defaultTextFormat = newFormat;
         this.awakeningTitleText_ = txt0;
         this.awakeningTitleText_.text = "Awakening";
-        this.awakeningTitleText_.x = GameClient.StageWidth / 3 - this.awakeningTitleText_.width / 2;
+        this.awakeningTitleText_.x = bg.x + 147  - this.awakeningTitleText_.width / 2;
         this.awakeningTitleText_.y = 16;
         addChild(this.awakeningTitleText_);
         this.relicTitleText_ = txt1;
@@ -110,7 +137,7 @@ public class TraitsGUI extends Sprite {
         addChild(this.relicTitleText_);
         this.backgroundTitleText_ = txt2;
         this.backgroundTitleText_.text = "Background";
-        this.backgroundTitleText_.x = GameClient.StageWidth * (2 / 3) - this.backgroundTitleText_.width / 2;
+        this.backgroundTitleText_.x = bg.x + 654 - this.backgroundTitleText_.width / 2;
         this.backgroundTitleText_.y = 16;
         addChild(this.backgroundTitleText_);
         this.selectButton_ = new TextButton(18, "Select", 120);
@@ -150,15 +177,15 @@ public class TraitsGUI extends Sprite {
         /* sets the position of the text. */
         this.awakeningText.multiline = true;
         this.awakeningText.wordWrap = true;
-        this.awakeningText.x = 40;
+        this.awakeningText.x = bg.x + 40;
         this.awakeningText.y = 309;
         this.relicText.multiline = true;
         this.relicText.wordWrap = true;
-        this.relicText.x = 294;
+        this.relicText.x = bg.x + 294;
         this.relicText.y = 309;
         this.backgroundText.multiline = true;
         this.backgroundText.wordWrap = true;
-        this.backgroundText.x = 548;
+        this.backgroundText.x = bg.x + 548;
         this.backgroundText.y = 309;
 
         /* uses <b> tags to make text bold. set the default values to the first runes description text on screen. */
@@ -281,7 +308,7 @@ public class TraitsGUI extends Sprite {
 
         /* same as the last function, but this time it will make sure each rune icon is in these set positions */
         for (var b:int = 0; b < 10; b++) {
-            this.awakeningIcons[b].x = GameClient.StageWidth / 3 - this.awakeningIcons[b].width / 2;
+            this.awakeningIcons[b].x = bg.x + 145 - this.awakeningIcons[b].width / 2;
             this.awakeningIcons[b].y = 170.5 - this.awakeningIcons[b].height / 2;
         }
         for (b = 0; b < 9; b++) {
@@ -289,7 +316,7 @@ public class TraitsGUI extends Sprite {
             this.relicIcons[b].y = 170.5 - this.relicIcons[b].height / 2;
         }
         for (b = 0; b < 11; b++) {
-            this.backgroundIcons[b].x = GameClient.StageWidth * (2 / 3) - this.backgroundIcons[b].width / 2;
+            this.backgroundIcons[b].x = bg.x + 655 - this.backgroundIcons[b].width / 2;
             this.backgroundIcons[b].y = 170.5 - this.backgroundIcons[b].height / 2;
         }
 

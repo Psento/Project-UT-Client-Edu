@@ -274,6 +274,7 @@ public class StatData {
                 }
                 bytes.endian = "littleEndian";
                 bytes.position = 0;
+                statByteArray[j] = bytes;
             }
         } else {
             this.statValue_ = data.readInt();

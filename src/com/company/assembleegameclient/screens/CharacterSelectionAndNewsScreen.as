@@ -62,12 +62,13 @@ public class CharacterSelectionAndNewsScreen extends Sprite {
     public var playGame:Signal;
 
     [Embed(source="brickLeft.png")]
-    private var brickLeftSource:Class;
-    private var brickLeft:BitmapData = new brickLeftSource().bitmapData;
+    public static var brickLeftSource:Class;
+    public static var brickLeft:BitmapData = new brickLeftSource().bitmapData;
     [Embed(source="brickRight.png")]
-    private var brickRightSource:Class;
-    private var brickRight:BitmapData = new brickRightSource().bitmapData;
-    private var brickRightContainer:Sprite = new Sprite();
+    public static var brickRightSource:Class;
+    public static var brickRight:BitmapData = new brickRightSource().bitmapData;
+    public static var brickLeftContainer:Sprite = new Sprite();
+    public static var brickRightContainer:Sprite = new Sprite();
     [Embed(source="nameTextSign.png")]
     private var nameTextSignSource:Class;
     private var nameTextSign:Bitmap = new Bitmap(new nameTextSignSource().bitmapData);
@@ -89,10 +90,12 @@ public class CharacterSelectionAndNewsScreen extends Sprite {
             l.y = h;
             r.y = h;
             addChild(l);
+            brickLeftContainer.addChild(l);
             brickRightContainer.addChild(r);
             h += l.height;
         }
         addChild(nameTextSign);
+        addChild(brickLeftContainer);
         addChild(brickRightContainer);
         addChild(new AccountScreen());
         this.close = new NativeMappedSignal(this.backButton, MouseEvent.CLICK);
@@ -187,26 +190,6 @@ public class CharacterSelectionAndNewsScreen extends Sprite {
         this.nameText.filters = [this.DROP_SHADOW];
         this.nameText.y = 24 + this.nameText.height;
         addChild(this.nameText);
-    }
-
-    private function getReferenceRectangle():Rectangle {
-        var rectangle:Rectangle = new Rectangle();
-        if (stage) {
-            rectangle = new Rectangle(0, 0, stage.stageWidth, stage.stageHeight);
-        }
-        return rectangle;
-    }
-
-    private function createBoundaryLines():void {
-        this.lines = new Shape();
-        this.lines.graphics.clear();
-        this.lines.graphics.lineStyle(2, 5526612);
-        this.lines.graphics.moveTo(0, 105);
-        this.lines.graphics.lineTo(GameClient.StageWidth, 105);
-        this.lines.graphics.moveTo(400, 107);
-        this.lines.graphics.lineTo(400, 526);
-        this.lines.graphics.lineStyle();
-        addChild(this.lines);
     }
 
     private function onScrollBarChange(event:Event):void {

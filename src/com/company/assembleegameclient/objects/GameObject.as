@@ -169,7 +169,7 @@ public class GameObject extends BasicObject {
             this.slotTypes_ = ConversionUtil.toIntVector(objectXML.SlotTypes);
             this.equipment_ = new Vector.<ItemData>(this.slotTypes_.length);
             for (i = 0; i < this.equipment_.length; i++) {
-                this.equipment_[i] = null;
+                this.equipment_[i] = new ItemData();
             }
         }
         if (objectXML.hasOwnProperty("Tex1")) {

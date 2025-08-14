@@ -6,10 +6,10 @@ import com.company.assembleegameclient.ui.tooltip.ToolTip;
 import com.company.assembleegameclient.util.AnimatedChar;
 import com.company.assembleegameclient.util.HonorUtil;
 import com.company.ui.SimpleText;
-import com.company.untiered.graphics.FullCharBoxGraphic;
 import com.company.untiered.graphics.StarGraphic;
 
 import flash.display.Bitmap;
+import flash.display.DisplayObject;
 import flash.display.Sprite;
 import flash.events.Event;
 import flash.events.KeyboardEvent;
@@ -35,7 +35,6 @@ public class CharacterBox extends Sprite {
     public var charStats_:CharacterStats;
     public var model:PlayerModel;
     private var graphicContainer_:Sprite;
-    private var graphic_:Sprite;
     private var bitmap_:Bitmap;
     private var classNameText_:SimpleText;
     private var cost:int = 0;
@@ -45,6 +44,10 @@ public class CharacterBox extends Sprite {
     public var poseStart_:int = -2147483648;
     public var poseDir_:int;
     public var poseAction_:int;
+    [Embed(source="charrects/CharacterRectBg.png")]
+    private static var charBg:Class;
+    private var bg:Bitmap = new Bitmap(new charBg().bitmapData);
+    private var graphic_:Sprite = new Sprite();
 
     public function CharacterBox(playerXML:XML, charStats:CharacterStats, model:PlayerModel) {
         var stars:Sprite = null;
@@ -52,8 +55,10 @@ public class CharacterBox extends Sprite {
         this.model = model;
         this.playerXML_ = playerXML;
         this.charStats_ = charStats;
-        this.graphic_ = new FullCharBoxGraphic();
         this.graphicContainer_ = new Sprite();
+        graphic_.graphics.beginBitmapFill(bg.bitmapData, null, false);
+        graphic_.graphics.drawRect(0,0, bg.width, bg.height);
+        graphic_.graphics.endFill();
         addChild(this.graphicContainer_);
         this.graphicContainer_.addChild(this.graphic_);
         this.characterSelectClicked_ = new NativeSignal(this.graphicContainer_, MouseEvent.CLICK, MouseEvent);
@@ -72,7 +77,7 @@ public class CharacterBox extends Sprite {
         stars.x = this.graphic_.width / 2 - stars.width / 2;
         stars.filters = [new DropShadowFilter(0, 0, 0, 1, 4, 4)];
         this.graphicContainer_.addChild(stars);
-        this.classNameText_.y = 0 - this.classNameText_.actualHeight_;
+        this.classNameText_.y = graphic_.height - this.classNameText_.actualHeight_;
     }
 
     public function objectType():int {

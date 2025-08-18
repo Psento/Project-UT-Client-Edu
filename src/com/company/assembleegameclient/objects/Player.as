@@ -1007,8 +1007,8 @@ public class Player extends Character {
         var minDamage:int = 0;
         var maxDamage:int = 0;
         var damage:int = 0;
-        var numShots:int = Boolean(weaponXML.hasOwnProperty("NumProjectiles")) ? int(int(weaponXML.NumProjectiles)) : int(1);
-        var arcGap:Number = (Boolean(weaponXML.hasOwnProperty("ArcGap")) ? Number(weaponXML.ArcGap) : 11.25) * Trig.toRadians;
+        var numShots:int = weaponType.NumProjectiles;
+        var arcGap:Number = weaponType.ArcGap * Trig.toRadians;
         var totalArc:Number = arcGap * (numShots - 1);
         var angle:Number = attackAngle - totalArc / 2;
         var startId:int = map_.nextProjectileId_;

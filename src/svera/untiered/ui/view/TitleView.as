@@ -14,7 +14,7 @@ import org.osflash.signals.Signal;
 import svera.untiered.ui.view.components.ScreenBase;
 
 public class TitleView extends Sprite {
-    private static const COPYRIGHT:String = "© Svera, Inc.";
+    private static const COPYRIGHT:String = "© Svera Network 2022";
 
 
     public var playClicked:Signal;

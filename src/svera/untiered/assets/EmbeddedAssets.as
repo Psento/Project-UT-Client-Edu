@@ -1,6 +1,9 @@
 package svera.untiered.assets {
 public class EmbeddedAssets {
     // Svera System
+    // Logo
+    [Embed(source="splash_logo.png")]
+    public static var SplashLogo:Class;
     // Particles
     [Embed(source="Entities/Player/Player_Particles.png")]
     public static var Player_Particles:Class;

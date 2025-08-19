@@ -37,6 +37,8 @@ public class AssetLoader {
 
     private function addImages():void {
         // Svera System
+        // Logo
+        AssetLibrary.addImage("SplashLogo", new EmbeddedAssets.SplashLogo().bitmapData);
         // Particles
         AssetLibrary.addImageSet("Player_Particles", new EmbeddedAssets.Player_Particles().bitmapData, 16, 16);
         // Icons

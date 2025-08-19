@@ -1,5 +1,6 @@
 package svera.untiered.startup.control {
 import svera.lib.tasks.TaskMonitor;
+import svera.untiered.ui.signals.ShowSplashUISignal;
 
 public class StartupCommand {
 
@@ -10,13 +11,17 @@ public class StartupCommand {
     [Inject]
     public var monitor:TaskMonitor;
 
+    [Inject]
+    public var showSplash:ShowSplashUISignal;
+
     public function StartupCommand() {
         super();
     }
 
     public function execute():void {
-        this.monitor.add(this.startup);
-        this.startup.start();
+        trace("StartupCommand: Showing splash screen first");
+        // Show splash first, which will trigger the main startup when complete
+        this.showSplash.dispatch();
     }
 }
 }

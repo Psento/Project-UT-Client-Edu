@@ -14,10 +14,10 @@
     <id>GameClient</id>
 
     <!-- Used as the filename for the application. Required. -->
-    <filename>SVERA-UTR</filename>
+    <filename>Untiered</filename>
 
     <!-- The name that is displayed in the AIR application installer. May have multiple values for each language. See samples or xsd schema file. Optional. -->
-    <name>SVERA-UTR</name>
+    <name>Untiered</name>
 
     <!-- A string value of the format <0-999>.<0-999>.<0-999> that represents application version which can be used to check for application upgrade.
          Values can also be 1-part or 2-part. It is not necessary to have a 3-part value.
@@ -51,7 +51,7 @@
         <content>SWF file name is set automatically at compile time</content>
 
         <!-- The title of the main window. Optional. -->
-        <title>Svera UTR</title>
+        <title>Untiered</title>
 
         <!-- The type of system chrome to use (either "standard" or "none"). Optional. Default standard. -->
         <!--<systemChrome></systemChrome>-->

@@ -977,7 +977,7 @@ public class Player extends Character {
             return;
         }
         var rateOfFire:Number = Number(weaponXML.RateOfFire);
-        this.attackPeriod_ = 1 / this.attackFrequency() * (1 / rateOfFire);
+        this.attackPeriod_ = 1 / (this.attackFrequency() * rateOfFire); // SMALL OPTIMIZATION BY NEKOT
         super.setAttack(containerType, attackAngle);
     }
 
@@ -1016,8 +1016,8 @@ public class Player extends Character {
         for (var i:int = 0; i < numShots; i++) {
             proj = FreeList.newObject(Projectile) as Projectile;
             proj.reset2(weaponType.ObjectType, weaponType.Projectiles[0], objectId_, startId - i, angle, time);
-            minDamage = int(proj.projProps_.minDamage_) + int(proj.projProps_.minDamage_ * weaponType.Projectiles.length);
-            maxDamage = int(proj.projProps_.maxDamage_) + int(proj.projProps_.maxDamage_);
+            minDamage = proj.projProps_.minDamage_ + proj.projProps_.minDamage_ * weaponType.Projectiles.length;
+            maxDamage = proj.projProps_.maxDamage_ + proj.projProps_.maxDamage_;
             damage = map_.gs_.gsc_.getNextDamage(minDamage, maxDamage) * Number(this.attackMultiplier());
             proj.setDamage(damage);
             if (i == 0 && proj.sound_ != null) {

@@ -1,5 +1,6 @@
 package svera.untiered.itemdata {
 import com.company.util.Base64Decoder;
+import com.company.util.Guid;
 
 import flash.utils.ByteArray;
 import flash.utils.IDataInput;
@@ -7,6 +8,8 @@ import flash.utils.IDataInput;
 
 public class NewItemData {
 
+    public var Uuid:String = "";
+    public var Time:Date = new Date(0);
     public var Transmog:uint = 0;
     public var KillTracker:int = 0;
 
@@ -25,8 +28,19 @@ public class NewItemData {
     }
 
     public static function NewTickUpdate(item:NewItemData, data:IDataInput): void {
-        if (item == null)
+        if (data.bytesAvailable == 2) return;
+        var uuid:String = Guid.guidDataToString(data);
+        if (item == null){
             item = new NewItemData();
+            item.Uuid = uuid;
+        } else if (item.Uuid != uuid) {
+            return;
+        }
+
+        var low:uint = data.readUnsignedInt();
+        var high:uint = data.readUnsignedInt();
+        var ticks:Number = high * 0x100000000 + low;
+        item.Time = new Date(ticks);
 
         var count:uint = data.readUnsignedShort();
 
@@ -34,8 +48,6 @@ public class NewItemData {
             var key:uint = data.readUnsignedShort();
 
             switch (key) {
-                case ItemDataKey.Uuid:
-                    break;
                 case ItemDataKey.Transmog:
                     item.Transmog = data.readUnsignedShort();
                     break;

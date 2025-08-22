@@ -46,6 +46,9 @@ public class EquipmentToolTip extends ToolTip {
     private var isInventoryFull:Boolean;
     private var yOffset:int;
 
+    private var uuidText:SimpleText;
+    private var dateText:SimpleText;
+
     public function EquipmentToolTip(objectType:int, itemData:NewItemData, player:Player, invType:int, inventoryOwnerType:String, inventorySlotID:uint = 1.0) {
         this.player_ = player;
         this.itemData_ = itemData;
@@ -78,6 +81,27 @@ public class EquipmentToolTip extends ToolTip {
         this.makeEffectsList();
         this.makeRestrictionList();
         this.makeRestrictionText();
+        this.addTestItemDataText();
+    }
+
+    private function addTestItemDataText():void {
+        this.uuidText = new SimpleText(14, 11776947, false, MAX_WIDTH, 0);
+        this.uuidText.wordWrap = true;
+        this.uuidText.text = this.itemData_.Uuid;
+        this.uuidText.updateMetrics();
+        this.uuidText.filters = [new DropShadowFilter(0, 0, 0, 0.5, 12, 12)];
+        this.uuidText.x = 4;
+        this.uuidText.y = this.icon_.height + 2;
+        addChild(this.uuidText);
+
+        this.dateText = new SimpleText(14, 11776947, false, MAX_WIDTH, 0);
+        this.dateText.wordWrap = true;
+        this.dateText.text = this.itemData_.Time.toLocaleString();
+        this.dateText.updateMetrics();
+        this.dateText.filters = [new DropShadowFilter(0, 0, 0, 0.5, 12, 12)];
+        this.dateText.x = 4;
+        this.dateText.y = this.icon_.height + 2;
+        addChild(this.dateText);
     }
 
     private static function BuildRestrictionsHTML(restrictions:Vector.<Restriction>):String {

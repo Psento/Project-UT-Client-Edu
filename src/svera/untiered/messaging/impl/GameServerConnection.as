@@ -1130,6 +1130,8 @@ public class GameServerConnection {
                     continue;
                 case StatType.Inventory:
                     go.equipment_[stat.slotStatValue] = value;
+                    if (go == gs_.map.player_)
+                            trace("item: ", stat.slotStatValue, value);
                     continue;
                 case StatType.NumStars:
                     player.numStars_ = value;

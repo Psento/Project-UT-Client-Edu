@@ -36,7 +36,7 @@ public class WebLoadAccountTask extends BaseTask implements LoadAccountTask {
         var rotmg:SharedObject = null;
         this.data = new AccountData();
         try {
-            rotmg = SharedObject.getLocal("OWRotMG", "/");
+            rotmg = SharedObject.getLocal("OWRotMG1", "/");
             rotmg.data["Username"] && (this.data.username = rotmg.data["Username"]);
             rotmg.data["Password"] && (this.data.password = rotmg.data["Password"]);
         } catch (error:Error) {

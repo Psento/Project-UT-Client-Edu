@@ -35,7 +35,8 @@ public class EquipmentTile extends InteractiveItemTile {
         var bd:BitmapData = null;
         var dx:int = 0;
         var dy:int = 0;
-        switch (itemType_) {
+        // temp thing
+        /*switch (itemType_) {
             case ItemConstants.ALL_TYPE:
                 break;
             case ItemConstants.SWORD_AXE_TYPE:
@@ -110,7 +111,7 @@ public class EquipmentTile extends InteractiveItemTile {
             case ItemConstants.CHAKRAM_TYPE:
                 bd = AssetLibrary.getImageFromSet("lofiObj3", 555);
                 break;
-        }
+        }*/
         if (bd != null) {
             this.backgroundDetail = new Bitmap(bd);
             this.backgroundDetail.x = BORDER;

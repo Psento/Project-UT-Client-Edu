@@ -120,8 +120,8 @@ public class HUDView extends Sprite {
 
         this.interactPanel.x = this.INTERACT_PANEL_POSITION.x;
         this.interactPanel.y = GameClient.StageHeight - interactPanel.height;
-        showRaidLauncher();
-        showLootboxButton();
+        //showRaidLauncher();
+        //showLootboxButton();
 
         addChild(this.inventoryGrid);
         addChild(this.equippedGrid);
@@ -133,6 +133,9 @@ public class HUDView extends Sprite {
         if (this.equippedGrid) {
             this.equippedGrid.draw();
         }
+        if (this.inventoryGrid) {
+            this.inventoryGrid.draw();
+        }// todo temp
         if (this.interactPanel) {
             this.interactPanel.draw();
         }
@@ -191,9 +194,9 @@ public class HUDView extends Sprite {
     }
 
     private function CloseInventory():void {
-        this.statsView.visible = false;
-        this.inventoryGrid.visible = false;
-        this.equippedGrid.visible = false;
+        if (this.statsView) this.statsView.visible = false;
+        if (this.inventoryGrid) this.inventoryGrid.visible = false;
+        if (this.equippedGrid) this.equippedGrid.visible = false;
     }
 
     public function ToggleInventory():void {

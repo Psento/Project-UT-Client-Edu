@@ -65,6 +65,7 @@ public class ClassDetailMediator extends Mediator {
         this.view.setData(this.character.name, this.character.description, stars, this.playerModel.charList.bestLevel(this.character.id), honor);
         var nextStarHonor:int = HonorUtil.nextStarHonor(honor, 0);
         this.view.setNextGoal(this.character.name, nextStarHonor);
+        CharacterSkinView.positionStuff.dispatch();
     }
 
     private function onFocusSet(skin:CharacterSkin = null):void {

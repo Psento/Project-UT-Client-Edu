@@ -48,7 +48,6 @@ public class NewCharacterScreen extends Sprite {
         this.isInitialized = true;
         this.backButton_ = new TitleMenuOption("back", 36, false);
         this.backButton_.addEventListener(MouseEvent.CLICK, this.onBackClick);
-        addChild(this.backButton_);
         this.currencyDisplay_ = new CurrencyDisplay();
         this.currencyDisplay_.draw(model.getTsavorite(), model.getMedallions(), model.getHonor());
         addChild(this.currencyDisplay_);
@@ -65,6 +64,8 @@ public class NewCharacterScreen extends Sprite {
             charBox.characterSelectClicked_.add(this.onCharBoxClick);
             addChild(charBox);
         }
+        addChild(this.backButton_);
+
         positionStuff();
     }
     private function positionStuff(e:Event = null):void {

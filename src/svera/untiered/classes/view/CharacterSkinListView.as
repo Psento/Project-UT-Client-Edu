@@ -3,7 +3,7 @@ import flash.display.DisplayObject;
 import flash.display.Sprite;
 
 import svera.lib.ui.api.Size;
-import svera.untiered.util.components.VerticalScrollingList;
+import svera.untiered.util.components.HorizontalScrollingList;
 
 public class CharacterSkinListView extends Sprite {
     public static const PADDING:int = 5;
@@ -11,15 +11,15 @@ public class CharacterSkinListView extends Sprite {
     public static const HEIGHT:int = 400;
 
 
-    private const list:VerticalScrollingList = makeList();
+    private const list:HorizontalScrollingList = makeList();
     private var items:Vector.<DisplayObject>;
 
     public function CharacterSkinListView() {
         super();
     }
 
-    private function makeList():VerticalScrollingList {
-        var list:VerticalScrollingList = new VerticalScrollingList();
+    private function makeList():HorizontalScrollingList {
+        var list:HorizontalScrollingList = new HorizontalScrollingList();
         list.setSize(new Size(WIDTH, HEIGHT));
         list.scrollStateChanged.add(this.onScrollStateChanged);
         list.setPadding(PADDING);
@@ -37,11 +37,11 @@ public class CharacterSkinListView extends Sprite {
         var item:CharacterSkinListItem = null;
         var width:int = CharacterSkinListItem.WIDTH;
         if (!isVisible) {
-            width = width + VerticalScrollingList.SCROLLBAR_GUTTER;
+            width = width + HorizontalScrollingList.SCROLLBAR_GUTTER;
         }
-        for each(item in this.items) {
+/*        for each(item in this.items) {
             item.setWidth(width);
-        }
+        }*/
     }
 
     public function getListHeight():Number {

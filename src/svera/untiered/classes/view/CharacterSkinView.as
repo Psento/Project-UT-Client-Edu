@@ -16,6 +16,7 @@ public class CharacterSkinView extends Sprite {
     private var playBtn:TitleMenuOption;
     public var play:Signal;
     public var back:Signal;
+    public static var positionStuff:Signal;
 
     public function CharacterSkinView() {
         super();
@@ -27,12 +28,12 @@ public class CharacterSkinView extends Sprite {
         var backBtn:TitleMenuOption = makeBackButton();
         play = new NativeMappedSignal(playBtn, MouseEvent.CLICK);
         back = new NativeMappedSignal(backBtn, MouseEvent.CLICK);
-        makeListView();
+        positionStuff = new Signal();
         makeClassDetailView();
     }
 
     private function makeScreenBase():ScreenBase {
-        var base:ScreenBase = new ScreenBase();
+        var base:ScreenBase = new ScreenBase(2);
         addChild(base);
         return base;
     }
@@ -59,7 +60,7 @@ public class CharacterSkinView extends Sprite {
         shape.graphics.lineTo(GameClient.StageWidth, 105);
         shape.graphics.moveTo(346, 105);
         shape.graphics.lineTo(346, GameClient.StageHeight - (600 - 526));
-        addChild(shape);
+        //addChild(shape);
         return shape;
     }
 
@@ -80,19 +81,38 @@ public class CharacterSkinView extends Sprite {
         return option;
     }
 
-    private function makeListView():CharacterSkinListView {
-        var view:CharacterSkinListView = new CharacterSkinListView();
-        view.x = 351;
-        view.y = 110;
-        addChild(view);
-        return view;
-    }
 
     private function makeClassDetailView():ClassDetailView {
         var view:ClassDetailView = new ClassDetailView();
-        view.x = 5;
-        view.y = 110;
+
         addChild(view);
+
+        var skinListView:CharacterSkinListView = new CharacterSkinListView();
+
+        addChild(skinListView);
+
+        var leftSkin:TitleMenuOption = new TitleMenuOption(">", 16, true, true);
+        var rightSkin:TitleMenuOption = new TitleMenuOption("<", 16, true, true);
+
+
+        positionStuff.addOnce(function ():void {
+            view.x = (width - view.width) / 2;
+            view.y = (GameClient.StageHeight - view.height) / 2;
+
+            skinListView.x = (width - skinListView.width) / 2;
+            skinListView.y = view.y + skinListView.height;
+
+            leftSkin.x = view.x + view.width + leftSkin.width;
+            leftSkin.y = view.y + view.height / 2;
+
+            rightSkin.x = view.x - rightSkin.width;
+            rightSkin.y = leftSkin.y;
+        });
+
+
+        addChild(leftSkin);
+        addChild(rightSkin);
+
         return view;
     }
 

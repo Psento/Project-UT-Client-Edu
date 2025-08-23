@@ -1,4 +1,5 @@
 package svera.untiered.classes.view {
+import com.company.assembleegameclient.screens.charrects.CharacterRect;
 import com.company.assembleegameclient.util.Currency;
 import com.company.ui.SimpleText;
 import com.company.util.MoreColorUtil;
@@ -22,15 +23,14 @@ import svera.untiered.util.components.RadioButton;
 import svera.untiered.util.components.api.BuyButton;
 
 public class CharacterSkinListItem extends Sprite {
-    public static const WIDTH:int = 420;
-    public static const PADDING:int = 16;
-    public static const HEIGHT:int = 60;
+    public static const WIDTH:int = 96;
+    public static const HEIGHT:int = 123;
     private static const HIGHLIGHTED_COLOR:uint = 8092539;
     private static const AVAILABLE_COLOR:uint = 5921370;
     private static const LOCKED_COLOR:uint = 2631720;
 
     private const grayscaleMatrix:ColorMatrixFilter = new ColorMatrixFilter(MoreColorUtil.greyscaleFilterMatrix);
-    private const background:Shape = makeBackground();
+    private const bg:Bitmap = makeBg();
     private const skinContainer:Sprite = makeSkinContainer();
     private const nameText:SimpleText = makeNameText();
     private const selectionButton:RadioButton = makeSelectionButton();
@@ -48,32 +48,32 @@ public class CharacterSkinListItem extends Sprite {
     private var buyButton:BuyButton;
     private var isOver:Boolean;
 
+
     public function CharacterSkinListItem() {
         this.state = CharacterSkinState.NULL;
+
         super();
     }
-
-    private function makeBackground():Shape {
-        var shape:Shape = new Shape();
-        this.drawBackground(shape.graphics, WIDTH);
-        addChild(shape);
-        return shape;
+    private function makeBg():Bitmap {
+        var bg2:Bitmap = new Bitmap(new CharacterRect.charBg().bitmapData)
+        addChild(bg2);
+        return bg2;
     }
-
     private function makeSkinContainer():Sprite {
         var sprite:Sprite = new Sprite();
-        sprite.x = 8;
-        sprite.y = 4;
+        sprite.x = 20; //TODO: make not hardcoded maybe
+        sprite.y = 40;
         addChild(sprite);
         return sprite;
     }
 
     private function makeNameText():SimpleText {
         var text:SimpleText = new SimpleText(18, 16777215, false, 0, 0);
-        text.x = 75;
-        text.y = 15;
+
         text.setBold(true);
         text.filters = [new DropShadowFilter(0, 0, 0, 1, 8, 8)];
+        text.updateMetrics();
+
         addChild(text);
         return text;
     }
@@ -81,8 +81,8 @@ public class CharacterSkinListItem extends Sprite {
     private function makeSelectionButton():RadioButton {
         var button:RadioButton = new RadioButton();
         button.setSelected(false);
-        button.x = WIDTH - button.width - 15;
-        button.y = HEIGHT / 2 - button.height / 2;
+        button.x = 2;
+        button.y = 0;
         addChild(button);
         return button;
     }
@@ -110,8 +110,8 @@ public class CharacterSkinListItem extends Sprite {
 
     private function makeBuyButtonContainer():Sprite {
         var container:Sprite = new Sprite();
-        container.x = WIDTH - PADDING;
-        container.y = HEIGHT * 0.5;
+        container.x = width / 2;
+        container.y = 0;
         addChild(container);
         return container;
     }
@@ -120,8 +120,8 @@ public class CharacterSkinListItem extends Sprite {
         this.buyButton = buyButton;
         this.model && this.setCost();
         this.buyButtonContainer.addChild(buyButton);
-        buyButton.x = -buyButton.width;
-        buyButton.y = -buyButton.height * 0.5;
+        buyButton.x = -buyButton.width / 2;
+        buyButton.y = -buyButton.height - 2;
         this.buyButtonContainer.visible = this.state == CharacterSkinState.PURCHASABLE;
     }
 
@@ -158,15 +158,17 @@ public class CharacterSkinListItem extends Sprite {
     }
 
     private function updateName():void {
-        this.nameText.text = Boolean(this.model) ? this.model.name : "";
-        this.nameText.updateMetrics();
+        nameText.text = Boolean(this.model) ? this.model.name : "";
+        nameText.updateMetrics();
+        nameText.x = (WIDTH - nameText.width) / 2;
+        nameText.y = HEIGHT - nameText.textHeight;
     }
 
     private function updateState():void {
-        this.setButtonVisibilities();
-        this.updateBackground();
-        this.setEventListeners();
-        this.updateGrayFilter();
+        setButtonVisibilities();
+        updateBackground();
+        setEventListeners();
+        updateGrayFilter();
     }
 
     private function setButtonVisibilities():void {
@@ -187,9 +189,9 @@ public class CharacterSkinListItem extends Sprite {
     }
 
     private function setCost():void {
-        var cost:int = Boolean(this.model) ? int(this.model.cost) : int(0);
+        var cost:int = Boolean(model) ? model.cost : 0;
         this.buyButton.setPrice(cost, Currency.TSAVORITE);
-        this.buyButton.setWidth(120);
+        this.buyButton.setWidth(50);
     }
 
     public function getIsSelected():Boolean {
@@ -235,9 +237,9 @@ public class CharacterSkinListItem extends Sprite {
     }
 
     private function updateBackground():void {
-        var ct:ColorTransform = this.background.transform.colorTransform;
+        var ct:ColorTransform = bg.transform.colorTransform;
         ct.color = this.getColor();
-        this.background.transform.colorTransform = ct;
+        bg.transform.colorTransform = ct;
     }
 
     private function getColor():uint {
@@ -252,21 +254,6 @@ public class CharacterSkinListItem extends Sprite {
 
     private function updateGrayFilter():void {
         filters = this.state == CharacterSkinState.PURCHASING ? [this.grayscaleMatrix] : [];
-    }
-
-    public function setWidth(width:int):void {
-        this.buyButtonContainer.x = width - PADDING;
-        this.purchasingText.x = width - this.purchasingText.width - 15;
-        this.lock.x = this.purchasingText.x - this.lock.width - 5;
-        this.selectionButton.x = width - this.selectionButton.width - 15;
-        this.drawBackground(this.background.graphics, width);
-    }
-
-    private function drawBackground(graphics:Graphics, width:int):void {
-        graphics.clear();
-        graphics.beginFill(AVAILABLE_COLOR);
-        graphics.drawRect(0, 0, width, HEIGHT);
-        graphics.endFill();
     }
 }
 }

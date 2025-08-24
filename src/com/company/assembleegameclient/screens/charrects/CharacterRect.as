@@ -14,7 +14,7 @@ public class CharacterRect extends Sprite {
     private var box_:Shape;
     public var selectContainer:Sprite;
     [Embed(source="CharacterRectBg.png")]
-    private static var charBg:Class;
+    public static var charBg:Class;
     private var bg:Bitmap = new Bitmap(new charBg().bitmapData);
 
     public function CharacterRect(color:uint, overColor:uint) {
@@ -23,8 +23,8 @@ public class CharacterRect extends Sprite {
         this.overColor_ = overColor;
         this.box_ = new Shape();
         //this.drawBox(false);
-        addChild(bg);
         //addChild(this.box_);
+        addChild(bg);
         addEventListener(MouseEvent.MOUSE_OVER, this.onMouseOver);
         addEventListener(MouseEvent.ROLL_OUT, this.onRollOut);
     }

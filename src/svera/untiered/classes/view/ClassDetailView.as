@@ -15,7 +15,7 @@ import svera.untiered.util.components.StarsView;
 public class ClassDetailView extends Sprite {
     private static const RIGHT_JUSTIFICATION_STATS:int = 205;
 
-    private static const WIDTH:int = 344;
+    private static const WIDTH:int = 250;
 
     private static const TEXT_WIDTH:int = 188;
 
@@ -52,13 +52,14 @@ public class ClassDetailView extends Sprite {
         dropShadowFilter = new DropShadowFilter(0, 0, 0, 1, 8, 8);
         this.animContainer = new Sprite();
         addChild(this.animContainer);
-        this.classNameText = new SimpleText(20, 16777215, false, 0, 0);
+        this.classNameText = new SimpleText(20, 16777215, false, TEXT_WIDTH, 0);
         this.classNameText.setBold(true);
         this.classNameText.filters = [dropShadowFilter];
         this.classNameText.width = TEXT_WIDTH;
         this.classNameText.autoSize = TextFieldAutoSize.CENTER;
+
         addChild(this.classNameText);
-        this.classDescriptionText = new SimpleText(14, 16777215, false, 0, 0);
+        this.classDescriptionText = new SimpleText(14, 16777215, false, TEXT_WIDTH, 0);
         this.classDescriptionText.filters = [dropShadowFilter];
         this.classDescriptionText.width = TEXT_WIDTH;
         this.classDescriptionText.wordWrap = true;
@@ -113,7 +114,9 @@ public class ClassDetailView extends Sprite {
 
     public function setData(name:String, description:String, stars:int, highestLevel:int, highestHonor:int):void {
         this.classNameText.text = name;
+        classNameText.updateMetrics();
         this.classDescriptionText.text = description;
+        classDescriptionText.updateMetrics();
         this.levelText.text = String(highestLevel);
         this.levelText.updateMetrics();
         this.questCompletedStars.setStars(stars);
@@ -153,26 +156,37 @@ public class ClassDetailView extends Sprite {
     private function layout():void {
         this.animContainer.x = WIDTH / 2 - this.animContainer.width / 2;
         this.animContainer.y = 110 - this.animContainer.height;
+
         this.classNameText.x = WIDTH / 2 - this.classNameText.width / 2;
         this.classNameText.y = 110;
+
         this.classDescriptionText.y = this.classNameText.y + this.classNameText.textHeight + 5;
         this.classDescriptionText.x = WIDTH / 2 - this.classDescriptionText.width / 2;
+
         this.questCompletionText.y = this.classDescriptionText.y + this.classDescriptionText.textHeight + 20;
         this.questCompletionText.x = RIGHT_JUSTIFICATION_STATS - this.questCompletionText.width;
+
         this.questCompletedStars.y = this.questCompletionText.y;
         this.questCompletedStars.x = RIGHT_JUSTIFICATION_STATS + 18;
+
         this.levelTitleText.y = this.questCompletionText.y + this.questCompletionText.height + 5;
         this.levelTitleText.x = RIGHT_JUSTIFICATION_STATS - this.levelTitleText.width;
+
         this.levelText.y = this.levelTitleText.y;
         this.levelText.x = RIGHT_JUSTIFICATION_STATS + 18;
+
         this.honorTitleText.y = this.levelTitleText.y + this.levelTitleText.height + 5;
         this.honorTitleText.x = RIGHT_JUSTIFICATION_STATS - this.honorTitleText.width;
+
         this.honorText.y = this.honorTitleText.y;
         this.honorText.x = RIGHT_JUSTIFICATION_STATS + 18;
+
         this.honorIcon.y = this.honorTitleText.y - 7;
         this.honorIcon.x = this.honorText.x + this.honorText.textWidth - 3;
+
         this.nextGoalText.y = this.honorTitleText.y + this.honorTitleText.height + 17;
         this.nextGoalText.x = WIDTH / 2 - this.nextGoalText.width / 2;
+
         this.nextGoalDetailText.y = this.nextGoalText.y + this.nextGoalText.height;
         this.nextGoalDetailText.x = WIDTH / 2 - this.nextGoalDetailText.width / 2;
     }

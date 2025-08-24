@@ -1,6 +1,7 @@
 package com.company.assembleegameclient.screens {
 import com.company.assembleegameclient.appengine.CharacterStats;
 import com.company.assembleegameclient.appengine.SavedCharacter;
+import com.company.assembleegameclient.screens.charrects.CharacterRect;
 import com.company.assembleegameclient.ui.tooltip.ClassToolTip;
 import com.company.assembleegameclient.ui.tooltip.ToolTip;
 import com.company.assembleegameclient.util.AnimatedChar;
@@ -44,9 +45,8 @@ public class CharacterBox extends Sprite {
     public var poseStart_:int = -2147483648;
     public var poseDir_:int;
     public var poseAction_:int;
-    [Embed(source="charrects/CharacterRectBg.png")]
-    private static var charBg:Class;
-    private var bg:Bitmap = new Bitmap(new charBg().bitmapData);
+
+    private var bg:Bitmap = new Bitmap(new CharacterRect.charBg().bitmapData);
     private var graphic_:Sprite = new Sprite();
 
     public function CharacterBox(playerXML:XML, charStats:CharacterStats, model:PlayerModel) {

@@ -41,13 +41,13 @@ public class CharacterSkinListItemFactory {
     }
 
     private function makeBuyButton():LegacyBuyButton {
-        var button:LegacyBuyButton = new LegacyBuyButton("Buy for ", 16, 0, Currency.TSAVORITE);
-        button.setWidth(120);
+        var button:LegacyBuyButton = new LegacyBuyButton("", 16, 0, Currency.TSAVORITE);
+        button.setWidth(40);
         return button;
     }
 
     private function makeIcon(model:CharacterSkin):Bitmap {
-        var data:BitmapData = this.characters.makeIcon(model.template, 50);
+        var data:BitmapData = this.characters.makeIcon(model.template, 100);
         return new Bitmap(data);
     }
 }

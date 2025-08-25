@@ -1,8 +1,6 @@
 package com.company.assembleegameclient.screens {
 import com.company.assembleegameclient.objects.ObjectLibrary;
 
-import flash.display.Bitmap;
-
 import flash.display.Sprite;
 import flash.events.Event;
 import flash.events.MouseEvent;
@@ -17,15 +15,15 @@ import svera.untiered.ui.view.components.ScreenBase;
 public class NewCharacterScreen extends Sprite {
     private var backButton_:TitleMenuOption;
     private var currencyDisplay_:CurrencyDisplay;
-    private var boxes_:Dictionary;
     public var tooltip:Signal;
     public var close:Signal;
     public var selected:Signal;
     private var isInitialized:Boolean = false;
+    private var boxes_:Vector.<Dictionary>;
 
 
     public function NewCharacterScreen() {
-        this.boxes_ = new Dictionary();
+        this.boxes_ = new Vector.<Dictionary>(4,true);
         super();
         this.tooltip = new Signal(Sprite);
         this.selected = new Signal(int);
@@ -52,13 +50,30 @@ public class NewCharacterScreen extends Sprite {
         this.currencyDisplay_.draw(model.getTsavorite(), model.getMedallions(), model.getHonor());
         addChild(this.currencyDisplay_);
 
+        function strToRange(s:String):int {
+            if (s == 'tiny')
+                return 0;
+            if (s == 'short')
+                return 1;
+            if (s == "medium")
+                return 2;
+            if (s == 'long')
+                return 3;
+        }
+
         for (var i:int = 0; i < ObjectLibrary.playerChars_.length; i++) {
             playerXML = ObjectLibrary.playerChars_[i];
             objectType = int(playerXML.@type);
             characterType = playerXML.@id;
-
+            if (playerXML.hasOwnProperty("SubClassOf")) {
+                continue;
+            }
             charBox = new CharacterBox(playerXML, model.getCharStats()[objectType], model);
-            this.boxes_[objectType] = charBox;
+            var range:int = strToRange(playerXML.Range);
+            if (boxes_.length < range || boxes_[range] == null) {
+                boxes_[range] = new Dictionary();
+            }
+            boxes_[range][objectType] = charBox;
             charBox.addEventListener(MouseEvent.ROLL_OVER, this.onCharBoxOver);
             charBox.addEventListener(MouseEvent.ROLL_OUT, this.onCharBoxOut);
             charBox.characterSelectClicked_.add(this.onCharBoxClick);
@@ -68,6 +83,7 @@ public class NewCharacterScreen extends Sprite {
 
         positionStuff();
     }
+
     private function positionStuff(e:Event = null):void {
         this.backButton_.x = GameClient.HalfStageWidth - this.backButton_.width / 2;
         this.backButton_.y = GameClient.StageHeight - (600 - 524);
@@ -75,15 +91,21 @@ public class NewCharacterScreen extends Sprite {
         this.currencyDisplay_.y = 20;
 
         var charBox:CharacterBox;
+        var range:Dictionary;
         var stripLen:int = (GameClient.StageWidth - CharacterSelectionAndNewsScreen.brickRightContainer.width) / 140;
 
-        var i:int = 0;
-        for each(charBox in boxes_){
-            charBox.x = 115 + 140 * int(i % stripLen) + 70 - charBox.width / 2;
-            charBox.y = 153 + 140 * int(i / stripLen);
-            i++;
+        var j:int = 0;
+        for each(range in boxes_) {
+            var i:int = 0;
+            for each(charBox in range) {
+                charBox.x = 115 + 140 * int(i % 2 + j) + 140 * j + 70 - charBox.width / 2;
+                charBox.y = 153 + 140 * int(i / 2);
+                i++;
+            }
+            j++;
         }
     }
+
     private function onBackClick(event:Event):void {
         this.close.dispatch();
     }

@@ -10,7 +10,7 @@
         </AnimatedTexture>
         <HitSound>player/rogue_hit</HitSound>
         <DeathSound>player/rogue_death</DeathSound>
-        <Player/>
+        <Player />
         <BloodProb>1.0</BloodProb>
         <SlotTypes>17, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
         <Equipment>0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</Equipment>
@@ -23,6 +23,8 @@
         <Dexterity max="75">15</Dexterity>
         <HpRegen max="40">15</HpRegen>
         <MpRegen max="50">10</MpRegen>
+        <Range>tiny</Range>
+        <SubClasses>Demon-Spawn,Void-Crawler,Druid</SubClasses>
     </Object>
     <Object type="0x301" id="Striker">
         <Class>Player</Class>
@@ -33,7 +35,7 @@
         </AnimatedTexture>
         <HitSound>player/rogue_hit</HitSound>
         <DeathSound>player/rogue_death</DeathSound>
-        <Player/>
+        <Player />
         <BloodProb>1.0</BloodProb>
         <SlotTypes>17, 29, 30, 31, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
         <Equipment>0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</Equipment>
@@ -46,6 +48,8 @@
         <Dexterity max="75">15</Dexterity>
         <HpRegen max="40">15</HpRegen>
         <MpRegen max="50">10</MpRegen>
+        <Range>tiny</Range>
+        <SubClasses>Brawler,Tactician,Fighter</SubClasses>
     </Object>
     <Object type="0x302" id="Reaver">
         <Class>Player</Class>
@@ -56,7 +60,7 @@
         </AnimatedTexture>
         <HitSound>player/rogue_hit</HitSound>
         <DeathSound>player/rogue_death</DeathSound>
-        <Player/>
+        <Player />
         <BloodProb>1.0</BloodProb>
         <SlotTypes>3, 32, 33, 34, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
         <Equipment>0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</Equipment>
@@ -69,6 +73,8 @@
         <Dexterity max="75">15</Dexterity>
         <HpRegen max="40">15</HpRegen>
         <MpRegen max="50">10</MpRegen>
+        <Range>tiny</Range>
+        <SubClasses>Shaman,Monk,Duelist</SubClasses>
     </Object>
     <Object type="0x303" id="Scout">
         <Class>Player</Class>
@@ -79,7 +85,7 @@
         </AnimatedTexture>
         <HitSound>player/rogue_hit</HitSound>
         <DeathSound>player/rogue_death</DeathSound>
-        <Player/>
+        <Player />
         <BloodProb>1.0</BloodProb>
         <SlotTypes>24, 35, 36, 37, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
         <Equipment>0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</Equipment>
@@ -92,6 +98,8 @@
         <Dexterity max="75">15</Dexterity>
         <HpRegen max="40">15</HpRegen>
         <MpRegen max="50">10</MpRegen>
+        <Range>tiny</Range>
+        <SubClasses>Blade-Dancer,Hunter,Shadow</SubClasses>
     </Object>
 
     <!-- Short Range Classes -->
@@ -104,7 +112,7 @@
         </AnimatedTexture>
         <HitSound>player/rogue_hit</HitSound>
         <DeathSound>player/rogue_death</DeathSound>
-        <Player/>
+        <Player />
         <BloodProb>1.0</BloodProb>
         <SlotTypes>25, 38, 39, 40, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
         <Equipment>0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</Equipment>
@@ -117,6 +125,8 @@
         <Dexterity max="75">15</Dexterity>
         <HpRegen max="40">15</HpRegen>
         <MpRegen max="50">10</MpRegen>
+        <Range>short</Range>
+        <SubClasses>Marauder,Barbarian,Berserker</SubClasses>
     </Object>
     <Object type="0x305" id="Warlock">
         <Class>Player</Class>
@@ -127,7 +137,7 @@
         </AnimatedTexture>
         <HitSound>player/rogue_hit</HitSound>
         <DeathSound>player/rogue_death</DeathSound>
-        <Player/>
+        <Player />
         <BloodProb>1.0</BloodProb>
         <SlotTypes>3, 41, 42, 43, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
         <Equipment>0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</Equipment>
@@ -140,6 +150,8 @@
         <Dexterity max="75">15</Dexterity>
         <HpRegen max="40">15</HpRegen>
         <MpRegen max="50">10</MpRegen>
+        <Range>short</Range>
+        <SubClasses>Defender,Beast-Master,Crusader</SubClasses>
     </Object>
     <Object type="0x306" id="Swashbuckler">
         <Class>Player</Class>
@@ -150,7 +162,7 @@
         </AnimatedTexture>
         <HitSound>player/rogue_hit</HitSound>
         <DeathSound>player/rogue_death</DeathSound>
-        <Player/>
+        <Player />
         <BloodProb>1.0</BloodProb>
         <SlotTypes>3, 44, 45, 46, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
         <Equipment>0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</Equipment>
@@ -163,6 +175,8 @@
         <Dexterity max="75">15</Dexterity>
         <HpRegen max="40">15</HpRegen>
         <MpRegen max="50">10</MpRegen>
+        <Range>short</Range>
+        <SubClasses>General,Gladiator,Guardian</SubClasses>
     </Object>
     <Object type="0x307" id="Lancer">
         <Class>Player</Class>
@@ -173,7 +187,7 @@
         </AnimatedTexture>
         <HitSound>player/rogue_hit</HitSound>
         <DeathSound>player/rogue_death</DeathSound>
-        <Player/>
+        <Player />
         <BloodProb>1.0</BloodProb>
         <SlotTypes>1, 47, 48, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
         <Equipment>0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</Equipment>
@@ -186,6 +200,8 @@
         <Dexterity max="75">15</Dexterity>
         <HpRegen max="40">15</HpRegen>
         <MpRegen max="50">10</MpRegen>
+        <Range>short</Range>
+        <SubClasses>Dragoon,Dragon-Rider,Royal-Guard</SubClasses>
     </Object>
     <Object type="0x308" id="Ronin">
         <Class>Player</Class>
@@ -196,7 +212,7 @@
         </AnimatedTexture>
         <HitSound>player/rogue_hit</HitSound>
         <DeathSound>player/rogue_death</DeathSound>
-        <Player/>
+        <Player />
         <BloodProb>1.0</BloodProb>
         <SlotTypes>4, 50, 51, 52, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
         <Equipment>0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</Equipment>
@@ -209,6 +225,8 @@
         <Dexterity max="75">15</Dexterity>
         <HpRegen max="40">15</HpRegen>
         <MpRegen max="50">10</MpRegen>
+        <Range>short</Range>
+        <SubClasses>Shogun,Zealot,Sword-Master</SubClasses>
     </Object>
     <Object type="0x309" id="Harvester">
         <Class>Player</Class>
@@ -219,7 +237,7 @@
         </AnimatedTexture>
         <HitSound>player/rogue_hit</HitSound>
         <DeathSound>player/rogue_death</DeathSound>
-        <Player/>
+        <Player />
         <BloodProb>1.0</BloodProb>
         <SlotTypes>17, 53, 54, 55, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
         <Equipment>0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</Equipment>
@@ -232,6 +250,8 @@
         <Dexterity max="75">15</Dexterity>
         <HpRegen max="40">15</HpRegen>
         <MpRegen max="50">10</MpRegen>
+        <Range>short</Range>
+        <SubClasses>Jester,Warlord,Reaper</SubClasses>
     </Object>
 
     <!-- Medium Range Classes -->
@@ -244,7 +264,7 @@
         </AnimatedTexture>
         <HitSound>player/rogue_hit</HitSound>
         <DeathSound>player/rogue_death</DeathSound>
-        <Player/>
+        <Player />
         <BloodProb>1.0</BloodProb>
         <SlotTypes>2, 0, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
         <Equipment>0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</Equipment>
@@ -257,6 +277,8 @@
         <Dexterity max="75">15</Dexterity>
         <HpRegen max="40">15</HpRegen>
         <MpRegen max="50">10</MpRegen>
+        <Range>medium</Range>
+        <SubClasses>Spinner,Artificer,Pyromancer</SubClasses>
     </Object>
     <Object type="0x30B" id="Mage">
         <Class>Player</Class>
@@ -267,7 +289,7 @@
         </AnimatedTexture>
         <HitSound>player/rogue_hit</HitSound>
         <DeathSound>player/rogue_death</DeathSound>
-        <Player/>
+        <Player />
         <BloodProb>1.0</BloodProb>
         <SlotTypes>8, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
         <Equipment>0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</Equipment>
@@ -280,6 +302,8 @@
         <Dexterity max="75">15</Dexterity>
         <HpRegen max="40">15</HpRegen>
         <MpRegen max="50">10</MpRegen>
+        <Range>medium</Range>
+        <SubClasses>Lich,Elementalist,Thaumaturge</SubClasses>
     </Object>
 
     <!-- Long Range Classes -->
@@ -292,7 +316,7 @@
         </AnimatedTexture>
         <HitSound>player/rogue_hit</HitSound>
         <DeathSound>player/rogue_death</DeathSound>
-        <Player/>
+        <Player />
         <BloodProb>1.0</BloodProb>
         <SlotTypes>8, 0, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
         <Equipment>0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</Equipment>
@@ -305,6 +329,8 @@
         <Dexterity max="75">15</Dexterity>
         <HpRegen max="40">15</HpRegen>
         <MpRegen max="50">10</MpRegen>
+        <Range>long</Range>
+        <SubClasses>Engineer,Grenadier,Commando</SubClasses>
     </Object>
     <Object type="0x30D" id="BoltCaster">
         <Class>Player</Class>
@@ -315,7 +341,7 @@
         </AnimatedTexture>
         <HitSound>player/rogue_hit</HitSound>
         <DeathSound>player/rogue_death</DeathSound>
-        <Player/>
+        <Player />
         <BloodProb>1.0</BloodProb>
         <SlotTypes>3, 0, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
         <Equipment>0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</Equipment>
@@ -328,6 +354,8 @@
         <Dexterity max="75">15</Dexterity>
         <HpRegen max="40">15</HpRegen>
         <MpRegen max="50">10</MpRegen>
+        <Range>long</Range>
+        <SubClasses>Onii-Hunter,Trapper,Bounty-Hunter</SubClasses>
     </Object>
     <Object type="0x30E" id="Enchanter">
         <Class>Player</Class>
@@ -338,7 +366,7 @@
         </AnimatedTexture>
         <HitSound>player/rogue_hit</HitSound>
         <DeathSound>player/rogue_death</DeathSound>
-        <Player/>
+        <Player />
         <BloodProb>1.0</BloodProb>
         <SlotTypes>25, 0, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
         <Equipment>0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</Equipment>
@@ -351,6 +379,8 @@
         <Dexterity max="75">15</Dexterity>
         <HpRegen max="40">15</HpRegen>
         <MpRegen max="50">10</MpRegen>
+        <Range>long</Range>
+        <SubClasses>Medic,Bard,Magus</SubClasses>
     </Object>
     <Object type="0x30F" id="Sharpshooter">
         <Class>Player</Class>
@@ -361,7 +391,7 @@
         </AnimatedTexture>
         <HitSound>player/rogue_hit</HitSound>
         <DeathSound>player/rogue_death</DeathSound>
-        <Player/>
+        <Player />
         <BloodProb>1.0</BloodProb>
         <SlotTypes>1, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
         <Equipment>0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</Equipment>
@@ -374,6 +404,8 @@
         <Dexterity max="75">15</Dexterity>
         <HpRegen max="40">15</HpRegen>
         <MpRegen max="50">10</MpRegen>
+        <Range>long</Range>
+        <SubClasses>Ranger,Bullseye,Marksman</SubClasses>
     </Object>
 
     <!-- SPECIALIZATIONS -->
@@ -388,7 +420,7 @@
         </AnimatedTexture>
         <HitSound>player/rogue_hit</HitSound>
         <DeathSound>player/rogue_death</DeathSound>
-        <Player/>
+        <Player />
         <BloodProb>1.0</BloodProb>
         <SlotTypes>17, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
         <Equipment>0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</Equipment>
@@ -401,6 +433,8 @@
         <Dexterity max="75">15</Dexterity>
         <HpRegen max="40">15</HpRegen>
         <MpRegen max="50">10</MpRegen>
+        <Range>tiny</Range>
+        <SubClassOf>Beast</SubClassOf>
     </Object>
     <Object type="0x311" id="Void-Crawler">
         <Class>Player</Class>
@@ -411,7 +445,7 @@
         </AnimatedTexture>
         <HitSound>player/rogue_hit</HitSound>
         <DeathSound>player/rogue_death</DeathSound>
-        <Player/>
+        <Player />
         <BloodProb>1.0</BloodProb>
         <SlotTypes>17, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
         <Equipment>0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</Equipment>
@@ -424,6 +458,8 @@
         <Dexterity max="75">15</Dexterity>
         <HpRegen max="40">15</HpRegen>
         <MpRegen max="50">10</MpRegen>
+        <Range>tiny</Range>
+        <SubClassOf>Beast</SubClassOf>
     </Object>
     <Object type="0x312" id="Druid">
         <Class>Player</Class>
@@ -434,7 +470,7 @@
         </AnimatedTexture>
         <HitSound>player/rogue_hit</HitSound>
         <DeathSound>player/rogue_death</DeathSound>
-        <Player/>
+        <Player />
         <BloodProb>1.0</BloodProb>
         <SlotTypes>17, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
         <Equipment>0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</Equipment>
@@ -447,6 +483,8 @@
         <Dexterity max="75">15</Dexterity>
         <HpRegen max="40">15</HpRegen>
         <MpRegen max="50">10</MpRegen>
+        <Range>tiny</Range>
+        <SubClassOf>Beast</SubClassOf>
     </Object>
 
     <!-- Striker Specializations -->
@@ -459,7 +497,7 @@
         </AnimatedTexture>
         <HitSound>player/rogue_hit</HitSound>
         <DeathSound>player/rogue_death</DeathSound>
-        <Player/>
+        <Player />
         <BloodProb>1.0</BloodProb>
         <SlotTypes>17, 29, 30, 31, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
         <Equipment>0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</Equipment>
@@ -472,6 +510,8 @@
         <Dexterity max="75">15</Dexterity>
         <HpRegen max="40">15</HpRegen>
         <MpRegen max="50">10</MpRegen>
+        <Range>tiny</Range>
+        <SubClassOf>Striker</SubClassOf>
     </Object>
     <Object type="0x314" id="Tactician">
         <Class>Player</Class>
@@ -482,7 +522,7 @@
         </AnimatedTexture>
         <HitSound>player/rogue_hit</HitSound>
         <DeathSound>player/rogue_death</DeathSound>
-        <Player/>
+        <Player />
         <BloodProb>1.0</BloodProb>
         <SlotTypes>17, 53, 54, 55, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
         <Equipment>0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</Equipment>
@@ -495,6 +535,8 @@
         <Dexterity max="75">15</Dexterity>
         <HpRegen max="40">15</HpRegen>
         <MpRegen max="50">10</MpRegen>
+        <Range>tiny</Range>
+        <SubClassOf>Striker</SubClassOf>
     </Object>
     <Object type="0x315" id="Fighter">
         <Class>Player</Class>
@@ -505,7 +547,7 @@
         </AnimatedTexture>
         <HitSound>player/rogue_hit</HitSound>
         <DeathSound>player/rogue_death</DeathSound>
-        <Player/>
+        <Player />
         <BloodProb>1.0</BloodProb>
         <SlotTypes>17, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
         <Equipment>0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</Equipment>
@@ -518,6 +560,8 @@
         <Dexterity max="75">15</Dexterity>
         <HpRegen max="40">15</HpRegen>
         <MpRegen max="50">10</MpRegen>
+        <Range>tiny</Range>
+        <SubClassOf>Striker</SubClassOf>
     </Object>
 
     <!-- Reaver Specializations -->
@@ -530,7 +574,7 @@
         </AnimatedTexture>
         <HitSound>player/rogue_hit</HitSound>
         <DeathSound>player/rogue_death</DeathSound>
-        <Player/>
+        <Player />
         <BloodProb>1.0</BloodProb>
         <SlotTypes>21, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
         <Equipment>0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</Equipment>
@@ -543,6 +587,8 @@
         <Dexterity max="75">15</Dexterity>
         <HpRegen max="40">15</HpRegen>
         <MpRegen max="50">10</MpRegen>
+        <Range>tiny</Range>
+        <SubClassOf>Reaver</SubClassOf>
     </Object>
     <Object type="0x317" id="Monk">
         <Class>Player</Class>
@@ -553,7 +599,7 @@
         </AnimatedTexture>
         <HitSound>player/rogue_hit</HitSound>
         <DeathSound>player/rogue_death</DeathSound>
-        <Player/>
+        <Player />
         <BloodProb>1.0</BloodProb>
         <SlotTypes>21, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
         <Equipment>0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</Equipment>
@@ -566,6 +612,8 @@
         <Dexterity max="75">15</Dexterity>
         <HpRegen max="40">15</HpRegen>
         <MpRegen max="50">10</MpRegen>
+        <Range>tiny</Range>
+        <SubClassOf>Reaver</SubClassOf>
     </Object>
     <Object type="0x318" id="Duelist">
         <Class>Player</Class>
@@ -576,7 +624,7 @@
         </AnimatedTexture>
         <HitSound>player/rogue_hit</HitSound>
         <DeathSound>player/rogue_death</DeathSound>
-        <Player/>
+        <Player />
         <BloodProb>1.0</BloodProb>
         <SlotTypes>21, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
         <Equipment>0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</Equipment>
@@ -589,6 +637,8 @@
         <Dexterity max="75">15</Dexterity>
         <HpRegen max="40">15</HpRegen>
         <MpRegen max="50">10</MpRegen>
+        <Range>tiny</Range>
+        <SubClassOf>Reaver</SubClassOf>
     </Object>
 
     <!-- Scout Specializations -->
@@ -601,7 +651,7 @@
         </AnimatedTexture>
         <HitSound>player/rogue_hit</HitSound>
         <DeathSound>player/rogue_death</DeathSound>
-        <Player/>
+        <Player />
         <BloodProb>1.0</BloodProb>
         <SlotTypes>2, 0, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
         <Equipment>0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</Equipment>
@@ -614,6 +664,8 @@
         <Dexterity max="75">15</Dexterity>
         <HpRegen max="40">15</HpRegen>
         <MpRegen max="50">10</MpRegen>
+        <Range>tiny</Range>
+        <SubClassOf>Scout</SubClassOf>
     </Object>
     <Object type="0x31A" id="Hunter">
         <Class>Player</Class>
@@ -624,7 +676,7 @@
         </AnimatedTexture>
         <HitSound>player/rogue_hit</HitSound>
         <DeathSound>player/rogue_death</DeathSound>
-        <Player/>
+        <Player />
         <BloodProb>1.0</BloodProb>
         <SlotTypes>2, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
         <Equipment>0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</Equipment>
@@ -637,6 +689,8 @@
         <Dexterity max="75">15</Dexterity>
         <HpRegen max="40">15</HpRegen>
         <MpRegen max="50">10</MpRegen>
+        <Range>tiny</Range>
+        <SubClassOf>Scout</SubClassOf>
     </Object>
     <Object type="0x31B" id="Shadow">
         <Class>Player</Class>
@@ -647,7 +701,7 @@
         </AnimatedTexture>
         <HitSound>player/rogue_hit</HitSound>
         <DeathSound>player/rogue_death</DeathSound>
-        <Player/>
+        <Player />
         <BloodProb>1.0</BloodProb>
         <SlotTypes>2, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
         <Equipment>0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</Equipment>
@@ -660,6 +714,8 @@
         <Dexterity max="75">15</Dexterity>
         <HpRegen max="40">15</HpRegen>
         <MpRegen max="50">10</MpRegen>
+        <Range>tiny</Range>
+        <SubClassOf>Scout</SubClassOf>
     </Object>
 
     <!-- Short Range Specializations -->
@@ -673,7 +729,7 @@
         </AnimatedTexture>
         <HitSound>player/rogue_hit</HitSound>
         <DeathSound>player/rogue_death</DeathSound>
-        <Player/>
+        <Player />
         <BloodProb>1.0</BloodProb>
         <SlotTypes>1, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
         <Equipment>0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</Equipment>
@@ -686,6 +742,8 @@
         <Dexterity max="75">15</Dexterity>
         <HpRegen max="40">15</HpRegen>
         <MpRegen max="50">10</MpRegen>
+        <Range>short</Range>
+        <SubClassOf>Nomad</SubClassOf>
     </Object>
     <Object type="0x31D" id="Barbarian">
         <Class>Player</Class>
@@ -696,7 +754,7 @@
         </AnimatedTexture>
         <HitSound>player/rogue_hit</HitSound>
         <DeathSound>player/rogue_death</DeathSound>
-        <Player/>
+        <Player />
         <BloodProb>1.0</BloodProb>
         <SlotTypes>1, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
         <Equipment>0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</Equipment>
@@ -709,6 +767,8 @@
         <Dexterity max="75">15</Dexterity>
         <HpRegen max="40">15</HpRegen>
         <MpRegen max="50">10</MpRegen>
+        <Range>short</Range>
+        <SubClassOf>Nomad</SubClassOf>
     </Object>
     <Object type="0x31E" id="Berserker">
         <Class>Player</Class>
@@ -719,7 +779,7 @@
         </AnimatedTexture>
         <HitSound>player/rogue_hit</HitSound>
         <DeathSound>player/rogue_death</DeathSound>
-        <Player/>
+        <Player />
         <BloodProb>1.0</BloodProb>
         <SlotTypes>1, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
         <Equipment>0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</Equipment>
@@ -732,6 +792,8 @@
         <Dexterity max="75">15</Dexterity>
         <HpRegen max="40">15</HpRegen>
         <MpRegen max="50">10</MpRegen>
+        <Range>short</Range>
+        <SubClassOf>Nomad</SubClassOf>
     </Object>
 
     <!-- Warlock Specializations -->
@@ -744,7 +806,7 @@
         </AnimatedTexture>
         <HitSound>player/rogue_hit</HitSound>
         <DeathSound>player/rogue_death</DeathSound>
-        <Player/>
+        <Player />
         <BloodProb>1.0</BloodProb>
         <SlotTypes>4, 50, 51, 52, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
         <Equipment>0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</Equipment>
@@ -757,6 +819,8 @@
         <Dexterity max="75">15</Dexterity>
         <HpRegen max="40">15</HpRegen>
         <MpRegen max="50">10</MpRegen>
+        <Range>short</Range>
+        <SubClassOf>Warlock</SubClassOf>
     </Object>
     <Object type="0x320" id="Beast-Master">
         <Class>Player</Class>
@@ -767,7 +831,7 @@
         </AnimatedTexture>
         <HitSound>player/rogue_hit</HitSound>
         <DeathSound>player/rogue_death</DeathSound>
-        <Player/>
+        <Player />
         <BloodProb>1.0</BloodProb>
         <SlotTypes>4, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
         <Equipment>0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</Equipment>
@@ -780,6 +844,8 @@
         <Dexterity max="75">15</Dexterity>
         <HpRegen max="40">15</HpRegen>
         <MpRegen max="50">10</MpRegen>
+        <Range>short</Range>
+        <SubClassOf>Warlock</SubClassOf>
     </Object>
     <Object type="0x321" id="Crusader">
         <Class>Player</Class>
@@ -790,7 +856,7 @@
         </AnimatedTexture>
         <HitSound>player/rogue_hit</HitSound>
         <DeathSound>player/rogue_death</DeathSound>
-        <Player/>
+        <Player />
         <BloodProb>1.0</BloodProb>
         <SlotTypes>4, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
         <Equipment>0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</Equipment>
@@ -803,6 +869,8 @@
         <Dexterity max="75">15</Dexterity>
         <HpRegen max="40">15</HpRegen>
         <MpRegen max="50">10</MpRegen>
+        <Range>short</Range>
+        <SubClassOf>Warlock</SubClassOf>
     </Object>
 
     <!-- Swashbuckler Specializations -->
@@ -815,7 +883,7 @@
         </AnimatedTexture>
         <HitSound>player/rogue_hit</HitSound>
         <DeathSound>player/rogue_death</DeathSound>
-        <Player/>
+        <Player />
         <BloodProb>1.0</BloodProb>
         <SlotTypes>1, 47, 48, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
         <Equipment>0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</Equipment>
@@ -828,6 +896,8 @@
         <Dexterity max="75">15</Dexterity>
         <HpRegen max="40">15</HpRegen>
         <MpRegen max="50">10</MpRegen>
+        <Range>short</Range>
+        <SubClassOf>Swashbuckler</SubClassOf>
     </Object>
     <Object type="0x323" id="Gladiator">
         <Class>Player</Class>
@@ -838,7 +908,7 @@
         </AnimatedTexture>
         <HitSound>player/rogue_hit</HitSound>
         <DeathSound>player/rogue_death</DeathSound>
-        <Player/>
+        <Player />
         <BloodProb>1.0</BloodProb>
         <SlotTypes>1, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
         <Equipment>0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</Equipment>
@@ -851,6 +921,8 @@
         <Dexterity max="75">15</Dexterity>
         <HpRegen max="40">15</HpRegen>
         <MpRegen max="50">10</MpRegen>
+        <Range>short</Range>
+        <SubClassOf>Swashbuckler</SubClassOf>
     </Object>
     <Object type="0x324" id="Guardian">
         <Class>Player</Class>
@@ -861,7 +933,7 @@
         </AnimatedTexture>
         <HitSound>player/rogue_hit</HitSound>
         <DeathSound>player/rogue_death</DeathSound>
-        <Player/>
+        <Player />
         <BloodProb>1.0</BloodProb>
         <SlotTypes>1, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
         <Equipment>0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</Equipment>
@@ -874,6 +946,8 @@
         <Dexterity max="75">15</Dexterity>
         <HpRegen max="40">15</HpRegen>
         <MpRegen max="50">10</MpRegen>
+        <Range>short</Range>
+        <SubClassOf>Swashbuckler</SubClassOf>
     </Object>
 
     <!-- Lancer Specializations -->
@@ -886,7 +960,7 @@
         </AnimatedTexture>
         <HitSound>player/rogue_hit</HitSound>
         <DeathSound>player/rogue_death</DeathSound>
-        <Player/>
+        <Player />
         <BloodProb>1.0</BloodProb>
         <SlotTypes>4, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
         <Equipment>0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</Equipment>
@@ -899,6 +973,8 @@
         <Dexterity max="75">15</Dexterity>
         <HpRegen max="40">15</HpRegen>
         <MpRegen max="50">10</MpRegen>
+        <Range>short</Range>
+        <SubClassOf>Lancer</SubClassOf>
     </Object>
     <Object type="0x326" id="Dragon-Rider">
         <Class>Player</Class>
@@ -909,7 +985,7 @@
         </AnimatedTexture>
         <HitSound>player/rogue_hit</HitSound>
         <DeathSound>player/rogue_death</DeathSound>
-        <Player/>
+        <Player />
         <BloodProb>1.0</BloodProb>
         <SlotTypes>4, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
         <Equipment>0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</Equipment>
@@ -922,6 +998,8 @@
         <Dexterity max="75">15</Dexterity>
         <HpRegen max="40">15</HpRegen>
         <MpRegen max="50">10</MpRegen>
+        <Range>short</Range>
+        <SubClassOf>Lancer</SubClassOf>
     </Object>
     <Object type="0x327" id="Royal-Guard">
         <Class>Player</Class>
@@ -932,7 +1010,7 @@
         </AnimatedTexture>
         <HitSound>player/rogue_hit</HitSound>
         <DeathSound>player/rogue_death</DeathSound>
-        <Player/>
+        <Player />
         <BloodProb>1.0</BloodProb>
         <SlotTypes>4, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
         <Equipment>0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</Equipment>
@@ -945,6 +1023,8 @@
         <Dexterity max="75">15</Dexterity>
         <HpRegen max="40">15</HpRegen>
         <MpRegen max="50">10</MpRegen>
+        <Range>short</Range>
+        <SubClassOf>Lancer</SubClassOf>
     </Object>
 
     <!-- Ronin Specializations -->
@@ -957,7 +1037,7 @@
         </AnimatedTexture>
         <HitSound>player/rogue_hit</HitSound>
         <DeathSound>player/rogue_death</DeathSound>
-        <Player/>
+        <Player />
         <BloodProb>1.0</BloodProb>
         <SlotTypes>24, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
         <Equipment>0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</Equipment>
@@ -970,6 +1050,8 @@
         <Dexterity max="75">15</Dexterity>
         <HpRegen max="40">15</HpRegen>
         <MpRegen max="50">10</MpRegen>
+        <Range>short</Range>
+        <SubClassOf>Ronin</SubClassOf>
     </Object>
     <Object type="0x329" id="Zealot">
         <Class>Player</Class>
@@ -980,7 +1062,7 @@
         </AnimatedTexture>
         <HitSound>player/rogue_hit</HitSound>
         <DeathSound>player/rogue_death</DeathSound>
-        <Player/>
+        <Player />
         <BloodProb>1.0</BloodProb>
         <SlotTypes>24, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
         <Equipment>0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</Equipment>
@@ -993,6 +1075,8 @@
         <Dexterity max="75">15</Dexterity>
         <HpRegen max="40">15</HpRegen>
         <MpRegen max="50">10</MpRegen>
+        <Range>short</Range>
+        <SubClassOf>Ronin</SubClassOf>
     </Object>
     <Object type="0x32A" id="Sword-Master">
         <Class>Player</Class>
@@ -1003,7 +1087,7 @@
         </AnimatedTexture>
         <HitSound>player/rogue_hit</HitSound>
         <DeathSound>player/rogue_death</DeathSound>
-        <Player/>
+        <Player />
         <BloodProb>1.0</BloodProb>
         <SlotTypes>24, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
         <Equipment>0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</Equipment>
@@ -1016,6 +1100,8 @@
         <Dexterity max="75">15</Dexterity>
         <HpRegen max="40">15</HpRegen>
         <MpRegen max="50">10</MpRegen>
+        <Range>short</Range>
+        <SubClassOf>Ronin</SubClassOf>
     </Object>
 
     <!-- Harvester Specializations -->
@@ -1028,7 +1114,7 @@
         </AnimatedTexture>
         <HitSound>player/rogue_hit</HitSound>
         <DeathSound>player/rogue_death</DeathSound>
-        <Player/>
+        <Player />
         <BloodProb>1.0</BloodProb>
         <SlotTypes>24, 26, 27, 28, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
         <Equipment>0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</Equipment>
@@ -1041,6 +1127,8 @@
         <Dexterity max="75">15</Dexterity>
         <HpRegen max="40">15</HpRegen>
         <MpRegen max="50">10</MpRegen>
+        <Range>short</Range>
+        <SubClassOf>Harvester</SubClassOf>
     </Object>
     <Object type="0x32C" id="Warlord">
         <Class>Player</Class>
@@ -1051,7 +1139,7 @@
         </AnimatedTexture>
         <HitSound>player/rogue_hit</HitSound>
         <DeathSound>player/rogue_death</DeathSound>
-        <Player/>
+        <Player />
         <BloodProb>1.0</BloodProb>
         <SlotTypes>24, 35, 36, 37, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
         <Equipment>0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</Equipment>
@@ -1064,6 +1152,8 @@
         <Dexterity max="75">15</Dexterity>
         <HpRegen max="40">15</HpRegen>
         <MpRegen max="50">10</MpRegen>
+        <Range>short</Range>
+        <SubClassOf>Harvester</SubClassOf>
     </Object>
     <Object type="0x32D" id="Reaper">
         <Class>Player</Class>
@@ -1074,7 +1164,7 @@
         </AnimatedTexture>
         <HitSound>player/rogue_hit</HitSound>
         <DeathSound>player/rogue_death</DeathSound>
-        <Player/>
+        <Player />
         <BloodProb>1.0</BloodProb>
         <SlotTypes>24, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
         <Equipment>0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</Equipment>
@@ -1087,6 +1177,8 @@
         <Dexterity max="75">15</Dexterity>
         <HpRegen max="40">15</HpRegen>
         <MpRegen max="50">10</MpRegen>
+        <Range>short</Range>
+        <SubClassOf>Harvester</SubClassOf>
     </Object>
 
     <!-- Medium Range Specializations -->
@@ -1100,7 +1192,7 @@
         </AnimatedTexture>
         <HitSound>player/rogue_hit</HitSound>
         <DeathSound>player/rogue_death</DeathSound>
-        <Player/>
+        <Player />
         <BloodProb>1.0</BloodProb>
         <SlotTypes>25, 38, 39, 40, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
         <Equipment>0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</Equipment>
@@ -1113,6 +1205,8 @@
         <Dexterity max="75">15</Dexterity>
         <HpRegen max="40">15</HpRegen>
         <MpRegen max="50">10</MpRegen>
+        <Range>medium</Range>
+        <SubClassOf>Chakram-Dancer</SubClassOf>
     </Object>
     <Object type="0x32F" id="Artificer">
         <Class>Player</Class>
@@ -1123,7 +1217,7 @@
         </AnimatedTexture>
         <HitSound>player/rogue_hit</HitSound>
         <DeathSound>player/rogue_death</DeathSound>
-        <Player/>
+        <Player />
         <BloodProb>1.0</BloodProb>
         <SlotTypes>25, 0, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
         <Equipment>0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</Equipment>
@@ -1136,6 +1230,8 @@
         <Dexterity max="75">15</Dexterity>
         <HpRegen max="40">15</HpRegen>
         <MpRegen max="50">10</MpRegen>
+        <Range>medium</Range>
+        <SubClassOf>Chakram-Dancer</SubClassOf>
     </Object>
     <Object type="0x330" id="Pyromancer">
         <Class>Player</Class>
@@ -1146,7 +1242,7 @@
         </AnimatedTexture>
         <HitSound>player/rogue_hit</HitSound>
         <DeathSound>player/rogue_death</DeathSound>
-        <Player/>
+        <Player />
         <BloodProb>1.0</BloodProb>
         <SlotTypes>25, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
         <Equipment>0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</Equipment>
@@ -1159,6 +1255,8 @@
         <Dexterity max="75">15</Dexterity>
         <HpRegen max="40">15</HpRegen>
         <MpRegen max="50">10</MpRegen>
+        <Range>medium</Range>
+        <SubClassOf>Chakram-Dancer</SubClassOf>
     </Object>
 
     <!-- Mage Specializations -->
@@ -1171,7 +1269,7 @@
         </AnimatedTexture>
         <HitSound>player/rogue_hit</HitSound>
         <DeathSound>player/rogue_death</DeathSound>
-        <Player/>
+        <Player />
         <BloodProb>1.0</BloodProb>
         <SlotTypes>8, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
         <Equipment>0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</Equipment>
@@ -1184,6 +1282,8 @@
         <Dexterity max="75">15</Dexterity>
         <HpRegen max="40">15</HpRegen>
         <MpRegen max="50">10</MpRegen>
+        <Range>medium</Range>
+        <SubClassOf>Mage</SubClassOf>
     </Object>
     <Object type="0x332" id="Elementalist">
         <Class>Player</Class>
@@ -1194,7 +1294,7 @@
         </AnimatedTexture>
         <HitSound>player/rogue_hit</HitSound>
         <DeathSound>player/rogue_death</DeathSound>
-        <Player/>
+        <Player />
         <BloodProb>1.0</BloodProb>
         <SlotTypes>8, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
         <Equipment>0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</Equipment>
@@ -1207,6 +1307,8 @@
         <Dexterity max="75">15</Dexterity>
         <HpRegen max="40">15</HpRegen>
         <MpRegen max="50">10</MpRegen>
+        <Range>medium</Range>
+        <SubClassOf>Mage</SubClassOf>
     </Object>
     <Object type="0x333" id="Thaumaturge">
         <Class>Player</Class>
@@ -1217,7 +1319,7 @@
         </AnimatedTexture>
         <HitSound>player/rogue_hit</HitSound>
         <DeathSound>player/rogue_death</DeathSound>
-        <Player/>
+        <Player />
         <BloodProb>1.0</BloodProb>
         <SlotTypes>8, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
         <Equipment>0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</Equipment>
@@ -1230,6 +1332,8 @@
         <Dexterity max="75">15</Dexterity>
         <HpRegen max="40">15</HpRegen>
         <MpRegen max="50">10</MpRegen>
+        <Range>medium</Range>
+        <SubClassOf>Mage</SubClassOf>
     </Object>
 
     <!-- Long Range Specializations -->
@@ -1243,7 +1347,7 @@
         </AnimatedTexture>
         <HitSound>player/rogue_hit</HitSound>
         <DeathSound>player/rogue_death</DeathSound>
-        <Player/>
+        <Player />
         <BloodProb>1.0</BloodProb>
         <SlotTypes>15, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
         <Equipment>0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</Equipment>
@@ -1256,6 +1360,8 @@
         <Dexterity max="75">15</Dexterity>
         <HpRegen max="40">15</HpRegen>
         <MpRegen max="50">10</MpRegen>
+        <Range>long</Range>
+        <SubClassOf>Gunslinger</SubClassOf>
     </Object>
     <Object type="0x335" id="Grenadier">
         <Class>Player</Class>
@@ -1266,7 +1372,7 @@
         </AnimatedTexture>
         <HitSound>player/rogue_hit</HitSound>
         <DeathSound>player/rogue_death</DeathSound>
-        <Player/>
+        <Player />
         <BloodProb>1.0</BloodProb>
         <SlotTypes>15, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
         <Equipment>0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</Equipment>
@@ -1279,6 +1385,8 @@
         <Dexterity max="75">15</Dexterity>
         <HpRegen max="40">15</HpRegen>
         <MpRegen max="50">10</MpRegen>
+        <Range>long</Range>
+        <SubClassOf>Gunslinger</SubClassOf>
     </Object>
     <Object type="0x336" id="Commando">
         <Class>Player</Class>
@@ -1289,7 +1397,7 @@
         </AnimatedTexture>
         <HitSound>player/rogue_hit</HitSound>
         <DeathSound>player/rogue_death</DeathSound>
-        <Player/>
+        <Player />
         <BloodProb>1.0</BloodProb>
         <SlotTypes>15, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
         <Equipment>0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</Equipment>
@@ -1302,6 +1410,8 @@
         <Dexterity max="75">15</Dexterity>
         <HpRegen max="40">15</HpRegen>
         <MpRegen max="50">10</MpRegen>
+        <Range>long</Range>
+        <SubClassOf>Gunslinger</SubClassOf>
     </Object>
 
     <!-- BoltCaster Specializations -->
@@ -1314,7 +1424,7 @@
         </AnimatedTexture>
         <HitSound>player/rogue_hit</HitSound>
         <DeathSound>player/rogue_death</DeathSound>
-        <Player/>
+        <Player />
         <BloodProb>1.0</BloodProb>
         <SlotTypes>3, 32, 33, 34, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
         <Equipment>0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</Equipment>
@@ -1327,6 +1437,8 @@
         <Dexterity max="75">15</Dexterity>
         <HpRegen max="40">15</HpRegen>
         <MpRegen max="50">10</MpRegen>
+        <Range>long</Range>
+        <SubClassOf>BoltCaster</SubClassOf>
     </Object>
     <Object type="0x338" id="Trapper">
         <Class>Player</Class>
@@ -1337,7 +1449,7 @@
         </AnimatedTexture>
         <HitSound>player/rogue_hit</HitSound>
         <DeathSound>player/rogue_death</DeathSound>
-        <Player/>
+        <Player />
         <BloodProb>1.0</BloodProb>
         <SlotTypes>3, 44, 45, 46, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
         <Equipment>0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</Equipment>
@@ -1350,6 +1462,8 @@
         <Dexterity max="75">15</Dexterity>
         <HpRegen max="40">15</HpRegen>
         <MpRegen max="50">10</MpRegen>
+        <Range>long</Range>
+        <SubClassOf>BoltCaster</SubClassOf>
     </Object>
     <Object type="0x339" id="Bounty-Hunter">
         <Class>Player</Class>
@@ -1360,7 +1474,7 @@
         </AnimatedTexture>
         <HitSound>player/rogue_hit</HitSound>
         <DeathSound>player/rogue_death</DeathSound>
-        <Player/>
+        <Player />
         <BloodProb>1.0</BloodProb>
         <SlotTypes>3, 0, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
         <Equipment>0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</Equipment>
@@ -1373,6 +1487,8 @@
         <Dexterity max="75">15</Dexterity>
         <HpRegen max="40">15</HpRegen>
         <MpRegen max="50">10</MpRegen>
+        <Range>long</Range>
+        <SubClassOf>BoltCaster</SubClassOf>
     </Object>
 
     <!-- Enchanter Specializations -->
@@ -1385,7 +1501,7 @@
         </AnimatedTexture>
         <HitSound>player/rogue_hit</HitSound>
         <DeathSound>player/rogue_death</DeathSound>
-        <Player/>
+        <Player />
         <BloodProb>1.0</BloodProb>
         <SlotTypes>8, 0, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
         <Equipment>0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</Equipment>
@@ -1398,6 +1514,8 @@
         <Dexterity max="75">15</Dexterity>
         <HpRegen max="40">15</HpRegen>
         <MpRegen max="50">10</MpRegen>
+        <Range>long</Range>
+        <SubClassOf>Enchanter</SubClassOf>
     </Object>
     <Object type="0x33B" id="Bard">
         <Class>Player</Class>
@@ -1408,7 +1526,7 @@
         </AnimatedTexture>
         <HitSound>player/rogue_hit</HitSound>
         <DeathSound>player/rogue_death</DeathSound>
-        <Player/>
+        <Player />
         <BloodProb>1.0</BloodProb>
         <SlotTypes>8, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
         <Equipment>0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</Equipment>
@@ -1421,6 +1539,8 @@
         <Dexterity max="75">15</Dexterity>
         <HpRegen max="40">15</HpRegen>
         <MpRegen max="50">10</MpRegen>
+        <Range>long</Range>
+        <SubClassOf>Enchanter</SubClassOf>
     </Object>
     <Object type="0x33C" id="Magus">
         <Class>Player</Class>
@@ -1431,7 +1551,7 @@
         </AnimatedTexture>
         <HitSound>player/rogue_hit</HitSound>
         <DeathSound>player/rogue_death</DeathSound>
-        <Player/>
+        <Player />
         <BloodProb>1.0</BloodProb>
         <SlotTypes>8, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
         <Equipment>0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</Equipment>
@@ -1444,6 +1564,8 @@
         <Dexterity max="75">15</Dexterity>
         <HpRegen max="40">15</HpRegen>
         <MpRegen max="50">10</MpRegen>
+        <Range>long</Range>
+        <SubClassOf>Enchanter</SubClassOf>
     </Object>
 
     <!-- Sharpshooter Specializations -->
@@ -1456,7 +1578,7 @@
         </AnimatedTexture>
         <HitSound>player/rogue_hit</HitSound>
         <DeathSound>player/rogue_death</DeathSound>
-        <Player/>
+        <Player />
         <BloodProb>1.0</BloodProb>
         <SlotTypes>3, 41, 42, 43, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
         <Equipment>0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</Equipment>
@@ -1469,6 +1591,8 @@
         <Dexterity max="75">15</Dexterity>
         <HpRegen max="40">15</HpRegen>
         <MpRegen max="50">10</MpRegen>
+        <Range>long</Range>
+        <SubClassOf>Sharpshooter</SubClassOf>
     </Object>
     <Object type="0x33E" id="Bullseye">
         <Class>Player</Class>
@@ -1479,7 +1603,7 @@
         </AnimatedTexture>
         <HitSound>player/rogue_hit</HitSound>
         <DeathSound>player/rogue_death</DeathSound>
-        <Player/>
+        <Player />
         <BloodProb>1.0</BloodProb>
         <SlotTypes>3, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
         <Equipment>0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</Equipment>
@@ -1492,6 +1616,8 @@
         <Dexterity max="75">15</Dexterity>
         <HpRegen max="40">15</HpRegen>
         <MpRegen max="50">10</MpRegen>
+        <Range>long</Range>
+        <SubClassOf>Sharpshooter</SubClassOf>
     </Object>
     <Object type="0x33F" id="Marksman">
         <Class>Player</Class>
@@ -1502,7 +1628,7 @@
         </AnimatedTexture>
         <HitSound>player/rogue_hit</HitSound>
         <DeathSound>player/rogue_death</DeathSound>
-        <Player/>
+        <Player />
         <BloodProb>1.0</BloodProb>
         <SlotTypes>3, 13, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
         <Equipment>0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</Equipment>
@@ -1515,5 +1641,7 @@
         <Dexterity max="75">15</Dexterity>
         <HpRegen max="40">15</HpRegen>
         <MpRegen max="50">10</MpRegen>
+        <Range>long</Range>
+        <SubClassOf>Sharpshooter</SubClassOf>
     </Object>
 </Objects>

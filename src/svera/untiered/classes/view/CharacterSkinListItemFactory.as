@@ -4,7 +4,6 @@ import com.company.util.AssetLibrary;
 
 import flash.display.Bitmap;
 import flash.display.BitmapData;
-import flash.display.DisplayObject;
 
 import svera.untiered.assets.services.CharacterFactory;
 import svera.untiered.classes.model.CharacterSkin;
@@ -12,8 +11,6 @@ import svera.untiered.classes.model.CharacterSkins;
 import svera.untiered.util.components.LegacyBuyButton;
 
 public class CharacterSkinListItemFactory {
-
-
     [Inject]
     public var characters:CharacterFactory;
 
@@ -21,10 +18,10 @@ public class CharacterSkinListItemFactory {
         super();
     }
 
-    public function make(skins:CharacterSkins):Vector.<DisplayObject> {
+    public function make(skins:CharacterSkins):Vector.<CharacterSkinListItem> {
         var count:int = 0;
         count = skins.getCount();
-        var items:Vector.<DisplayObject> = new Vector.<DisplayObject>(count, true);
+        var items:Vector.<CharacterSkinListItem> = new Vector.<CharacterSkinListItem>(count, true);
         for (var i:int = 0; i < count; i++) {
             items[i] = this.makeCharacterSkinTile(skins.getSkinAt(i));
         }

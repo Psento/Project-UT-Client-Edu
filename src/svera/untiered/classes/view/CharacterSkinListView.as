@@ -2,6 +2,8 @@ package svera.untiered.classes.view {
 import flash.display.DisplayObject;
 import flash.display.Sprite;
 
+import starling.display.DisplayObject;
+
 import svera.lib.ui.api.Size;
 import svera.untiered.util.components.HorizontalScrollingList;
 
@@ -12,7 +14,7 @@ public class CharacterSkinListView extends Sprite {
 
 
     private const list:HorizontalScrollingList = makeList();
-    private var items:Vector.<DisplayObject>;
+    private var items:Vector.<CharacterSkinListItem>;
 
     public function CharacterSkinListView() {
         super();
@@ -27,8 +29,12 @@ public class CharacterSkinListView extends Sprite {
         return list;
     }
 
-    public function setItems(items:Vector.<DisplayObject>):void {
+    public function setItems(items:Vector.<CharacterSkinListItem>):void {
         this.items = items;
+        var displayObject:Vector.<DisplayObject> = new Vector.<DisplayObject>(items.length);
+        for (var i:int = 0; i < items.length; i++) {
+            displayObject[i] = items[i] as DisplayObject;
+        }
         this.list.setItems(items);
         this.onScrollStateChanged(this.list.isScrollbarVisible());
     }

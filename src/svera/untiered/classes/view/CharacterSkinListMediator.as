@@ -30,7 +30,7 @@ public class CharacterSkinListMediator extends Mediator {
     }
 
     private function setSkins(charClass:CharacterClass):void {
-        var items:Vector.<DisplayObject> = this.factory.make(charClass.skins);
+        var items:Vector.<CharacterSkinListItem> = this.factory.make(charClass.skins);
         this.view.setItems(items);
     }
 }

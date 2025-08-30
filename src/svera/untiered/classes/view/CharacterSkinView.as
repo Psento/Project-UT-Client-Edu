@@ -91,9 +91,18 @@ public class CharacterSkinView extends Sprite {
 
         addChild(skinListView);
 
-        var leftSkin:TitleMenuOption = new TitleMenuOption(">", 16, true, true);
-        var rightSkin:TitleMenuOption = new TitleMenuOption("<", 16, true, true);
+        var leftSkin:TitleMenuOption = new TitleMenuOption(">", 24, true, true);
+        var rightSkin:TitleMenuOption = new TitleMenuOption("<", 24, true, true);
+        function left():void
+        {
 
+        }
+        function right():void
+        {
+
+        }
+        leftSkin.clicked.add(left);
+        rightSkin.clicked.add(right);
 
         positionStuff.addOnce(function ():void {
             view.x = (width - view.width) / 2;
@@ -108,7 +117,6 @@ public class CharacterSkinView extends Sprite {
             rightSkin.x = view.x - rightSkin.width;
             rightSkin.y = leftSkin.y;
         });
-
 
         addChild(leftSkin);
         addChild(rightSkin);

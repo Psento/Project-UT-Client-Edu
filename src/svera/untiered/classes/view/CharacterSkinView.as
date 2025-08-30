@@ -81,7 +81,7 @@ public class CharacterSkinView extends Sprite {
         return option;
     }
 
-
+    private var selectedSkin:int = 0;
     private function makeClassDetailView():ClassDetailView {
         var view:ClassDetailView = new ClassDetailView();
 
@@ -95,11 +95,17 @@ public class CharacterSkinView extends Sprite {
         var rightSkin:TitleMenuOption = new TitleMenuOption("<", 24, true, true);
         function left():void
         {
-
+            if(++selectedSkin >= skinListView.items.length){
+                selectedSkin = 0;
+            }
+            skinListView.items[selectedSkin].setIsSelected(true);
         }
         function right():void
         {
-
+            if(--selectedSkin <= 0){
+                selectedSkin = skinListView.items.length - 1;
+            }
+            skinListView.items[selectedSkin].setIsSelected(true);
         }
         leftSkin.clicked.add(left);
         rightSkin.clicked.add(right);

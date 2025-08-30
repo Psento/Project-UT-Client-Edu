@@ -23,7 +23,9 @@ public class CharacterSkinListItemFactory {
         count = skins.getCount();
         var items:Vector.<CharacterSkinListItem> = new Vector.<CharacterSkinListItem>(count, true);
         for (var i:int = 0; i < count; i++) {
-            items[i] = this.makeCharacterSkinTile(skins.getSkinAt(i));
+            var charSkinTile:CharacterSkinListItem = makeCharacterSkinTile(skins.getSkinAt(i));
+            items[i] = charSkinTile;
+            charSkinTile.index = i;
         }
         return items;
     }

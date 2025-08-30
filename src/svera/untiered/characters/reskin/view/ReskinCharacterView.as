@@ -14,6 +14,8 @@ import flash.text.TextFormatAlign;
 import org.osflash.signals.Signal;
 import org.osflash.signals.natives.NativeMappedSignal;
 
+import svera.untiered.classes.view.CharacterSkinListItem;
+
 import svera.untiered.classes.view.CharacterSkinListView;
 import svera.untiered.util.components.DialogBackground;
 import svera.untiered.util.graphics.ButtonLayoutHelper;
@@ -80,7 +82,7 @@ public class ReskinCharacterView extends Sprite {
         return button;
     }
 
-    public function setList(items:Vector.<DisplayObject>):void {
+    public function setList(items:Vector.<CharacterSkinListItem>):void {
         this.list.setItems(items);
         this.getDialogHeight();
         this.resizeBackground();

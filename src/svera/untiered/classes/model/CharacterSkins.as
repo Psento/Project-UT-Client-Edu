@@ -1,7 +1,5 @@
 package svera.untiered.classes.model {
 public class CharacterSkins {
-
-
     private const skins:Vector.<CharacterSkin> = new Vector.<CharacterSkin>(0);
 
     private const map:Object = {};
@@ -31,7 +29,7 @@ public class CharacterSkins {
     }
 
     public function addSkin(skin:CharacterSkin, isDefault:Boolean = false):void {
-        skin.changed.add(this.onSkinChanged);
+        skin.changed.add(onSkinChanged);
         this.skins.push(skin);
         this.map[skin.id] = skin;
         this.updateSkinState(skin);

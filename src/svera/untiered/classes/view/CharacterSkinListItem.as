@@ -6,8 +6,6 @@ import com.company.util.MoreColorUtil;
 
 import flash.display.Bitmap;
 import flash.display.BitmapData;
-import flash.display.Graphics;
-import flash.display.Shape;
 import flash.display.Sprite;
 import flash.events.MouseEvent;
 import flash.filters.ColorMatrixFilter;
@@ -23,20 +21,13 @@ import svera.untiered.util.components.RadioButton;
 import svera.untiered.util.components.api.BuyButton;
 
 public class CharacterSkinListItem extends Sprite {
-    public static const WIDTH:int = 96;
-    public static const HEIGHT:int = 123;
-    private static const HIGHLIGHTED_COLOR:uint = 8092539;
-    private static const AVAILABLE_COLOR:uint = 5921370;
-    private static const LOCKED_COLOR:uint = 2631720;
-
     private const grayscaleMatrix:ColorMatrixFilter = new ColorMatrixFilter(MoreColorUtil.greyscaleFilterMatrix);
     private const bg:Bitmap = makeBg();
-    private const skinContainer:Sprite = makeSkinContainer();
     private const nameText:SimpleText = makeNameText();
-    private const selectionButton:RadioButton = makeSelectionButton();
     private const lock:Bitmap = makeLock();
     private const purchasingText:SimpleText = makeLockText();
     private const buyButtonContainer:Sprite = makeBuyButtonContainer();
+    private const selectionButton:RadioButton = makeSelectionButton();
     public const buy:Signal = new NativeMappedSignal(buyButtonContainer, MouseEvent.CLICK);
     public const over:Signal = new Signal();
     public const out:Signal = new Signal();
@@ -47,24 +38,19 @@ public class CharacterSkinListItem extends Sprite {
     private var skinIcon:Bitmap;
     private var buyButton:BuyButton;
     private var isOver:Boolean;
-
+    public var index:int = 0;
 
     public function CharacterSkinListItem() {
         this.state = CharacterSkinState.NULL;
-
+        skinIcon = new Bitmap();
+        addChild(skinIcon);
         super();
     }
+
     private function makeBg():Bitmap {
-        var bg2:Bitmap = new Bitmap(new CharacterRect.charBg().bitmapData)
+        var bg2:Bitmap = new Bitmap(new CharacterRect.charBg().bitmapData);
         addChild(bg2);
         return bg2;
-    }
-    private function makeSkinContainer():Sprite {
-        var sprite:Sprite = new Sprite();
-        sprite.x = 20; //TODO: make not hardcoded maybe
-        sprite.y = 40;
-        addChild(sprite);
-        return sprite;
     }
 
     private function makeNameText():SimpleText {
@@ -91,7 +77,7 @@ public class CharacterSkinListItem extends Sprite {
         var bitmap:Bitmap = new Bitmap();
         bitmap.scaleX = 2;
         bitmap.scaleY = 2;
-        bitmap.y = HEIGHT * 0.5 - 4;
+        bitmap.y = bg.height * 0.5 - 4;
         bitmap.visible = false;
         addChild(bitmap);
         return bitmap;
@@ -120,15 +106,13 @@ public class CharacterSkinListItem extends Sprite {
         this.buyButton = buyButton;
         this.model && this.setCost();
         this.buyButtonContainer.addChild(buyButton);
-        buyButton.x = -buyButton.width / 2;
-        buyButton.y = -buyButton.height - 2;
+        this.buyButton.x = -this.buyButton.width / 2;
+        this.buyButton.y = this.buyButton.height - 2;
         this.buyButtonContainer.visible = this.state == CharacterSkinState.PURCHASABLE;
     }
 
     public function setSkin(icon:Bitmap):void {
-        this.skinIcon && this.skinContainer.removeChild(this.skinIcon);
-        this.skinIcon = icon;
-        this.skinIcon && this.skinContainer.addChild(this.skinIcon);
+        this.skinIcon.bitmapData = icon.bitmapData;
     }
 
     public function getModel():CharacterSkin {
@@ -145,12 +129,12 @@ public class CharacterSkinListItem extends Sprite {
     }
 
     private function onModelChanged(skin:CharacterSkin):void {
-        this.state = Boolean(this.model) ? this.model.getState() : CharacterSkinState.NULL;
+        this.state = Boolean(skin) ? skin.getState() : CharacterSkinState.NULL;
         this.updateName();
         this.updateState();
         this.buyButton && this.setCost();
         this.updatePurchasingText();
-        this.setIsSelected(this.model && this.model.getIsSelected());
+        this.setIsSelected(skin && skin.getIsSelected());
     }
 
     public function getState():CharacterSkinState {
@@ -160,13 +144,12 @@ public class CharacterSkinListItem extends Sprite {
     private function updateName():void {
         nameText.text = Boolean(this.model) ? this.model.name : "";
         nameText.updateMetrics();
-        nameText.x = (WIDTH - nameText.width) / 2;
-        nameText.y = HEIGHT - nameText.textHeight;
+        nameText.x = (bg.width - nameText.width) / 2;
+        nameText.y = bg.height - nameText.textHeight;
     }
 
     private function updateState():void {
         setButtonVisibilities();
-        updateBackground();
         setEventListeners();
         updateGrayFilter();
     }
@@ -201,14 +184,13 @@ public class CharacterSkinListItem extends Sprite {
     public function setIsSelected(value:Boolean):void {
         this.isSelected = value && this.state == CharacterSkinState.OWNED;
         this.selectionButton.setSelected(value);
-        this.updateBackground();
     }
 
     private function updatePurchasingText():void {
         this.purchasingText.text = "Purchasing...";
         this.purchasingText.updateMetrics();
-        this.purchasingText.x = WIDTH - this.purchasingText.width - 15;
-        this.purchasingText.y = HEIGHT / 2 - this.purchasingText.height / 2;
+        this.purchasingText.x = bg.width - this.purchasingText.width - 15;
+        this.purchasingText.y = bg.height / 2 - this.purchasingText.height / 2;
         this.lock.x = this.purchasingText.x - this.lock.width - 5;
     }
 
@@ -226,34 +208,29 @@ public class CharacterSkinListItem extends Sprite {
 
     private function onOver(e:MouseEvent):void {
         this.isOver = true;
-        this.updateBackground();
+
         this.over.dispatch();
+        if (this.state.isDisabled()) {
+            transform.colorTransform = new ColorTransform(0.5, 0.5, 0.5);
+            return;
+        }
+        transform.colorTransform = new ColorTransform(1.2, 1.2, 1.2);
     }
 
     private function onOut(e:MouseEvent):void {
         this.isOver = false;
-        this.updateBackground();
         this.out.dispatch();
-    }
-
-    private function updateBackground():void {
-        var ct:ColorTransform = bg.transform.colorTransform;
-        ct.color = this.getColor();
-        bg.transform.colorTransform = ct;
-    }
-
-    private function getColor():uint {
         if (this.state.isDisabled()) {
-            return LOCKED_COLOR;
+            transform.colorTransform = new ColorTransform(0.5, 0.5, 0.5);
+            return;
         }
-        if (this.isSelected || this.isOver) {
-            return HIGHLIGHTED_COLOR;
-        }
-        return AVAILABLE_COLOR;
+        transform.colorTransform = new ColorTransform(1, 1, 1);
+
     }
+
 
     private function updateGrayFilter():void {
-        filters = this.state == CharacterSkinState.PURCHASING ? [this.grayscaleMatrix] : [];
+        filters = this.state == CharacterSkinState.PURCHASING ? [grayscaleMatrix] : [];
     }
 }
 }

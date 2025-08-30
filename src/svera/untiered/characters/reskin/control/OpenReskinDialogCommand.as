@@ -4,6 +4,7 @@ import flash.display.DisplayObject;
 import svera.untiered.characters.reskin.view.ReskinCharacterView;
 import svera.untiered.classes.model.CharacterSkins;
 import svera.untiered.classes.model.ClassesModel;
+import svera.untiered.classes.view.CharacterSkinListItem;
 import svera.untiered.classes.view.CharacterSkinListItemFactory;
 import svera.untiered.core.model.PlayerModel;
 import svera.untiered.dialogs.control.OpenDialogSignal;
@@ -37,7 +38,7 @@ public class OpenReskinDialogCommand {
         return view;
     }
 
-    private function makeList():Vector.<DisplayObject> {
+    private function makeList():Vector.<CharacterSkinListItem> {
         var skins:CharacterSkins = this.getCharacterSkins();
         return this.factory.make(skins);
     }

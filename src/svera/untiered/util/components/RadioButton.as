@@ -15,13 +15,11 @@ import flash.display.Sprite;
 import org.osflash.signals.Signal;
 
 public class RadioButton extends Sprite {
-
-
     public const changed:Signal = new Signal(Boolean);
 
-    private const WIDTH:int = 28;
+    private const WIDTH:int = 20;
 
-    private const HEIGHT:int = 28;
+    private const HEIGHT:int = 20;
 
     private var unselected:Shape;
 

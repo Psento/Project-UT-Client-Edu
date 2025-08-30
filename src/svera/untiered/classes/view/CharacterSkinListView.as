@@ -1,8 +1,8 @@
 package svera.untiered.classes.view {
+import com.company.assembleegameclient.screens.charrects.CharacterRect;
+
 import flash.display.DisplayObject;
 import flash.display.Sprite;
-
-import starling.display.DisplayObject;
 
 import svera.lib.ui.api.Size;
 import svera.untiered.util.components.HorizontalScrollingList;
@@ -14,7 +14,7 @@ public class CharacterSkinListView extends Sprite {
 
 
     private const list:HorizontalScrollingList = makeList();
-    private var items:Vector.<CharacterSkinListItem>;
+    public var items:Vector.<CharacterSkinListItem>;
 
     public function CharacterSkinListView() {
         super();
@@ -35,13 +35,13 @@ public class CharacterSkinListView extends Sprite {
         for (var i:int = 0; i < items.length; i++) {
             displayObject[i] = items[i] as DisplayObject;
         }
-        this.list.setItems(items);
-        this.onScrollStateChanged(this.list.isScrollbarVisible());
+        list.setItems(displayObject);
+        onScrollStateChanged(this.list.isScrollbarVisible());
     }
 
     private function onScrollStateChanged(isVisible:Boolean):void {
         var item:CharacterSkinListItem = null;
-        var width:int = CharacterSkinListItem.WIDTH;
+        var width:int = new CharacterRect.charBg().width;
         if (!isVisible) {
             width = width + HorizontalScrollingList.SCROLLBAR_GUTTER;
         }

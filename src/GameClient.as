@@ -1,5 +1,7 @@
 package {
 import com.company.assembleegameclient.map.Camera;
+import com.company.assembleegameclient.ui.ResizeTestHarness;
+import com.company.assembleegameclient.ui.UIHandler;
 import com.company.assembleegameclient.parameters.Parameters;
 import com.company.assembleegameclient.sound.SoundEffectLibrary;
 import com.company.assembleegameclient.util.AssetLoader;
@@ -11,7 +13,9 @@ import flash.display.Stage;
 import flash.display.StageAlign;
 import flash.display.StageScaleMode;
 import flash.events.Event;
+import flash.events.KeyboardEvent;
 import flash.events.MouseEvent;
+import flash.ui.Keyboard;
 
 import robotlegs.bender.bundles.mvcs.MVCSBundle;
 import robotlegs.bender.extensions.signalCommandMap.SignalCommandMapExtension;
@@ -50,6 +54,7 @@ public class GameClient extends Sprite {
     public static var StageHeight:int;
     public static var HalfStageWidth:int;
     public static var HalfStageHeight:int;
+    private static var testHarness:ResizeTestHarness;
 
     public function GameClient() {
         super();
@@ -74,6 +79,7 @@ public class GameClient extends Sprite {
         STAGE.addEventListener(MouseEvent.RIGHT_CLICK, onRightClick);
         STAGE.addEventListener(Event.RESIZE, onResize);
         STAGE.addEventListener(Event.ENTER_FRAME, onEnterFrame);
+        STAGE.addEventListener(KeyboardEvent.KEY_DOWN, onKeyDown);
 
         new AssetLoader().load();
 
@@ -96,6 +102,8 @@ public class GameClient extends Sprite {
         HalfStageWidth = StageWidth * 0.5;
         HalfStageHeight = StageHeight * 0.5;
 
+        UIHandler.getInstance().updateAll();
+
         if (Renderer.inGame) {
             /*            scaleX = StageWidth / 800.0;
                         scaleY = StageHeight / 600.0;*/
@@ -112,6 +120,22 @@ public class GameClient extends Sprite {
             scaleY = 1;
             x = 0;
             y = 0;
+        }
+    }
+
+    private function onKeyDown(event:KeyboardEvent):void {
+        // Press T to toggle test harness
+        if (event.keyCode == Keyboard.T && event.ctrlKey) {
+            if (testHarness == null) {
+                testHarness = new ResizeTestHarness();
+                addChild(testHarness);
+                trace("UIHandler Test Harness: ENABLED (Ctrl+T to toggle)");
+            } else {
+                testHarness.destroy();
+                removeChild(testHarness);
+                testHarness = null;
+                trace("UIHandler Test Harness: DISABLED");
+            }
         }
     }
 

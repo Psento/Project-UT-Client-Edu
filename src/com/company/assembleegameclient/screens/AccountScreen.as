@@ -1,6 +1,7 @@
 package com.company.assembleegameclient.screens {
 import com.company.assembleegameclient.ui.GuildText;
 import com.company.assembleegameclient.ui.RankText;
+import com.company.assembleegameclient.ui.UIHandler;
 import com.company.assembleegameclient.ui.tooltip.RankToolTip;
 
 import flash.display.DisplayObject;
@@ -53,8 +54,7 @@ public class AccountScreen extends Sprite {
 
     private function makeGuildText():void {
         this.guildText = new GuildText(this.guildName, this.guildRank);
-        this.guildText.x = 92;
-        this.guildText.y = 6;
+        UIHandler.getInstance().register(this.guildText, UIHandler.TOP_LEFT, 92, 6, true);
         this.guildLayer.addChild(this.guildText);
     }
 
@@ -65,8 +65,7 @@ public class AccountScreen extends Sprite {
 
     private function makeRankText():void {
         this.rankText = new RankText(this.stars, true, false);
-        this.rankText.x = 36;
-        this.rankText.y = 4;
+        UIHandler.getInstance().register(this.rankText, UIHandler.TOP_LEFT, 36, 4, true);
         this.rankText.mouseEnabled = true;
         this.rankText.addEventListener(MouseEvent.MOUSE_OVER, this.onMouseOver);
         this.rankText.addEventListener(MouseEvent.ROLL_OUT, this.onRollOut);
@@ -74,17 +73,20 @@ public class AccountScreen extends Sprite {
     }
 
     public function setAccountInfo(accountInfo:AccountInfoView):void {
-        var display:DisplayObject = accountInfo as DisplayObject;
         this.accountInfo = accountInfo;
-        display.x = GameClient.StageWidth - 10;
-        display.y = 2;
-
-        function OnResize(e:Event):void {
-            display.x = GameClient.StageWidth - 10;
+        // Cast AccountInfoView to DisplayObject for UIHandler registration
+        var accountDisplay:DisplayObject = accountInfo as DisplayObject;
+        if (accountDisplay) {
+            UIHandler.getInstance().register(accountDisplay, UIHandler.TOP_RIGHT, -10, 10, true);
         }
+        this.accountInfoLayer.addChild(accountDisplay);
+    }
 
-        GameClient.STAGE.addEventListener(Event.RESIZE, OnResize, false, 0, true);
-        this.accountInfoLayer.addChild(display);
+    // Clean up UIHandler registrations when AccountScreen is destroyed
+    public function destroy():void {
+        if (this.guildText) UIHandler.getInstance().unregister(this.guildText);
+        if (this.rankText) UIHandler.getInstance().unregister(this.rankText);
+        if (this.accountInfo) UIHandler.getInstance().unregister(this.accountInfo as DisplayObject);
     }
 
     protected function onMouseOver(event:MouseEvent):void {

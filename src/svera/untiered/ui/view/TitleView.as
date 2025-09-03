@@ -3,6 +3,7 @@ import com.company.assembleegameclient.constants.ScreenTypes;
 import com.company.assembleegameclient.parameters.Parameters;
 import com.company.assembleegameclient.screens.AccountScreen;
 import com.company.assembleegameclient.screens.TitleMenuOption;
+import com.company.assembleegameclient.ui.UIHandler;
 import com.company.ui.SimpleText;
 
 import flash.display.Sprite;
@@ -31,6 +32,7 @@ public class TitleView extends Sprite {
 
     private var versionText:SimpleText;
     private var copyrightText:SimpleText;
+    private var uiHandler:UIHandler;
 
     public function TitleView() {
         super();
@@ -40,6 +42,7 @@ public class TitleView extends Sprite {
     }
 
     private function makeChildren():void {
+        this.uiHandler = UIHandler.getInstance();
         this.playButton = new TitleMenuOption(ScreenTypes.PLAY, 18, false, false);
         this.playClicked = this.playButton.clicked;
         this.addChild(this.playButton);
@@ -67,12 +70,11 @@ public class TitleView extends Sprite {
 
     public function initialize():void {
         this.updateVersionText();
-        positionButtons(null);
-        GameClient.STAGE.addEventListener(Event.RESIZE, positionButtons, false, 0, true);
+        this.registerButtons();
     }
 
     public function destroy():void {
-        GameClient.STAGE.removeEventListener(Event.RESIZE, positionButtons);
+        this.unregisterButtons();
     }
 
     private function updateVersionText():void {
@@ -80,21 +82,26 @@ public class TitleView extends Sprite {
         this.versionText.updateMetrics();
     }
 
-    private function positionButtons(e:Event):void {
-        this.playButton.x = GameClient.STAGE.width / 2 - this.playButton.width / 2;
-        this.playButton.y = GameClient.STAGE.height / 2 + this.playButton.height * 2;
-        this.legendsButton.x = GameClient.STAGE.width / 2 - this.legendsButton.width / 2;
-        this.legendsButton.y = this.playButton.y + this.legendsButton.height + 18;
-        this.editorButton.x = GameClient.STAGE.width / 2 - this.editorButton.width / 2;
-        this.editorButton.y = this.legendsButton.y + this.editorButton.height + 18;
-        this.accountButton.x = GameClient.STAGE.width / 2 - this.accountButton.width / 2;
-        this.accountButton.y = this.editorButton.y + this.accountButton.height + 18;
-        this.quitButton.x = GameClient.STAGE.width / 2 - this.quitButton.width / 2;
-        this.quitButton.y = this.accountButton.y + this.quitButton.height + 18;
-        this.versionText.x = GameClient.STAGE.width - this.versionText.width - this.versionText.height / 2;
-        this.versionText.y = GameClient.STAGE.height - this.versionText.height - this.versionText.height / 2;
-        this.copyrightText.x = GameClient.STAGE.width - this.copyrightText.width - this.copyrightText.height / 2;
-        this.copyrightText.y = GameClient.STAGE.height - this.versionText.height - this.copyrightText.height - this.copyrightText.height / 2;
+    private function registerButtons():void {
+        // Register all buttons with UIHandler for responsive positioning
+        this.uiHandler.register(this.playButton, UIHandler.CENTER, 0, 100, true);
+        this.uiHandler.register(this.legendsButton, UIHandler.CENTER, 0, 140, true);
+        this.uiHandler.register(this.editorButton, UIHandler.CENTER, 0, 180, true);
+        this.uiHandler.register(this.accountButton, UIHandler.CENTER, 0, 220, true);
+        this.uiHandler.register(this.quitButton, UIHandler.CENTER, 0, 260, true);
+        // Version and copyright - bottom right corner
+        this.uiHandler.register(this.versionText, UIHandler.BOTTOM_RIGHT, -10, -30, false);
+        this.uiHandler.register(this.copyrightText, UIHandler.BOTTOM_RIGHT, -10, -10, false);
+    }
+
+    private function unregisterButtons():void {
+        this.uiHandler.unregister(this.playButton);
+        this.uiHandler.unregister(this.legendsButton);
+        this.uiHandler.unregister(this.editorButton);
+        this.uiHandler.unregister(this.accountButton);
+        this.uiHandler.unregister(this.quitButton);
+        this.uiHandler.unregister(this.versionText);
+        this.uiHandler.unregister(this.copyrightText);
     }
 }
 }

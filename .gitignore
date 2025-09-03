@@ -92,3 +92,4 @@ fabric.properties
 # misc
 config.xml
 *.iml
+repomix-output.xml

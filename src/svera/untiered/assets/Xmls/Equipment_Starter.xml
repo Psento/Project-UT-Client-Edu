@@ -1,321 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Objects>
     <!-- #region --> // Weapons
-    <Object type="0x709" id="Beginner Dagger">
-        <Class>Equipment</Class>
-        <Item/>
-        <Texture>
-            <File>StarterGear</File>
-            <Index>0x03</Index>
-        </Texture>
-        <SlotType>2</SlotType>
-        <TierType>Common</TierType>
-        <Description>A small but sharp dagger that can damage enemies with accuracy and speed. A good choice for
-            beginners who want to master the dagger.
-        </Description>
-        <RateOfFire>1</RateOfFire>
-        <Sound>weapon/newsounds/lightdagger</Sound>
-        <OldSound>weapon/newsounds/lightdaggerswing</OldSound>
-        <Projectile>
-            <ObjectId>Green Bolt</ObjectId>
-            <Speed>100</Speed>
-            <MinDamage>55</MinDamage>
-            <MaxDamage>120</MaxDamage>
-            <LifetimeMS>350</LifetimeMS>
-        </Projectile>
-    </Object>
-    <Object type="0xa3a" id="Beginner Bow">
-        <Class>Equipment</Class>
-        <Item/>
-        <Texture>
-            <File>StarterGear</File>
-            <Index>0x93</Index>
-        </Texture>
-        <SlotType>3</SlotType>
-        <TierType>Common</TierType>
-        <Description>A lightweight bow that can shoot arrows with accuracy and speed. A good choice for beginners who
-            want to hone their skills in archery.
-        </Description>
-        <RateOfFire>1</RateOfFire>
-        <Sound>weapon/newsounds/lightbow</Sound>
-        <OldSound>weapon/newsounds/lightbowshoot</OldSound>
-        <Projectile>
-            <ObjectId>Heavy Crossbow Bolt</ObjectId>
-            <Speed>100</Speed>
-            <MinDamage>75</MinDamage>
-            <MaxDamage>115</MaxDamage>
-            <LifetimeMS>800</LifetimeMS>
-            <MultiHit/>
-        </Projectile>
-    </Object>
-    <Object type="0xa1c" id="Beginner Gun">
-        <Class>Equipment</Class>
-        <Item/>
-        <Texture>
-            <File>StarterGear</File>
-            <Index>0x90</Index>
-        </Texture>
-        <SlotType>3</SlotType>
-        <TierType>Common</TierType>
-        <Description>A simple but effective firearm that can shoot bullets with accuracy and damage. A good choice for
-            beginners who want to use a weapon of modern warfare.
-        </Description>
-        <RateOfFire>1</RateOfFire>
-        <Sound>weapon/newsounds/lightgun</Sound>
-        <OldSound>weapon/newsounds/lightgunshoot</OldSound>
-        <Projectile>
-            <ObjectId>Heavy Crossbow Bolt</ObjectId>
-            <Speed>100</Speed>
-            <MinDamage>75</MinDamage>
-            <MaxDamage>115</MaxDamage>
-            <LifetimeMS>700</LifetimeMS>
-            <MultiHit/>
-        </Projectile>
-    </Object>
-    <Object type="0xa1e" id="Beginner Crossbow">
-        <Class>Equipment</Class>
-        <Item/>
-        <Texture>
-            <File>StarterGear</File>
-            <Index>0x91</Index>
-        </Texture>
-        <SlotType>3</SlotType>
-        <TierType>Common</TierType>
-        <Description>A compact crossbow that can fire bolts with precision and force. A good choice for beginners who
-            want to try a more advanced ranged weapon.
-        </Description>
-        <RateOfFire>0.8</RateOfFire>
-        <Sound>weapon/newsounds/heavybow</Sound>
-        <OldSound>weapon/newsounds/heavybowshoot</OldSound>
-        <Projectile>
-            <ObjectId>Heavy Crossbow Bolt</ObjectId>
-            <Speed>100</Speed>
-            <MinDamage>80</MinDamage>
-            <MaxDamage>125</MaxDamage>
-            <LifetimeMS>700</LifetimeMS>
-            <MultiHit/>
-        </Projectile>
-    </Object>
-    <Object type="0xa1d" id="Beginner Chakram">
-        <Class>Equipment</Class>
-        <Item/>
-        <Texture>
-            <File>StarterGear</File>
-            <Index>0x60</Index>
-        </Texture>
-        <SlotType>3</SlotType>
-        <TierType>Common</TierType>
-        <Description>A circular blade that can be thrown at enemies and return to the wielder. A good choice for
-            beginners who want to experiment with a unique and versatile weapon.
-        </Description>
-        <RateOfFire>0.8</RateOfFire>
-        <Sound>weapon/newsounds/lightchakram</Sound>
-        <OldSound>weapon/newsounds/lightchakramshoot</OldSound>
-        <Projectile>
-            <ObjectId>Heavy Crossbow Bolt</ObjectId>
-            <Speed>100</Speed>
-            <MinDamage>80</MinDamage>
-            <MaxDamage>125</MaxDamage>
-            <LifetimeMS>600</LifetimeMS>
-            <MultiHit/>
-        </Projectile>
-    </Object>
-    <Object type="0xa9e" id="Beginner Staff">
-        <Class>Equipment</Class>
-        <Item/>
-        <Texture>
-            <File>StarterGear</File>
-            <Index>0x61</Index>
-        </Texture>
-        <SlotType>8</SlotType>
-        <TierType>Common</TierType>
-        <Description>A wooden staff that can channel magic energy and cast spells. A good choice for beginners who want
-            to explore the mysteries of magic.
-        </Description>
-        <RateOfFire>1</RateOfFire>
-        <Sound>weapon/newsounds/lightstaff</Sound>
-        <OldSound>weapon/newsounds/lightstaffshoot</OldSound>
-        <NumProjectiles>2</NumProjectiles>
-        <ArcGap>0</ArcGap>
-        <Projectile>
-            <ObjectId>Fire Missile</ObjectId>
-            <Speed>100</Speed>
-            <MinDamage>45</MinDamage>
-            <MaxDamage>85</MaxDamage>
-            <LifetimeMS>600</LifetimeMS>
-            <Amplitude>0.5</Amplitude>
-            <Frequency>2</Frequency>
-        </Projectile>
-    </Object>
-    <Object type="0xae0" id="Beginner Wand">
-        <Class>Equipment</Class>
-        <Item/>
-        <Texture>
-            <File>StarterGear</File>
-            <Index>0x92</Index>
-        </Texture>
-        <SlotType>8</SlotType>
-        <TierType>Common</TierType>
-        <Description>A metal wand that can focus magic energy and cast spells. A good choice for beginners who want to
-            refine their magic skills.
-        </Description>
-        <RateOfFire>1</RateOfFire>
-        <Sound>weapon/newsounds/lightwand</Sound>
-        <OldSound>weapon/newsounds/lightwandshoot</OldSound>
-        <Projectile>
-            <ObjectId>Red Fire</ObjectId>
-            <Speed>100</Speed>
-            <LifetimeMS>800</LifetimeMS>
-            <MinDamage>75</MinDamage>
-            <MaxDamage>115</MaxDamage>
-            <MultiHit/>
-        </Projectile>
-    </Object>
-    <Object type="0xa02" id="Beginner Sword">
-        <Class>Equipment</Class>
-        <Item/>
-        <Texture>
-            <File>StarterGear</File>
-            <Index>0x32</Index>
-        </Texture>
-        <SlotType>1</SlotType>
-        <TierType>Common</TierType>
-        <Description>A simple but sturdy sword that can slash through enemies with ease. A good choice for beginners who
-            want to learn the basics of swordsmanship.
-        </Description>
-        <RateOfFire>1</RateOfFire>
-        <Sound>weapon/newsounds/lightsword</Sound>
-        <OldSound>weapon/newsounds/lightswordshoot</OldSound>
-        <Projectile>
-            <ObjectId>Blade</ObjectId>
-            <Speed>100</Speed>
-            <MinDamage>150</MinDamage>
-            <MaxDamage>180</MaxDamage>
-            <LifetimeMS>400</LifetimeMS>
-        </Projectile>
-    </Object>
-    <Object type="0xc4a" id="Beginner Scythe">
-        <Class>Equipment</Class>
-        <Item/>
-        <Texture>
-            <File>StarterGear</File>
-            <Index>0x43</Index>
-        </Texture>
-        <SlotType>24</SlotType>
-        <TierType>Common</TierType>
-        <Description>A large and curved blade that can reap enemies with force and flair. A good choice for beginners
-            who want to wield a weapon of death.
-        </Description>
-        <RateOfFire>1</RateOfFire>
-        <Sound>weapon/newsounds/lightkatana</Sound>
-        <OldSound>weapon/newsounds/lightkatanashoot</OldSound>
-        <Projectile>
-            <ObjectId>Buster Slash</ObjectId>
-            <Speed>100</Speed>
-            <LifetimeMS>500</LifetimeMS>
-            <MinDamage>90</MinDamage>
-            <MaxDamage>120</MaxDamage>
-            <MultiHit/>
-            <CondChance effect="Hemorrhage" chance="8" duration="2"/>
-        </Projectile>
-    </Object>
-    <Object type="0xc4b" id="Beginner Katana">
-        <Class>Equipment</Class>
-        <Item/>
-        <Texture>
-            <File>StarterGear</File>
-            <Index>0x34</Index>
-        </Texture>
-        <SlotType>24</SlotType>
-        <TierType>Common</TierType>
-        <Description>A long and slender sword that can cut through enemies with elegance and finesse. A good choice for
-            beginners who want to follow the way of the blade.
-        </Description>
-        <RateOfFire>1</RateOfFire>
-        <Sound>weapon/newsounds/lightkatana</Sound>
-        <OldSound>weapon/newsounds/lightkatanashoot</OldSound>
-        <Projectile>
-            <ObjectId>Buster Slash</ObjectId>
-            <Speed>100</Speed>
-            <LifetimeMS>500</LifetimeMS>
-            <MinDamage>90</MinDamage>
-            <MaxDamage>120</MaxDamage>
-            <MultiHit/>
-            <CondChance effect="Hemorrhage" chance="8" duration="2"/>
-        </Projectile>
-    </Object>
-    <Object type="0x52b6" id="Beginner Axe">
-        <Class>Equipment</Class>
-        <Item/>
-        <Texture>
-            <File>StarterGear</File>
-            <Index>0x30</Index>
-        </Texture>
-        <SlotType>29</SlotType>
-        <TierType>Common</TierType>
-        <Description>A heavy axe that can deal powerful blows to foes. A good choice for beginners who want to test
-            their strength and endurance.
-        </Description>
-        <Sound>weapon/newsounds/lightaxe</Sound>
-        <OldSound>weapon/newsounds/lightaxeswing</OldSound>
-        <RateOfFire>0.68</RateOfFire>
-        <Projectile>
-            <ObjectId>Darkness Bolt</ObjectId>
-            <Speed>100</Speed>
-            <MinDamage>180</MinDamage>
-            <MaxDamage>200</MaxDamage>
-            <LifetimeMS>400</LifetimeMS>
-            <ArmorPiercing/>
-        </Projectile>
-    </Object>
-    <Object type="0x52b7" id="Beginner Flail">
-        <Class>Equipment</Class>
-        <Item/>
-        <Texture>
-            <File>StarterGear</File>
-            <Index>0x31</Index>
-        </Texture>
-        <SlotType>29</SlotType>
-        <TierType>Common</TierType>
-        <Description>A spiked ball attached to a chain that can smash and bash enemies with momentum and impact. A good
-            choice for beginners who want to swing a weapon of destruction.
-        </Description>
-        <Sound>weapon/newsounds/lightflail</Sound>
-        <OldSound>weapon/newsounds/lightflailswing</OldSound>
-        <RateOfFire>0.68</RateOfFire>
-        <Projectile>
-            <ObjectId>Darkness Bolt</ObjectId>
-            <Speed>100</Speed>
-            <MinDamage>180</MinDamage>
-            <MaxDamage>200</MaxDamage>
-            <LifetimeMS>400</LifetimeMS>
-            <ArmorPiercing/>
-        </Projectile>
-    </Object>
-    <Object type="0x52b8" id="Beginner Lance">
-        <Class>Equipment</Class>
-        <Item/>
-        <Texture>
-            <File>StarterGear</File>
-            <Index>0x33</Index>
-        </Texture>
-        <SlotType>29</SlotType>
-        <TierType>Common</TierType>
-        <Description>A long and pointed spear that can thrust and jab enemies with reach and power. A good choice for
-            beginners who want to charge into battle with a weapon of honor.
-        </Description>
-        <Sound>weapon/newsounds/lightlance</Sound>
-        <OldSound>weapon/newsounds/lightlanceshoot</OldSound>
-        <RateOfFire>0.68</RateOfFire>
-        <Projectile>
-            <ObjectId>Darkness Bolt</ObjectId>
-            <Speed>100</Speed>
-            <MinDamage>180</MinDamage>
-            <MaxDamage>200</MaxDamage>
-            <LifetimeMS>500</LifetimeMS>
-            <ArmorPiercing/>
-        </Projectile>
-    </Object>
     <Object type="0x614d" id="Beginner Claws">
         <Class>Equipment</Class>
         <Item/>
@@ -323,7 +8,7 @@
             <File>StarterGear</File>
             <Index>0x00</Index>
         </Texture>
-        <SlotType>34</SlotType>
+        <SlotType>17</SlotType>
         <TierType>Common</TierType>
         <Description>A pair of metal claws that can slash and stab enemies with agility and ferocity. A good choice for
             beginners who want to unleash their inner beast.
@@ -334,7 +19,7 @@
         <NumProjectiles>2</NumProjectiles>
         <ArcGap>0</ArcGap>
         <Projectile>
-            <ObjectId>Mithril Blade Proj</ObjectId>
+            <ObjectId>BClaw Proj</ObjectId>
             <Speed>100</Speed>
             <MinDamage>80</MinDamage>
             <MaxDamage>130</MaxDamage>
@@ -342,6 +27,14 @@
             <MultiHit/>
             <Wavy/>
         </Projectile>
+    </Object>
+    <Object type="0x67" id="BClaw Proj">
+        <Class>Projectile</Class>
+        <Texture>
+            <File>StarterGear</File>
+            <Index>0x10</Index>
+        </Texture>
+        <AngleCorrection>1</AngleCorrection>
     </Object>
     <Object type="0x614e" id="Beginner Gauntlets">
         <Class>Equipment</Class>
@@ -361,7 +54,7 @@
         <NumProjectiles>2</NumProjectiles>
         <ArcGap>0</ArcGap>
         <Projectile>
-            <ObjectId>Mithril Blade Proj</ObjectId>
+            <ObjectId>BGauntlet Proj</ObjectId>
             <Speed>100</Speed>
             <MinDamage>80</MinDamage>
             <MaxDamage>130</MaxDamage>
@@ -369,6 +62,14 @@
             <MultiHit/>
             <Wavy/>
         </Projectile>
+    </Object>
+    <Object type="0x68" id="BGauntlet Proj">
+        <Class>Projectile</Class>
+        <Texture>
+            <File>StarterGear</File>
+            <Index>0x11</Index>
+        </Texture>
+        <AngleCorrection>1</AngleCorrection>
     </Object>
     <Object type="0x614f" id="Beginner Blades">
         <Class>Equipment</Class>
@@ -388,7 +89,7 @@
         <NumProjectiles>2</NumProjectiles>
         <ArcGap>0</ArcGap>
         <Projectile>
-            <ObjectId>Mithril Blade Proj</ObjectId>
+            <ObjectId>BBlades Proj</ObjectId>
             <Speed>100</Speed>
             <MinDamage>80</MinDamage>
             <MaxDamage>130</MaxDamage>
@@ -397,485 +98,493 @@
             <Wavy/>
         </Projectile>
     </Object>
+    <Object type="0x69" id="BBlades Proj">
+        <Class>Projectile</Class>
+        <RandomTexture>
+            <Texture>
+                <File>StarterGear</File>
+                <Index>0x12</Index>
+            </Texture>
+            <Texture>
+                <File>StarterGear</File>
+                <Index>0x22</Index>
+            </Texture>
+        </RandomTexture>
+        <AngleCorrection>1</AngleCorrection>
+    </Object>
+    <Object type="0x709" id="Beginner Dagger">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>StarterGear</File>
+            <Index>0x03</Index>
+        </Texture>
+        <SlotType>2</SlotType>
+        <TierType>Common</TierType>
+        <Description>A small but sharp dagger that can damage enemies with accuracy and speed. A good choice for
+            beginners who want to master the dagger.
+        </Description>
+        <RateOfFire>1</RateOfFire>
+        <Sound>weapon/newsounds/lightdagger</Sound>
+        <OldSound>weapon/newsounds/lightdaggerswing</OldSound>
+        <Projectile>
+            <ObjectId>BDagger Proj</ObjectId>
+            <Speed>100</Speed>
+            <MinDamage>55</MinDamage>
+            <MaxDamage>120</MaxDamage>
+            <LifetimeMS>350</LifetimeMS>
+        </Projectile>
+    </Object>
+    <Object type="0x6a" id="BDagger Proj">
+        <Class>Projectile</Class>
+        <Texture>
+            <File>StarterGear</File>
+            <Index>0x13</Index>
+        </Texture>
+        <AngleCorrection>1</AngleCorrection>
+    </Object>
+    <Object type="0x52b6" id="Beginner Axe">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>StarterGear</File>
+            <Index>0x30</Index>
+        </Texture>
+        <SlotType>29</SlotType>
+        <TierType>Common</TierType>
+        <Description>A heavy axe that can deal powerful blows to foes. A good choice for beginners who want to test
+            their strength and endurance.
+        </Description>
+        <Sound>weapon/newsounds/lightaxe</Sound>
+        <OldSound>weapon/newsounds/lightaxeswing</OldSound>
+        <RateOfFire>0.68</RateOfFire>
+        <Projectile>
+            <ObjectId>BAxe Proj</ObjectId>
+            <Speed>100</Speed>
+            <MinDamage>180</MinDamage>
+            <MaxDamage>200</MaxDamage>
+            <LifetimeMS>400</LifetimeMS>
+            <ArmorPiercing/>
+        </Projectile>
+    </Object>
+    <Object type="0x6b" id="BAxe Proj">
+        <Class>Projectile</Class>
+        <Texture>
+            <File>StarterGear</File>
+            <Index>0x40</Index>
+        </Texture>
+        <AngleCorrection>1</AngleCorrection>
+    </Object>
+    // Mace is to have the first projectile fire out and either when it reaches the range or impacts it will explode with 5 shots arc gap 70
+    <Object type="0x52b7" id="Beginner Mace">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>StarterGear</File>
+            <Index>0x31</Index>
+        </Texture>
+        <SlotType>29</SlotType>
+        <TierType>Common</TierType>
+        <Description>A spiked ball attached to a chain that can smash and bash enemies with momentum and impact. A good
+            choice for beginners who want to swing a weapon of destruction.
+        </Description>
+        <Sound>weapon/newsounds/lightflail</Sound>
+        <OldSound>weapon/newsounds/lightflailswing</OldSound>
+        <RateOfFire>0.68</RateOfFire>
+        <Projectile id="0">
+            <ObjectId>BMace Proj</ObjectId>
+            <Speed>100</Speed>
+            <Damage>0</Damage>
+            <LifetimeMS>400</LifetimeMS>
+        </Projectile>
+        <Projectile id="1">
+            <ObjectId>Bmace Proj1</ObjectId>
+            <Speed>100</Speed>
+            <MinDamage>12</MinDamage>
+            <MaxDamage>24</MaxDamage>
+            <LifetimeMS>100</LifetimeMS>
+            <ArmorPiercing/>
+        </Projectile>
+    </Object>
+    <Object type="0x6c" id="BMace Proj">
+        <Class>Projectile</Class>
+        <Texture>
+            <File>StarterGear</File>
+            <Index>0x41</Index>
+        </Texture>
+        <Rotation>50</Rotation>
+        <AngleCorrection>1</AngleCorrection>
+    </Object>
+    <Object type="0x6d" id="BAxe Proj1">
+        <Class>Projectile</Class>
+        <Texture>
+            <File>StarterGear</File>
+            <Index>0x51</Index>
+        </Texture>
+        <AngleCorrection>1</AngleCorrection>
+    </Object>
+    <Object type="0xa02" id="Beginner Sword">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>StarterGear</File>
+            <Index>0x32</Index>
+        </Texture>
+        <SlotType>1</SlotType>
+        <TierType>Common</TierType>
+        <Description>A simple but sturdy sword that can slash through enemies with ease. A good choice for beginners who
+            want to learn the basics of swordsmanship.
+        </Description>
+        <RateOfFire>1</RateOfFire>
+        <Sound>weapon/newsounds/lightsword</Sound>
+        <OldSound>weapon/newsounds/lightswordshoot</OldSound>
+        <Projectile>
+            <ObjectId>BSword Proj</ObjectId>
+            <Speed>100</Speed>
+            <MinDamage>150</MinDamage>
+            <MaxDamage>180</MaxDamage>
+            <LifetimeMS>400</LifetimeMS>
+        </Projectile>
+    </Object>
+    <Object type="0x6e" id="BSword Proj">
+        <Class>Projectile</Class>
+        <Texture>
+            <File>StarterGear</File>
+            <Index>0x42</Index>
+        </Texture>
+        <AngleCorrection>1</AngleCorrection>
+    </Object>
+    <Object type="0x52b8" id="Beginner Lance">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>StarterGear</File>
+            <Index>0x33</Index>
+        </Texture>
+        <SlotType>29</SlotType>
+        <TierType>Common</TierType>
+        <Description>A long and pointed spear that can thrust and jab enemies with reach and power. A good choice for
+            beginners who want to charge into battle with a weapon of honor.
+        </Description>
+        <Sound>weapon/newsounds/lightlance</Sound>
+        <OldSound>weapon/newsounds/lightlanceshoot</OldSound>
+        <RateOfFire>0.68</RateOfFire>
+        <Projectile>
+            <ObjectId>BLance Proj</ObjectId>
+            <Speed>100</Speed>
+            <MinDamage>180</MinDamage>
+            <MaxDamage>200</MaxDamage>
+            <LifetimeMS>500</LifetimeMS>
+            <ArmorPiercing/>
+        </Projectile>
+    </Object>
+    <Object type="0x6f" id="BLance Proj">
+        <Class>Projectile</Class>
+        <Texture>
+            <File>StarterGear</File>
+            <Index>0x43</Index>
+        </Texture>
+        <AngleCorrection>1</AngleCorrection>
+    </Object>
+    <Object type="0xc4b" id="Beginner Katana">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>StarterGear</File>
+            <Index>0x34</Index>
+        </Texture>
+        <SlotType>24</SlotType>
+        <TierType>Common</TierType>
+        <Description>A long and slender sword that can cut through enemies with elegance and finesse. A good choice for
+            beginners who want to follow the way of the blade.
+        </Description>
+        <RateOfFire>1</RateOfFire>
+        <Sound>weapon/newsounds/lightkatana</Sound>
+        <OldSound>weapon/newsounds/lightkatanashoot</OldSound>
+        <Projectile>
+            <ObjectId>BKatana Proj</ObjectId>
+            <Speed>100</Speed>
+            <LifetimeMS>500</LifetimeMS>
+            <MinDamage>90</MinDamage>
+            <MaxDamage>120</MaxDamage>
+            <MultiHit/>
+            <CondChance effect="Hemorrhage" chance="8" duration="2"/>
+        </Projectile>
+    </Object>
+    <Object type="0x70" id="BKatana Proj">
+        <Class>Projectile</Class>
+        <Texture>
+            <File>StarterGear</File>
+            <Index>0x44</Index>
+        </Texture>
+        <AngleCorrection>1</AngleCorrection>
+    </Object>
+    <Object type="0xc4a" id="Beginner Scythe">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>StarterGear</File>
+            <Index>0x43</Index>
+        </Texture>
+        <SlotType>24</SlotType>
+        <TierType>Common</TierType>
+        <Description>A large and curved blade that can reap enemies with force and flair. A good choice for beginners
+            who want to wield a weapon of death.
+        </Description>
+        <RateOfFire>1</RateOfFire>
+        <Sound>weapon/newsounds/lightkatana</Sound>
+        <OldSound>weapon/newsounds/lightkatanashoot</OldSound>
+        <Projectile>
+            <ObjectId>BScythe Proj</ObjectId>
+            <Speed>100</Speed>
+            <LifetimeMS>500</LifetimeMS>
+            <MinDamage>90</MinDamage>
+            <MaxDamage>120</MaxDamage>
+            <MultiHit/>
+            <CondChance effect="Hemorrhage" chance="8" duration="2"/>
+        </Projectile>
+    </Object>
+    <Object type="0x71" id="BScythe Proj">
+        <Class>Projectile</Class>
+        <Texture>
+            <File>StarterGear</File>
+            <Index>0x45</Index>
+        </Texture>
+        <AngleCorrection>1</AngleCorrection>
+    </Object>
+    <Object type="0xa1d" id="Beginner Chakram">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>StarterGear</File>
+            <Index>0x60</Index>
+        </Texture>
+        <SlotType>3</SlotType>
+        <TierType>Common</TierType>
+        <Description>A circular blade that can be thrown at enemies and return to the wielder. A good choice for
+            beginners who want to experiment with a unique and versatile weapon.
+        </Description>
+        <RateOfFire>0.8</RateOfFire>
+        <Sound>weapon/newsounds/lightchakram</Sound>
+        <OldSound>weapon/newsounds/lightchakramshoot</OldSound>
+        <Projectile>
+            <ObjectId>BChakram Proj</ObjectId>
+            <Speed>100</Speed>
+            <MinDamage>80</MinDamage>
+            <MaxDamage>125</MaxDamage>
+            <LifetimeMS>600</LifetimeMS>
+            <MultiHit/>
+        </Projectile>
+    </Object>
+    <Object type="0x72" id="BChakram Proj">
+        <Class>Projectile</Class>
+        <Texture>
+            <File>StarterGear</File>
+            <Index>0x70</Index>
+        </Texture>
+        <Rotation>50</Rotation>
+    </Object>
+    <Object type="0xa9e" id="Beginner Staff">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>StarterGear</File>
+            <Index>0x61</Index>
+        </Texture>
+        <SlotType>8</SlotType>
+        <TierType>Common</TierType>
+        <Description>A wooden staff that can channel magic energy and cast spells. A good choice for beginners who want
+            to explore the mysteries of magic.
+        </Description>
+        <RateOfFire>1</RateOfFire>
+        <Sound>weapon/newsounds/lightstaff</Sound>
+        <OldSound>weapon/newsounds/lightstaffshoot</OldSound>
+        <NumProjectiles>2</NumProjectiles>
+        <ArcGap>0</ArcGap>
+        <Projectile>
+            <ObjectId>BStaff Proj</ObjectId>
+            <Speed>100</Speed>
+            <MinDamage>45</MinDamage>
+            <MaxDamage>85</MaxDamage>
+            <LifetimeMS>600</LifetimeMS>
+            <Amplitude>0.5</Amplitude>
+            <Frequency>2</Frequency>
+        </Projectile>
+    </Object>
+    <Object type="0x73" id="BStaff Proj">
+        <Class>Projectile</Class>
+        <Texture>
+            <File>StarterGear</File>
+            <Index>0x71</Index>
+        </Texture>
+        <AngleCorrection>1</AngleCorrection>
+    </Object>
+    <Object type="0xa1c" id="Beginner Gun">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>StarterGear</File>
+            <Index>0x90</Index>
+        </Texture>
+        <SlotType>3</SlotType>
+        <TierType>Common</TierType>
+        <Description>A simple but effective firearm that can shoot bullets with accuracy and damage. A good choice for
+            beginners who want to use a weapon of modern warfare.
+        </Description>
+        <RateOfFire>1</RateOfFire>
+        <Sound>weapon/newsounds/lightgun</Sound>
+        <OldSound>weapon/newsounds/lightgunshoot</OldSound>
+        <Projectile>
+            <ObjectId>BGun Proj</ObjectId>
+            <Speed>100</Speed>
+            <MinDamage>75</MinDamage>
+            <MaxDamage>115</MaxDamage>
+            <LifetimeMS>700</LifetimeMS>
+            <MultiHit/>
+        </Projectile>
+    </Object>
+    <Object type="0x74" id="BGun Proj">
+        <Class>Projectile</Class>
+        <Texture>
+            <File>StarterGear</File>
+            <Index>0xa0</Index>
+        </Texture>
+    </Object>
+    <Object type="0xa3a" id="Beginner Bow">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>StarterGear</File>
+            <Index>0x93</Index>
+        </Texture>
+        <SlotType>3</SlotType>
+        <TierType>Common</TierType>
+        <Description>A lightweight bow that can shoot arrows with accuracy and speed. A good choice for beginners who
+            want to hone their skills in archery.
+        </Description>
+        <RateOfFire>1</RateOfFire>
+        <Sound>weapon/newsounds/lightbow</Sound>
+        <OldSound>weapon/newsounds/lightbowshoot</OldSound>
+        <Projectile>
+            <ObjectId>BBow Proj</ObjectId>
+            <Speed>100</Speed>
+            <MinDamage>75</MinDamage>
+            <MaxDamage>115</MaxDamage>
+            <LifetimeMS>800</LifetimeMS>
+            <MultiHit/>
+        </Projectile>
+    </Object>
+    <Object type="0x75" id="BBow Proj">
+        <Class>Projectile</Class>
+        <Texture>
+            <File>StarterGear</File>
+            <Index>0xa1</Index>
+        </Texture>
+        <AngleCorrection>1</AngleCorrection>
+    </Object>
+    <Object type="0xae0" id="Beginner Wand">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>StarterGear</File>
+            <Index>0x92</Index>
+        </Texture>
+        <SlotType>8</SlotType>
+        <TierType>Common</TierType>
+        <Description>A metal wand that can focus magic energy and cast spells. A good choice for beginners who want to
+            refine their magic skills.
+        </Description>
+        <RateOfFire>1</RateOfFire>
+        <Sound>weapon/newsounds/lightwand</Sound>
+        <OldSound>weapon/newsounds/lightwandshoot</OldSound>
+        <Projectile>
+            <ObjectId>BWand Proj</ObjectId>
+            <Speed>100</Speed>
+            <LifetimeMS>800</LifetimeMS>
+            <MinDamage>75</MinDamage>
+            <MaxDamage>115</MaxDamage>
+            <MultiHit/>
+        </Projectile>
+    </Object>
+    <Object type="0x76" id="BWand Proj">
+        <Class>Projectile</Class>
+        <Texture>
+            <File>StarterGear</File>
+            <Index>0xa2</Index>
+        </Texture>
+        <AngleCorrection>1</AngleCorrection>
+    </Object>
+    <Object type="0xa1e" id="Beginner Crossbow">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>StarterGear</File>
+            <Index>0x91</Index>
+        </Texture>
+        <SlotType>3</SlotType>
+        <TierType>Common</TierType>
+        <Description>A compact crossbow that can fire bolts with precision and force. A good choice for beginners who
+            want to try a more advanced ranged weapon.
+        </Description>
+        <RateOfFire>0.8</RateOfFire>
+        <Sound>weapon/newsounds/heavybow</Sound>
+        <OldSound>weapon/newsounds/heavybowshoot</OldSound>
+        <Projectile>
+            <ObjectId>BCrossbow Proj</ObjectId>
+            <Speed>100</Speed>
+            <MinDamage>80</MinDamage>
+            <MaxDamage>125</MaxDamage>
+            <LifetimeMS>700</LifetimeMS>
+            <MultiHit/>
+        </Projectile>
+    </Object>
+    <Object type="0x77" id="BCrossbow Proj">
+        <Class>Projectile</Class>
+        <Texture>
+            <File>StarterGear</File>
+            <Index>0xa3</Index>
+        </Texture>
+    </Object>
     <!-- #endregion -->
-    <!-- #region --> // Abilities
-    <Object type="0xadb" id="Beginner Cloak">
-        <Class>Equipment</Class>
-        <Item/>
-        <Texture>
-            <File>StarterGear</File>
-            <Index>0x0a</Index>
-        </Texture>
-        <SlotType>13</SlotType>
-        <TierType>Common</TierType>
-        <Description>A shrowd made to give the wearer a great increase in stealth. A good choice for beginners who want
-            to balance their stealth and speed.
-        </Description>
-        <ActivateOnEquip stat="4" amount="5">IncrementStat</ActivateOnEquip>
-        <Sound>ability/ability_use</Sound>
-        <OldSound>ability/ability_use</OldSound>
-        <Usable/>
-        <MpCost>75</MpCost>
-        <Cooldown>5.5</Cooldown>
-        <Activate effect="Invisible" duration="4.5">ConditionEffectSelf</Activate>
-    </Object>
-    <Object type="0xade" id="Beginner Quiver">
-        <Class>Equipment</Class>
-        <Item/>
-        <Texture>
-            <File>StarterGear</File>
-            <Index>0x38</Index>
-        </Texture>
-        <SlotType>15</SlotType>
-        <TierType>Common</TierType>
-        <Description>A powerful quiver enchanting arrows stowed within. A good choice for beginners who want to assist
-            others and boost their dexterity.
-        </Description>
-        <ActivateOnEquip stat="5" amount="5">IncrementStat</ActivateOnEquip>
-        <Sound>ability/ability_use</Sound>
-        <OldSound>ability/ability_use</OldSound>
-        <Usable/>
-        <MpCost>65</MpCost>
-        <Activate>Shoot</Activate>
-        <Projectile>
-            <ObjectId>Indigo Arrow</ObjectId>
-            <Speed>100</Speed>
-            <MinDamage>220</MinDamage>
-            <MaxDamage>260</MaxDamage>
-            <LifetimeMS>1100</LifetimeMS>
-            <Size>150</Size>
-            <ConditionEffect duration="3">Bind</ConditionEffect>
-            <MultiHit/>
-            <PassesCover/>
-            <ParticleTrail/>
-        </Projectile>
-    </Object>
-    <Object type="0xad5" id="Beginner Spell">
-        <Class>Equipment</Class>
-        <Item/>
-        <Texture>
-            <File>StarterGear</File>
-            <Index>0x28</Index>
-        </Texture>
-        <SlotType>11</SlotType>
-        <TierType>Common</TierType>
-        <Description>A devastating fire spell that sprays fire from the center. A good choice for beginners who want to
-            increase their magic points and use destructive magic.
-        </Description>
-        <ActivateOnEquip stat="3" amount="80">IncrementStat</ActivateOnEquip>
-        <Sound>ability/ability_use</Sound>
-        <OldSound>ability/ability_use</OldSound>
-        <Projectile>
-            <ObjectId>Pink Bolt</ObjectId>
-            <Speed>100</Speed>
-            <MinDamage>130</MinDamage>
-            <MaxDamage>220</MaxDamage>
-            <LifetimeMS>180</LifetimeMS>
-        </Projectile>
-        <Usable/>
-        <MpCost>60</MpCost>
-        <Activate>BulletNova</Activate>
-    </Object>
-    <Object type="0xad8" id="Beginner Tome">
-        <Class>Equipment</Class>
-        <Item/>
-        <Texture>
-            <File>StarterGear</File>
-            <Index>0x3b</Index>
-        </Texture>
-        <SlotType>4</SlotType>
-        <TierType>Common</TierType>
-        <Description>A gremoir with an ancient language written within, speaking the words heal yourself and those
-            around you. A good choice for beginners who want to increase their magic points and use rejuvination magic.
-        </Description>
-        <ActivateOnEquip stat="3" amount="80">IncrementStat</ActivateOnEquip>
-        <Sound>ability/ability_use</Sound>
-        <OldSound>ability/ability_use</OldSound>
-        <Usable/>
-        <MpCost>70</MpCost>
-        <Activate effect="Regenerate" duration="4" range="4.5" useWisMod="true">ConditionEffectAura</Activate>
-        <Activate range="4.5" amount="160" useWisMod="true">HealNova</Activate>
-    </Object>
-    <Object type="0xa69" id="Beginner Helmet">
-        <Class>Equipment</Class>
-        <Item/>
-        <Texture>
-            <File>StarterGear</File>
-            <Index>0x18</Index>
-        </Texture>
-        <SlotType>16</SlotType>
-        <TierType>Common</TierType>
-        <Description>A sturdy and comfortable helmet that protects the head and enhances the senses. A good choice for
-            beginners who want to accel with the dexterity and speed.
-        </Description>
-        <ActivateOnEquip stat="3" amount="5">IncrementStat</ActivateOnEquip>
-        <Sound>ability/ability_use</Sound>
-        <OldSound>ability/ability_use</OldSound>
-        <Usable/>
-        <MpCost>75</MpCost>
-        <Activate effect="Fury" duration="5" range="4">ConditionEffectAura</Activate>
-        <Activate effect="Swift" duration="5">ConditionEffectSelf</Activate>
-        <Cooldown>6</Cooldown>
-    </Object>
-    <Object type="0xacf" id="Beginner Shield">
-        <Class>Equipment</Class>
-        <Item/>
-        <Texture>
-            <File>StarterGear</File>
-            <Index>0x19</Index>
-        </Texture>
-        <SlotType>52</SlotType>
-        <TierType>Common</TierType>
-        <Description>A round shield that can be used to bash enemies, stunning them. A good choice for those who want to
-            defend their allies while giving them a huge advantage.
-        </Description>
-        <ActivateOnEquip stat="3" amount="5">IncrementStat</ActivateOnEquip>
-        <Sound>ability/ability_use</Sound>
-        <OldSound>ability/ability_use</OldSound>
-        <Usable/>
-        <Activate>Shoot</Activate>
-        <MpCost>95</MpCost>
-        <Cooldown>1</Cooldown>
-        <NumProjectiles>3</NumProjectiles>
-        <Projectile>
-            <ObjectId>Silver Shield</ObjectId>
-            <Speed>100</Speed>
-            <MinDamage>190</MinDamage>
-            <MaxDamage>240</MaxDamage>
-            <LifetimeMS>320</LifetimeMS>
-            <Size>140</Size>
-            <ConditionEffect duration="3">Stunned</ConditionEffect>
-            <MultiHit/>
-            <PassesCover/>
-            <ParticleTrail/>
-        </Projectile>
-    </Object>
-    <Object type="0xada" id="Beginner Seal">
-        <Class>Equipment</Class>
-        <Item/>
-        <Texture>
-            <File>StarterGear</File>
-            <Index>0x1b</Index>
-        </Texture>
-        <SlotType>12</SlotType>
-        <TierType>Common</TierType>
-        <Description>A seal with an embedded magic gem that can be used to grant your allies great power. A good choice
-            for those who want to support their allies while being able to deal moderate damage.
-        </Description>
-        <Sound>ability/ability_use</Sound>
-        <OldSound>ability/ability_use</OldSound>
-        <Usable/>
-        <MpCost>75</MpCost>
-        <Activate stat="0" amount="25" duration="3.5" range="4.5" noStack="true" useWisMod="true">StatBoostAura
-        </Activate>
-        <Activate effect="Regenerate" duration="3.5" range="4.5" color="0xff0080" target="player" center="player"
-                  visualEffect="5" useWisMod="true">GenericActivate
-        </Activate>
-        <Activate effect="Strengthen" duration="3.5" range="4.5" color="0xff0080" target="player" center="player"
-                  visualEffect="0" useWisMod="true">GenericActivate
-        </Activate>
-    </Object>
-    <Object type="0xaa6" id="Beginner Poison">
-        <Class>Equipment</Class>
-        <Item/>
-        <Texture>
-            <File>StarterGear</File>
-            <Index>0x0c</Index>
-        </Texture>
-        <SlotType>18</SlotType>
-        <TierType>Common</TierType>
-        <Description>A vial of potent liquid that can cause various effects when applied to an enemy. It can be used to
-            poison foes. A good choice for those who want to master the art of Assassination.
-        </Description>
-        <Sound>ability/ability_use</Sound>
-        <OldSound>ability/ability_use</OldSound>
-        <Usable/>
-        <MpCost>65</MpCost>
-        <Activate useWisMod="true" radius="4" totalDamage="600" duration="6.5" impactDamage="120" throwTime="1">
-            PoisonGrenade
-        </Activate>
-    </Object>
-    <Object type="0xaad" id="Beginner Skull">
-        <Class>Equipment</Class>
-        <Item/>
-        <Texture>
-            <File>StarterGear</File>
-            <Index>0x2a</Index>
-        </Texture>
-        <SlotType>19</SlotType>
-        <TierType>Common</TierType>
-        <Description>A bone that can store and release energy. It can be used to power, charge, or detonate other items,
-            or to create explosions. A good choice for those who want to master the art of Necromancy.
-        </Description>
-        <Sound>ability/ability_use</Sound>
-        <OldSound>ability/ability_use</OldSound>
-        <Usable/>
-        <MpCost>100</MpCost>
-        <Activate radius="3.25" totalDamage="100">VampireBlast</Activate>
-    </Object>
-    <Object type="0xab4" id="Beginner Trap">
-        <Class>Equipment</Class>
-        <Item/>
-        <Texture>
-            <File>StarterGear</File>
-            <Index>0x39</Index>
-        </Texture>
-        <SlotType>46</SlotType>
-        <TierType>Common</TierType>
-        <Description>A device that can trigger when someone or something approaches. It can be used to capture, injure,
-            or kill enemies. A good choice for those who want to master the art of Hunting.
-        </Description>
-        <Sound>ability/ability_use</Sound>
-        <OldSound>ability/ability_use</OldSound>
-        <Usable/>
-        <MpCost>100</MpCost>
-        <Activate radius="5.5" totalDamage="200" condDuration="4.5">Trap</Activate>
-    </Object>
-    <Object type="0xa44" id="Beginner Orb">
-        <Class>Equipment</Class>
-        <Item/>
-        <Texture>
-            <File>StarterGear</File>
-            <Index>0x2b</Index>
-        </Texture>
-        <SlotType>21</SlotType>
-        <TierType>Common</TierType>
-        <Description>A sphere that petrifies the target, stripping the target's defenses and disables their movement. A
-            good choice for those who want to assist allies with range.
-        </Description>
-        <Sound>ability/ability_use</Sound>
-        <OldSound>ability/ability_use</OldSound>
-        <Usable/>
-        <MpCost>75</MpCost>
-        <Cooldown>4</Cooldown>
-        <Activate duration="3" range="3">StasisBlast</Activate>
-    </Object>
-    <Object type="0xb1e" id="Beginner Prism">
-        <Class>Equipment</Class>
-        <Item/>
-        <Texture>
-            <File>StarterGear</File>
-            <Index>0x0b</Index>
-        </Texture>
-        <SlotType>22</SlotType>
-        <TierType>Common</TierType>
-        <Description>A crystal that can refract light and create illusions. It can be used to distract or deceive foes.
-            A good choice for those who want to use illusionary magic.
-        </Description>
-        <Sound>ability/ability_use</Sound>
-        <OldSound>ability/ability_use</OldSound>
-        <Usable/>
-        <MpCost>75</MpCost>
-        <Activate effect="Harden" duration="1">ConditionEffectSelf</Activate>
-        <Activate duration="4.5">Decoy</Activate>
-        <Activate maxDistance="20">Teleport</Activate>
-    </Object>
-    <Object type="0xb30" id="Beginner Scepter">
-        <Class>Equipment</Class>
-        <Item/>
-        <Texture>
-            <File>StarterGear</File>
-            <Index>0x3c</Index>
-        </Texture>
-        <SlotType>23</SlotType>
-        <TierType>Common</TierType>
-        <Description>A rod that channels electricity through itself. The energy gathered within this item can be very
-            destructive to those around the wielder. A good choice for those who want to clear groups of foes.
-        </Description>
-        <Sound>ability/ability_use</Sound>
-        <OldSound>ability/ability_use</OldSound>
-        <Usable/>
-        <MpCost>75</MpCost>
-        <Activate useWisMod="true" totalDamage="220" maxTargets="6">Lightning</Activate>
-    </Object>
-    <Object type="0xc56" id="Beginner Shuriken">
+    <!-- #region --> // Armor
+    <Object type="0x78" id="Beginner Mask">
         <Class>Equipment</Class>
         <Item/>
         <Texture>
             <File>StarterGear</File>
             <Index>0x1d</Index>
         </Texture>
-        <SlotType>25</SlotType>
+        <SlotType>14</SlotType>
         <TierType>Common</TierType>
-        <Description>A set of metal stars that can be thrown at high speed and accuracy. They can be used to damage, or
-            to cut through obstacles. A good choice for those who want to master the art of a Ninja.
+        <Description>A light mask that can protect the wearer from minor facial injuries. A good choice for beginners who want
+            to boost their defense.
         </Description>
-        <Sound>ability/ability_use</Sound>
-        <OldSound>ability/ability_use</OldSound>
-        <Projectile>
-            <ObjectId>Ninja Star Silver</ObjectId>
-            <Speed>150</Speed>
-            <MinDamage>400</MinDamage>
-            <MaxDamage>500</MaxDamage>
-            <LifetimeMS>1000</LifetimeMS>
-            <Size>120</Size>
-            <PassesCover/>
-        </Projectile>
-        <Usable/>
-        <MpCost>60</MpCost>
-        <Activate>ShurikenAbility</Activate>
-        <MultiPhase/>
+        <ActivateOnEquip stat="3" amount="1">IncrementStat</ActivateOnEquip>
     </Object>
-    <Object type="0x185d" id="Beginner Sheath">
-        <Class>Equipment</Class>
-        <Item/>
-        <Texture>
-            <File>StarterGear</File>
-            <Index>0x1e</Index>
-        </Texture>
-        <SlotType>27</SlotType>
-        <TierType>Common</TierType>
-        <Description>A leather case that can store and protect a blade. It has a strap that can attach it to the body
-            and a button that can release the blade quickly. A good choice for those who want to master the art of a
-            Samurai.
-        </Description>
-        <Sound>ability/ability_use</Sound>
-        <OldSound>ability/ability_use</OldSound>
-        <Usable/>
-        <MpCost>65</MpCost>
-        <Activate effect="Fury" duration="2.5">ConditionEffectSelf</Activate>
-        <Activate range="3.5" color="0xffff00" totalDamage="600" useAtkMod="true">SamuraiAbility</Activate>
-        <MultiPhase/>
-    </Object>
-    <Object type="0x51ad" id="Beginner Banner">
-        <Class>Equipment</Class>
-        <Item/>
-        <Texture>
-            <File>StarterGear</File>
-            <Index>0x1c</Index>
-        </Texture>
-        <SlotType>28</SlotType>
-        <TierType>Common</TierType>
-        <ActivateOnEquip stat="2" amount="2">IncrementStat</ActivateOnEquip>
-        <Description>A flag that represents a point to gather. It can be used to rally, inspire. A good choice for those
-            who want to master their commanding skills.
-        </Description>
-        <Sound>ability/ability_use</Sound>
-        <OldSound>ability/ability_use</OldSound>
-        <Usable/>
-        <MpCost>80</MpCost>
-        <Activate effect="Charge" duration="3.5" range="4">ConditionEffectAura</Activate>
-        <Activate range="3" amount="5" duration="5">Banner</Activate>
-        <Cooldown>7</Cooldown>
-    </Object>
-    <Object type="0x5813" id="Beginner Charm">
-        <Class>Equipment</Class>
-        <Item/>
-        <Texture>
-            <File>StarterGear</File>
-            <Index>0x1f</Index>
-        </Texture>
-        <SlotType>32</SlotType>
-        <TierType>Common</TierType>
-        <Description>A Charm with great magic attributes. It can be used to summon a torii, granting resilience to those
-            around it. A good choice for those who want to deal great damage whilst staying resilient.
-        </Description>
-        <Sound>ability/ability_use</Sound>
-        <OldSound>ability/ability_use</OldSound>
-        <Usable/>
-        <MpCost>80</MpCost>
-        <Activate range="4" amount="6" players="true" duration="2.5" effect="Harden" color="0xB5009C" objType="0x6307">
-            Torii
-        </Activate>
-        <Cooldown>6</Cooldown>
-    </Object>
-    <Object type="0x583c" id="Beginner Dice">
-        <Class>Equipment</Class>
-        <Item/>
-        <Texture>
-            <File>StarterGear</File>
-            <Index>0x0d</Index>
-        </Texture>
-        <SlotType>33</SlotType>
-        <TierType>Common</TierType>
-        <Description>A pair of dice that can alter the outcome of any situation. They can be used to manipulate
-            strength, dexterity with chance. A good choice for those who want to deal great damage at a short range.
-        </Description>
-        <Sound>ability/ability_use</Sound>
-        <OldSound>ability/ability_use</OldSound>
-        <Usable/>
-        <MpCost>65</MpCost>
-        <ActivateOnEquip stat="114" amount="30">IncrementStat</ActivateOnEquip>
-        <Activate duration="4" randVals="Strengthen, Vulnerable, Fury">DiceActivate</Activate>
-    </Object>
-    <Object type="0x6144" id="Beginner Jacket">
-        <Class>Equipment</Class>
-        <Item/>
-        <Texture>
-            <File>StarterGear</File>
-            <Index>0x08</Index>
-        </Texture>
-        <SlotType>35</SlotType>
-        <TierType>Common</TierType>
-        <Description>A lightweight and durable jacket with ejectable blades hidden within. A good choice for beginners
-            who want protection, mobility and damage.
-        </Description>
-        <ExtraTooltipData>
-            <EffectInfo name="Offensive Stance" description=""/>
-            <EffectInfo name="" description="+20 Attack"/>
-            <EffectInfo name="Defensive Stance" description=""/>
-            <EffectInfo name="" description="+25 Defense"/>
-        </ExtraTooltipData>
-        <ActivateOnEquip stat="4" amount="3">IncrementStat</ActivateOnEquip>
-        <Sound>ability/ability_use</Sound>
-        <OldSound>ability/ability_use</OldSound>
-        <Usable/>
-        <Projectile>
-            <ObjectId>Jacket Razor 1</ObjectId>
-            <Speed>150</Speed>
-            <MinDamage>70</MinDamage>
-            <MaxDamage>80</MaxDamage>
-            <LifetimeMS>600</LifetimeMS>
-            <Size>100</Size>
-            <MultiHit/>
-            <Boomerang/>
-        </Projectile>
-        <MpCost>60</MpCost>
-        <SurgeCost>1</SurgeCost>
-        <Cooldown>2</Cooldown>
-        <Activate effect="Immortal" duration="0.5">ConditionEffectSelf</Activate>
-        <Activate stat="2" amount="20" noStack="false">BMEffect</Activate>
-        <MultiPhase/>
-    </Object>
-    <Object type="0x670b" id="Beginner Talisman">
-        <Class>Equipment</Class>
-        <Item/>
-        <Texture>
-            <File>StarterGear</File>
-            <Index>0x3a</Index>
-        </Texture>
-        <SlotType>36</SlotType>
-        <TierType>Common</TierType>
-        <Description>A container holding the essence of a spirit. Call upon the spirit's aid, they will help you in
-            battle. A good choice for beginners who want to deal damage without being present.
-        </Description>
-        <ExtraTooltipData>
-            <EffectInfo name="Spawns a ghost to aid you in combat." description=""/>
-            <EffectInfo name="Damage" description="520"/>
-            <EffectInfo name="Lifetime" description="4"/>
-            <EffectInfo name="Effect" description="Exhaust for 1 secs"/>
-        </ExtraTooltipData>
-        <ActivateOnEquip stat="122" amount="10">IncrementStat</ActivateOnEquip>
-        <ActivateOnEquip stat="3" amount="2">IncrementStat</ActivateOnEquip>
-        <Sound>ability/ability_use</Sound>
-        <OldSound>ability/ability_use</OldSound>
-        <Usable/>
-        <MpCost>75</MpCost>
-        <Cooldown>4</Cooldown>
-        <Activate duration="4" objType="0x671c">TalismanAbility</Activate>
-    </Object>
-    <!-- #endregion -->
-    <!-- #region --> // Armor
     <Object type="0xa5f" id="Beginner Robe">
         <Class>Equipment</Class>
         <Item/>
         <Texture>
             <File>StarterGear</File>
-            <Index>0xad</Index>
+            <Index>0x1d</Index>
         </Texture>
         <SlotType>14</SlotType>
         <TierType>Common</TierType>
         <Description>A cloth robe that can protect the wearer from minor injuries. A good choice for beginners who want
+            to boost their defense.
+        </Description>
+        <ActivateOnEquip stat="3" amount="1">IncrementStat</ActivateOnEquip>
+    </Object>
+    <Object type="0x79" id="Beginner Cloak">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>StarterGear</File>
+            <Index>0x1d</Index>
+        </Texture>
+        <SlotType>13</SlotType>
+        <TierType>Common</TierType>
+        <Description>A cloak draped in darkness that can protect the wearer from minor injuries. A good choice for beginners who want
             to boost their defense.
         </Description>
         <ActivateOnEquip stat="3" amount="1">IncrementStat</ActivateOnEquip>
@@ -885,7 +594,7 @@
         <Item/>
         <Texture>
             <File>StarterGear</File>
-            <Index>0xae</Index>
+            <Index>0x1e</Index>
         </Texture>
         <SlotType>6</SlotType>
         <TierType>Common</TierType>
@@ -894,19 +603,33 @@
         </Description>
         <ActivateOnEquip stat="3" amount="2">IncrementStat</ActivateOnEquip>
     </Object>
+    <Object type="0x7a" id="Beginner Helmet">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>StarterGear</File>
+            <Index>0x1d</Index>
+        </Texture>
+        <SlotType>29</SlotType>
+        <TierType>Common</TierType>
+        <Description>A heavy helmet that can protect the wearer from minor facial injuries. A good choice for beginners who want
+            to boost their defense.
+        </Description>
+        <ActivateOnEquip stat="3" amount="1">IncrementStat</ActivateOnEquip>
+    </Object>
     <Object type="0xadf" id="Beginner Platemail">
         <Class>Equipment</Class>
         <Item/>
         <Texture>
             <File>StarterGear</File>
-            <Index>0xaf</Index>
+            <Index>0x1f</Index>
         </Texture>
         <SlotType>7</SlotType>
         <TierType>Common</TierType>
         <Description>A suit of metal armor that can protect the wearer from physical attacks. A good choice for
             beginners who want to increase their defense and durability.
         </Description>
-        <ActivateOnEquip stat="3" amount="5">IncrementStat</ActivateOnEquip>
+        <ActivateOnEquip stat="3" amount="4">IncrementStat</ActivateOnEquip>
     </Object>
     <!-- #endregion -->
     <!-- #region --> // Accessories
@@ -915,7 +638,7 @@
         <Item/>
         <Texture>
             <File>StarterGear</File>
-            <Index>0x9f</Index>
+            <Index>0x2f</Index>
         </Texture>
         <SlotType>9</SlotType>
         <TierType>Common</TierType>

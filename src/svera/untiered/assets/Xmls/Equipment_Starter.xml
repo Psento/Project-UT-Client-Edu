@@ -309,7 +309,7 @@
             <MaxDamage>180</MaxDamage>
             <LifetimeMS>480</LifetimeMS>
             <MultiHit/>
-            <ConditionEffect duration="1.5">Bleeding</ConditionEffect>
+            <ConditionEffect duration="1.5">Hemorrhage</ConditionEffect>
         </Projectile>
     </Object>
     <Object type="0x70" id="BKatana Proj">

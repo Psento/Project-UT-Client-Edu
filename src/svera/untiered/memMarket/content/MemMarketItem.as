@@ -14,6 +14,8 @@ import flash.events.MouseEvent;
 
 import link.ItemData;
 
+import svera.untiered.itemdata.NewItemData;
+
 import svera.untiered.messaging.impl.data.MarketData;
 
 public class MemMarketItem extends Sprite {
@@ -35,16 +37,16 @@ public class MemMarketItem extends Sprite {
     private var count_:int;
     private var itemLabel_:SimpleText;
     public var toolTip_:ToolTip;
-    public var itemData:ItemData;
+    public var itemData:NewItemData;
 
     /* Provides the base features for a Market item */
-    public function MemMarketItem(gameSprite:GameSprite, width:int, height:int, iconSize:int, itemType:int, data:MarketData, item:ItemData = null) {
+    public function MemMarketItem(gameSprite:GameSprite, width:int, height:int, iconSize:int, itemType:int, data:MarketData, item:NewItemData = null) {
         this.gameSprite_ = gameSprite;
         this.itemType_ = itemType;
         this.id_ = data == null ? -1 : data.id_;
         this.data_ = data;
         if (item == null)
-            this.itemData = data == null ? new ItemData(itemType) : ItemData.loadFromData(data.itemData_);
+            this.itemData = data == null ? NewItemData.TempCreate(itemType) : NewItemData.FromByteArray(data.itemData_);
         else
             this.itemData = item;
 

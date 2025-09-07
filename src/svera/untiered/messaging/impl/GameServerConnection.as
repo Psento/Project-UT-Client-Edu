@@ -73,6 +73,7 @@ import svera.untiered.game.model.AddTextLineVO;
 import svera.untiered.game.model.GameModel;
 import svera.untiered.game.signals.AddSpeechBalloonSignal;
 import svera.untiered.game.signals.AddTextLineSignal;
+import svera.untiered.itemdata.NewItemData;
 import svera.untiered.memMarket.signals.MemMarketAddSignal;
 import svera.untiered.memMarket.signals.MemMarketBuySignal;
 import svera.untiered.memMarket.signals.MemMarketMyOffersSignal;
@@ -642,7 +643,7 @@ public class GameServerConnection {
         invSwap.slotObject2_.slotId_ = slotId2;
         this.serverConnection.sendMessage(invSwap);
 
-        var tempItem:ItemData = sourceObj.equipment_[slotId1];
+        var tempItem:NewItemData = sourceObj.equipment_[slotId1];
         sourceObj.equipment_[slotId1] = targetObj.equipment_[slotId2];
         targetObj.equipment_[slotId2] = tempItem;
 
@@ -684,7 +685,7 @@ public class GameServerConnection {
         var invDrop:InvDrop = this.messages.require(INVDROP) as InvDrop;
         invDrop.slotId_ = slotId;
         this.serverConnection.sendMessage(invDrop);
-        object.equipment_[slotId].clear();
+        object.equipment_[slotId] = null;
     }
 
     public function useItem(time:int, objectId:int, slotId:int, posX:Number, posY:Number):void {
@@ -698,10 +699,10 @@ public class GameServerConnection {
     }
 
     public function useItem_new(itemOwner:GameObject, slotId:int):Boolean {
-        var itemId:ItemData = itemOwner.equipment_[slotId];
+        var itemId:NewItemData = itemOwner.equipment_[slotId];
         var objectXML:XML = ObjectLibrary.xmlLibrary_[itemId];
         if (objectXML && (objectXML.hasOwnProperty("Consumable") || objectXML.hasOwnProperty("InvUse"))) {
-            this.applyUseItem(itemOwner, slotId, itemId.ObjectType, objectXML);
+            this.applyUseItem(itemOwner, slotId, itemId.BaseItem.ObjectType, objectXML);
             SoundEffectLibrary.play("use_potion");
             return true;
         }
@@ -718,7 +719,7 @@ public class GameServerConnection {
         useItem.itemUsePos_.y_ = 0;
         this.serverConnection.sendMessage(useItem);
         if (itemData.hasOwnProperty("Consumable")) {
-            owner.equipment_[slotId].clear();
+            owner.equipment_[slotId] = null;
         }
     }
 
@@ -1369,10 +1370,13 @@ public class GameServerConnection {
                     go.condition_[ConditionEffect.CE_THIRD_BATCH] = value;
                     break;
                 case StatData.INVENTORY:
-                    var len:int = stat.statByteArray.length;
-                    for (var i:int = 0; i < len; i++) {
-                        go.equipment_[i].updateData(stat.statByteArray[i], i);
-                    }
+                    //var len:int = stat.statByteArray.length;
+                    //for (var i:int = 0; i < len; i++) {
+                    //    go.equipment_[i].updateData(stat.statByteArray[i], i);
+                    //}
+
+                    go.equipment_[stat.slotValue] = NewItemData.TempCreate(stat.statValue_);
+
                     continue;
                 case StatData.NUMSTARS:
                     player.numStars_ = value;
@@ -1390,7 +1394,7 @@ public class GameServerConnection {
                     go.setTex2(value);
                     continue;
                 case StatData.MERCHANDISETYPE:
-                    merchant.setMerchandiseType(ItemData.loadFromData(stat.statByteArray[0])); //TODO: will need fix
+                    //merchant.setMerchandiseType(ItemData.loadFromData(stat.statByteArray[0])); //TODO: will need fix
                     continue;
                 case StatData.TSAVORITE:
                     player.setTsavorite(value);

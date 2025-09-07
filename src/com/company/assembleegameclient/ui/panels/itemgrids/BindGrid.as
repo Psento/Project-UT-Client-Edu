@@ -8,6 +8,8 @@ import flash.events.MouseEvent;
 
 import link.ItemData;
 
+import svera.untiered.itemdata.NewItemData;
+
 public class BindGrid extends ItemGrid {
     private var tiles:Vector.<BindTile>;
 
@@ -40,7 +42,7 @@ public class BindGrid extends ItemGrid {
         addChild(tile);
     }
 
-    override public function setItems(items:Vector.<ItemData>, itemIndexOffset:int = 0):void {
+    override public function setItems(items:Vector.<NewItemData>, itemIndexOffset:int = 0):void {
         var numItems:int = 0;
         var i:int = 0;
         var refresh:Boolean = false;
@@ -53,7 +55,7 @@ public class BindGrid extends ItemGrid {
                         refresh = true;
                     }
                 } else {
-                    if (this.tiles[i].setItem(new ItemData())) {
+                    if (this.tiles[i].setItem(null)) {
                         refresh = true;
                     }
                 }
@@ -64,7 +66,7 @@ public class BindGrid extends ItemGrid {
         }
     }
 
-    public function setItem(slot:int, itemId:ItemData):void {
+    public function setItem(slot:int, itemId:NewItemData):void {
         if (slot >= this.tiles.length || slot < 0) {
             return;
         }

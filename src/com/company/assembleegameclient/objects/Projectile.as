@@ -88,11 +88,11 @@ public class Projectile extends BasicObject {
         this.p_.setSize(8 * (size / 100));
         this.damage_ = 0;
     }
-    public function reset2(containerType:int, bulletType:ProjectileData, ownerId:int, bulletId:int, angle:Number, startTime:int):void {
+    public function reset2(containerType:int, bulletType:int, ownerId:int, bulletId:int, angle:Number, startTime:int):void {
         var size:Number = NaN;
         clear();
         this.containerType_ = containerType;
-        this.bulletType_ = bulletType.BulletType;
+        this.bulletType_ = bulletType;
         this.bulletId_ = bulletId;
         this.ownerId_ = ownerId;
         this.angle_ = Trig.boundToPI(angle);

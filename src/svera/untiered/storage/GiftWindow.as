@@ -7,6 +7,8 @@ import flash.events.MouseEvent;
 
 import link.ItemData;
 
+import svera.untiered.itemdata.NewItemData;
+
 
 import svera.untiered.storage.components.StorageSortTab;
 
@@ -43,12 +45,12 @@ public class GiftWindow extends Sprite {
         graphics.endFill();
     }
 
-    public function setContent(size:int, slots:Vector.<ItemData>):void {
+    public function setContent(size:int, slots:Vector.<NewItemData>):void {
         this.owner_.setContainer(size, slots);
         this.contentView_.initialize(size, slots);
     }
 
-    public function updateSlot(slot:int, inventory:ItemData):void {
+    public function updateSlot(slot:int, inventory:NewItemData):void {
         this.owner_.equipment_[slot] = inventory;
         this.contentView_.updateSlot(slot, inventory);
     }

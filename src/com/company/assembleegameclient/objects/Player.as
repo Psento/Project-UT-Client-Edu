@@ -12,6 +12,8 @@ import com.company.assembleegameclient.util.AnimatedChar;
 import com.company.assembleegameclient.util.ConditionEffect;
 import com.company.assembleegameclient.util.HonorUtil;
 import com.company.assembleegameclient.util.FreeList;
+
+import link.Item;
 import link.ItemData;
 import com.company.assembleegameclient.util.MaskedImage;
 import com.company.assembleegameclient.util.TextureRedrawer;
@@ -46,6 +48,7 @@ import svera.untiered.core.StaticInjectorContext;
 import svera.untiered.game.model.AddTextLineVO;
 import svera.untiered.game.model.PotionInventoryModel;
 import svera.untiered.game.signals.AddTextLineSignal;
+import svera.untiered.itemdata.NewItemData;
 import svera.untiered.stage3D.GraphicsFillExtra;
 
 public class Player extends Character {
@@ -236,7 +239,7 @@ public class Player extends Character {
         player.background_ = int(playerXML.Background);
         player.ascensionPoints_ = int(playerXML.AscensionPoints);
         player.statPoints_ = int(playerXML.StatPoints);
-        player.equipment_ = ItemData.fromPlayerXML(playerXML.Equipment);
+        player.equipment_ = NewItemData.fromPlayerXML(playerXML.Equipment);
         player.maxHP_ = int(playerXML.MaxHitPoints);
         player.hp_ = int(playerXML.HitPoints);
         player.maxSP_ = int(playerXML.MaxShieldPoints);
@@ -910,7 +913,7 @@ public class Player extends Character {
         var rpCost:int = 0;
         var cooldown:int = 0;
         var angle:Number = Parameters.data_.cameraAngle + Math.atan2(y, x);
-        var itemType:ItemData = equipment_[slotId];
+        var itemType:Item = equipment_[slotId].BaseItem;
         if (!itemType && itemType.ObjectType == ItemConstants.NO_ITEM) {
             return false;
         }
@@ -962,7 +965,7 @@ public class Player extends Character {
         this.nextAltAttack_ = now + cooldown;
         map_.gs_.gsc_.useItem(now, objectId_, slotId, point.x, point.y);
         if (objectXML.Activate == ActivationType.SHOOT) {
-            this.doShoot(now, itemType, objectXML, angle, true);
+            this.doShoot(now, itemType, angle, true);
         }
         return true;
     }
@@ -982,27 +985,27 @@ public class Player extends Character {
     }
 
     private function shoot(attackAngle:Number):void {
-        if (map_ == null || isStunned()) {
+        if (map_ == null || isStunned())
+            return;
+
+        var itemData:NewItemData = equipment_[0];
+        if (itemData == null || itemData.BaseItem.ObjectType == ItemConstants.NO_ITEM) {
             return;
         }
-        var weaponType:ItemData = equipment_[0];
-        if (!weaponType && weaponType.ObjectType == ItemConstants.NO_ITEM) {
-            //this.addTextLine.dispatch(new AddTextLineVO(Parameters.ERROR_CHAT_NAME,"You do not have a weapon equipped!"));
-            return;
-        }
-        var weaponXML:XML = ObjectLibrary.xmlLibrary_[weaponType];
+
+        var weapon:Item = itemData.BaseItem;
         var time:int = map_.gs_.lastUpdate_;
-        var rateOfFire:Number = weaponType.RateOfFire;
+        var rateOfFire:Number = weapon.RateOfFire;
         this.attackPeriod_ = 1 / this.attackFrequency() * (1 / rateOfFire);
         if (time < attackStart_ + this.attackPeriod_) {
             return;
         }
         attackAngle_ = attackAngle;
         attackStart_ = time;
-        this.doShoot(attackStart_, weaponType, weaponXML, attackAngle_, false);
+        this.doShoot(attackStart_, weapon, attackAngle_, false);
     }
 
-    private function doShoot(time:int, weaponType:ItemData, weaponXML:XML, attackAngle:Number, isAbility:Boolean):void {
+    private function doShoot(time:int, weaponType:Item, attackAngle:Number, isAbility:Boolean):void {
         var proj:Projectile = null;
         var minDamage:int = 0;
         var maxDamage:int = 0;
@@ -1015,7 +1018,7 @@ public class Player extends Character {
         map_.nextProjectileId_ -= numShots;
         for (var i:int = 0; i < numShots; i++) {
             proj = FreeList.newObject(Projectile) as Projectile;
-            proj.reset2(weaponType.ObjectType, weaponType.Projectiles[0], objectId_, startId - i, angle, time);
+            proj.reset2(weaponType.ObjectType, weaponType.Projectiles[0].BulletType, objectId_, startId - i, angle, time);
             minDamage = proj.projProps_.minDamage_ + proj.projProps_.minDamage_ * weaponType.Projectiles.length;
             maxDamage = proj.projProps_.maxDamage_ + proj.projProps_.maxDamage_;
             damage = map_.gs_.gsc_.getNextDamage(minDamage, maxDamage) * Number(this.attackMultiplier());

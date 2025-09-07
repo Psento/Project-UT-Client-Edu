@@ -23,6 +23,7 @@ import svera.untiered.core.model.MapModel;
 import svera.untiered.core.model.PlayerModel;
 import svera.untiered.core.signals.ShowTooltipSignal;
 import svera.untiered.game.model.PotionInventoryModel;
+import svera.untiered.itemdata.NewItemData;
 import svera.untiered.messaging.impl.GameServerConnection;
 import svera.untiered.ui.model.HUDModel;
 
@@ -84,7 +85,7 @@ public class ItemGridMediator extends Mediator {
             slot = sourceTile.ownerGrid.curPlayer.nextAvailableInventorySlot();
             if (slot != -1) {
                 GameServerConnection.instance.invSwap(this.view.curPlayer, sourceTile.ownerGrid.owner, sourceTile.tileId, this.view.curPlayer, slot);
-                sourceTile.setItem(new ItemData());
+                sourceTile.setItem(null);
                 sourceTile.updateUseability(this.view.curPlayer);
             }
         }
@@ -118,10 +119,10 @@ public class ItemGridMediator extends Mediator {
     }*/
 
     private function canSwapItems(sourceTile:InteractiveItemTile, targetTile:InteractiveItemTile):Boolean {
-        if (!sourceTile.canHoldItem(targetTile.getItemId().ObjectType)) {
+        if (!sourceTile.canHoldItem(targetTile.getItemData())) {
             return false;
         }
-        if (!targetTile.canHoldItem(sourceTile.getItemId().ObjectType)) {
+        if (!targetTile.canHoldItem(sourceTile.getItemData())) {
             return false;
         }
         if (ItemGrid(targetTile.parent).owner is OneWayContainer) {
@@ -132,10 +133,10 @@ public class ItemGridMediator extends Mediator {
 
     private function dropItem(itemTile:InteractiveItemTile):void {
         var groundContainer:Container = null;
-        var equipment:Vector.<ItemData> = null;
+        var equipment:Vector.<NewItemData> = null;
         var equipCount:int = 0;
         var openIndex:int = 0;
-        var isSoulbound:Boolean = ObjectLibrary.isSoulbound(itemTile.itemSprite.itemId.ObjectType);
+        var isSoulbound:Boolean = ObjectLibrary.isSoulbound(itemTile.itemSprite.itemData);
         var container:Container = this.view.owner as Container;
         if (this.view.owner == this.view.curPlayer || container && container.ownerId_ == this.view.curPlayer.accountId_ && !isSoulbound) {
             groundContainer = this.mapModel.currentInteractiveTarget as Container;
@@ -143,7 +144,7 @@ public class ItemGridMediator extends Mediator {
                 equipment = groundContainer.equipment_;
                 equipCount = equipment.length;
                 for (openIndex = 0; openIndex < equipCount; openIndex++) {
-                    if (equipment[openIndex] < 0) {
+                    if (equipment[openIndex].BaseItem.ObjectType < 0) {
                         break;
                     }
                 }
@@ -156,7 +157,7 @@ public class ItemGridMediator extends Mediator {
                 GameServerConnection.instance.invDrop(this.view.owner, itemTile.tileId);
             }
         }
-        itemTile.setItem(new ItemData());
+        itemTile.setItem(null);
     }
 
     private function swapItemTiles(sourceTile:ItemTile, destTile:ItemTile):Boolean {
@@ -164,8 +165,8 @@ public class ItemGridMediator extends Mediator {
             return false;
         }
         GameServerConnection.instance.invSwap(this.view.curPlayer, this.view.owner, sourceTile.tileId, destTile.ownerGrid.owner, destTile.tileId);
-        var tempItemId:ItemData = sourceTile.getItemId();
-        sourceTile.setItem(destTile.getItemId());
+        var tempItemId:NewItemData = sourceTile.getItemData();
+        sourceTile.setItem(destTile.getItemData());
         destTile.setItem(tempItemId);
         sourceTile.updateUseability(this.view.curPlayer);
         destTile.updateUseability(this.view.curPlayer);
@@ -177,7 +178,7 @@ public class ItemGridMediator extends Mediator {
             return;
         }
         GameServerConnection.instance.invSwap(this.view.curPlayer, this.view.owner, sourceTile.tileId, container, containerIndex);
-        sourceTile.setItem(new ItemData());
+        sourceTile.setItem(null);
     }
 
     private function onShiftClick(e:ItemTileEvent):void {
@@ -223,7 +224,7 @@ public class ItemGridMediator extends Mediator {
     private function equipOrUseInventory(tile:InteractiveItemTile):void {
         var tileOwner:GameObject = tile.ownerGrid.owner;
         var player:Player = this.view.curPlayer;
-        var matchingSlotIndex:int = ObjectLibrary.getMatchingSlotIndex(tile.getItemId().ObjectType, player);
+        var matchingSlotIndex:int = ObjectLibrary.getMatchingSlotIndex(tile.getItemData(), player);
         if (matchingSlotIndex != -1) {
             GameServerConnection.instance.invSwap(player, tileOwner, tile.tileId, player, matchingSlotIndex);
         } else {

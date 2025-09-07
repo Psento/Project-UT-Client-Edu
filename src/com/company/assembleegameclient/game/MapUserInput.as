@@ -439,7 +439,7 @@ public class MapUserInput {
     }
 
     private function useEquipItem(slotId:int):void {
-        var slotIndex:int = ObjectLibrary.getMatchingSlotIndex(this.gs_.map.player_.equipment_[slotId].ObjectType, this.gs_.map.player_);
+        var slotIndex:int = ObjectLibrary.getMatchingSlotIndex(this.gs_.map.player_.equipment_[slotId], this.gs_.map.player_);
         if (slotIndex != -1) {
             GameServerConnection.instance.invSwap(
                     this.gs_.map.player_,

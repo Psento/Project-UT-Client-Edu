@@ -1,11 +1,11 @@
 package link {
 import com.company.assembleegameclient.objects.ObjectLibrary;
 import com.company.assembleegameclient.util.ConditionEffect;
+import com.company.util.Base64Decoder;
 
 import flash.utils.ByteArray;
 import flash.utils.IDataInput;
 
-import svera.lib.json.Base64Decoder;
 
 import svera.untiered.ui.view.HUDView;
 

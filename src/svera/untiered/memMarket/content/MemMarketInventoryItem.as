@@ -5,6 +5,8 @@ import flash.events.MouseEvent;
 
 import link.ItemData;
 
+import svera.untiered.itemdata.NewItemData;
+
 import svera.untiered.memMarket.utils.ItemUtils;
 import svera.untiered.memMarket.utils.TintUtils;
 
@@ -13,9 +15,9 @@ public class MemMarketInventoryItem extends MemMarketItem
     public var slot_:int;
     public var selected_:Boolean;
 
-    public function MemMarketInventoryItem(gameSprite:GameSprite, item:ItemData, slot:int)
+    public function MemMarketInventoryItem(gameSprite:GameSprite, item:NewItemData, slot:int)
     {
-        super(gameSprite, SLOT_WIDTH, SLOT_HEIGHT, 80, item.ObjectType, null, item);
+        super(gameSprite, SLOT_WIDTH, SLOT_HEIGHT, 80, item.BaseItem.ObjectType, null, item);
 
         this.slot_ = slot;
 

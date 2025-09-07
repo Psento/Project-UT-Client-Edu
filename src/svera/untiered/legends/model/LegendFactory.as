@@ -8,6 +8,7 @@ import svera.untiered.classes.model.CharacterClass;
 import svera.untiered.classes.model.CharacterSkin;
 import svera.untiered.classes.model.ClassesModel;
 import svera.untiered.core.model.PlayerModel;
+import svera.untiered.itemdata.NewItemData;
 
 public class LegendFactory {
 
@@ -74,7 +75,7 @@ public class LegendFactory {
         legend.totalHonor = xml.TotalHonor;
         legend.character = this.factory.makeIcon(skin.template, 100, texture1, texture2);
         legend.equipmentSlots = character.slotTypes;
-        legend.equipment = ItemData.fromPlayerXML(xml.Equipment);
+        legend.equipment = NewItemData.fromPlayerXML(xml.Equipment);
         return legend;
     }
 }

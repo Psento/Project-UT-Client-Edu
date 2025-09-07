@@ -11,6 +11,8 @@ import flash.display.Sprite;
 
 import link.ItemData;
 
+import svera.untiered.itemdata.NewItemData;
+
 import svera.untiered.messaging.impl.GameServerConnection;
 import svera.untiered.storage.components.StorageSortTab;
 
@@ -39,9 +41,9 @@ public class GiftContent extends Sprite {
     }
 
 
-    private var content_:Vector.<ItemData>;
+    private var content_:Vector.<NewItemData>;
 
-    public function initialize(size:int, content:Vector.<ItemData>):void {
+    public function initialize(size:int, content:Vector.<NewItemData>):void {
         if (this.containerGrid_ != null) {
             SpriteUtil.safeRemoveChild(this, this.containerGrid_);
         }
@@ -49,7 +51,7 @@ public class GiftContent extends Sprite {
         this.content_ = content;
         this.containerGrid_ = new ContainerGrid(this.owner_, this.player_, size, 8, true);
 
-        var inventory:Vector.<ItemData> = content;
+        var inventory:Vector.<NewItemData> = content;
 
         this.containerGrid_.setItems(inventory);
         this.containerGrid_.x = 10;
@@ -59,7 +61,7 @@ public class GiftContent extends Sprite {
         SpriteUtil.safeAddChild(this, this.containerGrid_);
     }
 
-    public function updateSlot(slot:int, inventory:ItemData):void {
+    public function updateSlot(slot:int, inventory:NewItemData):void {
         this.containerGrid_.setItem(slot, inventory);
     }
 
@@ -79,7 +81,7 @@ public class GiftContent extends Sprite {
 
         var slotCount:int = 0;
         for each(var tile:InteractiveItemTile in this.containerGrid_.items) {
-            var slotType:int = ObjectLibrary.getSlotTypeFromType(tile.getItemId().ObjectType);
+            var slotType:int = ObjectLibrary.getSlotTypeFromItemData(tile.getItemData());
 
             if (types.indexOf(slotType) > -1 || types.length == 0) {
                 this.containerGrid_.addToGrid(tile, 8, slotCount);

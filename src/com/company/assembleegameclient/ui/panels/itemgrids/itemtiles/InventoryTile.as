@@ -7,7 +7,7 @@ import flash.display.Bitmap;
 import flash.display.BitmapData;
 import flash.filters.DropShadowFilter;
 
-import link.ItemData;
+import svera.untiered.itemdata.NewItemData;
 
 public class InventoryTile extends InteractiveItemTile {
 
@@ -44,8 +44,8 @@ public class InventoryTile extends InteractiveItemTile {
         newItemSprite.setDim(false);
     }
 
-    override public function setItem(itemId:ItemData):Boolean {
-        return super.setItem(itemId);
+    override public function setItem(itemData:NewItemData):Boolean {
+        return super.setItem(itemData);
     }
 
     override protected function beginDragCallback():void {

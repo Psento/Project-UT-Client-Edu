@@ -6,6 +6,8 @@ import com.company.assembleegameclient.ui.panels.VaultChestPanel;
 
 import link.ItemData;
 
+import svera.untiered.itemdata.NewItemData;
+
 public class VaultChest extends GameObject implements IInteractiveObject {
 
     public function VaultChest(objectXML:XML) {
@@ -13,8 +15,8 @@ public class VaultChest extends GameObject implements IInteractiveObject {
         isInteractive_ = true;
     }
 
-    public function setContainer(size:int, slots:Vector.<ItemData>):void {
-        this.equipment_ = new Vector.<ItemData>(size);
+    public function setContainer(size:int, slots:Vector.<NewItemData>):void {
+        this.equipment_ = new Vector.<NewItemData>(size);
 
         for (var i:int = 0; i < size; i++) {
             this.equipment_[i] = slots[i];

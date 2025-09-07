@@ -210,6 +210,8 @@ public class StatData {
 
     public var statValue_:int;
 
+    public var slotValue:int;
+
     public var strStatValue_:String;
 
     public var uintStatValue:uint;
@@ -258,26 +260,20 @@ public class StatData {
 
     public function parseFromInput(data:IDataInput):void {
         this.statType_ = data.readUnsignedByte();
-        if (this.isStringStat()) {
-            this.strStatValue_ = data.readUTF();
-        }else if (statType_ == INVENTORY) {
-            var len:Number = data.readShort();
-            statByteArray = new Vector.<ByteArray>(len);
-            var bytes:ByteArray;
-            var len2:Number = 0;
-            for(var j:int = 0; j < len; j++) {
-                bytes = new ByteArray();
-                len2 = data.readShort();
 
-                for (var i:Number = 0; i < len2; i++) {
-                    bytes.writeByte(data.readUnsignedByte());
-                }
-                bytes.endian = "littleEndian";
-                bytes.position = 0;
-                statByteArray[j] = bytes;
-            }
-        } else {
-            this.statValue_ = data.readInt();
+        switch (statType_) {
+            case NAME:
+            case GUILDNAME:
+            case EFFECT:
+                this.strStatValue_ = data.readUTF();
+                break;
+            case INVENTORY:
+                this.slotValue = data.readInt();
+                this.statValue_ = data.readInt();
+                break;
+            default:
+                this.statValue_ = data.readInt();
+                break;
         }
     }
 

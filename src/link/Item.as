@@ -86,7 +86,7 @@ public class Item {
         item.Id = String(xml.@id);
 
         item.DisplayId = LinkUtils.parseElementString(xml, "DisplayId", item.Id);
-        item.SlotType = LinkUtils.parseElementInt(xml, "SlotType");
+        item.SlotType = LinkUtils.parseElementInt(xml, "SlotType", -1);
         item.Tier = LinkUtils.parseElementInt(xml, "Tier", -1)
         item.Description = LinkUtils.parseElementString(xml, "Description");
         item.RateOfFire = LinkUtils.parseElementFloat(xml, "RateOfFire", 1.0);

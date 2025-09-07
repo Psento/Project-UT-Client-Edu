@@ -5,6 +5,8 @@ import com.company.assembleegameclient.ui.panels.itemgrids.itemtiles.Interactive
 
 import link.ItemData;
 
+import svera.untiered.itemdata.NewItemData;
+
 public class ContainerGrid extends ItemGrid {
     private var tiles:Vector.<InteractiveItemTile>;
 
@@ -43,7 +45,7 @@ public class ContainerGrid extends ItemGrid {
         this.tiles = newTiles;
     }
 
-    override public function setItems(items:Vector.<ItemData>, itemIndexOffset:int = 0):void {
+    override public function setItems(items:Vector.<NewItemData>, itemIndexOffset:int = 0):void {
         var numItems:int = 0;
         var i:int = 0;
         var refresh:Boolean = false;
@@ -66,7 +68,7 @@ public class ContainerGrid extends ItemGrid {
         }
     }
 
-    public function setItem(slot:int, itemId:ItemData):void {
+    public function setItem(slot:int, itemId:NewItemData):void {
         if (slot >= this.tiles.length || slot < 0) {
             return;
         }

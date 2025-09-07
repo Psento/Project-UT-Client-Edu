@@ -19,6 +19,7 @@ import link.LinkUtils;
 import link.ProjectileData;
 
 import svera.untiered.constants.ActivationType;
+import svera.untiered.itemdata.NewItemData;
 import svera.untiered.messaging.impl.data.StatData;
 
 public class EquipmentToolTip extends ToolTip {
@@ -34,7 +35,7 @@ public class EquipmentToolTip extends ToolTip {
     private var line2_:LineBreakDesign;
     private var restrictionsText_:SimpleText;
     private var player_:Player;
-    private var item:ItemData;
+    private var item:NewItemData;
     private var isEquippable_:Boolean = false;
     private var objectXML_:XML = null;
     private var playerCanUse:Boolean;
@@ -46,29 +47,29 @@ public class EquipmentToolTip extends ToolTip {
     private var inventorySlotID:uint;
     private var isInventoryFull:Boolean;
     private var yOffset:int;
-    private var currItem:ItemData;
+    private var currItem:NewItemData;
 
 
-    public function EquipmentToolTip(itemData:ItemData, player:Player, invType:int, inventoryOwnerType:String, inventorySlotID:uint = 1.0) {
+    public function EquipmentToolTip(itemData:NewItemData, player:Player, invType:int, inventoryOwnerType:String, inventorySlotID:uint = 1.0) {
         this.player_ = player;
         this.item = itemData;
         this.inventoryOwnerType = inventoryOwnerType;
         this.inventorySlotID = inventorySlotID;
         this.isInventoryFull = Boolean(player) ? Boolean(player.isInventoryFull()) : Boolean(false);
-        this.playerCanUse = player != null ? Boolean(ObjectLibrary.isUsableByPlayer(itemData.ObjectType, player)) : Boolean(false);
+        this.playerCanUse = player != null ? Boolean(ObjectLibrary.isUsableByPlayer(itemData.BaseItem.ObjectType, player)) : Boolean(false);
         var backgroundColor:uint = this.playerCanUse || this.player_ == null ? 0x363636 : 6036765;
         var outlineColor:uint = this.playerCanUse || player == null ? 0x9B9B9B : 10965039;
         super(backgroundColor, 1, outlineColor, 1, true);
-        this.objectXML_ = ObjectLibrary.xmlLibrary_[itemData];
-        var equipSlotIndex:int = Boolean(this.player_) ? int(ObjectLibrary.getMatchingSlotIndex(this.item.ObjectType, this.player_)) : int(-1);
+        this.objectXML_ = ObjectLibrary.xmlLibrary_[itemData.BaseItem.ObjectType];
+        var equipSlotIndex:int = Boolean(this.player_) ? int(ObjectLibrary.getMatchingSlotIndex(this.item, this.player_)) : int(-1);
         this.isEquippable_ = equipSlotIndex != -1;
         this.effects = new Vector.<Effect>();
         this.invType = invType;
-        this.itemSlotTypeId = int(this.objectXML_.SlotType);
-        var slot:int = player ? ObjectLibrary.getMatchingSlotIndex(item.ObjectType, player) : -1;
+        this.itemSlotTypeId = item.BaseItem.SlotType;
+        var slot:int = player ? ObjectLibrary.getMatchingSlotIndex(item, player) : -1;
         if (player_ == null) {
             this.currItem = item;
-        } else if (slot != -1 && player_.equipment_[slot].ObjectType != -1) {
+        } else if (slot != -1 && player_.equipment_[slot] != null) {
             this.currItem = player_.equipment_[slot];
         }
 
@@ -76,17 +77,17 @@ public class EquipmentToolTip extends ToolTip {
         this.addTitle();
         this.addTierText();
         this.addDescriptionText();
-        this.addNumProjectilesTagsToEffectsList();
-        this.addProjectileTagsToEffectsList();
-        this.addActivateTagsToEffectsList();
-        this.addActivateOnEquipTagsToEffectsList();
-        this.addCooldownTagToEffectsList();
-        this.addDoseTagsToEffectsList();
-        this.addMpCostTagToEffectsList();
-        this.addHonorBonusTagToEffectsList();
-        this.makeEffectsList();
-        this.makeRestrictionList();
-        this.makeRestrictionText();
+        //this.addNumProjectilesTagsToEffectsList();
+        //this.addProjectileTagsToEffectsList();
+        //this.addActivateTagsToEffectsList();
+        //this.addActivateOnEquipTagsToEffectsList();
+        //this.addCooldownTagToEffectsList();
+        //this.addDoseTagsToEffectsList();
+        //this.addMpCostTagToEffectsList();
+        //this.addHonorBonusTagToEffectsList();
+        //this.makeEffectsList();
+        //this.makeRestrictionList();
+        //this.makeRestrictionText();
     }
 
     private static function BuildRestrictionsHTML(restrictions:Vector.<Restriction>):String {
@@ -110,12 +111,8 @@ public class EquipmentToolTip extends ToolTip {
     }
 
     private function addIcon():void {
-        var eqXML:XML = ObjectLibrary.xmlLibrary_[this.item.ObjectType];
-        var scaleValue:int = 5;
-        if (eqXML.hasOwnProperty("ScaleValue")) {
-            scaleValue = eqXML.ScaleValue;
-        }
-        var texture:BitmapData = ObjectLibrary.getRedrawnTextureFromType(this.item.ObjectType, 60, true, true, scaleValue);
+        var scaleValue:int = item.BaseItem.Scale;
+        var texture:BitmapData = ObjectLibrary.getRedrawnTextureFromType(this.item.BaseItem.ObjectType, 60, true, true, scaleValue);
         texture = BitmapUtil.cropToBitmapData(texture, 4, 4, texture.width - 8, texture.height - 8);
         this.icon_ = new Bitmap(texture);
         addChild(this.icon_);
@@ -197,7 +194,7 @@ public class EquipmentToolTip extends ToolTip {
         this.titleText_ = new SimpleText(16, color, false, MAX_WIDTH - this.icon_.width - 4 - 30, 0);
         this.titleText_.setBold(true);
         this.titleText_.wordWrap = true;
-        this.titleText_.text = ObjectLibrary.typeToDisplayId_[this.item.ObjectType];
+        this.titleText_.text = ObjectLibrary.typeToDisplayId_[this.item.BaseItem.ObjectType];
         this.titleText_.updateMetrics();
         this.titleText_.filters = [new DropShadowFilter(0, 0, 0, 0.5, 12, 12)];
         this.titleText_.x = this.icon_.width + 4;
@@ -241,25 +238,25 @@ public class EquipmentToolTip extends ToolTip {
     }
 
     private function addNumProjectilesTagsToEffectsList():void {
-        if (item.NumProjectiles) {
-            this.effects.push(new Effect("Shots", item.NumProjectiles.toString()));
+        if (item.BaseItem.NumProjectiles) {
+            this.effects.push(new Effect("Shots", item.BaseItem.NumProjectiles.toString()));
         }
-        if (item.NumProjectiles1) {
-            this.effects.push(new Effect("Shots", item.NumProjectiles1.toString()));
+        if (item.BaseItem.NumProjectiles1) {
+            this.effects.push(new Effect("Shots", item.BaseItem.NumProjectiles1.toString()));
         }
-        if (item.NumProjectiles2) {
-            this.effects.push(new Effect("Shots", item.NumProjectiles2.toString()));
+        if (item.BaseItem.NumProjectiles2) {
+            this.effects.push(new Effect("Shots", item.BaseItem.NumProjectiles2.toString()));
         }
     }
 
     private function addHonorBonusTagToEffectsList():void {
-        if (this.item.HonorBonus == 0) return;
+        if (this.item.BaseItem.HonorBonus == 0) return;
 
         var color:uint = this.playerCanUse ? TooltipHelper.BETTER_COLOR : TooltipHelper.NO_DIFF_COLOR;
-        if (this.currItem != null && this.currItem.HonorBonus != 0) {
-            color = TooltipHelper.getTextColor(item.HonorBonus - currItem.HonorBonus);
+        if (this.currItem != null && this.currItem.BaseItem.HonorBonus != 0) {
+            color = TooltipHelper.getTextColor(item.BaseItem.HonorBonus - currItem.BaseItem.HonorBonus);
         }
-        this.effects.push(new Effect("Honor Bonus",  this.item.HonorBonus + "%"));
+        this.effects.push(new Effect("Honor Bonus",  this.item.BaseItem.HonorBonus + "%"));
 
     }
 
@@ -270,14 +267,14 @@ public class EquipmentToolTip extends ToolTip {
     }
 
     private function addCooldownTagToEffectsList():void {
-        if (this.item.Cooldown != 500) {
-            this.effects.push(new Effect("Cooldown: {cd}", this.item.Cooldown / 1000 + " seconds"));
+        if (this.item.BaseItem.Cooldown != 500) {
+            this.effects.push(new Effect("Cooldown: {cd}", this.item.BaseItem.Cooldown / 1000 + " seconds"));
         }
     }
 
     private function addDoseTagsToEffectsList():void {
-        if (item.Doses) {
-            this.effects.push(new Effect("Doses", item.Doses.toString()));
+        if (item.BaseItem.Doses) {
+            this.effects.push(new Effect("Doses", item.BaseItem.Doses.toString()));
         }
     }
 
@@ -286,7 +283,7 @@ public class EquipmentToolTip extends ToolTip {
         var range:Number = NaN;
         var condEffectXML:XML = null;
         if (this.objectXML_.hasOwnProperty("Projectile")) {
-            var proj:ProjectileData = this.item.Projectiles[0];
+            var proj:ProjectileData = this.item.BaseItem.Projectiles[0];
             var minDmg:int = proj.MinDamage;
             var maxDmg:int = proj.MaxDamage;
             var dmg:int = proj.Damage;
@@ -302,8 +299,8 @@ public class EquipmentToolTip extends ToolTip {
                 this.effects.push(new Effect("", "Shots pass through obstacles"));
             }
 
-            if (this.item.RateOfFire != 1.0) {
-                this.effects.push(new Effect("Rate of Fire", Math.round(this.item.RateOfFire * 100) + "%"));
+            if (this.item.BaseItem.RateOfFire != 1.0) {
+                this.effects.push(new Effect("Rate of Fire", Math.round(this.item.BaseItem.RateOfFire * 100) + "%"));
             }
 
             for each(condEffectXML in projXML.ConditionEffect) {
@@ -514,7 +511,7 @@ public class EquipmentToolTip extends ToolTip {
         } else if (this.player_ != null) {
             this.restrictions.push(new Restriction("Not usable by " + ObjectLibrary.typeToDisplayId_[this.player_.objectType_], 16549442, true));
         }
-        var usable:Vector.<String> = ObjectLibrary.usableBy(this.item.ObjectType);
+        var usable:Vector.<String> = ObjectLibrary.usableBy(this.item.BaseItem.ObjectType);
         if (usable != null) {
             this.restrictions.push(new Restriction("Usable by: " + usable.join(", "), 11776947, false));
         }

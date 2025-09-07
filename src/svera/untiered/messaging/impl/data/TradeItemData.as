@@ -4,9 +4,11 @@ import flash.utils.IDataInput;
 
 import link.ItemData;
 
+import svera.untiered.itemdata.NewItemData;
+
 public class TradeItemData {
 
-    public var itemType_:ItemData;
+    public var itemType_:NewItemData;
     public var slotType_:int;
     public var tradeable_:Boolean;
     public var included_:Boolean;
@@ -20,7 +22,7 @@ public class TradeItemData {
         }
         statByteArray.endian = "littleEndian";
         statByteArray.position = 0;
-        this.itemType_ = ItemData.loadFromData(statByteArray);
+        this.itemType_ = NewItemData.FromByteArray(statByteArray);
         this.slotType_ = data.readInt();
         this.tradeable_ = data.readBoolean();
         this.included_ = data.readBoolean();

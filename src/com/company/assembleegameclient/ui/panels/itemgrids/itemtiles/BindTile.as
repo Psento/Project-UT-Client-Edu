@@ -9,6 +9,8 @@ import flash.filters.DropShadowFilter;
 
 import link.ItemData;
 
+import svera.untiered.itemdata.NewItemData;
+
 public class BindTile extends ItemTile {
     public var hotKey:String;
 
@@ -42,7 +44,7 @@ public class BindTile extends ItemTile {
         newItemSprite.setDim(false);
     }
 
-    override public function setItem(itemId:ItemData):Boolean {
+    override public function setItem(itemId:NewItemData):Boolean {
         var changed:Boolean = super.setItem(itemId);
         return changed;
     }

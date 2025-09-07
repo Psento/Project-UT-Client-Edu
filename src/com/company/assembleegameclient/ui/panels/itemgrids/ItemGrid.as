@@ -19,6 +19,7 @@ import link.ItemData;
 import org.osflash.signals.Signal;
 
 import svera.untiered.constants.ItemConstants;
+import svera.untiered.itemdata.NewItemData;
 
 public class ItemGrid extends Panel {
 
@@ -93,8 +94,8 @@ public class ItemGrid extends Panel {
 
     private function addToolTipToTile(tile:ItemTile):void {
         var itemName:String = null;
-        if (tile.itemSprite.itemId > 0) {
-            this.tooltip = new EquipmentToolTip(tile.itemSprite.itemId, this.curPlayer, Boolean(this.owner) ? int(this.owner.objectType_) : int(-1), this.getCharacterType(), tile.tileId);
+        if (tile.itemSprite.itemData != null) {
+            this.tooltip = new EquipmentToolTip(tile.itemSprite.itemData, this.curPlayer, Boolean(this.owner) ? int(this.owner.objectType_) : int(-1), this.getCharacterType(), tile.tileId);
         } else {
             if (tile is EquipmentTile) {
                 itemName = ItemConstants.itemTypeToName((tile as EquipmentTile).itemType);
@@ -129,7 +130,7 @@ public class ItemGrid extends Panel {
         SpriteUtil.safeRemoveChild(this, tile);
     }
 
-    public function setItems(items:Vector.<ItemData>, itemIndexOffset:int = 0):void {
+    public function setItems(items:Vector.<NewItemData>, itemIndexOffset:int = 0):void {
 
     }
 

@@ -9,9 +9,12 @@ import flash.display.Bitmap;
 import flash.display.BitmapData;
 import flash.filters.ColorMatrixFilter;
 
+import link.Item;
+
 import link.ItemData;
 
 import svera.untiered.constants.ItemConstants;
+import svera.untiered.itemdata.NewItemData;
 
 public class EquipmentTile extends InteractiveItemTile {
 
@@ -28,8 +31,8 @@ public class EquipmentTile extends InteractiveItemTile {
         super(id, parentGrid, isInteractive);
     }
 
-    override public function canHoldItem(type:int):Boolean {
-        return type <= 0 || this.itemType == ObjectLibrary.getSlotTypeFromType(type);
+    override public function canHoldItem(itemData:NewItemData):Boolean {
+        return itemData == null || this.itemType == ObjectLibrary.getSlotTypeFromItemData(itemData);
     }
 
     public function setType(itemType_:int):void {
@@ -124,31 +127,28 @@ public class EquipmentTile extends InteractiveItemTile {
         this.itemType = itemType_;
     }
 
-    override public function setItem(itemId:ItemData):Boolean {
+    override public function setItem(itemId:NewItemData):Boolean {
         var itemChanged:Boolean = super.setItem(itemId);
         if (itemChanged) {
-            backgroundDetail && (backgroundDetail.visible = itemSprite.itemId.ObjectType == ItemConstants.NO_ITEM);
+            backgroundDetail && (backgroundDetail.visible = itemSprite.itemData == null);
             this.updateMinMana();
         }
         return itemChanged;
     }
 
     private function updateMinMana():void {
-        var itemDataXML:XML = null;
-        if (itemSprite.itemId > 0) {
-            itemDataXML = ObjectLibrary.xmlLibrary_[itemSprite.itemId];
-            if (itemDataXML && itemDataXML.hasOwnProperty("Usable")) {
-                if (itemDataXML.hasOwnProperty("MultiPhase")) {
-                    this.minResourceUsage = itemDataXML.rpEndCost;
-                } else {
-                    this.minResourceUsage = itemDataXML.rpCost;
-                }
-            } else {
-                this.minResourceUsage = 0;
-            }
-        } else {
-            this.minResourceUsage = 0;
+        if (itemSprite.itemData == null) {
+            minResourceUsage = 0;
+            return;
         }
+
+        var item:Item = itemSprite.itemData.BaseItem;
+        if (item.Usable && !item.MultiPhase)
+            minResourceUsage = item.MpCost;
+        else if (item.Usable && item.MultiPhase)
+            minResourceUsage = -1;//TODO[ITEMDATA]: phase cost
+        else
+            minResourceUsage = 0;
     }
 
     public function updateDim(player:Player):void {
@@ -160,7 +160,7 @@ public class EquipmentTile extends InteractiveItemTile {
     }
 
     override protected function endDragCallback():void {
-        this.backgroundDetail.visible = itemSprite.itemId <= 0;
+        this.backgroundDetail.visible = itemSprite.itemData == null;
     }
 
     override protected function getBackgroundColor():int {

@@ -5,6 +5,8 @@ import com.company.assembleegameclient.ui.panels.itemgrids.itemtiles.InventoryTi
 
 import link.ItemData;
 
+import svera.untiered.itemdata.NewItemData;
+
 public class InventoryGrid extends ItemGrid {
 
 
@@ -26,7 +28,7 @@ public class InventoryGrid extends ItemGrid {
         }
     }
 
-    override public function setItems(items:Vector.<ItemData>, itemIndexOffset:int = 0):void {
+    override public function setItems(items:Vector.<NewItemData>, itemIndexOffset:int = 0):void {
         var numItems:int = 0;
         var i:int = 0;
         var refresh:Boolean = false;

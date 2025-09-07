@@ -11,6 +11,7 @@ import flash.events.MouseEvent;
 import link.ItemData;
 
 import svera.lib.util.VectorAS3Util;
+import svera.untiered.itemdata.NewItemData;
 
 public class EquippedGrid extends ItemGrid {
 
@@ -43,7 +44,7 @@ public class EquippedGrid extends ItemGrid {
         return new ArrayIterator(VectorAS3Util.toArray(this.tiles));
     }
 
-    override public function setItems(items:Vector.<ItemData>, itemIndexOffset:int = 0):void {
+    override public function setItems(items:Vector.<NewItemData>, itemIndexOffset:int = 0):void {
         var numItems:int = 0;
         var i:int = 0;
         var refresh:Boolean = false;

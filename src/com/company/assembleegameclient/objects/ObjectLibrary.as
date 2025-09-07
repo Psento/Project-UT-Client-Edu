@@ -13,6 +13,7 @@ import link.Item;
 
 import svera.untiered.constants.GeneralConstants;
 import svera.untiered.constants.ItemConstants;
+import svera.untiered.itemdata.NewItemData;
 import svera.untiered.messaging.impl.data.StatData;
 
 public class ObjectLibrary {
@@ -89,9 +90,9 @@ public class ObjectLibrary {
             idToType_[id] = objectType;
             typeToDisplayId_[objectType] = displayId;
 
-            if (String(xml.Class) == "Equipment")
+            if (String(objectXML.Class) == "Equipment" || objectXML.hasOwnProperty("Item"))
             {
-                baseItems[objectType] = Item.parseFromXml(xml);
+                baseItems[objectType] = Item.parseFromXml(objectXML);
             }
             else if (String(objectXML.Class) == "Player") {
                 playerClassAbbr_[objectType] = String(objectXML.@id).substr(0, 2);
@@ -191,6 +192,13 @@ public class ObjectLibrary {
         return int(objectXML.SlotType);
     }
 
+    public static function getSlotTypeFromItemData(itemData:NewItemData):int {
+        if (itemData == null)
+            return -1;
+
+        return itemData.BaseItem.SlotType;
+    }
+
     public static function isEquippableByPlayer(objectType:int, player:Player):Boolean {
         if (objectType == ItemConstants.NO_ITEM) {
             return false;
@@ -205,19 +213,17 @@ public class ObjectLibrary {
         return false;
     }
 
-    public static function getMatchingSlotIndex(objectType:int, player:Player):int {
-        var objectXML:XML = null;
-        var slotType:int = 0;
-        var i:uint = 0;
-        if (objectType != ItemConstants.NO_ITEM) {
-            objectXML = xmlLibrary_[objectType];
-            slotType = int(objectXML.SlotType);
-            for (i = 0; i < GeneralConstants.NUM_EQUIPMENT_SLOTS; i++) {
-                if (player.slotTypes_[i] == slotType) {
-                    return i;
-                }
+    public static function getMatchingSlotIndex(itemData:NewItemData, player:Player):int {
+        if (itemData == null)
+            return -1;
+
+        var slotType:int = itemData.BaseItem.SlotType;
+        for (var i:int = 0; i < GeneralConstants.NUM_EQUIPMENT_SLOTS; i++) {
+            if (player.slotTypes_[i] == slotType) {
+                return i;
             }
         }
+
         return -1;
     }
 
@@ -241,9 +247,11 @@ public class ObjectLibrary {
         return false;
     }
 
-    public static function isSoulbound(objectType:int):Boolean {
-        var objectXML:XML = xmlLibrary_[objectType];
-        return objectXML != null && objectXML.hasOwnProperty("Soulbound");
+    public static function isSoulbound(itemData:NewItemData):Boolean {
+        if (itemData == null)
+            return false;
+
+        return itemData.BaseItem.Soulbound;
     }
 
     public static function usableBy(objectType:int):Vector.<String> {

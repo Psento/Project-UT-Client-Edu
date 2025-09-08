@@ -1,4 +1,4 @@
-package link {
+package svera.untiered.itemdata {
 import com.company.assembleegameclient.util.ConditionEffect;
 
 public class ProjectileData {
@@ -84,36 +84,6 @@ public class ProjectileData {
             proj.ChanceEffects.push({"Effect": LinkUtils.parseAttributeString(elem, "@effect"), "Duration": LinkUtils.parseAttributeFloat(elem, "@duration"), "Chance": LinkUtils.parseAttributeFloat(elem, "@chance")});
         }
 
-        return proj;
-    }
-
-    public function clone(): ProjectileData {
-        var proj:ProjectileData = new ProjectileData();
-        proj.BulletType = BulletType;
-        proj.ObjectId = ObjectId;
-        proj.LifetimeMS = LifetimeMS;
-        proj.Speed = Speed;
-        proj.Size = Size;
-        proj.MinDamage = MinDamage;
-        proj.MaxDamage = MaxDamage;
-        proj.MultiHit = MultiHit;
-        proj.PassesCover = PassesCover;
-        proj.ArmorPiercing = ArmorPiercing;
-        proj.ParticleTrail = ParticleTrail;
-        proj.ParticleTrailIntensity = ParticleTrailIntensity;
-        proj.ParticleTrailLifetimeMS = ParticleTrailLifetimeMS;
-        proj.ParticleTrailColor = ParticleTrailColor;
-        proj.Wavy = Wavy;
-        proj.Parametric = Parametric;
-        proj.Boomerang = Boomerang;
-        proj.Amplitude = Amplitude;
-        proj.Frequency = Frequency;
-        proj.Magnitude = Magnitude;
-        proj.FaceDir = FaceDir;
-        proj.NoRotation = NoRotation;
-        proj.Effects = Effects;// Shallow Copy
-        proj.EffectsId = EffectsId;// Shallow Copy
-        proj.ChanceEffects = ChanceEffects;// Shallow Copy
         return proj;
     }
 }

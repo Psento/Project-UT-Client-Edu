@@ -13,8 +13,6 @@ import flash.display.BitmapData;
 import flash.geom.ColorTransform;
 import flash.geom.Matrix;
 
-import link.ItemData;
-
 import svera.untiered.core.StaticInjectorContext;
 import svera.untiered.game.model.AddSpeechBalloonVO;
 import svera.untiered.game.signals.AddSpeechBalloonSignal;

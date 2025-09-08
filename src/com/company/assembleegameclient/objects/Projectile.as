@@ -22,7 +22,7 @@ import flash.geom.Point;
 import flash.geom.Vector3D;
 import flash.utils.Dictionary;
 
-import link.ProjectileData;
+import svera.untiered.itemdata.ProjectileData;
 
 public class Projectile extends BasicObject {
     public static var nextFakeBulletId_:int = 0;

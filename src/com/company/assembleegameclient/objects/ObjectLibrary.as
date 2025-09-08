@@ -9,7 +9,7 @@ import flash.display.BitmapData;
 import flash.utils.Dictionary;
 import flash.utils.getDefinitionByName;
 
-import link.Item;
+import svera.untiered.itemdata.Item;
 
 import svera.untiered.constants.GeneralConstants;
 import svera.untiered.constants.ItemConstants;

@@ -1,4 +1,5 @@
-package link {
+package svera.untiered.itemdata {
+
 
 public class Item {
 

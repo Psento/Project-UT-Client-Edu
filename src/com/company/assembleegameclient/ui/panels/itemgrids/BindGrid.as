@@ -6,8 +6,6 @@ import com.company.assembleegameclient.ui.panels.itemgrids.itemtiles.ItemTile;
 
 import flash.events.MouseEvent;
 
-import link.ItemData;
-
 import svera.untiered.itemdata.NewItemData;
 
 public class BindGrid extends ItemGrid {

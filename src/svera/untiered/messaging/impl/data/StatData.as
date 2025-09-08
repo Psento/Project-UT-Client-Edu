@@ -215,7 +215,7 @@ public class StatData {
     public var strStatValue_:String;
 
     public var uintStatValue:uint;
-    public var statByteArray:Vector.<ByteArray>;
+    public var statByteArray:ByteArray;
 
 
     public function StatData() {
@@ -269,22 +269,17 @@ public class StatData {
                 break;
             case INVENTORY:
                 this.slotValue = data.readInt();
-                this.statValue_ = data.readInt();
+                statByteArray = new ByteArray();
+
+                var len:int = data.readInt();
+                statByteArray.length = len;
+                data.readBytes(statByteArray, 0, len);
+                statByteArray.endian = "littleEndian";
+                statByteArray.position = 0;
                 break;
             default:
                 this.statValue_ = data.readInt();
                 break;
-        }
-    }
-
-
-    public function writeToOutput(data:IDataOutput):void {
-        data.writeByte(this.statType_);
-        if (this.isStringStat()) {
-            data.writeUTF(this.strStatValue_);
-
-        } else {
-            data.writeInt(this.statValue_);
         }
     }
 

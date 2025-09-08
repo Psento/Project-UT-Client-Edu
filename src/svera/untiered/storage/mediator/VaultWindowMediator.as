@@ -1,6 +1,4 @@
 package svera.untiered.storage.mediator {
-import link.ItemData;
-
 import robotlegs.bender.bundles.mvcs.Mediator;
 
 import svera.untiered.itemdata.NewItemData;

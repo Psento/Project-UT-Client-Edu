@@ -8,8 +8,6 @@ import com.company.util.IIterator;
 
 import flash.events.MouseEvent;
 
-import link.ItemData;
-
 import svera.lib.util.VectorAS3Util;
 import svera.untiered.itemdata.NewItemData;
 

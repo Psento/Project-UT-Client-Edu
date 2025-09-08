@@ -1,8 +1,4 @@
-package link {
-import com.company.assembleegameclient.ui.tooltip.TooltipHelper;
-import com.company.ui.SimpleText;
-
-
+package svera.untiered.itemdata {
 import svera.untiered.messaging.impl.data.StatData;
 
 public class LinkUtils {

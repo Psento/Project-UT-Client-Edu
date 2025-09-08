@@ -2,8 +2,6 @@ package svera.untiered.messaging.impl.data {
 import flash.utils.ByteArray;
 import flash.utils.IDataInput;
 
-import link.ItemData;
-
 import svera.untiered.itemdata.NewItemData;
 
 public class TradeItemData {

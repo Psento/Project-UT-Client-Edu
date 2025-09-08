@@ -5,8 +5,6 @@ import com.company.assembleegameclient.objects.Player;
 import flash.display.Sprite;
 import flash.events.MouseEvent;
 
-import link.ItemData;
-
 import svera.untiered.itemdata.NewItemData;
 
 

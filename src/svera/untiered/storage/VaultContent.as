@@ -9,8 +9,6 @@ import com.company.util.SpriteUtil;
 
 import flash.display.Sprite;
 
-import link.ItemData;
-
 import svera.untiered.itemdata.NewItemData;
 
 import svera.untiered.messaging.impl.GameServerConnection;

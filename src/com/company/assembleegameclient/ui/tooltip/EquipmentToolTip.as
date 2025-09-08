@@ -4,7 +4,6 @@ import com.company.assembleegameclient.objects.ObjectLibrary;
 import com.company.assembleegameclient.objects.Player;
 import com.company.assembleegameclient.parameters.Parameters;
 import com.company.assembleegameclient.ui.LineBreakDesign;
-import link.ItemData;
 import com.company.ui.SimpleText;
 import com.company.util.BitmapUtil;
 import com.company.util.KeyCodes;
@@ -15,8 +14,8 @@ import flash.filters.DropShadowFilter;
 import flash.text.StyleSheet;
 import flash.utils.Dictionary;
 
-import link.LinkUtils;
-import link.ProjectileData;
+import svera.untiered.itemdata.LinkUtils;
+import svera.untiered.itemdata.ProjectileData;
 
 import svera.untiered.constants.ActivationType;
 import svera.untiered.itemdata.NewItemData;
@@ -48,6 +47,9 @@ public class EquipmentToolTip extends ToolTip {
     private var isInventoryFull:Boolean;
     private var yOffset:int;
     private var currItem:NewItemData;
+
+    private var uuidText:SimpleText;
+    private var dateText:SimpleText;
 
 
     public function EquipmentToolTip(itemData:NewItemData, player:Player, invType:int, inventoryOwnerType:String, inventorySlotID:uint = 1.0) {
@@ -88,7 +90,31 @@ public class EquipmentToolTip extends ToolTip {
         //this.makeEffectsList();
         //this.makeRestrictionList();
         //this.makeRestrictionText();
+        this.addTestItemDataText();
     }
+
+    private function addTestItemDataText():void {
+        this.uuidText = new SimpleText(14, 11776947, false, MAX_WIDTH, 0);
+        this.uuidText.wordWrap = true;
+        this.uuidText.text = this.item.Uuid;
+        this.uuidText.updateMetrics();
+        this.uuidText.filters = [new DropShadowFilter(0, 0, 0, 0.5, 12, 12)];
+        this.uuidText.x = 4;
+        this.uuidText.y = this.yOffset;
+        this.yOffset = this.uuidText.y + this.uuidText.height + 8;
+        addChild(this.uuidText);
+
+        this.dateText = new SimpleText(14, 11776947, false, MAX_WIDTH, 0);
+        this.dateText.wordWrap = true;
+        this.dateText.text = this.item.CreationTime.toLocaleString();
+        this.dateText.updateMetrics();
+        this.dateText.filters = [new DropShadowFilter(0, 0, 0, 0.5, 12, 12)];
+        this.dateText.x = 4;
+        this.dateText.y = this.yOffset;
+        this.yOffset = this.dateText.y + this.dateText.height + 8;
+        addChild(this.dateText);
+    }
+
 
     private static function BuildRestrictionsHTML(restrictions:Vector.<Restriction>):String {
         var restriction:Restriction = null;
@@ -554,6 +580,7 @@ public class EquipmentToolTip extends ToolTip {
         this.descText_.filters = [new DropShadowFilter(0, 0, 0, 0.5, 12, 12)];
         this.descText_.x = 4;
         this.descText_.y = this.icon_.height + 2;
+        this.yOffset = this.descText_.y + this.descText_.height + 8;
         addChild(this.descText_);
     }
 

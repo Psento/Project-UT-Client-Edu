@@ -49,8 +49,6 @@ import flash.events.Event;
 import flash.geom.Point;
 import flash.utils.getTimer;
 
-import link.ItemData;
-
 import org.osflash.signals.Signal;
 import org.swiftsuspenders.Injector;
 
@@ -1370,13 +1368,7 @@ public class GameServerConnection {
                     go.condition_[ConditionEffect.CE_THIRD_BATCH] = value;
                     break;
                 case StatData.INVENTORY:
-                    //var len:int = stat.statByteArray.length;
-                    //for (var i:int = 0; i < len; i++) {
-                    //    go.equipment_[i].updateData(stat.statByteArray[i], i);
-                    //}
-
-                    go.equipment_[stat.slotValue] = NewItemData.TempCreate(stat.statValue_);
-
+                    go.equipment_[stat.slotValue] = NewItemData.FromByteArray(stat.statByteArray);
                     continue;
                 case StatData.NUMSTARS:
                     player.numStars_ = value;

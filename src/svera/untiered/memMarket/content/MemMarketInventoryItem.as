@@ -3,8 +3,6 @@ import com.company.assembleegameclient.game.GameSprite;
 
 import flash.events.MouseEvent;
 
-import link.ItemData;
-
 import svera.untiered.itemdata.NewItemData;
 
 import svera.untiered.memMarket.utils.ItemUtils;

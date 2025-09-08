@@ -1,8 +1,6 @@
 package svera.untiered.legends.model {
 import com.company.util.ConversionUtil;
 
-import link.ItemData;
-
 import svera.untiered.assets.services.CharacterFactory;
 import svera.untiered.classes.model.CharacterClass;
 import svera.untiered.classes.model.CharacterSkin;

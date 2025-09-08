@@ -13,8 +13,7 @@ import com.company.assembleegameclient.util.ConditionEffect;
 import com.company.assembleegameclient.util.HonorUtil;
 import com.company.assembleegameclient.util.FreeList;
 
-import link.Item;
-import link.ItemData;
+import svera.untiered.itemdata.Item;
 import com.company.assembleegameclient.util.MaskedImage;
 import com.company.assembleegameclient.util.TextureRedrawer;
 import com.company.assembleegameclient.util.redrawers.GlowRedrawer;

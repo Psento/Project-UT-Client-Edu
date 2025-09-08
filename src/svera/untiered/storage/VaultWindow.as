@@ -6,8 +6,6 @@ import com.company.assembleegameclient.objects.VaultChest;
 import flash.display.Sprite;
 import flash.events.MouseEvent;
 
-import link.ItemData;
-
 import svera.untiered.itemdata.NewItemData;
 
 import svera.untiered.messaging.impl.GameServerConnection;

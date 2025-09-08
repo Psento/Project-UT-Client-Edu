@@ -14,8 +14,6 @@ import com.company.util.SpriteUtil;
 
 import flash.events.MouseEvent;
 
-import link.ItemData;
-
 import org.osflash.signals.Signal;
 
 import svera.untiered.constants.ItemConstants;

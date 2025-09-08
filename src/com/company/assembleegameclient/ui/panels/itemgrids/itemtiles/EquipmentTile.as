@@ -9,9 +9,7 @@ import flash.display.Bitmap;
 import flash.display.BitmapData;
 import flash.filters.ColorMatrixFilter;
 
-import link.Item;
-
-import link.ItemData;
+import svera.untiered.itemdata.Item;
 
 import svera.untiered.constants.ItemConstants;
 import svera.untiered.itemdata.NewItemData;

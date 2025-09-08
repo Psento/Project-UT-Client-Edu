@@ -1,4 +1,4 @@
-package link {
+package svera.untiered.itemdata {
 
 public class ActivateEffectsData {
 
@@ -104,56 +104,6 @@ public class ActivateEffectsData {
         ae.RandVals = LinkUtils.parseAttributeString(xml, "@randVals").replace(" ", "").split(",");
         ae.ObjType = LinkUtils.parseAttributeInt(xml, "@objType");
         ae.NumShots = LinkUtils.parseAttributeInt(xml, "@numShots");
-        return ae;
-    }
-
-    public function clone(): ActivateEffectsData {
-        var ae:ActivateEffectsData = new ActivateEffectsData(idx);
-        ae.Effect = Effect;
-        ae.ObjectId = ObjectId;
-        ae.Id = Id;
-        ae.DungeonName = DungeonName;
-        ae.LockedName = LockedName;
-        ae.SkinType = SkinType;
-        ae.SkinType2 = SkinType2;
-        ae.Size = Size;
-        ae.CurrencyType = CurrencyType;
-        ae.Gifts = Gifts;
-        ae.PetType = PetType;
-        ae.Chance = Chance;
-        ae.Explode = Explode;
-        ae.Stats = Stats;
-        ae.Stats2 = Stats2;
-        ae.Stats3 = Stats3;
-        ae.Amount = Amount;
-        ae.Amount2 = Amount2;
-        ae.Amount3 = Amount3;
-        ae.Range = Range;
-        ae.IsPerc = IsPerc;
-        ae.DurationMS = DurationMS;
-        ae.DurationSec = DurationSec;
-        ae.ConditionEffect = ConditionEffect;
-        ae.CheckExistingEffect = CheckExistingEffect;
-        ae.EffectDuration = EffectDuration;
-        ae.Radius = Radius;
-        ae.TotalDamage = TotalDamage;
-        ae.ImpactDamage = ImpactDamage;
-        ae.ThrowTime = ThrowTime;
-        ae.AngleOffset = AngleOffset;
-        ae.MaxTargets = MaxTargets;
-        ae.Color = Color;
-        ae.NoStack = NoStack;
-        ae.UseWisMod = UseWisMod;
-        ae.UseWisMod2 = UseWisMod2;
-        ae.UseVitMod = UseVitMod;
-        ae.UseAtkMod = UseAtkMod;
-        ae.Target = Target;
-        ae.Center = Center;
-        ae.VisualEffect = VisualEffect;
-        ae.Players = Players;
-        ae.RandVals = RandVals.slice();
-        ae.ObjType = ObjType;
-        ae.NumShots = NumShots;
         return ae;
     }
 }

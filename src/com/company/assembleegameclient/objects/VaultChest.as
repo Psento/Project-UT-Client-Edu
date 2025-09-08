@@ -4,8 +4,6 @@ import com.company.assembleegameclient.game.GameSprite;
 import com.company.assembleegameclient.ui.panels.Panel;
 import com.company.assembleegameclient.ui.panels.VaultChestPanel;
 
-import link.ItemData;
-
 import svera.untiered.itemdata.NewItemData;
 
 public class VaultChest extends GameObject implements IInteractiveObject {

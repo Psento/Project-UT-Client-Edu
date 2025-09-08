@@ -3,8 +3,6 @@ import com.company.assembleegameclient.game.GameSprite;
 import com.company.assembleegameclient.ui.panels.GiftChestPanel;
 import com.company.assembleegameclient.ui.panels.Panel;
 
-import link.ItemData;
-
 import svera.untiered.itemdata.NewItemData;
 
 

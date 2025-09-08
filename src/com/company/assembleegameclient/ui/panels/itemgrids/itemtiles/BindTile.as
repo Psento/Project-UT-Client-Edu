@@ -7,8 +7,6 @@ import flash.display.Bitmap;
 import flash.display.BitmapData;
 import flash.filters.DropShadowFilter;
 
-import link.ItemData;
-
 import svera.untiered.itemdata.NewItemData;
 
 public class BindTile extends ItemTile {

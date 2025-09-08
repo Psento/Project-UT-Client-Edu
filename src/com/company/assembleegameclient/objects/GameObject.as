@@ -41,8 +41,6 @@ import flash.utils.Dictionary;
 import flash.utils.getQualifiedClassName;
 import flash.utils.getTimer;
 
-import link.ItemData;
-
 import svera.untiered.itemdata.NewItemData;
 
 import svera.untiered.messaging.impl.data.WorldPosData;

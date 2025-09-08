@@ -3,8 +3,6 @@ import com.company.assembleegameclient.objects.GameObject;
 import com.company.assembleegameclient.objects.Player;
 import com.company.assembleegameclient.ui.panels.itemgrids.itemtiles.InteractiveItemTile;
 
-import link.ItemData;
-
 import svera.untiered.itemdata.NewItemData;
 
 public class ContainerGrid extends ItemGrid {

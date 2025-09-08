@@ -18,8 +18,6 @@ import flash.display.Shape;
 import flash.geom.Matrix;
 import flash.geom.Point;
 
-import link.ItemData;
-
 import svera.untiered.itemdata.NewItemData;
 
 public class TradeSlot extends Slot {

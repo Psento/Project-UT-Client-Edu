@@ -7,8 +7,6 @@ import svera.untiered.classes.model.CharacterSkin;
 import svera.untiered.classes.model.ClassesModel;
 
 public class CharacterSkinListItemMediator extends Mediator {
-
-
     [Inject]
     public var view:CharacterSkinListItem;
 

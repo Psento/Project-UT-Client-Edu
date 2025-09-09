@@ -15,35 +15,43 @@ import flash.geom.ColorTransform;
 import org.osflash.signals.Signal;
 import org.osflash.signals.natives.NativeMappedSignal;
 
+import svera.untiered.assets.model.Animation;
+
 import svera.untiered.classes.model.CharacterSkin;
 import svera.untiered.classes.model.CharacterSkinState;
+import svera.untiered.util.components.LegacyBuyButton;
 import svera.untiered.util.components.RadioButton;
 import svera.untiered.util.components.api.BuyButton;
 
 public class CharacterSkinListItem extends Sprite {
     private const grayscaleMatrix:ColorMatrixFilter = new ColorMatrixFilter(MoreColorUtil.greyscaleFilterMatrix);
-    private const bg:Bitmap = makeBg();
-    private const nameText:SimpleText = makeNameText();
-    private const lock:Bitmap = makeLock();
-    private const purchasingText:SimpleText = makeLockText();
-    private const buyButtonContainer:Sprite = makeBuyButtonContainer();
-    private const selectionButton:RadioButton = makeSelectionButton();
-    public const buy:Signal = new NativeMappedSignal(buyButtonContainer, MouseEvent.CLICK);
+    private var bg:Bitmap;
+    private var nameText:SimpleText;
+    private var lock:Bitmap;
+    private var purchasingText:SimpleText;
+    private var buyButtonContainer:Sprite;
+    private var selectionButton:RadioButton;
+    public var buy:NativeMappedSignal;
     public const over:Signal = new Signal();
     public const out:Signal = new Signal();
-    public const selected:Signal = selectionButton.changed;
+    public var selected:Signal;
     private var model:CharacterSkin;
     private var state:CharacterSkinState;
     private var isSelected:Boolean = false;
-    private var skinIcon:Bitmap;
     private var buyButton:BuyButton;
     private var isOver:Boolean;
     public var index:int = 0;
 
     public function CharacterSkinListItem() {
         this.state = CharacterSkinState.NULL;
-        skinIcon = new Bitmap();
-        addChild(skinIcon);
+        bg = makeBg();
+        nameText = makeNameText();
+        lock = makeLock();
+        purchasingText = makeLockText();
+        buyButtonContainer = makeBuyButtonContainer();
+        selectionButton = makeSelectionButton();
+        selected = selectionButton.changed;
+        buy = new NativeMappedSignal(buyButtonContainer, MouseEvent.CLICK);
         super();
     }
 
@@ -55,11 +63,9 @@ public class CharacterSkinListItem extends Sprite {
 
     private function makeNameText():SimpleText {
         var text:SimpleText = new SimpleText(18, 16777215, false, 0, 0);
-
         text.setBold(true);
         text.filters = [new DropShadowFilter(0, 0, 0, 1, 8, 8)];
         text.updateMetrics();
-
         addChild(text);
         return text;
     }
@@ -102,8 +108,10 @@ public class CharacterSkinListItem extends Sprite {
         return container;
     }
 
-    public function setBuyButton(buyButton:BuyButton):void {
-        this.buyButton = buyButton;
+    public function setBuyButton():void {
+        var button:LegacyBuyButton = new LegacyBuyButton("", 16, 0, Currency.TSAVORITE);
+        button.setWidth(40);
+        this.buyButton = button;
         this.model && this.setCost();
         this.buyButtonContainer.addChild(buyButton);
         this.buyButton.x = -this.buyButton.width / 2;
@@ -111,8 +119,9 @@ public class CharacterSkinListItem extends Sprite {
         this.buyButtonContainer.visible = this.state == CharacterSkinState.PURCHASABLE;
     }
 
-    public function setSkin(icon:Bitmap):void {
-        this.skinIcon.bitmapData = icon.bitmapData;
+    public function setSkin(icon:Animation):void {
+        addChild(icon)
+        icon.start();
     }
 
     public function getModel():CharacterSkin {
@@ -123,7 +132,10 @@ public class CharacterSkinListItem extends Sprite {
         this.model && this.model.changed.remove(this.onModelChanged);
         this.model = value;
         this.model && this.model.changed.add(this.onModelChanged);
+        setBuyButton();
+
         this.onModelChanged(this.model);
+
         addEventListener(MouseEvent.MOUSE_OVER, this.onOver);
         addEventListener(MouseEvent.MOUSE_OUT, this.onOut);
     }
@@ -227,7 +239,6 @@ public class CharacterSkinListItem extends Sprite {
         transform.colorTransform = new ColorTransform(1, 1, 1);
 
     }
-
 
     private function updateGrayFilter():void {
         filters = this.state == CharacterSkinState.PURCHASING ? [grayscaleMatrix] : [];

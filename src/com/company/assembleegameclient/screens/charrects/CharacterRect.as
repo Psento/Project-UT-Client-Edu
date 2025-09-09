@@ -6,8 +6,8 @@ import flash.display.Sprite;
 import flash.events.MouseEvent;
 
 public class CharacterRect extends Sprite {
-    public static const WIDTH:int = 78;
-    public static const HEIGHT:int = 78;
+    public static const WIDTH:int = 96;
+    public static const HEIGHT:int = 123;
 
     private var color_:uint;
     private var overColor_:uint;

@@ -1,5 +1,6 @@
 package com.company.assembleegameclient.screens {
 import com.company.assembleegameclient.objects.ObjectLibrary;
+import com.company.assembleegameclient.screens.charrects.CharacterRect;
 import com.company.ui.SimpleText;
 
 import flash.display.Sprite;
@@ -115,22 +116,27 @@ public class NewCharacterScreen extends Sprite {
         var range:Dictionary;
         var stripLen:int = (GameClient.StageWidth - CharacterSelectionAndNewsScreen.brickRightContainer.width) / 140;
 
+        var boxW:int = CharacterRect.WIDTH + 30;
+        var rowHeight:int = CharacterRect.HEIGHT + 30;
+
+        var totalWidth:int = boxW * 8;
+        var offsetX:int = (GameClient.StageWidth - totalWidth) / 2;
         var position:Vector.<int> = new Vector.<int>(4, true);
         var j:int = 0;
         for each(range in boxes_) {
             var i:int = 0;
             for each(charBox in range) {
-                charBox.x = 115 + 140 * int(i % 2 + j) + 140 * j + 70 - charBox.width / 2;
-                charBox.y = 153 + 140 * int(i / 2);
+                charBox.x = offsetX + boxW * int(i % 2 + j) + boxW * j;
+                charBox.y = 150 + rowHeight * int(i / 2);
                 i++;
             }
             if (charBox != null) {
                 var a:SimpleText = textList.getChildAt(j) as SimpleText;
-                a.x = charBox.x - 22 - a.width / 2;
+                a.x = charBox.x - 15 - a.width / 2; //15 is half width of the space between boxes
             }
             j++;
         }
-        textList.y = 153 - tiny.height * 1.5; // 18 is textSize
+        textList.y = 150 - tiny.height * 1.5; // 18 is textSize
     }
 
     private function onBackClick(event:Event):void {

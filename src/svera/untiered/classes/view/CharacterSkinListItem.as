@@ -35,7 +35,7 @@ public class CharacterSkinListItem extends Sprite {
     public const over:Signal = new Signal();
     public const out:Signal = new Signal();
     public var selected:Signal;
-    private var model:CharacterSkin;
+    public var model:CharacterSkin;
     private var state:CharacterSkinState;
     private var isSelected:Boolean = false;
     private var buyButton:BuyButton;
@@ -44,7 +44,6 @@ public class CharacterSkinListItem extends Sprite {
 
     public function CharacterSkinListItem() {
         this.state = CharacterSkinState.NULL;
-        bg = makeBg();
         nameText = makeNameText();
         lock = makeLock();
         purchasingText = makeLockText();
@@ -53,12 +52,6 @@ public class CharacterSkinListItem extends Sprite {
         selected = selectionButton.changed;
         buy = new NativeMappedSignal(buyButtonContainer, MouseEvent.CLICK);
         super();
-    }
-
-    private function makeBg():Bitmap {
-        var bg2:Bitmap = new Bitmap(new CharacterRect.charBg().bitmapData);
-        addChild(bg2);
-        return bg2;
     }
 
     private function makeNameText():SimpleText {
@@ -100,25 +93,6 @@ public class CharacterSkinListItem extends Sprite {
         return text;
     }
 
-    private function makeBuyButtonContainer():Sprite {
-        var container:Sprite = new Sprite();
-        container.x = width / 2;
-        container.y = 0;
-        addChild(container);
-        return container;
-    }
-
-    public function setBuyButton():void {
-        var button:LegacyBuyButton = new LegacyBuyButton("", 16, 0, Currency.TSAVORITE);
-        button.setWidth(40);
-        this.buyButton = button;
-        this.model && this.setCost();
-        this.buyButtonContainer.addChild(buyButton);
-        this.buyButton.x = -this.buyButton.width / 2;
-        this.buyButton.y = this.buyButton.height - 2;
-        this.buyButtonContainer.visible = this.state == CharacterSkinState.PURCHASABLE;
-    }
-
     public function setSkin(icon:Animation):void {
         addChild(icon)
         icon.start();
@@ -132,7 +106,6 @@ public class CharacterSkinListItem extends Sprite {
         this.model && this.model.changed.remove(this.onModelChanged);
         this.model = value;
         this.model && this.model.changed.add(this.onModelChanged);
-        setBuyButton();
 
         this.onModelChanged(this.model);
 

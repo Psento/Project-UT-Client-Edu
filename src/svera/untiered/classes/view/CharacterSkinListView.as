@@ -1,57 +1,57 @@
 package svera.untiered.classes.view {
-import com.company.assembleegameclient.screens.charrects.CharacterRect;
+import com.company.assembleegameclient.util.Currency;
 
-import flash.display.DisplayObject;
 import flash.display.Sprite;
 
-import svera.lib.ui.api.Size;
-import svera.untiered.util.components.HorizontalScrollingList;
+import svera.untiered.classes.model.CharacterSkin;
+
+import svera.untiered.classes.model.CharacterSkinState;
+import svera.untiered.util.components.LegacyBuyButton;
+import svera.untiered.util.components.api.BuyButton;
 
 public class CharacterSkinListView extends Sprite {
     public static const PADDING:int = 5;
     public static const WIDTH:int = 442;
     public static const HEIGHT:int = 400;
 
-
-    private const list:HorizontalScrollingList = makeList();
+    public var skinsContainer:Sprite;
     public var items:Vector.<CharacterSkinListItem>;
+    public var buyButton:BuyButton;
 
     public function CharacterSkinListView() {
         super();
     }
 
-    private function makeList():HorizontalScrollingList {
-        var list:HorizontalScrollingList = new HorizontalScrollingList();
-        list.setSize(new Size(WIDTH, HEIGHT));
-        list.scrollStateChanged.add(this.onScrollStateChanged);
-        list.setPadding(PADDING);
-        addChild(list);
-        return list;
+    private function makeList():Sprite {
+        skinsContainer = new Sprite();
+
+
     }
 
-    public function setItems(items:Vector.<CharacterSkinListItem>):void {
-        this.items = items;
-        var displayObject:Vector.<DisplayObject> = new Vector.<DisplayObject>(items.length);
-        for (var i:int = 0; i < items.length; i++) {
-            displayObject[i] = items[i] as DisplayObject;
+    public function setItems(items_:Vector.<CharacterSkinListItem>):void {
+        this.items = items_;
+        for each(var item:CharacterSkinListItem in items_){
+            item.model.changed.add(setBuyButton);
         }
-        list.setItems(displayObject);
-        onScrollStateChanged(this.list.isScrollbarVisible());
     }
 
-    private function onScrollStateChanged(isVisible:Boolean):void {
-        var item:CharacterSkinListItem = null;
-        var width:int = new CharacterRect.charBg().width;
-        if (!isVisible) {
-            width = width + HorizontalScrollingList.SCROLLBAR_GUTTER;
-        }
-/*        for each(item in this.items) {
-            item.setWidth(width);
-        }*/
+    private function makeBuyButtonContainer():Sprite {
+        var container:Sprite = new Sprite();
+        container.x = width / 2;
+        container.y = 0;
+        addChild(container);
+        return container;
     }
 
-    public function getListHeight():Number {
-        return this.list.getListHeight();
+    public function setBuyButton(skin:CharacterSkin):void {
+        var button:LegacyBuyButton = new LegacyBuyButton("", 16, 0, Currency.TSAVORITE);
+        button.setWidth(40);
+        this.buyButton = button;
+
+        this.buyButton.x = -this.buyButton.width / 2;
+        this.buyButton.y = this.buyButton.height - 2;
+        this.buyButton.visible = skin.getState() == CharacterSkinState.PURCHASABLE;
     }
+
 }
 }

@@ -132,20 +132,6 @@ public class Frame2 extends Sprite
         this.Button1.setDefaultColor(0xB3B3B3);
     }
 
-    public function setAllButtonsWhite():void {
-        var _local1:TextInputField;
-        var _local2:ClickableText;
-        var _local5:ClickableText;
-        mouseEnabled = true;
-        mouseChildren = true;
-        for each (_local1 in this.frameTextInputBoxes) {
-        }
-        for each (_local5 in this.frameTextButtons_) {
-            _local2 = _local5;
-            _local2.setColor(0xFFFFFF);
-        }
-        this.Button1.setColor(0xFFFFFF);
-    }
 
     public function draw():void {
         this.graphics.clear();

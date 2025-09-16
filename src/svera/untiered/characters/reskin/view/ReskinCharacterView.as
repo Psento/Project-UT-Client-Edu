@@ -51,7 +51,7 @@ public class ReskinCharacterView extends Sprite {
     }
 
     private function makeTitle():SimpleText {
-        var text:SimpleText = null;
+        var text:SimpleText;
         text = new SimpleText(18, 11974326, false, DIALOG_WIDTH, 0);
         var format:TextFormat = text.defaultTextFormat;
         format.align = TextFormatAlign.CENTER;
@@ -63,7 +63,7 @@ public class ReskinCharacterView extends Sprite {
     }
 
     private function makeListView():CharacterSkinListView {
-        var list:CharacterSkinListView = new CharacterSkinListView();
+        var list:CharacterSkinListView = new CharacterSkinListView(null);
         list.x = MARGIN;
         list.y = MARGIN + TITLE_OFFSET;
         addChild(list);
@@ -90,7 +90,7 @@ public class ReskinCharacterView extends Sprite {
     }
 
     private function getDialogHeight():void {
-        this.viewHeight = Math.min(CharacterSkinListView.HEIGHT + MARGIN, this.list.getListHeight());
+        this.viewHeight = Math.min(CharacterSkinListView.HEIGHT + MARGIN, this.list.getListHeight);
         this.viewHeight = this.viewHeight + (BUTTONS_HEIGHT + MARGIN * 2 + TITLE_OFFSET);
     }
 

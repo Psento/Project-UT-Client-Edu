@@ -83,7 +83,6 @@ public class Element extends Sprite {
         var color:uint = 3552822;
         if (this.selected_) {
             graphics.lineStyle(1, 16777215);
-            color = 8355711;
         }
         graphics.beginFill(this.mouseOver_ ? uint(5658198) : uint(3552822), 1);
         graphics.drawRect(2, 2, WIDTH - 4, HEIGHT - 4);

@@ -43,7 +43,7 @@ public class Program3DFactory {
     }
 
     public function getProgram(context3D:Context3DProxy, type:Boolean):Program3DProxy {
-        var program:Program3DProxy = null;
+        var program:Program3DProxy;
         switch (type) {
             case TYPE_REPEAT_ON:
                 if (this.repeatProgram == null) {

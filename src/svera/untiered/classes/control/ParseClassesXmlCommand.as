@@ -68,7 +68,7 @@ public class ParseClassesXmlCommand {
     }
 
     private function parseCharacterStat(xml:XML, name:String):CharacterClassStat {
-        var stat:CharacterClassStat = null;
+        var stat:CharacterClassStat;
         var main:XML = xml[name][0];
         stat = new CharacterClassStat();
         stat.initial = int(main.toString());

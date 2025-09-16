@@ -20,7 +20,7 @@ public class ObjectStatusData {
     }
 
     public function parseFromInput(data:IDataInput):void {
-        var s:int = 0;
+        var s:int;
         this.objectId_ = data.readInt();
         this.pos_.parseFromInput(data);
         var len:int = data.readUnsignedByte();

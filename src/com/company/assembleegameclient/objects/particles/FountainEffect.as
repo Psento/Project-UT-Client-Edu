@@ -61,7 +61,7 @@ class FountainParticle extends Particle {
     }
 
     public function restart(startTime:int, time:int):void {
-        var dt:int = 0;
+        var dt:int;
         var angle:Number = 2 * Math.PI * Math.random();
         this.moveVec_.x = Math.cos(angle);
         this.moveVec_.y = Math.sin(angle);

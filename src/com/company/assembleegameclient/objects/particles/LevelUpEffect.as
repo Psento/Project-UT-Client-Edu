@@ -59,7 +59,7 @@ public class LevelUpEffect extends ParticleEffect {
     }
 
     public function updateSwirl(parts:Vector.<LevelUpParticle>, mult:Number, offset:Number, t:Number):void {
-        var i:int = 0;
+        var i:int;
         var part:LevelUpParticle = null;
         var angle:Number = NaN;
         var x:Number = NaN;

@@ -17,7 +17,7 @@ public class NewTick extends IncomingMessage {
     }
 
     override public function parseFromInput(data:IDataInput):void {
-        var i:int = 0;
+        var i:int;
         var len:int = data.readShort();
         for (i = 0; i < this.statuses_.length; i++) {
             FreeList.deleteObject(this.statuses_[i]);

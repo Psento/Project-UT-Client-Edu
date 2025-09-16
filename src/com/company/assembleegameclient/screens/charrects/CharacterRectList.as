@@ -29,7 +29,7 @@ public class CharacterRectList extends Sprite {
 
     public function CharacterRectList() {
         var savedChar:SavedCharacter = null;
-        var buyRect:BuyCharacterRect = null;
+        var buyRect:BuyCharacterRect;
         var charType:CharacterClass = null;
         var charStats:CharacterStats = null;
         var currCharBox:CurrentCharacterRect = null;

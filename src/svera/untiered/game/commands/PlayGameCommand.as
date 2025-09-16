@@ -45,7 +45,7 @@ public class PlayGameCommand {
     }
 
     private function getInitialGameId():int {
-        var gameId:int = 0;
+        var gameId:int;
         gameId = Parameters.NEXUS_GAMEID;
         return gameId;
     }

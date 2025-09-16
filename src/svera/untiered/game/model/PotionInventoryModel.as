@@ -25,7 +25,7 @@ public class PotionInventoryModel {
         this.potionModels = new Dictionary();
         this.updatePosition = new Signal(int);
 
-        var potModel:PotionModel = null;
+        var potModel:PotionModel;
         potModel = new PotionModel();
         potModel.maxPotionCount = MAX_STACKS;
         potModel.objectId = HEALTH_POTION_ID;

@@ -34,7 +34,7 @@ public class Particle extends BasicObject {
     }
 
     public function moveTo(x:Number, y:Number):Boolean {
-        var square:Square = null;
+        var square:Square;
         square = map_.getSquare(x, y);
         if (square == null) {
             return false;

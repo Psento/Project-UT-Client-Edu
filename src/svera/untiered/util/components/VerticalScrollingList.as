@@ -87,7 +87,7 @@ public class VerticalScrollingList extends Sprite implements List {
     }
 
     private function refreshScrollbar():void {
-        var isVisible:Boolean = false;
+        var isVisible:Boolean;
         var listSize:Size = this.list.getSize();
         var visibleSize:int = listSize.height;
         var itemsSize:int = this.list.getSizeOfItems().height;

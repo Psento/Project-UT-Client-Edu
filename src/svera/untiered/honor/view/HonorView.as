@@ -94,7 +94,7 @@ public class HonorView extends Sprite {
     }
 
     public function setIcon(icon:BitmapData):void {
-        var backgroundDesign:Sprite = null;
+        var backgroundDesign:Sprite;
         var container:Sprite = new Sprite();
         backgroundDesign = new HonorIconBackgroundDesign();
         backgroundDesign.filters = [new DropShadowFilter(0, 0, 0, 0.5, 12, 12)];

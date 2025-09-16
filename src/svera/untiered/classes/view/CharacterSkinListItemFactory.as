@@ -21,7 +21,7 @@ public class CharacterSkinListItemFactory {
     }
 
     public function make(skins:CharacterSkins):Vector.<CharacterSkinListItem> {
-        var count:int = 0;
+        var count:int;
         count = skins.getCount();
         var items:Vector.<CharacterSkinListItem> = new Vector.<CharacterSkinListItem>(count, true);
         for (var i:int = 0; i < count; i++) {
@@ -40,7 +40,6 @@ public class CharacterSkinListItemFactory {
         view.setLockIcon(AssetLibrary.getImageFromSet("lofiInterface2", 5));
         return view;
     }
-
 
 
     private function makeIcon(model:CharacterSkin):Animation {

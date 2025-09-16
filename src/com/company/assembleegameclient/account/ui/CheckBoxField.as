@@ -72,7 +72,7 @@ public class CheckBoxField extends Sprite {
     }
 
     private function redrawCheckBox():void {
-        var color:Number = NaN;
+        var color:Number;
         var g:Graphics = this.checkBox_.graphics;
         g.clear();
         g.beginFill(3355443, 1);

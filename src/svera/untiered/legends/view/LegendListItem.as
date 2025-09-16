@@ -127,7 +127,7 @@ public class LegendListItem extends Sprite {
     }
 
     private function getTextColor():uint {
-        var textColor:uint = 0;
+        var textColor:uint;
         if (this.legend.isOwnLegend) {
             textColor = 16564761;
         } else if (this.legend.place == 1) {

@@ -121,7 +121,7 @@ public class Square {
         var i:uint = 0;
         this.faces_.length = 0;
         this.topFace_ = null;
-        var redrawnTexture:BitmapData = null;
+        var redrawnTexture:BitmapData;
         if (this.props_.animate_.type_ != AnimateProperties.NO_ANIMATE) {
             this.faces_.push(new SquareFace(this.texture_, this.vin_, this.props_.xOffset_, this.props_.xOffset_, this.props_.animate_.type_, this.props_.animate_.dx_, this.props_.animate_.dy_));
             redrawnTexture = TileRedrawer.redraw(this, false);

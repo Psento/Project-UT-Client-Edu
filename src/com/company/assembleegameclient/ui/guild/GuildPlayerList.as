@@ -89,10 +89,10 @@ public class GuildPlayerList extends Sprite {
     }
 
     private function build(guildXML:XML):void {
-        var g:Graphics = null;
-        var id:int = 0;
+        var g:Graphics;
+        var id:int;
         var memberXML:XML = null;
-        var openSlots:int = 0;
+        var openSlots:int;
         var isMe:Boolean = false;
         var rank:int = 0;
         var listLine:MemberListLine = null;

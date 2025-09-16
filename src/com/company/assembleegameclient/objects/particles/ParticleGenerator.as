@@ -43,7 +43,7 @@ public class ParticleGenerator extends ParticleEffect {
     }
 
     override public function update(time:int, dt:int):Boolean {
-        var tDelta:Number = NaN;
+        var tDelta:Number;
         var newParticle:BaseParticle = null;
         var particle:BaseParticle = null;
         var t:Number = time / 1000;

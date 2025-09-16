@@ -89,7 +89,7 @@ public class HorizontalScrollingList extends Sprite implements List {
     }
 
     private function refreshScrollbar():void {
-        var isVisible:Boolean = false;
+        var isVisible:Boolean;
         var listSize:Size = this.list.getSize();
         var visibleSize:int = listSize.width;
         var itemsSize:int = this.list.getSizeOfItems().width;

@@ -25,9 +25,9 @@ public class ReskinHandler {
     }
 
     public function execute(reskin:Reskin):void {
-        var player:Player = null;
-        var skinID:int = 0;
-        var charType:CharacterClass = null;
+        var player:Player;
+        var skinID:int;
+        var charType:CharacterClass;
         player = reskin.player || this.model.player;
         skinID = reskin.skinID;
         charType = this.classes.getCharacterClass(player.objectType_);

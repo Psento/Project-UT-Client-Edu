@@ -31,7 +31,7 @@ public class PlayerToolTip extends ToolTip {
     private var eGrid:EquippedGrid;
 
     public function PlayerToolTip(player:Player) {
-        var yOffset:int = 0;
+        var yOffset:int;
         super(3552822, 0.5, 16777215, 1);
         this.player_ = player;
         this.playerPanel_ = new GameObjectListItem(11776947, true, this.player_);

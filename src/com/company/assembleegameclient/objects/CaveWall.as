@@ -207,7 +207,7 @@ public class CaveWall extends ConnectedObject {
 
     protected function faceHelper(normalL:Vector3D, texture:BitmapData, ...args):void {
         var v:Vector3D = null;
-        var oldLen:int = 0;
+        var oldLen:int;
         var i:int = 0;
         var offset:int = obj3D_.vL_.length / 3;
         for each(v in args) {

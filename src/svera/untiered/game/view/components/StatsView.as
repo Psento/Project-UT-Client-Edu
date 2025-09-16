@@ -122,7 +122,7 @@ public class StatsView extends Sprite {
     public var containerSprite:Sprite;
 
     public function StatsView(w:int, h:int) {
-        var i:int = 0;
+        var i:int;
         var statModel:StatModel = null;
         var stat:StatView = null;
         this.stats_ = new Vector.<StatView>();

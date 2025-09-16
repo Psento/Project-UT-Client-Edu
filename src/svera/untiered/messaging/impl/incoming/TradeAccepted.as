@@ -15,7 +15,7 @@ public class TradeAccepted extends IncomingMessage {
     }
 
     override public function parseFromInput(data:IDataInput):void {
-        var i:int = 0;
+        var i:int;
         this.myOffer_.length = 0;
         var num:int = data.readByte();
         for (i = 0; i < num; i++) {

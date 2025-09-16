@@ -78,7 +78,6 @@ public class ItemGridMediator extends Mediator {
         } else if (target is Map || this.hudModel.gameSprite.map.mouseX < 300) {
             this.dropItem(sourceTile);
         } else if (target is InventoryGrid) {
-            inventoryGrid = target as InventoryGrid;
             slot = sourceTile.ownerGrid.curPlayer.nextAvailableInventorySlot();
             if (slot != -1) {
                 GameServerConnection.instance.invSwap(this.view.curPlayer, sourceTile.ownerGrid.owner, sourceTile.tileId, this.view.curPlayer, slot);

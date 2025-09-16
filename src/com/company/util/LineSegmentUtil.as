@@ -23,8 +23,8 @@ public class LineSegmentUtil {
     }
 
     public static function pointDistance(x:Number, y:Number, x0:Number, y0:Number, x1:Number, y1:Number):Number {
-        var nx:Number = NaN;
-        var ny:Number = NaN;
+        var nx:Number;
+        var ny:Number;
         var t:Number = NaN;
         var dx:Number = x1 - x0;
         var dy:Number = y1 - y0;

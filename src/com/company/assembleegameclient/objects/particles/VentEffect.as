@@ -66,7 +66,7 @@ class VentParticle extends Particle {
     public function restart(startTime:int, time:int):void {
         this.startTime_ = startTime;
         var t:Number = (time - this.startTime_) / 1000;
-        z_ = 0 + this.speed_ * t;
+        z_ = this.speed_ * t;
     }
 
     override public function removeFromMap():void {
@@ -76,7 +76,7 @@ class VentParticle extends Particle {
 
     override public function update(time:int, dt:int):Boolean {
         var t:Number = (time - this.startTime_) / 1000;
-        z_ = 0 + this.speed_ * t;
+        z_ = speed_ * t;
         return z_ < 1;
     }
 }

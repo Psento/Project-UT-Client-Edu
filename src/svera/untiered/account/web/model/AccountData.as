@@ -6,7 +6,7 @@ public class AccountData {
 
     public var password:String;
 
-    public var signedUpKabamEmail:int;
+
 
     public var error:String;
 

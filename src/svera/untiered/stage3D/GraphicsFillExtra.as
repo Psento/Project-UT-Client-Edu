@@ -43,7 +43,7 @@ public class GraphicsFillExtra {
     }
 
     public static function getColorTransform(bitmap:BitmapData):ColorTransform {
-        var colorTransform:ColorTransform = null;
+        var colorTransform:ColorTransform;
         if (bitmap in colorTransforms) {
             colorTransform = colorTransforms[bitmap];
         } else {

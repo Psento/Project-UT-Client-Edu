@@ -802,7 +802,7 @@ public class Player extends Character {
     }
 
     override protected function getTexture(camera:Camera, time:int):BitmapData {
-        var image:MaskedImage = null;
+        var image:MaskedImage;
         var walkPer:int = 0;
         var dict:Dictionary = null;
         var rv:Number = NaN;
@@ -1056,8 +1056,8 @@ public class Player extends Character {
     }
 
     public function swapInventoryIndex(current:String):int {
-        var start:int = 0;
-        var end:int = 0;
+        var start:int;
+        var end:int;
         start = GeneralConstants.NUM_EQUIPMENT_SLOTS + GeneralConstants.NUM_INVENTORY_SLOTS;
         end = equipment_.length;
         for (var i:uint = start; i < end; i++) {

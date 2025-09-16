@@ -50,7 +50,7 @@ public class CharacterBox extends Sprite {
     private var graphic_:Sprite = new Sprite();
 
     public function CharacterBox(playerXML:XML, charStats:CharacterStats, model:PlayerModel) {
-        var stars:Sprite = null;
+        var stars:Sprite;
         super();
         this.model = model;
         this.playerXML_ = playerXML;

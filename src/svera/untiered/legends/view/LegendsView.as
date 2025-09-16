@@ -124,7 +124,7 @@ public class LegendsView extends Sprite {
     }
 
     private function makeTab(timespan:Timespan, i:int):LegendsTab {
-        var tab:LegendsTab = null;
+        var tab:LegendsTab;
         tab = new LegendsTab(timespan);
         this.tabs[timespan.getId()] = tab;
         tab.x = 20 + i * 90;

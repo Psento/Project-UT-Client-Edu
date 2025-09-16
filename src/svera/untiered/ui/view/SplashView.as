@@ -88,8 +88,8 @@ public class SplashView extends Sprite {
         this.logo.scaleY = scale;
 
         // Center the scaled logo on stage
-        this.logo.x = (stageWidth / 2) - (this.originalLogoWidth * scale / 2);
-        this.logo.y = (stageHeight / 2) - (this.originalLogoHeight * scale / 2);
+        this.logo.x = stageWidth / 2 - this.originalLogoWidth * scale / 2;
+        this.logo.y = stageHeight / 2 - this.originalLogoHeight * scale / 2;
     }
 
     private function startFadeSequence():void {

@@ -56,8 +56,8 @@ public class SellableObjectPanel extends Panel {
     }
 
     private static function createRankReqText(rankReq:int):Sprite {
-        var requiredText:SimpleText = null;
-        var rankText:Sprite = null;
+        var requiredText:SimpleText;
+        var rankText:Sprite;
         var rankReqText:Sprite = new Sprite();
         requiredText = new SimpleText(16, 16777215, false, 0, 0);
         rankText = new RankText(rankReq, false, false);
@@ -73,7 +73,7 @@ public class SellableObjectPanel extends Panel {
     }
 
     private static function createGuildRankReqText(guildRankReq:int):SimpleText {
-        var requiredText:SimpleText = null;
+        var requiredText:SimpleText;
         requiredText = new SimpleText(16, 16711680, false, 0, 0);
         requiredText.setBold(true);
         requiredText.text = GuildUtil.rankToString(guildRankReq) + " Rank Required";

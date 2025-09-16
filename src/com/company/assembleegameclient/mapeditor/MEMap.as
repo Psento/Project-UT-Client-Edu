@@ -445,8 +445,8 @@ public class MEMap extends Sprite {
     }
 
     public function draw():void {
-        var m:Matrix = null;
-        var ss:int = 0;
+        var m:Matrix;
+        var ss:int;
         var temp:BitmapData = null;
         var s:int = SIZE / this.zoom_;
         this.map_.fillRect(this.map_.rect, 0);

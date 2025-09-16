@@ -23,7 +23,7 @@ public class SpiderWeb extends GameObject {
     }
 
     private function findWall():Boolean {
-        var sq:Square = null;
+        var sq:Square;
         sq = map_.lookupSquare(x_ - 1, y_);
         if (sq != null && sq.obj_ is Wall) {
             return true;

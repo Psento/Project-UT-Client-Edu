@@ -63,7 +63,7 @@ public class GameObjectListItem extends Sprite {
         }
         this.portrait_.bitmapData = this.go_.getPortrait();
         var drawColor:uint = this.color_;
-        var drawText:String = null;
+        var drawText:String;
         var isHtml:Boolean = false;
         var p:Player = this.go_ as Player;
         if (p != null) {

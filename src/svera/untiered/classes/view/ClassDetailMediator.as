@@ -69,7 +69,7 @@ public class ClassDetailMediator extends Mediator {
     }
 
     private function onFocusSet(skin:CharacterSkin = null):void {
-        this.nextSkin = skin = skin || this.character.skins.getSelectedSkin();
+        this.nextSkin = skin || this.character.skins.getSelectedSkin();
         this.nextSkinTimer.start();
     }
 

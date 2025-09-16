@@ -21,7 +21,7 @@ public class TradeStart extends IncomingMessage {
     }
 
     override public function parseFromInput(data:IDataInput):void {
-        var i:int = 0;
+        var i:int;
         var len:int = data.readByte();
         for (i = len; i < this.myItems_.length; i++) {
             FreeList.deleteObject(this.myItems_[i]);

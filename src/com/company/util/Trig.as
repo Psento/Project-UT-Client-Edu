@@ -11,7 +11,7 @@ public class Trig {
     }
 
     public static function slerp(fromAngle:Number, toAngle:Number, f:Number):Number {
-        var angle:Number = Number.MAX_VALUE;
+        var angle:Number;
         if (fromAngle > toAngle) {
             if (fromAngle - toAngle > Math.PI) {
                 angle = fromAngle * (1 - f) + (toAngle + 2 * Math.PI) * f;
@@ -43,7 +43,7 @@ public class Trig {
     }
 
     public static function sin(x:Number):Number {
-        var sin:Number = NaN;
+        var sin:Number;
         if (x < -Math.PI || x > Math.PI) {
             x = boundToPI(x);
         }

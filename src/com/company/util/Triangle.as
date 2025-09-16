@@ -60,10 +60,10 @@ public class Triangle {
     }
 
     private static function lineRectIntersect(x0:Number, y0:Number, x1:Number, y1:Number, l:Number, t:Number, r:Number, b:Number):Boolean {
-        var top_intersection:Number = NaN;
-        var bottom_intersection:Number = NaN;
-        var toptrianglepoint:Number = NaN;
-        var bottomtrianglepoint:Number = NaN;
+        var top_intersection:Number;
+        var bottom_intersection:Number;
+        var toptrianglepoint:Number;
+        var bottomtrianglepoint:Number;
         var m:Number = (y1 - y0) / (x1 - x0);
         var c:Number = y0 - m * x0;
         if (m > 0) {

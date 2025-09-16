@@ -97,7 +97,7 @@ public class Chooser extends Sprite {
     }
 
     protected function addElement(element:Element, init:Boolean = true):void {
-        var i:int = 0;
+        var i:int;
         i = this.currentElements_.length;
         element.x = i % 2 == 0 ? Number(0) : Number(2 + Element.WIDTH);
         element.y = int(i / 2) * Element.HEIGHT + 6;

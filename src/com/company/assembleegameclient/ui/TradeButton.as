@@ -170,7 +170,7 @@ public class TradeButton extends Sprite {
     }
 
     private function draw():void {
-        var time:int = 0;
+        var time:int;
         var t:Number = NaN;
         time = getTimer();
         if (this.state_ == COUNTDOWN_STATE) {

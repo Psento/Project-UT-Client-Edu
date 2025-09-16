@@ -43,7 +43,7 @@ public class MapDecoder {
     }
 
     private static function writeMapInternal(jm:Object, map:Map, x:int, y:int):void {
-        var yi:int = 0;
+        var yi:int;
         var xi:int = 0;
         var entry:Object = null;
         var objs:Array = null;

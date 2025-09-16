@@ -23,7 +23,7 @@ public class MarketMyOffersResult  extends IncomingMessage
 
     override public function parseFromInput(data:IDataInput) : void
     {
-        var i:int = 0;
+        var i:int;
         var len:int = data.readShort();
         for(i = len; i < this.results_.length; i++)
         {

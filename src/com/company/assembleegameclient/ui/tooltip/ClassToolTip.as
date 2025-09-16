@@ -30,8 +30,8 @@ public class ClassToolTip extends ToolTip {
     private var nextClassQuest_:SimpleText;
 
     public function ClassToolTip(playerXML:XML, model:PlayerModel, charStats:CharacterStats) {
-        var numStars:int = 0;
-        var nextStarHonor:int = 0;
+        var numStars:int;
+        var nextStarHonor:int;
         super(3552822, 1, 16777215, 1);
         var animatedChar:AnimatedChar = AnimatedChars.getAnimatedChar(String(playerXML.AnimatedTexture.File), int(playerXML.AnimatedTexture.Index));
         var image:MaskedImage = animatedChar.imageFromDir(AnimatedChar.RIGHT, AnimatedChar.STAND, 0);

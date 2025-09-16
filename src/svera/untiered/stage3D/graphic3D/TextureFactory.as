@@ -32,7 +32,7 @@ public class TextureFactory {
     }
 
     private static function flipBitmapData(original:BitmapData, axis:String = "x"):BitmapData {
-        var matrix:Matrix = null;
+        var matrix:Matrix;
         var flipped:BitmapData = new BitmapData(original.width, original.height, true, 0);
         if (axis == "x") {
             matrix = new Matrix(-1, 0, 0, 1, original.width, 0);

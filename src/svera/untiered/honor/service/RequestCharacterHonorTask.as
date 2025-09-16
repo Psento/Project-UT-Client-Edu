@@ -82,9 +82,9 @@ public class RequestCharacterHonorTask extends BaseTask {
     }
 
     private function parseXML():void {
-        var charXml:XML = null;
-        var char:CharacterClass = null;
-        var skin:CharacterSkin = null;
+        var charXml:XML;
+        var char:CharacterClass;
+        var skin:CharacterSkin;
         charXml = this.xml.Char.(@id == charId)[0];
         this.name = charXml.Account.Name;
         this.level = charXml.Level;

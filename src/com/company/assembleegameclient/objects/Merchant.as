@@ -143,7 +143,7 @@ public class Merchant extends SellableObject implements IInteractiveObject {
         if (this.firstUpdate_) {
             if (this.minsLeft_ == 2147483647) {
                 this.alpha_ = 0;
-                tween0 = new GTween(this, 0.5 * T, {"alpha_": 1});
+                new GTween(this, 0.5 * T, {"alpha_": 1});
                 tween1 = new GTween(this, 0.5 * T, {"size_": 150}, {"ease": Sine.easeOut});
                 tween1.nextTween = new GTween(this, 0.5 * T, {"size_": 100}, {"ease": Sine.easeIn});
                 tween1.nextTween.paused = true;

@@ -17,7 +17,7 @@ public class ModelFace3D {
 
     public static function compare(f1:ModelFace3D, f2:ModelFace3D):Number {
         var val:Number = NaN;
-        var i:int = 0;
+        var i:int;
         var minZ1:Number = Number.MAX_VALUE;
         var maxZ1:Number = Number.MIN_VALUE;
         for (i = 0; i < f1.indicies_.length; i++) {

@@ -88,7 +88,7 @@ public class DropDown extends Sprite {
     }
 
     private function showAll():void {
-        var global:Point = null;
+        var global:Point;
         var item:DropDownItem = null;
         var yOffset:int = 0;
         global = parent.localToGlobal(new Point(x, y));

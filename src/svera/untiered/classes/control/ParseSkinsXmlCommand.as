@@ -27,7 +27,7 @@ public class ParseSkinsXmlCommand {
     }
 
     private function parseNode(xml:XML):void {
-        var file:String = null;
+        var file:String;
         file = xml.AnimatedTexture.File;
         var index:int = xml.AnimatedTexture.Index;
         var skin:CharacterSkin = new CharacterSkin();

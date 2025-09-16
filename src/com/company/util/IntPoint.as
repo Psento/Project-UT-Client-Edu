@@ -100,9 +100,9 @@ class UnitTest {
 
 
     function UnitTest() {
-        var p:IntPoint = null;
-        var rp:IntPoint = null;
-        var n:Number = NaN;
+        var p:IntPoint;
+        var rp:IntPoint;
+        var n:Number;
         super();
         trace("STARTING UNITTEST: IntPoint");
         p = new IntPoint(999, 1001);

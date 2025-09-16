@@ -113,7 +113,7 @@ public class EditingScreen extends Sprite {
     }
 
     private function onTilesEvent(event:TilesEvent):void {
-        var tile:IntPoint = null;
+        var tile:IntPoint;
         var type:int = 0;
         var oldName:String = null;
         var props:EditTileProperties = null;

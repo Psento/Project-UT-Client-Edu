@@ -346,7 +346,7 @@ public class GameObject extends BasicObject {
     }
 
     public function setAltTexture(altTextureId:int):void {
-        var altTextureData:TextureData = null;
+        var altTextureData:TextureData;
         var textureData:TextureData = ObjectLibrary.typeToTextureData_[this.objectType_];
         if (altTextureId == 0) {
             altTextureData = textureData;

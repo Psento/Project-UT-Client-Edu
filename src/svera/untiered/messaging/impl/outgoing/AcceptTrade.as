@@ -15,7 +15,7 @@ public class AcceptTrade extends OutgoingMessage {
     }
 
     override public function writeToOutput(data:IDataOutput):void {
-        var i:int = 0;
+        var i:int;
         data.writeByte(this.myOffer_.length);
         for (i = 0; i < this.myOffer_.length; i++) {
             data.writeBoolean(this.myOffer_[i]);

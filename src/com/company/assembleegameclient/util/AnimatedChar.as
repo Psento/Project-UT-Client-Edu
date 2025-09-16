@@ -144,7 +144,7 @@ public class AnimatedChar {
     }
 
     private function loadDir(offset:int, mirror:Boolean, sym:Boolean, frames:MaskedImageSet):Dictionary {
-        var attackVec:Vector.<MaskedImage> = null;
+        var attackVec:Vector.<MaskedImage>;
         var image:BitmapData = null;
         var mask:BitmapData = null;
         var dirDict:Dictionary = new Dictionary();

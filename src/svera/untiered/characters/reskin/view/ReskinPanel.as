@@ -29,7 +29,7 @@ public class ReskinPanel extends Panel {
     }
 
     private function makeTitle():SimpleText {
-        var title:SimpleText = null;
+        var title:SimpleText;
         title = new SimpleText(18, 16777215, false, WIDTH, 0);
         title.setBold(true);
         title.wordWrap = true;

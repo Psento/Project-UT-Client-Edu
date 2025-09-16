@@ -76,7 +76,7 @@ public class HonorUtil {
     }
 
     public static function numStarsToIcon(numStars:int):Sprite {
-        var star:Sprite = null;
+        var star:Sprite;
         star = numStarsToImage(numStars);
         var sprite:Sprite = new Sprite();
         sprite.graphics.beginFill(0, 0.4);

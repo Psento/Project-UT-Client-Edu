@@ -193,7 +193,7 @@ public class TextBox extends Sprite {
     }
 
     private function addTextBlock(textBlock:TextBlock):void {
-        var blockSprite:Sprite = null;
+        var blockSprite:Sprite;
         blockSprite = new Sprite();
         var textLine:TextLine = null;
         var yPos:Number = 0;
@@ -236,7 +236,7 @@ public class TextBox extends Sprite {
     }
 
     private function onAddedToStage(event:Event):void {
-        var yMod:uint = 0;
+        var yMod:uint;
         if (this.isInputAllowed) {
             stage.addEventListener(KeyboardEvent.KEY_UP, this.onKeyUp);
             yMod = 20;

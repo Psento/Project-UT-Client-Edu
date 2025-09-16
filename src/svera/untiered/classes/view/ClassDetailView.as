@@ -47,7 +47,7 @@ public class ClassDetailView extends Sprite {
     private var animation:Animation;
 
     public function ClassDetailView() {
-        var dropShadowFilter:DropShadowFilter = null;
+        var dropShadowFilter:DropShadowFilter;
         super();
         dropShadowFilter = new DropShadowFilter(0, 0, 0, 1, 8, 8);
         this.animContainer = new Sprite();

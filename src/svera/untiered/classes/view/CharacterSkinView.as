@@ -65,7 +65,7 @@ public class CharacterSkinView extends Sprite {
     }
 
     private function makePlayButton():TitleMenuOption {
-        var option:TitleMenuOption = null;
+        var option:TitleMenuOption;
         option = new TitleMenuOption("play", 36, false);
         option.x = GameClient.HalfStageWidth - option.width / 2;
         option.y = GameClient.StageHeight - (600 - 520);
@@ -81,35 +81,12 @@ public class CharacterSkinView extends Sprite {
         return option;
     }
 
-    private var selectedSkin:int = 0;
     private function makeClassDetailView():ClassDetailView {
         var view:ClassDetailView = new ClassDetailView();
 
         addChild(view);
 
-        var skinListView:CharacterSkinListView = new CharacterSkinListView();
-
-        addChild(skinListView);
-
-        var leftSkin:TitleMenuOption = new TitleMenuOption(">", 24, true, true);
-        var rightSkin:TitleMenuOption = new TitleMenuOption("<", 24, true, true);
-        function left():void
-        {
-            if(++selectedSkin >= skinListView.items.length){
-                selectedSkin = 0;
-            }
-            skinListView.items[selectedSkin].setIsSelected(true);
-        }
-        function right():void
-        {
-            if(--selectedSkin <= 0){
-                selectedSkin = skinListView.items.length - 1;
-            }
-            skinListView.items[selectedSkin].setIsSelected(true);
-        }
-        leftSkin.clicked.add(left);
-        rightSkin.clicked.add(right);
-
+        var skinListView:CharacterSkinListView = new CharacterSkinListView(playBtn);
         positionStuff.addOnce(function ():void {
             view.x = (width - view.width) / 2;
             view.y = (GameClient.StageHeight - view.height) / 2;
@@ -117,15 +94,16 @@ public class CharacterSkinView extends Sprite {
             skinListView.x = (width - skinListView.width) / 2;
             skinListView.y = view.y + skinListView.height;
 
-            leftSkin.x = view.x + view.width + leftSkin.width;
-            leftSkin.y = view.y + view.height / 2;
+            skinListView.leftSkin.x = view.x + view.width + skinListView.leftSkin.width;
+            skinListView.leftSkin.y = view.y + view.height / 2;
 
-            rightSkin.x = view.x - rightSkin.width;
-            rightSkin.y = leftSkin.y;
+            skinListView.rightSkin.x = view.x - skinListView.rightSkin.width;
+            skinListView.rightSkin.y = skinListView.leftSkin.y;
         });
 
-        addChild(leftSkin);
-        addChild(rightSkin);
+        addChild(skinListView);
+        addChild(skinListView.leftSkin);
+        addChild(skinListView.rightSkin);
 
         return view;
     }

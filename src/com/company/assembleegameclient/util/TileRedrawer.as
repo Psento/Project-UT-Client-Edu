@@ -77,7 +77,7 @@ public class TileRedrawer {
     }
 
     public static function redraw(square:Square, origBackground:Boolean):BitmapData {
-        var sig:ByteArray = null;
+        var sig:ByteArray;
         var newBitmapData:BitmapData = null;
         if (square.tileType_ == 253) {
             sig = getCompositeSig(square);

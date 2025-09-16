@@ -94,19 +94,19 @@ public class Base64Decoder
             if (count == 4)
             {
                 count = 0;
-                data.writeByte((work[0] << 2) | ((work[1] & 0xFF) >> 4));
+                data.writeByte(work[0] << 2 | (work[1] & 0xFF) >> 4);
                 filled++;
 
                 if (work[2] == -1)
                     break;
 
-                data.writeByte((work[1] << 4) | ((work[2] & 0xFF) >> 2));
+                data.writeByte(work[1] << 4 | (work[2] & 0xFF) >> 2);
                 filled++;
 
                 if (work[3] == -1)
                     break;
 
-                data.writeByte((work[2] << 6) | work[3]);
+                data.writeByte(work[2] << 6 | work[3]);
                 filled++;
             }
         }

@@ -60,7 +60,7 @@ public class Projectile extends BasicObject {
     }
 
     public function reset(containerType:int, bulletType:int, ownerId:int, bulletId:int, angle:Number, startTime:int):void {
-        var size:Number = NaN;
+        var size:Number;
         clear();
         this.containerType_ = containerType;
         this.bulletType_ = bulletType;
@@ -89,7 +89,7 @@ public class Projectile extends BasicObject {
         this.damage_ = 0;
     }
     public function reset2(containerType:int, bulletType:int, ownerId:int, bulletId:int, angle:Number, startTime:int):void {
-        var size:Number = NaN;
+        var size:Number;
         clear();
         this.containerType_ = containerType;
         this.bulletType_ = bulletType;

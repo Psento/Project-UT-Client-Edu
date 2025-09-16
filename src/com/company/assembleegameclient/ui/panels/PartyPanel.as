@@ -37,7 +37,7 @@ public class PartyPanel extends Panel {
     }
 
     private function createPartyMemberPanel(xPos:int, yPos:int):GameObjectListItem {
-        var pmp:GameObjectListItem = null;
+        var pmp:GameObjectListItem;
         pmp = new GameObjectListItem(16777215, false, null);
         addChild(pmp);
         pmp.x = xPos;

@@ -28,6 +28,8 @@ public class CharacterSkinListItem extends Sprite {
     public var state:CharacterSkinState;
     private var isOver:Boolean;
     public var index:int = 0;
+    public var initialAngle:Number = 0;
+    public var angle:Number = 0;
 
     public function CharacterSkinListItem() {
         this.state = CharacterSkinState.NULL;
@@ -38,7 +40,7 @@ public class CharacterSkinListItem extends Sprite {
     }
 
     private function makeNameText():SimpleText {
-        var text:SimpleText = new SimpleText(18, 16777215, false, 0, 0);
+        var text:SimpleText = new SimpleText(12, 16777215, false, 0, 0);
         text.setBold(true);
         text.filters = [new DropShadowFilter(0, 0, 0, 1, 8, 8)];
         text.updateMetrics();
@@ -91,7 +93,6 @@ public class CharacterSkinListItem extends Sprite {
         this.state = Boolean(skin) ? skin.getState() : CharacterSkinState.NULL;
         this.updateName();
         this.updateState();
-        this.updatePurchasingText();
     }
 
     public function getState():CharacterSkinState {
@@ -107,15 +108,6 @@ public class CharacterSkinListItem extends Sprite {
 
     private function updateState():void {
         updateGrayFilter();
-    }
-
-
-    private function updatePurchasingText():void {
-        this.purchasingText.text = "Purchasing...";
-        this.purchasingText.updateMetrics();
-        this.purchasingText.x = width - this.purchasingText.width - 15;
-        this.purchasingText.y = height / 2 - this.purchasingText.height / 2;
-        this.lock.x = this.purchasingText.x - this.lock.width - 5;
     }
 
     private function onOver(e:MouseEvent):void {

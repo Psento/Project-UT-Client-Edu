@@ -17,6 +17,7 @@ public class CharacterSkinView extends Sprite {
     public var play:Signal;
     public var back:Signal;
     public static var positionStuff:Signal;
+    private var classDetailView:ClassDetailView;
 
     public function CharacterSkinView() {
         super();
@@ -82,30 +83,31 @@ public class CharacterSkinView extends Sprite {
     }
 
     private function makeClassDetailView():ClassDetailView {
-        var view:ClassDetailView = new ClassDetailView();
+        classDetailView = new ClassDetailView();
 
-        addChild(view);
+        addChild(classDetailView);
 
-        var skinListView:CharacterSkinListView = new CharacterSkinListView(playBtn);
-        positionStuff.addOnce(function ():void {
-            view.x = (width - view.width) / 2;
-            view.y = (GameClient.StageHeight - view.height) / 2;
+        positionStuff.add(positionThings);
 
-            skinListView.x = (width - skinListView.width) / 2;
-            skinListView.y = view.y + skinListView.height;
+        //Add left and right here because theyre out of class detail bounds
+        addChild(classDetailView.skinListView.rightSkin);
+        addChild(classDetailView.skinListView.leftSkin);
 
-            skinListView.leftSkin.x = view.x + view.width + skinListView.leftSkin.width;
-            skinListView.leftSkin.y = view.y + view.height / 2;
+        return classDetailView;
+    }
 
-            skinListView.rightSkin.x = view.x - skinListView.rightSkin.width;
-            skinListView.rightSkin.y = skinListView.leftSkin.y;
-        });
+    private function positionThings():void {
+        classDetailView.x = (width - ClassDetailView.WIDTH) / 2;
+        classDetailView.y = (GameClient.StageHeight - classDetailView.height) / 2;
 
-        addChild(skinListView);
-        addChild(skinListView.leftSkin);
-        addChild(skinListView.rightSkin);
+        trace("Position things dispatched");
+        classDetailView.positionSkins();
 
-        return view;
+        classDetailView.skinListView.rightSkin.x = classDetailView.x + ClassDetailView.WIDTH + classDetailView.skinListView.rightSkin.width;
+        classDetailView.skinListView.rightSkin.y = classDetailView.y + classDetailView.height / 2;
+
+        classDetailView.skinListView.leftSkin.x = classDetailView.x - classDetailView.skinListView.leftSkin.width;
+        classDetailView.skinListView.leftSkin.y = classDetailView.skinListView.rightSkin.y;
     }
 
     public function setPlayButtonEnabled(activate:Boolean):void {

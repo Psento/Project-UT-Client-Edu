@@ -1,4 +1,5 @@
 package svera.untiered.classes.view {
+import com.company.assembleegameclient.screens.TitleMenuOption;
 import com.company.assembleegameclient.util.HonorUtil;
 import com.company.ui.SimpleText;
 
@@ -15,7 +16,7 @@ import svera.untiered.util.components.StarsView;
 public class ClassDetailView extends Sprite {
     private static const RIGHT_JUSTIFICATION_STATS:int = 205;
 
-    private static const WIDTH:int = 250;
+    public static const WIDTH:int = 250;
 
     private static const TEXT_WIDTH:int = 188;
 
@@ -46,12 +47,15 @@ public class ClassDetailView extends Sprite {
 
     private var animation:Animation;
 
-    public function ClassDetailView() {
+    public var skinListView:CharacterSkinListView;
+
+
+    public function ClassDetailView(playBtn:TitleMenuOption = null) {
         var dropShadowFilter:DropShadowFilter;
         super();
         dropShadowFilter = new DropShadowFilter(0, 0, 0, 1, 8, 8);
         this.animContainer = new Sprite();
-        addChild(this.animContainer);
+        //addChild(this.animContainer);
         this.classNameText = new SimpleText(20, 16777215, false, TEXT_WIDTH, 0);
         this.classNameText.setBold(true);
         this.classNameText.filters = [dropShadowFilter];
@@ -110,6 +114,11 @@ public class ClassDetailView extends Sprite {
         addChild(this.nextGoalDetailText);
         this.questCompletedStars = new StarsView();
         addChild(this.questCompletedStars);
+
+
+        skinListView = new CharacterSkinListView(playBtn)
+        addChild(skinListView);
+
     }
 
     public function setData(name:String, description:String, stars:int, highestLevel:int, highestHonor:int):void {
@@ -152,6 +161,9 @@ public class ClassDetailView extends Sprite {
         this.animContainer.addChild(animation);
         animation.start();
     }
+    public function positionSkins():void {
+
+    }
 
     private function layout():void {
         this.animContainer.x = WIDTH / 2 - this.animContainer.width / 2;
@@ -159,6 +171,9 @@ public class ClassDetailView extends Sprite {
 
         this.classNameText.x = WIDTH / 2 - this.classNameText.width / 2;
         this.classNameText.y = 110;
+
+        skinListView.x = 23 + (WIDTH) / 2; // 23 is really just a magic number atm, because idk how to fix slight missposition caused by skins texture i use to test this
+        skinListView.y = classNameText.y - classNameText.height - skinListView.height / 2; // ???
 
         this.classDescriptionText.y = this.classNameText.y + this.classNameText.textHeight + 5;
         this.classDescriptionText.x = WIDTH / 2 - this.classDescriptionText.width / 2;

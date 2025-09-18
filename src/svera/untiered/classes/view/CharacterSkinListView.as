@@ -73,8 +73,9 @@ public class CharacterSkinListView extends Sprite {
             selectedSkin = 0;
         }
         currentSkin = skinsContainer.items[selectedSkin];
-        currentSkin.selected.dispatch(true);
-        //setButtonVisibilities();
+        //trace(currentSkin.model.name);
+        //currentSkin.selected.dispatch(true); // TODO: Fix this cause insane shit with position
+        setButtonVisibilities();
 
         var test:GTween = new GTween(this, 0.5, {"testAngle": -1}, {"ease": Sine.easeIn});
         test.init();
@@ -86,8 +87,9 @@ public class CharacterSkinListView extends Sprite {
             selectedSkin = skinsContainer.items.length - 1;
         }
         currentSkin = skinsContainer.items[selectedSkin];
-        currentSkin.selected.dispatch(true);
-        //setButtonVisibilities();
+        //trace(currentSkin.model.name);
+        //currentSkin.selected.dispatch(true); // TODO: Fix this cause insane shit with position
+        setButtonVisibilities();
 
         //var targetVal:Number = _accAngle +
         var test:GTween = new GTween(this, 0.5, {"testAngle": 1}, {"ease": Sine.easeIn});
@@ -136,7 +138,7 @@ public class CharacterSkinListView extends Sprite {
         var radius:Number = 100;
         _accAngle = -(Math.PI * 3) / 2;
         for each(var item:CharacterSkinListItem in items_) {
-            //item.model.changed.add(setBuyButton);
+            item.model.changed.add(setBuyButton);
             var container:Sprite = new Sprite(); // Used only to make thing centered
 
             var x:Number = Math.cos(_accAngle) * radius;

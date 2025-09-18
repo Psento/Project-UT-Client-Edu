@@ -20,7 +20,6 @@ public class CharacterSkinListItem extends Sprite {
     private const grayscaleMatrix:ColorMatrixFilter = new ColorMatrixFilter(MoreColorUtil.greyscaleFilterMatrix);
     private var nameText:SimpleText;
     private var lock:Bitmap;
-    private var purchasingText:SimpleText;
     public const over:Signal = new Signal();
     public const out:Signal = new Signal();
     public var selected:Signal = new Signal();
@@ -35,7 +34,6 @@ public class CharacterSkinListItem extends Sprite {
         this.state = CharacterSkinState.NULL;
         nameText = makeNameText();
         lock = makeLock();
-        purchasingText = makeLockText();
         super();
     }
 
@@ -60,13 +58,7 @@ public class CharacterSkinListItem extends Sprite {
 
     public function setLockIcon(data:BitmapData):void {
         this.lock.bitmapData = data;
-        this.lock.x = this.purchasingText.x - this.lock.width - 5;
-    }
-
-    private function makeLockText():SimpleText {
-        var text:SimpleText = new SimpleText(14, 16777215, false, 0, 0);
-        addChild(text);
-        return text;
+        this.lock.x = - this.lock.width - 5;
     }
 
     public function setSkin(icon:Animation):void {
@@ -103,7 +95,7 @@ public class CharacterSkinListItem extends Sprite {
         nameText.text = Boolean(this.model) ? this.model.name : "";
         nameText.updateMetrics();
         nameText.x = (width - nameText.width) / 2;
-        nameText.y = height - nameText.textHeight;
+        nameText.y = /*height - nameText.height*/0;
     }
 
     private function updateState():void {

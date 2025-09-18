@@ -136,6 +136,163 @@
     </Ground>
     <!-- #endregion -->
     <!-- #region --> // Garnet Woods
+    <Ground type="0x108" id="[Overworld:GarnetWoods] Water">
+        <Texture>
+            <File>Overworld_Environment_GarnetWoods8x8</File>
+            <Index>0x00</Index>
+        </Texture>
+    </Ground>
+    <Ground type="0x109" id="[Overworld:GarnetWoods] Grass">
+        <RandomTexture>
+            <Texture>
+                <File>Overworld_Environment_GarnetWoods8x8</File>
+                <Index>0x01</Index>
+            </Texture>
+            <Texture>
+                <File>Overworld_Environment_GarnetWoods8x8</File>
+                <Index>0x02</Index>
+            </Texture>
+            <Texture>
+                <File>Overworld_Environment_GarnetWoods8x8</File>
+                <Index>0x03</Index>
+            </Texture>
+            <Texture>
+                <File>Overworld_Environment_GarnetWoods8x8</File>
+                <Index>0x04</Index>
+            </Texture>
+            <Texture>
+                <File>Overworld_Environment_GarnetWoods8x8</File>
+                <Index>0x05</Index>
+            </Texture>
+            <Texture>
+                <File>Overworld_Environment_GarnetWoods8x8</File>
+                <Index>0x06</Index>
+            </Texture>
+        </RandomTexture>
+    </Ground>
+    <Ground type="0x10a" id="[Overworld:GarnetWoods] High Grass">
+        <RandomTexture>
+            <Texture>
+                <File>Overworld_Environment_GarnetWoods8x8</File>
+                <Index>0x07</Index>
+            </Texture>
+            <Texture>
+                <File>Overworld_Environment_GarnetWoods8x8</File>
+                <Index>0x10</Index>
+            </Texture>
+            <Texture>
+                <File>Overworld_Environment_GarnetWoods8x8</File>
+                <Index>0x11</Index>
+            </Texture>
+        </RandomTexture>
+    </Ground>
+    <Ground type="0x10b" id="[Overworld:GarnetWoods] Rocks">
+        <RandomTexture>
+            <Texture>
+                <File>Overworld_Environment_GarnetWoods8x8</File>
+                <Index>0x12</Index>
+            </Texture>
+            <Texture>
+                <File>Overworld_Environment_GarnetWoods8x8</File>
+                <Index>0x13</Index>
+            </Texture>
+            <Texture>
+                <File>Overworld_Environment_GarnetWoods8x8</File>
+                <Index>0x14</Index>
+            </Texture>
+            <Texture>
+                <File>Overworld_Environment_GarnetWoods8x8</File>
+                <Index>0x15</Index>
+            </Texture>
+        </RandomTexture>
+    </Ground>
+    <Ground type="0x10c" id="[Overworld:GarnetWoods] Road">
+        <RandomTexture>
+            <Texture>
+                <File>Overworld_Environment_GarnetWoods8x8</File>
+                <Index>0x16</Index>
+            </Texture>
+            <Texture>
+                <File>Overworld_Environment_GarnetWoods8x8</File>
+                <Index>0x16</Index>
+            </Texture>
+            <Texture>
+                <File>Overworld_Environment_GarnetWoods8x8</File>
+                <Index>0x16</Index>
+            </Texture>
+            <Texture>
+                <File>Overworld_Environment_GarnetWoods8x8</File>
+                <Index>0x16</Index>
+            </Texture>
+            <Texture>
+                <File>Overworld_Environment_GarnetWoods8x8</File>
+                <Index>0x17</Index>
+            </Texture>
+            <Texture>
+                <File>Overworld_Environment_GarnetWoods8x8</File>
+                <Index>0x20</Index>
+            </Texture>
+            <Texture>
+                <File>Overworld_Environment_GarnetWoods8x8</File>
+                <Index>0x21</Index>
+            </Texture>
+        </RandomTexture>
+        <Speed>1.2</Speed>
+    </Ground>
+    <Ground type="0x10d" id="[Overworld:GarnetWoods] Mud">
+        <RandomTexture>
+            <Texture>
+                <File>Overworld_Environment_GarnetWoods8x8</File>
+                <Index>0x22</Index>
+            </Texture>
+            <Texture>
+                <File>Overworld_Environment_GarnetWoods8x8</File>
+                <Index>0x23</Index>
+            </Texture>
+            <Texture>
+                <File>Overworld_Environment_GarnetWoods8x8</File>
+                <Index>0x24</Index>
+            </Texture>
+            <Texture>
+                <File>Overworld_Environment_GarnetWoods8x8</File>
+                <Index>0x25</Index>
+            </Texture>
+            <Texture>
+                <File>Overworld_Environment_GarnetWoods8x8</File>
+                <Index>0x26</Index>
+            </Texture>
+            <Texture>
+                <File>Overworld_Environment_GarnetWoods8x8</File>
+                <Index>0x27</Index>
+            </Texture>
+        </RandomTexture>
+        <Sink/>
+        <Speed>.922</Speed>
+    </Ground>
+    <Ground type="0x10e" id="[Overworld:GarnetWoods] Recall Shrine V">
+        <Texture>
+            <File>Overworld_Environment_GarnetWoods8x8</File>
+            <Index>0x30</Index>
+        </Texture>
+    </Ground>
+    <Ground type="0x10f" id="[Overworld:GarnetWoods] Recall Shrine TL">
+        <Texture>
+            <File>Overworld_Environment_GarnetWoods8x8</File>
+            <Index>0x31</Index>
+        </Texture>
+    </Ground>
+    <Ground type="0x110" id="[Overworld:GarnetWoods] Recall Shrine BR">
+        <Texture>
+            <File>Overworld_Environment_GarnetWoods8x8</File>
+            <Index>0x32</Index>
+        </Texture>
+    </Ground>
+    <Ground type="0x111" id="[Overworld:GarnetWoods] Recall Shrine C">
+        <Texture>
+            <File>Overworld_Environment_GarnetWoods8x8</File>
+            <Index>0x33</Index>
+        </Texture>
+    </Ground>
     <!-- #endregion -->
     <!-- #region --> // Sandstone Valley
     <!-- #endregion -->

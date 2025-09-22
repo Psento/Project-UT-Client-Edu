@@ -86,7 +86,7 @@ public class ItemTile extends Sprite {
             this.restrictedUseIndicator.visible = false;
             return;
         }
-        this.restrictedUseIndicator.visible = !ObjectLibrary.isUsableByPlayer(itemData.BaseItem.ObjectType, player);
+        this.restrictedUseIndicator.visible = !ObjectLibrary.isUsableByPlayer(itemData.ObjectType, player);
     }
 
     public function canHoldItem(itemData:NewItemData):Boolean {

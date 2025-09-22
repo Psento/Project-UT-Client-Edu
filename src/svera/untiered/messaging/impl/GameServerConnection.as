@@ -700,7 +700,7 @@ public class GameServerConnection {
         var itemId:NewItemData = itemOwner.equipment_[slotId];
         var objectXML:XML = ObjectLibrary.xmlLibrary_[itemId];
         if (objectXML && (objectXML.hasOwnProperty("Consumable") || objectXML.hasOwnProperty("InvUse"))) {
-            this.applyUseItem(itemOwner, slotId, itemId.BaseItem.ObjectType, objectXML);
+            this.applyUseItem(itemOwner, slotId, itemId.ObjectType, objectXML);
             SoundEffectLibrary.play("use_potion");
             return true;
         }

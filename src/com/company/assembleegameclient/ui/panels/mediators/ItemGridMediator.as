@@ -140,7 +140,7 @@ public class ItemGridMediator extends Mediator {
                 equipment = groundContainer.equipment_;
                 equipCount = equipment.length;
                 for (openIndex = 0; openIndex < equipCount; openIndex++) {
-                    if (equipment[openIndex].BaseItem.ObjectType < 0) {
+                    if (equipment[openIndex].ObjectType < 0) {
                         break;
                     }
                 }

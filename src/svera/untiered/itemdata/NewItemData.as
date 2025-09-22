@@ -4,24 +4,25 @@ import com.company.util.Base64Decoder;
 import com.company.util.Guid;
 
 import flash.utils.ByteArray;
-import flash.utils.IDataInput;
+import flash.utils.Dictionary;
 
-import svera.untiered.itemdata.Item;
+public class NewItemData extends Item {
 
-public class NewItemData {
+    private const keys:Dictionary = new Dictionary();// Closest thing to a hashset
 
-    private var item:Item;
-    private var uuid:String;
-    private var time:Date;
+    private var uuid:String = Guid.Empty;
+    public final function get Uuid():String { return uuid }
 
-    public function get BaseItem(): Item { return item }
-    public function get Uuid(): String { return uuid }
-    public function get CreationTime(): Date { return time }
+    private var killTracker:int = 0;
+    public final function get KillTracker():int { return killTracker; }
+    public final function get HasKillTracker():Boolean { return DataKeys.KillTracker in keys; }
 
-    public function NewItemData(item:Item = null, uuid:String = null, time:Date = null) {
-        this.item = item;
-        this.uuid = uuid;
-        this.time = time;
+    private var soulbound:Boolean;
+    public final override function get Soulbound():Boolean { return (DataKeys.Soulbound in keys) ? soulbound : super.Soulbound; }
+
+    public function NewItemData(item:Item = null) {
+        super(item);
+        if (item == null) throw new Error("Item cannot be null");
     }
 
     public static function TempCreate(data:int): NewItemData {
@@ -30,18 +31,38 @@ public class NewItemData {
         return item;
     }
 
-    public static function FromByteArray(data:IDataInput): NewItemData {
+    public static function FromByteArray(data:ByteArray): NewItemData {
         var oType:int = data.readInt();
         if (oType < 1) return null;
 
-        var uuid:String = Guid.guidDataToString(data);
-        var low:uint = data.readUnsignedInt();
-        var high:uint = data.readUnsignedInt();
-        var ms:Number = high * 0x100000000 + low;
-        var time:Date = new Date(ms);
+        var item:NewItemData = new NewItemData(ObjectLibrary.baseItems[oType]);
 
-        var item:NewItemData = new NewItemData(ObjectLibrary.baseItems[oType], uuid, time);
-        trace(oType, item.BaseItem == null, uuid, time.toLocaleString());
+        var keyCount:uint = data.readUnsignedShort();
+
+        for (var i:uint = 0; i < keyCount; i++) {
+            var key:int = data.readUnsignedShort();
+            item.keys[key] = null;
+            switch (key) {
+                case DataKeys.Uuid:
+                    item.uuid = Guid.guidDataToString(data);
+                    break;
+                case DataKeys.CommandTag:
+                    data.position += 5;
+                    break;
+                case DataKeys.KillTracker:
+                    item.killTracker = data.readInt();
+                    break;
+                case DataKeys.Soulbound:
+                    item.soulbound = data.readBoolean();
+                    break;
+            }
+        }
+
+        //var low:uint = data.readUnsignedInt();
+        //var high:uint = data.readUnsignedInt();
+        //var ms:Number = high * 0x100000000 + low;
+        //var time:Date = new Date(ms);
+
         return item;
     }
 

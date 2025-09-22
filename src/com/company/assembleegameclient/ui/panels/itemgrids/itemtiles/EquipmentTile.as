@@ -140,7 +140,7 @@ public class EquipmentTile extends InteractiveItemTile {
             return;
         }
 
-        var item:Item = itemSprite.itemData.BaseItem;
+        var item:NewItemData = itemSprite.itemData;
         if (item.Usable && !item.MultiPhase)
             minResourceUsage = item.MpCost;
         else if (item.Usable && item.MultiPhase)

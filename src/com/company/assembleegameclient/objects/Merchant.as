@@ -192,11 +192,11 @@ public class Merchant extends SellableObject implements IInteractiveObject {
 
     override public function getIcon():BitmapData {
         var tempText:SimpleText = null;
-        var texture:BitmapData = ObjectLibrary.getRedrawnTextureFromType(this.merchandiseType_.BaseItem.ObjectType, 80, true);
-        if (merchandiseType_.BaseItem.Doses) {
+        var texture:BitmapData = ObjectLibrary.getRedrawnTextureFromType(this.merchandiseType_.ObjectType, 80, true);
+        if (merchandiseType_.Doses) {
             texture = texture.clone();
             tempText = new SimpleText(12, 16777215, false, 0, 0);
-            tempText.text = String(merchandiseType_.BaseItem.Doses);
+            tempText.text = String(merchandiseType_.Doses);
             tempText.updateMetrics();
             texture.draw(tempText, DOSE_MATRIX);
         }
@@ -229,7 +229,7 @@ public class Merchant extends SellableObject implements IInteractiveObject {
         if (this.alpha_ == 1 && size_ == 100) {
             return this.merchandiseTexture_;
         }
-        var tempTexture:BitmapData = ObjectLibrary.getRedrawnTextureFromType(this.merchandiseType_.BaseItem.ObjectType, size_, false, false);
+        var tempTexture:BitmapData = ObjectLibrary.getRedrawnTextureFromType(this.merchandiseType_.ObjectType, size_, false, false);
         if (this.alpha_ != 1) {
             this.ct_.alphaMultiplier = this.alpha_;
             tempTexture.colorTransform(tempTexture.rect, this.ct_);
@@ -239,7 +239,7 @@ public class Merchant extends SellableObject implements IInteractiveObject {
 
     public function setMerchandiseType(merchandiseType:NewItemData):void {
         this.merchandiseType_ = merchandiseType;
-        this.merchandiseTexture_ = ObjectLibrary.getRedrawnTextureFromType(this.merchandiseType_.BaseItem.ObjectType, 100, false);
+        this.merchandiseTexture_ = ObjectLibrary.getRedrawnTextureFromType(this.merchandiseType_.ObjectType, 100, false);
     }
 }
 }

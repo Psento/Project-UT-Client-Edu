@@ -365,10 +365,10 @@ public class ConditionEffect {
                     i = 0;
                     for (i = 0; i < effects_[ce].iconOffsets_.length; i++) {
                         if(effects_[ce].imageSet_ != null) {
-                            icon = new BitmapDataSpy(18, 18, true, 0);
+                            icon = new BitmapData(18, 18, true, 0);
                             icon.draw(AssetLibrary.getImageFromSet(effects_[ce].imageSet_, effects_[ce].iconOffsets_[i]), defaultMatrix);
                         } else {
-                            icon = new BitmapDataSpy(16, 16, true, 0);
+                            icon = new BitmapData(16, 16, true, 0);
                             icon.draw(AssetLibrary.getImageFromSet("lofiInterface2", effects_[ce].iconOffsets_[i]), drawMatrix);
                         }
                         icon = GlowRedrawer.outlineGlow(icon, 0xFFFFFFFF);
@@ -404,14 +404,14 @@ public class ConditionEffect {
                     defaultMatrix = 0;
                     while (defaultMatrix < effects_[icon].iconOffsets_.length) {
                         if (effects_[icon].icon16Bit_) {
-                            ce = new BitmapDataSpy(18, 18, true, 0);
+                            ce = new BitmapData(18, 18, true, 0);
                             if(effects_[icon].imageSet_ != null)
                                 ce.draw(AssetLibrary.getImageFromSet(effects_[icon].imageSet_, effects_[icon].iconOffsets_[i]), i);
                             else
                                 ce.draw(AssetLibrary.getImageFromSet("lofiInterfaceBig", effects_[icon].iconOffsets_[i]), i);
                         }
                         else {
-                            ce = new BitmapDataSpy(16, 16, true, 0);
+                            ce = new BitmapData(16, 16, true, 0);
                             ce.draw(AssetLibrary.getImageFromSet("lofiInterface2", effects_[icon].iconOffsets_[defaultMatrix]), drawMatrix);
                         }
                         ce = GlowRedrawer.outlineGlow(ce, 0xFFFFFFFF);
@@ -452,14 +452,14 @@ public class ConditionEffect {
                     defaultMatrix = 0;
                     while (defaultMatrix < effects_[icon].iconOffsets_.length) {
                         if (effects_[icon].icon16Bit_) {
-                            ce = new BitmapDataSpy(18, 18, true, 0);
+                            ce = new BitmapData(18, 18, true, 0);
                             if(effects_[icon].imageSet_ != null)
                                 ce.draw(AssetLibrary.getImageFromSet(effects_[icon].imageSet_, effects_[icon].iconOffsets_[defaultMatrix]), i);
                             else
                                 ce.draw(AssetLibrary.getImageFromSet("lofiInterfaceBig", effects_[icon].iconOffsets_[defaultMatrix]), i);
                         }
                         else {
-                            ce = new BitmapDataSpy(16, 16, true, 0);
+                            ce = new BitmapData(16, 16, true, 0);
                             ce.draw(AssetLibrary.getImageFromSet("lofiInterface2", effects_[icon].iconOffsets_[defaultMatrix]), icons);
                         }
                         ce = GlowRedrawer.outlineGlow(ce, 0xFFFFFFFF);

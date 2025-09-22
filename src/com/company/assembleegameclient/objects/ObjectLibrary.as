@@ -196,7 +196,7 @@ public class ObjectLibrary {
         if (itemData == null)
             return -1;
 
-        return itemData.BaseItem.SlotType;
+        return itemData.SlotType;
     }
 
     public static function isEquippableByPlayer(objectType:int, player:Player):Boolean {
@@ -217,7 +217,7 @@ public class ObjectLibrary {
         if (itemData == null)
             return -1;
 
-        var slotType:int = itemData.BaseItem.SlotType;
+        var slotType:int = itemData.SlotType;
         for (var i:int = 0; i < GeneralConstants.NUM_EQUIPMENT_SLOTS; i++) {
             if (player.slotTypes_[i] == slotType) {
                 return i;
@@ -251,7 +251,7 @@ public class ObjectLibrary {
         if (itemData == null)
             return false;
 
-        return itemData.BaseItem.Soulbound;
+        return itemData.Soulbound;
     }
 
     public static function usableBy(objectType:int):Vector.<String> {

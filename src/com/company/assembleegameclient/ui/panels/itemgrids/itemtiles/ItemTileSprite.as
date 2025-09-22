@@ -45,17 +45,17 @@ public class ItemTileSprite extends Sprite {
             return;
         }
 
-        var texture:BitmapData = ObjectLibrary.getRedrawnTextureFromType(itemData.BaseItem.ObjectType, 80, true);
+        var texture:BitmapData = ObjectLibrary.getRedrawnTextureFromType(itemData.ObjectType, 80, true);
 
-        if (itemData.BaseItem.Doses > 0) {
+        if (itemData.Doses > 0) {
             texture = texture.clone();
             var tempText:SimpleText = new SimpleText(12, 16777215, false, 0, 0);
-            tempText.text = String(itemData.BaseItem.Doses);
+            tempText.text = String(itemData.Doses);
             tempText.updateMetrics();
             texture.draw(tempText, DOSE_MATRIX);
         }
 
-        if (tierText.visible = TierHelper.setTierText(tierText, itemData.BaseItem.TierType)) {
+        if (tierText.visible = TierHelper.setTierText(tierText, itemData.TierType)) {
             tierText.x = 12;
             tierText.y = 12;
         }

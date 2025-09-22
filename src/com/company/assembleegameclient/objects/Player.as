@@ -912,7 +912,7 @@ public class Player extends Character {
         var rpCost:int = 0;
         var cooldown:int = 0;
         var angle:Number = Parameters.data_.cameraAngle + Math.atan2(y, x);
-        var itemType:Item = equipment_[slotId].BaseItem;
+        var itemType:NewItemData = equipment_[slotId];
         if (!itemType && itemType.ObjectType == ItemConstants.NO_ITEM) {
             return false;
         }
@@ -988,23 +988,23 @@ public class Player extends Character {
             return;
 
         var itemData:NewItemData = equipment_[0];
-        if (itemData == null || itemData.BaseItem.ObjectType == ItemConstants.NO_ITEM) {
+        if (itemData == null || itemData.ObjectType == ItemConstants.NO_ITEM) {
             return;
         }
 
-        var weapon:Item = itemData.BaseItem;
+        //var weapon:Item = itemData.BaseItem;
         var time:int = map_.gs_.lastUpdate_;
-        var rateOfFire:Number = weapon.RateOfFire;
+        var rateOfFire:Number = itemData.RateOfFire;
         this.attackPeriod_ = 1 / this.attackFrequency() * (1 / rateOfFire);
         if (time < attackStart_ + this.attackPeriod_) {
             return;
         }
         attackAngle_ = attackAngle;
         attackStart_ = time;
-        this.doShoot(attackStart_, weapon, attackAngle_, false);
+        this.doShoot(attackStart_, itemData, attackAngle_, false);
     }
 
-    private function doShoot(time:int, weaponType:Item, attackAngle:Number, isAbility:Boolean):void {
+    private function doShoot(time:int, weaponType:NewItemData, attackAngle:Number, isAbility:Boolean):void {
         var proj:Projectile = null;
         var minDamage:int = 0;
         var maxDamage:int = 0;

@@ -3,6 +3,8 @@ import flash.utils.IDataInput;
 
 public class Guid {
 
+    public static const Empty:String = "00000000-0000-0000-0000-000000000000";
+
     private static var tempData:Vector.<int> = new Vector.<int>(16, true);
 
     public static function guidDataToString(data:IDataInput): String {

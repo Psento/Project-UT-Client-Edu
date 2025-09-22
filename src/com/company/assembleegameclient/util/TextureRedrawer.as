@@ -27,8 +27,8 @@ public class TextureRedrawer {
     public static var sharedTexture_:BitmapData = null;
     private static var textureShaderEmbed_:Class = TextureRedrawer_textureShaderEmbed_;
     private static var textureShaderData_:ByteArray = new textureShaderEmbed_() as ByteArray;
-    private static var colorTexture1:BitmapData = new BitmapDataSpy(1, 1, false);
-    private static var colorTexture2:BitmapData = new BitmapDataSpy(1, 1, false);
+    private static var colorTexture1:BitmapData = new BitmapData(1, 1, false);
+    private static var colorTexture2:BitmapData = new BitmapData(1, 1, false);
 
 
     public static function redraw(tex:BitmapData, size:int, padBottom:Boolean, glowColor:uint, useCache:Boolean = true, sMult:Number = 5):BitmapData {
@@ -78,7 +78,7 @@ public class TextureRedrawer {
         var m:Matrix = new Matrix();
         m.scale(w / tex.width, h / tex.height);
         m.translate(magic, magic);
-        var ret:BitmapData = new BitmapDataSpy(w + minSize, h + (padBottom ? magic : 1) + magic, true, 0);
+        var ret:BitmapData = new BitmapData(w + minSize, h + (padBottom ? magic : 1) + magic, true, 0);
         ret.draw(tex, m);
         return ret;
     }
@@ -93,7 +93,7 @@ public class TextureRedrawer {
         if (tex != null) {
             return tex;
         }
-        tex = new BitmapDataSpy(size + 4 + 4, size + 4 + 4, true, 0);
+        tex = new BitmapData(size + 4 + 4, size + 4 + 4, true, 0);
         tex.fillRect(new Rectangle(4, 4, size, size), 0xFF000000 | color);
         tex.applyFilter(tex, tex.rect, PointUtil.ORIGIN, OUTLINE_FILTER);
         colorDict[color] = tex;
@@ -175,7 +175,7 @@ public class TextureRedrawer {
     private static function retexture(tex:BitmapData, mask:BitmapData, op1:int, op2:int):BitmapData {
         var m:Matrix = new Matrix();
         m.scale(5, 5);
-        var ret:BitmapData = new BitmapDataSpy(tex.width * 5, tex.height * 5, true, 0);
+        var ret:BitmapData = new BitmapData(tex.width * 5, tex.height * 5, true, 0);
         ret.draw(tex, m);
         var c1:BitmapData = getTexture(op1, colorTexture1);
         var c2:BitmapData = getTexture(op2, colorTexture2);

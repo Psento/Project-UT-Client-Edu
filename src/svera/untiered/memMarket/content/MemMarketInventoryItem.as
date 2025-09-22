@@ -15,7 +15,7 @@ public class MemMarketInventoryItem extends MemMarketItem
 
     public function MemMarketInventoryItem(gameSprite:GameSprite, item:NewItemData, slot:int)
     {
-        super(gameSprite, SLOT_WIDTH, SLOT_HEIGHT, 80, item.BaseItem.ObjectType, null, item);
+        super(gameSprite, SLOT_WIDTH, SLOT_HEIGHT, 80, item.ObjectType, null, item);
 
         this.slot_ = slot;
 

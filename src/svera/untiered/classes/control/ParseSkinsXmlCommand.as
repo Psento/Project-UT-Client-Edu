@@ -1,4 +1,6 @@
 package svera.untiered.classes.control {
+import com.company.assembleegameclient.parameters.Parameters;
+
 import svera.untiered.assets.EmbeddedData;
 import svera.untiered.assets.model.CharacterTemplate;
 import svera.untiered.classes.model.CharacterClass;
@@ -33,6 +35,7 @@ public class ParseSkinsXmlCommand {
         var skin:CharacterSkin = new CharacterSkin();
         skin.id = xml.@type;
         skin.name = xml.@id;
+        skin.cost = xml.hasOwnProperty("Price") ? xml.Price : Parameters.CHARACTER_SKIN_PRICE;
         skin.template = new CharacterTemplate(file, index);
         var character:CharacterClass = this.model.getCharacterClass(xml.PlayerClassType);
         character.skins.addSkin(skin);

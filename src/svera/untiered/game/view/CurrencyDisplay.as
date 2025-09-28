@@ -78,14 +78,15 @@ public class CurrencyDisplay extends Sprite {
         this.medallionsText_.text = this.medallions_.toString();
         this.medallionsText_.updateMetrics();
         this.medallionsText_.x = this.medallionsIcon_.x - this.medallionsText_.width + 8;
-        this.medallionsText_.y = this.medallionsIcon_.height / 2 - this.medallionsText_.height / 2;
+        this.medallionsText_.y = tsavoriteText_.y;
         if (compact) {
             this.honor_ = honor;
             this.honorText_.text = this.honor_.toString();
             this.honorText_.updateMetrics();
-            this.honorIcon_.x = this.tsavoriteText_.x - honorIcon_.width;
             this.honorText_.x = this.tsavoriteText_.x;
-            this.honorText_.y = this.honorIcon_.height / 2 - this.honorText_.height / 2 + this.honorIcon_.height;
+            this.honorText_.y =  -this.honorText_.height / 2 + this.honorIcon_.height;
+            this.honorIcon_.x = this.honorText_.x + honorIcon_.width;
+            this.honorIcon_.y = honorIcon_.height/ 2;
         } else {
             this.honor_ = honor;
             this.honorText_.text = this.honor_.toString();

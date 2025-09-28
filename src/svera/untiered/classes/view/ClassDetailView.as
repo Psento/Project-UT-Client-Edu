@@ -173,7 +173,7 @@ public class ClassDetailView extends Sprite {
         this.classNameText.y = 110;
 
         skinListView.x = 23 + (WIDTH) / 2; // 23 is really just a magic number atm, because idk how to fix slight missposition caused by skins texture i use to test this
-        skinListView.y = classNameText.y - classNameText.height - skinListView.height / 2; // ???
+        skinListView.y = classNameText.y - classNameText.height - skinListView.skinsContainer.height / 2; // ???
 
         this.classDescriptionText.y = this.classNameText.y + this.classNameText.textHeight + 5;
         this.classDescriptionText.x = WIDTH / 2 - this.classDescriptionText.width / 2;

@@ -27,7 +27,7 @@ public class CharacterSkinListView extends Sprite {
     public var skinsContainer:Orbiter;
     public var buyButton:BuyButton;
     public var currentSkin:CharacterSkinListItem;
-    private var purchasingText:SimpleText = new SimpleText(14, 16777215, false, 0, 0);;
+    private var purchasingText:SimpleText = new SimpleText(14, 16777215, false, 0, 0);
     public var playButton:TitleMenuOption;
     private var selectedSkin:int = 0;
     public var rightSkin:TitleMenuOption = new TitleMenuOption(">", 24, true, true);
@@ -37,6 +37,7 @@ public class CharacterSkinListView extends Sprite {
     // Degrees per second.
     public var speed:Number = 60;
     private var angle:Number = 0;
+    private var tween:GTween;
 
 
     private var _accAngle:Number = -(Math.PI * 3) / 2;
@@ -45,6 +46,7 @@ public class CharacterSkinListView extends Sprite {
     public function get testAngle():Number {
         return rotationDirection;
     }
+
     public function set testAngle(a:Number):void {
         rotationDirection = a;
     }
@@ -52,6 +54,7 @@ public class CharacterSkinListView extends Sprite {
     public function get accAngle():Number {
         return _accAngle;
     }
+
     public function set accAngle(a:Number):void {
         _accAngle = a;
     }
@@ -59,6 +62,7 @@ public class CharacterSkinListView extends Sprite {
     public function CharacterSkinListView(playButton_:TitleMenuOption) {
         super();
         playButton = playButton_;
+        setBuyButton();
         makeList();
 
         rightSkin.clicked.add(right);
@@ -68,41 +72,51 @@ public class CharacterSkinListView extends Sprite {
         });
 
     }
+
     private function left():void {
         if (++selectedSkin >= skinsContainer.items.length) {
             selectedSkin = 0;
         }
+        currentSkin && currentSkin.selected.dispatch(false);
+
         currentSkin = skinsContainer.items[selectedSkin];
-        //trace(currentSkin.model.name);
-        //currentSkin.selected.dispatch(true); // TODO: Fix this cause insane shit with position
+        trace(currentSkin.model.name);
+        currentSkin.selected.dispatch(true); // TODO: Fix this cause insane shit with position
         setButtonVisibilities();
 
-        var test:GTween = new GTween(this, 0.5, {"testAngle": -1}, {"ease": Sine.easeIn});
-        test.init();
-        test.onChange = setPositions;
-        test.onComplete = resetAngle;
+        tween = new GTween(this, 0.15, {testAngle: -1}, {ease: Sine.easeIn});
+        tween.init();
+        //tween.setValues({"testAngle": -1});
+        tween.onChange = setPositions;
+        tween.onComplete = resetAngle;
+
     }
+
     private function right():void {
-        if (--selectedSkin <= 0) {
+        if (--selectedSkin < 0) {
             selectedSkin = skinsContainer.items.length - 1;
         }
+        currentSkin && currentSkin.selected.dispatch(false);
+
         currentSkin = skinsContainer.items[selectedSkin];
-        //trace(currentSkin.model.name);
-        //currentSkin.selected.dispatch(true); // TODO: Fix this cause insane shit with position
+        trace(currentSkin.model.name);
+        currentSkin.selected.dispatch(true); // TODO: Fix this cause insane shit with position
         setButtonVisibilities();
 
         //var targetVal:Number = _accAngle +
-        var test:GTween = new GTween(this, 0.5, {"testAngle": 1}, {"ease": Sine.easeIn});
-        test.init();
-        test.onChange = setPositions;
-        test.onComplete = resetAngle;
-    }
-    private function resetAngle(change:GTween = null):void{
-        _accAngle += angle * testAngle;
-        testAngle = 0;
+        tween = new GTween(this, 0.15, {testAngle: 1}, {ease: Sine.easeIn});
+        tween.init();
+        tween.onChange = setPositions;
+        tween.onComplete = resetAngle;
     }
 
-    private function setPositions(change:GTween = null):void{
+    private function resetAngle(change:GTween = null):void {
+        _accAngle += angle * testAngle;
+        testAngle = 0;
+        tween = null;
+    }
+
+    private function setPositions(change:GTween = null):void {
         var radius:Number = 100;
         var localAcc:Number = _accAngle + angle * testAngle;
         for each(var item:CharacterSkinListItem in skinsContainer.items) {
@@ -120,6 +134,7 @@ public class CharacterSkinListView extends Sprite {
             localAcc += angle;
         }
     }
+
     private function makeList():Sprite {
         skinsContainer = new Orbiter();
         return skinsContainer;
@@ -138,7 +153,6 @@ public class CharacterSkinListView extends Sprite {
         var radius:Number = 100;
         _accAngle = -(Math.PI * 3) / 2;
         for each(var item:CharacterSkinListItem in items_) {
-            item.model.changed.add(setBuyButton);
             var container:Sprite = new Sprite(); // Used only to make thing centered
 
             var x:Number = Math.cos(_accAngle) * radius;
@@ -169,44 +183,41 @@ public class CharacterSkinListView extends Sprite {
         } else {
             playButton && playButton.deactivate();
         }
-        if(isPurchasable){
-            setCost(currentSkin);
+        if (isPurchasable) {
+            setCost(currentSkin.model);
         }
-        buyButton && (buyButton.visible = isPurchasable);
+        buyButton && (buyButton.visible = isPurchasable && !isOwned);
+
         this.purchasingText.visible = isPurchasing;
     }
 
-    public function setBuyButton(skin:CharacterSkin):void {
-        var button:LegacyBuyButton = new LegacyBuyButton("", 16, skin.cost, Currency.TSAVORITE);
-        button.setWidth(40);
-        this.buyButton = button;
-
+    public function setBuyButton():void {
+        buyButton = new LegacyBuyButton("", 16, 0, Currency.TSAVORITE);
+        buyButton.setWidth(40);
         this.buyButton.x = (width - this.buyButton.width) / 2;
         this.buyButton.y = 300;
-        this.buyButton.visible = skin.getState() == CharacterSkinState.PURCHASABLE;
+        this.buyButton.visible = false;
         buyButton.addEventListener(MouseEvent.CLICK, onBuy)
-        addChild(buyButton);
+            addChild(buyButton);
     }
 
     private function onBuy(e:Event):void {
         buyCharacterSkin.dispatch(currentSkin.model);
     }
+
     private function updatePurchasingText():void {
         this.purchasingText.text = "Purchasing...";
         this.purchasingText.updateMetrics();
         this.purchasingText.x = width - this.purchasingText.width - 15;
         this.purchasingText.y = height / 2 - this.purchasingText.height / 2;
     }
-    private function setCost(skin:CharacterSkinListItem):void {
-        if (!skin.model)
+
+    private function setCost(skin:CharacterSkin):void {
+        if (!skin)
             return;
 
-        if (!buyButton)
-            setBuyButton(skin.model);
-
-        var cost:int = Boolean(skin.model) ? skin.model.cost : 0;
-        this.buyButton.setPrice(cost, Currency.TSAVORITE);
-        this.buyButton.setWidth(40);
+        var cost:int = Boolean(skin) ? skin.cost : 0;
+        buyButton.setPrice(cost, Currency.TSAVORITE);
     }
 }
 }

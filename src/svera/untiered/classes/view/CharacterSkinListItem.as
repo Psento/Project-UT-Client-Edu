@@ -20,8 +20,6 @@ public class CharacterSkinListItem extends Sprite {
     private const grayscaleMatrix:ColorMatrixFilter = new ColorMatrixFilter(MoreColorUtil.greyscaleFilterMatrix);
     private var nameText:SimpleText;
     private var lock:Bitmap;
-    public const over:Signal = new Signal();
-    public const out:Signal = new Signal();
     public var selected:Signal = new Signal();
     public var model:CharacterSkin;
     public var state:CharacterSkinState;
@@ -58,7 +56,7 @@ public class CharacterSkinListItem extends Sprite {
 
     public function setLockIcon(data:BitmapData):void {
         this.lock.bitmapData = data;
-        this.lock.x = - this.lock.width - 5;
+        this.lock.x = -this.lock.width - 5;
     }
 
     public function setSkin(icon:Animation):void {
@@ -76,7 +74,7 @@ public class CharacterSkinListItem extends Sprite {
         this.model && this.model.changed.add(this.onModelChanged);
 
         this.onModelChanged(this.model);
-
+        onOut(null);
         addEventListener(MouseEvent.MOUSE_OVER, this.onOver);
         addEventListener(MouseEvent.MOUSE_OUT, this.onOut);
     }
@@ -91,11 +89,16 @@ public class CharacterSkinListItem extends Sprite {
         return this.state;
     }
 
+    private var firstW:Number = 0;
+
     private function updateName():void {
         nameText.text = Boolean(this.model) ? this.model.name : "";
         nameText.updateMetrics();
-        nameText.x = (width - nameText.width) / 2;
-        nameText.y = /*height - nameText.height*/0;
+        if (firstW == 0) {
+            firstW = width;
+        }
+        nameText.x = (firstW - nameText.width) / 2;
+        nameText.y = nameText.height;
     }
 
     private function updateState():void {
@@ -105,7 +108,6 @@ public class CharacterSkinListItem extends Sprite {
     private function onOver(e:MouseEvent):void {
         this.isOver = true;
 
-        this.over.dispatch();
         if (this.state.isDisabled()) {
             transform.colorTransform = new ColorTransform(0.5, 0.5, 0.5);
             return;
@@ -115,7 +117,6 @@ public class CharacterSkinListItem extends Sprite {
 
     private function onOut(e:MouseEvent):void {
         this.isOver = false;
-        this.out.dispatch();
         if (this.state.isDisabled()) {
             transform.colorTransform = new ColorTransform(0.5, 0.5, 0.5);
             return;

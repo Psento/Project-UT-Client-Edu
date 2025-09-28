@@ -83,7 +83,7 @@ public class CharacterSkinView extends Sprite {
     }
 
     private function makeClassDetailView():ClassDetailView {
-        classDetailView = new ClassDetailView();
+        classDetailView = new ClassDetailView(playBtn);
 
         addChild(classDetailView);
 

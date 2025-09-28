@@ -18,6 +18,7 @@
         </AnimatedTexture>
         <PlayerClassType>0x0300</PlayerClassType>
         <UnlockLevel>0</UnlockLevel>
+        <Price>123</Price>
     </Object>
     <Object type="0x0a343" id="Bandit2">
         <Skin/>
@@ -28,6 +29,7 @@
         </AnimatedTexture>
         <PlayerClassType>0x0300</PlayerClassType>
         <UnlockLevel>0</UnlockLevel>
+        <Price>456</Price>
     </Object>
     <Object type="0x0a344" id="Bandit3">
         <Skin/>
@@ -38,6 +40,7 @@
         </AnimatedTexture>
         <PlayerClassType>0x0300</PlayerClassType>
         <UnlockLevel>0</UnlockLevel>
+        <Price>999999</Price>
     </Object>
     <Object type="0x0343" id="Robin Hood">
         <Skin/>

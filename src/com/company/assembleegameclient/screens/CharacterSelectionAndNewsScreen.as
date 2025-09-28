@@ -176,7 +176,7 @@ public class CharacterSelectionAndNewsScreen extends Sprite {
 
     private function createCurrencyDisplay():void {
         this.currencyDisplay = new CurrencyDisplay();
-        this.currencyDisplay.draw(this.model.getTsavorite(), this.model.getMedallions(), this.model.getHonor(), true);
+        this.currencyDisplay.draw(this.model.getTsavorite(), this.model.getMedallions(), this.model.getHonor(), false);
         this.currencyDisplay.x = GameClient.StageWidth;
         this.currencyDisplay.y = 20;
         addChild(this.currencyDisplay);

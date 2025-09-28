@@ -50,6 +50,7 @@ public class TitleMenuOption extends Sprite {
     }
 
     public function activate():void {
+        setColorTransform(null);
         addEventListener(MouseEvent.MOUSE_OVER, this.onMouseOver);
         addEventListener(MouseEvent.MOUSE_OUT, this.onMouseOut);
         addEventListener(MouseEvent.CLICK, this.onMouseClick);

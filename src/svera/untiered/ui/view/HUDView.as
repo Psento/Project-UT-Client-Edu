@@ -1,5 +1,6 @@
 package svera.untiered.ui.view {
 import com.company.assembleegameclient.game.GameSprite;
+import com.company.assembleegameclient.objects.GameObject;
 import com.company.assembleegameclient.objects.Player;
 import com.company.assembleegameclient.ui.TradePanel;
 import com.company.assembleegameclient.ui.panels.InteractPanel;
@@ -228,6 +229,9 @@ public class HUDView extends Sprite {
         this.lootBoxButton.x = this.raidLauncherButton.x + 32;
         this.lootBoxButton.y = this.raidLauncherButton.y;
         addChild(this.lootBoxButton);
+    }
+    public function setMiniMapFocus(object:GameObject) : void {
+        this.miniMap.setFocus(object);
     }
 }
 }

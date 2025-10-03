@@ -34,6 +34,13 @@ public class MessageCenter implements MessageMap, MessageProvider {
         this.pools[id] = null;
         this.maps[id] = null;
     }
+    public function unmapAll():void{
+        for(var i:int = 0; i < pools.length; i++){
+            pools[i] && pools[i].dispose();
+            pools[i] = null;
+            maps[i] = null;
+        }
+    }
 
     private function makeMapping(id:int):MessageCenterMapping {
         return new MessageCenterMapping().setInjector(this.injector).setID(id) as MessageCenterMapping;

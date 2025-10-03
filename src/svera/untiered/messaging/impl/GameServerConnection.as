@@ -47,6 +47,7 @@ import com.company.util.Trig;
 import flash.display.BitmapData;
 import flash.events.Event;
 import flash.geom.Point;
+import flash.utils.Dictionary;
 import flash.utils.getTimer;
 
 import org.osflash.signals.Signal;
@@ -56,6 +57,8 @@ import robotlegs.bender.framework.api.ILogger;
 
 import svera.lib.net.api.MessageMap;
 import svera.lib.net.api.MessageProvider;
+import svera.lib.net.impl.Message;
+import svera.lib.net.impl.MessageCenter;
 import svera.lib.net.impl.SocketServer;
 import svera.lib.util.GIF;
 import svera.untiered.account.core.Account;
@@ -103,6 +106,7 @@ import svera.untiered.messaging.impl.incoming.PlaySound;
 import svera.untiered.messaging.impl.incoming.QuestObjId;
 import svera.untiered.messaging.impl.incoming.Reconnect;
 import svera.untiered.messaging.impl.incoming.ServerPlayerShoot;
+import svera.untiered.messaging.impl.incoming.SetFocus;
 import svera.untiered.messaging.impl.incoming.ShowEffect;
 import svera.untiered.messaging.impl.incoming.StorageSlotUpdate;
 import svera.untiered.messaging.impl.incoming.StorageUpdate;
@@ -258,6 +262,7 @@ public class GameServerConnection {
     public static const MARKET_MY_OFFERS:int = 102;
     public static const MARKET_MY_OFFERS_RESULT:int = 103;
     public static const MARKET_ALL:int = 104;
+    public static const SET_FOCUS:int = 105;
 
     public static var instance:GameServerConnection;
 
@@ -420,71 +425,12 @@ public class GameServerConnection {
         messages.map(MARKET_MY_OFFERS).toMessage(MarketMyOffers);
         messages.map(MARKET_MY_OFFERS_RESULT).toMessage(MarketMyOffersResult).toMethod(this.onMarketMyOffersResult);
         messages.map(LAUNCH_RAID).toMessage(LaunchRaid);
+        messages.map(SET_FOCUS).toMessage(SetFocus).toMethod(setFocus);
     }
 
     private function unmapMessages():void {
         var messages:MessageMap = this.injector.getInstance(MessageMap);
-        messages.unmap(CREATE);
-        messages.unmap(PLAYERSHOOT);
-        messages.unmap(MOVE);
-        messages.unmap(PLAYERTEXT);
-        messages.unmap(INVSWAP);
-        messages.unmap(USEITEM);
-        messages.unmap(HELLO);
-        messages.unmap(INVDROP);
-        messages.unmap(LOAD);
-        messages.unmap(TELEPORT);
-        messages.unmap(USEPORTAL);
-        messages.unmap(BUY);
-        messages.unmap(PLAYERHIT);
-        messages.unmap(ENEMYHIT);
-        messages.unmap(AOEACK);
-        messages.unmap(SHOOTACK);
-        messages.unmap(SQUAREHIT);
-        messages.unmap(CREATEGUILD);
-        messages.unmap(GUILDREMOVE);
-        messages.unmap(GUILDINVITE);
-        messages.unmap(ESCAPE);
-        messages.unmap(JOINGUILD);
-        messages.unmap(CHANGEGUILDRANK);
-        messages.unmap(EDITACCOUNTLIST);
-        messages.unmap(TRADEREQUEST);
-        messages.unmap(CHANGETRADE);
-        messages.unmap(CANCELTRADE);
-        messages.unmap(ACCEPTTRADE);
-        messages.unmap(FAILURE);
-        messages.unmap(CREATE_SUCCESS);
-        messages.unmap(TEXT);
-        messages.unmap(SERVERPLAYERSHOOT);
-        messages.unmap(DAMAGE);
-        messages.unmap(UPDATE);
-        messages.unmap(NOTIFICATION);
-        messages.unmap(NEWTICK);
-        messages.unmap(SHOWEFFECT);
-        messages.unmap(GOTO);
-        messages.unmap(INVRESULT);
-        messages.unmap(RECONNECT);
-        messages.unmap(MAPINFO);
-        messages.unmap(DEATH);
-        messages.unmap(BUYRESULT);
-        messages.unmap(AOE);
-        messages.unmap(ACCOUNTLIST);
-        messages.unmap(QUESTOBJID);
-        messages.unmap(GUILDRESULT);
-        messages.unmap(ALLYSHOOT);
-        messages.unmap(ENEMYSHOOT);
-        messages.unmap(INVITEDTOGUILD);
-        messages.unmap(PLAYSOUND);
-        messages.unmap(TRADEREQUESTED);
-        messages.unmap(TRADESTART);
-        messages.unmap(TRADECHANGED);
-        messages.unmap(TRADEDONE);
-        messages.unmap(TRADEACCEPTED);
-        messages.unmap(SWITCHMUSIC);
-        messages.unmap(VAULTUPDATE);
-        messages.unmap(VAULTSLOTUPDATE);
-        messages.unmap(VAULTREQUEST);
-        messages.unmap(VAULTUPGRADE);
+        (messages as MessageCenter).unmapAll();
     }
 
     public function getNextDamage(minDamage:uint, maxDamage:uint):uint {
@@ -1507,7 +1453,14 @@ public class GameServerConnection {
         message.player = player;
         message.consume();
     }
-
+    private function setFocus(pkt:SetFocus):void {
+        var goDict:Dictionary = this.gs_.map.goDict_;
+        if (goDict) {
+            var go:GameObject = goDict[pkt.objectId_];
+            gs_.setFocus(go);
+            gs_.hudView.setMiniMapFocus(go);
+        }
+    }
     private function processObjectStatus(objectStatus:ObjectStatusData):void {
         var pLevel:int = -1;
         var pExp:int = -1;

@@ -21,7 +21,7 @@ public class TitleMenuOption extends Sprite {
     private var textField:SimpleText;
     private var isPulse:Boolean;
     private var isBold:Boolean;
-    private var active:Boolean;
+    public var active:Boolean;
     private var originalWidth:Number;
     private var originalHeight:Number;
 

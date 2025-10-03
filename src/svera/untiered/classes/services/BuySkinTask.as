@@ -56,6 +56,7 @@ public class BuySkinTask extends BaseTask {
     private function completePurchase():void {
         this.skin.setState(CharacterSkinState.OWNED);
         this.skin.setIsSelected(true);
+        skin.bought.dispatch(skin);
     }
 
     private function abandonPurchase(problem:String):void {

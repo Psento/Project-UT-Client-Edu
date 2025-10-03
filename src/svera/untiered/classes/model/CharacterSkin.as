@@ -7,6 +7,7 @@ import svera.untiered.assets.model.CharacterTemplate;
 
 public class CharacterSkin {
     public const changed:Signal = new Signal(CharacterSkin);
+    public var bought:Signal = new Signal(CharacterSkin);
 
     public var id:int = 0;
     public var name:String = "";

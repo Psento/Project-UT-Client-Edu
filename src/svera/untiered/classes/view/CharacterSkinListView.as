@@ -13,6 +13,7 @@ import flash.utils.getTimer;
 import svera.untiered.classes.control.BuyCharacterSkinSignal;
 import svera.untiered.classes.model.CharacterSkin;
 import svera.untiered.classes.model.CharacterSkinState;
+import svera.untiered.core.StaticInjectorContext;
 import svera.untiered.util.components.LegacyBuyButton;
 import svera.untiered.util.components.api.BuyButton;
 
@@ -62,6 +63,7 @@ public class CharacterSkinListView extends Sprite {
     public function CharacterSkinListView(playButton_:TitleMenuOption) {
         super();
         playButton = playButton_;
+        buyCharacterSkin = StaticInjectorContext.getInjector().getInstance(BuyCharacterSkinSignal);
         setBuyButton();
         makeList();
 
@@ -83,6 +85,9 @@ public class CharacterSkinListView extends Sprite {
         trace(currentSkin.model.name);
         currentSkin.selected.dispatch(true); // TODO: Fix this cause insane shit with position
         setButtonVisibilities();
+        if(currentSkin.model.getState() == CharacterSkinState.PURCHASABLE){
+            currentSkin.model.bought.addOnce(setButtonVisibilities);
+        }
 
         tween = new GTween(this, 0.15, {testAngle: -1}, {ease: Sine.easeIn});
         tween.init();
@@ -102,7 +107,9 @@ public class CharacterSkinListView extends Sprite {
         trace(currentSkin.model.name);
         currentSkin.selected.dispatch(true); // TODO: Fix this cause insane shit with position
         setButtonVisibilities();
-
+        if(currentSkin.model.getState() == CharacterSkinState.PURCHASABLE){
+            currentSkin.model.bought.addOnce(setButtonVisibilities);
+        }
         //var targetVal:Number = _accAngle +
         tween = new GTween(this, 0.15, {testAngle: 1}, {ease: Sine.easeIn});
         tween.init();
@@ -153,6 +160,8 @@ public class CharacterSkinListView extends Sprite {
         var radius:Number = 100;
         _accAngle = -(Math.PI * 3) / 2;
         for each(var item:CharacterSkinListItem in items_) {
+
+
             var container:Sprite = new Sprite(); // Used only to make thing centered
 
             var x:Number = Math.cos(_accAngle) * radius;
@@ -174,11 +183,14 @@ public class CharacterSkinListView extends Sprite {
         CharacterSkinView.positionStuff.dispatch();
     }
 
-    private function setButtonVisibilities():void {
+    private function setButtonVisibilities(skin:CharacterSkin = null):void {
         var isOwned:Boolean = currentSkin.state == CharacterSkinState.OWNED;
         var isPurchasable:Boolean = currentSkin.state == CharacterSkinState.PURCHASABLE;
         var isPurchasing:Boolean = currentSkin.state == CharacterSkinState.PURCHASING;
         if (isOwned) {
+            if(currentSkin.model == skin){
+                currentSkin.setModel(skin);
+            }
             playButton && playButton.activate();
         } else {
             playButton && playButton.deactivate();

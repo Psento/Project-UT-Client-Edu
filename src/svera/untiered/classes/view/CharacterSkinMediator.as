@@ -40,7 +40,8 @@ public class CharacterSkinMediator extends Mediator {
     }
 
     private function onPlay():void {
-        this.setScreen.dispatch(new TraitsGUI());
+        if (view.playBtn.active)
+            setScreen.dispatch(new TraitsGUI());
     }
 }
 }

@@ -13,8 +13,8 @@ import svera.untiered.game.view.CurrencyDisplay;
 import svera.untiered.ui.view.components.ScreenBase;
 
 public class CharacterSkinView extends Sprite {
-    private var playBtn:TitleMenuOption;
-    public var play:Signal;
+    public var playBtn:TitleMenuOption;
+    public var play:NativeMappedSignal;
     public var back:Signal;
     public static var positionStuff:Signal;
     private var classDetailView:ClassDetailView;

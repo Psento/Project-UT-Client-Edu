@@ -62,6 +62,7 @@ import svera.lib.net.impl.MessageCenter;
 import svera.lib.net.impl.SocketServer;
 import svera.lib.util.GIF;
 import svera.untiered.account.core.Account;
+import svera.untiered.characters.reskin.control.ReskinHandler;
 import svera.untiered.classes.model.CharacterClass;
 import svera.untiered.classes.model.ClassesModel;
 import svera.untiered.core.StaticInjectorContext;
@@ -425,6 +426,8 @@ public class GameServerConnection {
         messages.map(MARKET_MY_OFFERS).toMessage(MarketMyOffers);
         messages.map(MARKET_MY_OFFERS_RESULT).toMessage(MarketMyOffersResult).toMethod(this.onMarketMyOffersResult);
         messages.map(LAUNCH_RAID).toMessage(LaunchRaid);
+        messages.map(RESKIN).toMessage(Reskin).toHandler(ReskinHandler);
+
         messages.map(SET_FOCUS).toMessage(SetFocus).toMethod(setFocus);
     }
 

@@ -46,7 +46,6 @@ public class ReskinConfig implements IConfig {
         this.mediatorMap.map(ReskinPanel).toMediator(ReskinPanelMediator);
         this.commandMap.map(OpenReskinDialogSignal).toCommand(OpenReskinDialogCommand);
         this.commandMap.map(ReskinCharacterSignal).toCommand(ReskinCharacterCommand);
-        this.messageMap.map(GameServerConnection.RESKIN).toMessage(Reskin).toHandler(ReskinHandler);
     }
 }
 }

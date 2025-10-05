@@ -36,8 +36,10 @@ public class MessageCenter implements MessageMap, MessageProvider {
     }
     public function unmapAll():void{
         for(var i:int = 0; i < pools.length; i++){
-            pools[i] && pools[i].dispose();
-            pools[i] = null;
+            if(pools[i]) {
+                pools[i].dispose();
+                pools[i] = null;
+            }
             maps[i] = null;
         }
     }
@@ -47,6 +49,9 @@ public class MessageCenter implements MessageMap, MessageProvider {
     }
 
     public function require(id:int):Message {
+        if(pools == null){
+            //pools = new Vector.<MessagePool>(MAX_ID, true);
+        }
         var pool:MessagePool = this.pools[id] = this.pools[id] || this.makePool(id);
         return pool.require();
     }

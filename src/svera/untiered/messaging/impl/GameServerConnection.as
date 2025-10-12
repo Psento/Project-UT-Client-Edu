@@ -1119,6 +1119,9 @@ public class GameServerConnection {
                 case StatData.SIZE:
                     go.size_ = value;
                     continue;
+                case StatData.GLOW:
+                    go.glowColor = value;
+                    continue;
                 case StatData.MAXHP:
                     go.maxHP_ = value;
                     continue;

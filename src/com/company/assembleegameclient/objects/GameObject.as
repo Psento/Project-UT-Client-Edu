@@ -116,6 +116,7 @@ public class GameObject extends BasicObject {
     private var hpbarBackPath_:GraphicsPath = null;
     private var hpbarFill_:GraphicsSolidFill = null;
     private var hpbarPath_:GraphicsPath = null;
+    public var glowColor:uint = 0;
 
     public function GameObject(objectXML:XML) {
         var i:int = 0;
@@ -991,7 +992,7 @@ public class GameObject extends BasicObject {
             }
             if (newTexture == null) {
                 newTexture = TextureRedrawer.resize(texture, mask, size, false, this.tex1Id_, this.tex2Id_);
-                newTexture = GlowRedrawer.outlineGlow(newTexture, 0);
+                newTexture = GlowRedrawer.outlineGlow(newTexture, glowColor);
                 this.texturingCache_[texture] = newTexture;
             }
             texture = newTexture;
@@ -1011,7 +1012,7 @@ public class GameObject extends BasicObject {
             portraitTexture = this.props_.portrait_ != null ? this.props_.portrait_.getTexture() : this.texture_;
             size = portraitTexture.width * 3;
             this.portrait_ = TextureRedrawer.resize(portraitTexture, this.mask_, size, true, this.tex1Id_, this.tex2Id_);
-            this.portrait_ = GlowRedrawer.outlineGlow(this.portrait_, 0, 0);
+            this.portrait_ = GlowRedrawer.outlineGlow(this.portrait_, glowColor, 0);
         }
         return this.portrait_;
     }

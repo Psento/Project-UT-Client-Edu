@@ -203,7 +203,7 @@ public class StatData {
     public static const MININGTIER:int = 196;
     public static const LUMBERTIER:int = 197;
     public static const FORAGETIER:int = 198;
-
+    public static const GLOW:int = 199;
 
 
     public var statType_:uint = 0;

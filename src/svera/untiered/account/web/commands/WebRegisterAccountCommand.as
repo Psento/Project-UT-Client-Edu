@@ -4,6 +4,8 @@ import com.company.assembleegameclient.screens.CharacterSelectionAndNewsScreen;
 
 import flash.display.Sprite;
 
+import svera.lib.framework.ICommand;
+
 import svera.lib.tasks.BranchingTask;
 import svera.lib.tasks.DispatchSignalTask;
 import svera.lib.tasks.Task;
@@ -18,7 +20,7 @@ import svera.untiered.core.signals.SetScreenWithValidDataSignal;
 import svera.untiered.core.signals.TaskErrorSignal;
 import svera.untiered.dialogs.control.OpenDialogSignal;
 
-public class WebRegisterAccountCommand {
+public class WebRegisterAccountCommand implements ICommand {
 
 
     [Inject]

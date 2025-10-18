@@ -1,12 +1,14 @@
 package svera.untiered.death.control {
 import com.company.assembleegameclient.sound.Music;
 
+import svera.lib.framework.ICommand;
+
 import svera.untiered.core.model.PlayerModel;
 import svera.untiered.death.model.DeathModel;
 import svera.untiered.dialogs.control.CloseDialogsSignal;
 import svera.untiered.messaging.impl.incoming.Death;
 
-public class HandleDeathCommand {
+public class HandleDeathCommand implements ICommand {
 
 
     [Inject]

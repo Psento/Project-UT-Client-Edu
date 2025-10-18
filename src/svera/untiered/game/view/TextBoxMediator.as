@@ -3,7 +3,7 @@ import com.company.assembleegameclient.ui.TextBox;
 
 import flash.events.Event;
 
-import robotlegs.bender.bundles.mvcs.Mediator;
+import svera.lib.framework.Mediator;
 
 import svera.untiered.account.core.Account;
 import svera.untiered.account.core.signals.UpdateAccountInfoSignal;

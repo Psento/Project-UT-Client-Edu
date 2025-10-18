@@ -1,4 +1,5 @@
 package svera.untiered.account.web.commands {
+import svera.lib.framework.ICommand;
 import svera.lib.tasks.BranchingTask;
 import svera.lib.tasks.DispatchSignalTask;
 import svera.lib.tasks.Task;
@@ -10,7 +11,7 @@ import svera.untiered.core.signals.TaskErrorSignal;
 import svera.untiered.dialogs.control.CloseDialogsSignal;
 import svera.untiered.dialogs.control.OpenDialogSignal;
 
-public class WebChangePasswordCommand {
+public class WebChangePasswordCommand implements ICommand {
 
 
     [Inject]

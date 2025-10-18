@@ -1,8 +1,9 @@
 package svera.untiered.core.commands {
+import svera.lib.framework.ICommand;
 import svera.untiered.account.core.model.JSInitializedModel;
 import svera.untiered.core.model.PlayerModel;
 
-public class InvalidateDataCommand {
+public class InvalidateDataCommand implements ICommand {
 
 
     [Inject]

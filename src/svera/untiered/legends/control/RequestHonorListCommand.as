@@ -1,4 +1,5 @@
 package svera.untiered.legends.control {
+import svera.lib.framework.ICommand;
 import svera.lib.tasks.BranchingTask;
 import svera.lib.tasks.DispatchSignalTask;
 import svera.lib.tasks.Task;
@@ -9,7 +10,7 @@ import svera.untiered.death.model.DeathModel;
 import svera.untiered.honor.model.HonorModel;
 import svera.untiered.legends.service.GetLegendsListTask;
 
-public class RequestHonorListCommand {
+public class RequestHonorListCommand implements ICommand {
 
 
     [Inject]

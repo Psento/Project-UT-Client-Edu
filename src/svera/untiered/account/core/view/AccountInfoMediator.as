@@ -1,5 +1,5 @@
 package svera.untiered.account.core.view {
-import robotlegs.bender.bundles.mvcs.Mediator;
+import svera.lib.framework.Mediator;
 
 import svera.untiered.account.core.Account;
 import svera.untiered.account.core.signals.UpdateAccountInfoSignal;

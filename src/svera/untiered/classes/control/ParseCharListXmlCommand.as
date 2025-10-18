@@ -1,19 +1,16 @@
 package svera.untiered.classes.control {
-import robotlegs.bender.framework.api.ILogger;
 
+import svera.lib.framework.ICommand;
 import svera.untiered.classes.model.CharacterSkin;
 import svera.untiered.classes.model.CharacterSkinState;
 import svera.untiered.classes.model.ClassesModel;
 
-public class ParseCharListXmlCommand {
+public class ParseCharListXmlCommand implements ICommand {
     [Inject]
     public var data:XML;
 
     [Inject]
     public var model:ClassesModel;
-
-    [Inject]
-    public var logger:ILogger;
 
     public function ParseCharListXmlCommand() {
         super();
@@ -31,8 +28,6 @@ public class ParseCharListXmlCommand {
             skin = this.model.getCharacterSkin(owned);
             if (skin) {
                 skin.setState(CharacterSkinState.OWNED);
-            } else {
-                this.logger.warn("Cannot set Character Skin ownership: type {0} not found", [owned]);
             }
         }
     }

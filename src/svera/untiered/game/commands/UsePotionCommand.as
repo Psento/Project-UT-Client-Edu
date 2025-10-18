@@ -2,7 +2,7 @@ package svera.untiered.game.commands {
 import com.company.assembleegameclient.objects.Player;
 import com.company.assembleegameclient.sound.SoundEffectLibrary;
 
-import robotlegs.bender.framework.api.ILogger;
+import svera.lib.framework.ICommand;
 
 import svera.untiered.game.model.PotionInventoryModel;
 import svera.untiered.game.model.UsePotionVO;
@@ -10,7 +10,7 @@ import svera.untiered.messaging.impl.GameServerConnection;
 import svera.untiered.ui.model.HUDModel;
 import svera.untiered.ui.model.PotionModel;
 
-public class UsePotionCommand {
+public class UsePotionCommand implements ICommand {
 
 
     [Inject]
@@ -21,9 +21,6 @@ public class UsePotionCommand {
 
     [Inject]
     public var hudModel:HUDModel;
-
-    [Inject]
-    public var logger:ILogger;
 
     private var gsc:GameServerConnection;
 
@@ -52,7 +49,7 @@ public class UsePotionCommand {
 
     private function usePotionIfEffective():void {
         if (this.isPlayerStatMaxed()) {
-            this.logger.info("UsePotionCommand.execute: User has MAX of that attribute, not requesting a use from server.");
+            //this.logger.info("UsePotionCommand.execute: User has MAX of that attribute, not requesting a use from server.");
         } else {
             this.sendServerRequest();
         }

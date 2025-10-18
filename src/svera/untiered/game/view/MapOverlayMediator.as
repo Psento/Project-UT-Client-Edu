@@ -2,7 +2,7 @@ package svera.untiered.game.view {
 import com.company.assembleegameclient.map.mapoverlay.MapOverlay;
 import com.company.assembleegameclient.map.mapoverlay.SpeechBalloon;
 
-import robotlegs.bender.bundles.mvcs.Mediator;
+import svera.lib.framework.Mediator;
 
 import svera.untiered.account.core.Account;
 import svera.untiered.game.model.AddSpeechBalloonVO;

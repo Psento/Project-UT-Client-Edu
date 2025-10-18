@@ -9,14 +9,17 @@ import flash.display.Sprite;
 import flash.events.Event;
 import flash.events.MouseEvent;
 import flash.filters.DropShadowFilter;
+import flash.geom.Rectangle;
 
 import org.osflash.signals.Signal;
+
+import svera.lib.resizing.view.Resizable;
 
 import svera.untiered.legends.model.Legend;
 import svera.untiered.legends.model.Timespan;
 import svera.untiered.ui.view.components.ScreenBase;
 
-public class LegendsView extends Sprite {
+public class LegendsView extends Sprite implements Resizable {
     public const timespanChanged:Signal = new Signal(Timespan);
 
     public const showDetail:Signal = new Signal(Legend);
@@ -256,6 +259,19 @@ public class LegendsView extends Sprite {
 
     public function hideLoading():void {
         this.loadingBanner.visible = false;
+    }
+    public function resize(rect:Rectangle):void {
+        // center the dialog:
+        if (mainContainer) {
+            mainContainer.x = (rect.width - 600) / 2;
+            mainContainer.y = (rect.height - 500) / 2;
+        }
+
+        // Adjust scrollbar height if needed
+        if (scrollBar) {
+            var maxHeight:int = rect.height - 200; // Leave margin
+            scrollBar.height = Math.min(maxHeight, 500 - 100);
+        }
     }
 }
 }

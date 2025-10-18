@@ -1,5 +1,5 @@
 package com.company.assembleegameclient.map {
-import robotlegs.bender.bundles.mvcs.Mediator;
+import svera.lib.framework.Mediator;
 
 public class MapMediator extends Mediator {
     [Inject]

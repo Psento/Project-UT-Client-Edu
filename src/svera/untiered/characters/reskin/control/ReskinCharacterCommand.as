@@ -1,11 +1,12 @@
 package svera.untiered.characters.reskin.control {
+import svera.lib.framework.ICommand;
 import svera.lib.net.api.MessageProvider;
 import svera.lib.net.impl.SocketServer;
 import svera.untiered.classes.model.CharacterSkin;
 import svera.untiered.messaging.impl.GameServerConnection;
 import svera.untiered.messaging.impl.outgoing.Reskin;
 
-public class ReskinCharacterCommand {
+public class ReskinCharacterCommand implements ICommand {
 
 
     [Inject]

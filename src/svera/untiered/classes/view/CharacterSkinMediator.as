@@ -1,7 +1,7 @@
 package svera.untiered.classes.view {
 import com.company.assembleegameclient.screens.NewCharacterScreen;
 
-import robotlegs.bender.bundles.mvcs.Mediator;
+import svera.lib.framework.Mediator;
 
 import svera.untiered.core.model.PlayerModel;
 import svera.untiered.core.signals.SetScreenSignal;

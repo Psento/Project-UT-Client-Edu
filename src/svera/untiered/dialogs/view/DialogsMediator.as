@@ -1,54 +1,31 @@
 package svera.untiered.dialogs.view {
 import flash.display.Sprite;
 
-import robotlegs.bender.bundles.mvcs.Mediator;
-
-import svera.untiered.dialogs.control.CloseDialogsSignal;
+import svera.lib.framework.Mediator;
 import svera.untiered.dialogs.control.OpenDialogSignal;
-import svera.untiered.dialogs.control.ShowDialogBackgroundSignal;
 
 public class DialogsMediator extends Mediator {
-
-
-    [Inject]
-    public var view:DialogsView;
-
+    // Remove [Inject] for view - it's automatic now
     [Inject]
     public var openDialog:OpenDialogSignal;
 
-    [Inject]
-    public var closeDialog:CloseDialogsSignal;
-
-    [Inject]
-    public var showDialogBackground:ShowDialogBackgroundSignal;
-
-    public function DialogsMediator() {
-        super();
+    // Type-safe view accessor
+    private function get dialogsView():DialogsView {
+        return view as DialogsView;
     }
 
-    override public function initialize():void {
-        this.showDialogBackground.add(this.onShowDialogBackground);
-        this.openDialog.add(this.onOpenDialog);
-        this.closeDialog.add(this.onCloseDialog);
+    // Use onInitialize instead of initialize
+    override protected function onInitialize():void {
+        openDialog.add(onOpenDialog);
     }
 
-    override public function destroy():void {
-        this.showDialogBackground.remove(this.onShowDialogBackground);
-        this.openDialog.remove(this.onOpenDialog);
-        this.closeDialog.remove(this.onCloseDialog);
-    }
-
-    private function onShowDialogBackground(color:int = 1381653):void {
-        this.view.showBackground(color);
+    // Use onDestroy instead of destroy
+    override protected function onDestroy():void {
+        openDialog.remove(onOpenDialog);
     }
 
     private function onOpenDialog(dialog:Sprite):void {
-        this.view.show(dialog);
-    }
-
-    private function onCloseDialog():void {
-        this.view.stage.focus = null;
-        this.view.hideAll();
+        dialogsView.show(dialog);
     }
 }
 }

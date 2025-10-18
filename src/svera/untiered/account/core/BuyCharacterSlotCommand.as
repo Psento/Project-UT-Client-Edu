@@ -3,6 +3,8 @@ import com.company.assembleegameclient.parameters.Parameters;
 import com.company.assembleegameclient.screens.CharacterSelectionAndNewsScreen;
 import com.company.assembleegameclient.ui.dialogs.ErrorDialog;
 
+import svera.lib.framework.ICommand;
+
 import svera.lib.tasks.BranchingTask;
 import svera.lib.tasks.DispatchSignalTask;
 import svera.lib.tasks.Task;
@@ -16,7 +18,7 @@ import svera.untiered.dialogs.control.CloseDialogsSignal;
 import svera.untiered.dialogs.control.OpenDialogSignal;
 import svera.untiered.ui.view.MessageCloseDialog;
 
-public class BuyCharacterSlotCommand {
+public class BuyCharacterSlotCommand implements ICommand {
 
 
     [Inject]

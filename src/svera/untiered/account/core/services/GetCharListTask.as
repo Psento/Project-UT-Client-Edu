@@ -2,8 +2,6 @@ package svera.untiered.account.core.services {
 import flash.events.TimerEvent;
 import flash.utils.Timer;
 
-import robotlegs.bender.framework.api.ILogger;
-
 import svera.lib.tasks.BaseTask;
 import svera.untiered.account.core.Account;
 import svera.untiered.account.core.signals.CharListDataSignal;
@@ -31,9 +29,6 @@ public class GetCharListTask extends BaseTask {
     [Inject]
     public var charListData:CharListDataSignal;
 
-    [Inject]
-    public var logger:ILogger;
-
     private var requestData:Object;
 
     private var retryTimer:Timer;
@@ -43,7 +38,6 @@ public class GetCharListTask extends BaseTask {
     }
 
     override protected function startTask():void {
-        this.logger.info("GetUserDataTask start");
         this.requestData = this.makeRequestData();
         this.sendRequest();
     }
@@ -84,13 +78,11 @@ public class GetCharListTask extends BaseTask {
     }
 
     private function clearAccountAndReloadCharacters():void {
-        this.logger.info("GetUserDataTask invalid credentials");
         this.account.clear();
         this.client.sendRequest("/char/list", this.requestData);
     }
 
     private function waitForASecondThenRetryRequest():void {
-        this.logger.info("GetUserDataTask error - retrying");
         this.retryTimer = new Timer(ONE_SECOND_IN_MS, 1);
         this.retryTimer.addEventListener(TimerEvent.TIMER_COMPLETE, this.onRetryTimer);
         this.retryTimer.start();

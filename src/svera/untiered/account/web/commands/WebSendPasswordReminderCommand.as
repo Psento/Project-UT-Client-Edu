@@ -1,4 +1,5 @@
 package svera.untiered.account.web.commands {
+import svera.lib.framework.ICommand;
 import svera.lib.tasks.BranchingTask;
 import svera.lib.tasks.DispatchSignalTask;
 import svera.lib.tasks.TaskGroup;
@@ -8,7 +9,7 @@ import svera.untiered.account.web.view.WebLoginDialog;
 import svera.untiered.core.signals.TaskErrorSignal;
 import svera.untiered.dialogs.control.OpenDialogSignal;
 
-public class WebSendPasswordReminderCommand {
+public class WebSendPasswordReminderCommand implements ICommand {
 
 
     [Inject]

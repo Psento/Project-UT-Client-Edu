@@ -1,10 +1,8 @@
 package svera.untiered.characters.reskin {
 import org.swiftsuspenders.Injector;
 
-import robotlegs.bender.extensions.mediatorMap.api.IMediatorMap;
-import robotlegs.bender.extensions.signalCommandMap.api.ISignalCommandMap;
-import robotlegs.bender.framework.api.IConfig;
-import robotlegs.bender.framework.api.IContext;
+import svera.lib.framework.IModule;
+import svera.lib.framework.AppContext;
 
 import svera.lib.net.api.MessageMap;
 import svera.untiered.characters.reskin.control.OpenReskinDialogCommand;
@@ -19,33 +17,20 @@ import svera.untiered.characters.reskin.view.ReskinPanelMediator;
 import svera.untiered.messaging.impl.GameServerConnection;
 import svera.untiered.messaging.impl.outgoing.Reskin;
 
-public class ReskinConfig implements IConfig {
-
-
-    [Inject]
-    public var context:IContext;
-
-    [Inject]
-    public var injector:Injector;
-
-    [Inject]
-    public var mediatorMap:IMediatorMap;
-
-    [Inject]
-    public var commandMap:ISignalCommandMap;
+public class ReskinModule implements IModule {
 
     [Inject]
     public var messageMap:MessageMap;
 
-    public function ReskinConfig() {
+    public function ReskinModule() {
         super();
     }
 
-    public function configure():void {
-        this.mediatorMap.map(ReskinCharacterView).toMediator(ReskinCharacterMediator);
-        this.mediatorMap.map(ReskinPanel).toMediator(ReskinPanelMediator);
-        this.commandMap.map(OpenReskinDialogSignal).toCommand(OpenReskinDialogCommand);
-        this.commandMap.map(ReskinCharacterSignal).toCommand(ReskinCharacterCommand);
+    public function configure(context:AppContext):void {
+        context.mediators.map(ReskinCharacterView, ReskinCharacterMediator);
+        context.mediators.map(ReskinPanel, ReskinPanelMediator);
+        context.commands.map(OpenReskinDialogSignal).toCommand(OpenReskinDialogCommand);
+        context.commands.map(ReskinCharacterSignal).toCommand(ReskinCharacterCommand);
     }
 }
 }

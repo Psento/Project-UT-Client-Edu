@@ -2,7 +2,7 @@ package svera.untiered.game.view {
 import com.company.assembleegameclient.objects.SellableObject;
 import com.company.assembleegameclient.util.Currency;
 
-import robotlegs.bender.bundles.mvcs.Mediator;
+import svera.lib.framework.Mediator;
 
 import svera.untiered.account.core.Account;
 import svera.untiered.account.core.view.RegisterPromptDialog;

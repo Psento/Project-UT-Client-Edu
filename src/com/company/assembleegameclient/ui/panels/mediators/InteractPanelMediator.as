@@ -2,7 +2,7 @@ package com.company.assembleegameclient.ui.panels.mediators {
 import com.company.assembleegameclient.objects.IInteractiveObject;
 import com.company.assembleegameclient.ui.panels.InteractPanel;
 
-import robotlegs.bender.bundles.mvcs.Mediator;
+import svera.lib.framework.Mediator;
 
 import svera.untiered.core.model.MapModel;
 

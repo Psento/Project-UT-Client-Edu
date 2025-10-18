@@ -1,5 +1,5 @@
 package svera.untiered.legends.view {
-import robotlegs.bender.bundles.mvcs.Mediator;
+import svera.lib.framework.Mediator;
 
 import svera.untiered.death.model.DeathModel;
 import svera.untiered.honor.control.ShowHonorViewSignal;

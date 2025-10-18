@@ -1,5 +1,5 @@
 package svera.untiered.account.web.view {
-import robotlegs.bender.bundles.mvcs.Mediator;
+import svera.lib.framework.Mediator;
 
 import svera.lib.tasks.Task;
 import svera.untiered.account.web.model.ChangePasswordData;

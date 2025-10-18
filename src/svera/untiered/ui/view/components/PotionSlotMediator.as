@@ -1,7 +1,7 @@
 package svera.untiered.ui.view.components {
 import com.company.assembleegameclient.objects.Player;
 
-import robotlegs.bender.bundles.mvcs.Mediator;
+import svera.lib.framework.Mediator;
 
 import svera.untiered.game.model.PotionInventoryModel;
 import svera.untiered.game.model.UsePotionVO;

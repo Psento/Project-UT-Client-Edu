@@ -1,7 +1,7 @@
 package svera.untiered.classes.view {
 import flash.display.DisplayObject;
 
-import robotlegs.bender.bundles.mvcs.Mediator;
+import svera.lib.framework.Mediator;
 
 import svera.untiered.classes.model.CharacterClass;
 import svera.untiered.classes.model.ClassesModel;

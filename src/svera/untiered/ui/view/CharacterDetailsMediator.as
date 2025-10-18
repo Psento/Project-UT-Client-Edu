@@ -1,7 +1,7 @@
 package svera.untiered.ui.view {
 import com.company.assembleegameclient.objects.Player;
 
-import robotlegs.bender.bundles.mvcs.Mediator;
+import svera.lib.framework.Mediator;
 
 import svera.untiered.ui.model.HUDModel;
 import svera.untiered.ui.signals.HUDModelInitialized;
@@ -9,10 +9,6 @@ import svera.untiered.ui.signals.NameChangedSignal;
 import svera.untiered.ui.signals.UpdateHUDSignal;
 
 public class CharacterDetailsMediator extends Mediator {
-
-
-    [Inject]
-    public var view:CharacterDetailsView;
 
     [Inject]
     public var hudModel:HUDModel;
@@ -26,12 +22,12 @@ public class CharacterDetailsMediator extends Mediator {
     [Inject]
     public var nameChanged:NameChangedSignal;
 
-    public function CharacterDetailsMediator() {
-        super();
+    private function getCharacterDetailsView():CharacterDetailsView {
+        return view as CharacterDetailsView;
     }
 
     override public function initialize():void {
-        this.view.init();
+        this.getCharacterDetailsView.init();
         this.updateHUD.addOnce(this.onUpdateHUD);
         this.updateHUD.add(this.onDraw);
         this.nameChanged.add(this.onNameChange);
@@ -43,15 +39,15 @@ public class CharacterDetailsMediator extends Mediator {
     }
 
     private function onUpdateHUD(player:Player):void {
-        this.view.update(player);
+        this.getCharacterDetailsView.update(player);
     }
 
     private function onDraw(player:Player):void {
-        this.view.draw(player);
+        this.getCharacterDetailsView.draw(player);
     }
 
     private function onNameChange(name:String):void {
-        this.view.setName(name);
+        this.getCharacterDetailsView.setName(name);
     }
 }
 }

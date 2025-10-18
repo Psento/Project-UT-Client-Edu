@@ -4,7 +4,7 @@ import com.company.assembleegameclient.objects.Player;
 
 import flash.utils.Dictionary;
 
-import robotlegs.bender.extensions.mediatorMap.api.IMediator;
+import svera.lib.framework.Mediator;
 
 import svera.untiered.game.focus.control.SetGameFocusSignal;
 import svera.untiered.game.signals.ExitGameSignal;
@@ -16,11 +16,8 @@ import svera.untiered.ui.model.HUDModel;
 import svera.untiered.ui.model.UpdateGameObjectTileVO;
 import svera.untiered.ui.signals.UpdateHUDSignal;
 
-public class MiniMapMediator implements IMediator {
+public class MiniMapMediator extends Mediator {
 
-
-    [Inject]
-    public var view:MiniMap;
 
     [Inject]
     public var model:HUDModel;
@@ -43,12 +40,14 @@ public class MiniMapMediator implements IMediator {
     [Inject]
     public var exitGameSignal:ExitGameSignal;
 
-    public function MiniMapMediator() {
-        super();
+
+    private function get miniMapView():MiniMap {
+        return view as MiniMap;
     }
 
-    public function initialize():void {
-        this.view.setMap(this.model.gameSprite.map);
+    override protected function onInitialize():void {
+
+        miniMapView.setMap(this.model.gameSprite.map);
         this.setFocus.add(this.onSetFocus);
         this.updateHUD.add(this.onUpdateHUD);
         this.updateGameObjectTileSignal.add(this.onUpdateGameObjectTile);
@@ -58,10 +57,10 @@ public class MiniMapMediator implements IMediator {
     }
 
     private function onExitGame():void {
-        this.view.deactivate();
+        miniMapView.deactivate();
     }
 
-    public function destroy():void {
+    override protected function onDestroy():void {
         this.setFocus.remove(this.onSetFocus);
         this.updateHUD.remove(this.onUpdateHUD);
         this.updateGameObjectTileSignal.remove(this.onUpdateGameObjectTile);
@@ -72,41 +71,41 @@ public class MiniMapMediator implements IMediator {
 
     private function onSetFocus(id:String):void {
         var object:GameObject = this.getFocusById(id);
-        this.view.setFocus(object);
+        miniMapView.setFocus(object);
     }
 
     private function getFocusById(id:String):GameObject {
         var object:GameObject = null;
         if (id == "") {
-            return this.view.map.player_;
+            return miniMapView.map.player_;
         }
-        var objects:Dictionary = this.view.map.goDict_;
+        var objects:Dictionary = miniMapView.map.goDict_;
         for each(object in objects) {
             if (object.name_ == id) {
                 return object;
             }
         }
-        return this.view.map.player_;
+        return miniMapView.map.player_;
     }
 
     private function onUpdateGroundTile(vo:UpdateGroundTileVO):void {
-        this.view.setGroundTile(vo.tileX, vo.tileY, vo.tileType);
+        miniMapView.setGroundTile(vo.tileX, vo.tileY, vo.tileType);
     }
 
     private function onUpdateGameObjectTile(vo:UpdateGameObjectTileVO):void {
-        this.view.setGameObjectTile(vo.tileX, vo.tileY, vo.gameObject);
+        miniMapView.setGameObjectTile(vo.tileX, vo.tileY, vo.gameObject);
     }
 
     private function onMiniMapZoom(direction:String):void {
         if (direction == MiniMapZoomSignal.IN) {
-            this.view.zoomIn();
+            miniMapView.zoomIn();
         } else if (direction == MiniMapZoomSignal.OUT) {
-            this.view.zoomOut();
+            miniMapView.zoomOut();
         }
     }
 
     private function onUpdateHUD(_:Player):void {
-        this.view.draw();
+        miniMapView.draw();
     }
 }
 }

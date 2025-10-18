@@ -16,12 +16,14 @@ import com.company.util.PointUtil;
 import flash.display.Sprite;
 import flash.events.Event;
 import flash.external.ExternalInterface;
+import flash.geom.Rectangle;
 import flash.utils.getTimer;
 
 import org.osflash.signals.Signal;
 
 import svera.lib.loopedprocs.LoopedCallback;
 import svera.lib.loopedprocs.LoopedProcess;
+import svera.lib.resizing.view.Resizable;
 import svera.untiered.constants.GeneralConstants;
 import svera.untiered.core.model.MapModel;
 import svera.untiered.core.model.PlayerModel;
@@ -32,7 +34,9 @@ import svera.untiered.stage3D.Renderer;
 import svera.untiered.ui.UIUtils;
 import svera.untiered.ui.view.HUDView;
 
-public class GameSprite extends Sprite {
+public class GameSprite extends Sprite implements Resizable {
+    private const MIN_WIDTH:int = 800;
+    private const MIN_HEIGHT:int = 600;
     public const closed:Signal = new Signal();
     public const modelInitialized:Signal = new Signal();
     public const drawCharacterWindow:Signal = new Signal(Player);
@@ -54,8 +58,6 @@ public class GameSprite extends Sprite {
     private var focus:GameObject;
     private var isGameStarted:Boolean;
     private var displaysPosY:uint = 4;
-
-
 
     public function GameSprite(gameId:int, createCharacter:Boolean, charId:int, model:PlayerModel, mapJSON:String, traits:Array) {
         this.camera_ = new Camera();
@@ -304,6 +306,24 @@ public class GameSprite extends Sprite {
             }
         }
         this.lastUpdate_ = time;
+    }
+
+    public function resize(rect:Rectangle):void {
+        // Enforce minimum size
+        var width:int = Math.max(rect.width, MIN_WIDTH);
+        var height:int = Math.max(rect.height, MIN_HEIGHT);
+        /*
+        // Update game map viewport
+        if (map) {
+            map.setViewportSize(width, height);
+        }
+
+        // Scale UI overlay proportionally
+        if (uiOverlay) {
+            var scale:Number = Math.min(width / MIN_WIDTH, height / MIN_HEIGHT);
+            uiOverlay.scaleX = scale;
+            uiOverlay.scaleY = scale;
+        }*/
     }
 }
 }

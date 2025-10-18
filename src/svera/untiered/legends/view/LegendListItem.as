@@ -15,8 +15,6 @@ import flash.filters.DropShadowFilter;
 
 import org.osflash.signals.Signal;
 
-import robotlegs.bender.framework.api.ILogger;
-
 import svera.untiered.legends.model.Legend;
 
 public class LegendListItem extends Sprite {
@@ -43,9 +41,6 @@ public class LegendListItem extends Sprite {
     private var honorIcon:Bitmap;
 
     private var isOver:Boolean;
-
-    [inject]
-    public var logger:ILogger;
 
     public function LegendListItem(legend:Legend) {
         super();

@@ -3,12 +3,14 @@ import com.company.assembleegameclient.screens.CharacterSelectionAndNewsScreen;
 
 import flash.display.Sprite;
 
+import svera.lib.framework.ICommand;
+
 import svera.untiered.account.core.Account;
 import svera.untiered.core.model.ScreenModel;
 import svera.untiered.core.signals.InvalidateDataSignal;
 import svera.untiered.core.signals.SetScreenWithValidDataSignal;
 
-public class WebLogoutCommand {
+public class WebLogoutCommand implements ICommand {
 
 
     [Inject]

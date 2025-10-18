@@ -1,9 +1,10 @@
 package svera.untiered.ui.commands {
+import svera.lib.framework.ICommand;
 import svera.untiered.account.core.signals.UpdateAccountInfoSignal;
 import svera.untiered.core.signals.SetScreenSignal;
 import svera.untiered.ui.view.TitleView;
 
-public class ShowTitleUICommand {
+public class ShowTitleUICommand implements ICommand {
     [Inject]
     public var setScreen:SetScreenSignal;
 

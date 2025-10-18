@@ -2,7 +2,7 @@ package svera.untiered.ui {
 import com.company.assembleegameclient.parameters.Parameters;
 import com.company.assembleegameclient.ui.menu.PlayerGroupMenu;
 
-import robotlegs.bender.bundles.mvcs.Mediator;
+import svera.lib.framework.Mediator;
 
 import svera.untiered.game.model.AddTextLineVO;
 import svera.untiered.game.signals.AddTextLineSignal;

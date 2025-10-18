@@ -4,7 +4,7 @@ import com.company.assembleegameclient.screens.NewCharacterScreen;
 
 import flash.display.Sprite;
 
-import robotlegs.bender.bundles.mvcs.Mediator;
+import svera.lib.framework.Mediator;
 
 import svera.untiered.classes.model.ClassesModel;
 import svera.untiered.classes.view.CharacterSkinView;
@@ -16,8 +16,6 @@ import svera.untiered.core.signals.UpdateNewCharacterScreenSignal;
 import svera.untiered.game.signals.PlayGameSignal;
 
 public class NewCharacterMediator extends Mediator {
-    [Inject]
-    public var view:NewCharacterScreen;
 
     [Inject]
     public var playerModel:PlayerModel;
@@ -40,26 +38,26 @@ public class NewCharacterMediator extends Mediator {
     [Inject]
     public var classesModel:ClassesModel;
 
-    public function NewCharacterMediator() {
-        super();
+    private function getNewCharacterScreen():NewCharacterScreen {
+        return view as NewCharacterScreen;
     }
 
     override public function initialize():void {
-        this.view.selected.add(this.onSelected);
-        this.view.close.add(this.onClose);
-        this.view.tooltip.add(this.onTooltip);
+        this.getNewCharacterScreen.selected.add(this.onSelected);
+        this.getNewCharacterScreen.close.add(this.onClose);
+        this.getNewCharacterScreen.tooltip.add(this.onTooltip);
         this.updateNewCharacterScreen.add(this.onUpdate);
-        this.view.initialize(this.playerModel);
+        this.getNewCharacterScreen.initialize(this.playerModel);
     }
 
     private function onBuyCharacterPending(objectType:int):void {
-        this.view.updateCurrencies(this.playerModel.getTsavorite(), this.playerModel.getMedallions(), this.playerModel.getHonor());
+        this.getNewCharacterScreen.updateCurrencies(this.playerModel.getTsavorite(), this.playerModel.getMedallions(), this.playerModel.getHonor());
     }
 
     override public function destroy():void {
-        this.view.selected.remove(this.onSelected);
-        this.view.close.remove(this.onClose);
-        this.view.tooltip.remove(this.onTooltip);
+        this.getNewCharacterScreen.selected.remove(this.onSelected);
+        this.getNewCharacterScreen.close.remove(this.onClose);
+        this.getNewCharacterScreen.tooltip.remove(this.onTooltip);
         this.updateNewCharacterScreen.remove(this.onUpdate);
     }
 

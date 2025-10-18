@@ -2,12 +2,14 @@ package svera.untiered.game.commands {
 import com.company.assembleegameclient.game.GameSprite;
 import com.company.assembleegameclient.parameters.Parameters;
 
+import svera.lib.framework.ICommand;
+
 import svera.lib.tasks.TaskMonitor;
 import svera.untiered.core.model.PlayerModel;
 import svera.untiered.core.signals.SetScreenSignal;
 import svera.untiered.game.model.GameInitData;
 
-public class PlayGameCommand {
+public class PlayGameCommand implements ICommand {
 
 
     [Inject]

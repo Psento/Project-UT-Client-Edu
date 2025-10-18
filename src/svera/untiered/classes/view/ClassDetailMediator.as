@@ -4,7 +4,7 @@ import com.company.assembleegameclient.util.HonorUtil;
 import flash.events.TimerEvent;
 import flash.utils.Timer;
 
-import robotlegs.bender.bundles.mvcs.Mediator;
+import svera.lib.framework.Mediator;
 
 import svera.untiered.assets.model.Animation;
 import svera.untiered.assets.services.CharacterFactory;

@@ -1,13 +1,15 @@
 package svera.untiered.classes.control {
 import com.company.assembleegameclient.parameters.Parameters;
 
+import svera.lib.framework.ICommand;
+
 import svera.untiered.assets.EmbeddedData;
 import svera.untiered.assets.model.CharacterTemplate;
 import svera.untiered.classes.model.CharacterClass;
 import svera.untiered.classes.model.CharacterSkin;
 import svera.untiered.classes.model.ClassesModel;
 
-public class ParseSkinsXmlCommand {
+public class ParseSkinsXmlCommand implements ICommand {
 
 
     [Inject]

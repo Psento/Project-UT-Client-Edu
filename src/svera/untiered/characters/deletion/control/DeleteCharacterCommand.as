@@ -1,6 +1,8 @@
 package svera.untiered.characters.deletion.control {
 import com.company.assembleegameclient.screens.CharacterSelectionAndNewsScreen;
 
+import svera.lib.framework.ICommand;
+
 import svera.lib.tasks.BranchingTask;
 import svera.lib.tasks.DispatchSignalTask;
 import svera.lib.tasks.Task;
@@ -12,7 +14,7 @@ import svera.untiered.core.signals.SetScreenSignal;
 import svera.untiered.dialogs.control.CloseDialogsSignal;
 import svera.untiered.dialogs.control.OpenDialogSignal;
 
-public class DeleteCharacterCommand {
+public class DeleteCharacterCommand implements ICommand {
 
 
     [Inject]

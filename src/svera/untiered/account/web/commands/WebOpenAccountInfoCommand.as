@@ -1,10 +1,11 @@
 package svera.untiered.account.web.commands {
+import svera.lib.framework.ICommand;
 import svera.untiered.account.core.Account;
 import svera.untiered.account.web.view.WebAccountDetailDialog;
 import svera.untiered.account.web.view.WebRegisterDialog;
 import svera.untiered.dialogs.control.OpenDialogSignal;
 
-public class WebOpenAccountInfoCommand {
+public class WebOpenAccountInfoCommand implements ICommand {
 
 
     [Inject]

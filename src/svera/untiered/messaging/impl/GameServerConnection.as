@@ -53,8 +53,6 @@ import flash.utils.getTimer;
 import org.osflash.signals.Signal;
 import org.swiftsuspenders.Injector;
 
-import robotlegs.bender.framework.api.ILogger;
-
 import svera.lib.net.api.MessageMap;
 import svera.lib.net.api.MessageProvider;
 import svera.lib.net.impl.Message;
@@ -290,7 +288,6 @@ public class GameServerConnection {
     private var addSpeechBalloon:AddSpeechBalloonSignal;
     private var updateGroundTileSignal:UpdateGroundTileSignal;
     private var updateGameObjectTileSignal:UpdateGameObjectTileSignal;
-    private var logger:ILogger;
     private var handleDeath:HandleDeathSignal;
     private var setGameFocus:SetGameFocusSignal;
     private var classesModel:ClassesModel;
@@ -305,7 +302,6 @@ public class GameServerConnection {
         this.addSpeechBalloon = this.injector.getInstance(AddSpeechBalloonSignal);
         this.updateGroundTileSignal = this.injector.getInstance(UpdateGroundTileSignal);
         this.updateGameObjectTileSignal = this.injector.getInstance(UpdateGameObjectTileSignal);
-        this.logger = this.injector.getInstance(ILogger);
         this.handleDeath = this.injector.getInstance(HandleDeathSignal);
         this.setGameFocus = this.injector.getInstance(SetGameFocusSignal);
         this.classesModel = this.injector.getInstance(ClassesModel);

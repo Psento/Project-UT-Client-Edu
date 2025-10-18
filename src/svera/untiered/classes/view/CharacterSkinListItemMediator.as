@@ -1,5 +1,5 @@
 package svera.untiered.classes.view {
-import robotlegs.bender.bundles.mvcs.Mediator;
+import svera.lib.framework.Mediator;
 
 import svera.untiered.classes.control.BuyCharacterSkinSignal;
 import svera.untiered.classes.control.FocusCharacterSkinSignal;

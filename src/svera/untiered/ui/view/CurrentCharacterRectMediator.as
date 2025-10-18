@@ -2,7 +2,7 @@ package svera.untiered.ui.view {
 import com.company.assembleegameclient.appengine.SavedCharacter;
 import com.company.assembleegameclient.screens.charrects.CurrentCharacterRect;
 
-import robotlegs.bender.bundles.mvcs.Mediator;
+import svera.lib.framework.Mediator;
 
 import svera.untiered.characters.deletion.view.ConfirmDeleteCharacterDialog;
 import svera.untiered.characters.model.CharacterModel;
@@ -13,10 +13,6 @@ import svera.untiered.game.model.GameInitData;
 import svera.untiered.game.signals.PlayGameSignal;
 
 public class CurrentCharacterRectMediator extends Mediator {
-
-
-    [Inject]
-    public var view:CurrentCharacterRect;
 
     [Inject]
     public var playGame:PlayGameSignal;
@@ -30,18 +26,18 @@ public class CurrentCharacterRectMediator extends Mediator {
     [Inject]
     public var openDialog:OpenDialogSignal;
 
-    public function CurrentCharacterRectMediator() {
-        super();
+    private function getCurrentCharacterRect():CurrentCharacterRect {
+        return view as CurrentCharacterRect;
     }
 
     override public function initialize():void {
-        this.view.selected.add(this.onSelected);
-        this.view.deleteCharacter.add(this.onDeleteCharacter);
+        this.getCurrentCharacterRect.selected.add(this.onSelected);
+        this.getCurrentCharacterRect.deleteCharacter.add(this.onDeleteCharacter);
     }
 
     override public function destroy():void {
-        this.view.selected.remove(this.onSelected);
-        this.view.deleteCharacter.remove(this.onDeleteCharacter);
+        this.getCurrentCharacterRect.selected.remove(this.onSelected);
+        this.getCurrentCharacterRect.deleteCharacter.remove(this.onDeleteCharacter);
     }
 
     private function onSelected(character:SavedCharacter):void {

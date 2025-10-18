@@ -2,7 +2,7 @@ package com.company.assembleegameclient.ui.panels.mediators {
 import com.company.assembleegameclient.objects.Player;
 import com.company.assembleegameclient.ui.panels.itemgrids.InventoryGrid;
 
-import robotlegs.bender.bundles.mvcs.Mediator;
+import svera.lib.framework.Mediator;
 
 import svera.untiered.ui.signals.UpdateHUDSignal;
 

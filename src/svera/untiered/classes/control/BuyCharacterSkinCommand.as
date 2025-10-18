@@ -1,4 +1,5 @@
 package svera.untiered.classes.control {
+import svera.lib.framework.ICommand;
 import svera.lib.tasks.TaskMonitor;
 import svera.untiered.classes.model.CharacterSkin;
 import svera.untiered.classes.model.CharacterSkinState;
@@ -7,7 +8,7 @@ import svera.untiered.core.model.PlayerModel;
 import svera.untiered.dialogs.control.OpenDialogSignal;
 import svera.untiered.ui.view.NotEnoughTsavoriteDialog;
 
-public class BuyCharacterSkinCommand {
+public class BuyCharacterSkinCommand implements ICommand {
 
 
     [Inject]

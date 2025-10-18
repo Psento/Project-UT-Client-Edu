@@ -1,8 +1,9 @@
 package svera.untiered.ui.commands {
+import svera.lib.framework.ICommand;
 import svera.untiered.core.signals.SetScreenSignal;
 import svera.untiered.ui.view.SplashView;
 
-public class ShowSplashUICommand {
+public class ShowSplashUICommand implements ICommand {
     [Inject]
     public var setScreen:SetScreenSignal;
 
@@ -11,7 +12,8 @@ public class ShowSplashUICommand {
     }
 
     public function execute():void {
-        this.setScreen.dispatch(new SplashView());
+        var splash:SplashView = new SplashView();
+        this.setScreen.dispatch(splash);
     }
 }
 }

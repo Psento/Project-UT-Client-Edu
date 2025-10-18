@@ -1,10 +1,11 @@
 package svera.untiered.honor.control {
+import svera.lib.framework.ICommand;
 import svera.untiered.core.signals.SetScreenSignal;
 import svera.untiered.honor.model.HonorModel;
 import svera.untiered.honor.model.HonorVO;
 import svera.untiered.honor.view.HonorView;
 
-public class ShowHonorViewCommand {
+public class ShowHonorViewCommand implements ICommand {
 
 
     [Inject]

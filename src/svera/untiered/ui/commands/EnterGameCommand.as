@@ -1,6 +1,8 @@
 package svera.untiered.ui.commands {
 import com.company.assembleegameclient.screens.CharacterSelectionAndNewsScreen;
 
+import svera.lib.framework.ICommand;
+
 import svera.untiered.account.core.Account;
 import svera.untiered.core.model.PlayerModel;
 import svera.untiered.core.signals.SetScreenWithValidDataSignal;
@@ -8,7 +10,7 @@ import svera.untiered.dialogs.control.OpenDialogSignal;
 import svera.untiered.game.model.GameInitData;
 import svera.untiered.game.signals.PlayGameSignal;
 
-public class EnterGameCommand {
+public class EnterGameCommand implements ICommand {
     [Inject]
     public var account:Account;
 

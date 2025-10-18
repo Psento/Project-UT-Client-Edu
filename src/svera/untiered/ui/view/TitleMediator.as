@@ -1,7 +1,7 @@
 package svera.untiered.ui.view {
 import com.company.assembleegameclient.mapeditor.MapEditor;
 
-import robotlegs.bender.bundles.mvcs.Mediator;
+import svera.lib.framework.Mediator;
 
 import svera.untiered.account.core.Account;
 import svera.untiered.account.core.signals.OpenAccountInfoSignal;
@@ -14,8 +14,6 @@ import svera.untiered.legends.view.LegendsView;
 import svera.untiered.ui.signals.EnterGameSignal;
 
 public class TitleMediator extends Mediator {
-    [Inject]
-    public var view:TitleView;
 
     [Inject]
     public var account:Account;
@@ -41,26 +39,26 @@ public class TitleMediator extends Mediator {
     [Inject]
     public var openDialog:OpenDialogSignal;
 
-    public function TitleMediator() {
-        super();
+    private function get getTitleView():TitleView {
+        return view as TitleView;
     }
 
     override public function initialize():void {
-        this.view.initialize();
-        this.view.playClicked.add(this.handleIntentionToPlay);
-        this.view.legendsClicked.add(this.showLegendsScreen);
-        this.view.editorClicked.add(this.showMapEditor);
-        this.view.accountClicked.add(this.handleIntentionToReviewAccount);
-        this.view.quitClicked.add(this.handleIntentionToQuitGame);
+        this.getTitleView.initialize();
+        this.getTitleView.playClicked.add(this.handleIntentionToPlay);
+        this.getTitleView.legendsClicked.add(this.showLegendsScreen);
+        this.getTitleView.editorClicked.add(this.showMapEditor);
+        this.getTitleView.accountClicked.add(this.handleIntentionToReviewAccount);
+        this.getTitleView.quitClicked.add(this.handleIntentionToQuitGame);
     }
 
     override public function destroy():void {
-        this.view.playClicked.remove(this.handleIntentionToPlay);
-        this.view.legendsClicked.remove(this.showLegendsScreen);
-        this.view.editorClicked.remove(this.showMapEditor);
-        this.view.accountClicked.remove(this.handleIntentionToReviewAccount);
-        this.view.quitClicked.remove(this.handleIntentionToQuitGame);
-        view.destroy();
+        this.getTitleView.playClicked.remove(this.handleIntentionToPlay);
+        this.getTitleView.legendsClicked.remove(this.showLegendsScreen);
+        this.getTitleView.editorClicked.remove(this.showMapEditor);
+        this.getTitleView.accountClicked.remove(this.handleIntentionToReviewAccount);
+        this.getTitleView.quitClicked.remove(this.handleIntentionToQuitGame);
+        getTitleView.destroy();
     }
 
     private function handleIntentionToPlay():void {

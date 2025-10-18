@@ -1,5 +1,5 @@
 package svera.untiered.game.view {
-import robotlegs.bender.bundles.mvcs.Mediator;
+import svera.lib.framework.Mediator;
 
 import svera.untiered.core.model.PlayerModel;
 

@@ -1,6 +1,8 @@
 package svera.untiered.characters.reskin.control {
 import flash.display.DisplayObject;
 
+import svera.lib.framework.ICommand;
+
 import svera.untiered.characters.reskin.view.ReskinCharacterView;
 import svera.untiered.classes.model.CharacterSkins;
 import svera.untiered.classes.model.ClassesModel;
@@ -9,7 +11,7 @@ import svera.untiered.classes.view.CharacterSkinListItemFactory;
 import svera.untiered.core.model.PlayerModel;
 import svera.untiered.dialogs.control.OpenDialogSignal;
 
-public class OpenReskinDialogCommand {
+public class OpenReskinDialogCommand implements ICommand {
     [Inject]
     public var openDialog:OpenDialogSignal;
 

@@ -1,16 +1,12 @@
 package svera.untiered.ui.view {
 import com.company.assembleegameclient.objects.Player;
 
-import robotlegs.bender.bundles.mvcs.Mediator;
+import svera.lib.framework.Mediator;
 
 import svera.untiered.ui.model.HUDModel;
 import svera.untiered.ui.signals.UpdateHUDSignal;
 
 public class StatMetersMediator extends Mediator {
-
-
-    [Inject]
-    public var view:StatMetersView;
 
     [Inject]
     public var hudModel:HUDModel;
@@ -18,8 +14,8 @@ public class StatMetersMediator extends Mediator {
     [Inject]
     public var updateHUD:UpdateHUDSignal;
 
-    public function StatMetersMediator() {
-        super();
+    private function get getStatMetersView():StatMetersView {
+        return view as StatMetersView;
     }
 
     override public function initialize():void {
@@ -31,7 +27,7 @@ public class StatMetersMediator extends Mediator {
     }
 
     private function onUpdateHUD(player:Player):void {
-        this.view.update(player);
+        this.getStatMetersView.update(player);
     }
 }
 }

@@ -4,7 +4,7 @@ import com.company.assembleegameclient.game.GameSprite;
 import com.company.assembleegameclient.sound.SoundEffectLibrary;
 
 
-import robotlegs.bender.bundles.mvcs.Mediator;
+import svera.lib.framework.Mediator;
 
 import svera.untiered.dialogs.control.CloseDialogsSignal;
 import svera.untiered.dialogs.control.OpenDialogSignal;

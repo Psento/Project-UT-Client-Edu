@@ -4,7 +4,7 @@ import com.company.assembleegameclient.objects.GameObject;
 
 import flash.utils.Dictionary;
 
-import robotlegs.bender.bundles.mvcs.Mediator;
+import svera.lib.framework.Mediator;
 
 import svera.untiered.game.focus.control.SetGameFocusSignal;
 

@@ -3,6 +3,8 @@ import com.company.assembleegameclient.screens.LoadingScreen;
 
 import flash.display.Sprite;
 
+import svera.lib.framework.ICommand;
+
 import svera.lib.tasks.DispatchSignalTask;
 import svera.lib.tasks.TaskMonitor;
 import svera.lib.tasks.TaskSequence;
@@ -10,7 +12,7 @@ import svera.untiered.account.core.services.GetCharListTask;
 import svera.untiered.core.model.PlayerModel;
 import svera.untiered.core.signals.SetScreenSignal;
 
-public class SetScreenWithValidDataCommand {
+public class SetScreenWithValidDataCommand implements ICommand {
 
 
     [Inject]

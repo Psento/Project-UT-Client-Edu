@@ -1,15 +1,13 @@
 package svera.untiered.core.view {
 import flash.display.Sprite;
 
-import robotlegs.bender.bundles.mvcs.Mediator;
+import svera.lib.framework.Mediator;
 
 import svera.untiered.core.model.ScreenModel;
 import svera.untiered.core.signals.GotoPreviousScreenSignal;
 import svera.untiered.core.signals.SetScreenSignal;
 
 public class ScreensMediator extends Mediator {
-    [Inject]
-    public var view:ScreensView;
 
     [Inject]
     public var setScreen:SetScreenSignal;
@@ -20,8 +18,8 @@ public class ScreensMediator extends Mediator {
     [Inject]
     public var gotoPrevious:GotoPreviousScreenSignal;
 
-    public function ScreensMediator() {
-        super();
+    private function get getScreensView():ScreensView {
+        return view as ScreensView;
     }
 
     override public function initialize():void {
@@ -36,11 +34,11 @@ public class ScreensMediator extends Mediator {
 
     private function onSetScreen(screen:Sprite):void {
         this.model.currentType = Object(screen).constructor as Class;
-        this.view.setScreen(screen);
+        this.getScreensView.setScreen(screen);
     }
 
     private function onGotoPrevious():void {
-        this.view.setScreen(this.view.getPrevious());
+        this.getScreensView.setScreen(this.getScreensView.getPrevious());
     }
 }
 }

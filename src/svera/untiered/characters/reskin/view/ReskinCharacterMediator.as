@@ -1,5 +1,5 @@
 package svera.untiered.characters.reskin.view {
-import robotlegs.bender.bundles.mvcs.Mediator;
+import svera.lib.framework.Mediator;
 
 import svera.untiered.characters.reskin.control.ReskinCharacterSignal;
 import svera.untiered.classes.model.CharacterSkins;

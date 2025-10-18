@@ -1,5 +1,5 @@
 package svera.untiered.game.view.components {
-import robotlegs.bender.bundles.mvcs.Mediator;
+import svera.lib.framework.Mediator;
 
 public class StatMediator extends Mediator {
 

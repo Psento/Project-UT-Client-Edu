@@ -4,7 +4,7 @@ import flash.events.MouseEvent;
 
 import org.swiftsuspenders.Injector;
 
-import robotlegs.bender.bundles.mvcs.Mediator;
+import svera.lib.framework.Mediator;
 
 import svera.lib.net.api.MessageProvider;
 import svera.lib.net.impl.SocketServer;

@@ -1,24 +1,22 @@
 package svera.untiered.ui.view {
 import com.company.assembleegameclient.screens.LoadingScreen;
 
-import robotlegs.bender.bundles.mvcs.Mediator;
+import svera.lib.framework.Mediator;
 
 import svera.untiered.core.signals.SetLoadingMessageSignal;
 
 public class LoadingMediator extends Mediator {
-    [Inject]
-    public var view:LoadingScreen;
 
     [Inject]
     public var setMessage:SetLoadingMessageSignal;
 
-    public function LoadingMediator() {
-        super();
+    private function get getLoadingScreen():LoadingScreen {
+        return view as LoadingScreen;
     }
 
     override public function initialize():void {
         this.setMessage.add(this.onSetMessage);
-        this.view.setText("<p align=\"center\">Loading...</p>");
+        this.getLoadingScreen.setText("<p align=\"center\">Loading...</p>");
     }
 
     override public function destroy():void {
@@ -26,7 +24,7 @@ public class LoadingMediator extends Mediator {
     }
 
     private function onSetMessage(message:String):void {
-        this.view.setText(message);
+        this.getLoadingScreen.setText(message);
     }
 }
 }

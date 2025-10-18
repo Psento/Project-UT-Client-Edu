@@ -4,17 +4,13 @@ import com.company.assembleegameclient.ui.dialogs.ErrorDialog;
 
 import flash.events.Event;
 
-import robotlegs.bender.bundles.mvcs.Mediator;
+import svera.lib.framework.Mediator;
 
 import svera.untiered.core.signals.InvalidateDataSignal;
 import svera.untiered.core.signals.SetScreenWithValidDataSignal;
 import svera.untiered.dialogs.control.CloseDialogsSignal;
 
 public class ErrorDialogMediator extends Mediator {
-
-
-    [Inject]
-    public var view:ErrorDialog;
 
     [Inject]
     public var invalidateData:InvalidateDataSignal;
@@ -24,18 +20,18 @@ public class ErrorDialogMediator extends Mediator {
 
     [Inject]
     public var close:CloseDialogsSignal;
-
-    public function ErrorDialogMediator() {
-        super();
+    // Type-safe view accessor
+    private function get errorDialog():ErrorDialog {
+        return view as ErrorDialog;
     }
 
-    override public function initialize():void {
-        addViewListener(Event.COMPLETE, this.onComplete);
-        this.view.ok.addOnce(this.onClose);
+    override protected function onInitialize():void {
+        errorDialog.addEventListener(Event.COMPLETE, this.onComplete);
+        errorDialog.ok.addOnce(this.onClose);
     }
 
     override public function destroy():void {
-        removeViewListener(Event.COMPLETE, this.onComplete);
+        errorDialog.removeEventListener(Event.COMPLETE, this.onComplete);
     }
 
     public function onClose():void {

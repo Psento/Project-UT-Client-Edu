@@ -1,7 +1,7 @@
 package svera.untiered.game.view {
 import com.company.assembleegameclient.ui.panels.PortalPanel;
 
-import robotlegs.bender.bundles.mvcs.Mediator;
+import svera.lib.framework.Mediator;
 
 import svera.untiered.game.signals.ExitGameSignal;
 

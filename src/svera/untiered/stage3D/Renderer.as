@@ -293,17 +293,17 @@ public class Renderer {
                 this.graphic3D_.setGraphic(test, this.context3D);
                 finalTransform.identity();
                 finalTransform.append(this.graphic3D_.getMatrix3D());
-                finalTransform.appendScale(1 / Stage3DConfig.HALF_WIDTH, 1 / Stage3DConfig.HALF_HEIGHT, 1);
-                finalTransform.appendTranslation(Renderer.tX / Stage3DConfig.WIDTH, Renderer.tY / Stage3DConfig.HEIGHT, 0);
+                finalTransform.appendScale(1 / Stage3DModule.HALF_WIDTH, 1 / Stage3DModule.HALF_HEIGHT, 1);
+                finalTransform.appendTranslation(Renderer.tX / Stage3DModule.WIDTH, Renderer.tY / Stage3DModule.HEIGHT, 0);
                 this.context3D.setProgramConstantsFromMatrix(Context3DProgramType.VERTEX, 0, finalTransform, true);
                 this.graphic3D_.render(this.context3D);
             }
             if (graphicsData is GraphicsGradientFill) {
                 this.context3D.GetContext3D().setProgram(this.shadowProgram_);
-                this.graphic3D_.setGradientFill(GraphicsGradientFill(graphicsData), this.context3D, Stage3DConfig.HALF_WIDTH, Stage3DConfig.HALF_HEIGHT);
+                this.graphic3D_.setGradientFill(GraphicsGradientFill(graphicsData), this.context3D, Stage3DModule.HALF_WIDTH, Stage3DModule.HALF_HEIGHT);
                 finalTransform.identity();
                 finalTransform.append(this.graphic3D_.getMatrix3D());
-                finalTransform.appendTranslation(Renderer.tX / Stage3DConfig.WIDTH, Renderer.tY / Stage3DConfig.HEIGHT, 0);
+                finalTransform.appendTranslation(Renderer.tX / Stage3DModule.WIDTH, Renderer.tY / Stage3DModule.HEIGHT, 0);
                 this.context3D.setProgramConstantsFromMatrix(Context3DProgramType.VERTEX, 0, finalTransform, true);
                 this.context3D.setProgramConstantsFromVector(Context3DProgramType.FRAGMENT, 4, Vector.<Number>([0.5, 0.25, 0, 0]));
                 this.graphic3D_.renderShadow(this.context3D);
@@ -317,7 +317,7 @@ public class Renderer {
                     finalTransform.append(graphicsDatum3d[index3d].GetModelMatrix());
                     finalTransform.append(this.cameraMatrix_);
                     finalTransform.append(this._projection);
-                    finalTransform.appendTranslation(Renderer.tX / Stage3DConfig.WIDTH, Renderer.tY / Stage3DConfig.HEIGHT * 11.5, 0);
+                    finalTransform.appendTranslation(Renderer.tX / Stage3DModule.WIDTH, Renderer.tY / Stage3DModule.HEIGHT * 11.5, 0);
                     this.context3D.setProgramConstantsFromMatrix(Context3DProgramType.VERTEX, 0, finalTransform, true);
                     this.context3D.setProgramConstantsFromMatrix(Context3DProgramType.VERTEX, 8, graphicsDatum3d[index3d].GetModelMatrix(), true);
                     graphicsDatum3d[index3d].draw(this.context3D.GetContext3D());

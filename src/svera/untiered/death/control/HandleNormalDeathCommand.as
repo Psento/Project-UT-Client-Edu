@@ -1,6 +1,6 @@
 package svera.untiered.death.control {
-import robotlegs.bender.framework.api.ILogger;
 
+import svera.lib.framework.ICommand;
 import svera.lib.tasks.DispatchSignalTask;
 import svera.lib.tasks.TaskMonitor;
 import svera.lib.tasks.TaskSequence;
@@ -12,7 +12,7 @@ import svera.untiered.honor.model.SimpleHonorVO;
 import svera.untiered.game.signals.DisconnectGameSignal;
 import svera.untiered.messaging.impl.incoming.Death;
 
-public class HandleNormalDeathCommand {
+public class HandleNormalDeathCommand implements ICommand {
 
 
     [Inject]
@@ -32,9 +32,6 @@ public class HandleNormalDeathCommand {
 
     [Inject]
     public var disconnect:DisconnectGameSignal;
-
-    [Inject]
-    public var logger:ILogger;
 
     private var honorVO:HonorVO;
 

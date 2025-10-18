@@ -1,9 +1,9 @@
 package svera.untiered.core {
 import org.swiftsuspenders.Injector;
 
-import robotlegs.bender.framework.impl.Context;
+import svera.lib.framework.AppContext;
 
-public class StaticInjectorContext extends Context {
+public class StaticInjectorContext extends AppContext {
 
     public static var injector:Injector;
 

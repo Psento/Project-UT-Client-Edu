@@ -14,7 +14,7 @@ import com.company.assembleegameclient.ui.panels.itemgrids.itemtiles.ItemTileEve
 import com.company.assembleegameclient.ui.tooltip.ToolTip;
 import com.company.assembleegameclient.util.DisplayHierarchy;
 
-import robotlegs.bender.bundles.mvcs.Mediator;
+import svera.lib.framework.Mediator;
 
 import svera.untiered.core.model.MapModel;
 import svera.untiered.core.model.PlayerModel;

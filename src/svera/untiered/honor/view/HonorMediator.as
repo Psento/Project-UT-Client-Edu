@@ -1,7 +1,7 @@
 package svera.untiered.honor.view {
 import flash.display.BitmapData;
 
-import robotlegs.bender.bundles.mvcs.Mediator;
+import svera.lib.framework.Mediator;
 
 import svera.untiered.assets.services.CharacterFactory;
 import svera.untiered.core.signals.GotoPreviousScreenSignal;

@@ -3,7 +3,7 @@ import com.company.assembleegameclient.appengine.SavedCharacter;
 import com.company.assembleegameclient.screens.CharacterSelectionAndNewsScreen;
 import com.company.assembleegameclient.screens.NewCharacterScreen;
 
-import robotlegs.bender.bundles.mvcs.Mediator;
+import svera.lib.framework.Mediator;
 
 import svera.untiered.classes.model.CharacterClass;
 import svera.untiered.classes.model.ClassesModel;
@@ -14,10 +14,6 @@ import svera.untiered.game.signals.PlayGameSignal;
 import svera.untiered.ui.signals.NameChangedSignal;
 
 public class CurrentCharacterMediator extends Mediator {
-
-
-    [Inject]
-    public var view:CharacterSelectionAndNewsScreen;
 
     [Inject]
     public var playerModel:PlayerModel;
@@ -34,29 +30,29 @@ public class CurrentCharacterMediator extends Mediator {
     [Inject]
     public var nameChanged:NameChangedSignal;
 
-    public function CurrentCharacterMediator() {
-        super();
+    private function getCharacterSelectionAndNewsScreen():CharacterSelectionAndNewsScreen {
+        return view as CharacterSelectionAndNewsScreen;
     }
 
     override public function initialize():void {
-        this.view.close.add(this.onClose);
-        this.view.newCharacter.add(this.onNewCharacter);
-        this.view.showClasses.add(this.onNewCharacter);
-        this.view.playGame.add(this.onPlayGame);
-        this.view.initialize(this.playerModel);
+        this.getCharacterSelectionAndNewsScreen.close.add(this.onClose);
+        this.getCharacterSelectionAndNewsScreen.newCharacter.add(this.onNewCharacter);
+        this.getCharacterSelectionAndNewsScreen.showClasses.add(this.onNewCharacter);
+        this.getCharacterSelectionAndNewsScreen.playGame.add(this.onPlayGame);
+        this.getCharacterSelectionAndNewsScreen.initialize(this.playerModel);
         this.nameChanged.add(this.onNameChanged);
     }
 
     override public function destroy():void {
         this.nameChanged.remove(this.onNameChanged);
-        this.view.close.remove(this.onClose);
-        this.view.newCharacter.remove(this.onNewCharacter);
-        this.view.showClasses.remove(this.onNewCharacter);
-        this.view.playGame.remove(this.onPlayGame);
+        this.getCharacterSelectionAndNewsScreen.close.remove(this.onClose);
+        this.getCharacterSelectionAndNewsScreen.newCharacter.remove(this.onNewCharacter);
+        this.getCharacterSelectionAndNewsScreen.showClasses.remove(this.onNewCharacter);
+        this.getCharacterSelectionAndNewsScreen.playGame.remove(this.onPlayGame);
     }
 
     private function onNameChanged(name:String):void {
-        this.view.setName(name);
+        this.getCharacterSelectionAndNewsScreen.setName(name);
     }
 
     private function onNewCharacter():void {

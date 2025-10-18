@@ -1,29 +1,25 @@
 package svera.untiered.ui.view {
-import robotlegs.bender.bundles.mvcs.Mediator;
+import svera.lib.framework.Mediator;
 
 import svera.untiered.account.core.signals.OpenAccountInfoSignal;
 
 public class ChooseNameRegisterMediator extends Mediator {
 
-
-    [Inject]
-    public var view:ChooseNameRegisterDialog;
-
     [Inject]
     public var openAccountManagement:OpenAccountInfoSignal;
 
-    public function ChooseNameRegisterMediator() {
-        super();
+    private function getChooseNameRegisterDialog():ChooseNameRegisterDialog {
+       return view as ChooseNameRegisterDialog;
     }
 
     override public function initialize():void {
-        this.view.register.add(this.onRegister);
-        this.view.cancel.add(this.onCancel);
+        this.getChooseNameRegisterDialog.register.add(this.onRegister);
+        this.getChooseNameRegisterDialog.cancel.add(this.onCancel);
     }
 
     override public function destroy():void {
-        this.view.register.remove(this.onRegister);
-        this.view.cancel.remove(this.onCancel);
+        this.getChooseNameRegisterDialog.register.remove(this.onRegister);
+        this.getChooseNameRegisterDialog.cancel.remove(this.onCancel);
     }
 
     private function onRegister():void {

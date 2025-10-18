@@ -1,7 +1,7 @@
 package svera.untiered.characters.deletion.view {
 import com.company.assembleegameclient.appengine.SavedCharacter;
 
-import robotlegs.bender.bundles.mvcs.Mediator;
+import svera.lib.framework.Mediator;
 
 import svera.untiered.characters.deletion.control.DeleteCharacterSignal;
 import svera.untiered.characters.model.CharacterModel;

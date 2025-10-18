@@ -1,4 +1,5 @@
 package svera.untiered.classes.control {
+import svera.lib.framework.ICommand;
 import svera.untiered.assets.model.CharacterTemplate;
 import svera.untiered.classes.model.CharacterClass;
 import svera.untiered.classes.model.CharacterClassStat;
@@ -6,7 +7,7 @@ import svera.untiered.classes.model.CharacterSkin;
 import svera.untiered.classes.model.CharacterSkinState;
 import svera.untiered.classes.model.ClassesModel;
 
-public class ParseClassesXmlCommand {
+public class ParseClassesXmlCommand implements ICommand {
     public static const CLASSIC_NAME:String = "Classic";
 
     [Inject]

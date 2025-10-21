@@ -90,29 +90,6 @@ public class EquipmentToolTip extends ToolTip {
         //this.makeEffectsList();
         this.makeRestrictionList();
         this.makeRestrictionText();
-        this.addTestItemDataText();
-    }
-
-    private function addTestItemDataText():void {
-        this.uuidText = new SimpleText(14, 11776947, false, MAX_WIDTH, 0);
-        this.uuidText.wordWrap = true;
-        this.uuidText.text = this.item.Uuid;
-        this.uuidText.updateMetrics();
-        this.uuidText.filters = [new DropShadowFilter(0, 0, 0, 0.5, 12, 12)];
-        this.uuidText.x = 4;
-        this.uuidText.y = this.yOffset;
-        this.yOffset = this.uuidText.y + this.uuidText.height + 8;
-        addChild(this.uuidText);
-
-        /*this.dateText = new SimpleText(14, 11776947, false, MAX_WIDTH, 0);
-        this.dateText.wordWrap = true;
-        this.dateText.text = this.item.CreationTime.toLocaleString();
-        this.dateText.updateMetrics();
-        this.dateText.filters = [new DropShadowFilter(0, 0, 0, 0.5, 12, 12)];
-        this.dateText.x = 4;
-        this.dateText.y = this.yOffset;
-        this.yOffset = this.dateText.y + this.dateText.height + 8;
-        addChild(this.dateText);*/
     }
 
 

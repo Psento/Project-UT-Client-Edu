@@ -1,7 +1,6 @@
 package svera.untiered.itemdata {
 import com.company.assembleegameclient.objects.ObjectLibrary;
 import com.company.util.Base64Decoder;
-import com.company.util.Guid;
 
 import flash.utils.ByteArray;
 import flash.utils.Dictionary;
@@ -9,9 +8,6 @@ import flash.utils.Dictionary;
 public class NewItemData extends Item {
 
     private const keys:Dictionary = new Dictionary();// Closest thing to a hashset
-
-    private var uuid:String = Guid.Empty;
-    public final function get Uuid():String { return uuid }
 
     private var killTracker:int = 0;
     public final function get KillTracker():int { return killTracker; }
@@ -43,12 +39,6 @@ public class NewItemData extends Item {
             var key:int = data.readUnsignedShort();
             item.keys[key] = null;
             switch (key) {
-                case DataKeys.Uuid:
-                    item.uuid = Guid.guidDataToString(data);
-                    break;
-                case DataKeys.CommandTag:
-                    data.position += 5;
-                    break;
                 case DataKeys.KillTracker:
                     item.killTracker = data.readInt();
                     break;

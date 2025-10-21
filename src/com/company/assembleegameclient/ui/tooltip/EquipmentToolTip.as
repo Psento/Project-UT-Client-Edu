@@ -14,11 +14,14 @@ import flash.filters.DropShadowFilter;
 import flash.text.StyleSheet;
 import flash.utils.Dictionary;
 
+import svera.untiered.itemdata.ActivateEffectsData;
+
 import svera.untiered.itemdata.LinkUtils;
 import svera.untiered.itemdata.ProjectileData;
 
 import svera.untiered.constants.ActivationType;
 import svera.untiered.itemdata.NewItemData;
+import svera.untiered.itemdata.subDesc.StatBoost;
 import svera.untiered.messaging.impl.data.StatData;
 
 public class EquipmentToolTip extends ToolTip {
@@ -36,7 +39,6 @@ public class EquipmentToolTip extends ToolTip {
     private var player_:Player;
     private var item:NewItemData;
     private var isEquippable_:Boolean = false;
-    private var objectXML_:XML = null;
     private var playerCanUse:Boolean;
     private var restrictions:Vector.<Restriction>;
     private var effects:Vector.<Effect>;
@@ -47,9 +49,6 @@ public class EquipmentToolTip extends ToolTip {
     private var isInventoryFull:Boolean;
     private var yOffset:int;
     private var currItem:NewItemData;
-
-    private var uuidText:SimpleText;
-    private var dateText:SimpleText;
 
 
     public function EquipmentToolTip(itemData:NewItemData, player:Player, invType:int, inventoryOwnerType:String, inventorySlotID:uint = 1.0) {
@@ -62,7 +61,6 @@ public class EquipmentToolTip extends ToolTip {
         var backgroundColor:uint = this.playerCanUse || this.player_ == null ? 0x363636 : 6036765;
         var outlineColor:uint = this.playerCanUse || player == null ? 0x9B9B9B : 10965039;
         super(backgroundColor, 1, outlineColor, 1, true);
-        this.objectXML_ = ObjectLibrary.xmlLibrary_[itemData.ObjectType];
         var equipSlotIndex:int = Boolean(this.player_) ? int(ObjectLibrary.getMatchingSlotIndex(this.item, this.player_)) : int(-1);
         this.isEquippable_ = equipSlotIndex != -1;
         this.effects = new Vector.<Effect>();
@@ -79,15 +77,15 @@ public class EquipmentToolTip extends ToolTip {
         this.addTitle();
         this.addTierText();
         this.addDescriptionText();
-        //this.addNumProjectilesTagsToEffectsList();
-        //this.addProjectileTagsToEffectsList();
-        //this.addActivateTagsToEffectsList();
-        //this.addActivateOnEquipTagsToEffectsList();
-        //this.addCooldownTagToEffectsList();
-        //this.addDoseTagsToEffectsList();
-        //this.addMpCostTagToEffectsList();
-        //this.addHonorBonusTagToEffectsList();
-        //this.makeEffectsList();
+        this.addNumProjectilesTagsToEffectsList();
+        this.addProjectileTagsToEffectsList();
+        this.addActivateTagsToEffectsList();
+        this.addActivateOnEquipTagsToEffectsList();
+        this.addCooldownTagToEffectsList();
+        this.addDoseTagsToEffectsList();
+        this.addMpCostTagToEffectsList();
+        this.addHonorBonusTagToEffectsList();
+        this.makeEffectsList();
         this.makeRestrictionList();
         this.makeRestrictionText();
     }
@@ -122,72 +120,70 @@ public class EquipmentToolTip extends ToolTip {
     }
 
     private function addTierText():void {
+        if (this.item.Consumable || this.isPet())
+            return;
+
         this.tierText = new SimpleText(16, 16777215, false, 30, 0);
         this.tierText.setBold(true);
         this.tierText.y = this.icon_.height / 2 - this.titleText_.actualHeight_ / 2;
         this.tierText.x = MAX_WIDTH - 30;
-        if (!this.objectXML_.hasOwnProperty("Consumable") && !this.isPet()) {
-            if (this.objectXML_.hasOwnProperty("Tier")) {
-                this.tierText.text = "T" + this.objectXML_.Tier;
-
-            }
-            else if (objectXML_.hasOwnProperty("TierType")) {
-                switch (objectXML_.TierType) {
-                    case "Celestial":
-                        tierText.setColor(TooltipHelper.CELESTIAL_COLOR);
-                        tierText.text = "CL";
-                        break;
-                    case "Exiled":
-                        tierText.setColor(TooltipHelper.EXILED_COLOR);
-                        tierText.text = "EX";
-                        break;
-                    case "Relic":
-                        tierText.setColor(TooltipHelper.RELIC_COLOR);
-                        tierText.text = "R";
-                        break;
-                    case "Valiant":
-                        tierText.setColor(TooltipHelper.VALIANT_COLOR);
-                        tierText.text = "VL";
-                        break;
-                    case "Ancestral":
-                        tierText.setColor(TooltipHelper.ANCESTRAL_COLOR);
-                        tierText.text = "AN";
-                        break;
-                    case "Artifact":
-                        tierText.setColor(TooltipHelper.ARTIFACT_COLOR);
-                        tierText.text = "A";
-                        break;
-                    case "Tarnished":
-                        tierText.setColor(TooltipHelper.TARNISHED_COLOR);
-                        tierText.text = "T";
-                        break;
-                    case "Uncommon":
-                        tierText.setColor(TooltipHelper.UNCOMMON_COLOR);
-                        tierText.text = "UC";
-                        break;
-                    case "Stat":
-                        tierText.setColor(16777215);
-                        tierText.text = "S";
-                        break;
-                    case "Common":
-                        tierText.setColor(TooltipHelper.COMMON_COLOR);
-                        tierText.text = "C";
-                        break;
-                }
-            }
-            else {
+        switch (this.item.TierType) {
+            case "Celestial":
+                tierText.setColor(TooltipHelper.CELESTIAL_COLOR);
+                tierText.text = "CL";
+                break;
+            case "Exiled":
+                tierText.setColor(TooltipHelper.EXILED_COLOR);
+                tierText.text = "EX";
+                break;
+            case "Relic":
+                tierText.setColor(TooltipHelper.RELIC_COLOR);
+                tierText.text = "R";
+                break;
+            case "Valiant":
+                tierText.setColor(TooltipHelper.VALIANT_COLOR);
+                tierText.text = "VL";
+                break;
+            case "Ancestral":
+                tierText.setColor(TooltipHelper.ANCESTRAL_COLOR);
+                tierText.text = "AN";
+                break;
+            case "Artifact":
+                tierText.setColor(TooltipHelper.ARTIFACT_COLOR);
+                tierText.text = "A";
+                break;
+            case "Tarnished":
+                tierText.setColor(TooltipHelper.TARNISHED_COLOR);
+                tierText.text = "T";
+                break;
+            case "Uncommon":
+                tierText.setColor(TooltipHelper.UNCOMMON_COLOR);
+                tierText.text = "UC";
+                break;
+            case "Stat":
+                tierText.setColor(16777215);
+                tierText.text = "S";
+                break;
+            case "Common":
+                tierText.setColor(TooltipHelper.COMMON_COLOR);
+                tierText.text = "C";
+                break;
+            default:
                 this.tierText.setColor(9055202);
                 this.tierText.text = "UT";
-            }
-            this.tierText.updateMetrics();
-            addChild(this.tierText);
+                break;
         }
+
+        this.tierText.updateMetrics();
+        addChild(this.tierText);
     }
 
     private function isPet():Boolean {
-        var activateTags:XMLList = null;
-        activateTags = this.objectXML_.Activate.(text() == "PermaPet");
-        return activateTags.length() >= 1;
+        for each(var e:ActivateEffectsData in this.item.ActivateEffects) {
+            if (e.Id == "PermaPet")
+                    return true;
+        }
+        return false;
     }
 
     private function addTitle():void {
@@ -207,14 +203,11 @@ public class EquipmentToolTip extends ToolTip {
     }
 
     private function buildUniqueTooltipData():String {
-        var effectDataList:XMLList = null;
         var uniqueEffectList:Vector.<Effect> = null;
-        var effectDataXML:XML = null;
-        if (this.objectXML_.hasOwnProperty("ExtraTooltipData")) {
-            effectDataList = this.objectXML_.ExtraTooltipData.EffectInfo;
+        if (this.item.ExtraToolTipData.length > 0) {
             uniqueEffectList = new Vector.<Effect>();
-            for each(effectDataXML in effectDataList) {
-                uniqueEffectList.push(new Effect(effectDataXML.attribute("name"), effectDataXML.attribute("description")));
+            for each(var data:Object in this.item.ExtraToolTipData) {
+                uniqueEffectList.push(new Effect(data["Name"], data["Description"]));
             }
             return this.BuildEffectsHTML(uniqueEffectList) + "\n";
         }
@@ -223,7 +216,7 @@ public class EquipmentToolTip extends ToolTip {
 
     private function makeEffectsList():void {
         this.yOffset = this.descText_.y + this.descText_.height + 8;
-        if (this.effects.length != 0 || this.objectXML_.hasOwnProperty("ExtraTooltipData")) {
+        if (this.effects.length != 0 || this.item.ExtraToolTipData.length > 0) {
             this.line1_ = new LineBreakDesign(MAX_WIDTH - 12, 0);
             this.line1_.x = 8;
             this.line1_.y = this.yOffset;
@@ -241,15 +234,15 @@ public class EquipmentToolTip extends ToolTip {
     }
 
     private function addNumProjectilesTagsToEffectsList():void {
-        if (item.NumProjectiles) {
+        if (item.NumProjectiles && item.Projectiles.length > 0) {
             this.effects.push(new Effect("Shots", item.NumProjectiles.toString()));
         }
-        if (item.NumProjectiles1) {
+        /*if (item.NumProjectiles1) {
             this.effects.push(new Effect("Shots", item.NumProjectiles1.toString()));
         }
         if (item.NumProjectiles2) {
             this.effects.push(new Effect("Shots", item.NumProjectiles2.toString()));
-        }
+        }*/
     }
 
     private function addHonorBonusTagToEffectsList():void {
@@ -264,14 +257,13 @@ public class EquipmentToolTip extends ToolTip {
     }
 
     private function addMpCostTagToEffectsList():void {
-        if (this.objectXML_.hasOwnProperty("MpCost")) {
-            this.effects.push(new Effect("MP Cost", this.objectXML_.MpCost));
-        }
+        if (this.item.MpCost == 0) return;
+        this.effects.push(new Effect("MP Cost", this.item.MpCost.toString()));
     }
 
     private function addCooldownTagToEffectsList():void {
         if (this.item.Cooldown != 500) {
-            this.effects.push(new Effect("Cooldown: {cd}", this.item.Cooldown / 1000 + " seconds"));
+            this.effects.push(new Effect("Cooldown", this.item.Cooldown / 1000 + " seconds"));
         }
     }
 
@@ -282,10 +274,8 @@ public class EquipmentToolTip extends ToolTip {
     }
 
     private function addProjectileTagsToEffectsList():void {
-        var projXML:XML = null;
         var range:Number = NaN;
-        var condEffectXML:XML = null;
-        if (this.objectXML_.hasOwnProperty("Projectile")) {
+        if (this.item.Projectiles.length > 0) {
             var proj:ProjectileData = this.item.Projectiles[0];
             var minDmg:int = proj.MinDamage;
             var maxDmg:int = proj.MaxDamage;
@@ -293,12 +283,12 @@ public class EquipmentToolTip extends ToolTip {
             var dmgString:String = dmg > 0 ? dmg.toString() : minDmg == maxDmg ? minDmg.toString() : minDmg + " - " + maxDmg;
             this.effects.push(new Effect("Damage", dmgString));
 
-            range = Number(projXML.Speed) * Number(projXML.LifetimeMS) / 10000;
+            range = proj.Speed * proj.LifetimeMS / 10000;
             this.effects.push(new Effect("Range", TooltipHelper.getFormattedString(range)));
-            if (this.objectXML_.Projectile.hasOwnProperty("MultiHit")) {
+            if (proj.MultiHit) {
                 this.effects.push(new Effect("", "Shots hit multiple targets"));
             }
-            if (this.objectXML_.Projectile.hasOwnProperty("PassesCover")) {
+            if (proj.PassesCover) {
                 this.effects.push(new Effect("", "Shots pass through obstacles"));
             }
 
@@ -306,67 +296,69 @@ public class EquipmentToolTip extends ToolTip {
                 this.effects.push(new Effect("Rate of Fire", Math.round(this.item.RateOfFire * 100) + "%"));
             }
 
-            for each(condEffectXML in projXML.ConditionEffect) {
-                this.effects.push(new Effect("Shot Effect", this.objectXML_.Projectile.ConditionEffect + " for " + this.objectXML_.Projectile.ConditionEffect.@duration + " secs"));
+            for each(var obj:Object in proj.ChanceEffects) {
+                this.effects.push(new Effect("Shot Effect", obj["Chance"] + "% " + obj["Effect"] + " for " + obj["Duration"] + " secs"));
             }
         }
     }
 
     private function addActivateTagsToEffectsList():void {
-        var activateXML:XML = null;
+        var activateXML:ActivateEffectsData = null;
         var val:String = null;
         var stat:int = 0;
         var amt:int = 0;
         var activationType:String = null;
-        for each(activateXML in this.objectXML_.Activate) {
-            activationType = activateXML.toString();
+        trace("len: ", this.item.ActivateEffects.length);
+        for each(activateXML in this.item.ActivateEffects) {
+            activationType = activateXML.Effect;
+            trace(activationType);
             switch (activationType) {
                 case ActivationType.DYE:
                     this.effects.push(new Effect("", "Changes texture of your character"));
                     continue;
                 case ActivationType.COND_EFFECT_AURA:
-                    this.effects.push(new Effect("Party Effect", "Within " + activateXML.@range + " sqrs"));
-                    this.effects.push(new Effect("", activateXML.@effect + " for " + activateXML.@duration + " secs"));
+                    this.effects.push(new Effect("Party Effect", "Within " + activateXML.Range + " sqrs"));
+                    this.effects.push(new Effect("", activateXML.ConditionEffect + " for " + activateXML.DurationSec + " secs"));
                     continue;
                 case ActivationType.COND_EFFECT_SELF:
                     this.effects.push(new Effect("Effect on Self", ""));
-                    this.effects.push(new Effect("", activateXML.@effect + " for " + activateXML.@duration + " secs"));
+                    this.effects.push(new Effect("", activateXML.ConditionEffect + " for " + activateXML.DurationSec + " secs"));
                     continue;
                 case ActivationType.HEAL:
-                    this.effects.push(new Effect("", "+" + activateXML.@amount + " HP"));
+                    this.effects.push(new Effect("", "+" + activateXML.Amount + " HP"));
                     continue;
                 case ActivationType.HEAL_NOVA:
-                    this.effects.push(new Effect("Party Heal", activateXML.@amount + " HP at " + activateXML.@range + " sqrs"));
+                    this.effects.push(new Effect("Party Heal", activateXML.Amount + " HP at " + activateXML.Range + " sqrs"));
                     continue;
                 case ActivationType.MAGIC:
-                    this.effects.push(new Effect("", "+" + activateXML.@amount + " RP"));
+                    this.effects.push(new Effect("", "+" + activateXML.Amount + " RP"));
                     continue;
                 case ActivationType.MAGIC_NOVA:
-                    this.effects.push(new Effect("Fill Party Magic", activateXML.@amount + " RP at " + activateXML.@range + " sqrs"));
+                    this.effects.push(new Effect("Fill Party Magic", activateXML.Amount + " RP at " + activateXML.Range + " sqrs"));
                     continue;
                 case ActivationType.TELEPORT:
                     this.effects.push(new Effect("", "Teleport to Target"));
                     continue;
                 case ActivationType.VAMPIRE_BLAST:
-                    this.effects.push(new Effect("Steal", activateXML.@totalDamage + " HP within " + activateXML.@radius + " sqrs"));
+                    this.effects.push(new Effect("Steal", activateXML.TotalDamage + " HP within " + activateXML.Radius + " sqrs"));
                     continue;
                 case ActivationType.TRAP:
-                    this.effects.push(new Effect("Trap", activateXML.@totalDamage + " HP within " + activateXML.@radius + " sqrs"));
-                    this.effects.push(new Effect("", activateXML.@effect + " for " + activateXML.@duration + " secs"));
+                    this.effects.push(new Effect("Trap", activateXML.TotalDamage + " HP within " + activateXML.Radius + " sqrs"));
+                    this.effects.push(new Effect("", activateXML.ConditionEffect + " for " + activateXML.DurationSec + " secs"));
                     continue;
                 case ActivationType.STASIS_BLAST:
-                    this.effects.push(new Effect("Stasis on Group", activateXML.@duration + " secs"));
+                    this.effects.push(new Effect("Stasis on Group", activateXML.DurationSec + " secs"));
                     continue;
                 case ActivationType.DECOY:
-                    this.effects.push(new Effect("Decoy", activateXML.@duration + " secs"));
+                    this.effects.push(new Effect("Decoy", activateXML.DurationSec + " secs"));
                     continue;
                 case ActivationType.LIGHTNING:
                     this.effects.push(new Effect("Lightning", ""));
-                    this.effects.push(new Effect("", activateXML.@totalDamage + " to " + activateXML.@maxTargets + " targets"));
+                    this.effects.push(new Effect("", activateXML.TotalDamage + " to " + activateXML.MaxTargets + " targets"));
                     continue;
                 case ActivationType.POISON_GRENADE:
                     this.effects.push(new Effect("Poison Grenade", ""));
-                    this.effects.push(new Effect("", activateXML.@totalDamage + " HP over " + activateXML.@duration + " secs within " + activateXML.@radius + " sqrs"));
+                    this.effects.push(new Effect("", activateXML.TotalDamage + " HP over " + activateXML.DurationSec + " secs within " + activateXML.Radius + " sqrs"));
                     continue;
                 case ActivationType.REMOVE_NEG_COND:
                     this.effects.push(new Effect("", "Removes negative conditions"));
@@ -378,13 +370,13 @@ public class EquipmentToolTip extends ToolTip {
                     this.effects.push(new Effect("Shots", "20"));
                     continue;
                 case ActivationType.SHURIKEN:
-                    this.effects.push(new Effect("Shots", activateXML.@amount));
+                    this.effects.push(new Effect("Shots", activateXML.Amount.toString()));
                     this.effects.push(new Effect("", "Stars seek nearby enemies"));
                     this.effects.push(new Effect("", "Dazes nearby enemies"));
                     continue;
                 case ActivationType.INCREMENT_STAT:
-                    stat = int(activateXML.@stat);
-                    amt = int(activateXML.@amount);
+                    stat = activateXML.Stat;
+                    amt = activateXML.Amount;
                     if (stat != 0 && stat != 1) {
                         val = "Permanently increases " + LinkUtils.statIndexToName(stat);
                     } else {
@@ -403,63 +395,35 @@ public class EquipmentToolTip extends ToolTip {
     }
 
     private function addActivateOnEquipTagsToEffectsList():void {
-        var activateXML:XML = null;
-        var stats:Dictionary = new Dictionary();
-        var datas:Dictionary = new Dictionary();
-        for each(activateXML in this.objectXML_.ActivateOnEquip) {
-            var stat:int = int(activateXML.@stat);
-            var amount:int = int(activateXML.@amount);
+        if (this.item.StatBoosts.length == 0 && this.item.StatBoostsPerc.length == 0)
+                return;
 
-            if (stats[stat] == null) {
-                stats[stat] = 0;
-            }
-            stats[stat] = stats[stat] + amount;
+        this.effects.push(new Effect("On Equip", ""));
+
+        for each(var b:StatBoost in this.item.StatBoosts){
+            this.effects.push(new Effect("", this.addIncrementStatTag(b.Index, b.Amount, false)));
         }
 
-        if (this.item) {
-
-        }
-
-        var isEmpty:Boolean = true;
-        var s:Object;
-        for each (s in stats) {
-            if (s != null) {
-                isEmpty = false;
-                break;
-            }
-        }
-
-        if (!isEmpty) {
-            this.effects.push(new Effect("On Equip", ""));
-
-            for (s in stats) {
-                var key:int = int(s);
-                var value:int = stats[s];
-                var data:int = datas[key] == null ? 0 : datas[key];
-
-                this.effects.push(new Effect("", this.addIncrementStatTag(key, value, data)));
-            }
+        for each(var b1:StatBoost in this.item.StatBoostsPerc){
+            this.effects.push(new Effect("", this.addIncrementStatTag(b1.Index, b1.Amount, true)));
         }
     }
 
-    private function addIncrementStatTag(stat:int, amount:int, data:int):String {
-        var amountString:String = null;
-        var dataString:String = null;
+    private function addIncrementStatTag(stat:int, amount:int, percent:Boolean):String {
+        var amountString:String = "";
         var textColor:String = TooltipHelper.DEFAULT_COLOR;
         if (amount > -1) {
-            amountString = String("+" + amount);
+            amountString += "+" + amount;
         } else {
-            amountString = String(amount);
+            amountString += "-" + amount;
             textColor = "#ff0000";
         }
 
-        if (data > 0) {
-            dataString = " (+" + data + ")";
-        } else {
-            dataString = "";
+        if (percent){
+            amountString += "%";
         }
 
-        return TooltipHelper.wrapInFontTag(amountString + dataString + " " + LinkUtils.statIndexToName(stat), textColor);
+        return TooltipHelper.wrapInFontTag(amountString + " " + LinkUtils.statIndexToName(stat), textColor);
     }
 
     private function addEquipmentItemRestrictions():void {
@@ -518,14 +482,14 @@ public class EquipmentToolTip extends ToolTip {
         if (usable != null) {
             this.restrictions.push(new Restriction("Usable by: " + usable.join(", "), 11776947, false));
         }
-        for each(reqXML in this.objectXML_.EquipRequirement) {
+        /*for each(reqXML in this.objectXML_.EquipRequirement) {
             reqMet = ObjectLibrary.playerMeetsRequirement(reqXML, this.player_);
             if (reqXML.toString() == "Stat") {
                 stat = int(reqXML.@stat);
                 value = int(reqXML.@value);
                 this.restrictions.push(new Restriction("Requires " + LinkUtils.statIndexToName(stat) + " of " + value, reqMet ? 11776947 : 16549442, reqMet ? Boolean(false) : Boolean(true)));
             }
-        }
+        }*///Todo
     }
 
     private function makeRestrictionText():void {

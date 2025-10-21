@@ -50,6 +50,7 @@ public class ActivateEffectsData {
     public var RandVals:Array;
     public var ObjType:int;
     public var NumShots:int;
+    public var Stat:int;
 
     public function ActivateEffectsData(idx:int) {
         this.idx = idx;
@@ -104,6 +105,7 @@ public class ActivateEffectsData {
         ae.RandVals = LinkUtils.parseAttributeString(xml, "@randVals").replace(" ", "").split(",");
         ae.ObjType = LinkUtils.parseAttributeInt(xml, "@objType");
         ae.NumShots = LinkUtils.parseAttributeInt(xml, "@numShots");
+        ae.Stat = LinkUtils.parseAttributeInt(xml, "@stat");
         return ae;
     }
 }

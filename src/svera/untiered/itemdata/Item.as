@@ -1,4 +1,5 @@
 package svera.untiered.itemdata {
+import svera.untiered.itemdata.subDesc.StatBoost;
 
 
 public class Item {
@@ -14,9 +15,6 @@ public class Item {
 
     private var _slotType:int;
     public final function get SlotType():int { return _slotType; }
-
-    private var _tier:int;
-    public final function get Tier():int { return _tier; }
 
     private var _description:String;
     public final function get Description():String { return _description; }
@@ -159,11 +157,11 @@ public class Item {
     private var _texture2:int;
     public final function get Texture2():int { return _texture2; }
 
-    private var _statBoosts:Array;
-    public final function get StatBoosts():Array { return _statBoosts; }
+    private var _statBoosts:Vector.<StatBoost>;
+    public final function get StatBoosts():Vector.<StatBoost> { return _statBoosts; }
 
-    private var _statBoostsPerc:Array;
-    public final function get StatBoostsPerc():Array { return _statBoostsPerc; }
+    private var _statBoostsPerc:Vector.<StatBoost>;
+    public final function get StatBoostsPerc():Vector.<StatBoost> { return _statBoostsPerc; }
 
     private var _projectiles:Array;
     public final function get Projectiles():Array { return _projectiles; }
@@ -214,7 +212,6 @@ public class Item {
         _id = item._id;
         _displayId = item._displayId;
         _slotType = item._slotType;
-        _tier = item._tier;
         _description = item._description;
         _rateOfFire = item._rateOfFire;
         _usable = item._usable;
@@ -293,7 +290,6 @@ public class Item {
         item._id = String(xml.@id);
         item._displayId = LinkUtils.parseElementString(xml, "DisplayId", item._id);
         item._slotType = LinkUtils.parseElementInt(xml, "SlotType", -1);
-        item._tier = LinkUtils.parseElementInt(xml, "Tier", -1);
         item._description = LinkUtils.parseElementString(xml, "Description");
         item._rateOfFire = LinkUtils.parseElementFloat(xml, "RateOfFire", 1.0);
         item._usable = LinkUtils.parseElementBool(xml, "Usable");
@@ -342,16 +338,14 @@ public class Item {
         item._texture1 = LinkUtils.parseElementInt(xml, "Tex1", 0, 16);
         item._texture2 = LinkUtils.parseElementInt(xml, "Tex2", 0, 16);
 
-        item._statBoosts = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-        item._statBoostsPerc = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+        item._statBoosts = new Vector.<StatBoost>();
+        item._statBoostsPerc = new Vector.<StatBoost>();
         for each (elem in xml.elements("ActivateOnEquip")) {
             var statIndex:int = LinkUtils.getStatIndex(LinkUtils.parseAttributeInt(elem, "@stat"));
             var amount:int = LinkUtils.parseAttributeInt(elem, "@amount");
-            if (LinkUtils.parseAttributeBool(elem, "@isPerc")) {
-                item._statBoostsPerc[statIndex] = amount;
-            } else {
-                item._statBoosts[statIndex] = amount;
-            }
+            var isPercent:Boolean = LinkUtils.parseAttributeBool(elem, "@isPerc");
+            if (isPercent) item._statBoostsPerc.push(new StatBoost(statIndex, amount));
+            else item._statBoosts.push(new StatBoost(statIndex, amount));
         }
 
         item._projectiles = [];
